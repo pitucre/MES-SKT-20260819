@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtProcessflowcard">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" font-style="bold">#[OrderNo]#</column>
+        <column width="40%" align="center" font-size="18" font-style="bold">工 艺 流 程 卡</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[OrderNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left">工单号：#[OrderNo]#</column>
+        <column width="40%" align="center" >图号：#[ItemSpec]#</column>
+        <column width="30%" align="right" >产品编码：#[ItemCode]#</column>
+      </row>
+      <row>
+        <column width="30%" align="left">产品名称：#[ItemName]#</column>
+        <column width="40%" align="center">工艺路线：#[R_Name]#</column>
+        <column width="30%" align="right">计划生产数量：#[Qty_to_Build]#</column>
+      </row>
+      <row>
+        <column width="30%" align="left">母单号：#[Finishedorder]#</column>
+        <column width="40%" align="center">成品料号：#[FinishedNo]#</column>
+        <column width="30%" align="right"></column>
+      </row>
+    </table>
+    <data source="dtProcessflowcard1" spacing-before="0" spacing-after="20" font-size="9">
+      <column header="工序条码" width="5%"  align="left"  barcode-type="barcodeqrcode" barcode-width="30" barcode-height="30"  barcode-content="#[StationId]#" ></column>
+      <column header="工序名称" width="10%" align="center">#[Station]#</column>
+      <column header="工艺说明" width="15%">#[ProcessDescription]#</column>
+      <column header="质量关键控制点" width="8%">#[QCImportant]#</column>
+      <column header="工模具编码" width="8%">#[MoldNO]#</column>
+      <column header="首件确认" width="5%" align="center"></column>  
+    </data>
+  </report>
+</file>

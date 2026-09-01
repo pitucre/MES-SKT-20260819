@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA05D1E9-C9EF-4992-990B-88241ECDAF6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.LeanMES.ProductionCollection</RootNamespace>
+    <AssemblyName>SKT.LeanMES.ProductionCollection</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\..\..\Lib\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.DAL.Marshal">
+      <HintPath>..\..\..\Lib\SKT.Common.DAL.Marshal.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.Model">
+      <HintPath>..\..\..\Lib\SKT.Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.CommonHelper">
+      <HintPath>..\..\..\Lib\SKT.LeanMES.CommonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\ExecActivity.cs" />
+    <Compile Include="Ageing.cs" />
+    <Compile Include="Client\FeedingHopperCrusherBLL.cs" />
+    <Compile Include="Client\FormChangeByMES.cs" />
+    <Compile Include="Client\ProdCollectionOffLineBarCode.cs" />
+    <Compile Include="Client\ProdCollectionPickList.cs" />
+    <Compile Include="Model\AgeingInfo.cs" />
+    <Compile Include="Client\ProdCollectionAssemble.cs" />
+    <Compile Include="Client\ProdCollectionCommon.cs" />
+    <Compile Include="Client\ProdCollectionCustomerSN.cs" />
+    <Compile Include="Client\ProdCollectionInput.cs" />
+    <Compile Include="Client\ProdCollectionPacking.cs" />
+    <Compile Include="Client\ProdCollectionPassStation.cs" />
+    <Compile Include="Client\ProdCollectionQC.cs" />
+    <Compile Include="Client\ProdCollectionRepair.cs" />
+    <Compile Include="Model\AssyDataDetailInfo.cs" />
+    <Compile Include="Model\AssyDataPartInfo.cs" />
+    <Compile Include="Model\FromChangeByMESInfo.cs" />
+    <Compile Include="Model\InspectionInfo.cs" />
+    <Compile Include="Model\LaserCarvingOrderGrnInfo.cs" />
+    <Compile Include="Model\LaserCarvingOrderInfo.cs" />
+    <Compile Include="Model\NcReplaceMaterialInfo.cs" />
+    <Compile Include="Model\OfflineSNConfigInfo.cs" />
+    <Compile Include="Model\OutStorageCarInfo.cs" />
+    <Compile Include="Model\OutStorageInfo.cs" />
+    <Compile Include="Model\PackingAccessoriesConfigInfo.cs" />
+    <Compile Include="Model\PackingData.cs" />
+    <Compile Include="Model\PickListInfo.cs" />
+    <Compile Include="Model\ProdCollectionInputInfo.cs" />
+    <Compile Include="Model\SoOrderInfo.cs" />
+    <Compile Include="Model\StorageMemberInfo.cs" />
+    <Compile Include="Model\StorageTransferInfo.cs" />
+    <Compile Include="ProdCollectBinding.cs" />
+    <Compile Include="ProductionCollectionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Helper.cs" />
+    <Compile Include="Utility\SNProcessValidation.cs" />
+    <Compile Include="Validation\PackingValidation.cs" />
+    <Compile Include="Validation\PalletValidation.cs" />
+    <Compile Include="WebService\ATEWebService.cs" />
+    <Compile Include="WebService\LaserCarvingService.cs" />
+    <Compile Include="WebService\SampleCheckService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ERP\ERP.csproj">
+      <Project>{2968D356-1AAA-4AB3-8554-767C7371CD6E}</Project>
+      <Name>ERP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Quality\Model\Model.csproj">
+      <Project>{244DFADA-9664-4F6D-B65E-D8DA755FCDBB}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SystemInfo\ClientConfig\BLL\BLL.csproj">
+      <Project>{9BD0E3CF-9729-45C7-AEF8-5BF7AAE5D980}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

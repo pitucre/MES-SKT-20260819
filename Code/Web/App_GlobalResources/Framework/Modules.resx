@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_Certification" xml:space="preserve">
+    <value>岗位认证</value>
+  </data>
+  <data name="Account_Organization" xml:space="preserve">
+    <value>组织架构</value>
+  </data>
+  <data name="Account_Popedom" xml:space="preserve">
+    <value>权限管理</value>
+  </data>
+  <data name="Account_Role" xml:space="preserve">
+    <value>角色管理</value>
+  </data>
+  <data name="Account_User" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="BasalInfo_Activities" xml:space="preserve">
+    <value>业务维护</value>
+  </data>
+  <data name="BasalInfo_Anormal" xml:space="preserve">
+    <value>异常维护</value>
+  </data>
+  <data name="BasalInfo_Customer" xml:space="preserve">
+    <value>客户信息</value>
+  </data>
+  <data name="BasalInfo_Equipment" xml:space="preserve">
+    <value>设备管理</value>
+  </data>
+  <data name="BasalInfo_Labels" xml:space="preserve">
+    <value>标签管理</value>
+  </data>
+  <data name="BasalInfo_NCCode" xml:space="preserve">
+    <value>不良代码</value>
+  </data>
+  <data name="BasalInfo_Product" xml:space="preserve">
+    <value>产品信息</value>
+  </data>
+  <data name="BasalInfo_Resource" xml:space="preserve">
+    <value>资源维护</value>
+  </data>
+  <data name="BasalInfo_Router" xml:space="preserve">
+    <value>流程维护</value>
+  </data>
+  <data name="BasalInfo_SerialNumber" xml:space="preserve">
+    <value>序列号规则</value>
+  </data>
+  <data name="BasalInfo_Station" xml:space="preserve">
+    <value>工序维护</value>
+  </data>
+  <data name="BasalInfo_Supplier" xml:space="preserve">
+    <value>供应商管理</value>
+  </data>
+  <data name="BasalInfo_Turnover" xml:space="preserve">
+    <value>周转工具</value>
+  </data>
+  <data name="BasalInfo_Warehouse" xml:space="preserve">
+    <value>仓库信息</value>
+  </data>
+  <data name="BasalInf_Container" xml:space="preserve">
+    <value>包装管理</value>
+  </data>
+  <data name="Client_Scanner" xml:space="preserve">
+    <value>客户端扫描</value>
+  </data>
+  <data name="DataTypeManage" xml:space="preserve">
+    <value>数据类型</value>
+  </data>
+  <data name="Mobile_Material" xml:space="preserve">
+    <value>物料管理</value>
+  </data>
+  <data name="Mobile_Production" xml:space="preserve">
+    <value>生产管理</value>
+  </data>
+  <data name="Order_ShopOrder" xml:space="preserve">
+    <value>工单维护</value>
+  </data>
+  <data name="Production_CollectForm" xml:space="preserve">
+    <value>工序采集单</value>
+  </data>
+  <data name="Production_Kanban" xml:space="preserve">
+    <value>电子看板</value>
+  </data>
+  <data name="Production_Maintenance" xml:space="preserve">
+    <value>设备保养</value>
+  </data>
+  <data name="Production_Manufacture" xml:space="preserve">
+    <value>产品追溯</value>
+  </data>
+  <data name="Production_Material" xml:space="preserve">
+    <value>物料管理</value>
+  </data>
+  <data name="Production_MSD" xml:space="preserve">
+    <value>MSD管理</value>
+  </data>
+  <data name="Production_Plan" xml:space="preserve">
+    <value>生产排产</value>
+  </data>
+  <data name="Production_ProcessForm" xml:space="preserve">
+    <value>加工流程单</value>
+  </data>
+  <data name="Production_Shipment" xml:space="preserve">
+    <value>发货管理</value>
+  </data>
+  <data name="Production_Sparepart" xml:space="preserve">
+    <value>工具管理</value>
+  </data>
+  <data name="Production_TraceForm" xml:space="preserve">
+    <value>追溯记录</value>
+  </data>
+  <data name="Quality_WarnSettings" xml:space="preserve">
+    <value>预警配置管理</value>
+  </data>
+  <data name="Report_Efficiency" xml:space="preserve">
+    <value>效率报表</value>
+  </data>
+  <data name="Report_Other" xml:space="preserve">
+    <value>其他报表</value>
+  </data>
+  <data name="Report_Production" xml:space="preserve">
+    <value>生产报表</value>
+  </data>
+  <data name="Report_Quality" xml:space="preserve">
+    <value>质量报表</value>
+  </data>
+  <data name="Report_Template" xml:space="preserve">
+    <value>报表模板</value>
+  </data>
+  <data name="SMTMachineManage" xml:space="preserve">
+    <value>SMT设备</value>
+  </data>
+  <data name="SMTTraceabilityManagement" xml:space="preserve">
+    <value>上料管理</value>
+  </data>
+  <data name="SystemInfo_DataInterface" xml:space="preserve">
+    <value>数据接口</value>
+  </data>
+  <data name="ValidationMaskManage" xml:space="preserve">
+    <value>掩码管理</value>
+  </data>
+  <data name="Quality_SamplingRule" xml:space="preserve">
+    <value>抽检规则</value>
+  </data>
+  <data name="BasalInfo_EmailConfig" xml:space="preserve">
+    <value>邮件配置</value>
+  </data>
+  <data name="Production_Schedule" xml:space="preserve">
+    <value>生产排产</value>
+  </data>
+  <data name="FactoryManage" xml:space="preserve">
+    <value>工厂信息</value>
+  </data>
+  <data name="WorkShopManage" xml:space="preserve">
+    <value>车间维护</value>
+  </data>
+  <data name="ProductionShift" xml:space="preserve">
+    <value>生产班次</value>
+  </data>
+  <data name="SteelMeshManage" xml:space="preserve">
+    <value>钢网维护</value>
+  </data>
+  <data name="Production_MaterialDelivery" xml:space="preserve">
+    <value>物料配送</value>
+  </data>
+  <data name="Production_LineEdgeWarehouse" xml:space="preserve">
+    <value>线别仓管理</value>
+  </data>
+  <data name="Production_Hold" xml:space="preserve">
+    <value>QHold管理</value>
+  </data>
+  <data name="Production_Rework" xml:space="preserve">
+    <value>生产返工</value>
+  </data>
+  <data name="AccessoriesManagement" xml:space="preserve">
+    <value>辅料管理</value>
+  </data>
+  <data name="AccessoryPartAdd" xml:space="preserve">
+    <value>新增辅料料号</value>
+  </data>
+  <data name="AccessoryPartDelete" xml:space="preserve">
+    <value>删除辅料料号</value>
+  </data>
+  <data name="AccessoryPartEdit" xml:space="preserve">
+    <value>编辑辅料料号</value>
+  </data>
+  <data name="AccessoryPartList" xml:space="preserve">
+    <value>辅料料号维护</value>
+  </data>
+  <data name="Section_ResourceView" xml:space="preserve">
+    <value>工段与线别关系</value>
+  </data>
+  <data name="JigManage" xml:space="preserve">
+    <value>工装夹具</value>
+  </data>
+  <data name="Production_PackPrint" xml:space="preserve">
+    <value>包装打印</value>
+  </data>
+  <data name="Mobile_FinishProdShipment" xml:space="preserve">
+    <value>成品出货</value>
+  </data>
+  <data name="Production_ESOP" xml:space="preserve">
+    <value>ESOP管理</value>
+  </data>
+  <data name="Production_FinishProdShipMentList" xml:space="preserve">
+    <value>成品出库</value>
+  </data>
+  <data name="Production_FinishProdShipMentDetail" xml:space="preserve">
+    <value>成品出货明细</value>
+  </data>
+  <data name="Production_FinishProdShipMent" xml:space="preserve">
+    <value>成品出货</value>
+  </data>
+  <data name="Material_Manager" xml:space="preserve">
+    <value>上料管理</value>
+  </data>
+  <data name="Report_ReportType" xml:space="preserve">
+    <value>报表类型</value>
+  </data>
+  <data name="Report_TemplateList" xml:space="preserve">
+    <value>模板列表</value>
+  </data>
+  <data name="Account_UserOfSupplier" xml:space="preserve">
+    <value>供应商帐号管理</value>
+  </data>
+  <data name="Production_FinishProductInStorage" xml:space="preserve">
+    <value>成品入库</value>
+  </data>
+  <data name="Mobile_FinishedProductInStorage" xml:space="preserve">
+    <value>成品入库</value>
+  </data>
+  <data name="Mobile_FinishedProductInStorageAdd" xml:space="preserve">
+    <value>移动端-模块入库</value>
+  </data>
+  <data name="Product_SuplierMaterialManage" xml:space="preserve">
+    <value>供应商管理</value>
+  </data>
+  <data name="Mobile_MaterialInStorage" xml:space="preserve">
+    <value>物料入库</value>
+  </data>
+  <data name="System_Configuration" xml:space="preserve">
+    <value>系统设置</value>
+  </data>
+  <data name="Data_Synchronization" xml:space="preserve">
+    <value>数据管理</value>
+  </data>
+  <data name="Client_Configuration" xml:space="preserve">
+    <value>客户端配置</value>
+  </data>
+  <data name="Kanban_Basal" xml:space="preserve">
+    <value>看板基本信息维护</value>
+  </data>
+  <data name="Production_MaterialConfig" xml:space="preserve">
+    <value>仓库数据配置</value>
+  </data>
+  <data name="BasalInfo_ExtensionFields" xml:space="preserve">
+    <value>数据扩展</value>
+  </data>
+  <data name="AQLPlan" xml:space="preserve">
+    <value>抽样方案管理</value>
+  </data>
+  <data name="QCManagement" xml:space="preserve">
+    <value>检验标准管理</value>
+  </data>
+  <data name="Product_CollectionTemplate" xml:space="preserve">
+    <value>数据采集模板</value>
+  </data>
+  <data name="Product_CollectionTemplate_Control" xml:space="preserve">
+    <value>常用功能</value>
+  </data>
+  <data name="Equipment_Equipment" xml:space="preserve">
+    <value>设备管理</value>
+  </data>
+  <data name="BasalInfo_ItemType" xml:space="preserve">
+    <value>叫料管理</value>
+  </data>
+  <data name="ProductChange" xml:space="preserve">
+    <value>产品变更</value>
+  </data>
+  <data name="MaterialCheck" xml:space="preserve">
+    <value>仓库盘点</value>
+  </data>
+  <data name="Quality_SPC" xml:space="preserve">
+    <value>SPC管理</value>
+  </data>
+  <data name="BasalInfo_Unit" xml:space="preserve">
+    <value>单位维护管理</value>
+  </data>
+  <data name="MaterialApply" xml:space="preserve">
+    <value>发料管理</value>
+  </data>
+  <data name="MaterialReceive" xml:space="preserve">
+    <value>收料管理</value>
+  </data>
+  <data name="MaterialReturn" xml:space="preserve">
+    <value>退料管理</value>
+  </data>
+  <data name="Shipments" xml:space="preserve">
+    <value>成品出入库</value>
+  </data>
+  <data name="BasalInfo_UIDesigner" xml:space="preserve">
+    <value>业务开发</value>
+  </data>
+  <data name="Quality_QC" xml:space="preserve">
+    <value>QC信息管理</value>
+  </data>
+  <data name="MoldingManagement" xml:space="preserve">
+    <value>前加工管理</value>
+  </data>
+  <data name="Production_SNPrint" xml:space="preserve">
+    <value>条码打印</value>
+  </data>
+  <data name="AnormalManagement" xml:space="preserve">
+    <value>异常管理</value>
+  </data>
+  <data name="AccessoryManagement" xml:space="preserve">
+    <value>辅料管理</value>
+  </data>
+  <data name="Warning_Management" xml:space="preserve">
+    <value>警报管理</value>
+  </data>
+  <data name="InspectionOrderAudit" xml:space="preserve">
+    <value>检验报告管理</value>
+  </data>
+  <data name="ProductionDataConfig" xml:space="preserve">
+    <value>生产数据配置</value>
+  </data>
+  <data name="Kanban_Builtin" xml:space="preserve">
+    <value>高级看板</value>
+  </data>
+  <data name="EquipmentEarlyWarning" xml:space="preserve">
+    <value>设备预警</value>
+  </data>
+  <data name="Equipment_Basic" xml:space="preserve">
+    <value>设备基础数据管理</value>
+  </data>
+  <data name="Equipment_CheckOut" xml:space="preserve">
+    <value>设备校验</value>
+  </data>
+  <data name="ProductionDataConfiguration" xml:space="preserve">
+    <value>生产数据配置</value>
+  </data>
+  <data name="BasalInfo_Detection" xml:space="preserve">
+    <value>检测项管理</value>
+  </data>
+  <data name="PDAWarehouseManage" xml:space="preserve">
+    <value>仓库管理</value>
+  </data>
+  <data name="PDAProductionManage" xml:space="preserve">
+    <value>生产管理</value>
+  </data>
+  <data name="PDAEquimentManage" xml:space="preserve">
+    <value>设备管理</value>
+  </data>
+  <data name="PDAKanBanManage" xml:space="preserve">
+    <value>报表看板管理</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>业务导航管理</value>
+  </data>
+  <data name="Kanban_TagSend" xml:space="preserve">
+    <value>看板下发</value>
+  </data>
+  <data name="CustomMenu" xml:space="preserve">
+    <value>菜单管理</value>
+  </data>
+  <data name="Quality_SNScrap" xml:space="preserve">
+    <value>报废管理</value>
+  </data>
+  <data name="RMAManager" xml:space="preserve">
+    <value>RMA管理</value>
+  </data>
+  <data name="Material_Transfers" xml:space="preserve">
+    <value>调拨管理</value>
+  </data>
+  <data name="Material_Scrap" xml:space="preserve">
+    <value>报废管理</value>
+  </data>
+  <data name="Production_DeviceInterface" xml:space="preserve">
+    <value>设备接口</value>
+  </data>
+  <data name="Material_MaterialStoragePrint" xml:space="preserve">
+    <value>物料入库打印</value>
+  </data>
+  <data name="IQCRecive" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Material_IQCFormCheck" xml:space="preserve">
+    <value>IQC检验</value>
+  </data>
+  <data name="InspectionmethodsList" xml:space="preserve">
+    <value>检验方法列表</value>
+  </data>
+  <data name="Equipment_Mould" xml:space="preserve">
+    <value>模治具管理</value>
+  </data>
+  <data name="SupplierExame" xml:space="preserve">
+    <value>供应商考核</value>
+  </data>
+  <data name="OSPManagement" xml:space="preserve">
+    <value>工序段时间管理</value>
+  </data>
+  <data name="DIPPackaging_Management" xml:space="preserve">
+    <value>DIP包装管理</value>
+  </data>
+  <data name="Automatic_Scheduling" xml:space="preserve">
+    <value>自动排产</value>
+  </data>
+  <data name="Standard_Scheduling" xml:space="preserve">
+    <value>标准排产</value>
+  </data>
+  <data name="SampleNumberManagement" xml:space="preserve">
+    <value>样品点检管理</value>
+  </data>
+  <data name="Product_PieceWage" xml:space="preserve">
+    <value>计件标准维护</value>
+  </data>
+  <data name="PDAQualityManage" xml:space="preserve">
+    <value>品质管理</value>
+  </data>
+  <data name="EquipmentInspection" xml:space="preserve">
+    <value>设备点检</value>
+  </data>
+  <data name="FormChange" xml:space="preserve">
+    <value>形态转换</value>
+  </data>
+  <data name="PDA_FormChange" xml:space="preserve">
+    <value>形态转换</value>
+  </data>
+  <data name="PDAManage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PDA_MesToErpChange" xml:space="preserve">
+    <value>ERP形态转换接口</value>
+  </data>
+</root>

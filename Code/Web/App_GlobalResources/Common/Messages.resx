@@ -1,0 +1,4602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessoriesAlreadySetTime" xml:space="preserve">
+    <value>该辅料已设置过时间管控</value>
+  </data>
+  <data name="AccessoriesCancel" xml:space="preserve">
+    <value>该辅料已报废</value>
+  </data>
+  <data name="AccessoriesCountEmpty" xml:space="preserve">
+    <value>辅料数量不能为空！</value>
+  </data>
+  <data name="AccessoriesEmpty" xml:space="preserve">
+    <value>物料编号不存在</value>
+  </data>
+  <data name="AccessoriesLeaveTime" xml:space="preserve">
+    <value>已超过该辅料闲置时间，无法使用</value>
+  </data>
+  <data name="AccessoriesNoThaw" xml:space="preserve">
+    <value>该辅料没有解冻完成</value>
+  </data>
+  <data name="AccessoriesNowThaw" xml:space="preserve">
+    <value>该辅料正在解冻</value>
+  </data>
+  <data name="AccessoriesNowUse" xml:space="preserve">
+    <value>该辅料正在使用中</value>
+  </data>
+  <data name="AccessoriesOverdue" xml:space="preserve">
+    <value>该辅料已过期</value>
+  </data>
+  <data name="AccessoriesThawAfter" xml:space="preserve">
+    <value>请解冻后在使用</value>
+  </data>
+  <data name="AccessoriesUseTime" xml:space="preserve">
+    <value>已超过该辅料使用时间，无法使用</value>
+  </data>
+  <data name="ActivityFunctionCodeMustDefineAfunction" xml:space="preserve">
+    <value>Activity逻辑代码必须定义一个function.</value>
+  </data>
+  <data name="ActivityFunctionCodeNotAllowEmpty" xml:space="preserve">
+    <value>Activity逻辑代码不能为空.</value>
+  </data>
+  <data name="ActivityFunctionNameNotMapBaseInfoFunctionName" xml:space="preserve">
+    <value>Activity代码中 [主函数名称] 与基本信息中填写的 [主函数名称] 不一样!</value>
+  </data>
+  <data name="ActivityFunctionParametersNotMapParametersList" xml:space="preserve">
+    <value>主函数参数个数与列表中定义的个数不一致!</value>
+  </data>
+  <data name="AC_CheckNo_Invalid" xml:space="preserve">
+    <value>没有找到对应的检测代码，请重新扫描！</value>
+  </data>
+  <data name="AC_DialogCloseMessage" xml:space="preserve">
+    <value>【----您确定要终止操作吗 ？----】</value>
+  </data>
+  <data name="AC_DR_CanNotCloseWin" xml:space="preserve">
+    <value>无法完成，请选择不良进行维修！</value>
+  </data>
+  <data name="AC_DR_DuplicateNCDataRecord" xml:space="preserve">
+    <value>该代码已添加</value>
+  </data>
+  <data name="AC_DR_DuplicateRepairRecord" xml:space="preserve">
+    <value>重复的维修记录！</value>
+  </data>
+  <data name="AC_DR_FailToSaveRepairData" xml:space="preserve">
+    <value>维修记录保存失败，请重新尝试！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseDefect" xml:space="preserve">
+    <value>请选择检测代码！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseNC" xml:space="preserve">
+    <value>请选择要维修的记录！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseRepair" xml:space="preserve">
+    <value>请选择维修代码！</value>
+  </data>
+  <data name="AC_LMQty1" xml:space="preserve">
+    <value>数量无效，不能大于工单数量！</value>
+  </data>
+  <data name="AC_LMQty2" xml:space="preserve">
+    <value>产出数量不能大于投入数量！</value>
+  </data>
+  <data name="AC_MPIPQC_remind01" xml:space="preserve">
+    <value>无效的载具号码或者载具未被用户锁定！</value>
+  </data>
+  <data name="AC_MPIPQC_remind02" xml:space="preserve">
+    <value>板篮/板柜数据初始成功！</value>
+  </data>
+  <data name="AC_MPIPQC_remind03" xml:space="preserve">
+    <value>容器编号无效，无初始数据！</value>
+  </data>
+  <data name="AC_MPIPQC_remind04" xml:space="preserve">
+    <value>扫描条码：</value>
+  </data>
+  <data name="AC_MPIPQC_remind05" xml:space="preserve">
+    <value>不在指定容器</value>
+  </data>
+  <data name="AC_MPIPQC_remind06" xml:space="preserve">
+    <value>之中！</value>
+  </data>
+  <data name="AC_MPIPQC_remind07" xml:space="preserve">
+    <value>第1次扫描IPQC条码成功，请扫描第2次。</value>
+  </data>
+  <data name="AC_MPIPQC_remind08" xml:space="preserve">
+    <value>已经处理IPQC不良代码，请继续下一个操作。</value>
+  </data>
+  <data name="AC_MPIPQC_remind09" xml:space="preserve">
+    <value>第1次与第2次扫描IPQC条码异常，请扫描不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind10" xml:space="preserve">
+    <value>两次扫描IPQC条码正常，请继续下一个操作。</value>
+  </data>
+  <data name="AC_MPIPQC_remind11" xml:space="preserve">
+    <value>抽检条码扫描次数不够，不能直接扫描不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind12" xml:space="preserve">
+    <value>IPQC不良代码验证成功，请继续检查。</value>
+  </data>
+  <data name="AC_MPIPQC_remind13" xml:space="preserve">
+    <value>IPQC不良代码无效，请重新检查不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind14" xml:space="preserve">
+    <value>IPQC抽检单号不能为空！</value>
+  </data>
+  <data name="AC_MPIPQC_remind15" xml:space="preserve">
+    <value>没有抽检记录！请先进行抽检！</value>
+  </data>
+  <data name="AC_MPIPQC_remind16" xml:space="preserve">
+    <value>数据处理成功，请继续！</value>
+  </data>
+  <data name="AC_MPIPQC_remind17" xml:space="preserve">
+    <value>不允许重复抽检！</value>
+  </data>
+  <data name="AC_MPIPQC_remind18" xml:space="preserve">
+    <value>全部抽检成功，不能点击“批次不良”。</value>
+  </data>
+  <data name="AC_MPIPQC_remind19" xml:space="preserve">
+    <value>全部抽检失败，不能点击“批次良品”。</value>
+  </data>
+  <data name="AC_MPIPQC_UISN" xml:space="preserve">
+    <value>请扫描正确的载具编号或拼板编号！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_Not_Exist" xml:space="preserve">
+    <value>扫描编号不存在！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OK" xml:space="preserve">
+    <value>外箱编号验证合格。</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OpeID_error" xml:space="preserve">
+    <value>外箱生产进程状态不对！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_status_error" xml:space="preserve">
+    <value>外箱没有关闭！</value>
+  </data>
+  <data name="AC_MSOBA_remind01" xml:space="preserve">
+    <value>外箱条码扫描完成，开始进行抽检检验，请输入抽检单号。</value>
+  </data>
+  <data name="AC_MSOBA_remind02" xml:space="preserve">
+    <value>扫描0000结束外箱条码扫描，开始进行抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind03" xml:space="preserve">
+    <value>第1次扫描OBA条码成功，请扫描第2次。</value>
+  </data>
+  <data name="AC_MSOBA_remind04" xml:space="preserve">
+    <value>请重新抽检！</value>
+  </data>
+  <data name="AC_MSOBA_remind05" xml:space="preserve">
+    <value>抽检SN成功，请继续抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind06" xml:space="preserve">
+    <value>是无效的OBA不良代码，请重新扫描不良代码！</value>
+  </data>
+  <data name="AC_MSOBA_remind07" xml:space="preserve">
+    <value>请扫描OBA抽检不良代码！</value>
+  </data>
+  <data name="AC_MSOBA_remind08" xml:space="preserve">
+    <value>已经扫描数量与Carton</value>
+  </data>
+  <data name="AC_MSOBA_remind09" xml:space="preserve">
+    <value>数量之和，不能大于系统批次数量。</value>
+  </data>
+  <data name="AC_MSOBA_remind10" xml:space="preserve">
+    <value>OBA抽检单号不能为空！</value>
+  </data>
+  <data name="AC_MSOBA_remind11" xml:space="preserve">
+    <value>OBA抽检SN成功，请继续抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind12" xml:space="preserve">
+    <value>请扫描要抽检的条码编号。</value>
+  </data>
+  <data name="AC_MSOBA_remind13" xml:space="preserve">
+    <value>抽检数据保存成功，请扫描外箱条码</value>
+  </data>
+  <data name="AC_MSOBA_SNnoLot" xml:space="preserve">
+    <value>条码不在指定批号中！</value>
+  </data>
+  <data name="AC_MSOBA_SNuseinLot" xml:space="preserve">
+    <value>条码已经被抽检！</value>
+  </data>
+  <data name="AC_MSOBA_SN_OK" xml:space="preserve">
+    <value>条码编号验证合格。</value>
+  </data>
+  <data name="AC_NotExistsTheNCCodeInCurrentGroup" xml:space="preserve">
+    <value>当前代码组不存在此代码.</value>
+  </data>
+  <data name="AC_NumberOnly" xml:space="preserve">
+    <value>只接收数字类型.</value>
+  </data>
+  <data name="AC_OBA_AuditValidationFail" xml:space="preserve">
+    <value>条码验证失败！请检查条码是否在此批次中！</value>
+  </data>
+  <data name="AC_OBA_InAnotherLot" xml:space="preserve">
+    <value>已在另外一个批次中！</value>
+  </data>
+  <data name="AC_OBA_ItemMismatch" xml:space="preserve">
+    <value>扫描的产品不一致!</value>
+  </data>
+  <data name="AC_OBA_ItemNotSetOBA" xml:space="preserve">
+    <value>该产品没有设定OBA抽样标准！</value>
+  </data>
+  <data name="AC_OBA_SaveLotError" xml:space="preserve">
+    <value>条码无法保存到批次中，请检查！</value>
+  </data>
+  <data name="AC_PleaseAddNCCode" xml:space="preserve">
+    <value>请添加必须的不良代码.</value>
+  </data>
+  <data name="AC_PleaseChooseNCCode" xml:space="preserve">
+    <value>请选择不良代码.</value>
+  </data>
+  <data name="AC_PleaseSelectOneRecord" xml:space="preserve">
+    <value>请选择一个选项.</value>
+  </data>
+  <data name="AC_RepairNo_Invalid" xml:space="preserve">
+    <value>没有找到对应的维修代码，请重新扫描！</value>
+  </data>
+  <data name="AC_RSN_NoProdInfo" xml:space="preserve">
+    <value>没有找到相关产品信息</value>
+  </data>
+  <data name="AC_Scan_BoxNo" xml:space="preserve">
+    <value>请扫描周转箱号！</value>
+  </data>
+  <data name="AC_SystemAddDataAutomaticAndPassed" xml:space="preserve">
+    <value>系统已自动添加组装数据,已通过.</value>
+  </data>
+  <data name="AC_TheOperationHasNoNCCodeGroup" xml:space="preserve">
+    <value>该工位未指定不良代码组.</value>
+  </data>
+  <data name="AddressLengthError" xml:space="preserve">
+    <value>仓库地址不能超过30个字符!</value>
+  </data>
+  <data name="AdminCannotChangePassword" xml:space="preserve">
+    <value>当前角色为超级管理员, 超级管理员的密码不能在页面修改!</value>
+  </data>
+  <data name="AlradyExistsIntheList" xml:space="preserve">
+    <value>已在检验列表中，请勿重复.</value>
+  </data>
+  <data name="AlreadyExistOpenCarton" xml:space="preserve">
+    <value>已有打开的包装箱，如需更换包装箱，请重新进入包装页面！</value>
+  </data>
+  <data name="AlreadyHasResourceType" xml:space="preserve">
+    <value>已分配了资源类型.</value>
+  </data>
+  <data name="Alrealy_PollingWei" xml:space="preserve">
+    <value>该工单已经做完巡检，不需要重复巡检!</value>
+  </data>
+  <data name="Areyousureremovethispart" xml:space="preserve">
+    <value>你确定移除该Part吗?</value>
+  </data>
+  <data name="AssignSuccess" xml:space="preserve">
+    <value>分配权限成功！</value>
+  </data>
+  <data name="AssignUserToRoleFailed" xml:space="preserve">
+    <value>给用户分配角色失败！</value>
+  </data>
+  <data name="Audit_SN_Already_Exist" xml:space="preserve">
+    <value>条码已经经过OBA检查！</value>
+  </data>
+  <data name="Audit_SN_Not_Exist" xml:space="preserve">
+    <value>扫描的条码不在此批次中！</value>
+  </data>
+  <data name="BalanceQtyEmpty" xml:space="preserve">
+    <value>请输入正确的结存量！</value>
+  </data>
+  <data name="BoardNumNotZero" xml:space="preserve">
+    <value>拼板或子板数目不能小于等于0！</value>
+  </data>
+  <data name="BoardQTYEmpty" xml:space="preserve">
+    <value>板数量不能为空!</value>
+  </data>
+  <data name="BomInProcessing" xml:space="preserve">
+    <value>提醒：此BOM已在生产，不能修改。</value>
+  </data>
+  <data name="BomNameIsRequired" xml:space="preserve">
+    <value>物料清单名不能为空！</value>
+  </data>
+  <data name="BOMStatusNotAllowedShopOrderRelease" xml:space="preserve">
+    <value>该工单BOM状态不允许工单释放.</value>
+  </data>
+  <data name="BoxHasTheGRNWei" xml:space="preserve">
+    <value>周转箱里已有该物料，不需要扫该物料了!</value>
+  </data>
+  <data name="BoxScanOnlyGRN" xml:space="preserve">
+    <value>周转箱已扫描完成，请扫描GRN!</value>
+  </data>
+  <data name="BrowserVersionSug" xml:space="preserve">
+    <value>本系统使用Internet explorer 10可获得最佳浏览效果</value>
+  </data>
+  <data name="CartonBeClosedSuccessful" xml:space="preserve">
+    <value>成功关闭包装箱</value>
+  </data>
+  <data name="CartonCannotBeClosed" xml:space="preserve">
+    <value>包装箱是空的，不能关闭！</value>
+  </data>
+  <data name="CartonInfoIsEmpty" xml:space="preserve">
+    <value>包装箱信息为空，无法完成打印，可能是包装箱对应的供应商不存在，请确认后再使用系统重打印功能打印包装箱条码！</value>
+  </data>
+  <data name="CartonIsClosed" xml:space="preserve">
+    <value>包装箱已关闭！</value>
+  </data>
+  <data name="CartonIsEmpty1" xml:space="preserve">
+    <value>物料包装箱不是空的，不能删除，请先移除包装箱内的物料再删除！</value>
+  </data>
+  <data name="CartonIsOpen" xml:space="preserve">
+    <value>物料包装箱还没有关闭，先关闭包装箱才能收料！</value>
+  </data>
+  <data name="TurnoverNumberImportFail" xml:space="preserve">
+    <value>请选择格式为.txt的文件，并确保条码格式正确！</value>
+  </data>
+  <data name="ImportSuccess" xml:space="preserve">
+    <value>导入成功！</value>
+  </data>
+  <data name="CertAssignToUser" xml:space="preserve">
+    <value>岗位认证已经赋给用户，不能删除</value>
+  </data>
+  <data name="CertificationEmpty" xml:space="preserve">
+    <value>岗位资格名称不能为空！</value>
+  </data>
+  <data name="CertificationExists" xml:space="preserve">
+    <value>认证资格已经存在！</value>
+  </data>
+  <data name="CertificationTypeEmpty" xml:space="preserve">
+    <value>岗位资格类型不能为空！</value>
+  </data>
+  <data name="ChangePwdSuccessed" xml:space="preserve">
+    <value>密码修改成功！</value>
+  </data>
+  <data name="ChangeSNStepFail" xml:space="preserve">
+    <value>更改序号工位失败，请联系相关人员检序号信息！</value>
+  </data>
+  <data name="ChangeSNStepSuccess" xml:space="preserve">
+    <value>更改序号工位成功！</value>
+  </data>
+  <data name="CheckUnitState" xml:space="preserve">
+    <value>该条码只能扫小码，不能扫大码！</value>
+  </data>
+  <data name="ChoiceLineWei" xml:space="preserve">
+    <value>线别没有绑定LoadingList,请重新选择线别！</value>
+  </data>
+  <data name="ChoiceOrderWei" xml:space="preserve">
+    <value>LoadingList所属工单跟所选工单不一致，请重新选择工单！</value>
+  </data>
+  <data name="CirBoxNotExists" xml:space="preserve">
+    <value>周转箱不存在!</value>
+  </data>
+  <data name="CirBoxStatus" xml:space="preserve">
+    <value>无效的周转箱状态!</value>
+  </data>
+  <data name="CirContainerDescEmpty" xml:space="preserve">
+    <value>周转工具种类描述不能为空！</value>
+  </data>
+  <data name="CirContainerEmpty" xml:space="preserve">
+    <value>周转工具种类不能为空！</value>
+  </data>
+  <data name="CirContainerGroupEmpty" xml:space="preserve">
+    <value>周转工具分组不能为空！</value>
+  </data>
+  <data name="CirContainerNumberFormatError" xml:space="preserve">
+    <value>周转工具条码只能由字母，数字，下划线组成！且长度不超过50!</value>
+  </data>
+  <data name="CirContainerNumberNotNull" xml:space="preserve">
+    <value>周转工具编号不能为空</value>
+  </data>
+  <data name="ClearScreen" xml:space="preserve">
+    <value>清空屏幕只会清空产品结构的显示内容，不会删除数据库内容！</value>
+  </data>
+  <data name="ConfirmAllFaild" xml:space="preserve">
+    <value>确定批量退货吗？</value>
+  </data>
+  <data name="ConfirmAllPass" xml:space="preserve">
+    <value>确定批量通过吗？</value>
+  </data>
+  <data name="ConfirmCertExpirationDate" xml:space="preserve">
+    <value>请确认此岗位认证的时间\n授权日期为：{0}\n到期日期为：{1}\n如果同意点【确定】，否则点【取消】，然后重新选择日期</value>
+  </data>
+  <data name="ConfirmChooseToPass" xml:space="preserve">
+    <value>确定让步使用吗？</value>
+  </data>
+  <data name="ConfirmClearScreen" xml:space="preserve">
+    <value>确定要清空屏幕吗？</value>
+  </data>
+  <data name="ConfirmCloseCarton" xml:space="preserve">
+    <value>包装箱条码：{0}\n已包装物料GRN数量：{1}\n是否确定关闭该包装箱？</value>
+  </data>
+  <data name="ConfirmContainerRemoveSN" xml:space="preserve">
+    <value>确定要把序列号从容器中移除？</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>确定要删除吗？</value>
+  </data>
+  <data name="ConfirmDeletePck" xml:space="preserve">
+    <value>确定要删除该领料单吗？</value>
+  </data>
+  <data name="ConfirmDelPckGrn" xml:space="preserve">
+    <value>确定删除该领料单此行的物料GRN吗？</value>
+  </data>
+  <data name="ConfirmGoOnReturnMaterial" xml:space="preserve">
+    <value>是否继续退料！</value>
+  </data>
+  <data name="ConfirmIssueFinished" xml:space="preserve">
+    <value>确定该领料单物料已发完吗？</value>
+  </data>
+  <data name="ConfirmMoveSNStep" xml:space="preserve">
+    <value>确定要异动序列号当前位置？</value>
+  </data>
+  <data name="ConfirmNewPwd" xml:space="preserve">
+    <value>请再次输入新密码！</value>
+  </data>
+  <data name="ConfirmOutOfStore" xml:space="preserve">
+    <value>出仓后领料单物料将不能被修改，是否确认物料出仓？</value>
+  </data>
+  <data name="ConfirmPacktoThisCarton" xml:space="preserve">
+    <value>是否确定包装到此包装箱内？</value>
+  </data>
+  <data name="ConfirmPrintTheseGRNs" xml:space="preserve">
+    <value>确定要打印页面中批次数量的GRN！</value>
+  </data>
+  <data name="ConfirmResetPwd" xml:space="preserve">
+    <value>【重置密码】是将用户的密码重置为123456\n是否确认重置选中的所有用户的密码为123456</value>
+  </data>
+  <data name="ConfirmReUser" xml:space="preserve">
+    <value>确定要重新启用选中的已被删除的领料单吗？</value>
+  </data>
+  <data name="ConfirmSetLineWei" xml:space="preserve">
+    <value>确定设置该线别？</value>
+  </data>
+  <data name="ConfirmSetupLineWei" xml:space="preserve">
+    <value>该线别可能正在上料验证，确定设置该线别？</value>
+  </data>
+  <data name="ConfirmToCloseTheCarton" xml:space="preserve">
+    <value>是否确定关闭该包装箱？</value>
+  </data>
+  <data name="ConfirmToDelActivity" xml:space="preserve">
+    <value>确定要删除该Activity吗？</value>
+  </data>
+  <data name="ConfirmToDeleteCarton" xml:space="preserve">
+    <value>确定要删除选中的包装箱吗？\n删除后不能恢复，请慎用！</value>
+  </data>
+  <data name="ConfirmToNewCartonSN" xml:space="preserve">
+    <value>系统中还有未关闭的包装箱可使用，是否使用未关闭的包装箱？\n点击【确定】重新生成新的包装箱，点击【取消】打开未关闭的包装箱</value>
+  </data>
+  <data name="ConfirmToRemoveLabelFormat" xml:space="preserve">
+    <value>确定移除此标签字段吗？</value>
+  </data>
+  <data name="ConfirmToReturnToKitting" xml:space="preserve">
+    <value>是否确认退给线边仓？</value>
+  </data>
+  <data name="ConfirmToReturnToStore" xml:space="preserve">
+    <value>是否确定将物料退回仓库？</value>
+  </data>
+  <data name="ConfirmToReturnToVendor" xml:space="preserve">
+    <value>注意！！！\n您当前选择的是退料给供应商，请确认是否要退到供应商？</value>
+  </data>
+  <data name="ConfirmToSplit" xml:space="preserve">
+    <value>确定按填写的条件分料吗？</value>
+  </data>
+  <data name="ConfirmToUnpack" xml:space="preserve">
+    <value>确定要解开选中的包装箱吗？</value>
+  </data>
+  <data name="ConfirmToUpdateActSeq" xml:space="preserve">
+    <value>是否要更改Activity的顺序？</value>
+  </data>
+  <data name="ConfirmUnlockUser" xml:space="preserve">
+    <value>当用户的帐号被锁定时，可以用【解锁】功能来解除用户锁定\n确定将选中的所有用户解除锁定吗？</value>
+  </data>
+  <data name="ContainerCloseConfirm" xml:space="preserve">
+    <value>确定要封箱吗？</value>
+  </data>
+  <data name="ContainerEmpty" xml:space="preserve">
+    <value>容器名称不能为空！</value>
+  </data>
+  <data name="ContainerNoMaterial" xml:space="preserve">
+    <value>周转箱没有对应的物料信息！</value>
+  </data>
+  <data name="ContainerUnit_Already_Exist" xml:space="preserve">
+    <value>载具条码信息已经存在！</value>
+  </data>
+  <data name="ContainerUnit_Exist_In_Another" xml:space="preserve">
+    <value>不是同一个载具！</value>
+  </data>
+  <data name="ContainerUnit_Saved" xml:space="preserve">
+    <value>载具信息保存成功！</value>
+  </data>
+  <data name="ContinueFeedSuccess" xml:space="preserve">
+    <value>续料成功！</value>
+  </data>
+  <data name="CreateSN_Already_Exist" xml:space="preserve">
+    <value>条码已经存在，无法创建！</value>
+  </data>
+  <data name="CreateSN_OK" xml:space="preserve">
+    <value>条码成功创建！</value>
+  </data>
+  <data name="CreateSN_PO_Used_Out" xml:space="preserve">
+    <value>工单数量已经用完，无法创建！</value>
+  </data>
+  <data name="CreateSN_Router_Invalid" xml:space="preserve">
+    <value>工单或者是产品没有绑定路由信息，无法创建！</value>
+  </data>
+  <data name="CustomerAddress1Empty" xml:space="preserve">
+    <value>客户地址不能为空</value>
+  </data>
+  <data name="CustomerNameEmpty" xml:space="preserve">
+    <value>客户简称不能为空</value>
+  </data>
+  <data name="CustomerRemarkeEmpty" xml:space="preserve">
+    <value>客户全称不能为空</value>
+  </data>
+  <data name="CycleTimeGreaterPrewarning" xml:space="preserve">
+    <value>周期间隔的值必须大于提前预警的值</value>
+  </data>
+  <data name="DataFieldSequenceExist" xml:space="preserve">
+    <value>数据字段次序已经存在！</value>
+  </data>
+  <data name="DataTypeEmpty" xml:space="preserve">
+    <value>数据类型不能为空！</value>
+  </data>
+  <data name="DataTypeMasterSaveFirst" xml:space="preserve">
+    <value>请先保存主数据类型.</value>
+  </data>
+  <data name="DateBothEmpty" xml:space="preserve">
+    <value>Both date need to be empty!</value>
+  </data>
+  <data name="DateCodeDismatch" xml:space="preserve">
+    <value>生产日期不一致！</value>
+  </data>
+  <data name="DateError" xml:space="preserve">
+    <value>日期错误！</value>
+  </data>
+  <data name="DateNotThanThirty" xml:space="preserve">
+    <value>时间间隔不能超过3个月！</value>
+  </data>
+  <data name="DBAccessError" xml:space="preserve">
+    <value>数据库访问发生错误，请联系系统管理员。</value>
+  </data>
+  <data name="DBConnectFailed" xml:space="preserve">
+    <value>连接数据库失败，请联系系统管理员。</value>
+  </data>
+  <data name="DecimalChangeFail" xml:space="preserve">
+    <value>十进制转化失败！</value>
+  </data>
+  <data name="DefaultPasswordMsg" xml:space="preserve">
+    <value>如果留空则默认密码为：123456</value>
+  </data>
+  <data name="DefautValueNotAllowDelete" xml:space="preserve">
+    <value>默认值不可删除.</value>
+  </data>
+  <data name="DeleteCartonSuccessful" xml:space="preserve">
+    <value>删除包装箱成功！</value>
+  </data>
+  <data name="DeleteFaild" xml:space="preserve">
+    <value>删除失败.</value>
+  </data>
+  <data name="DeleteGRNsError" xml:space="preserve">
+    <value>选中的GRN状态不对,不能删除！</value>
+  </data>
+  <data name="DeletePckSuccessful" xml:space="preserve">
+    <value>删除领料单成功！</value>
+  </data>
+  <data name="DeletePickingGrnFailed" xml:space="preserve">
+    <value>删除领料单中的GRN失败，领料单删除失败！</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>删除数据成功。</value>
+  </data>
+  <data name="DeleteSuccessWithInfo" xml:space="preserve">
+    <value>删除数据成功\n但数据 [{0}] 未能被删除，因为还在被使用。</value>
+  </data>
+  <data name="DelPckGrnFailed" xml:space="preserve">
+    <value>删除领料单物料失败！</value>
+  </data>
+  <data name="DepartmentCodeEmpty" xml:space="preserve">
+    <value>部门编号不能为空！</value>
+  </data>
+  <data name="DepartmentDeleteFailed" xml:space="preserve">
+    <value>无法删除部门，已经关联用户信息。</value>
+  </data>
+  <data name="DepartmentExists" xml:space="preserve">
+    <value>部门已经存在！</value>
+  </data>
+  <data name="DepartmentNameEmpty" xml:space="preserve">
+    <value>部门名称不能为空！</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>描述不能超过20个字符!</value>
+  </data>
+  <data name="DictionaryNameEmpty" xml:space="preserve">
+    <value>字典名称不能为空</value>
+  </data>
+  <data name="DictionaryPropertyEmpty" xml:space="preserve">
+    <value>字典属性值不能为空</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>对不起，您已与服务器失去连接!\n您被迫下线，请重新登录!</value>
+  </data>
+  <data name="DocumentNameEmpty" xml:space="preserve">
+    <value>文档名称不能为空！</value>
+  </data>
+  <data name="DoubleOperation" xml:space="preserve">
+    <value>站位重复。</value>
+  </data>
+  <data name="DuplicateGRN" xml:space="preserve">
+    <value>GRN条码重复！</value>
+  </data>
+  <data name="DuplicateGRNCartonSN" xml:space="preserve">
+    <value>物料包装箱编号重复，请检查物料包装箱号条码生成规则！</value>
+  </data>
+  <data name="EndTimeCannotSmallStarTime" xml:space="preserve">
+    <value>截止时间不能小于开始时间</value>
+  </data>
+  <data name="EnterPasswordsDiffer" xml:space="preserve">
+    <value>再次输入的新密码不一致！</value>
+  </data>
+  <data name="EqptConfirmFail" xml:space="preserve">
+    <value>该计划未满足保养条件或者刚做完保养!</value>
+  </data>
+  <data name="EquipmentModelsNotEmpty" xml:space="preserve">
+    <value>设备型号不能为空！</value>
+  </data>
+  <data name="EqptNowLeaveUnused" xml:space="preserve">
+    <value>该设备已是闲置状态</value>
+  </data>
+  <data name="EqptNowMaintain" xml:space="preserve">
+    <value>该设备正在保养不能闲置</value>
+  </data>
+  <data name="EqptNowUse" xml:space="preserve">
+    <value>该设备正在使用</value>
+  </data>
+  <data name="EqptNowUseing" xml:space="preserve">
+    <value>该设备正在使用，不能删除</value>
+  </data>
+  <data name="EqptTimeIsRequired" xml:space="preserve">
+    <value>设备入厂日期不能早于生产日期！</value>
+  </data>
+  <data name="EquipmentExistMaintenance" xml:space="preserve">
+    <value>设备在保养不能清洗</value>
+  </data>
+  <data name="EquipmentNoUse" xml:space="preserve">
+    <value>设备没有使用不能清洗</value>
+  </data>
+  <data name="EquipmentUseNoCount" xml:space="preserve">
+    <value>设备使用次数不足</value>
+  </data>
+  <data name="ERPNoOrderNotPrint" xml:space="preserve">
+    <value>ERP中找不到对应的工单,无法打印！</value>
+  </data>
+  <data name="ErrorCodeEmpty" xml:space="preserve">
+    <value>错误编码不能为空！</value>
+  </data>
+  <data name="ErrorCodeLengthWrong" xml:space="preserve">
+    <value>错误代码长度不够</value>
+  </data>
+  <data name="EveryActivityJustAllowOnlyOneFunction" xml:space="preserve">
+    <value>每个Activity有且只能定义一个function.</value>
+  </data>
+  <data name="ExcelActiveXObjectError" xml:space="preserve">
+    <value>要导出报表，您必须安装Excel电子表格软件，同时您的浏览器须允许执行控件。</value>
+  </data>
+  <data name="ExistsErrorRecordNotValidate" xml:space="preserve">
+    <value>该机台正在报警，请解除报警后再进行上料验证！</value>
+  </data>
+  <data name="ExistsNCcannotScanPass" xml:space="preserve">
+    <value>存在未处理的不良记录，请先处理不良!</value>
+  </data>
+  <data name="ExpirationDateEmpty" xml:space="preserve">
+    <value>过期日期不能为空！</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>您登录时间已过期。原因可能如下：&lt;br/&gt;1、您在系统管理员设定的时间内没有使用本系统，为了您账号安全，系统中止了您的登录；&lt;br/&gt;2、由于系统升级，系统中止了所有用户的登录。</value>
+  </data>
+  <data name="ExportingDataWaiting" xml:space="preserve">
+    <value>正在导出数据，请稍后...</value>
+  </data>
+  <data name="FAICheckNonotNull" xml:space="preserve">
+    <value>FAI检查单号不能为空!</value>
+  </data>
+  <data name="FAICheckNoWei" xml:space="preserve">
+    <value>确认单号不能为空！</value>
+  </data>
+  <data name="FAIComeplete" xml:space="preserve">
+    <value>该工单已做过首件确认，请选择正确流程!</value>
+  </data>
+  <data name="FAINotComeplete" xml:space="preserve">
+    <value>FAI首件确认未完成，请选择正确的流程！</value>
+  </data>
+  <data name="FAIStatusNotNull" xml:space="preserve">
+    <value>FAI状态不能为空！</value>
+  </data>
+  <data name="FAITypeNotNull" xml:space="preserve">
+    <value>FAI类型不能为空！</value>
+  </data>
+  <data name="FeederTypeEmpty" xml:space="preserve">
+    <value>Feeder类型不能为空！</value>
+  </data>
+  <data name="FeederTypeNameEmpty" xml:space="preserve">
+    <value>名称不能为空！</value>
+  </data>
+  <data name="FeedNotExists" xml:space="preserve">
+    <value>此飞达不存在！</value>
+  </data>
+  <data name="FeedSNErrorWei" xml:space="preserve">
+    <value>FeedSN扫描错误！</value>
+  </data>
+  <data name="FielLoadPathEmpty" xml:space="preserve">
+    <value>产品上传路径不能为空！</value>
+  </data>
+  <data name="FileTypeError" xml:space="preserve">
+    <value>文件类型错误!</value>
+  </data>
+  <data name="FormatInvild" xml:space="preserve">
+    <value>:[不符合预定输入格式].</value>
+  </data>
+  <data name="GenerateContainerError" xml:space="preserve">
+    <value>无法生成卡通箱，请检查设置！</value>
+  </data>
+  <data name="GenerateGRNCartonSNFailed" xml:space="preserve">
+    <value>生成GRN包装箱条码失败！</value>
+  </data>
+  <data name="GenerateUnitFail" xml:space="preserve">
+    <value>生成Unit失败！</value>
+  </data>
+  <data name="GenerateUnitHistoryFail" xml:space="preserve">
+    <value>Unit更新历史记录失败！</value>
+  </data>
+  <data name="GenGrnFinishAndPrintInProcess" xml:space="preserve">
+    <value>生成GRN成功，正在打印，请稍后...</value>
+  </data>
+  <data name="GenGrnQtyMoreThan" xml:space="preserve">
+    <value>打印GRN条码的数量不能大于{0}！</value>
+  </data>
+  <data name="GenSubGRNFailed" xml:space="preserve">
+    <value>生成分料物料条码失败！</value>
+  </data>
+  <data name="GetDBTimeError" xml:space="preserve">
+    <value>获取数据库时间错误！</value>
+  </data>
+  <data name="GettingGRNQty" xml:space="preserve">
+    <value>正在获取数量...</value>
+  </data>
+  <data name="GetUnitInfoError" xml:space="preserve">
+    <value>获取Unit相关信息错误！</value>
+  </data>
+  <data name="GetUserIdFailed" xml:space="preserve">
+    <value>无法获取用户ID！</value>
+  </data>
+  <data name="GetWOInputQtyError" xml:space="preserve">
+    <value>获取工单投入数量错误！</value>
+  </data>
+  <data name="GrnCartonIsClosed" xml:space="preserve">
+    <value>物料包装箱已关闭，请先解包装后再移除！</value>
+  </data>
+  <data name="GRNCartonIsOpen" xml:space="preserve">
+    <value>GRN所在包装箱未关闭，请先将GRN从箱子移除或手动关箱</value>
+  </data>
+  <data name="GrnComepleteMaterialWei" xml:space="preserve">
+    <value>该GRN已做完上料验证，请重新扫描！</value>
+  </data>
+  <data name="GRNDismatchOperation" xml:space="preserve">
+    <value>GRN不在该工位使用！</value>
+  </data>
+  <data name="GRNDismatchOrder" xml:space="preserve">
+    <value>GRN和工单物料不匹配！</value>
+  </data>
+  <data name="GrnEmptyWei" xml:space="preserve">
+    <value>GRN不能为空！</value>
+  </data>
+  <data name="GRNFeedCompletexia" xml:space="preserve">
+    <value>该GRN已经上料，请重新扫描！</value>
+  </data>
+  <data name="GRNgenerateFinished" xml:space="preserve">
+    <value>GRN生成成功！</value>
+  </data>
+  <data name="GrnHasbeenIssued" xml:space="preserve">
+    <value>该GRN已发料了！</value>
+  </data>
+  <data name="GrnHasBeenUsed" xml:space="preserve">
+    <value>物料已使用中或使用过，不能退回给供应商</value>
+  </data>
+  <data name="GrnIsInVendor" xml:space="preserve">
+    <value>物料还在供应商，无需退料到供应商！</value>
+  </data>
+  <data name="GrnIsNotBeReceived" xml:space="preserve">
+    <value>物料GRN还没有做收料!</value>
+  </data>
+  <data name="GrnIsNotInVendor" xml:space="preserve">
+    <value>该GRN已不在供应商处，无法包装！</value>
+  </data>
+  <data name="GrnIsOutOfStore" xml:space="preserve">
+    <value>物料已出仓，此领料单不能再发料。</value>
+  </data>
+  <data name="GrnIsOutOfStoreNotAllowDel" xml:space="preserve">
+    <value>物料已出仓，该领料单不能删除！</value>
+  </data>
+  <data name="GRNIsPackedInCurrentCarton" xml:space="preserve">
+    <value>物料已包装到当前包装箱中！</value>
+  </data>
+  <data name="GrnIssuedNotAllowSplit" xml:space="preserve">
+    <value>物料还没入库或已经发出仓库，不能分料！</value>
+  </data>
+  <data name="GRNNotExists" xml:space="preserve">
+    <value>GRN不存在！</value>
+  </data>
+  <data name="GrnNotMatchPackedGrn" xml:space="preserve">
+    <value>同一包装箱内只能包装相同的物料</value>
+  </data>
+  <data name="GrnNotMatchVendorCode" xml:space="preserve">
+    <value>扫描的物料不是当前供应商的物料。</value>
+  </data>
+  <data name="GrnPackedIntoOtherCarton" xml:space="preserve">
+    <value>该GRN已包到其它包装箱中！</value>
+  </data>
+  <data name="GRNQtyIsInvalid" xml:space="preserve">
+    <value>GRN的数量不能为空或为0!</value>
+  </data>
+  <data name="GRNRemoveBoxError" xml:space="preserve">
+    <value>GRN从箱中移除失败！</value>
+  </data>
+  <data name="GRNSuccessWei" xml:space="preserve">
+    <value>GRN验证成功！</value>
+  </data>
+  <data name="GrnVendorNotMatchVendor" xml:space="preserve">
+    <value>GRN对应的供应商和选择的供应商不一致，不同供应商的物料不能包装在一起。</value>
+  </data>
+  <data name="HandBoxValidatePass" xml:space="preserve">
+    <value>周转箱验证通过！</value>
+  </data>
+  <data name="HandGRNValidatePass" xml:space="preserve">
+    <value>GRN验证通过！</value>
+  </data>
+  <data name="HandNotSMTSameWei" xml:space="preserve">
+    <value>手插段工单不能跟SMT工单相同！</value>
+  </data>
+  <data name="HasBeenAssignedSkillCertificationsAndCouldNotDeleteDirectly1" xml:space="preserve">
+    <value>该工位已分配了技能证书,不可直接删除</value>
+  </data>
+  <data name="HighlyRecommendIEBrowser" xml:space="preserve">
+    <value>强烈建议您使用Internet explorer 8或以上版本，分辨率1366x768，以获取最佳浏览效果。</value>
+  </data>
+  <data name="HiredDateIsGreaterThanTermiationDate" xml:space="preserve">
+    <value>入职日期不能大于离职日期.</value>
+  </data>
+  <data name="IMEI_Already_Exists" xml:space="preserve">
+    <value>IMEI号码已经存在！</value>
+  </data>
+  <data name="InComingSuccess" xml:space="preserve">
+    <value>进仓成功</value>
+  </data>
+  <data name="InputConditions" xml:space="preserve">
+    <value>请输入条件查询!</value>
+  </data>
+  <data name="InsertNextNumberSequenceFail" xml:space="preserve">
+    <value>序列号规则生成错误！</value>
+  </data>
+  <data name="InsertPckStatusFailed" xml:space="preserve">
+    <value>插入领料单【删除】状态失败，领料单删除失败！</value>
+  </data>
+  <data name="InsertUnitHistoryError" xml:space="preserve">
+    <value>记录序号历史记录错误！</value>
+  </data>
+  <data name="InterrelatedRecordExists" xml:space="preserve">
+    <value>关联记录存在，不能删除</value>
+  </data>
+  <data name="InvalidateHiredDate" xml:space="preserve">
+    <value>无效的入职日期。</value>
+  </data>
+  <data name="InvalidateParameter" xml:space="preserve">
+    <value>传递的参数错误！</value>
+  </data>
+  <data name="InvalidateTerminationDate" xml:space="preserve">
+    <value>无效的离职日期.</value>
+  </data>
+  <data name="InvalidBatchQty" xml:space="preserve">
+    <value>请正确输入份数，份数需大于0！</value>
+  </data>
+  <data name="InvalidBrowserVersion" xml:space="preserve">
+    <value>您当前的浏览器版本不合格，本产品需要Internet explorer 7.0 以上版本</value>
+  </data>
+  <data name="InvalidGRN" xml:space="preserve">
+    <value>无效的GRN条码！</value>
+  </data>
+  <data name="InvalidGrnCarton" xml:space="preserve">
+    <value>物料条码所在的包装箱已不存在！</value>
+  </data>
+  <data name="InvalidLocation" xml:space="preserve">
+    <value>请正确选择发料目的地！&lt;br/&gt;1、仓库-&gt;线边仓-&gt;产线;&lt;br/&gt;2、仓库-&gt;产线</value>
+  </data>
+  <data name="InvalidNCCode" xml:space="preserve">
+    <value>无效的不良代码！</value>
+  </data>
+  <data name="InvalidNewGRN" xml:space="preserve">
+    <value>无效的NewGRN!</value>
+  </data>
+  <data name="InvalidOldGRN" xml:space="preserve">
+    <value>无效的OldGRN!</value>
+  </data>
+  <data name="InvalidOldPassword" xml:space="preserve">
+    <value>旧密码错误，修改密码失败!</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>密码不正确</value>
+  </data>
+  <data name="InvalidPickingListGRN" xml:space="preserve">
+    <value>请扫描领料单所需物料的GRN。</value>
+  </data>
+  <data name="InvalidRelieveAlert" xml:space="preserve">
+    <value>无法正常连接报警器!</value>
+  </data>
+  <data name="InvalidReturnMaterialLocation" xml:space="preserve">
+    <value>请选择正确的退料位置！</value>
+  </data>
+  <data name="InvalidReturnQuantity" xml:space="preserve">
+    <value>退料数量不正确！</value>
+  </data>
+  <data name="InvalidSNwei" xml:space="preserve">
+    <value>无效的产品条码！</value>
+  </data>
+  <data name="InvalidSplitQuantity" xml:space="preserve">
+    <value>无效的分料/截料数量！</value>
+  </data>
+  <data name="InvalidSubGRN" xml:space="preserve">
+    <value>无效的分料GRN！</value>
+  </data>
+  <data name="InvalidWoNumber" xml:space="preserve">
+    <value>工单号在系统不存在！</value>
+  </data>
+  <data name="Invalid_FDSN" xml:space="preserve">
+    <value>无效的飞达条码！</value>
+  </data>
+  <data name="Invalid_MachineSN" xml:space="preserve">
+    <value>无效的SMT设备条码！</value>
+  </data>
+  <data name="Invalid_MUSN" xml:space="preserve">
+    <value>无效的物料条码！</value>
+  </data>
+  <data name="Invalid_MUStatus" xml:space="preserve">
+    <value>物料状态不正确！</value>
+  </data>
+  <data name="Invalid_ResWei" xml:space="preserve">
+    <value>选择的资源无效！</value>
+  </data>
+  <data name="IPQC_ResultOnlyPassorFail" xml:space="preserve">
+    <value>抽检结果只能输入PASS或者FAIL!</value>
+  </data>
+  <data name="IPQC_SampResult" xml:space="preserve">
+    <value>抽检结果不能为空！</value>
+  </data>
+  <data name="IQCAlreadyCompleted" xml:space="preserve">
+    <value>该条码所在批次已经检验完成.</value>
+  </data>
+  <data name="IsBlankRouter" xml:space="preserve">
+    <value>此路由是一个空路由。</value>
+  </data>
+  <data name="IsLetterOrNumberOrUnderline" xml:space="preserve">
+    <value>是字母或数字或下划线。</value>
+  </data>
+  <data name="IssueGrnNotFinished" xml:space="preserve">
+    <value>此领料单还有没有发料的行，还不能出仓！</value>
+  </data>
+  <data name="IssueInProcess" xml:space="preserve">
+    <value>正在发料，请稍后...</value>
+  </data>
+  <data name="ItemError" xml:space="preserve">
+    <value>产品错误！</value>
+  </data>
+  <data name="ItemImportInSuccess" xml:space="preserve">
+    <value>物料导入成功！</value>
+  </data>
+  <data name="ItemIsRequired" xml:space="preserve">
+    <value>请选择产品!</value>
+  </data>
+  <data name="ItemNameIsRequired" xml:space="preserve">
+    <value>产品名称不能为空！</value>
+  </data>
+  <data name="ItemRevisionIsRequired" xml:space="preserve">
+    <value>产品版本不能为空!</value>
+  </data>
+  <data name="ItemsNameEmpty" xml:space="preserve">
+    <value>产品名称不能为空！</value>
+  </data>
+  <data name="ItemStatusOfShopOrderNotAllowedRelease" xml:space="preserve">
+    <value>此工单对应的产品状态不符合释放工单要求.</value>
+  </data>
+  <data name="Item_Mismatch" xml:space="preserve">
+    <value>物料不匹配！</value>
+  </data>
+  <data name="LabelFieldDefNeeded" xml:space="preserve">
+    <value>请插入一个字段定义！</value>
+  </data>
+  <data name="LabelFieldIsBlank" xml:space="preserve">
+    <value>标签字段名字不能为空！</value>
+  </data>
+  <data name="LineNameEmpty" xml:space="preserve">
+    <value>线名不能为空！</value>
+  </data>
+  <data name="LineQtyLimit" xml:space="preserve">
+    <value>授权线数量已达上限, 不可再添加。\n\n若需要扩展产线数量，请联系深科特信息技术有限公司。</value>
+  </data>
+  <data name="LoadHasStopLine" xml:space="preserve">
+    <value>已经是停拉状态，不要重复做停拉操作</value>
+  </data>
+  <data name="LoadingData" xml:space="preserve">
+    <value>数据加载中...</value>
+  </data>
+  <data name="LoadingList_Item_Not_Linked" xml:space="preserve">
+    <value>料站表和产品尚未建立关系！</value>
+  </data>
+  <data name="LoadingList_Machine_Not_Linked" xml:space="preserve">
+    <value>料站表和设备尚未建立关系！</value>
+  </data>
+  <data name="LoadListEmpetyWei" xml:space="preserve">
+    <value>LoadingList不能为空！</value>
+  </data>
+  <data name="LoadListNoCompleteWei" xml:space="preserve">
+    <value>该工单上料未完成！</value>
+  </data>
+  <data name="LoadListNotStatusWei" xml:space="preserve">
+    <value>该料站表不是使用状态！</value>
+  </data>
+  <data name="LoadListNoUse" xml:space="preserve">
+    <value>该工单还未上料！</value>
+  </data>
+  <data name="LoadOpenNoWei" xml:space="preserve">
+    <value>该料站表是开拉状态，不能上料！</value>
+  </data>
+  <data name="LoadOperationFailed" xml:space="preserve">
+    <value>加载工位失败</value>
+  </data>
+  <data name="LoadResourcesFailed" xml:space="preserve">
+    <value>加载资源失败</value>
+  </data>
+  <data name="LoadStopNoWei" xml:space="preserve">
+    <value>该料站表是停拉状态，不能上料！</value>
+  </data>
+  <data name="LoginIdIsNeeded" xml:space="preserve">
+    <value>登录名不能为空!</value>
+  </data>
+  <data name="LooperCountEmpty" xml:space="preserve">
+    <value>请输入正确的环数！</value>
+  </data>
+  <data name="LotSizeIsNumerical" xml:space="preserve">
+    <value>批量须为数值型!</value>
+  </data>
+  <data name="LotSizeIsRequired" xml:space="preserve">
+    <value>批量不能为空！</value>
+  </data>
+  <data name="LowBrowserVersion" xml:space="preserve">
+    <value>您当前的浏览器版本低于IE 7.0，请升级您的IE浏览器</value>
+  </data>
+  <data name="MaintainRecordInfo" xml:space="preserve">
+    <value>设备保养记录详情</value>
+  </data>
+  <data name="MaterialHasBeenReceived" xml:space="preserve">
+    <value>物料已经收料！</value>
+  </data>
+  <data name="MaterialHasBeenUsedUp" xml:space="preserve">
+    <value>物料已使用完！</value>
+  </data>
+  <data name="MaterialInKittingArea" xml:space="preserve">
+    <value>物料已在线边仓！</value>
+  </data>
+  <data name="MaterialInStore" xml:space="preserve">
+    <value>物料已在仓库，无需退料！</value>
+  </data>
+  <data name="MaterialOrderNotRight" xml:space="preserve">
+    <value>当前上料工单不正确！</value>
+  </data>
+  <data name="Material_Validation_Fail" xml:space="preserve">
+    <value>物料验证未通过，请检查！</value>
+  </data>
+  <data name="Material_Validation_Success" xml:space="preserve">
+    <value>物料验证通过！</value>
+  </data>
+  <data name="MaxMustLargeMin" xml:space="preserve">
+    <value>输入的数值信息上限必须大于下限</value>
+  </data>
+  <data name="MaxQtyEmpty" xml:space="preserve">
+    <value>最大数量不能为空！</value>
+  </data>
+  <data name="MinQtyEmpty" xml:space="preserve">
+    <value>最小数量不能为空！</value>
+  </data>
+  <data name="Mismatch_Item_Slot" xml:space="preserve">
+    <value>物料与插槽不匹配，请检查！</value>
+  </data>
+  <data name="Mismatch_Slot_FeederType" xml:space="preserve">
+    <value>飞达类型与插槽不匹配，请检查！</value>
+  </data>
+  <data name="ModelFamilyNameEmpty" xml:space="preserve">
+    <value>设备组名称不能为空！</value>
+  </data>
+  <data name="ModelNameEmpty" xml:space="preserve">
+    <value>设备名称不能为空！</value>
+  </data>
+  <data name="MoreOrderWei" xml:space="preserve">
+    <value>后段工单数量已满！</value>
+  </data>
+  <data name="MustbeNumber" xml:space="preserve">
+    <value>输入内容必须是数字</value>
+  </data>
+  <data name="MustbeNumberOrLetter" xml:space="preserve">
+    <value>必须是数字或字母</value>
+  </data>
+  <data name="NeedScanGRN" xml:space="preserve">
+    <value>请扫描或输入GRN！</value>
+  </data>
+  <data name="NeedStartEndOperation" xml:space="preserve">
+    <value>路由必须有开始和结束站位。</value>
+  </data>
+  <data name="NewBOMisexist" xml:space="preserve">
+    <value>目标物料清单已存在!</value>
+  </data>
+  <data name="NewGRNAExists" xml:space="preserve">
+    <value>该NewGRN已经上料验证完成，请重新扫描NewGRN进行续料!</value>
+  </data>
+  <data name="NewGRNNotEmpty" xml:space="preserve">
+    <value>新的GRN不能为空！</value>
+  </data>
+  <data name="NewPwdIsRequired" xml:space="preserve">
+    <value>请输入新密码！</value>
+  </data>
+  <data name="NextNumberResetError" xml:space="preserve">
+    <value>序列号复位错误！</value>
+  </data>
+  <data name="NextNumberSequenceDuplicate" xml:space="preserve">
+    <value>序列号规则重复！</value>
+  </data>
+  <data name="NoCartonToClose" xml:space="preserve">
+    <value>没有可关闭的包装箱，请扫描物料条码来生成包装箱或打开未关闭的包装箱。</value>
+  </data>
+  <data name="NoGrnInTheCarton" xml:space="preserve">
+    <value>该包装箱是空的</value>
+  </data>
+  <data name="NoGRNToSplit" xml:space="preserve">
+    <value>无可供分料的数量。</value>
+  </data>
+  <data name="NoItemCert" xml:space="preserve">
+    <value>用户无产品相关认证资格！</value>
+  </data>
+  <data name="NoLabelFormat" xml:space="preserve">
+    <value>该标签还没有设置格式</value>
+  </data>
+  <data name="NoLabelTemplate" xml:space="preserve">
+    <value>标签模板不存在或模板为空！</value>
+  </data>
+  <data name="NoLineWei" xml:space="preserve">
+    <value>没有获取到线别！</value>
+  </data>
+  <data name="NonPackingStatus" xml:space="preserve">
+    <value>容器不是包装状态！</value>
+  </data>
+  <data name="NonReleatedVendor" xml:space="preserve">
+    <value>该用户没有相关联的供应商代码，请确认该用户是否已和供应商绑定！</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>该用户没有合适的工位</value>
+  </data>
+  <data name="NoOperationCert" xml:space="preserve">
+    <value>用户无此工位相关认证资格！</value>
+  </data>
+  <data name="NoOperationOrResource" xml:space="preserve">
+    <value>请选择操作工位和资源！</value>
+  </data>
+  <data name="NoParameterForTheActivity" xml:space="preserve">
+    <value>此Activity无需参数</value>
+  </data>
+  <data name="NoPickingLine" xml:space="preserve">
+    <value>此工单没有任何物料，无需发料。</value>
+  </data>
+  <data name="NoPrinterPlugin" xml:space="preserve">
+    <value>没有安装打印插件，请先安装打印插件！</value>
+  </data>
+  <data name="NoRescourceByLineWei" xml:space="preserve">
+    <value>没有对应的资源信息，请重新选择线别！</value>
+  </data>
+  <data name="NoResourceCert" xml:space="preserve">
+    <value>用户无此资源相关认证资格！</value>
+  </data>
+  <data name="NoResources" xml:space="preserve">
+    <value>=没有合适的资源=</value>
+  </data>
+  <data name="NoRouterDesignerPlugin" xml:space="preserve">
+    <value>系统检测到您的浏览器还没有安装路由设计器。</value>
+  </data>
+  <data name="NoSMTInfoStopWei" xml:space="preserve">
+    <value>暂时没有数据，不能做停拉！</value>
+  </data>
+  <data name="NoSMTInfoWei" xml:space="preserve">
+    <value>暂时还没有数据，不能做开拉！</value>
+  </data>
+  <data name="NoSubGrn" xml:space="preserve">
+    <value>没有任何子GRN。</value>
+  </data>
+  <data name="NotAllowSelectMoreThanOne" xml:space="preserve">
+    <value>不允许选择多个</value>
+  </data>
+  <data name="NotConformToTheConditionsOfInformation" xml:space="preserve">
+    <value>没有符合条件的信息!</value>
+  </data>
+  <data name="NotEnoughQuantityToIssue" xml:space="preserve">
+    <value>可供发料的数量不够！</value>
+  </data>
+  <data name="NotExistsIQCForm" xml:space="preserve">
+    <value>不存在IQC检验单.</value>
+  </data>
+  <data name="NotInCurrentIQCBatch" xml:space="preserve">
+    <value>该条码不属于当前检验批次.</value>
+  </data>
+  <data name="NotWarranttedToOperater" xml:space="preserve">
+    <value>对不起，你没有操作该功能的权限！</value>
+  </data>
+  <data name="NotWarranttedToPage" xml:space="preserve">
+    <value>对不起，你没有进入该页面的权限。</value>
+  </data>
+  <data name="NoVendorItem" xml:space="preserve">
+    <value>没有找到该供应商的物料或数据还没有从ERP同步完成。</value>
+  </data>
+  <data name="OBA_Carton_Exists_Lotno" xml:space="preserve">
+    <value>扫描编号已绑定！</value>
+  </data>
+  <data name="OfflineSNDuplicated" xml:space="preserve">
+    <value>离线条码已被使用！</value>
+  </data>
+  <data name="OfflineSNNotEmpty" xml:space="preserve">
+    <value>离线条码不能为空！</value>
+  </data>
+  <data name="OldAndNewNotItemWei" xml:space="preserve">
+    <value>OldGRN与NewGRN不属于同一个物料！</value>
+  </data>
+  <data name="OldBOMnotexist" xml:space="preserve">
+    <value>原物料清单不存在！</value>
+  </data>
+  <data name="OldGGRNNotEmpty" xml:space="preserve">
+    <value>之前的GRN不能为空！</value>
+  </data>
+  <data name="OldGRNandNewGRN" xml:space="preserve">
+    <value>OldGRN跟NewGRN不能相同！</value>
+  </data>
+  <data name="oldGRNNotOrderNo" xml:space="preserve">
+    <value>oldGRN不属于这个工单!</value>
+  </data>
+  <data name="OldGRNStop" xml:space="preserve">
+    <value>OldGRN已经做了停拉，暂时不能续料！</value>
+  </data>
+  <data name="OldPwdIsRequired" xml:space="preserve">
+    <value>请输入旧密码！</value>
+  </data>
+  <data name="OnlyBigPanelWei" xml:space="preserve">
+    <value>不能直接扫子板，只能扫拼板！</value>
+  </data>
+  <data name="OnlyPanleNotSmall" xml:space="preserve">
+    <value>不能扫子板，只能扫拼板！</value>
+  </data>
+  <data name="OpenBoxConfirm" xml:space="preserve">
+    <value>确定要打开包装容器？</value>
+  </data>
+  <data name="OpenContainerError" xml:space="preserve">
+    <value>打开包装错误！</value>
+  </data>
+  <data name="OpenContainerFirst" xml:space="preserve">
+    <value>容器状态已关闭，需要先打开容器！</value>
+  </data>
+  <data name="OperationError" xml:space="preserve">
+    <value>扫描工位错误！</value>
+  </data>
+  <data name="OperationFailure" xml:space="preserve">
+    <value>操作失败！</value>
+  </data>
+  <data name="OrderEmptyWei" xml:space="preserve">
+    <value>请选择工单！</value>
+  </data>
+  <data name="OrderNoMaterial" xml:space="preserve">
+    <value>该工单没有对应的物料信息！</value>
+  </data>
+  <data name="OrderNotFoundMaterialWei" xml:space="preserve">
+    <value>该工单没有找到对应的物料信息!</value>
+  </data>
+  <data name="OrderNotHandMaterialWei" xml:space="preserve">
+    <value>该工单还没有做手插上料验证，暂时不能扣料！</value>
+  </data>
+  <data name="OrderReleaseFullWei" xml:space="preserve">
+    <value>工单投入数量已满，请重新选择工单！</value>
+  </data>
+  <data name="OutComingSuccess" xml:space="preserve">
+    <value>出仓成功</value>
+  </data>
+  <data name="PackGrnCartonIsClosed" xml:space="preserve">
+    <value>当前条码已包装且包装箱已关闭，请包装到其它包装箱中！</value>
+  </data>
+  <data name="PackGRNToCartonFailed" xml:space="preserve">
+    <value>包装GRN失败！</value>
+  </data>
+  <data name="PackingSuccessful" xml:space="preserve">
+    <value>包装成功！</value>
+  </data>
+  <data name="PagerInfo" xml:space="preserve">
+    <value>共有 {0} 条记录，每页 {1} 条，第 {3} 页/共 {2} 页</value>
+  </data>
+  <data name="PanleErrorWei" xml:space="preserve">
+    <value>拼板错误！</value>
+  </data>
+  <data name="ParameterErrorNoCartonSN" xml:space="preserve">
+    <value>参数错误，无法获取包装箱条码；\n请回到包装箱列表页面选择正确的包装。</value>
+  </data>
+  <data name="ParametersListNotEmpty" xml:space="preserve">
+    <value>主函数的参数列表中必填项都不能为空.</value>
+  </data>
+  <data name="PartNONotExists" xml:space="preserve">
+    <value>备件号不存在.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>密码不能为空。</value>
+  </data>
+  <data name="PCBGRNUsed" xml:space="preserve">
+    <value>此PCB板的GRN已经使用过！</value>
+  </data>
+  <data name="PckListIsDeleted" xml:space="preserve">
+    <value>领料单已被删除，如果要使用请重新启用该领料单！</value>
+  </data>
+  <data name="PcklistIsOutOfStore" xml:space="preserve">
+    <value>领料单已经从仓库发出！</value>
+  </data>
+  <data name="PleaseInputToQueryInformation" xml:space="preserve">
+    <value>请输入要查询的号码！如果选择按型号和版本查询，那么请输入型号和版本！</value>
+  </data>
+  <data name="PleaseSelectFile" xml:space="preserve">
+    <value>请选择文件！</value>
+  </data>
+  <data name="PleaseSelectLine" xml:space="preserve">
+    <value>请选择线别</value>
+  </data>
+  <data name="PleaseSelectOneCode" xml:space="preserve">
+    <value>请选择一个代码！</value>
+  </data>
+  <data name="PleaseSelectOnePartAsParentPartOnTheLeft" xml:space="preserve">
+    <value>请先在右侧选择一个Item作为父Part.</value>
+  </data>
+  <data name="PlsInputActivityNameFirst" xml:space="preserve">
+    <value>请先填写Activity名称.</value>
+  </data>
+  <data name="PlsInputPartNO" xml:space="preserve">
+    <value>请输入备件号</value>
+  </data>
+  <data name="PlsInputQty" xml:space="preserve">
+    <value>请输入数量</value>
+  </data>
+  <data name="PreprocessConfirmWei" xml:space="preserve">
+    <value>确定所有的上料验证都已完成了吗?</value>
+  </data>
+  <data name="PrintCartonNumber" xml:space="preserve">
+    <value>正在打印包装箱号，请稍后......</value>
+  </data>
+  <data name="PrintDocumentIsRequired" xml:space="preserve">
+    <value>请选择文档!</value>
+  </data>
+  <data name="PrinterNameExists" xml:space="preserve">
+    <value>打印机名称已存在！</value>
+  </data>
+  <data name="PrinterRegularExists" xml:space="preserve">
+    <value>打印机规则已存在！</value>
+  </data>
+  <data name="PrintGrnSuccessful" xml:space="preserve">
+    <value>打印条码完成，页面刷新中...</value>
+  </data>
+  <data name="PrintInProcess" xml:space="preserve">
+    <value>正在打印GRN...</value>
+  </data>
+  <data name="PRNotNull" xml:space="preserve">
+    <value>不能为空</value>
+  </data>
+  <data name="ProNoRouter" xml:space="preserve">
+    <value>产品未设定路由！</value>
+  </data>
+  <data name="ProShiftNotEmpty" xml:space="preserve">
+    <value>生产班次不能为空！</value>
+  </data>
+  <data name="QualificationCertificatinIsRequired" xml:space="preserve">
+    <value>请选择资格证书!</value>
+  </data>
+  <data name="QualificationOperationIsRequired" xml:space="preserve">
+    <value>请选择工位！</value>
+  </data>
+  <data name="QuantityEmpty" xml:space="preserve">
+    <value>请输入正确的数量！</value>
+  </data>
+  <data name="ReceiveGRNSuccessful" xml:space="preserve">
+    <value>收料成功！</value>
+  </data>
+  <data name="RecieveMaterialFinished" xml:space="preserve">
+    <value>收料已完成，是否继续收料？</value>
+  </data>
+  <data name="RecordExists" xml:space="preserve">
+    <value>记录已存在！</value>
+  </data>
+  <data name="ReleaseQtyLargeMax" xml:space="preserve">
+    <value>释放数量大于序号最大值！</value>
+  </data>
+  <data name="ReleaseSuccess" xml:space="preserve">
+    <value>工单释放成功.</value>
+  </data>
+  <data name="RelieveAlert" xml:space="preserve">
+    <value>报警解除!</value>
+  </data>
+  <data name="RelieveExistsAlert" xml:space="preserve">
+    <value>报警已经解除，不需要再解除！</value>
+  </data>
+  <data name="RemoveGrnSuccessful" xml:space="preserve">
+    <value>物料移除成功！</value>
+  </data>
+  <data name="RemoveSNfromContainerError" xml:space="preserve">
+    <value>从容器中移除失败！</value>
+  </data>
+  <data name="RequiredGRN" xml:space="preserve">
+    <value>请扫描或输入GRN条码！</value>
+  </data>
+  <data name="RequiredPopedom" xml:space="preserve">
+    <value>请选择权限！</value>
+  </data>
+  <data name="RequiredWONumber" xml:space="preserve">
+    <value>请输入或选择一个工单！</value>
+  </data>
+  <data name="RequireItem" xml:space="preserve">
+    <value>请选择产品！</value>
+  </data>
+  <data name="RequireOnlyOneRecord" xml:space="preserve">
+    <value>只能选择一条记录。</value>
+  </data>
+  <data name="RequireOperateRecord" xml:space="preserve">
+    <value>请选择记录。</value>
+  </data>
+  <data name="RequireTypeInfo" xml:space="preserve">
+    <value>该类型已关联设备信息，不能删除!</value>
+  </data>
+  <data name="RequireUserName" xml:space="preserve">
+    <value>用户名不能为空。</value>
+  </data>
+  <data name="RescourceNotExistsWei" xml:space="preserve">
+    <value>资源不存在！</value>
+  </data>
+  <data name="RescourceNotSetLineWei" xml:space="preserve">
+    <value>该资源还没做线别设置 !</value>
+  </data>
+  <data name="ResetPasswordSuccess" xml:space="preserve">
+    <value>重置密码成功!</value>
+  </data>
+  <data name="ResNoProdOrderIdWei" xml:space="preserve">
+    <value>该资源还没做手插上料验证，暂时不能扣料!</value>
+  </data>
+  <data name="ResourceIsRequired" xml:space="preserve">
+    <value>请选择资源</value>
+  </data>
+  <data name="ResourceTypeHasResource" xml:space="preserve">
+    <value>该资源类型已被使用,不可删除。</value>
+  </data>
+  <data name="ReturnDateError" xml:space="preserve">
+    <value>退回时间大于当前日期！</value>
+  </data>
+  <data name="ReturnMaterialQtyInvalid" xml:space="preserve">
+    <value>退料数量不能为0或为空！</value>
+  </data>
+  <data name="ReturnMaterialSuccessful" xml:space="preserve">
+    <value>退料成功!</value>
+  </data>
+  <data name="ReUsePckSuccessful" xml:space="preserve">
+    <value>重新启用领料单成功！</value>
+  </data>
+  <data name="RevisionEmpty" xml:space="preserve">
+    <value>版本不能为空！</value>
+  </data>
+  <data name="RMAOrderNotFount" xml:space="preserve">
+    <value>找不到对应的RMA工单，该工单还没做上料验证！</value>
+  </data>
+  <data name="RMAUpdateSFC" xml:space="preserve">
+    <value>保存后该RMA中所有SFC的将不能变更，确定保存吗？</value>
+  </data>
+  <data name="RoleNameExists" xml:space="preserve">
+    <value>角色名已存在。</value>
+  </data>
+  <data name="RoleNameIsNeeded" xml:space="preserve">
+    <value>角色名不能为空。</value>
+  </data>
+  <data name="RorterDesignerConditionOne" xml:space="preserve">
+    <value>1、使用IE7.0以上浏览器打开，并且已安装Microsoft .NET Framework 4.0以上. [&lt;a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=17851" target="_blank"&gt;下载&lt;/a&gt;]</value>
+  </data>
+  <data name="RorterDesignerConditionTwo" xml:space="preserve">
+    <value>2、安装深科特为您提供的可视化路由设计器插件 [&lt;a href="../Content/Component/RouterDesigner/Lean MES系统工艺流程设计器插件2.1.2.zip" target="_blank"&gt;下载&lt;/a&gt;]</value>
+  </data>
+  <data name="RouterError" xml:space="preserve">
+    <value>路由错误！</value>
+  </data>
+  <data name="RouterHasbeenReleased" xml:space="preserve">
+    <value>Router正在使用,不可更改.</value>
+  </data>
+  <data name="RouterNoLink" xml:space="preserve">
+    <value>此路由没有任何连接线，是一个无效的路由。</value>
+  </data>
+  <data name="RouterStatusNotAllowedShopOrderRelease" xml:space="preserve">
+    <value>该工单路由状态不允许工单释放.</value>
+  </data>
+  <data name="SaveFailRepeat" xml:space="preserve">
+    <value>重复记录，数据保存失败！</value>
+  </data>
+  <data name="SaveFault" xml:space="preserve">
+    <value>数据保存失败。</value>
+  </data>
+  <data name="SaveInSuccess" xml:space="preserve">
+    <value>数据保存成功。</value>
+  </data>
+  <data name="SaveRouterBaseInfoFirst" xml:space="preserve">
+    <value>提示： 保存设计前, 需要先保存路由基本信息.</value>
+  </data>
+  <data name="ScanCartonSN" xml:space="preserve">
+    <value>请扫描包装箱条码！</value>
+  </data>
+  <data name="ScanGrnToRemove" xml:space="preserve">
+    <value>请扫描要移除的物料条码！</value>
+  </data>
+  <data name="ScanModelSpec" xml:space="preserve">
+    <value>请输入品名规格！</value>
+  </data>
+  <data name="ScanOrInputSerialNumber" xml:space="preserve">
+    <value>输入或者扫描条码之后，敲回车键，直接提交操作。</value>
+  </data>
+  <data name="ScanSN" xml:space="preserve">
+    <value>请扫描条码!</value>
+  </data>
+  <data name="SelectItemInTheLeft" xml:space="preserve">
+    <value>请在左侧选择一个标签来设置其格式！</value>
+  </data>
+  <data name="SelectMaterial" xml:space="preserve">
+    <value>请选择物料！</value>
+  </data>
+  <data name="SelectPickingList" xml:space="preserve">
+    <value>请选择要发料的工单！</value>
+  </data>
+  <data name="SelectVendor" xml:space="preserve">
+    <value>请选择供应商！</value>
+  </data>
+  <data name="SelectVendorCode" xml:space="preserve">
+    <value>请选择供应商编码！</value>
+  </data>
+  <data name="SequenceIsRequired" xml:space="preserve">
+    <value>顺序不能为空！</value>
+  </data>
+  <data name="SequenceMustBeNumber" xml:space="preserve">
+    <value>次序必须是整数。</value>
+  </data>
+  <data name="SerialNumbeEmpty" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SerialNumberDeleted" xml:space="preserve">
+    <value>条码已经删除！</value>
+  </data>
+  <data name="SerialNumberEmpty" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SerialNumberError" xml:space="preserve">
+    <value>条码错误！</value>
+  </data>
+  <data name="SerialNumberNotRetore" xml:space="preserve">
+    <value>该条码未报废或未删除，不需要恢复！</value>
+  </data>
+  <data name="SerialNumberNotScrapDeleted" xml:space="preserve">
+    <value>条码在使用中，不允许报废或删除！</value>
+  </data>
+  <data name="SerialNumberScrapedOrDeleted" xml:space="preserve">
+    <value>条码已报废或已删除！</value>
+  </data>
+  <data name="SetSuccess" xml:space="preserve">
+    <value>设置成功</value>
+  </data>
+  <data name="SFCAlreadydone" xml:space="preserve">
+    <value>序列号已经完成！</value>
+  </data>
+  <data name="SFCAlreadypacked" xml:space="preserve">
+    <value>序列号已经包装！</value>
+  </data>
+  <data name="SFC_Already_Exist" xml:space="preserve">
+    <value>条码已经存在！</value>
+  </data>
+  <data name="SFC_Invalid" xml:space="preserve">
+    <value>条码无效.</value>
+  </data>
+  <data name="SFC_Invalid_Status" xml:space="preserve">
+    <value>该SN未完成.</value>
+  </data>
+  <data name="SFC_Is_Already_Used" xml:space="preserve">
+    <value>SN已被其他产品绑定.</value>
+  </data>
+  <data name="SFC_Item_Mismatch" xml:space="preserve">
+    <value>SN与产品不匹配.</value>
+  </data>
+  <data name="SFC_Reassign_Success" xml:space="preserve">
+    <value>条码成功置换！</value>
+  </data>
+  <data name="ShopOrderHasBeenReleased" xml:space="preserve">
+    <value>工单已释放,不可变更.</value>
+  </data>
+  <data name="ShopOrderHaveNoBOM" xml:space="preserve">
+    <value>此工单未指定BOM.</value>
+  </data>
+  <data name="ShopOrderHaveNoRouter" xml:space="preserve">
+    <value>工单未指定路由.</value>
+  </data>
+  <data name="ShopOrderInvalid" xml:space="preserve">
+    <value>无效的工单!</value>
+  </data>
+  <data name="ShopOrderNotEnoughToRelease" xml:space="preserve">
+    <value>该工单已无可释放数量.</value>
+  </data>
+  <data name="ShopOrderRequired" xml:space="preserve">
+    <value>请选择工单！</value>
+  </data>
+  <data name="SlotIDNeedFeedSNWei" xml:space="preserve">
+    <value>该MachineTableSlotID有对应的FeedSN,请扫描FeedSN！</value>
+  </data>
+  <data name="SlotIDNoFeedSNWei" xml:space="preserve">
+    <value>该MachineTableSlotID没有对应的FeedSN,不需要扫描FeedSN!</value>
+  </data>
+  <data name="SlotSnEmptyWei1" xml:space="preserve">
+    <value>插槽号不能为空！</value>
+  </data>
+  <data name="SlotSNNotLoad" xml:space="preserve">
+    <value>此LoadingList没有该SlotSN!</value>
+  </data>
+  <data name="SMTFeedSuccess" xml:space="preserve">
+    <value>上料验证成功！</value>
+  </data>
+  <data name="SMTStartComplete" xml:space="preserve">
+    <value>该工单已经做了开拉,不需要重复做开拉!</value>
+  </data>
+  <data name="SMTStopComplete" xml:space="preserve">
+    <value>该工单还没做开拉,不能做停拉!</value>
+  </data>
+  <data name="SMTValidatenotComplete" xml:space="preserve">
+    <value>该工单上料验证还没完成，不能开拉！</value>
+  </data>
+  <data name="SNAppend0Fail" xml:space="preserve">
+    <value>序号补0失败！</value>
+  </data>
+  <data name="SNCannotEmpty" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SNCannotPackToContainer" xml:space="preserve">
+    <value>扫描序号和容器不匹配！</value>
+  </data>
+  <data name="SNNotCompleteWei" xml:space="preserve">
+    <value>序列号没有完成！</value>
+  </data>
+  <data name="SNNotExists" xml:space="preserve">
+    <value>序号不存在！</value>
+  </data>
+  <data name="SNNotScan" xml:space="preserve">
+    <value>序号状态错误！</value>
+  </data>
+  <data name="SNScanError" xml:space="preserve">
+    <value>序列号扫描错误！</value>
+  </data>
+  <data name="SolveErrorWei" xml:space="preserve">
+    <value>该机台正在报警，请解除报警后再进行上料验证！</value>
+  </data>
+  <data name="SplitDetail" xml:space="preserve">
+    <value>GRN:[{0}]被分成子GRN数量为：{1}</value>
+  </data>
+  <data name="SplitErrorInfo" xml:space="preserve">
+    <value>分料的数量 :{0},不能大于等于GRN的可供分料数量:{1}！</value>
+  </data>
+  <data name="SplitMaterialSuccessed" xml:space="preserve">
+    <value>分料成功！</value>
+  </data>
+  <data name="SplitQtyInvalid" xml:space="preserve">
+    <value>请正确输入分料数量，退料数量需大于0！</value>
+  </data>
+  <data name="StartAlert" xml:space="preserve">
+    <value>开始报警！</value>
+  </data>
+  <data name="StartFeedSuccess" xml:space="preserve">
+    <value>开拉执行成功！</value>
+  </data>
+  <data name="StarTimeCannotEndTime" xml:space="preserve">
+    <value>开始时间不能大于截止时间</value>
+  </data>
+  <data name="StopFeedSuccess" xml:space="preserve">
+    <value>停拉执行成功！</value>
+  </data>
+  <data name="StoreIssueSuccessful" xml:space="preserve">
+    <value>成功发料到 -</value>
+  </data>
+  <data name="SupplierLogin" xml:space="preserve">
+    <value>供应商请从供应商入口登录系统!</value>
+  </data>
+  <data name="SureOpenWei" xml:space="preserve">
+    <value>确定开拉吗？</value>
+  </data>
+  <data name="SureStopWei" xml:space="preserve">
+    <value>确定产线实际已停线？确定停拉？</value>
+  </data>
+  <data name="Sysdoing" xml:space="preserve">
+    <value>正在处理，请稍候......</value>
+  </data>
+  <data name="SystemMessage" xml:space="preserve">
+    <value>系统提示：</value>
+  </data>
+  <data name="TemplateNameEmpty" xml:space="preserve">
+    <value>模板不能为空！</value>
+  </data>
+  <data name="TestUserName" xml:space="preserve">
+    <value>测试用户为：admin，密码为： 123456</value>
+  </data>
+  <data name="TheActivityHasBeenAssignedToOperationType" xml:space="preserve">
+    <value>该Activity已被分配默认工位类型,请解除后再尝试删除.</value>
+  </data>
+  <data name="TheActivityHasBeenUsedByRouter" xml:space="preserve">
+    <value>该Activity已被路由使用.</value>
+  </data>
+  <data name="TheLineBindResource" xml:space="preserve">
+    <value>该线已绑定了资源.</value>
+  </data>
+  <data name="TheOpeTypeBindOperation" xml:space="preserve">
+    <value>此类型已分配了操作工位</value>
+  </data>
+  <data name="TheParameterDescriptionExists" xml:space="preserve">
+    <value>此参数描述已存在.</value>
+  </data>
+  <data name="TheStatusNotAllowedEdit" xml:space="preserve">
+    <value>该状态不允许编辑或删除.</value>
+  </data>
+  <data name="ThisCCgroupNotIncludeTheCC" xml:space="preserve">
+    <value>当前工具分组不包含该工具</value>
+  </data>
+  <data name="TimeFormatError" xml:space="preserve">
+    <value>时间格式错误！</value>
+  </data>
+  <data name="txtShiftNameEmpty" xml:space="preserve">
+    <value>班次名不能为空</value>
+  </data>
+  <data name="TypeCodeCountRequire" xml:space="preserve">
+    <value>该设备编码已经存在，请重新输入！</value>
+  </data>
+  <data name="TypeCodeEmpty" xml:space="preserve">
+    <value>设备类别编号不能为空！</value>
+  </data>
+  <data name="TypeNameEmpty" xml:space="preserve">
+    <value>设备类别名称不能为空！</value>
+  </data>
+  <data name="UnitBindSNFail" xml:space="preserve">
+    <value>Unit绑定序列号失败！</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="UnknownErrorAndReleaseFaild" xml:space="preserve">
+    <value>未知错误,工单释放失败.</value>
+  </data>
+  <data name="UnlockUserSuccess" xml:space="preserve">
+    <value>解锁用户成功!</value>
+  </data>
+  <data name="UnpackFirstly" xml:space="preserve">
+    <value>包装箱已关闭，请先解包装再移除物料！\n解包装请单击工具条上的【解包装】按钮。</value>
+  </data>
+  <data name="UnpackSuccessful" xml:space="preserve">
+    <value>解包装成功\n您可以继续往该包装箱包装物料或从该包装箱移除已包装的物料！</value>
+  </data>
+  <data name="UpdateContainerStatusError" xml:space="preserve">
+    <value>更新容器状态失败！</value>
+  </data>
+  <data name="UpdateGrnStatusFailed" xml:space="preserve">
+    <value>删除领料单时更新GRN状态失败，领料单删除失败！</value>
+  </data>
+  <data name="UpdateNextNumberSequenceFail" xml:space="preserve">
+    <value>序列号规则更新错误！</value>
+  </data>
+  <data name="UpdatePckGrnFailed" xml:space="preserve">
+    <value>更新GRN状态失败，删除领料单物料失败！</value>
+  </data>
+  <data name="UpdateRecordFail" xml:space="preserve">
+    <value>更新数据错误！</value>
+  </data>
+  <data name="UpdateRMADATAFail" xml:space="preserve">
+    <value>接收RMA中SFC失败！</value>
+  </data>
+  <data name="UpdateRouteFail" xml:space="preserve">
+    <value>更新路由错误！</value>
+  </data>
+  <data name="UpdateUnitError" xml:space="preserve">
+    <value>更新产品序号表数据错误！</value>
+  </data>
+  <data name="UpdateUnitStatusError" xml:space="preserve">
+    <value>更新序号状态错误！</value>
+  </data>
+  <data name="UpdateWOFail" xml:space="preserve">
+    <value>更新工单失败！</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>用户名不能为空。</value>
+  </data>
+  <data name="UsingRouterDesignerCondition" xml:space="preserve">
+    <value>要使用路由设计器您的电脑必须具备以下条件：</value>
+  </data>
+  <data name="ValidateCodeError" xml:space="preserve">
+    <value>验证码错误!</value>
+  </data>
+  <data name="ValidateCodeRequired" xml:space="preserve">
+    <value>验证码不能为空!</value>
+  </data>
+  <data name="ValidateLineMessage" xml:space="preserve">
+    <value>请停拉后再进行操作</value>
+  </data>
+  <data name="VendorCodeCannotEmpty" xml:space="preserve">
+    <value>供应商代码不能为空！</value>
+  </data>
+  <data name="VendorCodeIsNull" xml:space="preserve">
+    <value>供应商代码为空，不能分料！</value>
+  </data>
+  <data name="VendorIsNotExists" xml:space="preserve">
+    <value>供应商不存在！</value>
+  </data>
+  <data name="VendorIsNull" xml:space="preserve">
+    <value>供应商代码无效！</value>
+  </data>
+  <data name="VendorSortIsEmpty" xml:space="preserve">
+    <value>供应商简称不能为空！</value>
+  </data>
+  <data name="VersionIsRequired" xml:space="preserve">
+    <value>版本不能为空！</value>
+  </data>
+  <data name="WarehouseCodeLength" xml:space="preserve">
+    <value>仓库编号长度不能超过10个字符!</value>
+  </data>
+  <data name="WareHouseIdIsNeeded" xml:space="preserve">
+    <value>仓库编号不能为空！</value>
+  </data>
+  <data name="WareHouseNameIsNeeded" xml:space="preserve">
+    <value>仓库名称不能为空！</value>
+  </data>
+  <data name="WarehouseNameLength" xml:space="preserve">
+    <value>仓库名称长度应为10个字符!</value>
+  </data>
+  <data name="WithAsteriskIsRequired" xml:space="preserve">
+    <value>&lt;em&gt;*&lt;/em&gt; 为必填项。</value>
+  </data>
+  <data name="WithAsteriskIsRequiredAlert" xml:space="preserve">
+    <value>带星号的必须输入。</value>
+  </data>
+  <data name="WMSChars" xml:space="preserve">
+    <value>个字符</value>
+  </data>
+  <data name="wmsIsNotNull" xml:space="preserve">
+    <value>栏位不能为空！</value>
+  </data>
+  <data name="WMSLenNoMoreThan" xml:space="preserve">
+    <value>长度不能超过</value>
+  </data>
+  <data name="WOBOMnotexist" xml:space="preserve">
+    <value>物料清单不存在！</value>
+  </data>
+  <data name="WOCannotIssueGRN" xml:space="preserve">
+    <value>该GRN在工单发料中不存在！</value>
+  </data>
+  <data name="WOError" xml:space="preserve">
+    <value>工单错误！</value>
+  </data>
+  <data name="WOGenerateSNError" xml:space="preserve">
+    <value>产生序列号错误，请确定对应的物料是否有序列号规则维护！</value>
+  </data>
+  <data name="WOInfoError" xml:space="preserve">
+    <value>工单信息错误！</value>
+  </data>
+  <data name="WOItemNotMatchGRN" xml:space="preserve">
+    <value>工单物料不匹配！</value>
+  </data>
+  <data name="WoItemNotMatchGrnItem" xml:space="preserve">
+    <value>GRN对应的物料和工单中的物料不匹配！</value>
+  </data>
+  <data name="WONOItem" xml:space="preserve">
+    <value>工单无设定料号！</value>
+  </data>
+  <data name="WONORouter" xml:space="preserve">
+    <value>工单未设定路由！</value>
+  </data>
+  <data name="WoOrderNoItem" xml:space="preserve">
+    <value>工单没有对应的产品信息！</value>
+  </data>
+  <data name="WORMAError" xml:space="preserve">
+    <value>不是返工工单!</value>
+  </data>
+  <data name="ZPLNameEmpty" xml:space="preserve">
+    <value>ZPL名称不能为空！</value>
+  </data>
+  <data name="AccountIsLoginInOtherLocation" xml:space="preserve">
+    <value>该帐号已在别处登录系统，一个帐号同时只能在一个地方登录。</value>
+  </data>
+  <data name="FullOnlineUsers" xml:space="preserve">
+    <value>同时在线用户数已达到上限。</value>
+  </data>
+  <data name="InProcessOfLogout" xml:space="preserve">
+    <value>正在注销...</value>
+  </data>
+  <data name="InvalidMembership" xml:space="preserve">
+    <value>该用户的信息已被损坏，请联系系统管理员。</value>
+  </data>
+  <data name="InvalidUser" xml:space="preserve">
+    <value>无效的用户。</value>
+  </data>
+  <data name="IsLockedOut" xml:space="preserve">
+    <value>此用户已被锁定。</value>
+  </data>
+  <data name="LoginInProcess" xml:space="preserve">
+    <value>正在登录...</value>
+  </data>
+  <data name="NoAccessPermission" xml:space="preserve">
+    <value>您没有权限进入，请联系管理员开通权限。</value>
+  </data>
+  <data name="RemainChance" xml:space="preserve">
+    <value>还有{0}次机会。</value>
+  </data>
+  <data name="ComfirmToQuit" xml:space="preserve">
+    <value>确定退出吗？</value>
+  </data>
+  <data name="DataLoading" xml:space="preserve">
+    <value>正在加载数据...</value>
+  </data>
+  <data name="DefautTabNotAllowDelete" xml:space="preserve">
+    <value>默认选项卡不能删除！</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>访问的文件不存在。</value>
+  </data>
+  <data name="InvalidAccessPage" xml:space="preserve">
+    <value>无效的访问页面。</value>
+  </data>
+  <data name="InvalidLicense" xml:space="preserve">
+    <value>无效的 License 。&lt;br/&gt;&lt;br/&gt;请检查系统配套 License 文件是否存在或损坏。</value>
+  </data>
+  <data name="LicenseAccessError" xml:space="preserve">
+    <value>License未通过验证。&lt;br/&gt;&lt;br/&gt;请重启应用程序或IIS后再尝试。</value>
+  </data>
+  <data name="NoLicense" xml:space="preserve">
+    <value>系统未发现合法的 License 证书文件。&lt;br/&gt;&lt;br/&gt;请检查系统配套 License 文件是否存在或损坏。</value>
+  </data>
+  <data name="EmptyDataText" xml:space="preserve">
+    <value>没有记录。</value>
+  </data>
+  <data name="HttpRequestValidationExp" xml:space="preserve">
+    <value>请输入合法的字符！文明上网，请不要尝试非法操作。&lt;br/&gt;&lt;br/&gt;您的行为已被系统记录！</value>
+  </data>
+  <data name="CycleTimeMustGreaterPrewarning" xml:space="preserve">
+    <value>周期间隔必须大于预警提前时间或次数！</value>
+  </data>
+  <data name="CycleTimeMustGreaterZero" xml:space="preserve">
+    <value>周期间隔必须大于0且为正整数！</value>
+  </data>
+  <data name="EquipmentCodeNotEmpty" xml:space="preserve">
+    <value>设备编码不能为空！</value>
+  </data>
+  <data name="EquipmentNameNotEmpty" xml:space="preserve">
+    <value>设备名称不能为空！</value>
+  </data>
+  <data name="EquipmentTypeCodeNotEmpty" xml:space="preserve">
+    <value>设备类型编码不能为空！</value>
+  </data>
+  <data name="EquipmentTypeNameNotEmpty" xml:space="preserve">
+    <value>设备类型名称不能为空！</value>
+  </data>
+  <data name="PreWarningMustGreaterZero" xml:space="preserve">
+    <value>预警提前时间或次数必须大于0且为正整数！</value>
+  </data>
+  <data name="ProduceDateNotLaterThanEnterFactoryDate" xml:space="preserve">
+    <value>生产日期不能晚于入厂日期！</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>保存失败！</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>保存成功！</value>
+  </data>
+  <data name="PlanMaintainConfirmFail" xml:space="preserve">
+    <value>计划保养确认失败！</value>
+  </data>
+  <data name="PlanMaintainConfirmSuccess" xml:space="preserve">
+    <value>计划保养确认成功！</value>
+  </data>
+  <data name="NCCodeEmpty" xml:space="preserve">
+    <value>不良代码编码不能为空</value>
+  </data>
+  <data name="GroupNameEmpty" xml:space="preserve">
+    <value>组名称不能为空！</value>
+  </data>
+  <data name="QualificationNCCodeIsRequired" xml:space="preserve">
+    <value>请选择不良编码！</value>
+  </data>
+  <data name="ChangePasswordFailed" xml:space="preserve">
+    <value>修改密码失败！</value>
+  </data>
+  <data name="InitPasswordFailed" xml:space="preserve">
+    <value>重置用户密码失败！</value>
+  </data>
+  <data name="MaxStowQtyMustGreaterZero" xml:space="preserve">
+    <value>最大装载数量必须大于零！</value>
+  </data>
+  <data name="MinStowQtyMustGreaterZero" xml:space="preserve">
+    <value>最小装载数量必须大于零！</value>
+  </data>
+  <data name="TurnoverGroupNameNotEmpty" xml:space="preserve">
+    <value>周转工具分组名称不能为空！</value>
+  </data>
+  <data name="TurnoverNumberFormatError" xml:space="preserve">
+    <value>周转工具编码格式错误！</value>
+  </data>
+  <data name="TurnoverTypeCodeNotEmpty" xml:space="preserve">
+    <value>周转工具种类编码不能为空！</value>
+  </data>
+  <data name="TurnoverTypeNameNotEmpty" xml:space="preserve">
+    <value>周转工具种类名称不能为空！</value>
+  </data>
+  <data name="AnormalGroupNameEmpty" xml:space="preserve">
+    <value>异常类型分组名称不能为空!</value>
+  </data>
+  <data name="CannotMoreThan" xml:space="preserve">
+    <value>长度不能超过</value>
+  </data>
+  <data name="Chars" xml:space="preserve">
+    <value>字符</value>
+  </data>
+  <data name="ThisTurnoverNotIncludeTheTurnoverGroup" xml:space="preserve">
+    <value>当前周转工具分组不包含此周转工具！</value>
+  </data>
+  <data name="InterrelatedOrganizationExists" xml:space="preserve">
+    <value>该部门下还有子部门，不能删除！</value>
+  </data>
+  <data name="AnormalTypeNameEmpty" xml:space="preserve">
+    <value>异常类型名称不能为空!</value>
+  </data>
+  <data name="ReprintGRNSuccessed" xml:space="preserve">
+    <value>GRN重打印成功！</value>
+  </data>
+  <data name="PartLocationCannotNull" xml:space="preserve">
+    <value>存放位置不能为空!</value>
+  </data>
+  <data name="PartNameCannotNull" xml:space="preserve">
+    <value>备件名称不能为空!</value>
+  </data>
+  <data name="PartNickNameCannotNull" xml:space="preserve">
+    <value>备件别名不能为空!</value>
+  </data>
+  <data name="PartNOCannotNull" xml:space="preserve">
+    <value>备件号不能为空!</value>
+  </data>
+  <data name="PartQtyCannotNull" xml:space="preserve">
+    <value>当前库存不能为空!</value>
+  </data>
+  <data name="PartSafeQtyCannotNull" xml:space="preserve">
+    <value>安全库存不能为空!</value>
+  </data>
+  <data name="InStorageSuccessful" xml:space="preserve">
+    <value>入库成功!</value>
+  </data>
+  <data name="FormatErrorDownloadTemplate" xml:space="preserve">
+    <value>上传格式不正确，您可以下载对应模块编辑后再上传！</value>
+  </data>
+  <data name="NotNull" xml:space="preserve">
+    <value>不能为空！</value>
+  </data>
+  <data name="RecMaterialOverCharge" xml:space="preserve">
+    <value>收料失败！收料超出：</value>
+  </data>
+  <data name="MasterDataSaveFirst" xml:space="preserve">
+    <value>必须先保存主表信息</value>
+  </data>
+  <data name="GRNPrintError" xml:space="preserve">
+    <value>物料条码打印错误：</value>
+  </data>
+  <data name="MaterialExist" xml:space="preserve">
+    <value>此物料已存在！</value>
+  </data>
+  <data name="PleaseAddMaterial" xml:space="preserve">
+    <value>请添加要申请的物料！</value>
+  </data>
+  <data name="CannotModify" xml:space="preserve">
+    <value>系统内置,不可操作!</value>
+  </data>
+  <data name="ProductLocationBindingType" xml:space="preserve">
+    <value>此产品在此工位已绑定单据类型！</value>
+  </data>
+  <data name="PickedCannotOperation" xml:space="preserve">
+    <value>已领料，不能操作！</value>
+  </data>
+  <data name="OnlyVarApplicable" xml:space="preserve">
+    <value>非nvarchar或varchar不适用！</value>
+  </data>
+  <data name="Abandoned" xml:space="preserve">
+    <value>已弃审！</value>
+  </data>
+  <data name="AbandonSuccess" xml:space="preserve">
+    <value>弃审成功！</value>
+  </data>
+  <data name="Audited" xml:space="preserve">
+    <value>已审核！</value>
+  </data>
+  <data name="AuditOrShipmentNotDelete" xml:space="preserve">
+    <value>已审核和已发货的数据不允许删除！</value>
+  </data>
+  <data name="AuditSuccess" xml:space="preserve">
+    <value>审核成功！</value>
+  </data>
+  <data name="NonOperational" xml:space="preserve">
+    <value>不可操作!</value>
+  </data>
+  <data name="AreYouSureAbandon" xml:space="preserve">
+    <value>确定要弃审此记录吗？</value>
+  </data>
+  <data name="AreYouSureAudit" xml:space="preserve">
+    <value>确定要审核此记录吗？</value>
+  </data>
+  <data name="AreLiningUpToPrint" xml:space="preserve">
+    <value>正在排队打印，还有</value>
+  </data>
+  <data name="ConfirmBatchGiveInUse" xml:space="preserve">
+    <value>确定整批让步使用?</value>
+  </data>
+  <data name="ConfirmClearReceiveMaterialList" xml:space="preserve">
+    <value>是否确定要清空收料列表？</value>
+  </data>
+  <data name="ConfirmRemoveCurrentCode" xml:space="preserve">
+    <value>是否确定移除当前编码？</value>
+  </data>
+  <data name="HaveNothingData" xml:space="preserve">
+    <value>暂无数据</value>
+  </data>
+  <data name="InBacthNotWaitCheckMaterial" xml:space="preserve">
+    <value>该检验批次中还没有任何待检验的物料编码!</value>
+  </data>
+  <data name="MaterialCodeInCurrentBatch" xml:space="preserve">
+    <value>物料编码已在当前抽检批次中!</value>
+  </data>
+  <data name="MaterialNotSetIQCType" xml:space="preserve">
+    <value>物料未设置检验类型！</value>
+  </data>
+  <data name="PCSCodeWaitPrint" xml:space="preserve">
+    <value>个编码等待打印......</value>
+  </data>
+  <data name="PleaseNeedReceiveMaterialPO" xml:space="preserve">
+    <value>请选择要收料的订单!</value>
+  </data>
+  <data name="PleaseScanNeedCheckOfMaterial" xml:space="preserve">
+    <value>请扫描要进行IQC抽检的物料编码!</value>
+  </data>
+  <data name="ReceivingMaterial" xml:space="preserve">
+    <value>正在收料，请稍后...</value>
+  </data>
+  <data name="ThisCodeWithOtherCodeNotSameMaterial" xml:space="preserve">
+    <value>该物料编码与其它编码不属于同一物料</value>
+  </data>
+  <data name="GRNGenerateFail" xml:space="preserve">
+    <value>物料编码生成失败！</value>
+  </data>
+  <data name="IQCFormCreateFail" xml:space="preserve">
+    <value>IQC检验单生成失败</value>
+  </data>
+  <data name="MaterialChecked" xml:space="preserve">
+    <value>物料已检验!</value>
+  </data>
+  <data name="MaterialCodeAbnormal" xml:space="preserve">
+    <value>物料编码异常！</value>
+  </data>
+  <data name="MaterialInOtherIQCForm" xml:space="preserve">
+    <value>物料已存在于其它检验单！</value>
+  </data>
+  <data name="MaterialNotInTempWH" xml:space="preserve">
+    <value>物料已不在暂收仓!</value>
+  </data>
+  <data name="ThisMaterialNotSetLabelTemplate" xml:space="preserve">
+    <value>该物料还没设置标签模板！</value>
+  </data>
+  <data name="ThisMaterialNotSetMinQty" xml:space="preserve">
+    <value>该物料还没设置最小包装数量!</value>
+  </data>
+  <data name="ThisMaterialNotSetSNRule" xml:space="preserve">
+    <value>该物料还没设置对应条码规则!</value>
+  </data>
+  <data name="LifeTimeMustGreaterCycleTime" xml:space="preserve">
+    <value>设备寿命必须大于周期间隔</value>
+  </data>
+  <data name="ParamNameRepetition" xml:space="preserve">
+    <value>参数名重复！</value>
+  </data>
+  <data name="EmptyArrivalFormNO" xml:space="preserve">
+    <value>空白的到货单！</value>
+  </data>
+  <data name="InvalidIQCFormNO" xml:space="preserve">
+    <value>无效的检验单单号！</value>
+  </data>
+  <data name="InvalidMaterialSN" xml:space="preserve">
+    <value>无效的物料条码！</value>
+  </data>
+  <data name="MaterialSNStatusError" xml:space="preserve">
+    <value>物料条码状态错误！</value>
+  </data>
+  <data name="NotMeetConditionsOfMaterial" xml:space="preserve">
+    <value>该检验单中，没有收料完成的物料！</value>
+  </data>
+  <data name="PleaseEnterAValidShippingNumber" xml:space="preserve">
+    <value>请输入有效的收货数量！</value>
+  </data>
+  <data name="ThisFormNONotExistsOrRecevedCompleted" xml:space="preserve">
+    <value>不存在的到货单号或者该到货单已收货完成！</value>
+  </data>
+  <data name="ThisMaterialNotSetCheckParams" xml:space="preserve">
+    <value>该物料还未设置检验参数！</value>
+  </data>
+  <data name="TelephoneLength" xml:space="preserve">
+    <value>电话长度不能超过20个字符!</value>
+  </data>
+  <data name="WarehouseAddressLength" xml:space="preserve">
+    <value>仓库地址不能超过30个字符!</value>
+  </data>
+  <data name="IQCFailSuccess" xml:space="preserve">
+    <value>IQC检验退货--操作成功！</value>
+  </data>
+  <data name="IQCPassSuccess" xml:space="preserve">
+    <value>IQC检验通过--操作成功！</value>
+  </data>
+  <data name="PleaseEnterAValidMinPackQty" xml:space="preserve">
+    <value>请输入有效的最小包装数量！</value>
+  </data>
+  <data name="PrintNumberLength" xml:space="preserve">
+    <value>输入数字不能大于五位数！</value>
+  </data>
+  <data name="InvalidateGRNPackStatus" xml:space="preserve">
+    <value>该包装箱物料已做收货了，不能解包装！</value>
+  </data>
+  <data name="CartonIsEmpty" xml:space="preserve">
+    <value>物料包装箱不是空的，不能删除，请先移除包装箱内的物料再删除！</value>
+  </data>
+  <data name="OnlyAllowNormalShopOrderRelease" xml:space="preserve">
+    <value>只允许释放Normal类型的工单.</value>
+  </data>
+  <data name="InvalidateDate" xml:space="preserve">
+    <value>无效日期格式</value>
+  </data>
+  <data name="StartDateTimeGreaterThanEndDateTime" xml:space="preserve">
+    <value>开始日期不可大于结束日期.</value>
+  </data>
+  <data name="ProducedCannotOperation" xml:space="preserve">
+    <value>已生产，不能操作！</value>
+  </data>
+  <data name="CancelSuccess" xml:space="preserve">
+    <value>撤消成功！</value>
+  </data>
+  <data name="FinishAssignedTasks" xml:space="preserve">
+    <value>已分配完任务！</value>
+  </data>
+  <data name="LineJoin" xml:space="preserve">
+    <value>此产线已添加！</value>
+  </data>
+  <data name="SlotSnEmptyWei" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ConfirmAllSpecial" xml:space="preserve">
+    <value>确定批量特采吗？</value>
+  </data>
+  <data name="IQCSpecialSuccess" xml:space="preserve">
+    <value>IQC检验特采--操作成功！</value>
+  </data>
+  <data name="ShopOrderStatusNotAllowedRelease" xml:space="preserve">
+    <value>该状态下不允许释放工单.</value>
+  </data>
+  <data name="GrnPackedToCarton" xml:space="preserve">
+    <value>此GRN已包装到卡通箱了,请先从卡通箱移除再来删除GRN.</value>
+  </data>
+  <data name="InsertGrnHistoryFailed" xml:space="preserve">
+    <value>记录GRN历史记录出错，删除GRN失败！</value>
+  </data>
+  <data name="ResourceEmpty" xml:space="preserve">
+    <value>资源不能为空！</value>
+  </data>
+  <data name="CartonIsNotEmpty" xml:space="preserve">
+    <value>当前包装箱不是空包装箱不能删除！</value>
+  </data>
+  <data name="GrnCartonIsEmpty" xml:space="preserve">
+    <value>包装箱为空！</value>
+  </data>
+  <data name="GrnCartonIsStillOpen" xml:space="preserve">
+    <value>包装箱还没有关闭，不能收料！</value>
+  </data>
+  <data name="ReportCNNameIsNull" xml:space="preserve">
+    <value>报表中文名不能为空！</value>
+  </data>
+  <data name="ReportENNameIsNull" xml:space="preserve">
+    <value>报表英文名不能为空！</value>
+  </data>
+  <data name="ReportTypeIsNull" xml:space="preserve">
+    <value>请选择报表类型！</value>
+  </data>
+  <data name="ReportTypeNameCNIsEmpty" xml:space="preserve">
+    <value>报表类型中文名不能为空！</value>
+  </data>
+  <data name="ReportTypeNameENIsEmpty" xml:space="preserve">
+    <value>报表类型英文名不能为空!</value>
+  </data>
+  <data name="SequenceShouldBeNumber" xml:space="preserve">
+    <value>序号只能为数值类型!</value>
+  </data>
+  <data name="InvalidGRNOrIsPacked" xml:space="preserve">
+    <value>当前扫描的物料序列号在系统中不存在或者已包装了。</value>
+  </data>
+  <data name="NewMaterialNumberInvalid" xml:space="preserve">
+    <value>无效的新物料收货号码！</value>
+  </data>
+  <data name="ItemCodeIsRequired" xml:space="preserve">
+    <value>产品编码不能为空！</value>
+  </data>
+  <data name="PleaseSelectDestinationOpe" xml:space="preserve">
+    <value>请选择目的工位</value>
+  </data>
+  <data name="MaterialNotExist" xml:space="preserve">
+    <value>物料不存在</value>
+  </data>
+  <data name="CreatePickFail" xml:space="preserve">
+    <value>生成分捡单失败!</value>
+  </data>
+  <data name="NotConfiguredShipmentList" xml:space="preserve">
+    <value>未配置出货清单！</value>
+  </data>
+  <data name="LintSequenceCompletedSubmit" xml:space="preserve">
+    <value>清单序列已完成，请提交！</value>
+  </data>
+  <data name="PartValueCannotNull" xml:space="preserve">
+    <value>部件序号不能为空！</value>
+  </data>
+  <data name="SerialNumberIsExistsWhetherReplace" xml:space="preserve">
+    <value>序列清单已存在，是否替换？</value>
+  </data>
+  <data name="TemplatePathEmpty" xml:space="preserve">
+    <value>模板路径不能为空！</value>
+  </data>
+  <data name="TypeEmpty" xml:space="preserve">
+    <value>类型不能为空！</value>
+  </data>
+  <data name="LabelFormatRepeat" xml:space="preserve">
+    <value>标签格式重复！</value>
+  </data>
+  <data name="SelectModelName" xml:space="preserve">
+    <value>请选择模块名！</value>
+  </data>
+  <data name="SelectFieldName" xml:space="preserve">
+    <value>请选择字段名！</value>
+  </data>
+  <data name="IQCParamsGetFail" xml:space="preserve">
+    <value>的检验参数获取失败！原因：</value>
+  </data>
+  <data name="IQCPartPassSuccess" xml:space="preserve">
+    <value>IQC让步使用---操作成功！</value>
+  </data>
+  <data name="AccessoriesAlreadySetTime1" xml:space="preserve">
+    <value>该辅料已设置过时间管控</value>
+  </data>
+  <data name="AccessoriesCancel1" xml:space="preserve">
+    <value>该辅料已报废</value>
+  </data>
+  <data name="AccessoriesCountEmpty1" xml:space="preserve">
+    <value>辅料数量不能为空！</value>
+  </data>
+  <data name="AccessoriesEmpty1" xml:space="preserve">
+    <value>物料编号不存在</value>
+  </data>
+  <data name="AccessoriesLeaveTime1" xml:space="preserve">
+    <value>已超过该辅料闲置时间，无法使用</value>
+  </data>
+  <data name="AccessoriesNoThaw1" xml:space="preserve">
+    <value>该辅料没有解冻完成</value>
+  </data>
+  <data name="AccessoriesNowThaw1" xml:space="preserve">
+    <value>该辅料正在解冻</value>
+  </data>
+  <data name="AccessoriesNowUse1" xml:space="preserve">
+    <value>该辅料正在使用中</value>
+  </data>
+  <data name="AccessoriesOverdue1" xml:space="preserve">
+    <value>该辅料已过期</value>
+  </data>
+  <data name="AccessoriesThawAfter1" xml:space="preserve">
+    <value>请解冻后在使用</value>
+  </data>
+  <data name="AccessoriesUseTime1" xml:space="preserve">
+    <value>已超过该辅料使用时间，无法使用</value>
+  </data>
+  <data name="AC_CheckNo_Invalid1" xml:space="preserve">
+    <value>没有找到对应的检测代码，请重新扫描！</value>
+  </data>
+  <data name="AC_DialogCloseMessage1" xml:space="preserve">
+    <value>【----您确定要终止操作吗 ？----】</value>
+  </data>
+  <data name="AC_DR_CanNotCloseWin1" xml:space="preserve">
+    <value>无法完成，请选择不良进行维修！</value>
+  </data>
+  <data name="AC_DR_DuplicateNCDataRecord1" xml:space="preserve">
+    <value>该代码已添加</value>
+  </data>
+  <data name="AC_DR_DuplicateRepairRecord1" xml:space="preserve">
+    <value>重复的维修记录！</value>
+  </data>
+  <data name="AC_DR_FailToSaveRepairData1" xml:space="preserve">
+    <value>维修记录保存失败，请重新尝试！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseDefect1" xml:space="preserve">
+    <value>请选择检测代码！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseNC1" xml:space="preserve">
+    <value>请选择要维修的记录！</value>
+  </data>
+  <data name="AC_DR_PleaseChooseRepair1" xml:space="preserve">
+    <value>请选择维修代码！</value>
+  </data>
+  <data name="AC_LMQty11" xml:space="preserve">
+    <value>数量无效，不能大于工单数量！</value>
+  </data>
+  <data name="AC_LMQty21" xml:space="preserve">
+    <value>产出数量不能大于投入数量！</value>
+  </data>
+  <data name="AC_MPIPQC_remind011" xml:space="preserve">
+    <value>无效的载具号码或者载具未被用户锁定！</value>
+  </data>
+  <data name="AC_MPIPQC_remind021" xml:space="preserve">
+    <value>板篮/板柜数据初始成功！</value>
+  </data>
+  <data name="AC_MPIPQC_remind031" xml:space="preserve">
+    <value>容器编号无效，无初始数据！</value>
+  </data>
+  <data name="AC_MPIPQC_remind041" xml:space="preserve">
+    <value>扫描条码：</value>
+  </data>
+  <data name="AC_MPIPQC_remind051" xml:space="preserve">
+    <value>不在指定容器</value>
+  </data>
+  <data name="AC_MPIPQC_remind061" xml:space="preserve">
+    <value>之中！</value>
+  </data>
+  <data name="AC_MPIPQC_remind071" xml:space="preserve">
+    <value>第1次扫描IPQC条码成功，请扫描第2次。</value>
+  </data>
+  <data name="AC_MPIPQC_remind081" xml:space="preserve">
+    <value>已经处理IPQC不良代码，请继续下一个操作。</value>
+  </data>
+  <data name="AC_MPIPQC_remind091" xml:space="preserve">
+    <value>第1次与第2次扫描IPQC条码异常，请扫描不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind101" xml:space="preserve">
+    <value>两次扫描IPQC条码正常，请继续下一个操作。</value>
+  </data>
+  <data name="AC_MPIPQC_remind111" xml:space="preserve">
+    <value>抽检条码扫描次数不够，不能直接扫描不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind121" xml:space="preserve">
+    <value>IPQC不良代码验证成功，请继续检查。</value>
+  </data>
+  <data name="AC_MPIPQC_remind131" xml:space="preserve">
+    <value>IPQC不良代码无效，请重新检查不良代码！</value>
+  </data>
+  <data name="AC_MPIPQC_remind141" xml:space="preserve">
+    <value>IPQC抽检单号不能为空！</value>
+  </data>
+  <data name="AC_MPIPQC_remind151" xml:space="preserve">
+    <value>没有抽检记录！请先进行抽检！</value>
+  </data>
+  <data name="AC_MPIPQC_remind161" xml:space="preserve">
+    <value>数据处理成功，请继续！</value>
+  </data>
+  <data name="AC_MPIPQC_remind171" xml:space="preserve">
+    <value>不允许重复抽检！</value>
+  </data>
+  <data name="AC_MPIPQC_remind181" xml:space="preserve">
+    <value>全部抽检成功，不能点击“批次不良”。</value>
+  </data>
+  <data name="AC_MPIPQC_remind191" xml:space="preserve">
+    <value>全部抽检失败，不能点击“批次良品”。</value>
+  </data>
+  <data name="AC_MPIPQC_UISN1" xml:space="preserve">
+    <value>请扫描正确的载具编号或拼板编号！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_Not_Exist1" xml:space="preserve">
+    <value>扫描编号不存在！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OK1" xml:space="preserve">
+    <value>外箱编号验证合格。</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OpeID_error1" xml:space="preserve">
+    <value>外箱生产进程状态不对！</value>
+  </data>
+  <data name="AC_MSOBA_Carton_status_error1" xml:space="preserve">
+    <value>外箱没有关闭！</value>
+  </data>
+  <data name="AC_MSOBA_remind011" xml:space="preserve">
+    <value>外箱条码扫描完成，开始进行抽检检验，请输入抽检单号。</value>
+  </data>
+  <data name="AC_MSOBA_remind021" xml:space="preserve">
+    <value>扫描0000结束外箱条码扫描，开始进行抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind031" xml:space="preserve">
+    <value>第1次扫描OBA条码成功，请扫描第2次。</value>
+  </data>
+  <data name="AC_MSOBA_remind041" xml:space="preserve">
+    <value>请重新抽检！</value>
+  </data>
+  <data name="AC_MSOBA_remind051" xml:space="preserve">
+    <value>抽检SN成功，请继续抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind061" xml:space="preserve">
+    <value>是无效的OBA不良代码，请重新扫描不良代码！</value>
+  </data>
+  <data name="AC_MSOBA_remind071" xml:space="preserve">
+    <value>请扫描OBA抽检不良代码！</value>
+  </data>
+  <data name="AC_MSOBA_remind081" xml:space="preserve">
+    <value>已经扫描数量与Carton</value>
+  </data>
+  <data name="AC_MSOBA_remind091" xml:space="preserve">
+    <value>数量之和，不能大于系统批次数量。</value>
+  </data>
+  <data name="AC_MSOBA_remind101" xml:space="preserve">
+    <value>OBA抽检单号不能为空！</value>
+  </data>
+  <data name="AC_MSOBA_remind111" xml:space="preserve">
+    <value>OBA抽检SN成功，请继续抽检。</value>
+  </data>
+  <data name="AC_MSOBA_remind121" xml:space="preserve">
+    <value>请扫描要抽检的条码编号。</value>
+  </data>
+  <data name="AC_MSOBA_remind131" xml:space="preserve">
+    <value>抽检数据保存成功，请扫描外箱条码</value>
+  </data>
+  <data name="AC_MSOBA_SNnoLot1" xml:space="preserve">
+    <value>条码不在指定批号中！</value>
+  </data>
+  <data name="AC_MSOBA_SNuseinLot1" xml:space="preserve">
+    <value>条码已经被抽检！</value>
+  </data>
+  <data name="AC_MSOBA_SN_OK1" xml:space="preserve">
+    <value>条码编号验证合格。</value>
+  </data>
+  <data name="AC_NotExistsTheNCCodeInCurrentGroup1" xml:space="preserve">
+    <value>当前代码组不存在此代码.</value>
+  </data>
+  <data name="AC_NumberOnly1" xml:space="preserve">
+    <value>只接收数字类型.</value>
+  </data>
+  <data name="AC_OBA_AuditValidationFail1" xml:space="preserve">
+    <value>条码验证失败！请检查条码是否在此批次中！</value>
+  </data>
+  <data name="AC_OBA_InAnotherLot1" xml:space="preserve">
+    <value>已在另外一个批次中！</value>
+  </data>
+  <data name="AC_OBA_ItemMismatch1" xml:space="preserve">
+    <value>扫描的产品不一致!</value>
+  </data>
+  <data name="AC_OBA_ItemNotSetOBA1" xml:space="preserve">
+    <value>该产品没有设定OBA抽样标准！</value>
+  </data>
+  <data name="AC_OBA_SaveLotError1" xml:space="preserve">
+    <value>条码无法保存到批次中，请检查！</value>
+  </data>
+  <data name="AC_PleaseAddNCCode1" xml:space="preserve">
+    <value>请添加必须的不良代码.</value>
+  </data>
+  <data name="AC_PleaseChooseNCCode1" xml:space="preserve">
+    <value>请选择不良代码.</value>
+  </data>
+  <data name="AC_PleaseSelectOneRecord1" xml:space="preserve">
+    <value>请选择一个选项.</value>
+  </data>
+  <data name="AC_RepairNo_Invalid1" xml:space="preserve">
+    <value>没有找到对应的维修代码，请重新扫描！</value>
+  </data>
+  <data name="AC_RSN_NoProdInfo1" xml:space="preserve">
+    <value>没有找到相关产品信息</value>
+  </data>
+  <data name="AC_Scan_BoxNo1" xml:space="preserve">
+    <value>请扫描周转箱号！</value>
+  </data>
+  <data name="AC_SystemAddDataAutomaticAndPassed1" xml:space="preserve">
+    <value>系统已自动添加组装数据,已通过.</value>
+  </data>
+  <data name="AC_TheOperationHasNoNCCodeGroup1" xml:space="preserve">
+    <value>该工位未指定不良代码组.</value>
+  </data>
+  <data name="AddressLengthError1" xml:space="preserve">
+    <value>仓库地址不能超过30个字符!</value>
+  </data>
+  <data name="Alrealy_PollingWei1" xml:space="preserve">
+    <value>该工单已经做完巡检，不需要重复巡检!</value>
+  </data>
+  <data name="Areyousureremovethispart1" xml:space="preserve">
+    <value>你确定移除该Part吗?</value>
+  </data>
+  <data name="Audit_SN_Already_Exist1" xml:space="preserve">
+    <value>条码已经经过OBA检查！</value>
+  </data>
+  <data name="Audit_SN_Not_Exist1" xml:space="preserve">
+    <value>扫描的条码不在此批次中！</value>
+  </data>
+  <data name="BalanceQtyEmpty1" xml:space="preserve">
+    <value>请输入正确的结存量！</value>
+  </data>
+  <data name="BoardNumNotZero1" xml:space="preserve">
+    <value>拼板或子板数目不能小于等于0！</value>
+  </data>
+  <data name="BoardQTYEmpty1" xml:space="preserve">
+    <value>板数量不能为空!</value>
+  </data>
+  <data name="BOMStatusNotAllowedShopOrderRelease1" xml:space="preserve">
+    <value>该工单BOM状态不允许工单释放.</value>
+  </data>
+  <data name="BoxHasTheGRNWei1" xml:space="preserve">
+    <value>周转箱里已有该物料，不需要扫该物料了!</value>
+  </data>
+  <data name="BoxScanOnlyGRN1" xml:space="preserve">
+    <value>周转箱已扫描完成，请扫描GRN!</value>
+  </data>
+  <data name="BrowserVersionSug1" xml:space="preserve">
+    <value>本系统使用Internet explorer 10可获得最佳浏览效果</value>
+  </data>
+  <data name="CartonIsClosed1" xml:space="preserve">
+    <value>包装箱已关闭！</value>
+  </data>
+  <data name="CartonIsOpen1" xml:space="preserve">
+    <value>物料包装箱还没有关闭，先关闭包装箱才能收料！</value>
+  </data>
+  <data name="CertificationEmpty1" xml:space="preserve">
+    <value>岗位资格名称不能为空！</value>
+  </data>
+  <data name="CertificationExists1" xml:space="preserve">
+    <value>认证资格已经存在！</value>
+  </data>
+  <data name="CertificationTypeEmpty1" xml:space="preserve">
+    <value>岗位资格类型不能为空！</value>
+  </data>
+  <data name="ChangeSNStepFail1" xml:space="preserve">
+    <value>更改序号工位失败，请联系相关人员检序号信息！</value>
+  </data>
+  <data name="ChangeSNStepSuccess1" xml:space="preserve">
+    <value>更改序号工位成功！</value>
+  </data>
+  <data name="CheckUnitState1" xml:space="preserve">
+    <value>该条码只能扫小码，不能扫大码！</value>
+  </data>
+  <data name="ChoiceLineWei1" xml:space="preserve">
+    <value>线别没有绑定LoadingList,请重新选择线别！</value>
+  </data>
+  <data name="ChoiceOrderWei1" xml:space="preserve">
+    <value>LoadingList所属工单跟所选工单不一致，请重新选择工单！</value>
+  </data>
+  <data name="CirBoxNotExists1" xml:space="preserve">
+    <value>周转箱不存在!</value>
+  </data>
+  <data name="CirBoxStatus1" xml:space="preserve">
+    <value>无效的周转箱状态!</value>
+  </data>
+  <data name="CirContainerDescEmpty1" xml:space="preserve">
+    <value>周转工具种类描述不能为空！</value>
+  </data>
+  <data name="CirContainerEmpty1" xml:space="preserve">
+    <value>周转工具种类不能为空！</value>
+  </data>
+  <data name="CirContainerGroupEmpty1" xml:space="preserve">
+    <value>周转工具分组不能为空！</value>
+  </data>
+  <data name="CirContainerNumberFormatError1" xml:space="preserve">
+    <value>周转工具条码只能由字母，数字，下划线组成！且长度不超过50!</value>
+  </data>
+  <data name="CirContainerNumberNotNull1" xml:space="preserve">
+    <value>周转工具编号不能为空</value>
+  </data>
+  <data name="ClearScreen1" xml:space="preserve">
+    <value>清空屏幕只会清空产品结构的显示内容，不会删除数据库内容！</value>
+  </data>
+  <data name="ComfirmToQuit1" xml:space="preserve">
+    <value>确定退出系统吗?</value>
+  </data>
+  <data name="ConfirmCertExpirationDate1" xml:space="preserve">
+    <value>请确认此岗位认证的时间\n授权日期为：{0}\n到期日期为：{1}\n如果同意点【确定】，否则点【取消】，然后重新选择日期</value>
+  </data>
+  <data name="ConfirmContainerRemoveSN1" xml:space="preserve">
+    <value>确定要把序列号从容器中移除？</value>
+  </data>
+  <data name="ConfirmDeletePck1" xml:space="preserve">
+    <value>确定要删除该领料单吗？</value>
+  </data>
+  <data name="ConfirmGoOnReturnMaterial1" xml:space="preserve">
+    <value>是否继续退料！</value>
+  </data>
+  <data name="ConfirmIssueFinished1" xml:space="preserve">
+    <value>确定该领料单物料已发完吗？</value>
+  </data>
+  <data name="ConfirmMoveSNStep1" xml:space="preserve">
+    <value>确定要异动序列号当前位置？</value>
+  </data>
+  <data name="ConfirmOutOfStore1" xml:space="preserve">
+    <value>出仓后领料单物料将不能被修改，是否确认物料出仓？</value>
+  </data>
+  <data name="ConfirmResetPwd1" xml:space="preserve">
+    <value>【重置密码】是将用户的密码重置为123456\n是否确认重置选中的所有用户的密码为123456</value>
+  </data>
+  <data name="ConfirmSetLineWei1" xml:space="preserve">
+    <value>确定设置该线别？</value>
+  </data>
+  <data name="ConfirmSetupLineWei1" xml:space="preserve">
+    <value>该线别可能正在上料验证，确定设置该线别？</value>
+  </data>
+  <data name="ConfirmToRemoveLabelFormat1" xml:space="preserve">
+    <value>确定移除此标签字段吗？</value>
+  </data>
+  <data name="ConfirmUnlockUser1" xml:space="preserve">
+    <value>当用户的帐号被锁定时，可以用【解锁】功能来解除用户锁定\n确定将选中的所有用户解除锁定吗？</value>
+  </data>
+  <data name="ContainerCloseConfirm1" xml:space="preserve">
+    <value>确定要封箱吗？</value>
+  </data>
+  <data name="ContainerEmpty1" xml:space="preserve">
+    <value>容器名称不能为空！</value>
+  </data>
+  <data name="ContainerNoMaterial1" xml:space="preserve">
+    <value>周转箱没有对应的物料信息！</value>
+  </data>
+  <data name="ContainerUnit_Already_Exist1" xml:space="preserve">
+    <value>载具条码信息已经存在！</value>
+  </data>
+  <data name="ContainerUnit_Exist_In_Another1" xml:space="preserve">
+    <value>不是同一个载具！</value>
+  </data>
+  <data name="ContainerUnit_Saved1" xml:space="preserve">
+    <value>载具信息保存成功！</value>
+  </data>
+  <data name="ContinueFeedSuccess1" xml:space="preserve">
+    <value>续料成功！</value>
+  </data>
+  <data name="CreateSN_Already_Exist1" xml:space="preserve">
+    <value>条码已经存在，无法创建！</value>
+  </data>
+  <data name="CreateSN_OK1" xml:space="preserve">
+    <value>条码成功创建！</value>
+  </data>
+  <data name="CreateSN_PO_Used_Out1" xml:space="preserve">
+    <value>工单数量已经用完，无法创建！</value>
+  </data>
+  <data name="CreateSN_Router_Invalid1" xml:space="preserve">
+    <value>工单或者是产品没有绑定路由信息，无法创建！</value>
+  </data>
+  <data name="CustomerRemarkeEmpty1" xml:space="preserve">
+    <value>客户全称不能为空</value>
+  </data>
+  <data name="CycleTimeGreaterPrewarning1" xml:space="preserve">
+    <value>周期间隔的值必须大于提前预警的值</value>
+  </data>
+  <data name="DataFieldSequenceExist1" xml:space="preserve">
+    <value>数据字段次序已经存在！</value>
+  </data>
+  <data name="DataTypeMasterSaveFirst1" xml:space="preserve">
+    <value>请先保存主数据类型.</value>
+  </data>
+  <data name="DateCodeDismatch1" xml:space="preserve">
+    <value>生产日期不一致！</value>
+  </data>
+  <data name="DateNotThanThirty1" xml:space="preserve">
+    <value>时间间隔不能超过3个月！</value>
+  </data>
+  <data name="DefaultPasswordMsg1" xml:space="preserve">
+    <value>如果留空则默认密码为：123456</value>
+  </data>
+  <data name="DefautTabNotAllowDelete1" xml:space="preserve">
+    <value>默认选项卡不能删除!</value>
+  </data>
+  <data name="DeleteFaild1" xml:space="preserve">
+    <value>删除失败.</value>
+  </data>
+  <data name="DeleteGRNsError1" xml:space="preserve">
+    <value>选中的GRN状态不对,不能删除！</value>
+  </data>
+  <data name="DeletePckSuccessful1" xml:space="preserve">
+    <value>删除领料单成功！</value>
+  </data>
+  <data name="DeletePickingGrnFailed1" xml:space="preserve">
+    <value>删除领料单中的GRN失败，领料单删除失败！</value>
+  </data>
+  <data name="DeleteSuccessWithInfo1" xml:space="preserve">
+    <value>删除数据成功\n但数据 [{0}] 未能被删除，因为还在被使用。</value>
+  </data>
+  <data name="DelPckGrnFailed1" xml:space="preserve">
+    <value>删除领料单物料失败！</value>
+  </data>
+  <data name="DepartmentCodeEmpty1" xml:space="preserve">
+    <value>部门编号不能为空！</value>
+  </data>
+  <data name="DepartmentDeleteFailed1" xml:space="preserve">
+    <value>无法删除部门，已经关联用户信息。</value>
+  </data>
+  <data name="DepartmentExists1" xml:space="preserve">
+    <value>部门已经存在！</value>
+  </data>
+  <data name="DepartmentNameEmpty1" xml:space="preserve">
+    <value>部门名称不能为空！</value>
+  </data>
+  <data name="DictionaryNameEmpty1" xml:space="preserve">
+    <value>字典名称不能为空</value>
+  </data>
+  <data name="DictionaryPropertyEmpty1" xml:space="preserve">
+    <value>字典属性值不能为空</value>
+  </data>
+  <data name="Disconnect1" xml:space="preserve">
+    <value>对不起，您已与服务器失去连接!\n您被迫下线，请重新登录!</value>
+  </data>
+  <data name="DocumentNameEmpty1" xml:space="preserve">
+    <value>文档名称不能为空！</value>
+  </data>
+  <data name="DuplicateGRN1" xml:space="preserve">
+    <value>GRN条码重复！</value>
+  </data>
+  <data name="DuplicateGRNCartonSN1" xml:space="preserve">
+    <value>物料包装箱编号重复，请检查物料包装箱号条码生成规则！</value>
+  </data>
+  <data name="EmptyDataText1" xml:space="preserve">
+    <value>没有记录。</value>
+  </data>
+  <data name="EndTimeCannotSmallStarTime1" xml:space="preserve">
+    <value>截止时间不能小于开始时间</value>
+  </data>
+  <data name="EqptConfirmFail1" xml:space="preserve">
+    <value>该计划未满足保养条件或者刚做完保养!</value>
+  </data>
+  <data name="EqptNowLeaveUnused1" xml:space="preserve">
+    <value>该设备已是闲置状态</value>
+  </data>
+  <data name="EqptNowMaintain1" xml:space="preserve">
+    <value>该设备正在保养不能闲置</value>
+  </data>
+  <data name="EqptNowUse1" xml:space="preserve">
+    <value>该设备正在使用</value>
+  </data>
+  <data name="EqptNowUseing1" xml:space="preserve">
+    <value>该设备正在使用，不能删除</value>
+  </data>
+  <data name="EqptTimeIsRequired1" xml:space="preserve">
+    <value>设备入厂日期不能早于生产日期！</value>
+  </data>
+  <data name="EquipmentExistMaintenance1" xml:space="preserve">
+    <value>设备在保养不能清洗</value>
+  </data>
+  <data name="EquipmentNoUse1" xml:space="preserve">
+    <value>设备没有使用不能清洗</value>
+  </data>
+  <data name="EquipmentUseNoCount1" xml:space="preserve">
+    <value>设备使用次数不足</value>
+  </data>
+  <data name="ERPNoOrderNotPrint1" xml:space="preserve">
+    <value>ERP中找不到对应的工单,无法打印！</value>
+  </data>
+  <data name="ErrorCodeEmpty1" xml:space="preserve">
+    <value>错误编码不能为空！</value>
+  </data>
+  <data name="ErrorCodeLengthWrong1" xml:space="preserve">
+    <value>错误代码长度不够</value>
+  </data>
+  <data name="EveryActivityJustAllowOnlyOneFunction1" xml:space="preserve">
+    <value>每个Activity有且只能定义一个function.</value>
+  </data>
+  <data name="ExistsErrorRecordNotValidate1" xml:space="preserve">
+    <value>该机台正在报警，请解除报警后再进行上料验证！</value>
+  </data>
+  <data name="ExistsNCcannotScanPass1" xml:space="preserve">
+    <value>存在未处理的不良记录，请先处理不良!</value>
+  </data>
+  <data name="ExpirationDateEmpty1" xml:space="preserve">
+    <value>过期日期不能为空！</value>
+  </data>
+  <data name="FAICheckNonotNull1" xml:space="preserve">
+    <value>FAI检查单号不能为空!</value>
+  </data>
+  <data name="FAICheckNoWei1" xml:space="preserve">
+    <value>确认单号不能为空！</value>
+  </data>
+  <data name="FAIComeplete1" xml:space="preserve">
+    <value>该工单已做过首件确认，请选择正确流程!</value>
+  </data>
+  <data name="FAINotComeplete1" xml:space="preserve">
+    <value>FAI首件确认未完成，请选择正确的流程！</value>
+  </data>
+  <data name="FAIStatusNotNull1" xml:space="preserve">
+    <value>FAI状态不能为空！</value>
+  </data>
+  <data name="FAITypeNotNull1" xml:space="preserve">
+    <value>FAI类型不能为空！</value>
+  </data>
+  <data name="FeederTypeEmpty1" xml:space="preserve">
+    <value>Feeder类型不能为空！</value>
+  </data>
+  <data name="FeederTypeNameEmpty1" xml:space="preserve">
+    <value>名称不能为空！</value>
+  </data>
+  <data name="FeedNotExists1" xml:space="preserve">
+    <value>此飞达不存在！</value>
+  </data>
+  <data name="FeedSNErrorWei1" xml:space="preserve">
+    <value>FeedSN扫描错误！</value>
+  </data>
+  <data name="FielLoadPathEmpty1" xml:space="preserve">
+    <value>产品上传路径不能为空！</value>
+  </data>
+  <data name="FileNotFound1" xml:space="preserve">
+    <value>文件找不到</value>
+  </data>
+  <data name="FileTypeError1" xml:space="preserve">
+    <value>文件类型错误!</value>
+  </data>
+  <data name="FormatInvild1" xml:space="preserve">
+    <value>:[不符合预定输入格式].</value>
+  </data>
+  <data name="FullOnlineUsers1" xml:space="preserve">
+    <value>同时在线用户数已达到上限!</value>
+  </data>
+  <data name="GenerateContainerError1" xml:space="preserve">
+    <value>无法生成卡通箱，请检查设置！</value>
+  </data>
+  <data name="GenerateGRNCartonSNFailed1" xml:space="preserve">
+    <value>生成GRN包装箱条码失败！</value>
+  </data>
+  <data name="GenerateUnitHistoryFail1" xml:space="preserve">
+    <value>Unit更新历史记录失败！</value>
+  </data>
+  <data name="GenSubGRNFailed1" xml:space="preserve">
+    <value>生成分料物料条码失败！</value>
+  </data>
+  <data name="GetWOInputQtyError1" xml:space="preserve">
+    <value>获取工单投入数量错误！</value>
+  </data>
+  <data name="GrnCartonIsClosed1" xml:space="preserve">
+    <value>物料包装箱已关闭，请先解包装后再移除！</value>
+  </data>
+  <data name="GRNCartonIsOpen1" xml:space="preserve">
+    <value>包装箱未关闭，请先关闭包装箱</value>
+  </data>
+  <data name="GrnComepleteMaterialWei1" xml:space="preserve">
+    <value>该GRN已做完上料验证，请重新扫描！</value>
+  </data>
+  <data name="GRNDismatchOperation1" xml:space="preserve">
+    <value>GRN不在该工位使用！</value>
+  </data>
+  <data name="GRNDismatchOrder1" xml:space="preserve">
+    <value>GRN和工单物料不匹配！</value>
+  </data>
+  <data name="GrnEmptyWei1" xml:space="preserve">
+    <value>GRN不能为空！</value>
+  </data>
+  <data name="GRNFeedCompletexia1" xml:space="preserve">
+    <value>该GRN已经上料，请重新扫描！</value>
+  </data>
+  <data name="GRNgenerateFinished1" xml:space="preserve">
+    <value>GRN生成成功！</value>
+  </data>
+  <data name="GrnHasbeenIssued1" xml:space="preserve">
+    <value>该GRN已发料了！</value>
+  </data>
+  <data name="GrnHasBeenUsed1" xml:space="preserve">
+    <value>物料已使用中或使用过，不能退回给供应商</value>
+  </data>
+  <data name="GrnIsInVendor1" xml:space="preserve">
+    <value>物料还在供应商，无需退料到供应商！</value>
+  </data>
+  <data name="GrnIsNotBeReceived1" xml:space="preserve">
+    <value>物料GRN还没有做收料!</value>
+  </data>
+  <data name="GrnIsNotInVendor1" xml:space="preserve">
+    <value>该GRN已不在供应商处，无法包装！</value>
+  </data>
+  <data name="GrnIsOutOfStore1" xml:space="preserve">
+    <value>物料已出仓，此领料单不能再发料。</value>
+  </data>
+  <data name="GrnIsOutOfStoreNotAllowDel1" xml:space="preserve">
+    <value>物料已出仓，该领料单不能删除！</value>
+  </data>
+  <data name="GRNIsPackedInCurrentCarton1" xml:space="preserve">
+    <value>物料已包装到当前包装箱中！</value>
+  </data>
+  <data name="GRNNotExists1" xml:space="preserve">
+    <value>GRN不存在！</value>
+  </data>
+  <data name="GrnNotMatchPackedGrn1" xml:space="preserve">
+    <value>同一包装箱内只能包装相同的物料</value>
+  </data>
+  <data name="GrnPackedIntoOtherCarton1" xml:space="preserve">
+    <value>该GRN已包到其它包装箱中！</value>
+  </data>
+  <data name="GRNPrintSuccessful" xml:space="preserve">
+    <value>物料条码生成成功！</value>
+  </data>
+  <data name="GRNRemoveBoxError1" xml:space="preserve">
+    <value>GRN从箱中移除失败！</value>
+  </data>
+  <data name="GRNSuccessWei1" xml:space="preserve">
+    <value>GRN验证成功！</value>
+  </data>
+  <data name="GrnVendorNotMatchVendor1" xml:space="preserve">
+    <value>GRN对应的供应商和选择的供应商不一致，不同供应商的物料不能包装在一起。</value>
+  </data>
+  <data name="GroupNameEmpty1" xml:space="preserve">
+    <value>不良代码组名称不能为空！</value>
+  </data>
+  <data name="HandBoxValidatePass1" xml:space="preserve">
+    <value>周转箱验证通过！</value>
+  </data>
+  <data name="HandGRNValidatePass1" xml:space="preserve">
+    <value>GRN验证通过！</value>
+  </data>
+  <data name="HandNotSMTSameWei1" xml:space="preserve">
+    <value>手插段工单不能跟SMT工单相同！</value>
+  </data>
+  <data name="HasSameName" xml:space="preserve">
+    <value>已有同名存在！</value>
+  </data>
+  <data name="HiredDateIsGreaterThanTermiationDate1" xml:space="preserve">
+    <value>入职日期不能大于离职日期.</value>
+  </data>
+  <data name="HttpRequestValidationExp1" xml:space="preserve">
+    <value>请输入合法的字符！文明上网，请不要尝试非法操作。&lt;br/&gt;&lt;br/&gt;您的行为已被系统记录！</value>
+  </data>
+  <data name="IMEI_Already_Exists1" xml:space="preserve">
+    <value>IMEI号码已经存在！</value>
+  </data>
+  <data name="InComingSuccess1" xml:space="preserve">
+    <value>进仓成功</value>
+  </data>
+  <data name="InsertNextNumberSequenceFail1" xml:space="preserve">
+    <value>序列号规则生成错误！</value>
+  </data>
+  <data name="InsertPckStatusFailed1" xml:space="preserve">
+    <value>插入领料单【删除】状态失败，领料单删除失败！</value>
+  </data>
+  <data name="InsertUnitHistoryError1" xml:space="preserve">
+    <value>记录序号历史记录错误！</value>
+  </data>
+  <data name="InvalidateDate1" xml:space="preserve">
+    <value>无效日期格式</value>
+  </data>
+  <data name="InvalidateGRNPackStatus1" xml:space="preserve">
+    <value>该包装箱物料已做收货了，不能解包装！</value>
+  </data>
+  <data name="InvalidateHiredDate1" xml:space="preserve">
+    <value>无效的入职日期。</value>
+  </data>
+  <data name="InvalidateTerminationDate1" xml:space="preserve">
+    <value>无效的离职日期.</value>
+  </data>
+  <data name="InvalidBatchQty1" xml:space="preserve">
+    <value>请正确输入份数，份数需大于0！</value>
+  </data>
+  <data name="InvalidBrowserVersion1" xml:space="preserve">
+    <value>您当前的浏览器版本不合格，本产品需要Internet explorer 7.0 以上版本</value>
+  </data>
+  <data name="InvalidGrnCarton1" xml:space="preserve">
+    <value>物料条码所在的包装箱已不存在！</value>
+  </data>
+  <data name="InvalidLicense1" xml:space="preserve">
+    <value>无效的 License .&lt;br/&gt;&lt;br/&gt;请检查系统配套 License 文件是否存在或损坏.</value>
+  </data>
+  <data name="InvalidLocation1" xml:space="preserve">
+    <value>请正确选择发料目的地！&lt;br/&gt;1、仓库-&gt;线边仓-&gt;产线;&lt;br/&gt;2、仓库-&gt;产线</value>
+  </data>
+  <data name="InvalidMembership1" xml:space="preserve">
+    <value>该用户的信息已被损坏，请联系系统管理员。</value>
+  </data>
+  <data name="InvalidNCCode1" xml:space="preserve">
+    <value>无效的不良代码！</value>
+  </data>
+  <data name="InvalidNewGRN1" xml:space="preserve">
+    <value>无效的NewGRN!</value>
+  </data>
+  <data name="InvalidOldGRN1" xml:space="preserve">
+    <value>无效的OldGRN!</value>
+  </data>
+  <data name="InvalidOldPassword1" xml:space="preserve">
+    <value>旧密码错误，修改密码失败!</value>
+  </data>
+  <data name="InvalidPassword1" xml:space="preserve">
+    <value>密码不正确</value>
+  </data>
+  <data name="InvalidPickingListGRN1" xml:space="preserve">
+    <value>请扫描领料单所需物料的GRN。</value>
+  </data>
+  <data name="InvalidRelieveAlert1" xml:space="preserve">
+    <value>无法正常连接报警器!</value>
+  </data>
+  <data name="InvalidReturnMaterialLocation1" xml:space="preserve">
+    <value>请选择正确的退料位置！</value>
+  </data>
+  <data name="InvalidReturnQuantity1" xml:space="preserve">
+    <value>退料数量不正确！</value>
+  </data>
+  <data name="InvalidSNwei1" xml:space="preserve">
+    <value>无效的产品条码！</value>
+  </data>
+  <data name="InvalidSubGRN1" xml:space="preserve">
+    <value>无效的分料GRN！</value>
+  </data>
+  <data name="InvalidUser1" xml:space="preserve">
+    <value>无效的用户。</value>
+  </data>
+  <data name="InvalidWoNumber1" xml:space="preserve">
+    <value>工单号在系统不存在！</value>
+  </data>
+  <data name="Invalid_FDSN1" xml:space="preserve">
+    <value>无效的飞达条码！</value>
+  </data>
+  <data name="Invalid_MachineSN1" xml:space="preserve">
+    <value>无效的SMT设备条码！</value>
+  </data>
+  <data name="Invalid_MUStatus1" xml:space="preserve">
+    <value>物料状态不正确！</value>
+  </data>
+  <data name="Invalid_ResWei1" xml:space="preserve">
+    <value>选择的资源无效！</value>
+  </data>
+  <data name="IPQC_ResultOnlyPassorFail1" xml:space="preserve">
+    <value>抽检结果只能输入PASS或者FAIL!</value>
+  </data>
+  <data name="IPQC_SampResult1" xml:space="preserve">
+    <value>抽检结果不能为空！</value>
+  </data>
+  <data name="IsLetterOrNumberOrUnderline1" xml:space="preserve">
+    <value>是字母或数字或下划线。</value>
+  </data>
+  <data name="IsLockedOut1" xml:space="preserve">
+    <value>此用户已锁定。</value>
+  </data>
+  <data name="IssueGrnNotFinished1" xml:space="preserve">
+    <value>此领料单还有没有发料的行，还不能出仓！</value>
+  </data>
+  <data name="ItemImportInSuccess1" xml:space="preserve">
+    <value>物料导入成功！</value>
+  </data>
+  <data name="ItemsNameEmpty1" xml:space="preserve">
+    <value>产品名称不能为空！</value>
+  </data>
+  <data name="ItemStatusOfShopOrderNotAllowedRelease1" xml:space="preserve">
+    <value>此工单对应的产品状态不符合释放工单要求.</value>
+  </data>
+  <data name="Item_Mismatch1" xml:space="preserve">
+    <value>物料不匹配！</value>
+  </data>
+  <data name="LabelFieldDefNeeded1" xml:space="preserve">
+    <value>请插入一个字段定义！</value>
+  </data>
+  <data name="LabelFieldIsBlank1" xml:space="preserve">
+    <value>标签字段名字不能为空！</value>
+  </data>
+  <data name="LicenseAccessError1" xml:space="preserve">
+    <value>License未通过验证。&lt;br/&gt;&lt;br/&gt;请重启应用程序或IIS后再尝试。</value>
+  </data>
+  <data name="LineNameEmpty1" xml:space="preserve">
+    <value>线名不能为空！</value>
+  </data>
+  <data name="LoadHasStopLine1" xml:space="preserve">
+    <value>已经是停拉状态，不要重复做停拉操作</value>
+  </data>
+  <data name="LoadingList_Item_Not_Linked1" xml:space="preserve">
+    <value>料站表和产品尚未建立关系！</value>
+  </data>
+  <data name="LoadingList_Machine_Not_Linked1" xml:space="preserve">
+    <value>料站表和设备尚未建立关系！</value>
+  </data>
+  <data name="LoadListEmpetyWei1" xml:space="preserve">
+    <value>LoadingList不能为空！</value>
+  </data>
+  <data name="LoadListNoCompleteWei1" xml:space="preserve">
+    <value>该工单上料未完成！</value>
+  </data>
+  <data name="LoadListNotStatusWei1" xml:space="preserve">
+    <value>该料站表不是使用状态！</value>
+  </data>
+  <data name="LoadListNoUse1" xml:space="preserve">
+    <value>该工单还未上料！</value>
+  </data>
+  <data name="LoadOpenNoWei1" xml:space="preserve">
+    <value>该料站表是开拉状态，不能上料！</value>
+  </data>
+  <data name="LoadStopNoWei1" xml:space="preserve">
+    <value>该料站表是停拉状态，不能上料！</value>
+  </data>
+  <data name="LoginIdIsNeeded1" xml:space="preserve">
+    <value>登录名不能为空!</value>
+  </data>
+  <data name="LooperCountEmpty1" xml:space="preserve">
+    <value>请输入正确的环数！</value>
+  </data>
+  <data name="MaintainRecordInfo1" xml:space="preserve">
+    <value>设备保养记录详情</value>
+  </data>
+  <data name="MasterDataSaveFirst1" xml:space="preserve">
+    <value>必须先保存主表信息</value>
+  </data>
+  <data name="MaterialHasBeenReceived1" xml:space="preserve">
+    <value>物料已经收料！</value>
+  </data>
+  <data name="MaterialHasBeenUsedUp1" xml:space="preserve">
+    <value>物料已使用完！</value>
+  </data>
+  <data name="MaterialInKittingArea1" xml:space="preserve">
+    <value>物料已在线边仓！</value>
+  </data>
+  <data name="MaterialInStore1" xml:space="preserve">
+    <value>物料已在仓库，无需退料！</value>
+  </data>
+  <data name="MaterialOrderNotRight1" xml:space="preserve">
+    <value>当前上料工单不正确！</value>
+  </data>
+  <data name="Material_Validation_Fail1" xml:space="preserve">
+    <value>物料验证未通过，请检查！</value>
+  </data>
+  <data name="Material_Validation_Success1" xml:space="preserve">
+    <value>物料验证通过！</value>
+  </data>
+  <data name="MaxQtyEmpty1" xml:space="preserve">
+    <value>最大数量不能为空！</value>
+  </data>
+  <data name="MinQtyEmpty1" xml:space="preserve">
+    <value>最小数量不能为空！</value>
+  </data>
+  <data name="Mismatch_Item_Slot1" xml:space="preserve">
+    <value>物料与插槽不匹配，请检查！</value>
+  </data>
+  <data name="Mismatch_Slot_FeederType1" xml:space="preserve">
+    <value>飞达类型与插槽不匹配，请检查！</value>
+  </data>
+  <data name="ModelFamilyNameEmpty1" xml:space="preserve">
+    <value>设备组名称不能为空！</value>
+  </data>
+  <data name="ModelNameEmpty1" xml:space="preserve">
+    <value>设备名称不能为空！</value>
+  </data>
+  <data name="MoreOrderWei1" xml:space="preserve">
+    <value>后段工单数量已满！</value>
+  </data>
+  <data name="NCCodeEmpty1" xml:space="preserve">
+    <value>NC编码不能为空！</value>
+  </data>
+  <data name="NewBOMisexist1" xml:space="preserve">
+    <value>目标物料清单已存在!</value>
+  </data>
+  <data name="NewGRNAExists1" xml:space="preserve">
+    <value>该NewGRN已经上料验证完成，请重新扫描NewGRN进行续料!</value>
+  </data>
+  <data name="NewGRNNotEmpty1" xml:space="preserve">
+    <value>新的GRN不能为空！</value>
+  </data>
+  <data name="NextNumberSequenceDuplicate1" xml:space="preserve">
+    <value>序列号规则重复！</value>
+  </data>
+  <data name="NoAccessPermission1" xml:space="preserve">
+    <value>您没有权限进入，请联系管理员开通权限！</value>
+  </data>
+  <data name="NoLabelFormat1" xml:space="preserve">
+    <value>该标签还没有设置格式</value>
+  </data>
+  <data name="NoLicense1" xml:space="preserve">
+    <value>系统未发现合法的 License 证书文件.&lt;br/&gt;&lt;br/&gt;请检查系统配套 License 文件是否存在或损坏.</value>
+  </data>
+  <data name="NoLineWei1" xml:space="preserve">
+    <value>没有获取到线别！</value>
+  </data>
+  <data name="NonPackingStatus1" xml:space="preserve">
+    <value>容器不是包装状态！</value>
+  </data>
+  <data name="NonReleatedVendor1" xml:space="preserve">
+    <value>该用户没有相关联的供应商代码，请确认该用户是否已和供应商绑定！</value>
+  </data>
+  <data name="NoRescourceByLineWei1" xml:space="preserve">
+    <value>没有对应的资源信息，请重新选择线别！</value>
+  </data>
+  <data name="NoSMTInfoStopWei1" xml:space="preserve">
+    <value>暂时没有数据，不能做停拉！</value>
+  </data>
+  <data name="NoSMTInfoWei1" xml:space="preserve">
+    <value>暂时还没有数据，不能做开拉！</value>
+  </data>
+  <data name="NotAllowDeleteReportType" xml:space="preserve">
+    <value>该报表类型下还有报表，不能删除！</value>
+  </data>
+  <data name="NotConformToTheConditionsOfInformation1" xml:space="preserve">
+    <value>没有符合条件的信息!</value>
+  </data>
+  <data name="NotEnoughQuantityToIssue1" xml:space="preserve">
+    <value>可供发料的数量不够！</value>
+  </data>
+  <data name="OBA_Carton_Exists_Lotno1" xml:space="preserve">
+    <value>扫描编号已绑定！</value>
+  </data>
+  <data name="OfflineSNDuplicated1" xml:space="preserve">
+    <value>离线条码已被使用！</value>
+  </data>
+  <data name="OfflineSNNotEmpty1" xml:space="preserve">
+    <value>离线条码不能为空！</value>
+  </data>
+  <data name="OldAndNewNotItemWei1" xml:space="preserve">
+    <value>OldGRN与NewGRN不属于同一个物料！</value>
+  </data>
+  <data name="OldBOMnotexist1" xml:space="preserve">
+    <value>原物料清单不存在！</value>
+  </data>
+  <data name="OldGGRNNotEmpty1" xml:space="preserve">
+    <value>之前的GRN不能为空！</value>
+  </data>
+  <data name="OldGRNandNewGRN1" xml:space="preserve">
+    <value>OldGRN跟NewGRN不能相同！</value>
+  </data>
+  <data name="oldGRNNotOrderNo1" xml:space="preserve">
+    <value>oldGRN不属于这个工单!</value>
+  </data>
+  <data name="OldGRNStop1" xml:space="preserve">
+    <value>OldGRN已经做了停拉，暂时不能续料！</value>
+  </data>
+  <data name="OnlyAllowNormalShopOrderRelease1" xml:space="preserve">
+    <value>只允许释放Normal类型的工单.</value>
+  </data>
+  <data name="OnlyBigPanelWei1" xml:space="preserve">
+    <value>不能直接扫子板，只能扫拼板！</value>
+  </data>
+  <data name="OnlyPanleNotSmall1" xml:space="preserve">
+    <value>不能扫子板，只能扫拼板！</value>
+  </data>
+  <data name="OpenBoxConfirm1" xml:space="preserve">
+    <value>确定要打开包装容器？</value>
+  </data>
+  <data name="OpenContainerError1" xml:space="preserve">
+    <value>打开包装错误！</value>
+  </data>
+  <data name="OpenContainerFirst1" xml:space="preserve">
+    <value>容器状态已关闭，需要先打开容器！</value>
+  </data>
+  <data name="OperationFailure1" xml:space="preserve">
+    <value>操作失败！</value>
+  </data>
+  <data name="OrderEmptyWei1" xml:space="preserve">
+    <value>请选择工单！</value>
+  </data>
+  <data name="OrderNoMaterial1" xml:space="preserve">
+    <value>该工单没有对应的物料信息！</value>
+  </data>
+  <data name="OrderNotFoundMaterialWei1" xml:space="preserve">
+    <value>该工单没有找到对应的物料信息!</value>
+  </data>
+  <data name="OrderNotHandMaterialWei1" xml:space="preserve">
+    <value>该工单还没有做手插上料验证，暂时不能扣料！</value>
+  </data>
+  <data name="OrderReleaseFullWei1" xml:space="preserve">
+    <value>工单投入数量已满，请重新选择工单！</value>
+  </data>
+  <data name="OutComingSuccess1" xml:space="preserve">
+    <value>出仓成功</value>
+  </data>
+  <data name="PackGrnCartonIsClosed1" xml:space="preserve">
+    <value>该GRN已包装且所在包装箱也已关闭，请扫描未包装的GRN！</value>
+  </data>
+  <data name="PackGRNToCartonFailed1" xml:space="preserve">
+    <value>包装GRN失败！</value>
+  </data>
+  <data name="PanleErrorWei1" xml:space="preserve">
+    <value>拼板错误！</value>
+  </data>
+  <data name="PartNONotExists1" xml:space="preserve">
+    <value>备件号不存在.</value>
+  </data>
+  <data name="PCBGRNUsed1" xml:space="preserve">
+    <value>此PCB板的GRN已经使用过！</value>
+  </data>
+  <data name="PckListIsDeleted1" xml:space="preserve">
+    <value>领料单已被删除，如果要使用请重新启用该领料单！</value>
+  </data>
+  <data name="PcklistIsOutOfStore1" xml:space="preserve">
+    <value>领料单已经从仓库发出！</value>
+  </data>
+  <data name="PleaseSelectLine1" xml:space="preserve">
+    <value>请选择线别</value>
+  </data>
+  <data name="PleaseSelectOneCode1" xml:space="preserve">
+    <value>请选择一个代码！</value>
+  </data>
+  <data name="PleaseSelectOnePartAsParentPartOnTheLeft1" xml:space="preserve">
+    <value>请先在右侧选择一个Item作为父Part.</value>
+  </data>
+  <data name="PlsInputPartNO1" xml:space="preserve">
+    <value>请输入备件号</value>
+  </data>
+  <data name="PlsInputQty1" xml:space="preserve">
+    <value>请输入数量</value>
+  </data>
+  <data name="PreprocessConfirmWei1" xml:space="preserve">
+    <value>确定所有的上料验证都已完成了吗?</value>
+  </data>
+  <data name="PrintCartonNumber1" xml:space="preserve">
+    <value>正在打印包装箱号，请稍后......</value>
+  </data>
+  <data name="PrinterNameExists1" xml:space="preserve">
+    <value>打印机名称已存在！</value>
+  </data>
+  <data name="PrinterRegularExists1" xml:space="preserve">
+    <value>打印机规则已存在！</value>
+  </data>
+  <data name="PrintFailOfGRN" xml:space="preserve">
+    <value>打印失败的物料条码：</value>
+  </data>
+  <data name="PrintGrnSuccessful1" xml:space="preserve">
+    <value>打印条码完成，页面刷新中...</value>
+  </data>
+  <data name="PrintingItem" xml:space="preserve">
+    <value>当前正在打印的物料：</value>
+  </data>
+  <data name="PrintingSN" xml:space="preserve">
+    <value>当前正在打印的条码：</value>
+  </data>
+  <data name="PrintReady" xml:space="preserve">
+    <value>打印准备中.....</value>
+  </data>
+  <data name="PrintSNQtyOverCharge" xml:space="preserve">
+    <value>打印条码数超出：</value>
+  </data>
+  <data name="PRNotNull1" xml:space="preserve">
+    <value>不能为空</value>
+  </data>
+  <data name="ProNoRouter1" xml:space="preserve">
+    <value>产品未设定路由！</value>
+  </data>
+  <data name="ProShiftNotEmpty1" xml:space="preserve">
+    <value>生产班次不能为空！</value>
+  </data>
+  <data name="QualificationNCCodeIsRequired1" xml:space="preserve">
+    <value>请选择不良编码！</value>
+  </data>
+  <data name="QuantityEmpty1" xml:space="preserve">
+    <value>请输入正确的数量！</value>
+  </data>
+  <data name="RecieveMaterialFinished1" xml:space="preserve">
+    <value>收料已完成，是否继续收料？</value>
+  </data>
+  <data name="ReleaseSuccess1" xml:space="preserve">
+    <value>工单释放成功.</value>
+  </data>
+  <data name="RelieveAlert1" xml:space="preserve">
+    <value>报警解除!</value>
+  </data>
+  <data name="RelieveExistsAlert1" xml:space="preserve">
+    <value>报警已经解除，不需要再解除！</value>
+  </data>
+  <data name="RemainChance1" xml:space="preserve">
+    <value>还有{0}次机会。</value>
+  </data>
+  <data name="RemoveSNfromContainerError1" xml:space="preserve">
+    <value>从容器中移除失败！</value>
+  </data>
+  <data name="ReprintGRNSuccessed1" xml:space="preserve">
+    <value>重打印GRN完成！</value>
+  </data>
+  <data name="RequiredPopedom1" xml:space="preserve">
+    <value>请选择权限！</value>
+  </data>
+  <data name="RequireItem1" xml:space="preserve">
+    <value>请选择产品！</value>
+  </data>
+  <data name="RequireTypeInfo1" xml:space="preserve">
+    <value>该类型已关联设备信息，不能删除!</value>
+  </data>
+  <data name="RequireUserName1" xml:space="preserve">
+    <value>用户名不能为空。</value>
+  </data>
+  <data name="RescourceNotExistsWei1" xml:space="preserve">
+    <value>资源不存在！</value>
+  </data>
+  <data name="RescourceNotSetLineWei1" xml:space="preserve">
+    <value>该资源还没做线别设置 !</value>
+  </data>
+  <data name="ResetPasswordSuccess1" xml:space="preserve">
+    <value>重置密码成功!</value>
+  </data>
+  <data name="ResNoProdOrderIdWei1" xml:space="preserve">
+    <value>该资源还没做手插上料验证，暂时不能扣料!</value>
+  </data>
+  <data name="ResourceTypeHasResource1" xml:space="preserve">
+    <value>该资源类型已被使用,不可删除。</value>
+  </data>
+  <data name="ReturnDateError1" xml:space="preserve">
+    <value>退回时间大于当前日期！</value>
+  </data>
+  <data name="RevisionEmpty1" xml:space="preserve">
+    <value>版本不能为空！</value>
+  </data>
+  <data name="RMAOrderNotFount1" xml:space="preserve">
+    <value>找不到对应的RMA工单，该工单还没做上料验证！</value>
+  </data>
+  <data name="RMAUpdateSFC1" xml:space="preserve">
+    <value>保存后该RMA中所有SFC的将不能变更，确定保存吗？</value>
+  </data>
+  <data name="RoleNameExists1" xml:space="preserve">
+    <value>角色名已存在。</value>
+  </data>
+  <data name="RoleNameIsNeeded1" xml:space="preserve">
+    <value>角色名不能为空。</value>
+  </data>
+  <data name="RouterStatusNotAllowedShopOrderRelease1" xml:space="preserve">
+    <value>该工单路由状态不允许工单释放.</value>
+  </data>
+  <data name="SaveFailRepeat1" xml:space="preserve">
+    <value>重复记录，数据保存失败！</value>
+  </data>
+  <data name="SaveFault1" xml:space="preserve">
+    <value>数据保存失败。</value>
+  </data>
+  <data name="ScanCartonSN1" xml:space="preserve">
+    <value>请扫描包装箱条码！</value>
+  </data>
+  <data name="ScanModelSpec1" xml:space="preserve">
+    <value>请输入品名规格！</value>
+  </data>
+  <data name="ScanOrInputSerialNumber1" xml:space="preserve">
+    <value>输入或者扫描条码之后，敲回车键，直接提交操作。</value>
+  </data>
+  <data name="ScanSN1" xml:space="preserve">
+    <value>请扫描条码!</value>
+  </data>
+  <data name="SelectItemInTheLeft1" xml:space="preserve">
+    <value>请在左侧选择一个标签来设置其格式！</value>
+  </data>
+  <data name="SequenceMustBeNumber1" xml:space="preserve">
+    <value>次序必须是整数。</value>
+  </data>
+  <data name="SerialNumbeEmpty1" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SerialNumberDeleted1" xml:space="preserve">
+    <value>条码已经删除！</value>
+  </data>
+  <data name="SerialNumberEmpty1" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SerialNumberError1" xml:space="preserve">
+    <value>条码错误！</value>
+  </data>
+  <data name="SerialNumberNotRetore1" xml:space="preserve">
+    <value>该条码未报废或未删除，不需要恢复！</value>
+  </data>
+  <data name="SerialNumberNotScrapDeleted1" xml:space="preserve">
+    <value>条码在使用中，不允许报废或删除！</value>
+  </data>
+  <data name="SerialNumberScrapedOrDeleted1" xml:space="preserve">
+    <value>条码已报废或已删除！</value>
+  </data>
+  <data name="SetSuccess1" xml:space="preserve">
+    <value>设置成功</value>
+  </data>
+  <data name="SFCAlreadydone1" xml:space="preserve">
+    <value>序列号已经完成！</value>
+  </data>
+  <data name="SFCAlreadypacked1" xml:space="preserve">
+    <value>序列号已经包装！</value>
+  </data>
+  <data name="SFC_Already_Exist1" xml:space="preserve">
+    <value>条码已经存在！</value>
+  </data>
+  <data name="SFC_Invalid1" xml:space="preserve">
+    <value>条码无效.</value>
+  </data>
+  <data name="SFC_Invalid_Status1" xml:space="preserve">
+    <value>该SN未完成.</value>
+  </data>
+  <data name="SFC_Is_Already_Used1" xml:space="preserve">
+    <value>SN已被其他产品绑定.</value>
+  </data>
+  <data name="SFC_Item_Mismatch1" xml:space="preserve">
+    <value>SN与产品不匹配.</value>
+  </data>
+  <data name="SFC_Reassign_Success1" xml:space="preserve">
+    <value>条码成功置换！</value>
+  </data>
+  <data name="ShopOrderHasBeenReleased1" xml:space="preserve">
+    <value>工单已释放,不可变更.</value>
+  </data>
+  <data name="ShopOrderHaveNoBOM1" xml:space="preserve">
+    <value>此工单未指定BOM.</value>
+  </data>
+  <data name="ShopOrderHaveNoRouter1" xml:space="preserve">
+    <value>工单未指定路由.</value>
+  </data>
+  <data name="ShopOrderInvalid1" xml:space="preserve">
+    <value>无效的工单!</value>
+  </data>
+  <data name="ShopOrderNotEnoughToRelease1" xml:space="preserve">
+    <value>该工单已无可释放数量.</value>
+  </data>
+  <data name="ShopOrderRequired1" xml:space="preserve">
+    <value>请选择工单！</value>
+  </data>
+  <data name="ShopOrderStatusNotAllowedRelease1" xml:space="preserve">
+    <value>该状态下不允许释放工单.</value>
+  </data>
+  <data name="SlotIDNeedFeedSNWei1" xml:space="preserve">
+    <value>该MachineTableSlotID有对应的FeedSN,请扫描FeedSN！</value>
+  </data>
+  <data name="SlotIDNoFeedSNWei1" xml:space="preserve">
+    <value>该MachineTableSlotID没有对应的FeedSN,不需要扫描FeedSN!</value>
+  </data>
+  <data name="SlotSNNotLoad1" xml:space="preserve">
+    <value>此LoadingList没有该SlotSN!</value>
+  </data>
+  <data name="SMTFeedSuccess1" xml:space="preserve">
+    <value>上料验证成功！</value>
+  </data>
+  <data name="SMTStartComplete1" xml:space="preserve">
+    <value>该工单已经做了开拉,不需要重复做开拉!</value>
+  </data>
+  <data name="SMTStopComplete1" xml:space="preserve">
+    <value>该工单还没做开拉,不能做停拉!</value>
+  </data>
+  <data name="SMTValidatenotComplete1" xml:space="preserve">
+    <value>该工单上料验证还没完成，不能开拉！</value>
+  </data>
+  <data name="SNCannotEmpty1" xml:space="preserve">
+    <value>序列号不能为空！</value>
+  </data>
+  <data name="SNCannotPackToContainer1" xml:space="preserve">
+    <value>扫描序号和容器不匹配！</value>
+  </data>
+  <data name="SNNotCompleteWei1" xml:space="preserve">
+    <value>序列号没有完成！</value>
+  </data>
+  <data name="SNScanError1" xml:space="preserve">
+    <value>序列号扫描错误！</value>
+  </data>
+  <data name="SolveErrorWei1" xml:space="preserve">
+    <value>该机台正在报警，请解除报警后再进行上料验证！</value>
+  </data>
+  <data name="StartAlert1" xml:space="preserve">
+    <value>开始报警！</value>
+  </data>
+  <data name="StartDateTimeGreaterThanEndDateTime1" xml:space="preserve">
+    <value>开始日期不可大于结束日期.</value>
+  </data>
+  <data name="StartFeedSuccess1" xml:space="preserve">
+    <value>开拉执行成功！</value>
+  </data>
+  <data name="StarTimeCannotEndTime1" xml:space="preserve">
+    <value>开始时间不能大于截止时间</value>
+  </data>
+  <data name="StopFeedSuccess1" xml:space="preserve">
+    <value>停拉执行成功！</value>
+  </data>
+  <data name="SupplierLogin1" xml:space="preserve">
+    <value>供应商请从供应商入口登录系统!</value>
+  </data>
+  <data name="SureOpenWei1" xml:space="preserve">
+    <value>确定开拉吗？</value>
+  </data>
+  <data name="SureStopWei1" xml:space="preserve">
+    <value>确定产线实际已停线？确定停拉？</value>
+  </data>
+  <data name="Sysdoing1" xml:space="preserve">
+    <value>正在处理，请稍候......</value>
+  </data>
+  <data name="TemplateNameEmpty1" xml:space="preserve">
+    <value>模板不能为空！</value>
+  </data>
+  <data name="TestUserName1" xml:space="preserve">
+    <value>测试用户为：admin，密码为： 123456</value>
+  </data>
+  <data name="TheLineBindResource1" xml:space="preserve">
+    <value>该线已绑定了资源.</value>
+  </data>
+  <data name="TheOpeTypeBindOperation1" xml:space="preserve">
+    <value>此类型已分配了操作工位</value>
+  </data>
+  <data name="ThisCCgroupNotIncludeTheCC1" xml:space="preserve">
+    <value>当前工具分组不包含该工具</value>
+  </data>
+  <data name="TimeFormatError1" xml:space="preserve">
+    <value>时间格式错误！</value>
+  </data>
+  <data name="txtShiftNameEmpty1" xml:space="preserve">
+    <value>班次名不能为空</value>
+  </data>
+  <data name="TypeCodeCountRequire1" xml:space="preserve">
+    <value>该设备编码已经存在，请重新输入！</value>
+  </data>
+  <data name="TypeCodeEmpty1" xml:space="preserve">
+    <value>设备类别编号不能为空！</value>
+  </data>
+  <data name="TypeNameEmpty1" xml:space="preserve">
+    <value>设备类别名称不能为空！</value>
+  </data>
+  <data name="UnitBindSNFail1" xml:space="preserve">
+    <value>Unit绑定序列号失败！</value>
+  </data>
+  <data name="UnknownError1" xml:space="preserve">
+    <value>未知错误。</value>
+  </data>
+  <data name="UnknownErrorAndReleaseFaild1" xml:space="preserve">
+    <value>未知错误,工单释放失败.</value>
+  </data>
+  <data name="UnlockUserSuccess1" xml:space="preserve">
+    <value>解锁用户成功!</value>
+  </data>
+  <data name="UpdateContainerStatusError1" xml:space="preserve">
+    <value>更新容器状态失败！</value>
+  </data>
+  <data name="UpdateGrnStatusFailed1" xml:space="preserve">
+    <value>删除领料单时更新GRN状态失败，领料单删除失败！</value>
+  </data>
+  <data name="UpdateNextNumberSequenceFail1" xml:space="preserve">
+    <value>序列号规则更新错误！</value>
+  </data>
+  <data name="UpdatePckGrnFailed1" xml:space="preserve">
+    <value>更新GRN状态失败，删除领料单物料失败！</value>
+  </data>
+  <data name="UpdateRecordFail1" xml:space="preserve">
+    <value>更新数据错误！</value>
+  </data>
+  <data name="UpdateRMADATAFail1" xml:space="preserve">
+    <value>接收RMA中SFC失败！</value>
+  </data>
+  <data name="UpdateRouteFail1" xml:space="preserve">
+    <value>更新路由错误！</value>
+  </data>
+  <data name="UpdateUnitError1" xml:space="preserve">
+    <value>更新序号表数据错误！</value>
+  </data>
+  <data name="UpdateUnitStatusError1" xml:space="preserve">
+    <value>更新序号状态错误！</value>
+  </data>
+  <data name="UpdateWOFail1" xml:space="preserve">
+    <value>更新工单失败！</value>
+  </data>
+  <data name="ValidateCodeError1" xml:space="preserve">
+    <value>验证码错误!</value>
+  </data>
+  <data name="ValidateCodeRequired1" xml:space="preserve">
+    <value>验证码不能为空!</value>
+  </data>
+  <data name="ValidateLineMessage1" xml:space="preserve">
+    <value>请停拉后再进行操作</value>
+  </data>
+  <data name="VendorCodeCannotEmpty1" xml:space="preserve">
+    <value>供应商代码不能为空！</value>
+  </data>
+  <data name="VendorIsNotExists1" xml:space="preserve">
+    <value>供应商不存在！</value>
+  </data>
+  <data name="VendorIsNull1" xml:space="preserve">
+    <value>供应商代码无效！</value>
+  </data>
+  <data name="VendorSortIsEmpty1" xml:space="preserve">
+    <value>供应商简称不能为空！</value>
+  </data>
+  <data name="WareHouseIdIsNeeded1" xml:space="preserve">
+    <value>仓库编号不能为空！</value>
+  </data>
+  <data name="WareHouseNameIsNeeded1" xml:space="preserve">
+    <value>仓库名称不能为空！</value>
+  </data>
+  <data name="WOBOMnotexist1" xml:space="preserve">
+    <value>物料清单不存在！</value>
+  </data>
+  <data name="WOCannotIssueGRN1" xml:space="preserve">
+    <value>该GRN在工单发料中不存在！</value>
+  </data>
+  <data name="WOGenerateSNError1" xml:space="preserve">
+    <value>产生序列号错误，请确定对应的物料是否有序列号规则维护！</value>
+  </data>
+  <data name="WOInfoError1" xml:space="preserve">
+    <value>工单信息错误！</value>
+  </data>
+  <data name="WOItemNotMatchGRN1" xml:space="preserve">
+    <value>工单物料不匹配！</value>
+  </data>
+  <data name="WoItemNotMatchGrnItem1" xml:space="preserve">
+    <value>GRN对应的物料和工单中的物料不匹配！</value>
+  </data>
+  <data name="WONOItem1" xml:space="preserve">
+    <value>工单无设定料号！</value>
+  </data>
+  <data name="WONORouter1" xml:space="preserve">
+    <value>工单未设定路由！</value>
+  </data>
+  <data name="WoOrderNoItem1" xml:space="preserve">
+    <value>工单没有对应的产品信息！</value>
+  </data>
+  <data name="WORMAError1" xml:space="preserve">
+    <value>不是返工工单!</value>
+  </data>
+  <data name="ZPLNameEmpty1" xml:space="preserve">
+    <value>ZPL名称不能为空！</value>
+  </data>
+  <data name="SortExists" xml:space="preserve">
+    <value>序号已存在</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>操作成功</value>
+  </data>
+  <data name="SystemResetWayCannotDelete" xml:space="preserve">
+    <value>系统内置复位方式不能删除！</value>
+  </data>
+  <data name="SystemResetWayCannotEdit" xml:space="preserve">
+    <value>系统内置复位方式不能修改！</value>
+  </data>
+  <data name="NoPickListDetail" xml:space="preserve">
+    <value>没有上料清单明细记录，请先上传上料清单！</value>
+  </data>
+  <data name="SetupNameEmpty" xml:space="preserve">
+    <value>上料清单名不能为空！</value>
+  </data>
+  <data name="NoLoadingListDetail" xml:space="preserve">
+    <value>暂没有SMT上料清单明细，请先导入SMT上料清单明细!</value>
+  </data>
+  <data name="SlotNoRepeat" xml:space="preserve">
+    <value>插槽号不能相同，请重新导入！</value>
+  </data>
+  <data name="InsertFailDataError" xml:space="preserve">
+    <value>插入不良数据失败</value>
+  </data>
+  <data name="OpeNeedBindNCCode" xml:space="preserve">
+    <value>工位需要绑定该不良代码</value>
+  </data>
+  <data name="HadBindNCCode" xml:space="preserve">
+    <value>不良信息采集成功!</value>
+  </data>
+  <data name="NCCodeHadBeenEntered" xml:space="preserve">
+    <value>已录入该不良代码且未维修好!</value>
+  </data>
+  <data name="RemoveNCCodeError" xml:space="preserve">
+    <value>移除误判记录失败!</value>
+  </data>
+  <data name="CtrlCanChooseMore" xml:space="preserve">
+    <value>按住Ctrl可多选！</value>
+  </data>
+  <data name="SystemRuleTypeCannotEdit" xml:space="preserve">
+    <value>不能修改系统内置条码规则类型！</value>
+  </data>
+  <data name="SystemRuleTypeCannotDelete" xml:space="preserve">
+    <value>不能删除系统内置的条码规则类型！</value>
+  </data>
+  <data name="ScrapSuccess" xml:space="preserve">
+    <value>报废成功！</value>
+  </data>
+  <data name="EmailServerError" xml:space="preserve">
+    <value>邮箱服务器地址不合法</value>
+  </data>
+  <data name="PackGrnCannotScrap" xml:space="preserve">
+    <value>此GRN已包装了,请先从包装里移除再来报废GRN.</value>
+  </data>
+  <data name="StationFailError" xml:space="preserve">
+    <value>已达到工序最大失败过站次数！</value>
+  </data>
+  <data name="StationPassError" xml:space="preserve">
+    <value>已达到工序最大通过过站次数！</value>
+  </data>
+  <data name="OrderCloseError" xml:space="preserve">
+    <value>工单已被关闭 ！</value>
+  </data>
+  <data name="OrderDoneError" xml:space="preserve">
+    <value>工单已完成！</value>
+  </data>
+  <data name="OrderHoldError" xml:space="preserve">
+    <value>工单已被锁定[QHold]！</value>
+  </data>
+  <data name="ModelWasUsed" xml:space="preserve">
+    <value>模板已经被使用！</value>
+  </data>
+  <data name="ParaDescriptionIsRequired" xml:space="preserve">
+    <value>参数描述不能为空！</value>
+  </data>
+  <data name="ParaNameIsRequired" xml:space="preserve">
+    <value>参数名称不能为空！</value>
+  </data>
+  <data name="ParaTypeIsRequired" xml:space="preserve">
+    <value>参数类型不能为空！</value>
+  </data>
+  <data name="ParaValueIsRequired" xml:space="preserve">
+    <value>参数值不能为空！</value>
+  </data>
+  <data name="RequireWarehouse" xml:space="preserve">
+    <value>请选择仓库!</value>
+  </data>
+  <data name="PlanListByTime" xml:space="preserve">
+    <value>只显示大于等于当天的排产计划信息！</value>
+  </data>
+  <data name="UnTest" xml:space="preserve">
+    <value>路由{0}已过站！</value>
+  </data>
+  <data name="UspCheckResource_UnExistsResource" xml:space="preserve">
+    <value>该资源不可用！[uspCheckResource]</value>
+  </data>
+  <data name="UspCheckResource_UnExpiredResource" xml:space="preserve">
+    <value>该资源不在有效期内! [uspCheckResource]</value>
+  </data>
+  <data name="UspCheckResource_UnFindResource" xml:space="preserve">
+    <value>未找到资源信息![uspCheckResource]</value>
+  </data>
+  <data name="uspCheckUser_UserResigned" xml:space="preserve">
+    <value>此用户已离职！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserLocked" xml:space="preserve">
+    <value>此用户已锁定！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserStopped" xml:space="preserve">
+    <value>此用户已停用！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserNotExist" xml:space="preserve">
+    <value>此用户不存在！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckStation_NoWorkOrderInformation" xml:space="preserve">
+    <value>未找到工序信息！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckStation_WorkdOrderBlocked" xml:space="preserve">
+    <value>该工序已被冻结！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckStation_WorkOrderOutOfTime" xml:space="preserve">
+    <value>该工序已过时！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckSerialNumber_NoSerialNumberInfo" xml:space="preserve">
+    <value>未找到序列号信息！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberScrapped" xml:space="preserve">
+    <value>序列号{0}已报废！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_ModelQHold" xml:space="preserve">
+    <value>产品{0}已被QHold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberQHold" xml:space="preserve">
+    <value>序列号{0}已被QHold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHoldInPanel" xml:space="preserve">
+    <value>拼板中存在序列号已被QHold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHasFinishRoute" xml:space="preserve">
+    <value>该序号已在{0}路由完成生产！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHold" xml:space="preserve">
+    <value>序列号已被Hold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_CannotPassLastStation" xml:space="preserve">
+    <value>该序号上站过站结果为NG,不能过站！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberStoppedThisModel" xml:space="preserve">
+    <value>该序号关联的产品已被停用[QHold]！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckRouter_DidNotFindTheRouteInfo" xml:space="preserve">
+    <value>未找到路由信息！[uspCheckRouter]</value>
+  </data>
+  <data name="uspCheckRouter_RouteHasBeenStopped" xml:space="preserve">
+    <value>路由{0}已被停用！[uspCheckRouter]</value>
+  </data>
+  <data name="uspCheckRouter_ProcessError" xml:space="preserve">
+    <value>工序错误！[uspCheckRouter]</value>
+  </data>
+  <data name="LabelIsNotExist" xml:space="preserve">
+    <value>条码不存在！</value>
+  </data>
+  <data name="StationIsNotExist" xml:space="preserve">
+    <value>工位号不存在！</value>
+  </data>
+  <data name="ResourcesIsNotExist" xml:space="preserve">
+    <value>资源不存在！</value>
+  </data>
+  <data name="SNIsNotInTheNextStation" xml:space="preserve">
+    <value>SN的下一个工位不是{0}！</value>
+  </data>
+  <data name="MaximumAllowedTestTimes" xml:space="preserve">
+    <value>当前序列号测试已经超过了最大测试次数！</value>
+  </data>
+  <data name="DayShift" xml:space="preserve">
+    <value>白班</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>夜班</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisResource" xml:space="preserve">
+    <value>用户无此资源相关认证资格！[uspCheckCertification]</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisStation" xml:space="preserve">
+    <value>用户无此工位相关认证资格！[uspCheckCertification]</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisModel" xml:space="preserve">
+    <value>用户无产品{0}相关认证资格！[uspCheckCertification]</value>
+  </data>
+  <data name="uspUnitComplete_ResourceUnboundFace" xml:space="preserve">
+    <value>资源未绑定面别！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_CheckTheSteelMesh" xml:space="preserve">
+    <value>工单{0}在线别{1}上没有进行{2}钢网上线,请检查钢网!！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_CheckTheScraper" xml:space="preserve">
+    <value>工单{0}在线别{1}上没有进行{2}刮刀上线,请检查刮刀!！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_LoadingVerification" xml:space="preserve">
+    <value>请先进行上料验证，并确定{0}开拉！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_WorkOrderStartTime" xml:space="preserve">
+    <value>更新工单{0}的开始时间失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_ModelBasicInfo" xml:space="preserve">
+    <value>更新产品的基础信息失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_ModelWorkOrderClosingStatus" xml:space="preserve">
+    <value>更新产品成完工状态失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_WorkOrderQuantity" xml:space="preserve">
+    <value>更新工单的完工数量失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_unlockingPanelInfo" xml:space="preserve">
+    <value>解除拼板信息失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_InsertingStatisticData" xml:space="preserve">
+    <value>插入统计数据失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_insertingmodelhistorydata" xml:space="preserve">
+    <value>插入产品历史记录失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_updatingworkorderclosingstatus" xml:space="preserve">
+    <value>更新工单成完工状态失败！[uspUnitComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_isnotfoundinsystem" xml:space="preserve">
+    <value>Barcode在系统中不存在！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Processisnotfound" xml:space="preserve">
+    <value>工序不存在！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Faultonaddingstationpassinformation" xml:space="preserve">
+    <value>新增过站记录失败！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Faultonprocessingstationfailureinformation" xml:space="preserve">
+    <value>处理过站Fail记录失败！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_RevisingUnitTestingResult" xml:space="preserve">
+    <value>修改Unit表的测试结果失败！[uspUpdateUnitResult]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_RevisingStatiscQuantity" xml:space="preserve">
+    <value>修改统计表的倒扣数据失败！[uspBackOffStatisticalData]</value>
+  </data>
+  <data name="uspGetSNStationInfo_FinishedProduction" xml:space="preserve">
+    <value>扫描工序错误，该SN已完成生产！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspGetSNStationInfo_HasPassedTheProcess" xml:space="preserve">
+    <value>扫描工序错误,SN {0} 已经过工序{1},下一工序{2}！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspGetSNStationInfo_Noprocessinformationonworkorderroute" xml:space="preserve">
+    <value>在工单路由上未找到当前工序信息！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspUnitProcessValidation_notfinishedinrecevingprocess" xml:space="preserve">
+    <value>条码未完成不良接收操作！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspCheckOrder_Noworkorderinformation" xml:space="preserve">
+    <value>未找到工单信息！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Noplanforthisworkorder" xml:space="preserve">
+    <value>工单未进行排产！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_WorkorderhasbeenQHold" xml:space="preserve">
+    <value>工单已被QHlod！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Workorderfinished" xml:space="preserve">
+    <value>工单已完成！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Workorderclosed" xml:space="preserve">
+    <value>工单已关闭！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_ThisworkorderhasbeenQHold" xml:space="preserve">
+    <value>该工单{0}已被QHold！[uspCheckOrder]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_Maintainsrules" xml:space="preserve">
+    <value>序列号规则还没维护！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_ModelMaximum" xml:space="preserve">
+    <value>产品关联条码规则当前序号最大值为:{0},当前释放的条码数量已超过最大值限制！可释放最大数量为 {1}！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_FaultOnGenerating" xml:space="preserve">
+    <value>更新当前序号失败！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_RepeatedSN" xml:space="preserve">
+    <value>生成序列号重复{0},请检测序号规则！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_RepeatedSNpleaseCheckSNrules" xml:space="preserve">
+    <value>生成序列号重复,请检测序号规则！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_cannotBePrinted" xml:space="preserve">
+    <value>当前工单不是释放状态，不能释放条码！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_notAllowedInThisWorkOrder" xml:space="preserve">
+    <value>该工单不允许子板释放！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_NotlinkedWithModelBOM" xml:space="preserve">
+    <value>未绑定产品BOM！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="uspPordQHoldByOrder_WorkOrderhasbeenQhold" xml:space="preserve">
+    <value>工单{0}已被QHold,不能操作！[uspPordQHoldByOrder]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_FaultOnUpdatingFailRecord" xml:space="preserve">
+    <value>更新Fail记录失败！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_NewAddingRepairRecord" xml:space="preserve">
+    <value>新增新的维修记录！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_FaultOnUpdatingFailTimes" xml:space="preserve">
+    <value>更新Fail次数失败！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_NeedChange" xml:space="preserve">
+    <value>附件不能和主件相同！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_Faultoninsertingpacking" xml:space="preserve">
+    <value>插入包装附件条码详情数据失败！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_FaultOn" xml:space="preserve">
+    <value>产品SN过站失败！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspUnitCompleteBySN_unlockingpanel" xml:space="preserve">
+    <value>解除拼板信息失败！[uspUnitCompleteBySN]</value>
+  </data>
+  <data name="uspUnitCompleteBySN_TestingOfLastStation" xml:space="preserve">
+    <value>序号过站失败！[uspUnitCompleteBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_A" xml:space="preserve">
+    <value>请先扫码包装箱条码！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_B" xml:space="preserve">
+    <value>未找到产品关联的包装箱设定！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_C" xml:space="preserve">
+    <value>生成包装中箱条码失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_D" xml:space="preserve">
+    <value>生成包装中箱条码重复，请检查序列号规则！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_E" xml:space="preserve">
+    <value>新增包装中箱信息失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_F" xml:space="preserve">
+    <value>建立产品序号与包装中箱关系失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_G" xml:space="preserve">
+    <value>包装箱{0}已关闭！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_H" xml:space="preserve">
+    <value>包装箱{0}已报废！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_AlreadyPackedIntoCartonBox" xml:space="preserve">
+    <value>该条码已被包装到包装中箱{0}！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CartonBoxAllowedQuantity" xml:space="preserve">
+    <value>当前产品包装数量已达到包装中箱最大包装数{0}！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_UpdatingCartonBoxStatus" xml:space="preserve">
+    <value>更新包装中箱状态失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_DidNotFind" xml:space="preserve">
+    <value>未找到扫描序号信息！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CannotPackIntoCartonBox" xml:space="preserve">
+    <value>当前扫描条码为离线包装箱条码，不可包入其它包装箱！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_GeneratingCartonBoxNumberFault" xml:space="preserve">
+    <value>生成包装箱条码失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CartonBoxSnRepeated" xml:space="preserve">
+    <value>生成包装箱条码重复，请检查序列号规则 ！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_UpdatingCartonBoxInfoFault" xml:space="preserve">
+    <value>更新包装箱号信息失败！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackedIntoCartonBox" xml:space="preserve">
+    <value>该条码已被包装到包装箱{0}！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_NoCartonBoxInfo" xml:space="preserve">
+    <value>未找到包装箱{0}！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackedModelInsideCartonBox" xml:space="preserve">
+    <value>扫描的产品与包装箱内的产品不一致！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_SameAsPackedModel" xml:space="preserve">
+    <value>扫描的产品工单与包装箱内的产品工单不一致！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_FullOnCurrentModel" xml:space="preserve">
+    <value>当前产品包装数量已达到包装箱最大包装数{0}！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_CartonBoxInfo" xml:space="preserve">
+    <value>新增包装箱信息失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_OfflineCartonBox" xml:space="preserve">
+    <value>更新离线包装箱号状态信息失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_SerialNumberWithCartonBox" xml:space="preserve">
+    <value>建立产品序号与包装箱关系失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_ModelPackingCartonBox" xml:space="preserve">
+    <value>产品包装成箱！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackingInfo" xml:space="preserve">
+    <value>记录包装信息失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_UpdatingCartonBoxInfo" xml:space="preserve">
+    <value>更新包装箱状态信息失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackingStationWithBatch" xml:space="preserve">
+    <value>包装箱批量过站失败！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_BoxClosed" xml:space="preserve">
+    <value>包装箱{0}已关闭！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_BoxScrapped" xml:space="preserve">
+    <value>包装箱{0}已报废！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectOrderInput_InputStationError" xml:space="preserve">
+    <value>投入过站失败！[uspCollectOrderInput]</value>
+  </data>
+  <data name="uspChangeOrder_NotFindSn" xml:space="preserve">
+    <value>未找到此SN的信息！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_NotFinishRouter" xml:space="preserve">
+    <value>SN未完成生产路由！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderCanNotSwitch" xml:space="preserve">
+    <value>转换的工单不能与当前工单一致！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ModelQHold" xml:space="preserve">
+    <value>产品已QHold！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderTypeCanNotSwith" xml:space="preserve">
+    <value>当前工单的拼板类型与转换工单类型不一致！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_HasBeenPackedIntoWarehosue" xml:space="preserve">
+    <value>SN已完成入库扫描，不能进行转工单操作！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderHasLocked" xml:space="preserve">
+    <value>当前工单已被锁定！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderFinished" xml:space="preserve">
+    <value>当前工单已完成！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderClosed" xml:space="preserve">
+    <value>当前工单已关闭！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderBomAndMaterialInfo" xml:space="preserve">
+    <value>未找到扫描物料与工单BOM的关联信息，请先维护物料与工单BOM信息！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderFullQuantity" xml:space="preserve">
+    <value>当前工单已达到最大计划生产数量！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_RouterNoStation" xml:space="preserve">
+    <value>工单关联的路由没有当前工位信息，请先设计好路由！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_UpdatingSnFault" xml:space="preserve">
+    <value>更新SN条码信息失败！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ReleasedOrderFault" xml:space="preserve">
+    <value>更新工单释放信息失败！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ProductLastStation" xml:space="preserve">
+    <value>产品SN过站失败！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_UnlockSMTPackageFault" xml:space="preserve">
+    <value>解绑SMT包装箱信息失败！[uspChangeOrder]</value>
+  </data>
+  <data name="uspGenerateItemSN_BatchNumberRulesNoMaintains" xml:space="preserve">
+    <value>批次号规则未维护！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGenerateItemSN_SerialNumberRulesNoMaintains" xml:space="preserve">
+    <value>序列号规则还没维护！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGenerateItemSN_IQCReleasedQuantity" xml:space="preserve">
+    <value>检验单释放数量大于序号最大值！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_GeneratingCustomerFault" xml:space="preserve">
+    <value>生成客户条码失败！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_CustomerSnRepeated" xml:space="preserve">
+    <value>客户条码{0}重复,请检查序列号规则！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_InsertingCustomerFault" xml:space="preserve">
+    <value>插入客户条码失败！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="CheckSNAndCSN_NotExist" xml:space="preserve">
+    <value>{0} 不存在！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_NotCustomer" xml:space="preserve">
+    <value>{0} 不是客户SN！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadPacked" xml:space="preserve">
+    <value>{0} 已被包装,如需替换关联,请先将客户条码解包装！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadLinkedWithCustomer" xml:space="preserve">
+    <value>SN:{0}已经关联了客户SN,它对应的客户SN是{1}！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadyLink" xml:space="preserve">
+    <value>客户SN{0}已经关联了SN,它对应的SN是{1}！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="SNAndCSNJoin_NotFiadCustomer" xml:space="preserve">
+    <value>未找到有效的客户条码信息！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_DeleteCustomerSnError" xml:space="preserve">
+    <value>删除客户SN记录报错！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_UpdateCustomerSnError" xml:space="preserve">
+    <value>修改客户SN记录报错！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_AddCustomerSnError" xml:space="preserve">
+    <value>新增客户SN记录报错！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_InsertingCustomerFault" xml:space="preserve">
+    <value>插入客户条码关联采集信息失败！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_UpdatingCustomerUsageFault" xml:space="preserve">
+    <value>更新客户条码使用状态失败！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_LinkingCustomerSnFault" xml:space="preserve">
+    <value>关联客户条码过站失败！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="uspGetProcessFormBySearch_SnNotExist" xml:space="preserve">
+    <value>该序列号不存在！[uspGetProcessFormBySearch]</value>
+  </data>
+  <data name="uspGetProcessFormBySearch_OrderNotExist" xml:space="preserve">
+    <value>该工单号不存在！[uspGetProcessFormBySearch]</value>
+  </data>
+  <data name="InsertLogError" xml:space="preserve">
+    <value>插入日志失败！</value>
+  </data>
+  <data name="ContainerEdit_BoxInfo" xml:space="preserve">
+    <value>包装内容{0}已被包装到包装容器{1}！[Basal_Container_Edit]</value>
+  </data>
+  <data name="uspCollectPackSN_AlreadyPackedInCartonBox" xml:space="preserve">
+    <value>该中箱已被包装到包装箱{0}！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspGetPackNumberBySN_NotFindPackingCartonInfo" xml:space="preserve">
+    <value>未找到包装箱信息！[uspGetPackNumberBySN]</value>
+  </data>
+  <data name="InPackage" xml:space="preserve">
+    <value>包装中</value>
+  </data>
+  <data name="PackedAlready" xml:space="preserve">
+    <value>已包装</value>
+  </data>
+  <data name="Tips_CurrentOpertion_NoProcess" xml:space="preserve">
+    <value>当前选择工序还没有任何工艺参数，请点击'添加参数'来为工序增加工艺参数</value>
+  </data>
+  <data name="Tips_MaxInputChars" xml:space="preserve">
+    <value>最多能输入{0}个字符</value>
+  </data>
+  <data name="Tips_OnlyValuesCanBeEntered" xml:space="preserve">
+    <value>只能输入数值</value>
+  </data>
+  <data name="Tips_PleaseSelect" xml:space="preserve">
+    <value>请选择{0}</value>
+  </data>
+  <data name="Tips_ResourcesAllowed_TimeRange" xml:space="preserve">
+    <value>资源在此时间范围内允许使用</value>
+  </data>
+  <data name="Tips_Select" xml:space="preserve">
+    <value>选择{0}</value>
+  </data>
+  <data name="Tips_Use24Hour_Eg" xml:space="preserve">
+    <value>请使用二十四小时制时间，格式如：13:30</value>
+  </data>
+  <data name="Tips_IsCanBadCodesUseInAllProcesses" xml:space="preserve">
+    <value>在此类不良代码类型中的不良代码是否可以在所有工序上都使用?</value>
+  </data>
+  <data name="Tips_PackingBoxHasNoContent" xml:space="preserve">
+    <value>该包装箱还没有设置任何包装内容，点击“新增”按钮来设置包装内容</value>
+  </data>
+  <data name="Tips_PackingBoxHasNoLabel" xml:space="preserve">
+    <value>该包装箱还没有设置任何标签，点击“新增”按钮来设置包装的标签</value>
+  </data>
+  <data name="Tips_HowToImpportCertificate" xml:space="preserve">
+    <value>如何导入证书？</value>
+  </data>
+  <data name="Tips_PrintPlugin_SupportsIE_Only" xml:space="preserve">
+    <value>系统检测到您当前使用的不是IE浏览器无法进行打印，打印插件暂时只支持IE内核，请使用IE浏览器来打印！</value>
+  </data>
+  <data name="Tips_SetBOMContent" xml:space="preserve">
+    <value>点击“新增”按钮来设置BOM内容</value>
+  </data>
+  <data name="uspUnitProcessValidation_Test" xml:space="preserve">
+    <value>此SN{0}在{1}已测试两次，第一次NG，第二次OK，根据三局两胜规则，还需要再测一次 !{1}，如果还是NG，再来维修![uspUnitProcessValidation]</value>
+  </data>
+  <data name="Tips_ProductHasNoProcessParameters" xml:space="preserve">
+    <value>此产品没有工艺参数</value>
+  </data>
+  <data name="Tips_AllowedProduction_Qualified" xml:space="preserve">
+    <value>合格, 允许继续生产</value>
+  </data>
+  <data name="Tips_Set" xml:space="preserve">
+    <value>设置{0}</value>
+  </data>
+  <data name="Tips_RemakeFirstPiece_Unqualified" xml:space="preserve">
+    <value>不合格, 改善不良, 重新制作首件</value>
+  </data>
+  <data name="Tips_StopProduction_Unqualified" xml:space="preserve">
+    <value>不合格, 停止生产, 报相关部门整改</value>
+  </data>
+  <data name="Tips_CalculateTotalOfSubBoards_Eg" xml:space="preserve">
+    <value>例如：4 X 6 其中4表示该PCB拼板行数目，6表示拼板列数目，故此拼板中子板总数目即为24</value>
+  </data>
+  <data name="Tips_InputBadNumMaterialBarcode" xml:space="preserve">
+    <value>请输入要不良数录入的物料条码</value>
+  </data>
+  <data name="Tips_InputRefueledMaterialBarcode" xml:space="preserve">
+    <value>请输入要换料的物料条码</value>
+  </data>
+  <data name="Tips_NoDataToCollect" xml:space="preserve">
+    <value>没有需要采集的数据</value>
+  </data>
+  <data name="LoadingWait" xml:space="preserve">
+    <value>加载中，请稍候…</value>
+  </data>
+  <data name="Tips_ClickToClearNo" xml:space="preserve">
+    <value>点击将会清除序号</value>
+  </data>
+  <data name="Tips_CustomerSNRetyped" xml:space="preserve">
+    <value>如果您的客户条码标签需要重打，点击选择此复选框</value>
+  </data>
+  <data name="Tips_InstrumentCode_Eg" xml:space="preserve">
+    <value>A卡尺，B卷尺，C钢尺，D膜厚仪，E投影仪，F通止规，G环规，H针规，I塞尺，J网络分析仪，K互调仪，L色差仪，M大理石平台，N其他</value>
+  </data>
+  <data name="Tips_NoStaffInTheDepartment" xml:space="preserve">
+    <value>该部门没有任务人员</value>
+  </data>
+  <data name="Tips_PalletLabelReTyped" xml:space="preserve">
+    <value>如果您的栈板标签需要重打，点击选择此复选框</value>
+  </data>
+  <data name="Tips_PleaseScan" xml:space="preserve">
+    <value>请扫描{0}</value>
+  </data>
+  <data name="Tips_ScanXBorad_Eg" xml:space="preserve">
+    <value>打X板请用XXXXXX扫描</value>
+  </data>
+  <data name="Tips_SelectForMaterialPreparation" xml:space="preserve">
+    <value>请选择备料的生产工单编号,物料编码</value>
+  </data>
+  <data name="DataLoding" xml:space="preserve">
+    <value>数据加载中...</value>
+  </data>
+  <data name="Formula_Capacity" xml:space="preserve">
+    <value>（该车间工单当天实际产出数累计/当天计划数累计）*100%</value>
+  </data>
+  <data name="Formula_IeEfficiency" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Formula_WhiteCard" xml:space="preserve">
+    <value>(车间当天对应工单白卡数累计/车间当天产出数累计)*100%</value>
+  </data>
+  <data name="Tips_MaintainInspectionEntryMethod" xml:space="preserve">
+    <value>请维护检验项的录入方式</value>
+  </data>
+  <data name="Welcome_1" xml:space="preserve">
+    <value>热烈欢迎各位领导莅临参观指导</value>
+  </data>
+  <data name="UnloadPrintPlugin" xml:space="preserve">
+    <value>未能正确加载打印插件无法获取本地打印机列表</value>
+  </data>
+  <data name="CopyTargetRole" xml:space="preserve">
+    <value>复制目标角色名</value>
+  </data>
+  <data name="SetRoleName" xml:space="preserve">
+    <value>设置角色名</value>
+  </data>
+  <data name="TipOperation" xml:space="preserve">
+    <value>提示：此操作会复制目标角色名所有权限，原有权限会全部清除With</value>
+  </data>
+  <data name="AntiXsrfFaildExcetion" xml:space="preserve">
+    <value>Anti-XSRF token验证失败</value>
+  </data>
+</root>

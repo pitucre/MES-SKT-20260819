@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Account_Popedom" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="Account_Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Account_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="BasalInfo_Activities" xml:space="preserve">
+    <value>Activities maintenance</value>
+  </data>
+  <data name="BasalInfo_Anormal" xml:space="preserve">
+    <value>Anormal maintenance</value>
+  </data>
+  <data name="BasalInfo_Customer" xml:space="preserve">
+    <value>Customer management</value>
+  </data>
+  <data name="BasalInfo_Equipment" xml:space="preserve">
+    <value>Equipment manage</value>
+  </data>
+  <data name="BasalInfo_Labels" xml:space="preserve">
+    <value>Labels manage</value>
+  </data>
+  <data name="BasalInfo_Product" xml:space="preserve">
+    <value>Product manage</value>
+  </data>
+  <data name="BasalInfo_Resource" xml:space="preserve">
+    <value>Rescource  maintenance</value>
+  </data>
+  <data name="BasalInfo_Router" xml:space="preserve">
+    <value>Router maintenance</value>
+  </data>
+  <data name="BasalInfo_SerialNumber" xml:space="preserve">
+    <value>SerialNumber  manage</value>
+  </data>
+  <data name="BasalInfo_Station" xml:space="preserve">
+    <value>Station manage</value>
+  </data>
+  <data name="BasalInfo_Supplier" xml:space="preserve">
+    <value>Supplier manager</value>
+  </data>
+  <data name="BasalInfo_Turnover" xml:space="preserve">
+    <value>Turnover manage</value>
+  </data>
+  <data name="BasalInf_Container" xml:space="preserve">
+    <value>Container manage</value>
+  </data>
+  <data name="Client_Scanner" xml:space="preserve">
+    <value>Client Scanner</value>
+  </data>
+  <data name="DataTypeManage" xml:space="preserve">
+    <value>Data type manage</value>
+  </data>
+  <data name="Mobile_Material" xml:space="preserve">
+    <value>Material manage</value>
+  </data>
+  <data name="Mobile_Production" xml:space="preserve">
+    <value>Production manage</value>
+  </data>
+  <data name="Order_ShopOrder" xml:space="preserve">
+    <value>Production Order</value>
+  </data>
+  <data name="Production_CollectForm" xml:space="preserve">
+    <value>Process to collect the single</value>
+  </data>
+  <data name="Production_Kanban" xml:space="preserve">
+    <value>Production_Kanban</value>
+  </data>
+  <data name="Production_Maintenance" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="Production_Manufacture" xml:space="preserve">
+    <value>Production manufacture</value>
+  </data>
+  <data name="Production_Material" xml:space="preserve">
+    <value>Material manage</value>
+  </data>
+  <data name="Production_Plan" xml:space="preserve">
+    <value>Production Scheduling</value>
+  </data>
+  <data name="Production_ProcessForm" xml:space="preserve">
+    <value>Production process form</value>
+  </data>
+  <data name="Production_Shipment" xml:space="preserve">
+    <value>Production shipment</value>
+  </data>
+  <data name="Production_Sparepart" xml:space="preserve">
+    <value>Sparepart management</value>
+  </data>
+  <data name="SMTMachineManage" xml:space="preserve">
+    <value>SMTMachineManage</value>
+  </data>
+  <data name="SMTTraceabilityManagement" xml:space="preserve">
+    <value>SMTTraceabilityManagement</value>
+  </data>
+  <data name="SystemInfo_DataInterface" xml:space="preserve">
+    <value>Data Interface</value>
+  </data>
+  <data name="ValidationMaskManage" xml:space="preserve">
+    <value>ValidationMask manage</value>
+  </data>
+  <data name="Quality_SamplingRule" xml:space="preserve">
+    <value>Sampling rule</value>
+  </data>
+  <data name="BasalInfo_EmailConfig" xml:space="preserve">
+    <value>Email config</value>
+  </data>
+  <data name="Production_Schedule" xml:space="preserve">
+    <value>Production schedule</value>
+  </data>
+  <data name="FactoryManage" xml:space="preserve">
+    <value>Factory info manage</value>
+  </data>
+  <data name="WorkShopManage" xml:space="preserve">
+    <value>Work shop manage</value>
+  </data>
+  <data name="ProductionShift" xml:space="preserve">
+    <value>Production shift manage</value>
+  </data>
+  <data name="SteelMeshManage" xml:space="preserve">
+    <value>Steel mesh manage</value>
+  </data>
+  <data name="Production_MaterialDelivery" xml:space="preserve">
+    <value>Material delivery</value>
+  </data>
+  <data name="Production_LineEdgeWarehouse" xml:space="preserve">
+    <value>Line edge warehouse</value>
+  </data>
+  <data name="Production_Hold" xml:space="preserve">
+    <value>Production QHold</value>
+  </data>
+  <data name="Production_Rework" xml:space="preserve">
+    <value>Production rework</value>
+  </data>
+  <data name="AccessoriesManagement" xml:space="preserve">
+    <value>AccessoriesManagement</value>
+  </data>
+  <data name="AccessoryPartAdd" xml:space="preserve">
+    <value>Add Accessory</value>
+  </data>
+  <data name="AccessoryPartDelete" xml:space="preserve">
+    <value>Delete Accessory</value>
+  </data>
+  <data name="AccessoryPartEdit" xml:space="preserve">
+    <value>Edit Accessory</value>
+  </data>
+  <data name="AccessoryPartList" xml:space="preserve">
+    <value>Accessory Maintenance</value>
+  </data>
+  <data name="Section_ResourceView" xml:space="preserve">
+    <value>Section&amp;Line</value>
+  </data>
+  <data name="JigManage" xml:space="preserve">
+    <value>Jig manage</value>
+  </data>
+  <data name="Production_PackPrint" xml:space="preserve">
+    <value>Pack Print</value>
+  </data>
+  <data name="Mobile_FinishProdShipment" xml:space="preserve">
+    <value>Mobile Finish Product Shipment</value>
+  </data>
+  <data name="Production_ESOP" xml:space="preserve">
+    <value>ESOP manage</value>
+  </data>
+  <data name="Production_FinishProdShipMentList" xml:space="preserve">
+    <value>Production Finish Prod ShipMen tList</value>
+  </data>
+  <data name="Production_FinishProdShipMent" xml:space="preserve">
+    <value>Production Finish Product Shipment</value>
+  </data>
+  <data name="Material_IQCFormCheck" xml:space="preserve">
+    <value>IQCForm Check</value>
+  </data>
+  <data name="Material_Manager" xml:space="preserve">
+    <value>Material Manager</value>
+  </data>
+  <data name="Report_ReportType" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="Report_TemplateList" xml:space="preserve">
+    <value>Template List</value>
+  </data>
+  <data name="Account_UserOfSupplier" xml:space="preserve">
+    <value>Account User Of Supplier</value>
+  </data>
+  <data name="Production_FinishProductInStorage" xml:space="preserve">
+    <value>Store Product</value>
+  </data>
+  <data name="Product_SuplierMaterialManage" xml:space="preserve">
+    <value>Product Suplier Material Manage</value>
+  </data>
+  <data name="System_Configuration" xml:space="preserve">
+    <value>System Configuration</value>
+  </data>
+  <data name="Data_Synchronization" xml:space="preserve">
+    <value>Data synchronization</value>
+  </data>
+  <data name="Client_Configuration" xml:space="preserve">
+    <value>Client Configuration</value>
+  </data>
+  <data name="Kanban_Basal" xml:space="preserve">
+    <value>Kanban Basically Information</value>
+  </data>
+  <data name="Production_MaterialConfig" xml:space="preserve">
+    <value>Material Source Config</value>
+  </data>
+  <data name="BasalInfo_ExtensionFields" xml:space="preserve">
+    <value>BasalInfo ExtensionFields</value>
+  </data>
+  <data name="AQLPlan" xml:space="preserve">
+    <value>AQL Plan</value>
+  </data>
+  <data name="QCManagement" xml:space="preserve">
+    <value>QC Management</value>
+  </data>
+  <data name="Product_CollectionTemplate" xml:space="preserve">
+    <value>Collection Template</value>
+  </data>
+  <data name="Product_CollectionTemplate_Control" xml:space="preserve">
+    <value>Common function</value>
+  </data>
+  <data name="Equipment_Equipment" xml:space="preserve">
+    <value>Equipment Equipment</value>
+  </data>
+  <data name="Production_MSD" xml:space="preserve">
+    <value>MSD</value>
+  </data>
+  <data name="BasalInfo_ItemType" xml:space="preserve">
+    <value>Call Material</value>
+  </data>
+  <data name="ProductChange" xml:space="preserve">
+    <value>Product Change</value>
+  </data>
+  <data name="MaterialCheck" xml:space="preserve">
+    <value>Material Warehouse Check</value>
+  </data>
+  <data name="Quality_SPC" xml:space="preserve">
+    <value>SPC Manage</value>
+  </data>
+  <data name="MaterialApply" xml:space="preserve">
+    <value>Materia lApply</value>
+  </data>
+  <data name="MaterialReceive" xml:space="preserve">
+    <value>Material Receive</value>
+  </data>
+  <data name="MaterialReturn" xml:space="preserve">
+    <value>Material Return</value>
+  </data>
+  <data name="Quality_QC" xml:space="preserve">
+    <value>QC Information Manage</value>
+  </data>
+  <data name="MoldingManagement" xml:space="preserve">
+    <value>Molding Management</value>
+  </data>
+  <data name="Production_SNPrint" xml:space="preserve">
+    <value>Print SN</value>
+  </data>
+  <data name="AnormalManagement" xml:space="preserve">
+    <value>Anormal Management</value>
+  </data>
+  <data name="Warning_Management" xml:space="preserve">
+    <value>Warning Management</value>
+  </data>
+  <data name="InspectionOrderAudit" xml:space="preserve">
+    <value>InspectionOrderAudit</value>
+  </data>
+  <data name="ProductionDataConfig" xml:space="preserve">
+    <value>Production Data Config</value>
+  </data>
+  <data name="Kanban_Builtin" xml:space="preserve">
+    <value>Advanced Kanban</value>
+  </data>
+  <data name="BasalInfo_Detection" xml:space="preserve">
+    <value>Detection Item Manage</value>
+  </data>
+  <data name="PDAManage" xml:space="preserve">
+    <value>PDA Manage</value>
+  </data>
+  <data name="Kanban_TagSend" xml:space="preserve">
+    <value>Kanban Send</value>
+  </data>
+  <data name="CustomMenu" xml:space="preserve">
+    <value>Custom Menu</value>
+  </data>
+  <data name="Quality_SNScrap" xml:space="preserve">
+    <value>Quality SNScrap</value>
+  </data>
+  <data name="Shipments" xml:space="preserve">
+    <value>Shipments</value>
+  </data>
+  <data name="InspectionmethodsList" xml:space="preserve">
+    <value>Inspection methods List</value>
+  </data>
+  <data name="SupplierExame" xml:space="preserve">
+    <value>Supplier Exame</value>
+  </data>
+  <data name="OSPManagement" xml:space="preserve">
+    <value>Process time management</value>
+  </data>
+  <data name="DIPPackaging_Management" xml:space="preserve">
+    <value>DIP Packaging Management</value>
+  </data>
+  <data name="Automatic_Scheduling" xml:space="preserve">
+    <value>Automatic production scheduling</value>
+  </data>
+  <data name="Standard_Scheduling" xml:space="preserve">
+    <value>Standard scheduling</value>
+  </data>
+  <data name="SampleNumberManagement" xml:space="preserve">
+    <value>Sample Number Management</value>
+  </data>
+	<data name="AccessoryManagement" xml:space="preserve"><value>Supplementary Management</value></data>
+	<data name="Account_Certification" xml:space="preserve"><value>Position Certification</value></data>
+	<data name="BasalInfo_NCCode" xml:space="preserve"><value>Fail Code</value></data>
+	<data name="BasalInfo_Unit" xml:space="preserve"><value>Unit Maintenance Management</value></data>
+	<data name="BasalInfo_Warehouse" xml:space="preserve"><value>Warehouse Information</value></data>
+	<data name="Navigation" xml:space="preserve"><value>Business Navigation Management</value></data>
+	<data name="EquipmentEarlyWarning" xml:space="preserve"><value>Equipment Early Warning</value></data>
+	<data name="Equipment_Basic" xml:space="preserve"><value>Equipment Basic Data Management</value></data>
+	<data name="Equipment_CheckOut" xml:space="preserve"><value>Equipment Calibration</value></data>
+	<data name="Material_Scrap" xml:space="preserve"><value>Scrap Management</value></data>
+	<data name="Material_Transfers" xml:space="preserve"><value>Allocation Management</value></data>
+	<data name="Production_DeviceInterface" xml:space="preserve"><value>Equipment Interface</value></data>
+	<data name="Quality_WarnSettings" xml:space="preserve"><value>Early Warning Configuration Management</value></data>
+	<data name="Report_Production" xml:space="preserve"><value>Production Report</value></data>
+	<data name="Report_Template" xml:space="preserve"><value>Report Template</value></data>
+	<data name="RMAManager" xml:space="preserve"><value>RMA Management</value></data>
+	<data name="BasalInfo_UIDesigner" xml:space="preserve"><value>Business Development</value></data>
+</root>

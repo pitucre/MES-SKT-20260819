@@ -1,0 +1,42 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "同步日志";
+}
+
+<style>
+    #sync-log td { word-break: break-all; }
+</style>
+
+
+<div class="form-group">
+    <div class="page-header">
+        同步日志
+    </div>
+    <table class="table table-striped table-responsive" id="sync-log" style="table-layout:fixed;">
+        <thead>
+            <tr>
+                <th style="width:5%;">序号</th>
+                <th style="width:7%;">创建时间</th>
+                <th style="width:7%;">来源</th>
+                <th style="width:7%;">日志等级</th>
+                <th style="width:14%;">日志信息</th>
+                <th style="width:30%;">异常信息</th>
+                <th style="width:30%;">堆栈信息</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item,idx) in logList">
+                <td>{{idx+1}}</td>
+                <td>{{item.CreateDate}}</td>
+                <td>{{item.Origin}}</td>
+                <td>{{item.LogLevel}}</td>
+                <td>{{item.Message}}</td>
+                <td>{{ item.Exception}}</td>
+                <td>{{item.StackTrace}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

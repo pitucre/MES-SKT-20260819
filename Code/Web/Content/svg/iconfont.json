@@ -1,0 +1,128 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "201553",
+      "name": "中图模式",
+      "font_class": "zhongtumoshi",
+      "unicode": "f01ed",
+      "unicode_decimal": 983533
+    },
+    {
+      "icon_id": "629337",
+      "name": "声音",
+      "font_class": "shengyin",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "629339",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "1304882",
+      "name": "开关",
+      "font_class": "kaiguan",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "3456457",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "3611175",
+      "name": "wifi_o",
+      "font_class": "wifi_o",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "4354245",
+      "name": "工业组件-仪表盘",
+      "font_class": "gongyezujian-yibiaopan",
+      "unicode": "eb94",
+      "unicode_decimal": 60308
+    },
+    {
+      "icon_id": "5387409",
+      "name": "工作流",
+      "font_class": "gongzuoliu",
+      "unicode": "eacb",
+      "unicode_decimal": 60107
+    },
+    {
+      "icon_id": "5387843",
+      "name": "主题_调色盘_o",
+      "font_class": "zhuti_tiaosepan_o",
+      "unicode": "eb6e",
+      "unicode_decimal": 60270
+    },
+    {
+      "icon_id": "6151035",
+      "name": "chart-bar",
+      "font_class": "chart-bar",
+      "unicode": "e791",
+      "unicode_decimal": 59281
+    },
+    {
+      "icon_id": "7093671",
+      "name": "全部 更多",
+      "font_class": "quanbugengduo",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "7917068",
+      "name": "fengxiantu",
+      "font_class": "fengxiantu",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "10268972",
+      "name": "故障&投诉",
+      "font_class": "guzhangtousu",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "12387142",
+      "name": "世界",
+      "font_class": "shijie",
+      "unicode": "e90d",
+      "unicode_decimal": 59661
+    },
+    {
+      "icon_id": "17228756",
+      "name": "空闲",
+      "font_class": "free",
+      "unicode": "e7ac",
+      "unicode_decimal": 59308
+    },
+    {
+      "icon_id": "33661815",
+      "name": "用户_用户",
+      "font_class": "yonghu_yonghu",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "36284842",
+      "name": "离线",
+      "font_class": "lixian",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

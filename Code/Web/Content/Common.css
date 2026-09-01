@@ -1,0 +1,30 @@
+﻿.Button
+{
+    border: none;
+    background: url(images/btn_search.png) no-repeat;
+    cursor: pointer;
+    width: 43px;
+    height: 23px;
+}
+.Button:hover
+{
+    border: none;
+    background: url(images/btn_search_hover.png) no-repeat;
+    cursor: pointer;
+    width: 43px;
+    height: 23px;
+}
+.divHeader
+{
+    background: url(images/l_bg_hover.gif) repeat-x;
+    color: black;
+    height: 26px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    padding: 0px 0px 0px 10px;
+    border: 0px;
+    position: relative;
+    margin: 0px;
+    line-height: 26px;
+}

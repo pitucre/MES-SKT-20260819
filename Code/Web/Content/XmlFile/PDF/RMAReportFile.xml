@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtRMAReport">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="20%" align="left" image-url="Content\images\logo\logo.png" image-size="70%" font-style="bold"></column>
+        <column width="60%" align="center" font-size="18" font-style="bold">R M A 单</column>
+        <column width="20%" align="left" barcode-type="barcode128" barcode-width="100" barcode-height="30"  barcode-content="#[RmaNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="60%" align="left">客户：#[CustomerName]#</column>
+        <column width="40%" align="right" >RMA单号：#[RmaNo]#</column>
+      </row>
+      <row>
+        <column width="60%" align="left">产品编码：#[ItemCode]#</column>
+		    <column width="40%" align="right">产品名称：#[ItemName]#</column>
+      </row>
+      <row>
+        <column width="60%" align="left">规格：#[ItemSpec]#</column>
+        <column width="40%" align="right">数量：#[Number]#</column>
+      </row>
+      <row>
+        <column width="60%" align="left">时间：#[CreateTime]#</column>
+        <column width="40%" align="right"></column>
+      </row>
+    </table>
+    <data source="dtRMADtl" spacing-before="0" font-size="8">
+      <column header="产品条码" width="13%" align="center">#[SN]#</column>
+      <column header="产品状态" width="18%">#[StatusName]#</column>
+      <column header="产品规格" width="7%" align="center">#[ItemName]#</column>
+      <column header="仓库名称" width="5%" align="center">#[CWhName]#</column>
+      <column header="库位" width="7%" align="center">#[cBarCode]#</column>
+    </data>
+
+  </report>
+</file>

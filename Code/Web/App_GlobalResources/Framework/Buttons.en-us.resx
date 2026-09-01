@@ -1,0 +1,1584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accessories_Invidated" xml:space="preserve">
+    <value>Accessories_Invidated</value>
+  </data>
+  <data name="Accessories_MakeUseOf" xml:space="preserve">
+    <value>Accessories_MakeUseOf</value>
+  </data>
+  <data name="Accessories_Register" xml:space="preserve">
+    <value>Accessories_Register</value>
+  </data>
+  <data name="Accessories_SelectInfo" xml:space="preserve">
+    <value>Accessories_SelectInfo</value>
+  </data>
+  <data name="Accessories_Thaw" xml:space="preserve">
+    <value>Accessories_Thaw</value>
+  </data>
+  <data name="AddComponent" xml:space="preserve">
+    <value>Add Component</value>
+  </data>
+  <data name="AssignRolePopedom" xml:space="preserve">
+    <value>Assign Popedom</value>
+  </data>
+  <data name="AssignUserToCert" xml:space="preserve">
+    <value>Assign Certification</value>
+  </data>
+  <data name="AssignUserToRole" xml:space="preserve">
+    <value>Assign Role</value>
+  </data>
+  <data name="BatchFail" xml:space="preserve">
+    <value>Batch Return</value>
+  </data>
+  <data name="BatchGenerate" xml:space="preserve">
+    <value>Batch Generate</value>
+  </data>
+  <data name="BatchPass" xml:space="preserve">
+    <value>Batch Pass</value>
+  </data>
+  <data name="BoxReprint" xml:space="preserve">
+    <value>Box Reprint</value>
+  </data>
+  <data name="Btn_Print" xml:space="preserve">
+    <value>Reprint</value>
+  </data>
+  <data name="Btn_Release" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="CartonSNAndPrint" xml:space="preserve">
+    <value>CartonNumber And Print</value>
+  </data>
+  <data name="Carton_Close" xml:space="preserve">
+    <value>Close Container By Force</value>
+  </data>
+  <data name="ChoosePass" xml:space="preserve">
+    <value>Choose Pass</value>
+  </data>
+  <data name="ClosePack" xml:space="preserve">
+    <value>Finish Pack</value>
+  </data>
+  <data name="ClosePickinglist" xml:space="preserve">
+    <value>Close Picking List</value>
+  </data>
+  <data name="COM_Add" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="COM_AlterMatAdd" xml:space="preserve">
+    <value>Add alternative material</value>
+  </data>
+  <data name="COM_BindItem" xml:space="preserve">
+    <value>Bind Item</value>
+  </data>
+  <data name="COM_BindOpeType" xml:space="preserve">
+    <value>Bind Default Operation Type</value>
+  </data>
+  <data name="COM_BOMCopy" xml:space="preserve">
+    <value>Copy BOM for WO</value>
+  </data>
+  <data name="COM_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="COM_ChangePwd" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="COM_CirContainerRegister" xml:space="preserve">
+    <value>Circulation Container Bind By Group</value>
+  </data>
+  <data name="COM_CleanEquipmentAdd" xml:space="preserve">
+    <value>COM_CleanEquipmentAdd</value>
+  </data>
+  <data name="COM_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="COM_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="COM_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="COM_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="COM_Export" xml:space="preserve">
+    <value>Export To File</value>
+  </data>
+  <data name="COM_FirstPage" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="COM_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="COM_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="COM_InfoCenter" xml:space="preserve">
+    <value>Info Center</value>
+  </data>
+  <data name="COM_LastPage" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="COM_LeaveUnusedd" xml:space="preserve">
+    <value>COM_LeaveUnusedd</value>
+  </data>
+  <data name="COM_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="COM_LoadPCB" xml:space="preserve">
+    <value>Load PCB Material</value>
+  </data>
+  <data name="COM_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="COM_Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="COM_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="COM_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="COM_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="COM_Param" xml:space="preserve">
+    <value>Config Parameters Default Value</value>
+  </data>
+  <data name="COM_PcbService" xml:space="preserve">
+    <value>COM_PcbService</value>
+  </data>
+  <data name="COM_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="COM_Receive" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="COM_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="COM_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="COM_ResetPwd" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="COM_Resize" xml:space="preserve">
+    <value>Resize</value>
+  </data>
+  <data name="Com_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="COM_RMAReceive" xml:space="preserve">
+    <value>RMA Receive</value>
+  </data>
+  <data name="COM_RouterDesign" xml:space="preserve">
+    <value>Router Design</value>
+  </data>
+  <data name="COM_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="COM_SaveDesign" xml:space="preserve">
+    <value>Save Design</value>
+  </data>
+  <data name="COM_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="COM_SFCReceive" xml:space="preserve">
+    <value>RMA SFC Receive</value>
+  </data>
+  <data name="COM_UnLock" xml:space="preserve">
+    <value>Un Lock</value>
+  </data>
+  <data name="COM_UnlockUser" xml:space="preserve">
+    <value>Unlock User</value>
+  </data>
+  <data name="COM_UseEquipmentEdit" xml:space="preserve">
+    <value>COM_UseEquipmentEdit</value>
+  </data>
+  <data name="ConfirmChoosePass" xml:space="preserve">
+    <value>Confirm Pass</value>
+  </data>
+  <data name="CreateIQCForm" xml:space="preserve">
+    <value>Create IQC Form</value>
+  </data>
+  <data name="DelComponent" xml:space="preserve">
+    <value>Remove Component</value>
+  </data>
+  <data name="DeleteGRN" xml:space="preserve">
+    <value>Delete GRN</value>
+  </data>
+  <data name="DeletePickinglist" xml:space="preserve">
+    <value>Delete Picking List</value>
+  </data>
+  <data name="EditComponent" xml:space="preserve">
+    <value>Edit Component</value>
+  </data>
+  <data name="EditIQCForm" xml:space="preserve">
+    <value>Edit IQC Form</value>
+  </data>
+  <data name="FinishIssue" xml:space="preserve">
+    <value>Issue Finished</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Full Screen</value>
+  </data>
+  <data name="GenerateGRN" xml:space="preserve">
+    <value>Generate GRN And Print Label</value>
+  </data>
+  <data name="MaintainConfirm" xml:space="preserve">
+    <value>Maintain Confirm</value>
+  </data>
+  <data name="MaterialReturnStore" xml:space="preserve">
+    <value>Return Material To Store</value>
+  </data>
+  <data name="ModifyGRN" xml:space="preserve">
+    <value>Modify GRN</value>
+  </data>
+  <data name="ModifyIssue" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="OpenEmptyCarton" xml:space="preserve">
+    <value>Open Box</value>
+  </data>
+  <data name="OutOfStore" xml:space="preserve">
+    <value>Finish Picking List</value>
+  </data>
+  <data name="PackGRN" xml:space="preserve">
+    <value>Pack GRN</value>
+  </data>
+  <data name="PrintGRN" xml:space="preserve">
+    <value>Print GRN</value>
+  </data>
+  <data name="PullMaterial" xml:space="preserve">
+    <value>Pull Material</value>
+  </data>
+  <data name="ReceiveMaterial" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="ReceiveMaterialOneTime" xml:space="preserve">
+    <value>Receive All Material In This GRN Carton</value>
+  </data>
+  <data name="RelieveAlert" xml:space="preserve">
+    <value>RelieveAlert</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ReturnMaterial" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="ReturnMaterialToStore" xml:space="preserve">
+    <value>Return Material To Store</value>
+  </data>
+  <data name="ReturnMaterialToSupplier" xml:space="preserve">
+    <value>Return Material To Supplier</value>
+  </data>
+  <data name="ReUse" xml:space="preserve">
+    <value>Re-use</value>
+  </data>
+  <data name="ReUsePckList" xml:space="preserve">
+    <value>Re-Use Picking List</value>
+  </data>
+  <data name="SMT_AddFeed" xml:space="preserve">
+    <value>Material Kitting</value>
+  </data>
+  <data name="SMT_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="SMT_Feed" xml:space="preserve">
+    <value>Feeding</value>
+  </data>
+  <data name="SMT_RelieveAlert" xml:space="preserve">
+    <value>RelieveAlert</value>
+  </data>
+  <data name="SMT_Save" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="SMT_SetUpLine" xml:space="preserve">
+    <value>Line type setting</value>
+  </data>
+  <data name="SplitMaterial" xml:space="preserve">
+    <value>Split</value>
+  </data>
+  <data name="StoreIssue" xml:space="preserve">
+    <value>Store Issue</value>
+  </data>
+  <data name="Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="UnPack" xml:space="preserve">
+    <value>UnPack</value>
+  </data>
+  <data name="Account_AssignCert" xml:space="preserve">
+    <value>Certification</value>
+  </data>
+  <data name="Account_AssignRole" xml:space="preserve">
+    <value>Assign Role</value>
+  </data>
+  <data name="Account_LogoffUser" xml:space="preserve">
+    <value>Logoff User</value>
+  </data>
+  <data name="Account_ResetPwd" xml:space="preserve">
+    <value>Init Password</value>
+  </data>
+  <data name="Account_UnlockUser" xml:space="preserve">
+    <value>Unlock User</value>
+  </data>
+  <data name="COM_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="COM_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Account_AssignUser" xml:space="preserve">
+    <value>Assign User</value>
+  </data>
+  <data name="COM_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="TurnoverRegister" xml:space="preserve">
+    <value>Turnover number register</value>
+  </data>
+  <data name="GRNCarton" xml:space="preserve">
+    <value>GRN Carton</value>
+  </data>
+  <data name="ImportPlany" xml:space="preserve">
+    <value>Import Plany</value>
+  </data>
+  <data name="ImportPlany_Semi_Finished" xml:space="preserve">
+    <value>Import Semi Finis Plany</value>
+  </data>
+  <data name="Account_AssignPopedom" xml:space="preserve">
+    <value>Assign Permission</value>
+  </data>
+  <data name="Account_AssignPopedomCopy" xml:space="preserve">
+    <value>Popedom Copy</value>
+  </data>
+  <data name="COM_In" xml:space="preserve">
+    <value>Part in</value>
+  </data>
+  <data name="COM_Out" xml:space="preserve">
+    <value>Part out</value>
+  </data>
+  <data name="IQCParamConfig" xml:space="preserve">
+    <value>IQC param config</value>
+  </data>
+  <data name="COM_DownloadPlan" xml:space="preserve">
+    <value>Download finished product plan template</value>
+  </data>
+  <data name="COM_DownloadPlanSemi_finished" xml:space="preserve">
+    <value>Download semi-finished products plan template</value>
+  </data>
+  <data name="CombineMaterial" xml:space="preserve">
+    <value>Material Combine</value>
+  </data>
+  <data name="ScrapReturnStore" xml:space="preserve">
+    <value>Scrap Return</value>
+  </data>
+  <data name="ShortcutGiveIn" xml:space="preserve">
+    <value>Shortcut give in</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeAdd" xml:space="preserve">
+    <value>Add collect form type</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindAdd" xml:space="preserve">
+    <value>Add collect form type bind</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindDelete" xml:space="preserve">
+    <value>Delete collect form type bind</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindEdit" xml:space="preserve">
+    <value>Edit collect form type  bind</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeDelete" xml:space="preserve">
+    <value>Delete collect form type</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeEdit" xml:space="preserve">
+    <value>Edit collect form type</value>
+  </data>
+  <data name="ImportToExcel" xml:space="preserve">
+    <value>Import to excel</value>
+  </data>
+  <data name="COM_Design" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="KanbanMode" xml:space="preserve">
+    <value>KanbanMode</value>
+  </data>
+  <data name="COM_Audit" xml:space="preserve">
+    <value>Audit</value>
+  </data>
+  <data name="COM_AuditTrial" xml:space="preserve">
+    <value>Audit trial</value>
+  </data>
+  <data name="InMaterial" xml:space="preserve">
+    <value>InMaterial</value>
+  </data>
+  <data name="MaterialComplete" xml:space="preserve">
+    <value>MaterialComplete</value>
+  </data>
+  <data name="COM_BindpProcess" xml:space="preserve">
+    <value>Bind Process Order</value>
+  </data>
+  <data name="ViewParams" xml:space="preserve">
+    <value>View params</value>
+  </data>
+  <data name="COM_StationParams" xml:space="preserve">
+    <value>Station Params</value>
+  </data>
+  <data name="Material_ClosePack" xml:space="preserve">
+    <value>Material_ClosePack</value>
+  </data>
+  <data name="Material_OpenEmptyCarton" xml:space="preserve">
+    <value>Material_OpenEmptyCarton</value>
+  </data>
+  <data name="Material_PackGRN" xml:space="preserve">
+    <value>Material_PackGRN</value>
+  </data>
+  <data name="COM_CancelScheduling" xml:space="preserve">
+    <value>Cancel scheduling</value>
+  </data>
+  <data name="COM_Scheduling" xml:space="preserve">
+    <value>Scheduling</value>
+  </data>
+  <data name="Account_ImportUser" xml:space="preserve">
+    <value>Import User</value>
+  </data>
+  <data name="Btn_ReleaseAgain" xml:space="preserve">
+    <value>Release Again</value>
+  </data>
+  <data name="COM_ModifyPwd" xml:space="preserve">
+    <value>Modify Password</value>
+  </data>
+  <data name="AtOnceImport" xml:space="preserve">
+    <value>At Once Import</value>
+  </data>
+  <data name="Kitting" xml:space="preserve">
+    <value>Kitting</value>
+  </data>
+  <data name="SchedulePublish" xml:space="preserve">
+    <value>Schedule Publish</value>
+  </data>
+  <data name="UnKitting" xml:space="preserve">
+    <value>Un kitting</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="ConfirmUpdate" xml:space="preserve">
+    <value>Confirm update</value>
+  </data>
+  <data name="CancelUpdate" xml:space="preserve">
+    <value>Cancel update</value>
+  </data>
+  <data name="BomChange" xml:space="preserve">
+    <value>Bom change</value>
+  </data>
+  <data name="QtyChange" xml:space="preserve">
+    <value>Qty change</value>
+  </data>
+  <data name="SeqChange" xml:space="preserve">
+    <value>Seq change</value>
+  </data>
+  <data name="ScheduleAllot" xml:space="preserve">
+    <value>Schedule allot</value>
+  </data>
+  <data name="DownChange" xml:space="preserve">
+    <value>Down change</value>
+  </data>
+  <data name="UpChange" xml:space="preserve">
+    <value>Up change</value>
+  </data>
+  <data name="CancelScheduling" xml:space="preserve">
+    <value>Cancel scheduling</value>
+  </data>
+  <data name="StopScheduling" xml:space="preserve">
+    <value>Stop scheduling</value>
+  </data>
+  <data name="ViewChangeDetail" xml:space="preserve">
+    <value>View change detail</value>
+  </data>
+  <data name="ViewDetail" xml:space="preserve">
+    <value>View detail</value>
+  </data>
+  <data name="SendMaterial" xml:space="preserve">
+    <value>Send material</value>
+  </data>
+  <data name="CancelStopScheduling" xml:space="preserve">
+    <value>Cancel stop scheduling</value>
+  </data>
+  <data name="GenerateBoxNO" xml:space="preserve">
+    <value>Generate box NO</value>
+  </data>
+  <data name="Hold" xml:space="preserve">
+    <value>QHold</value>
+  </data>
+  <data name="UnHold" xml:space="preserve">
+    <value>UnHold</value>
+  </data>
+  <data name="Rework" xml:space="preserve">
+    <value>Rework</value>
+  </data>
+  <data name="RecoverLine" xml:space="preserve">
+    <value>Recover line</value>
+  </data>
+  <data name="StopLine" xml:space="preserve">
+    <value>Stop line</value>
+  </data>
+  <data name="RouterBind" xml:space="preserve">
+    <value>Router bind</value>
+  </data>
+  <data name="GeneratePanelSN" xml:space="preserve">
+    <value>Generate Panel SN</value>
+  </data>
+  <data name="ViewChangeHistory" xml:space="preserve">
+    <value>View change history</value>
+  </data>
+  <data name="ChangeDetail" xml:space="preserve">
+    <value>Change detail</value>
+  </data>
+  <data name="MaintainCheck" xml:space="preserve">
+    <value>Maintain check</value>
+  </data>
+  <data name="GenerateReplaceSN" xml:space="preserve">
+    <value>Generate Replace SN</value>
+  </data>
+  <data name="COM_SteelIn" xml:space="preserve">
+    <value>Steel mess in</value>
+  </data>
+  <data name="COM_SteelOut" xml:space="preserve">
+    <value>Steel mess out</value>
+  </data>
+  <data name="COM_JigIn" xml:space="preserve">
+    <value>Jig in</value>
+  </data>
+  <data name="COM_JigOut" xml:space="preserve">
+    <value>Jig out</value>
+  </data>
+  <data name="InputSteelMeshUseCount" xml:space="preserve">
+    <value>Steel mesh use count</value>
+  </data>
+  <data name="Com_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="ProductLabelConfig" xml:space="preserve">
+    <value>Product Label Config</value>
+  </data>
+  <data name="ShipmentListConfig" xml:space="preserve">
+    <value>Shipment List Config</value>
+  </data>
+  <data name="MaterialLabelConfig" xml:space="preserve">
+    <value>Material Label Config</value>
+  </data>
+  <data name="SupplierLabelConfig" xml:space="preserve">
+    <value>Supplier Label Config</value>
+  </data>
+  <data name="PrintBarcode" xml:space="preserve">
+    <value>Print Barcode</value>
+  </data>
+  <data name="PrintTestLabel" xml:space="preserve">
+    <value>Print test label</value>
+  </data>
+  <data name="COM_Copy" xml:space="preserve">
+    <value>COM_Copy</value>
+  </data>
+  <data name="ViewEsop" xml:space="preserve">
+    <value>View esop file</value>
+  </data>
+  <data name="PartPass" xml:space="preserve">
+    <value>PartPass</value>
+  </data>
+  <data name="COM_AddParam" xml:space="preserve">
+    <value>Add Param</value>
+  </data>
+  <data name="COM_AgainStation" xml:space="preserve">
+    <value>Again Station</value>
+  </data>
+  <data name="COM_BindTurnover" xml:space="preserve">
+    <value>Bind Turnover</value>
+  </data>
+  <data name="COM_ChangeTurnover" xml:space="preserve">
+    <value>Change Turnover</value>
+  </data>
+  <data name="COM_CreateTemplate" xml:space="preserve">
+    <value>Create Template</value>
+  </data>
+  <data name="COM_DownloadTurnOver" xml:space="preserve">
+    <value>DownLoad TurnOver Template</value>
+  </data>
+  <data name="COM_FormPrint" xml:space="preserve">
+    <value>Form Print</value>
+  </data>
+  <data name="COM_HasStock" xml:space="preserve">
+    <value>Has Been Stock</value>
+  </data>
+  <data name="COM_LabelPrint" xml:space="preserve">
+    <value>Label Print</value>
+  </data>
+  <data name="COM_OffLinePrint" xml:space="preserve">
+    <value>Print OffLine SerialNumber</value>
+  </data>
+  <data name="COM_SaveChange" xml:space="preserve">
+    <value>Save Change</value>
+  </data>
+  <data name="COM_SetParams" xml:space="preserve">
+    <value>Station Parameters</value>
+  </data>
+  <data name="COM_SplitTurnover" xml:space="preserve">
+    <value>Combine Split TurnNo</value>
+  </data>
+  <data name="COM_Stock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="COM_Synchro" xml:space="preserve">
+    <value>Synchro</value>
+  </data>
+  <data name="COM_Transfer" xml:space="preserve">
+    <value>Are you sure transfer?</value>
+  </data>
+  <data name="COM_TurnOverPrint" xml:space="preserve">
+    <value>Print TurnOverNumber</value>
+  </data>
+  <data name="MaterialCancelStore" xml:space="preserve">
+    <value>Cancel Material Store</value>
+  </data>
+  <data name="PrintOldMaterialLabel" xml:space="preserve">
+    <value>print old Material Label</value>
+  </data>
+  <data name="ChooseSome" xml:space="preserve">
+    <value>Choose Some</value>
+  </data>
+  <data name="Supplier_AssignItem" xml:space="preserve">
+    <value>Supplier Assign Item</value>
+  </data>
+  <data name="Supplier_AssignUser" xml:space="preserve">
+    <value>Supplier Assign User</value>
+  </data>
+  <data name="ChooseFail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="IQCCheck_ChooseOk" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="Material_MaterialInStorageAdd" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="Material_MaterialInStorageGRN" xml:space="preserve">
+    <value>Input GRN</value>
+  </data>
+  <data name="ChooseOk" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="LogoffUserOfSupplier" xml:space="preserve">
+    <value>Logoff User Of Supplier</value>
+  </data>
+  <data name="SupplierResetPwd" xml:space="preserve">
+    <value>Supplier Reset Pwd</value>
+  </data>
+  <data name="UnlockUserOfSupplier" xml:space="preserve">
+    <value>Unlock User Of Supplier</value>
+  </data>
+  <data name="UserOfSupplierAdd" xml:space="preserve">
+    <value>User Of Supplier Add</value>
+  </data>
+  <data name="UserOfSupplierChangePwd" xml:space="preserve">
+    <value>User Of Supplier Change Pwd</value>
+  </data>
+  <data name="UserOfSupplierEdit" xml:space="preserve">
+    <value>User Of Supplier Edit</value>
+  </data>
+  <data name="FinishProductInStorageAdd" xml:space="preserve">
+    <value>Store Product</value>
+  </data>
+  <data name="FinishProductInStorageDelete" xml:space="preserve">
+    <value>Delete Products In Stroage</value>
+  </data>
+  <data name="Material_GRNModifyEdit" xml:space="preserve">
+    <value>GRN quantity modification</value>
+  </data>
+  <data name="ERP_Generate" xml:space="preserve">
+    <value>ERP_Generate</value>
+  </data>
+  <data name="ProdEfficiencyKanbanView" xml:space="preserve">
+    <value>Kanban mode</value>
+  </data>
+  <data name="COM_PrepareMatFormOtherAdd" xml:space="preserve">
+    <value>COM Prepare Mat Form Other Add</value>
+  </data>
+  <data name="COM_PrepareMatFormOtherEdit" xml:space="preserve">
+    <value>COM Prepare Mat Form Other Edit</value>
+  </data>
+  <data name="COM_Synchronous" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="Switch_Station" xml:space="preserve">
+    <value>Switch Station</value>
+  </data>
+  <data name="Manual_Material" xml:space="preserve">
+    <value>Manual material</value>
+  </data>
+  <data name="Production_Abnormal" xml:space="preserve">
+    <value>Production abnormal</value>
+  </data>
+  <data name="COM_DownloadPickList" xml:space="preserve">
+    <value>DownloadPickList</value>
+  </data>
+  <data name="COM_DownloadSMT" xml:space="preserve">
+    <value>DownloadSMT</value>
+  </data>
+  <data name="COM_RptAdd" xml:space="preserve">
+    <value>Add Report (Code)</value>
+  </data>
+  <data name="COM_RptDsAdd" xml:space="preserve">
+    <value>Add Report(Visual)</value>
+  </data>
+  <data name="Select_ProOrder" xml:space="preserve">
+    <value>Select Product Order</value>
+  </data>
+  <data name="Select_Item" xml:space="preserve">
+    <value>Select Item</value>
+  </data>
+  <data name="COM_GRNPrint" xml:space="preserve">
+    <value>GRN Print</value>
+  </data>
+  <data name="COM_GRNScrap" xml:space="preserve">
+    <value>GRN Scrap</value>
+  </data>
+  <data name="COM_GRNSplit" xml:space="preserve">
+    <value>GRN Split</value>
+  </data>
+  <data name="MaterialConfigAdd" xml:space="preserve">
+    <value>Add Material Config</value>
+  </data>
+  <data name="MaterialConfigDelete" xml:space="preserve">
+    <value>Delete Material Config</value>
+  </data>
+  <data name="MaterialConfigEdit" xml:space="preserve">
+    <value>Edit Material Config</value>
+  </data>
+  <data name="MaterialIQCConfigAdd" xml:space="preserve">
+    <value>Add IQC Config</value>
+  </data>
+  <data name="MaterialIQCConfigDelete" xml:space="preserve">
+    <value>Delete IQC Config</value>
+  </data>
+  <data name="MaterialIQCConfigEdit" xml:space="preserve">
+    <value>Edit IQC Config</value>
+  </data>
+  <data name="MaterialSupplierConfigAdd" xml:space="preserve">
+    <value>Add Supplier Config </value>
+  </data>
+  <data name="MaterialSupplierConfigDelete" xml:space="preserve">
+    <value>Delete Supplier Config</value>
+  </data>
+  <data name="MaterialSupplierConfigEdit" xml:space="preserve">
+    <value>Edit Supplier Config</value>
+  </data>
+  <data name="Btn_Pdf" xml:space="preserve">
+    <value>Deliver PDF Print</value>
+  </data>
+  <data name="COM_PackEnd" xml:space="preserve">
+    <value>Complete Pack Carton</value>
+  </data>
+  <data name="COM_RepairPrint" xml:space="preserve">
+    <value>Again Print</value>
+  </data>
+  <data name="MaterialDeliver" xml:space="preserve">
+    <value>Deliver Print</value>
+  </data>
+  <data name="UnBindPacking" xml:space="preserve">
+    <value>Break Carton</value>
+  </data>
+  <data name="Assemble_ProUnBind" xml:space="preserve">
+    <value>Assemble UnBind</value>
+  </data>
+  <data name="CloseContainerByUser_Pack" xml:space="preserve">
+    <value>Manually close the box</value>
+  </data>
+  <data name="CloseContainerByUser_Pallet" xml:space="preserve">
+    <value>Manually close the pallet</value>
+  </data>
+  <data name="Pack_ProUnBind" xml:space="preserve">
+    <value>Packaging removal</value>
+  </data>
+  <data name="COM_Choose" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="COM_Inspection" xml:space="preserve">
+    <value>Rule check</value>
+  </data>
+  <data name="IQCcheck" xml:space="preserve">
+    <value>Incoming inspection    Off-line code analysis</value>
+  </data>
+  <data name="Material_MaterialInStorageQty" xml:space="preserve">
+    <value>Quantity warehousing</value>
+  </data>
+  <data name="Material_MaterialInStorageIQC" xml:space="preserve">
+    <value>Whole single warehousing</value>
+  </data>
+  <data name="IQCPdf" xml:space="preserve">
+    <value>IQC inspection report PDF download</value>
+  </data>
+  <data name="AddHandApply" xml:space="preserve">
+    <value>Add Hand Apply</value>
+  </data>
+  <data name="EditHandApply" xml:space="preserve">
+    <value>Edit Hand Apply</value>
+  </data>
+  <data name="SurePrepare" xml:space="preserve">
+    <value>Confirm Prepare</value>
+  </data>
+  <data name="SureHandover" xml:space="preserve">
+    <value>Confirm Handover</value>
+  </data>
+  <data name="Pack_SNPrint" xml:space="preserve">
+    <value>Serial Number Print</value>
+  </data>
+  <data name="MaterialProdReturn" xml:space="preserve">
+    <value>Apply Return</value>
+  </data>
+  <data name="MaterialWhReturn" xml:space="preserve">
+    <value>Confirm Return</value>
+  </data>
+  <data name="MaterialScrap" xml:space="preserve">
+    <value>Confirm Scrap</value>
+  </data>
+  <data name="Accessories_Frost" xml:space="preserve">
+    <value>Frozen</value>
+  </data>
+  <data name="CallMaterialByMaterial" xml:space="preserve">
+    <value>Call Material By Material</value>
+  </data>
+  <data name="CallMaterialBySetQty" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="COM_ModuleRecover" xml:space="preserve">
+    <value>ModuleRecover</value>
+  </data>
+  <data name="COM_ModuleRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="COM_Scrap" xml:space="preserve">
+    <value>Scrap</value>
+  </data>
+  <data name="JigUseRegister" xml:space="preserve">
+    <value>Jig Use Register</value>
+  </data>
+  <data name="SteelMeshUseRegister" xml:space="preserve">
+    <value>SteelMesh Use Register</value>
+  </data>
+  <data name="ValidateSchedule" xml:space="preserve">
+    <value>ValidateSchedule</value>
+  </data>
+  <data name="COM_BomDownload" xml:space="preserve">
+    <value>BOM Template Download</value>
+  </data>
+  <data name="AddMat" xml:space="preserve">
+    <value>Add Materiel</value>
+  </data>
+  <data name="DelMat" xml:space="preserve">
+    <value>Delete Materiel</value>
+  </data>
+  <data name="EditMat" xml:space="preserve">
+    <value>Edit Materiel</value>
+  </data>
+  <data name="COM_Struct" xml:space="preserve">
+    <value>Product Struct</value>
+  </data>
+  <data name="COM_Maintenance" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="AssignItem" xml:space="preserve">
+    <value>Assign Item</value>
+  </data>
+  <data name="AssignItemType" xml:space="preserve">
+    <value>Assign Item Type</value>
+  </data>
+  <data name="BarCodeTransform" xml:space="preserve">
+    <value>BarCodeTransform</value>
+  </data>
+  <data name="Btn_Invalid" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Under test</value>
+  </data>
+  <data name="CheckPass" xml:space="preserve">
+    <value>Check Pass</value>
+  </data>
+  <data name="CheckSome" xml:space="preserve">
+    <value>Check Some</value>
+  </data>
+  <data name="Chooseing" xml:space="preserve">
+    <value>Under test</value>
+  </data>
+  <data name="COM_CancelConfirm" xml:space="preserve">
+    <value>Cancel confirm</value>
+  </data>
+  <data name="COM_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="COM_EquipmentAudit" xml:space="preserve">
+    <value>Equipment Audit</value>
+  </data>
+  <data name="COM_EquipmentConfirm" xml:space="preserve">
+    <value>Equipment Confirm</value>
+  </data>
+  <data name="Com_InWhCode" xml:space="preserve">
+    <value>In WhCode</value>
+  </data>
+  <data name="ConfirmCryItem" xml:space="preserve">
+    <value>Confirm Cry Item</value>
+  </data>
+  <data name="ErrorUnfasten" xml:space="preserve">
+    <value>Misfit and untie</value>
+  </data>
+  <data name="FirstArticleCheckout" xml:space="preserve">
+    <value>First Article Checkout</value>
+  </data>
+  <data name="FlowPlateUnfasten" xml:space="preserve">
+    <value>Repair and untie</value>
+  </data>
+  <data name="OperatOweMaterial" xml:space="preserve">
+    <value>Operat Owe Material</value>
+  </data>
+  <data name="PurchasingReply" xml:space="preserve">
+    <value>Purchasing Reply</value>
+  </data>
+  <data name="Repay_Product" xml:space="preserve">
+    <value>Return machine</value>
+  </data>
+  <data name="ReworkNew" xml:space="preserve">
+    <value>Re work New</value>
+  </data>
+  <data name="ScheduleAllot1" xml:space="preserve">
+    <value>ScheduleAllot</value>
+  </data>
+  <data name="ScheduleChange" xml:space="preserve">
+    <value>Schedule Change</value>
+  </data>
+  <data name="ScheduleClose" xml:space="preserve">
+    <value>ScheduleClose</value>
+  </data>
+  <data name="ScheduleDistribute" xml:space="preserve">
+    <value>Schedule Distribute</value>
+  </data>
+  <data name="SchedulePause" xml:space="preserve">
+    <value>SchedulePause</value>
+  </data>
+  <data name="ScheduleRelease" xml:space="preserve">
+    <value>ScheduleRelease</value>
+  </data>
+  <data name="ScheduleRestore" xml:space="preserve">
+    <value>ScheduleRestore</value>
+  </data>
+  <data name="StaffChargeCard" xml:space="preserve">
+    <value>Staff Charge Card</value>
+  </data>
+  <data name="WorkUnfasten" xml:space="preserve">
+    <value>Work order unbinding</value>
+  </data>
+  <data name="COM_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="COM_CancelApprove" xml:space="preserve">
+    <value>Cancel Approve</value>
+  </data>
+  <data name="COM_Reject" xml:space="preserve">
+    <value>Refuse to pass</value>
+  </data>
+  <data name="COM_ExecGraph" xml:space="preserve">
+    <value>Exec Graph</value>
+  </data>
+  <data name="AddConType" xml:space="preserve">
+    <value>Add KB Container Type</value>
+  </data>
+  <data name="COM_UserDownload" xml:space="preserve">
+    <value>User Template Download</value>
+  </data>
+  <data name="WarehouseCpInStock" xml:space="preserve">
+    <value>Product storage</value>
+  </data>
+  <data name="ReturnToSupplier" xml:space="preserve">
+    <value>ReturnToSupplier</value>
+  </data>
+  <data name="COM_OutDNAffirm" xml:space="preserve">
+    <value>Stock confirmation</value>
+  </data>
+  <data name="COM_OutStockAffirm" xml:space="preserve">
+    <value>Outbound confirmation</value>
+  </data>
+  <data name="COM_StockUp" xml:space="preserve">
+    <value>Stock up</value>
+  </data>
+  <data name="MaterialIQCReturn" xml:space="preserve">
+    <value>MaterialIQCReturn</value>
+  </data>
+  <data name="SureReturn" xml:space="preserve">
+    <value>SureReturn</value>
+  </data>
+  <data name="COM_Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="NCData_Receive" xml:space="preserve">
+    <value>NC Code Receive</value>
+  </data>
+  <data name="AddOutsideApply" xml:space="preserve">
+    <value>AddOutsideApplyOrder</value>
+  </data>
+  <data name="AddProdApply" xml:space="preserve">
+    <value>AddProdApply Order</value>
+  </data>
+  <data name="COM_Addknife" xml:space="preserve">
+    <value>Add Draw Knife</value>
+  </data>
+  <data name="COM_AddSteel" xml:space="preserve">
+    <value>Add Steel Net</value>
+  </data>
+  <data name="AddSteelItem" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="DelSteelItem" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="COM_PlanConfirm" xml:space="preserve">
+    <value>Plan Order Confirm</value>
+  </data>
+  <data name="BindLogic" xml:space="preserve">
+    <value>Bind Logic</value>
+  </data>
+  <data name="COM_SteelClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="AgeingRackUnBind" xml:space="preserve">
+    <value>AgeingRackUnBind</value>
+  </data>
+  <data name="AgeingRackProUnBind" xml:space="preserve">
+    <value>Aging rack untie</value>
+  </data>
+  <data name="ReturnToNgWarehouse" xml:space="preserve">
+    <value>ReturnToNgWarehouse</value>
+  </data>
+  <data name="ReturnToVendor" xml:space="preserve">
+    <value>ReturnToVendor</value>
+  </data>
+  <data name="COM_SchedulingSMT" xml:space="preserve">
+    <value>SMT Scheduling</value>
+  </data>
+  <data name="COM_SNPrint" xml:space="preserve">
+    <value>Print SN</value>
+  </data>
+  <data name="STM_UNPack" xml:space="preserve">
+    <value>SMT UnPack</value>
+  </data>
+  <data name="MaterialBurnJoinProd" xml:space="preserve">
+    <value>Burn Join Prod</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="COM_OneDeal" xml:space="preserve">
+    <value>Solution One</value>
+  </data>
+  <data name="COM_ThreeDeal" xml:space="preserve">
+    <value>Solution Three</value>
+  </data>
+  <data name="COM_TwoDeal" xml:space="preserve">
+    <value>Solution Two</value>
+  </data>
+  <data name="AccPrint" xml:space="preserve">
+    <value>Accessories printing</value>
+  </data>
+  <data name="COM_AccPrint" xml:space="preserve">
+    <value>Accessories printing</value>
+  </data>
+  <data name="COM_FeederDownload" xml:space="preserve">
+    <value>Feeder Template Download</value>
+  </data>
+  <data name="Pack_Weight_hidden" xml:space="preserve">
+    <value>Packaging electronic scale settings</value>
+  </data>
+  <data name="COM_Start" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="COM_AddPosition" xml:space="preserve">
+    <value>Add Position</value>
+  </data>
+  <data name="COM_AddReplaceItem" xml:space="preserve">
+    <value>Add Replace Item</value>
+  </data>
+  <data name="COM_StockList" xml:space="preserve">
+    <value>Edit Stock List</value>
+  </data>
+  <data name="COM_ChangeLine" xml:space="preserve">
+    <value>Order Change Line</value>
+  </data>
+  <data name="COM_SubsItem" xml:space="preserve">
+    <value>Edit Substitute material</value>
+  </data>
+  <data name="Com_BakeIn" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="Com_BakeOut" xml:space="preserve">
+    <value>Take out</value>
+  </data>
+  <data name="COM_ForceOut" xml:space="preserve">
+    <value>Forced extraction</value>
+  </data>
+  <data name="COM_GroupAffirm" xml:space="preserve">
+    <value>Team leader confirm</value>
+  </data>
+  <data name="COM_ProjectAffirm" xml:space="preserve">
+    <value>Engineering confirmation</value>
+  </data>
+  <data name="InspectionOrderAudit_Confirmation" xml:space="preserve">
+    <value>Auditing</value>
+  </data>
+  <data name="InspectionOrderAudit_GroupAffirm" xml:space="preserve">
+    <value>Group leader affirm</value>
+  </data>
+  <data name="InspectionOrderAudit_List" xml:space="preserve">
+    <value>Inspection Auditing List</value>
+  </data>
+  <data name="InspectionOrderAudit_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="InspectionOrderAudit_ProjectAffirm" xml:space="preserve">
+    <value>Project affirm</value>
+  </data>
+  <data name="InspectionOrderAudit_View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="OpenKanban" xml:space="preserve">
+    <value>Open Kanban</value>
+  </data>
+  <data name="COM_Repair" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="COM_CheckOut" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="AddEQ" xml:space="preserve">
+    <value>Add product</value>
+  </data>
+  <data name="DelEQ" xml:space="preserve">
+    <value>Delete product</value>
+  </data>
+  <data name="EditEQ" xml:space="preserve">
+    <value>Edit product</value>
+  </data>
+  <data name="COM_Continued_Save" xml:space="preserve">
+    <value>Continued Save</value>
+  </data>
+  <data name="COM_Copy_Save" xml:space="preserve">
+    <value>Copy Save</value>
+  </data>
+  <data name="COM_Create" xml:space="preserve">
+    <value>Create reinspection order</value>
+  </data>
+  <data name="COM_CheckFinish" xml:space="preserve">
+    <value>Recheck completed</value>
+  </data>
+  <data name="COM_SIMPAdd" xml:space="preserve">
+    <value>Simple template</value>
+  </data>
+  <data name="COM_UDFAdd" xml:space="preserve">
+    <value>Advanced template</value>
+  </data>
+  <data name="COM_ChangeSave" xml:space="preserve">
+    <value>Change Completely</value>
+  </data>
+  <data name="COM_ViewGRN" xml:space="preserve">
+    <value>View CheckOrder GRN</value>
+  </data>
+  <data name="COM_ViewItem" xml:space="preserve">
+    <value>View CheckOrder Item</value>
+  </data>
+  <data name="COM_InspectionFileDownload" xml:space="preserve">
+    <value>Inspection related documents download</value>
+  </data>
+  <data name="ReleasePanel" xml:space="preserve">
+    <value>Release Panel</value>
+  </data>
+  <data name="Btn_PcPDF" xml:space="preserve">
+    <value>Purchase order PDF</value>
+  </data>
+  <data name="COM_Kanban" xml:space="preserve">
+    <value>View Kanban</value>
+  </data>
+  <data name="COM_ViewKanban" xml:space="preserve">
+    <value>View Now Kanban </value>
+  </data>
+  <data name="Com_SNRegain" xml:space="preserve">
+    <value>SN Regain</value>
+  </data>
+  <data name="COM_DeletePosition" xml:space="preserve">
+    <value>Delete Position</value>
+  </data>
+  <data name="AddCQTransfers" xml:space="preserve">
+    <value>Overdue bad allocation</value>
+  </data>
+  <data name="AddHandTransfers" xml:space="preserve">
+    <value>No order transfer</value>
+  </data>
+  <data name="AddPoTransfers" xml:space="preserve">
+    <value>Outsourcing</value>
+  </data>
+  <data name="Btn_PrintTransfers" xml:space="preserve">
+    <value>Print transfer order</value>
+  </data>
+  <data name="FinishTransfers" xml:space="preserve">
+    <value>End the transfer application</value>
+  </data>
+  <data name="TransfersApplyView" xml:space="preserve">
+    <value>View details</value>
+  </data>
+  <data name="TransfersStorageSure" xml:space="preserve">
+    <value>Confirm receipt</value>
+  </data>
+  <data name="RMAReciveManage" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="COM_RegainScrapt" xml:space="preserve">
+    <value>Regain Scrapt</value>
+  </data>
+  <data name="COM_SaveForceChange" xml:space="preserve">
+    <value>Mandatory change</value>
+  </data>
+  <data name="COM_DownloadSN" xml:space="preserve">
+    <value>Serial number import template</value>
+  </data>
+  <data name="COM_LoadSN" xml:space="preserve">
+    <value>Serial number import</value>
+  </data>
+  <data name="AddScrapOrder" xml:space="preserve">
+    <value>Add scrap</value>
+  </data>
+  <data name="Btn_PrintScrap" xml:space="preserve">
+    <value>Print scrap</value>
+  </data>
+  <data name="FinishScrap" xml:space="preserve">
+    <value>End scrap application</value>
+  </data>
+  <data name="ScrapApplyView" xml:space="preserve">
+    <value>View details</value>
+  </data>
+  <data name="ScrapSure" xml:space="preserve">
+    <value>Confirm receipt</value>
+  </data>
+  <data name="Edit_Detail" xml:space="preserve">
+    <value>Edit details</value>
+  </data>
+  <data name="COM_ProdReturnMaterial" xml:space="preserve">
+    <value>No Order Return Material</value>
+  </data>
+  <data name="COM_ApplyReturnMaterial" xml:space="preserve">
+    <value>Apply Retrun Material</value>
+  </data>
+  <data name="COM_QHoldDownload" xml:space="preserve">
+    <value>Download template</value>
+  </data>
+  <data name="COM_Download" xml:space="preserve">
+    <value>Download template</value>
+  </data>
+  <data name="RMAPdf" xml:space="preserve">
+    <value>RMA single PDF file</value>
+  </data>
+  <data name="COM_CheckHomogeneity" xml:space="preserve">
+    <value>Kitting Inspection</value>
+  </data>
+  <data name="IQCOrderPdf" xml:space="preserve">
+    <value>IQC Order Pdf</value>
+  </data>
+  <data name="COM_MaterialLock" xml:space="preserve">
+    <value>Material lock</value>
+  </data>
+  <data name="Pack_Weight" xml:space="preserve">
+    <value>Pack Weight</value>
+  </data>
+  <data name="VirtualPo" xml:space="preserve">
+    <value>Generate virtual purchase order</value>
+  </data>
+  <data name="Container_Weight" xml:space="preserve">
+    <value>Container Weight</value>
+  </data>
+  <data name="IQCRecivePdfPrint" xml:space="preserve">
+    <value>IQC Recive Pdf Print</value>
+  </data>
+  <data name="IQCRecivePdfRePrint" xml:space="preserve">
+    <value>IQC Recive Pdf RePrint</value>
+  </data>
+  <data name="ItemBomImportToExcel" xml:space="preserve">
+    <value>Bom Import ToExcel</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberCopy" xml:space="preserve">
+    <value>Offline SerialNumber Copy</value>
+  </data>
+  <data name="AddMerge" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="CancelMerge" xml:space="preserve">
+    <value>Unmerge</value>
+  </data>
+  <data name="COM_OrderPickList" xml:space="preserve">
+    <value>Add Order Pick List</value>
+  </data>
+  <data name="Account_AssignPinter" xml:space="preserve">
+    <value>Assign Pinter</value>
+  </data>
+  <data name="TaskExecute" xml:space="preserve">
+    <value>Execute</value>
+  </data>
+  <data name="COM_PDAAdd" xml:space="preserve">
+    <value>Add PDA Model</value>
+  </data>
+  <data name="AccessoryImportToExcel" xml:space="preserve">
+    <value>Accessory Import ToExcel</value>
+  </data>
+  <data name="AccessoryStir" xml:space="preserve">
+    <value>Accessory Stir</value>
+  </data>
+  <data name="StartStirTime" xml:space="preserve">
+    <value>Start Stir Time</value>
+  </data>
+  <data name="Accessories_Stir" xml:space="preserve">
+    <value>Accessories Stir</value>
+  </data>
+  <data name="COM_RegisterGrn" xml:space="preserve">
+    <value>COM RegisterGrn</value>
+  </data>
+  <data name="COM_SteelInspection" xml:space="preserve">
+    <value>COM Steel Inspection</value>
+  </data>
+  <data name="DataDistributionOperate" xml:space="preserve">
+    <value>Data Distribution Operate</value>
+  </data>
+  <data name="COM_CSVDownload" xml:space="preserve">
+    <value>CSV Download Model</value>
+  </data>
+  <data name="COM_EXCELDownload" xml:space="preserve">
+    <value>Excel Download Model</value>
+  </data>
+  <data name="COM_TXTDownload" xml:space="preserve">
+    <value>TXT Download Model</value>
+  </data>
+  <data name="COM_XMLDownload" xml:space="preserve">
+    <value>XML Download Model</value>
+  </data>
+  <data name="InspectionmethodsAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="InspectionmethodsDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="InspectionmethodsEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Btn_Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Btn_UndoByIQC" xml:space="preserve">
+    <value>Undo By IQC</value>
+  </data>
+  <data name="COM_Exam" xml:space="preserve">
+    <value>Exam</value>
+  </data>
+  <data name="COM_ReExam" xml:space="preserve">
+    <value>ReExam</value>
+  </data>
+  <data name="COM_RepairConfirm" xml:space="preserve">
+    <value>Maintenance confirmation</value>
+  </data>
+  <data name="COM_TogglePoints" xml:space="preserve">
+    <value>Connecting line</value>
+  </data>
+  <data name="COM_DownloadSampleNumber" xml:space="preserve">
+    <value>COM Download Sample Number</value>
+  </data>
+  <data name="GRNAdd" xml:space="preserve">
+    <value>Off-line code injection</value>
+  </data>
+  <data name="GRNInto" xml:space="preserve">
+    <value>Off-line code analysis</value>
+  </data>
+  <data name="COM_AuditReturn" xml:space="preserve">
+    <value>AuditReturn</value>
+  </data>
+  <data name="COM_DownloadFile" xml:space="preserve">
+    <value>DownloadFile</value>
+  </data>
+  <data name="PrintReturnNo" xml:space="preserve">
+    <value>Print historical materials</value>
+  </data>
+  <data name="AddBotDetail" xml:space="preserve">
+    <value>Add device type</value>
+  </data>
+  <data name="DelBotDetail" xml:space="preserve">
+    <value>Delete device type</value>
+  </data>
+  <data name="EditBotDetail" xml:space="preserve">
+    <value>Edit device type</value>
+  </data>
+  <data name="RevokeAudit" xml:space="preserve">
+    <value>Revocation review</value>
+  </data>
+  <data name="AddTransfersOrder" xml:space="preserve">
+    <value>Transfer by work order</value>
+  </data>
+  <data name="Exceptionentry" xml:space="preserve">
+    <value>Exception Entry</value>
+  </data>
+  <data name="COM_SavePrint" xml:space="preserve">
+    <value>Save Print</value>
+  </data>
+  <data name="Defective_ProductLabel" xml:space="preserve">
+    <value>Defective Product Label</value>
+  </data>
+  <data name="COM_UseCrush" xml:space="preserve">
+    <value>Use Crush Material</value>
+  </data>
+  <data name="COM_UseRaw" xml:space="preserve">
+    <value>Use Raw Material</value>
+  </data>
+  <data name="SaleReturnGenrateGRN" xml:space="preserve">
+    <value>Genrate GRN And Print</value>
+  </data>
+  <data name="JudgeQuality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="COM_Operate" xml:space="preserve">
+    <value>Operate</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="COM_Operate1" xml:space="preserve">
+    <value>Operate</value>
+  </data>
+  <data name="Import1" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Pack_Weight1" xml:space="preserve">
+    <value>Electronic Weigher Set</value>
+  </data>
+  <data name="PrintSaleReturnGRN" xml:space="preserve">
+    <value />
+  </data>
+</root>

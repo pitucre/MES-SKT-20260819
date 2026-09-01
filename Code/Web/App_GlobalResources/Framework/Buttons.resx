@@ -1,0 +1,1755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accessories_Invidated" xml:space="preserve">
+    <value>报废</value>
+  </data>
+  <data name="Accessories_MakeUseOf" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="Accessories_Register" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="Accessories_SelectInfo" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="Accessories_Thaw" xml:space="preserve">
+    <value>解冻</value>
+  </data>
+  <data name="AddComponent" xml:space="preserve">
+    <value>添加组件</value>
+  </data>
+  <data name="AssignRolePopedom" xml:space="preserve">
+    <value>权限分配</value>
+  </data>
+  <data name="AssignUserToCert" xml:space="preserve">
+    <value>岗位认证授权</value>
+  </data>
+  <data name="AssignUserToRole" xml:space="preserve">
+    <value>角色分配</value>
+  </data>
+  <data name="BatchFail" xml:space="preserve">
+    <value>批量退货</value>
+  </data>
+  <data name="BatchGenerate" xml:space="preserve">
+    <value>批量生成</value>
+  </data>
+  <data name="BatchPass" xml:space="preserve">
+    <value>批量通过</value>
+  </data>
+  <data name="BoxReprint" xml:space="preserve">
+    <value>包装箱条码重打</value>
+  </data>
+  <data name="Btn_Print" xml:space="preserve">
+    <value>补打</value>
+  </data>
+  <data name="Btn_Release" xml:space="preserve">
+    <value>释放工单</value>
+  </data>
+  <data name="CartonSNAndPrint" xml:space="preserve">
+    <value>生成包装条码并打印</value>
+  </data>
+  <data name="Carton_Close" xml:space="preserve">
+    <value>强制封箱</value>
+  </data>
+  <data name="ChoosePass" xml:space="preserve">
+    <value>特采</value>
+  </data>
+  <data name="ClosePack" xml:space="preserve">
+    <value>完成包装</value>
+  </data>
+  <data name="ClosePickinglist" xml:space="preserve">
+    <value>结束发料</value>
+  </data>
+  <data name="COM_Add" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="COM_AlterMatAdd" xml:space="preserve">
+    <value>增加替代料</value>
+  </data>
+  <data name="COM_BindItem" xml:space="preserve">
+    <value>绑定产品</value>
+  </data>
+  <data name="COM_BindOpeType" xml:space="preserve">
+    <value>绑定默认工位类型</value>
+  </data>
+  <data name="COM_BOMCopy" xml:space="preserve">
+    <value>复制物料清单</value>
+  </data>
+  <data name="COM_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="COM_ChangePwd" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="COM_CirContainerRegister" xml:space="preserve">
+    <value>条码注册</value>
+  </data>
+  <data name="COM_CleanEquipmentAdd" xml:space="preserve">
+    <value>清洗</value>
+  </data>
+  <data name="COM_Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="COM_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="COM_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="COM_Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="COM_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="COM_FirstPage" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="COM_Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="COM_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="COM_InfoCenter" xml:space="preserve">
+    <value>产品履历</value>
+  </data>
+  <data name="COM_LastPage" xml:space="preserve">
+    <value>尾页</value>
+  </data>
+  <data name="COM_LeaveUnusedd" xml:space="preserve">
+    <value>闲置</value>
+  </data>
+  <data name="COM_Load" xml:space="preserve">
+    <value>载入</value>
+  </data>
+  <data name="COM_LoadPCB" xml:space="preserve">
+    <value>PCB上料打印</value>
+  </data>
+  <data name="COM_Logout" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="COM_Move" xml:space="preserve">
+    <value>移动</value>
+  </data>
+  <data name="COM_New" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="COM_Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="COM_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="COM_Param" xml:space="preserve">
+    <value>配置参数默认值</value>
+  </data>
+  <data name="COM_PcbService" xml:space="preserve">
+    <value>PCB条码打印维护</value>
+  </data>
+  <data name="COM_Print" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="COM_Receive" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="COM_Register" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="COM_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="COM_ResetPwd" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="COM_Resize" xml:space="preserve">
+    <value>缩放</value>
+  </data>
+  <data name="Com_Return" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="COM_RMAReceive" xml:space="preserve">
+    <value>RMA工单接收</value>
+  </data>
+  <data name="COM_RouterDesign" xml:space="preserve">
+    <value>路由设计(IE插件)</value>
+  </data>
+  <data name="COM_RouterDesignB" xml:space="preserve">
+    <value>路由设计</value>
+  </data>
+  <data name="COM_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="COM_SaveDesign" xml:space="preserve">
+    <value>保存设计</value>
+  </data>
+  <data name="COM_Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="COM_SFCReceive" xml:space="preserve">
+    <value>RMA产品接收</value>
+  </data>
+  <data name="COM_UnLock" xml:space="preserve">
+    <value>解除锁定</value>
+  </data>
+  <data name="COM_UnlockUser" xml:space="preserve">
+    <value>解锁</value>
+  </data>
+  <data name="COM_UseEquipmentEdit" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="ConfirmChoosePass" xml:space="preserve">
+    <value>确认让步使用</value>
+  </data>
+  <data name="CreateIQCForm" xml:space="preserve">
+    <value>生成IQC检验单</value>
+  </data>
+  <data name="DelComponent" xml:space="preserve">
+    <value>删除组件</value>
+  </data>
+  <data name="DeleteGRN" xml:space="preserve">
+    <value>删除GRN</value>
+  </data>
+  <data name="DeletePickinglist" xml:space="preserve">
+    <value>删除领料单</value>
+  </data>
+  <data name="EditComponent" xml:space="preserve">
+    <value>编辑组件</value>
+  </data>
+  <data name="EditIQCForm" xml:space="preserve">
+    <value>编辑IQC检验单</value>
+  </data>
+  <data name="FinishIssue" xml:space="preserve">
+    <value>完成发料</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="GenerateGRN" xml:space="preserve">
+    <value>生成物料条码并打印条码</value>
+  </data>
+  <data name="MaintainConfirm" xml:space="preserve">
+    <value>保养确认</value>
+  </data>
+  <data name="MaterialReturnStore" xml:space="preserve">
+    <value>确认退料</value>
+  </data>
+  <data name="ModifyGRN" xml:space="preserve">
+    <value>修改GRN</value>
+  </data>
+  <data name="ModifyIssue" xml:space="preserve">
+    <value>修改发料</value>
+  </data>
+  <data name="OpenEmptyCarton" xml:space="preserve">
+    <value>打开空的包装箱</value>
+  </data>
+  <data name="OutOfStore" xml:space="preserve">
+    <value>物料出仓</value>
+  </data>
+  <data name="PackGRN" xml:space="preserve">
+    <value>包装GRN</value>
+  </data>
+  <data name="PrintGRN" xml:space="preserve">
+    <value>打印物料条码</value>
+  </data>
+  <data name="PullMaterial" xml:space="preserve">
+    <value>叫料</value>
+  </data>
+  <data name="ReceiveMaterial" xml:space="preserve">
+    <value>收料</value>
+  </data>
+  <data name="ReceiveMaterialOneTime" xml:space="preserve">
+    <value>一键收料</value>
+  </data>
+  <data name="RelieveAlert" xml:space="preserve">
+    <value>报警解除</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="ReturnMaterial" xml:space="preserve">
+    <value>退料</value>
+  </data>
+  <data name="ReturnMaterialToStore" xml:space="preserve">
+    <value>退料给仓库</value>
+  </data>
+  <data name="ReturnMaterialToSupplier" xml:space="preserve">
+    <value>退料给供应商</value>
+  </data>
+  <data name="ReUse" xml:space="preserve">
+    <value>重新启用</value>
+  </data>
+  <data name="ReUsePckList" xml:space="preserve">
+    <value>恢复删除的领料单</value>
+  </data>
+  <data name="SMT_AddFeed" xml:space="preserve">
+    <value>续料</value>
+  </data>
+  <data name="SMT_Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="SMT_Feed" xml:space="preserve">
+    <value>上料</value>
+  </data>
+  <data name="SMT_RelieveAlert" xml:space="preserve">
+    <value>解除报警</value>
+  </data>
+  <data name="SMT_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SMT_SetUpLine" xml:space="preserve">
+    <value>线别设置</value>
+  </data>
+  <data name="SplitMaterial" xml:space="preserve">
+    <value>分料/截料</value>
+  </data>
+  <data name="StoreIssue" xml:space="preserve">
+    <value>确认发料</value>
+  </data>
+  <data name="Sub" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="UnPack" xml:space="preserve">
+    <value>解包装</value>
+  </data>
+  <data name="Account_AssignCert" xml:space="preserve">
+    <value>岗位证书</value>
+  </data>
+  <data name="Account_AssignRole" xml:space="preserve">
+    <value>分配角色</value>
+  </data>
+  <data name="Account_LogoffUser" xml:space="preserve">
+    <value>注销用户</value>
+  </data>
+  <data name="Account_ResetPwd" xml:space="preserve">
+    <value>初始化密码</value>
+  </data>
+  <data name="Account_UnlockUser" xml:space="preserve">
+    <value>解锁用户</value>
+  </data>
+  <data name="COM_Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="COM_View" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="Account_AssignUser" xml:space="preserve">
+    <value>分配用户</value>
+  </data>
+  <data name="COM_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="TurnoverRegister" xml:space="preserve">
+    <value>周转工具条码管理</value>
+  </data>
+  <data name="GRNCarton" xml:space="preserve">
+    <value>包装GRN</value>
+  </data>
+  <data name="ImportPlany" xml:space="preserve">
+    <value>导入计划</value>
+  </data>
+  <data name="ImportPlany_Semi_Finished" xml:space="preserve">
+    <value>导入半成品计划</value>
+  </data>
+  <data name="Account_AssignPopedom" xml:space="preserve">
+    <value>设置权限</value>
+  </data>
+  <data name="Account_AssignPopedomCopy" xml:space="preserve">
+    <value>权限复制</value>
+  </data>
+  <data name="COM_In" xml:space="preserve">
+    <value>工具归还</value>
+  </data>
+  <data name="COM_Out" xml:space="preserve">
+    <value>工具领用</value>
+  </data>
+  <data name="IQCParamConfig" xml:space="preserve">
+    <value>IQC检验参数配置</value>
+  </data>
+  <data name="COM_DownloadPlan" xml:space="preserve">
+    <value>下载成品计划模板</value>
+  </data>
+  <data name="COM_DownloadPlanSemi_finished" xml:space="preserve">
+    <value>下载半成品计划模板</value>
+  </data>
+  <data name="CombineMaterial" xml:space="preserve">
+    <value>物料合并</value>
+  </data>
+  <data name="ScrapReturnStore" xml:space="preserve">
+    <value>确认报废</value>
+  </data>
+  <data name="ShortcutGiveIn" xml:space="preserve">
+    <value>整批让步使用</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeAdd" xml:space="preserve">
+    <value>新增工序单据</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindAdd" xml:space="preserve">
+    <value>新增工序类型</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindDelete" xml:space="preserve">
+    <value>删除工序类型</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindEdit" xml:space="preserve">
+    <value>编辑工序类型</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeDelete" xml:space="preserve">
+    <value>删除工序单据</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeEdit" xml:space="preserve">
+    <value>编辑工序单据</value>
+  </data>
+  <data name="ImportToExcel" xml:space="preserve">
+    <value>导出到EXCEL</value>
+  </data>
+  <data name="COM_Design" xml:space="preserve">
+    <value>模板设计</value>
+  </data>
+  <data name="KanbanMode" xml:space="preserve">
+    <value>看板模式</value>
+  </data>
+  <data name="COM_Audit" xml:space="preserve">
+    <value>审核</value>
+  </data>
+  <data name="COM_AuditTrial" xml:space="preserve">
+    <value>弃审</value>
+  </data>
+  <data name="InMaterial" xml:space="preserve">
+    <value>正在备料</value>
+  </data>
+  <data name="MaterialComplete" xml:space="preserve">
+    <value>备料完成 </value>
+  </data>
+  <data name="COM_BindpProcess" xml:space="preserve">
+    <value>绑定产品</value>
+  </data>
+  <data name="ViewParams" xml:space="preserve">
+    <value>查看检验参数</value>
+  </data>
+  <data name="COM_StationParams" xml:space="preserve">
+    <value>工艺参数</value>
+  </data>
+  <data name="Material_ClosePack" xml:space="preserve">
+    <value>完成包装</value>
+  </data>
+  <data name="Material_OpenEmptyCarton" xml:space="preserve">
+    <value>打开空的包装箱</value>
+  </data>
+  <data name="Material_PackGRN" xml:space="preserve">
+    <value>包装GRN</value>
+  </data>
+  <data name="COM_CancelScheduling" xml:space="preserve">
+    <value>撤消排期</value>
+  </data>
+  <data name="COM_Scheduling" xml:space="preserve">
+    <value>工单排期</value>
+  </data>
+  <data name="Account_ImportUser" xml:space="preserve">
+    <value>导入用户</value>
+  </data>
+  <data name="Btn_ReleaseAgain" xml:space="preserve">
+    <value>重新释放</value>
+  </data>
+  <data name="COM_ModifyPwd" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="AtOnceImport" xml:space="preserve">
+    <value>立即导入</value>
+  </data>
+  <data name="Kitting" xml:space="preserve">
+    <value>齐套</value>
+  </data>
+  <data name="SchedulePublish" xml:space="preserve">
+    <value>排产发布</value>
+  </data>
+  <data name="UnKitting" xml:space="preserve">
+    <value>取消齐套</value>
+  </data>
+  <data name="Compare" xml:space="preserve">
+    <value>更新内容对比</value>
+  </data>
+  <data name="ConfirmUpdate" xml:space="preserve">
+    <value>确认更新</value>
+  </data>
+  <data name="CancelUpdate" xml:space="preserve">
+    <value>忽略更新</value>
+  </data>
+  <data name="BomChange" xml:space="preserve">
+    <value>BOM变更</value>
+  </data>
+  <data name="QtyChange" xml:space="preserve">
+    <value>数量变更</value>
+  </data>
+  <data name="SeqChange" xml:space="preserve">
+    <value>顺序变更</value>
+  </data>
+  <data name="ScheduleAllot" xml:space="preserve">
+    <value>排产分配</value>
+  </data>
+  <data name="DownChange" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="UpChange" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="CancelScheduling" xml:space="preserve">
+    <value>取消排产</value>
+  </data>
+  <data name="StopScheduling" xml:space="preserve">
+    <value>排产暂停</value>
+  </data>
+  <data name="ViewChangeDetail" xml:space="preserve">
+    <value>查看变更明细</value>
+  </data>
+  <data name="ViewDetail" xml:space="preserve">
+    <value>查看明细</value>
+  </data>
+  <data name="SendMaterial" xml:space="preserve">
+    <value>发料</value>
+  </data>
+  <data name="CancelStopScheduling" xml:space="preserve">
+    <value>排产恢复</value>
+  </data>
+  <data name="GenerateBoxNO" xml:space="preserve">
+    <value>生成包装箱</value>
+  </data>
+  <data name="Hold" xml:space="preserve">
+    <value>QHold</value>
+  </data>
+  <data name="UnHold" xml:space="preserve">
+    <value>UnHold</value>
+  </data>
+  <data name="Rework" xml:space="preserve">
+    <value>返工</value>
+  </data>
+  <data name="RecoverLine" xml:space="preserve">
+    <value>产线恢复</value>
+  </data>
+  <data name="StopLine" xml:space="preserve">
+    <value>产线停止</value>
+  </data>
+  <data name="RouterBind" xml:space="preserve">
+    <value>路由绑定</value>
+  </data>
+  <data name="GeneratePanelSN" xml:space="preserve">
+    <value>生成拼板条码</value>
+  </data>
+  <data name="ViewChangeHistory" xml:space="preserve">
+    <value>查看变更历史</value>
+  </data>
+  <data name="ChangeDetail" xml:space="preserve">
+    <value>变更明细</value>
+  </data>
+  <data name="MaintainCheck" xml:space="preserve">
+    <value>保养</value>
+  </data>
+  <data name="GenerateReplaceSN" xml:space="preserve">
+    <value>生成置换条码</value>
+  </data>
+  <data name="COM_SteelIn" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="COM_SteelOut" xml:space="preserve">
+    <value>出库</value>
+  </data>
+  <data name="COM_JigIn" xml:space="preserve">
+    <value>工装夹具入库</value>
+  </data>
+  <data name="COM_JigOut" xml:space="preserve">
+    <value>工装夹具出库</value>
+  </data>
+  <data name="InputSteelMeshUseCount" xml:space="preserve">
+    <value>钢网使用次数</value>
+  </data>
+  <data name="Com_Input" xml:space="preserve">
+    <value>录入</value>
+  </data>
+  <data name="ProductLabelConfig" xml:space="preserve">
+    <value>现票品配置</value>
+  </data>
+  <data name="ShipmentListConfig" xml:space="preserve">
+    <value>出货清单配置</value>
+  </data>
+  <data name="MaterialLabelConfig" xml:space="preserve">
+    <value>作业内容标识配置</value>
+  </data>
+  <data name="SupplierLabelConfig" xml:space="preserve">
+    <value>配置表配置</value>
+  </data>
+  <data name="PrintBarcode" xml:space="preserve">
+    <value>打印条码</value>
+  </data>
+  <data name="PrintTestLabel" xml:space="preserve">
+    <value>打印测试标签</value>
+  </data>
+  <data name="COM_Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="ViewEsop" xml:space="preserve">
+    <value>查看ESOP</value>
+  </data>
+  <data name="PartPass" xml:space="preserve">
+    <value>让步使用</value>
+  </data>
+  <data name="COM_AddParam" xml:space="preserve">
+    <value>新增参数</value>
+  </data>
+  <data name="COM_AgainStation" xml:space="preserve">
+    <value>重新过站</value>
+  </data>
+  <data name="COM_BindTurnover" xml:space="preserve">
+    <value>开单生产绑定</value>
+  </data>
+  <data name="COM_ChangeTurnover" xml:space="preserve">
+    <value>切换周转工具</value>
+  </data>
+  <data name="COM_CreateTemplate" xml:space="preserve">
+    <value>从模板创建</value>
+  </data>
+  <data name="COM_DownloadTurnOver" xml:space="preserve">
+    <value>下载周转工具模板</value>
+  </data>
+  <data name="COM_FormPrint" xml:space="preserve">
+    <value>单据打印</value>
+  </data>
+  <data name="COM_HasStock" xml:space="preserve">
+    <value>已备料</value>
+  </data>
+  <data name="COM_LabelPrint" xml:space="preserve">
+    <value>标签打印</value>
+  </data>
+  <data name="COM_OffLinePrint" xml:space="preserve">
+    <value>离线条码打印</value>
+  </data>
+  <data name="COM_SaveChange" xml:space="preserve">
+    <value>保存变更</value>
+  </data>
+  <data name="COM_SetParams" xml:space="preserve">
+    <value>工序参数</value>
+  </data>
+  <data name="COM_SplitTurnover" xml:space="preserve">
+    <value>拆合周转工具</value>
+  </data>
+  <data name="COM_Stock" xml:space="preserve">
+    <value>备料中</value>
+  </data>
+  <data name="COM_Synchro" xml:space="preserve">
+    <value>同步</value>
+  </data>
+  <data name="COM_SyncWarehouseLocation" xml:space="preserve">
+    <value>同步电子料架库位（瑞微）</value>
+  </data>
+  <data name="COM_Transfer" xml:space="preserve">
+    <value>确认转移</value>
+  </data>
+  <data name="COM_TurnOverPrint" xml:space="preserve">
+    <value>工具条码打印</value>
+  </data>
+  <data name="MaterialCancelStore" xml:space="preserve">
+    <value>取消先进先出</value>
+  </data>
+  <data name="PrintOldMaterialLabel" xml:space="preserve">
+    <value>打印历史物料</value>
+  </data>
+  <data name="ChooseSome" xml:space="preserve">
+    <value>挑选</value>
+  </data>
+  <data name="Supplier_AssignItem" xml:space="preserve">
+    <value>分配物料</value>
+  </data>
+  <data name="Supplier_AssignUser" xml:space="preserve">
+    <value>分配用户</value>
+  </data>
+  <data name="ChooseFail" xml:space="preserve">
+    <value>不通过</value>
+  </data>
+  <data name="IQCCheck_ChooseOk" xml:space="preserve">
+    <value>通过</value>
+  </data>
+  <data name="Material_MaterialInStorageAdd" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="Material_MaterialInStorageGRN" xml:space="preserve">
+    <value>物料条码入库</value>
+  </data>
+  <data name="ChooseOk" xml:space="preserve">
+    <value>通过</value>
+  </data>
+  <data name="LogoffUserOfSupplier" xml:space="preserve">
+    <value>注销用户</value>
+  </data>
+  <data name="SupplierResetPwd" xml:space="preserve">
+    <value>密码重置</value>
+  </data>
+  <data name="UnlockUserOfSupplier" xml:space="preserve">
+    <value>解锁用户</value>
+  </data>
+  <data name="UserOfSupplierAdd" xml:space="preserve">
+    <value>新增用户</value>
+  </data>
+  <data name="UserOfSupplierChangePwd" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="UserOfSupplierEdit" xml:space="preserve">
+    <value>编辑用户</value>
+  </data>
+  <data name="FinishProductInStorageAdd" xml:space="preserve">
+    <value>入库模块</value>
+  </data>
+  <data name="FinishProductInStorageDelete" xml:space="preserve">
+    <value>删除入库模块</value>
+  </data>
+  <data name="Material_GRNModifyEdit" xml:space="preserve">
+    <value>GRN数量修改</value>
+  </data>
+  <data name="ERP_Generate" xml:space="preserve">
+    <value>生成ERP调拨</value>
+  </data>
+  <data name="ProdEfficiencyKanbanView" xml:space="preserve">
+    <value>看板模式</value>
+  </data>
+  <data name="COM_PrepareMatFormOtherAdd" xml:space="preserve">
+    <value>新增其他备料方式</value>
+  </data>
+  <data name="COM_PrepareMatFormOtherEdit" xml:space="preserve">
+    <value>编辑其他备料方式</value>
+  </data>
+  <data name="COM_Synchronous" xml:space="preserve">
+    <value>同步</value>
+  </data>
+  <data name="Switch_Station" xml:space="preserve">
+    <value>切换站位</value>
+  </data>
+  <data name="Manual_Material" xml:space="preserve">
+    <value>手工叫料</value>
+  </data>
+  <data name="Production_Abnormal" xml:space="preserve">
+    <value>生产异常</value>
+  </data>
+  <data name="COM_DownloadPickList" xml:space="preserve">
+    <value>下载上料清单模板</value>
+  </data>
+  <data name="COM_DownloadSMT" xml:space="preserve">
+    <value>下载SMT上料清单模板</value>
+  </data>
+  <data name="COM_RptAdd" xml:space="preserve">
+    <value>高级报表添加</value>
+  </data>
+  <data name="COM_RptDsAdd" xml:space="preserve">
+    <value>简易报表添加</value>
+  </data>
+  <data name="Select_ProOrder" xml:space="preserve">
+    <value>选择工单</value>
+  </data>
+  <data name="Select_Item" xml:space="preserve">
+    <value>选择产品</value>
+  </data>
+  <data name="COM_GRNPrint" xml:space="preserve">
+    <value>条码补印</value>
+  </data>
+  <data name="COM_GRNScrap" xml:space="preserve">
+    <value>条码报废</value>
+  </data>
+  <data name="COM_GRNSplit" xml:space="preserve">
+    <value>条码拆分</value>
+  </data>
+  <data name="MaterialConfigAdd" xml:space="preserve">
+    <value>新增仓库配置</value>
+  </data>
+  <data name="MaterialConfigDelete" xml:space="preserve">
+    <value>删除仓库配置</value>
+  </data>
+  <data name="MaterialConfigEdit" xml:space="preserve">
+    <value>编辑仓库配置</value>
+  </data>
+  <data name="MaterialIQCConfigAdd" xml:space="preserve">
+    <value>新增IQC配置</value>
+  </data>
+  <data name="MaterialIQCConfigDelete" xml:space="preserve">
+    <value>删除IQC配置</value>
+  </data>
+  <data name="MaterialIQCConfigEdit" xml:space="preserve">
+    <value>编辑IQC配置</value>
+  </data>
+  <data name="MaterialSupplierConfigAdd" xml:space="preserve">
+    <value>新增供应商配置</value>
+  </data>
+  <data name="MaterialSupplierConfigDelete" xml:space="preserve">
+    <value>删除供应商配置</value>
+  </data>
+  <data name="MaterialSupplierConfigEdit" xml:space="preserve">
+    <value>编辑供应商配置</value>
+  </data>
+  <data name="Btn_Pdf" xml:space="preserve">
+    <value>送货单PDF文件</value>
+  </data>
+  <data name="COM_PackEnd" xml:space="preserve">
+    <value>完成包装</value>
+  </data>
+  <data name="COM_RepairPrint" xml:space="preserve">
+    <value>重打印</value>
+  </data>
+  <data name="MaterialDeliver" xml:space="preserve">
+    <value>送货单生成打印</value>
+  </data>
+  <data name="UnBindPacking" xml:space="preserve">
+    <value>解包装</value>
+  </data>
+  <data name="Assemble_ProUnBind" xml:space="preserve">
+    <value>组装打散</value>
+  </data>
+  <data name="CloseContainerByUser_Pack" xml:space="preserve">
+    <value>手动关箱</value>
+  </data>
+  <data name="CloseContainerByUser_Pallet" xml:space="preserve">
+    <value>手动关栈板</value>
+  </data>
+  <data name="Pack_ProUnBind" xml:space="preserve">
+    <value>包装移除</value>
+  </data>
+  <data name="COM_Choose" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="COM_Inspection" xml:space="preserve">
+    <value>规则检验</value>
+  </data>
+  <data name="IQCcheck" xml:space="preserve">
+    <value>来料检验</value>
+  </data>
+  <data name="Material_MaterialInStorageQty" xml:space="preserve">
+    <value>数量入库</value>
+  </data>
+  <data name="Material_MaterialInStorageIQC" xml:space="preserve">
+    <value>整单入库</value>
+  </data>
+  <data name="IQCPdf" xml:space="preserve">
+    <value>IQC检验报告PDF下载</value>
+  </data>
+  <data name="AddHandApply" xml:space="preserve">
+    <value>新增其他领料单</value>
+  </data>
+  <data name="EditHandApply" xml:space="preserve">
+    <value>编辑手工领料单</value>
+  </data>
+  <data name="SurePrepare" xml:space="preserve">
+    <value>确认备料</value>
+  </data>
+  <data name="SureHandover" xml:space="preserve">
+    <value>发料接收</value>
+  </data>
+  <data name="Pack_SNPrint" xml:space="preserve">
+    <value>标签补打</value>
+  </data>
+  <data name="MaterialProdReturn" xml:space="preserve">
+    <value>保存退料单</value>
+  </data>
+  <data name="MaterialWhReturn" xml:space="preserve">
+    <value>确认退料</value>
+  </data>
+  <data name="MaterialScrap" xml:space="preserve">
+    <value>确认报废</value>
+  </data>
+  <data name="Accessories_Frost" xml:space="preserve">
+    <value>冰冻</value>
+  </data>
+  <data name="CallMaterialByMaterial" xml:space="preserve">
+    <value>按物料叫料</value>
+  </data>
+  <data name="CallMaterialBySetQty" xml:space="preserve">
+    <value>按套数叫料</value>
+  </data>
+  <data name="COM_ModuleRecover" xml:space="preserve">
+    <value>组装恢复</value>
+  </data>
+  <data name="COM_ModuleRemove" xml:space="preserve">
+    <value>组装拆除</value>
+  </data>
+  <data name="COM_Scrap" xml:space="preserve">
+    <value>报废</value>
+  </data>
+  <data name="COM_MouldMaintenance" xml:space="preserve">
+    <value>模具保养</value>
+  </data>
+  <data name="COM_SupplierDeliveryTime" xml:space="preserve">
+    <value>供应商交期维护</value>
+  </data>
+  <data name="JigUseRegister" xml:space="preserve">
+    <value>夹具使用登记</value>
+  </data>
+  <data name="SteelMeshUseRegister" xml:space="preserve">
+    <value>钢网使用登记</value>
+  </data>
+  <data name="ValidateSchedule" xml:space="preserve">
+    <value>排程验证</value>
+  </data>
+  <data name="COM_BomDownload" xml:space="preserve">
+    <value>BOM模板下载</value>
+  </data>
+  <data name="AddMat" xml:space="preserve">
+    <value>添加物料</value>
+  </data>
+  <data name="DelMat" xml:space="preserve">
+    <value>删除物料</value>
+  </data>
+  <data name="EditMat" xml:space="preserve">
+    <value>编辑物料</value>
+  </data>
+  <data name="COM_Struct" xml:space="preserve">
+    <value>产品结构</value>
+  </data>
+  <data name="COM_Maintenance" xml:space="preserve">
+    <value>维护</value>
+  </data>
+  <data name="AssignItem" xml:space="preserve">
+    <value>分配项目</value>
+  </data>
+  <data name="AssignItemType" xml:space="preserve">
+    <value>分配项目类型</value>
+  </data>
+  <data name="BarCodeTransform" xml:space="preserve">
+    <value>条码转换</value>
+  </data>
+  <data name="Btn_Invalid" xml:space="preserve">
+    <value>报废</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>检验中</value>
+  </data>
+  <data name="CheckPass" xml:space="preserve">
+    <value>审核通过</value>
+  </data>
+  <data name="CheckSome" xml:space="preserve">
+    <value>取消审核</value>
+  </data>
+  <data name="Chooseing" xml:space="preserve">
+    <value>检验中</value>
+  </data>
+  <data name="COM_CancelConfirm" xml:space="preserve">
+    <value>取消确认</value>
+  </data>
+  <data name="COM_Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="COM_EquipmentAudit" xml:space="preserve">
+    <value>维修审核</value>
+  </data>
+  <data name="COM_EquipmentConfirm" xml:space="preserve">
+    <value>维修确认</value>
+  </data>
+  <data name="Com_InWhCode" xml:space="preserve">
+    <value>确认入库</value>
+  </data>
+  <data name="ConfirmCryItem" xml:space="preserve">
+    <value>确认叫料</value>
+  </data>
+  <data name="ErrorUnfasten" xml:space="preserve">
+    <value>装错解绑</value>
+  </data>
+  <data name="FirstArticleCheckout" xml:space="preserve">
+    <value>首件检验</value>
+  </data>
+  <data name="FlowPlateUnfasten" xml:space="preserve">
+    <value>返修解绑</value>
+  </data>
+  <data name="OperatOweMaterial" xml:space="preserve">
+    <value>欠料运算</value>
+  </data>
+  <data name="PurchasingReply" xml:space="preserve">
+    <value>采购回复</value>
+  </data>
+  <data name="Repay_Product" xml:space="preserve">
+    <value>还机</value>
+  </data>
+  <data name="ReworkNew" xml:space="preserve">
+    <value>重工</value>
+  </data>
+  <data name="ScheduleAllot1" xml:space="preserve">
+    <value>排产变更</value>
+  </data>
+  <data name="ScheduleChange" xml:space="preserve">
+    <value>排程变更</value>
+  </data>
+  <data name="ScheduleClose" xml:space="preserve">
+    <value>排产关闭</value>
+  </data>
+  <data name="ScheduleDistribute" xml:space="preserve">
+    <value>排程发布</value>
+  </data>
+  <data name="SchedulePause" xml:space="preserve">
+    <value>排产暂停</value>
+  </data>
+  <data name="ScheduleRelease" xml:space="preserve">
+    <value>排产发布</value>
+  </data>
+  <data name="ScheduleRestore" xml:space="preserve">
+    <value>排产恢复</value>
+  </data>
+  <data name="StaffChargeCard" xml:space="preserve">
+    <value>员工签卡</value>
+  </data>
+  <data name="WorkUnfasten" xml:space="preserve">
+    <value>工单解绑</value>
+  </data>
+  <data name="COM_Approve" xml:space="preserve">
+    <value>通过审核</value>
+  </data>
+  <data name="COM_CancelApprove" xml:space="preserve">
+    <value>撤销审核</value>
+  </data>
+  <data name="COM_Reject" xml:space="preserve">
+    <value>拒绝通过</value>
+  </data>
+  <data name="COM_ExecGraph" xml:space="preserve">
+    <value>执行控制图</value>
+  </data>
+  <data name="AddConType" xml:space="preserve">
+    <value>新增容器布局类型</value>
+  </data>
+  <data name="COM_UserDownload" xml:space="preserve">
+    <value>用户模板下载</value>
+  </data>
+  <data name="WarehouseCpInStock" xml:space="preserve">
+    <value>成品入库</value>
+  </data>
+  <data name="ReturnToSupplier" xml:space="preserve">
+    <value>确认退料</value>
+  </data>
+  <data name="COM_OutDNAffirm" xml:space="preserve">
+    <value>备货确认</value>
+  </data>
+  <data name="COM_OutStockAffirm" xml:space="preserve">
+    <value>出库确认</value>
+  </data>
+  <data name="COM_StockUp" xml:space="preserve">
+    <value>进行备货</value>
+  </data>
+  <data name="MaterialIQCReturn" xml:space="preserve">
+    <value>生成IQC退料单</value>
+  </data>
+  <data name="SureReturn" xml:space="preserve">
+    <value>确认退料</value>
+  </data>
+  <data name="COM_Finish" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="NCData_Receive" xml:space="preserve">
+    <value>不良接收</value>
+  </data>
+  <data name="AddOutsideApply" xml:space="preserve">
+    <value>新增委外领料单</value>
+  </data>
+  <data name="AddProdApply" xml:space="preserve">
+    <value>新增工单领料单</value>
+  </data>
+  <data name="COM_Addknife" xml:space="preserve">
+    <value>新增刮刀</value>
+  </data>
+  <data name="COM_AddSteel" xml:space="preserve">
+    <value>新增钢网</value>
+  </data>
+  <data name="AddSteelItem" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="DelSteelItem" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="COM_PlanConfirm" xml:space="preserve">
+    <value>排产确认</value>
+  </data>
+  <data name="BindLogic" xml:space="preserve">
+    <value>绑定逻辑</value>
+  </data>
+  <data name="COM_SteelClear" xml:space="preserve">
+    <value>清洗</value>
+  </data>
+  <data name="AgeingRackUnBind" xml:space="preserve">
+    <value>老化架解绑</value>
+  </data>
+  <data name="AgeingRackProUnBind" xml:space="preserve">
+    <value>老化架解绑</value>
+  </data>
+  <data name="ReturnToNgWarehouse" xml:space="preserve">
+    <value>退不良仓</value>
+  </data>
+  <data name="ReturnToVendor" xml:space="preserve">
+    <value>退供应商</value>
+  </data>
+  <data name="COM_SchedulingSMT" xml:space="preserve">
+    <value>SMT排期</value>
+  </data>
+  <data name="COM_SNPrint" xml:space="preserve">
+    <value>条码打印</value>
+  </data>
+  <data name="STM_UNPack" xml:space="preserve">
+    <value>SMT包装箱打散</value>
+  </data>
+  <data name="MaterialBurnJoinProd" xml:space="preserve">
+    <value>绑定产品关系</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>退回</value>
+  </data>
+  <data name="COM_OneDeal" xml:space="preserve">
+    <value>一级处理方案</value>
+  </data>
+  <data name="COM_ThreeDeal" xml:space="preserve">
+    <value>三级处理方案</value>
+  </data>
+  <data name="COM_TwoDeal" xml:space="preserve">
+    <value>二级处理方案</value>
+  </data>
+  <data name="AccPrint" xml:space="preserve">
+    <value>辅料打印</value>
+  </data>
+  <data name="COM_AccPrint" xml:space="preserve">
+    <value>辅料打印</value>
+  </data>
+  <data name="COM_FeederDownload" xml:space="preserve">
+    <value>飞达模板下载</value>
+  </data>
+  <data name="Pack_Weight_hidden" xml:space="preserve">
+    <value>包装电子称设定</value>
+  </data>
+  <data name="COM_Start" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="COM_AddPosition" xml:space="preserve">
+    <value>增加料站</value>
+  </data>
+  <data name="COM_AddReplaceItem" xml:space="preserve">
+    <value>增加替代料</value>
+  </data>
+  <data name="COM_StockList" xml:space="preserve">
+    <value>电子备料清单维护</value>
+  </data>
+  <data name="COM_ChangeLine" xml:space="preserve">
+    <value>工单换线</value>
+  </data>
+  <data name="COM_SubsItem" xml:space="preserve">
+    <value>替代料维护</value>
+  </data>
+  <data name="Com_BakeIn" xml:space="preserve">
+    <value>放入</value>
+  </data>
+  <data name="Com_BakeOut" xml:space="preserve">
+    <value>取出</value>
+  </data>
+  <data name="COM_ForceOut" xml:space="preserve">
+    <value>强制取出</value>
+  </data>
+  <data name="COM_GroupAffirm" xml:space="preserve">
+    <value>组长确认</value>
+  </data>
+  <data name="COM_ProjectAffirm" xml:space="preserve">
+    <value>工程确认</value>
+  </data>
+  <data name="InspectionOrderAudit_Confirmation" xml:space="preserve">
+    <value>审核</value>
+  </data>
+  <data name="InspectionOrderAudit_GroupAffirm" xml:space="preserve">
+    <value>组长确认</value>
+  </data>
+  <data name="InspectionOrderAudit_List" xml:space="preserve">
+    <value>检验单审核列表</value>
+  </data>
+  <data name="InspectionOrderAudit_Print" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="InspectionOrderAudit_ProjectAffirm" xml:space="preserve">
+    <value>工程确认</value>
+  </data>
+  <data name="InspectionOrderAudit_View" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="OpenKanban" xml:space="preserve">
+    <value>打开看板</value>
+  </data>
+  <data name="COM_Repair" xml:space="preserve">
+    <value>维修</value>
+  </data>
+  <data name="COM_CheckOut" xml:space="preserve">
+    <value>校验</value>
+  </data>
+  <data name="AddEQ" xml:space="preserve">
+    <value>新增产品</value>
+  </data>
+  <data name="DelEQ" xml:space="preserve">
+    <value>删除产品</value>
+  </data>
+  <data name="EditEQ" xml:space="preserve">
+    <value>编辑产品</value>
+  </data>
+  <data name="COM_Continued_Save" xml:space="preserve">
+    <value>保存后清空新增</value>
+  </data>
+  <data name="COM_Copy_Save" xml:space="preserve">
+    <value>保存后复制新增</value>
+  </data>
+  <data name="COM_Create" xml:space="preserve">
+    <value>超期复检</value>
+  </data>
+  <data name="COM_CheckFinish" xml:space="preserve">
+    <value>重检完成</value>
+  </data>
+  <data name="COM_SIMPAdd" xml:space="preserve">
+    <value>简单UI模板</value>
+  </data>
+  <data name="COM_UDFAdd" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="COM_ChangeSave" xml:space="preserve">
+    <value>平帐完成</value>
+  </data>
+  <data name="COM_ViewGRN" xml:space="preserve">
+    <value>查看盘点GRN</value>
+  </data>
+  <data name="COM_ViewItem" xml:space="preserve">
+    <value>查看盘点物料编码</value>
+  </data>
+  <data name="COM_InspectionFileDownload" xml:space="preserve">
+    <value>检验相关文档下载</value>
+  </data>
+  <data name="ReleasePanel" xml:space="preserve">
+    <value>释放拼板</value>
+  </data>
+  <data name="Btn_PcPDF" xml:space="preserve">
+    <value>采购单PDF</value>
+  </data>
+  <data name="COM_Kanban" xml:space="preserve">
+    <value>查看看板</value>
+  </data>
+  <data name="COM_ViewKanban" xml:space="preserve">
+    <value>查看本机看板</value>
+  </data>
+  <data name="Com_SNRegain" xml:space="preserve">
+    <value>报废恢复</value>
+  </data>
+  <data name="COM_DeletePosition" xml:space="preserve">
+    <value>删除料站</value>
+  </data>
+  <data name="AddCQTransfers" xml:space="preserve">
+    <value>超期不良调拨</value>
+  </data>
+  <data name="AddHandTransfers" xml:space="preserve">
+    <value>新增无订单调拨</value>
+  </data>
+  <data name="AddPoTransfers" xml:space="preserve">
+    <value>新增委外调拨</value>
+  </data>
+  <data name="Btn_PrintTransfers" xml:space="preserve">
+    <value>打印调拨单</value>
+  </data>
+  <data name="FinishTransfers" xml:space="preserve">
+    <value>结束调拨申请</value>
+  </data>
+  <data name="TransfersApplyView" xml:space="preserve">
+    <value>查看明细</value>
+  </data>
+  <data name="TransfersStorageSure" xml:space="preserve">
+    <value>确认接收</value>
+  </data>
+  <data name="RMAReciveManage" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="COM_RegainScrapt" xml:space="preserve">
+    <value>报废恢复</value>
+  </data>
+  <data name="COM_SaveForceChange" xml:space="preserve">
+    <value>强制变更</value>
+  </data>
+  <data name="COM_DownloadSN" xml:space="preserve">
+    <value>序号导入模板</value>
+  </data>
+  <data name="COM_LoadSN" xml:space="preserve">
+    <value>序号导入</value>
+  </data>
+  <data name="AddScrapOrder" xml:space="preserve">
+    <value>新增报废单</value>
+  </data>
+  <data name="Btn_PrintScrap" xml:space="preserve">
+    <value>打印报废单</value>
+  </data>
+  <data name="FinishScrap" xml:space="preserve">
+    <value>结束报废申请</value>
+  </data>
+  <data name="ScrapApplyView" xml:space="preserve">
+    <value>查看明细</value>
+  </data>
+  <data name="ScrapSure" xml:space="preserve">
+    <value>确认接收</value>
+  </data>
+  <data name="Edit_Detail" xml:space="preserve">
+    <value>编辑细项</value>
+  </data>
+  <data name="COM_ProdReturnMaterial" xml:space="preserve">
+    <value>无单生产退料入库</value>
+  </data>
+  <data name="COM_ApplyReturnMaterial" xml:space="preserve">
+    <value>生产退料申请</value>
+  </data>
+  <data name="COM_QHoldDownload" xml:space="preserve">
+    <value>下载模板</value>
+  </data>
+  <data name="COM_Download" xml:space="preserve">
+    <value>下载模板</value>
+  </data>
+  <data name="RMAPdf" xml:space="preserve">
+    <value>RMA单PDF文件</value>
+  </data>
+  <data name="COM_CheckHomogeneity" xml:space="preserve">
+    <value>齐套检查</value>
+  </data>
+  <data name="IQCOrderPdf" xml:space="preserve">
+    <value>IQC检验单PDF下载</value>
+  </data>
+  <data name="COM_MaterialLock" xml:space="preserve">
+    <value>物料锁定</value>
+  </data>
+  <data name="MaterialStoragePrint" xml:space="preserve">
+    <value>入库单打印</value>
+  </data>
+  <data name="MaterialStorageRePrint" xml:space="preserve">
+    <value>重新打印入库单</value>
+  </data>
+  <data name="Pack_Weight" xml:space="preserve">
+    <value>电子秤参数设置</value>
+  </data>
+  <data name="PrintDeliver" xml:space="preserve">
+    <value>生成送货单并打印</value>
+  </data>
+  <data name="VirtualPo" xml:space="preserve">
+    <value>生成虚拟采购订单</value>
+  </data>
+  <data name="Container_Weight" xml:space="preserve">
+    <value>包装箱称重</value>
+  </data>
+  <data name="InterfaceManagementDef" xml:space="preserve">
+    <value>设备接口详情</value>
+  </data>
+  <data name="IQCRecivePdfPrint" xml:space="preserve">
+    <value>打印送检单</value>
+  </data>
+  <data name="IQCRecivePdfRePrint" xml:space="preserve">
+    <value>重新打印送检单</value>
+  </data>
+  <data name="ItemBomImportToExcel" xml:space="preserve">
+    <value>导出BOM明细</value>
+  </data>
+  <data name="OrderBomImportToExcel" xml:space="preserve">
+    <value>工单BOM导出</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberCopy" xml:space="preserve">
+    <value>复制离线条码规则</value>
+  </data>
+  <data name="AddMerge" xml:space="preserve">
+    <value>合并</value>
+  </data>
+  <data name="CancelMerge" xml:space="preserve">
+    <value>取消合并</value>
+  </data>
+  <data name="UpdateGRNState" xml:space="preserve">
+    <value>GRN状态修改</value>
+  </data>
+  <data name="COM_OrderPickList" xml:space="preserve">
+    <value>自动生成批次上料清单</value>
+  </data>
+  <data name="IQCRecive" xml:space="preserve">
+    <value>IQC接收</value>
+  </data>
+  <data name="MBRProcess" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="Material_IQCFormAttend" xml:space="preserve">
+    <value>IQC判定结果</value>
+  </data>
+  <data name="COM_PalletScatter" xml:space="preserve">
+    <value>栈板打散</value>
+  </data>
+  <data name="COM_PalletRegister" xml:space="preserve">
+    <value>栈板注册</value>
+  </data>
+  <data name="COM_RevocationDeliver" xml:space="preserve">
+    <value>取消送货</value>
+  </data>
+  <data name="Account_AssignPinter" xml:space="preserve">
+    <value>分配打印机</value>
+  </data>
+  <data name="TaskExecute" xml:space="preserve">
+    <value>执行</value>
+  </data>
+  <data name="KanbanCarouselOpen" xml:space="preserve">
+    <value>打开看板</value>
+  </data>
+  <data name="COM_PDAAdd" xml:space="preserve">
+    <value>新增PDA模板</value>
+  </data>
+  <data name="COM_AfreshPreScheduling" xml:space="preserve">
+    <value>自动重新预排</value>
+  </data>
+  <data name="COM_AllPreScheduling" xml:space="preserve">
+    <value>自动预排产</value>
+  </data>
+  <data name="COM_CreatePlan" xml:space="preserve">
+    <value>生成排产计划</value>
+  </data>
+  <data name="COM_SinglePreScheduling" xml:space="preserve">
+    <value>单线预排</value>
+  </data>
+  <data name="AccessoryImportToExcel" xml:space="preserve">
+    <value>Excel导入</value>
+  </data>
+  <data name="AccessoryStir" xml:space="preserve">
+    <value>搅拌</value>
+  </data>
+  <data name="StartStirTime" xml:space="preserve">
+    <value>搅拌</value>
+  </data>
+  <data name="Accessories_Stir" xml:space="preserve">
+    <value>搅拌</value>
+  </data>
+  <data name="COM_RegisterGrn" xml:space="preserve">
+    <value>GRN注册</value>
+  </data>
+  <data name="COM_SteelInspection" xml:space="preserve">
+    <value>检验</value>
+  </data>
+  <data name="COM_InsertOrder" xml:space="preserve">
+    <value>生产插单</value>
+  </data>
+  <data name="DataDistributionOperate" xml:space="preserve">
+    <value>数据下发</value>
+  </data>
+  <data name="COM_CSVDownload" xml:space="preserve">
+    <value>CSV模板下载</value>
+  </data>
+  <data name="COM_EXCELDownload" xml:space="preserve">
+    <value>EXCEL模板下载</value>
+  </data>
+  <data name="COM_TXTDownload" xml:space="preserve">
+    <value>TXT模板下载</value>
+  </data>
+  <data name="COM_XMLDownload" xml:space="preserve">
+    <value>XML模板下载</value>
+  </data>
+  <data name="IQALLCcheck" xml:space="preserve">
+    <value>批量合格</value>
+  </data>
+  <data name="InspectionmethodsAdd" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="InspectionmethodsDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="InspectionmethodsEdit" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Reinspectionupdate" xml:space="preserve">
+    <value>结果变更</value>
+  </data>
+  <data name="COM_Approval" xml:space="preserve">
+    <value>批准</value>
+  </data>
+  <data name="MBRWithdraw" xml:space="preserve">
+    <value>撤回处理</value>
+  </data>
+  <data name="Btn_Undo" xml:space="preserve">
+    <value>撤回</value>
+  </data>
+  <data name="Btn_UndoByIQC" xml:space="preserve">
+    <value>撤销检验</value>
+  </data>
+  <data name="COM_CancelScrap" xml:space="preserve">
+    <value>取消报废</value>
+  </data>
+  <data name="COM_Replace" xml:space="preserve">
+    <value>任务分配</value>
+  </data>
+  <data name="ChangeMould" xml:space="preserve">
+    <value>更换模具</value>
+  </data>
+  <data name="Mould_Confirm" xml:space="preserve">
+    <value>换模确认</value>
+  </data>
+  <data name="COM_Test" xml:space="preserve">
+    <value>校准测试</value>
+  </data>
+  <data name="ViewIQCList" xml:space="preserve">
+    <value>查看不良描述</value>
+  </data>
+  <data name="COM_InfoHandle" xml:space="preserve">
+    <value>信息处理</value>
+  </data>
+  <data name="COM_Exam" xml:space="preserve">
+    <value>考核</value>
+  </data>
+  <data name="COM_ReExam" xml:space="preserve">
+    <value>重算</value>
+  </data>
+  <data name="COM_CancelLock" xml:space="preserve">
+    <value>取消锁定</value>
+  </data>
+  <data name="COM_RepairConfirm" xml:space="preserve">
+    <value>维修确认</value>
+  </data>
+  <data name="Production_SparepartMaintain" xml:space="preserve">
+    <value>保养</value>
+  </data>
+  <data name="Production_SparepartUpdateTerm" xml:space="preserve">
+    <value>期限变更</value>
+  </data>
+  <data name="COM_TogglePoints" xml:space="preserve">
+    <value>连接线</value>
+  </data>
+  <data name="COM_SaveAndSend" xml:space="preserve">
+    <value>保存并发送</value>
+  </data>
+  <data name="Com_ReCheck" xml:space="preserve">
+    <value>重检</value>
+  </data>
+  <data name="COM_DownloadSampleNumber" xml:space="preserve">
+    <value>下载样机序号模版</value>
+  </data>
+  <data name="Com_DwnloadAllowance" xml:space="preserve">
+    <value>下载津贴模板</value>
+  </data>
+  <data name="Com_DwnloadPACB" xml:space="preserve">
+    <value>下载节假日模板</value>
+  </data>
+  <data name="Com_DwnloadUserAttendance" xml:space="preserve">
+    <value>下载月出勤模板</value>
+  </data>
+  <data name="COM_AuditNG" xml:space="preserve">
+    <value>审核NG</value>
+  </data>
+  <data name="COM_Release" xml:space="preserve">
+    <value>解除占用</value>
+  </data>
+  <data name="COM_ReplaceLoadList" xml:space="preserve">
+    <value>上料清单替换</value>
+  </data>
+  <data name="COM_Recovery" xml:space="preserve">
+    <value>恢复</value>
+  </data>
+  <data name="COM_NoSpotCheck" xml:space="preserve">
+    <value>无需点检</value>
+  </data>
+  <data name="COM_SpotCheck" xml:space="preserve">
+    <value>点检</value>
+  </data>
+  <data name="COM_Retrial" xml:space="preserve">
+    <value>复判</value>
+  </data>
+  <data name="COM_SecondAudit" xml:space="preserve">
+    <value>终审</value>
+  </data>
+  <data name="GRNAdd" xml:space="preserve">
+    <value>离线条码注入</value>
+  </data>
+  <data name="GRNInto" xml:space="preserve">
+    <value>离线条码解析</value>
+  </data>
+  <data name="COM_AuditReturn" xml:space="preserve">
+    <value>撤销审核</value>
+  </data>
+  <data name="COM_DownloadFile" xml:space="preserve">
+    <value>下载预览</value>
+  </data>
+  <data name="PrintReturnNo" xml:space="preserve">
+    <value>打印退料单</value>
+  </data>
+  <data name="AddBotDetail" xml:space="preserve">
+    <value>添加设备类型</value>
+  </data>
+  <data name="DelBotDetail" xml:space="preserve">
+    <value>删除设备类型</value>
+  </data>
+  <data name="EditBotDetail" xml:space="preserve">
+    <value>编辑设备类型</value>
+  </data>
+  <data name="RevokeAudit" xml:space="preserve">
+    <value>撤销审核</value>
+  </data>
+  <data name="AddTransfersOrder" xml:space="preserve">
+    <value>按工单调拨</value>
+  </data>
+  <data name="Exceptionentry" xml:space="preserve">
+    <value>异常录入</value>
+  </data>
+  <data name="Btn_ReleaseBatch" xml:space="preserve">
+    <value>释放批次条码</value>
+  </data>
+  <data name="COM_AddGroup" xml:space="preserve">
+    <value>关联组</value>
+  </data>
+  <data name="COM_ReleaseGroup" xml:space="preserve">
+    <value>解除关联</value>
+  </data>
+  <data name="COM_SchedulingBacth" xml:space="preserve">
+    <value>批次排期</value>
+  </data>
+  <data name="COM_Downloadroute" xml:space="preserve">
+    <value>工艺流程文档下载</value>
+  </data>
+  <data name="COM_Importroute" xml:space="preserve">
+    <value>导入工艺流程</value>
+  </data>
+  <data name="COM_ProcessprintPrint" xml:space="preserve">
+    <value>打印工艺流程卡</value>
+  </data>
+  <data name="COM_ProcessprintRepairPrint" xml:space="preserve">
+    <value>补打工艺流程卡</value>
+  </data>
+  <data name="COM_SavePrint" xml:space="preserve">
+    <value>保存并打印</value>
+  </data>
+  <data name="AnormalResponseEdit" xml:space="preserve">
+    <value>异常响应</value>
+  </data>
+  <data name="AnormalCompleteEdit" xml:space="preserve">
+    <value>异常完结</value>
+  </data>
+  <data name="GenerateSN" xml:space="preserve">
+    <value>生成成品条码并打印</value>
+  </data>
+  <data name="StockOrderPrint" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SyncErpData" xml:space="preserve">
+    <value>同步ERP数据</value>
+  </data>
+  <data name="Defective_ProductLabel" xml:space="preserve">
+    <value>不良登记</value>
+  </data>
+  <data name="COM_UseCrush" xml:space="preserve">
+    <value>使用粉碎料</value>
+  </data>
+  <data name="COM_UseRaw" xml:space="preserve">
+    <value>使用原材料</value>
+  </data>
+  <data name="SaleReturnGenrateGRN" xml:space="preserve">
+    <value>物料条码打印</value>
+  </data>
+  <data name="JudgeQuality" xml:space="preserve">
+    <value>品质判定</value>
+  </data>
+  <data name="PrintSaleReturnGRN" xml:space="preserve">
+    <value>销退条码补打</value>
+  </data>
+</root>

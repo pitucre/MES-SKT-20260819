@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A9F4C28-7642-49CF-8123-4058AEF50B37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.LeanMES.Equipment.Model</RootNamespace>
+    <AssemblyName>SKT.LeanMES.Equipment.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckOutProjectInfo.cs" />
+    <Compile Include="CollectionEquiConfigInfo.cs" />
+    <Compile Include="EquipmentCheckOutHistoryInfo.cs" />
+    <Compile Include="EquipmentCheckOutPlanInfo.cs" />
+    <Compile Include="EquipmentFileManageInfo.cs" />
+    <Compile Include="EquipmentExceptionReportingMemberInfo.cs" />
+    <Compile Include="EquipmentExceptionReportingInfo.cs" />
+    <Compile Include="EquipmentMoldFixtureUseHistoryInfo.cs" />
+    <Compile Include="InspectionOrderSNInfo.cs" />
+    <Compile Include="EquipmentItemRelationInfo.cs" />
+    <Compile Include="EquipmentLineRelationInfo.cs" />
+    <Compile Include="EquipmentMouldRelationInfo.cs" />
+    <Compile Include="EquipmentPositionInfo.cs" />
+    <Compile Include="EquipmentPressureTestInfo.cs" />
+    <Compile Include="EquipmentRepairInfo.cs" />
+    <Compile Include="EquipmentChildInfo.cs" />
+    <Compile Include="EquipmentRepairInfo_JXN.cs" />
+    <Compile Include="EquipmentRepairUserInfo.cs" />
+    <Compile Include="EquipmentRepairUserStationInfo.cs" />
+    <Compile Include="EquipmentInspectionItemInfo.cs" />
+    <Compile Include="EquipmentInspectionTemplateDetailInfo.cs" />
+    <Compile Include="EquipmentInspectionTemplateInfo.cs" />
+    <Compile Include="EquipmentInspectionTemplateItemInfo.cs" />
+    <Compile Include="EquipmentInspectionTemplateMemberInfo.cs" />
+    <Compile Include="EquipmentInspectionTypeInfo.cs" />
+    <Compile Include="EquipmentInspectionInfo.cs" />
+    <Compile Include="EquipmentsInfo.cs" />
+    <Compile Include="EquipmentUseReasonsInfo.cs" />
+    <Compile Include="ItemMouldRelationInfo.cs" />
+    <Compile Include="MoldComponentInfo.cs" />
+    <Compile Include="MoldFixtureFileInfo.cs" />
+    <Compile Include="MoldFixtureItemInfo.cs" />
+    <Compile Include="MoludAbnormalInfo.cs" />
+    <Compile Include="MoludApplyInfo.cs" />
+    <Compile Include="MoludBomInfo.cs" />
+    <Compile Include="MoludSizeMangerInfo.cs" />
+    <Compile Include="MouldOperateRecordInfo.cs" />
+    <Compile Include="MouldScrapRecordInfo.cs" />
+    <Compile Include="PartInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EquipmentTypeInfo.cs" />
+    <Compile Include="SteelNetInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>If $(ConfigurationName) == Debug Copy "$(TargetDir)*.dll" "$(SolutionDir)\Lib"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

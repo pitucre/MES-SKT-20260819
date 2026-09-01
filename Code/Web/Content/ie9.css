@@ -1,0 +1,2 @@
+﻿/*弹出窗口IE 9+样式 hack*/
+.nebutton>.close{width:46px; height:19px; cursor:pointer; position:absolute; top:-2px; right:0px; background-position:-14px 0;}

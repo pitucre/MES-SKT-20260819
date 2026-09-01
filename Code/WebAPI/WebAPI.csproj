@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.1.1\build\Microsoft.Net.Compilers.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEE4767C-AA8F-4BDD-93EA-AFF45A293EDC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebAPI</RootNamespace>
+    <AssemblyName>WebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\WebAPI.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\WebAPI.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.DAL.Marshal">
+      <HintPath>..\Lib\SKT.Common.DAL.Marshal.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.Utility">
+      <HintPath>..\Lib\SKT.Common.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.CommonHelper">
+      <HintPath>..\Lib\SKT.LeanMES.CommonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.SDK">
+      <HintPath>..\Lib\SKT.LeanMES.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Examples, Version=3.12.0.0, Culture=neutral, PublicKeyToken=aa1e9c5053bfbe95, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Examples.3.12.0\lib\net40\Swashbuckle.Examples.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.8\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.8\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.8\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Script\swagger-lan.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\swagger-common.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\axios.js" />
+    <Content Include="Scripts\axios.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\WabAPI.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="rsa.pem" />
+    <Content Include="rsa.pub" />
+    <None Include="Properties\PublishProfiles\WabAPI.pubxml.pubxml" />
+    <None Include="Properties\PublishProfiles\WebAPI.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Code\APIResponse.cs" />
+    <Compile Include="Code\Attributes\BaseAttributers.cs" />
+    <Compile Include="Code\Attributes\LoginAuth.cs" />
+    <Compile Include="Code\Attributes\Param.cs" />
+    <Compile Include="Code\Attributes\SignAuth.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ElectricLoctionController.cs" />
+    <Compile Include="Controllers\ERPController.cs" />
+    <Compile Include="Controllers\ERPSyncController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HWLicenseController.cs" />
+    <Compile Include="Controllers\LeanController.cs" />
+    <Compile Include="Controllers\MeterialTowerController.cs" />
+    <Compile Include="Dal\ElectricLoction.cs" />
+    <Compile Include="Dao\BaseDao.cs" />
+    <Compile Include="Dao\DataPushConfigDao.cs" />
+    <Compile Include="Dao\DataPushDao.cs" />
+    <Compile Include="Dao\ERPJsonDao.cs" />
+    <Compile Include="Dao\ERPSyncDao.cs" />
+    <Compile Include="Dao\FactoryDao.cs" />
+    <Compile Include="Dao\HWLicenseDao.cs" />
+    <Compile Include="Dao\ScrapStorage.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="Job\BaseJob.cs" />
+    <Compile Include="Job\JobScheduler.cs" />
+    <Compile Include="Job\SyncJob.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="MaterialTower\MaterialTower.cs" />
+    <Compile Include="Models\ElectricLoction\ElectricLoctionRequest.cs" />
+    <Compile Include="Models\ElectricLoction\ElectricLoctionResponse.cs" />
+    <Compile Include="Models\Enum\ApiEnum.cs" />
+    <Compile Include="Models\BulkInsertInfo.cs" />
+    <Compile Include="Models\DataPush\BasalFactoryInfo.cs" />
+    <Compile Include="Models\DataPush\ERPDataPushConfigInfo.cs" />
+    <Compile Include="Models\DataPush\ERPJsonInfo.cs" />
+    <Compile Include="Models\Enum\OperateType.cs" />
+    <Compile Include="Models\ERP\BasalERPParm.cs" />
+    <Compile Include="Models\ERP\BaseERPReturn.cs" />
+    <Compile Include="Models\ERP\ERPCustomer.cs" />
+    <Compile Include="Models\ERP\ERPDepartment.cs" />
+    <Compile Include="Models\ERP\ERPItem.cs" />
+    <Compile Include="Models\ERP\ERPItemBom.cs" />
+    <Compile Include="Models\ERP\ERPReturnOrder.cs" />
+    <Compile Include="Models\ERP\ERPReturnOrderDetail.cs" />
+    <Compile Include="Models\ERP\ERPSaleOrder.cs" />
+    <Compile Include="Models\ERP\ERPSupplier.cs" />
+    <Compile Include="Models\ERP\ERPTokenInfo.cs" />
+    <Compile Include="Models\ERP\ERPUser.cs" />
+    <Compile Include="Models\ERP\ERPWarehouse.cs" />
+    <Compile Include="Models\ERP\ScrapInfo.cs" />
+    <Compile Include="Models\ERP\QueryParm.cs" />
+    <Compile Include="Models\HWLicense\BaseLicenseInfo.cs" />
+    <Compile Include="Models\HWLicense\HWAPIResult.cs" />
+    <Compile Include="Models\LeanServerDll.cs" />
+    <Compile Include="Models\MaterialTowerParam.cs" />
+    <Compile Include="Models\MES\BasalSyncInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalCustomerInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalEquipmentInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalFactoryInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalItemBomChildInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalItemBomInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalItemCategoryInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalItemInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalSubsItemInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalSupplierInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalWarehouseInfo.cs" />
+    <Compile Include="Models\MES\ERPBasalWarehouseLocationInfo.cs" />
+    <Compile Include="Models\MES\ERPERPPurOrderDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPERPPurOrderInfo.cs" />
+    <Compile Include="Models\MES\ERPProdApplyDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdApplyInfo.cs" />
+    <Compile Include="Models\MES\ERPProdDeliverDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdDeliverInfo.cs" />
+    <Compile Include="Models\MES\ERPProdFormChangeDtledInfo.cs" />
+    <Compile Include="Models\MES\ERPProdFormChangeDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdFormChangeInfo.cs" />
+    <Compile Include="Models\MES\ERPProdMaterialUnit.cs" />
+    <Compile Include="Models\MES\ERPProdOrderBomInfo.cs" />
+    <Compile Include="Models\MES\ERPProdOrderInfo.cs" />
+    <Compile Include="Models\MES\ERPProdReturnToVendorDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdReturnToVendorInfo.cs" />
+    <Compile Include="Models\MES\ERPProdReturnToWarehouseInfo.cs" />
+    <Compile Include="Models\MES\ERPProdSaleReturnDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdSaleReturnInfo.cs" />
+    <Compile Include="Models\MES\ERPProdSalOrderDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdSalOrderInfo.cs" />
+    <Compile Include="Models\MES\ERPProdScrapDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdScrapInfo.cs" />
+    <Compile Include="Models\MES\ERPProdTransfersDtlInfo.cs" />
+    <Compile Include="Models\MES\ERPProdTransfersInfo.cs" />
+    <Compile Include="Models\MES\ERPSyncInfo.cs" />
+    <Compile Include="Models\MES\ERPSYSMembershipInfo.cs" />
+    <Compile Include="Models\MES\ERPSYSOrganizationInfo.cs" />
+    <Compile Include="Models\MES\MappingPropertyAttribute.cs" />
+    <Compile Include="Models\MES\NLogLogInfo.cs" />
+    <Compile Include="Models\Parameters.cs" />
+    <Compile Include="Models\Enum\ResultEnum.cs" />
+    <Compile Include="Models\RequestExample\ReqExample.cs" />
+    <Compile Include="Models\RequestExample\LoginReqExample.cs" />
+    <Compile Include="Models\ResponseExample\ResExample.cs" />
+    <Compile Include="Models\ResponseExample\LoginResExample.cs" />
+    <Compile Include="Models\ReturnMes.cs" />
+    <Compile Include="Models\Enum\SyncTypeEnum.cs" />
+    <Compile Include="Models\ScrapStorage\ScrapNoInfo.cs" />
+    <Compile Include="Models\ScrapStorage\ScrapStorageBaseInfo.cs" />
+    <Compile Include="Models\TowerGRNInfo.cs" />
+    <Compile Include="Privider\SwaggerCacheProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ult\CacheHelper.cs" />
+    <Compile Include="Ult\DBHelper.cs" />
+    <Compile Include="Ult\FileStreamResult.cs" />
+    <Compile Include="Utility\CacheHelper.cs" />
+    <Compile Include="Utility\HttpClientHelper.cs" />
+    <Compile Include="Utility\Logger.cs" />
+    <Compile Include="Utility\SqlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Doc\MES与料塔集成应用方案-V1.1 20210511.pdf" />
+    <Content Include="Doc\接口文档.pdf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\moment-with-locales.min.js.map" />
+    <Content Include="Scripts\moment.min.js.map" />
+    <Content Include="Views\ERP\SyncList.cshtml" />
+    <Content Include="Views\ERP\SyncLog.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34106</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34108/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>If $(ConfigurationName) == Debug Copy  "$(SolutionDir)\Lib\*.xml" "$(TargetDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

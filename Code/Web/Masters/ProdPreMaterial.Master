@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProdPreMaterial.master.cs" Inherits="SKT.LeanMES.Web.Masters.ProdPreMaterial" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href="../Content/productioncollection.css?v=20210728" rel="Stylesheet" type="text/css" />
+    <link href="../Content/plugin/treeview/jquery.tree.css" rel="Stylesheet" type="text/css" />
+    <link href="../Content/plugin/dialog/skin/default/dialog-1.0.3.css" rel="stylesheet"
+        type="text/css" />
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/jquery.min.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.utility.validation.js" type="text/javascript"></script>
+        <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/crypto-js.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.aes.js" type="text/javascript"></script>
+    <title>
+        <%= Resources.Common.AppName%></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+        /*dialog info*/
+        var _close = "<%=Resources.Common.Close %>";
+        var _enlarged = "<%=Resources.Common.Enlarged %>";
+        var _resizewin = "<%=Resources.lang.ResizeWin %>";
+        var _dialogwin = "<%=Resources.lang.PopWin %>";
+        var _help = "<%=Resources.Common.Help %>";
+        var _dataLoading = "<%=Resources.Messages.DataLoading %>";
+
+        /*base info*/
+        var webroot = "<%=SKT.LeanMES.Web.WebHelper.WebRoot %>";
+        var _root = webroot;
+        var _port ="<%=System.Configuration.ConfigurationManager.AppSettings["WebSocketPort"]%>";
+        var userId = "<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserId %>";
+        var userName = "<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserName %>";
+        var currentTime = '<%=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") %>';
+        var lang = '<%=this.Request.Cookies["lang"].Value %>';
+        var _lang = lang;
+    </script>
+</head>
+<body>
+    <div class="shadowdiv" id="shadowdiv">
+    </div>
+    <div id="toolbar" class="topbar">
+        <div class="topbar-title" style=" font-family:Verdana,'微软雅黑',宋体,黑体">
+            <img src="data:image/png;base64,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"
+                style="vertical-align: middle;" alt="<%= Resources.lang.CompanyName%>" width="145px" height="26px"/>
+            
+        </div>
+        <div class="topbar-productioninfo">
+            <span class="topbar-productioninfo-label"><%=Resources.lang.ProductionLine %>:</span>
+            <a href="javascript:void(0)" id="topbarproductionline" class="topbar-productioninfo-value" title="<%=FilterRequestQueryString("prodline", "", -1)%>"><%=FilterRequestQueryString("prodline","",15)%></a>&nbsp;&nbsp;
+            <span class="topbar-productioninfo-label"><%=Resources.lang.Station %>:</span>
+            <a href="javascript:void(0)" id="topbarstation" class="topbar-productioninfo-value" title="<%=FilterRequestQueryString("station","",-1)%>"><%=FilterRequestQueryString("station", "", 15)%></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/images/icon/User.png" title="<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserName%>"
+                style="vertical-align: middle;" width="22" height="22" alt="<%=Resources.lang.CurrentUser %>" />
+            <span style="position: relative;" id="topbar-set"> <span class="set-menu" style="font-weight: bold; padding-right:20px;">
+                <span style="vertical-align:middle">操作菜单</span><img src="../Content/images/desc.gif" style="vertical-align: middle; margin-left: 3px;" alt="" /></span>
+                <span id="topbar-set-menu" style="position: absolute; display: none; right: 5px;
+                    top: 15px; width: 95px;">
+                    <ul id="r-menu-item" style="list-style: none; margin: 5px 0px 0px 0px; padding: 5px 1px 2px 5px;
+                        border: 1px solid #d3d3d3; background: url(../Content/theme/metro/images/contextmenu_bg.gif) repeat;">
+                    </ul>
+                </span>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div>
+                <input type="hidden" id="hdnCurrStationId" value="<%=FilterRequestQueryString("stationid","",-1)%>"" />
+                <input type="hidden" id="hdnCurrRouteId" value="-1"/>
+                <input type="hidden" id="hdnCurrProOrderId" value="-1"/>
+                <input type="hidden" id="hdnCurrResourceId" value="<%=FilterRequestQueryString("resourceid","",-1)%>"" />
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server" onsubmit="return false;">
+    <div >
+        <!--content-->
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" id="content">
+            <tr>
+                <!--left dynamic data & shortcut-->
+                <td valign="top" width="250px" align="left">
+                    <div id="leftmenu">
+                        <input type="hidden" id="hidDbNameList" />
+                        <!--time info-->
+                        <div class="dds-panel" style=" background:#ccc; padding:3px; text-align:center; margin:5px; width:auto;">
+                            <div id="timer"></div>
+                        </div>
+                        <!--product information-->
+                        <div class="dds-panel">
+                            <div class="leftmenu-new-header" style=" background:url(../content/theme/metro/images/nav_link.gif) repeat-x">
+                                产品信息
+                            </div>
+                            <div class="dds-panel-content" style=" background:#fff;">
+                                <div id="productInfo">
+                                 <table cellspacing="0" cellpadding="0" width="100%"><tbody>
+                                 <tr><td align="left" class="dds-panel-prodinfo-name"><b>产品代码</b></td></tr>
+                                 <tr><td align="left" class="dds-panel-prodinfo-value"><span id="span-pi-ItemCode"></span></td></tr>
+                                 <tr><td align="left" class="dds-panel-prodinfo-name"><b>产品描述</b></td></tr>
+                                 <tr><td align="left" class="dds-panel-prodinfo-value">
+                                 <textarea id="span-pi-ItemName" rows="3" cols="30" class="dds-panel-proinfo-txtarea" readonly="" disabled=""></textarea>
+                                 </td></tr>
+                                 </tbody></table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--shortcut-->
+                        <div class="dds-panel">
+                            <div class="leftmenu-new-header" style=" background:url(../content/theme/metro/images/nav_link.gif) repeat-x">
+                                常用功能
+                            </div>
+                            <div class="dds-panel-content" style=" overflow-y:auto;background:#fff;">
+                                <asp:Localize ID="llShortcut" runat="server" />
+                                <ul id="shortcut-item">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <!--slider button-->
+                <td valign="middle" align="center" width="7px" class="slidertd" style=" background:#ddd">
+                    <div id="slider" style=" cursor:pointer; text-align:center;">
+                        <img id="sliderimg" src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/theme/Metro/images/mini-left.gif"
+                            alt="<%=Resources.lang.HideLeftMenu %>" title="<%=Resources.lang.HideLeftMenu %>" />
+                    </div>
+                </td>
+                <!--main content-->
+                <td valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <asp:HiddenField ID="hdnCsrfToken" runat="server" />
+    <input type="hidden" id="<%=SKT.LeanMES.Web.AppCode.Utility.AntiXSRFHelper.AntiXsrfTokenKey %>" name ="<%=SKT.LeanMES.Web.AppCode.Utility.AntiXSRFHelper.AntiXsrfTokenKey %>" value="<%=hdnCsrfToken.Value %>" />
+    </form>
+    <div id="footbar" class="footbar">
+        <!--copyright-->
+        <div class="copyright">
+            Copyright &copy;
+            <%=DateTime.Now.Year.ToString() %>&nbsp;&nbsp;
+            <%=Resources.Common.CopyRight %>
+        </div>
+        <div class="operator" style="background-color: #faf9f9">
+            <div id="licenseDisplayText" class="floatleft"></div>
+            <div class="btn-line"></div>
+            <div id="onlineUserDisplayText" class="floatleft"></div>
+        </div>
+    </div>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/jquery-ui.min.js"
+        type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/dialog/js/jPlugin-dialog-2.0.js"
+        type="text/javascript"></script>
+        
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/treeview/js/jquery.tree.js" type="text/javascript"></script>
+       <script type="text/javascript" src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/layui/layui.all.js"></script>
+    <link href="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/layui/css/layui.css" rel="stylesheet" />
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/ws.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.client.productioncollection.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Handler/Language.ashx?cmd=GetLanguageRes&lang=<%=hfMESLang.Value %>" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/lang/lang.button.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/lang/lang.label.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/lang/lang.menu.js" type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/lang/skt.utility.lang.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        function refreshItemInfoByItemId(ItemId) {
+            var ajax = SKT.LeanMES.Web.AjaxServices.AjaxPreCheckMaterial.GetItemInfoBySearch("Item", ItemId);
+            if (ajax.error != null) {
+                $("#span-pi-ItemCode").html("");
+                $("#span-pi-ItemName").val("");
+                return false;
+            } else {
+                //显示产品信息：
+                var entity = ajax.value;
+                $("#span-pi-ItemCode").html(entity.ItemCode);
+                $("#span-pi-ItemName").val(entity.ItemName + entity.ItemDesc);
+            }
+        }
+        /**
+        *加载button信息
+        */
+        function loadClientButton(pageName) {
+            var buttonlist = SKT.LeanMES.Web.AjaxServices.AjaxClientConfig.LoadButtons(pageName);
+            if (buttonlist.error != null) {
+                alert(buttonlist.error.Message);
+                return false;
+            }
+            buttonlist = buttonlist.value;
+            var buttons = new Array();
+            for (var i = 0; i < buttonlist.length; i++) {
+                buttons[i] = { Text: buttonlist[i].Text, Tooltip: buttonlist[i].ToolTip, Icon: buttonlist[i].Icon, Handler: buttonlist[i].Handler, InToolbar: buttonlist[i].InToolbar };
+
+            }
+
+            loadButtons(buttons, '<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserName%>');
+
+
+        }
+        //页面加载
+        $(function () {
+            /*获取license信息*/
+            getLicenseInfo();
+            setInterval(function () {
+                getLicenseInfo();
+            }, 60 * 1000);
+        });
+
+        function getLicenseInfo() {
+            $.ajax({
+                type: 'get',
+                url: "<%= SKT.LeanMES.Web.WebHelper.WebRoot %>/Handler/Account.ashx?type=getLicenseInfo&userid=" + userId + "&rnd=" + Math.random(),
+                datatype: 'text',
+                success: function (data) {
+                    var licenseInfo = JSON.parse(data);
+                    if (licenseInfo) {
+
+                        if (licenseInfo.LicenseType == 0) {
+                            $("#licenseDisplayText").text(mesLang("License授权:") + licenseInfo.LineQty + mesLang("条产线用户数不限"));
+                        }
+                        else if (licenseInfo.LicenseType == 1) {
+                            $("#licenseDisplayText").text(mesLang("License授权:并发用户数") + licenseInfo.UserQty);
+                        }
+                        else if (licenseInfo.LicenseType == 2) {
+                            $("#licenseDisplayText").text(mesLang("License授权:服务器授权"));
+                        }
+                        $("#onlineUserDisplayText").text(mesLang("系统在线用户") + ":" + licenseInfo.OnlineUserQty + mesLang("人"));
+                    }
+                }
+            });
+        }
+
+        loadDisplayInfo();
+    </script>
+</body>
+</html>

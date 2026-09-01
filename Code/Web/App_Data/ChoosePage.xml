@@ -1,0 +1,1768 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages>
+  <!--
+   系统管理： 10000
+   基础数据： 20000
+   生产管理： 30000
+   品质管理： 40000
+   报表分析:  50000
+  -->
+  <!--产品列表-->
+  <page id="1" title="Pages.Product_ItemList" recordIdField="ItemID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.Item"
+   searchFields="[CPN],[ItemCode],[ItemName]" returnFields="1,2,3,4,5,6,7,8" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemRev">lang.CurrentRevision</field>
+      <field name="Units">lang.PartUnit</field>
+      <field name="Site">lang.Site</field>
+      <field name="ItemSpec">lang.ItemModel</field>
+      <field name="SmtIndustry">lang.SMTIndustry</field>
+      <field name="CPN">lang.CPN</field>
+    </fields>
+  </page>
+
+  <!--数据类型列表-->
+  <page id="2" title="Pages.NCCode_DataType" recordIdField="DataTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.DataType.BLL.DataType"
+       searchFields="[Category],[DataTypeName],[Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Category">lang.Category</field>
+      <field name="DataTypeName">lang.DataType</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--数据字典列表， 单位（DicProperty ='Unit'）-->
+  <page id="3" title="Pages.DictionaryDataList" recordIdField="DictionaryDataID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SerialNumber.BLL.Dictionary"
+  searchFields="[Value],[Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Value">lang.UnitName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--工序类型列表-->
+  <page id="4" title="Pages.Station_StationTypeList" recordIdField="StationTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Station.BLL.StationType"
+ searchFields="[StationType],[StationDesc]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="StationType">lang.StationType</field>
+      <field name="StationDesc">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--资源类型列表-->
+  <page id="5" title="Pages.ResourceTypeList" recordIdField="ResourceTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Station.BLL.ResourceType"
+ searchFields="[ResTypeName],[ResTypeDesc]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ResTypeName">lang.ResTypeName</field>
+      <field name="ResTypeDesc">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--资源列表-->
+  <page id="6" title="Pages.ResourceList" recordIdField="ResourceId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Station.BLL.Resource"
+searchFields="[ResName],[ResDescription]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ResName">lang.ResName</field>
+      <field name="ResDescription">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--产品BOM列表-->
+  <page id="7" title="Pages.Product_BomList" recordIdField="BomId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.Bom"
+searchFields="[BomName],[Revision],[BomDesc]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="BomName">lang.BomName</field>
+      <field name="Revision">lang.Revision</field>
+      <field name="BomDesc">lang.Description</field>
+      <field name="BomStatus_Choose">lang.Status</field>
+      <field name="IsCurrentRev">lang.IsCurrentRev</field>
+    </fields>
+  </page>
+
+  <!--工序列表-->
+  <page id="8" title="Pages.Station_StationList" recordIdField="StationId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Station.BLL.Station"
+ searchFields="[Station],[StationType]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Station">lang.Station</field>
+      <field name="OpeType">lang.StationType</field>
+      <field name="StationDesc">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--客户项目列表-->
+  <page id="9" title="Pages.Product_ProjectList" recordIdField="ProjectId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.Project"
+     searchFields="[ProName],[CustomerName],[ProDesc]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CustomerName">lang.CustomerName</field>
+      <field name="ProName">lang.ProjectName</field>
+      <field name="ProDesc">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--客户信息列表-->
+  <page id="10" title="Pages.Product_CustomerList" recordIdField="CustomerID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Customer.BLL.Customer"
+     searchFields="[CustomerName],CustomerCode,Remark" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CustomerName">lang.CustomerName</field>
+      <field name="CustomerCode">lang.ClientCode</field>
+      <field name="Remark">lang.ClientName</field>
+    </fields>
+  </page>
+
+  <!--仓库类型列表-->
+  <page id="11" title="Pages.WarehouseType" recordIdField="WarehouseTypeID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseType"
+       searchFields="[WarehouseType],[Remark]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="WarehouseType">lang.WarehouseTypeName</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+
+  <!--用户列表-->
+  <page id="12" title="Pages.UserList" recordIdField="UserId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.Common.Account.BLL.Users"
+    searchFields="[EmployeeNo],[CName],[EName]" returnFields="1,2,3,4,5,6,7" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EmployeeNo">lang.EmployeeNo</field>
+      <field name="UserName">lang.UserName</field>
+      <field name="EmployeeCName">lang.ChineseName</field>
+      <field name="EmployeeEName">lang.EnglishName</field>
+      <field name="Email">lang.EmailAddress</field>
+      <field name="WechatNumber">lang.WechatNumber</field>
+      <field name="Phone">lang.MobilePhone</field>
+      <field name="DepartName">lang.DepartName</field>
+    </fields>
+  </page>
+
+  <!--部门列表-->
+  <page id="13" title="Pages.DepartmentList" recordIdField="OrganizationId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.Common.Organization.BLL.Organization"
+    searchFields="[DepartNo],[DepartName],[CreateDateTime]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DepartNo">lang.DepartmentNo</field>
+      <field name="DepartName">lang.DepartmentName</field>
+      <field name="CreateDateTime">lang.CreateDateTime</field>
+    </fields>
+  </page>
+
+  <!--仓库列表-->
+  <page id="14" title="Pages.Warehouse_WarehouseList" recordIdField="WarehouseID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.Warehouse"
+     searchFields="[CWhCode],[CWhName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CWhCode">lang.WarehouseCode</field>
+      <field name="CWhName">lang.WarehouseName</field>
+      <field name="CWhAddress">lang.WarehouseAddress</field>
+    </fields>
+  </page>
+
+  <!--角色列表-->
+  <page id="15" title="Pages.Account_RoleList" recordIdField="RoleId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.Common.Account.BLL.Role"
+    searchFields="[RoleName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="RoleName">lang.RoleName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--标签列表-->
+  <page id="16" title="Pages.LabelField" recordIdField="FieldDfID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Labels.BLL.LabelField"
+     searchFields="[FieldDfName],[FieldDfDesc],[Definition]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="FieldDfName">lang.LabelFieldName</field>
+      <field name="FieldDfDesc">lang.FieldDesc</field>
+      <field name="Definition">lang.LabelFieldDefinition</field>
+    </fields>
+  </page>
+
+  <!--规则设置单据列表-->
+  <page id="17" title="Pages.SerialNumber_VouchList" recordIdField="MesVouchTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SerialNumber.BLL.MesVouchType"
+   searchFields="[VouchName],[Remark]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="VouchName">lang.VouchName</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+
+  <!--条码规则列表-->
+  <page id="18" title="Pages.SerialNumber_SerialNumberList" recordIdField="SerialNumberID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SerialNumber.BLL.SerialNumber"
+   searchFields="[Apply_Type],[Type_Value],[Prefix],[Suffix]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Apply_Type">lang.RuleType</field>
+      <field name="Type_Value">lang.TypeValue</field>
+      <field name="Prefix">lang.SerialNumberPrefix</field>
+      <field name="Suffix">lang.SerialNumberSuffix</field>
+    </fields>
+  </page>
+
+  <!--模板列表-->
+  <page id="19" title="Pages.TemplatesList" recordIdField="TemplateID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Station.BLL.Template"
+  searchFields="[Tmpl_TemplateName],[Tmpl_TemplateDesc]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Tmpl_TemplateName">lang.TemplateName</field>
+      <field name="Tmpl_TemplateDesc">lang.Description</field>
+    </fields>
+  </page>
+
+
+  <!--可收料的采购单列表-->
+  <page id="20" title="Pages.OrderFormList" recordIdField="ERPOrderFormId" selectMethod="GetOrderFormList" selectCountMethod="GetOrderFormCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+  searchFields="[OrderFormNO],[MaterialName],[Supplier]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderFormNO">lang.OrderFormNO</field>
+      <field name="MaterialName">lang.MaterialName</field>
+      <field name="Supplier">lang.Supplier</field>
+      <field name="Qty">lang.OrderQty</field>
+    </fields>
+  </page>
+
+  <!--线别列表-->
+  <page id="21" title="Pages.Resource_LineList" recordIdField="LineId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Resource.BLL.Line"
+   searchFields="[LineName],[LineDescription],LineMachineRelation" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="LineName">lang.Line</field>
+      <field name="LineDescription">lang.Description</field>
+      <field name="LineMachineRelation">lang.EquipmentLineType</field>
+    </fields>
+  </page>
+
+  <!--路由列表-->
+  <page id="22" title="Pages.Router_RouterList" recordIdField="R_ID" selectMethod="GetAllChoose" selectCountMethod="GetCount" typeName="SKT.LeanMES.Router.BLL.Router"
+    searchFields="[R_Name],[R_Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="R_Name">lang.RouterName</field>
+      <field name="R_Description">lang.Description</field>
+      <field name="Remark">lang.Status</field>
+    </fields>
+  </page>
+
+  <!--Activity列表-->
+  <page id="23" title="Pages.ActivitiesList" recordIdField="AC_ID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Router.BLL.Activity"
+    searchFields="[AC_Name]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="AC_Name">lang.AC_Name</field>
+      <field name="AC_Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--掩码列表-->
+  <page id="24" title="Pages.MaskGroupList" recordIdField="MaskID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MaskGroup.BLL.MaskGroup"
+      searchFields="[MaskGroup],[Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MaskGroup">lang.MaskGroup</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--领料单列表-->
+  <page id="25" title="Pages.Material_MaterialRequestList" recordIdField="WOInterId" selectMethod="GetRequestOrder" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialRequest"
+      searchFields="[WONo],[MatReqNo]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="WONo">lang.OrderNo</field>
+      <field name="MatReqNo">lang.MaterialRequestOrderNumber</field>
+    </fields>
+  </page>
+
+
+
+  <!--可收料的到货单列表-->
+  <page id="30" title="Pages.ERPArrivalVouchList" recordIdField="Id" selectMethod="GetCanBeRecFormList" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.ERPArrivalVouch"
+   searchFields="[Code],[Date],[VenCode]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Code">lang.ERPArrivalVouchCode</field>
+      <field name="Date">lang.DateOfArrival</field>
+      <field name="VenCode">lang.VendorCode</field>
+    </fields>
+  </page>
+
+  <!--可检验的IQC检验单列表-->
+  <page id="31" title="Pages.Material_IQCFormCheck" recordIdField="PO" selectMethod="GetWaitCheckIQCForm" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.IQCBatch"
+   searchFields="PO" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PO">lang.IQCFormNO</field>
+    </fields>
+  </page>
+
+  <!--可入库的IQC检验单号-->
+  <page id="32" title="Pages.Material_IQCFormList" recordIdField="PO" selectMethod="GetIQCBatchNoBySearch" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.IQCBatch"
+ searchFields="PO" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PO">lang.IQCFormNO</field>
+    </fields>
+  </page>
+
+  <!--货架列表-->
+  <page id="33" title="Pages.Warehouse_WarehouseList" recordIdField="WarehouseLocationId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseLocation"
+   searchFields="cBarCode,cStoreName,CWhName" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="cStoreName">lang.WarehouseStorageName</field>
+      <field name="cBarCode">lang.WarehouseBarCode</field>
+      <field name="iMaxCubage">lang.MaximumVolume</field>
+      <field name="iMaxWeight">lang.MaximumWeight</field>
+      <field name="CWhName">lang.WarehouseName</field>
+      <field name="CProperty">lang.WarehouseTypeName</field>
+    </fields>
+  </page>
+  <!--供应商列表-->
+  <page id="34" title="Pages.Supplier_SupplierList" recordIdField="SupplierId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.Suppliers"
+   searchFields="[VendorCode],[VendorName]" returnFields="1,2,3,4,5,6" defaultSortExpression="VendorCode" returnMethod="">
+    <fields>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.VendorName</field>
+      <field name="Site">lang.FactoryCode</field>
+      <field name="VenUserName">lang.SupplierUserName</field>
+      <field name="VenPhone">lang.SupplierPhone</field>
+      <field name="VendorAddress">lang.VendorAddress</field>
+    </fields>
+  </page>
+  <!--空包装箱-->
+  <page id="35" title="lang.EmptyGRNCartonList" recordIdField="MaterialUnitId" selectMethod="GetAllEmptyCarton" selectCountMethod="GetPackedGRNCartonCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+searchFields="SerialNumber,VendorCode,ItemName" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SerialNumber">lang.ContainerSN</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="CreateDateTime">lang.CreateDateTime</field>
+      <field name="ItemDesc">lang.CartonType</field>
+    </fields>
+  </page>
+  <!--采购订单列表-->
+  <page id="36" title="lang.POorderList" recordIdField="FSupplierID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.ERPPOorder"
+ searchFields="[FBILLNO],[VendorCode],[VendorName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="FactoryCode">lang.FactoryCode</field>
+      <field name="FBILLNO">lang.OrderFormNO</field>
+      <field name="FSupplierFnumber">lang.VendorCode</field>
+      <field name="FSupplierName">lang.FSupplierName</field>
+    </fields>
+  </page>
+  <page id="37" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetOrderAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+searchFields="OrderNO" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="CustomerOrder">lang.Line</field>
+
+    </fields>
+  </page>
+  <page id="38" title="Pages.MachineModelFamilyList" recordIdField="ModelFamilyID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SMT.BLL.MachineModelFamily"
+searchFields="[ModelFamilyName],[Description]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ModelFamilyName">lang.ModelFamilyName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--产品组-->
+  <page id="39" title="Pages.Product_ItemGroupList" recordIdField="ItemGroupID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemGroup"
+    searchFields="[GroupName],[GroupDesc]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="GroupName">lang.ItemGroupName</field>
+      <field name="GroupDesc">lang.Description</field>
+    </fields>
+  </page>
+  <page id="40" title="Pages.MachineModelList" recordIdField="ModelID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SMT.BLL.MachineModel"
+searchFields="[ModelName],[ModelFamilyName],[MachineType],[Vendor],[Status]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ModelName">lang.MachineModelName</field>
+      <field name="ModelFamilyName">lang.MachineModelFamilyName</field>
+      <field name="MachineType">lang.MachineType</field>
+      <field name="Vendor">lang.Vendor</field>
+      <field name="Status">lang.Status</field>
+    </fields>
+  </page>
+  <page id="41" title="Pages.FeederTypeList" recordIdField="ID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SMT.BLL.FeederType"
+searchFields="[Name],[Size],[Pitch],[Description],[Attrition]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Name">lang.FeederTypeName</field>
+      <field name="Size">lang.Size</field>
+      <field name="Pitch">lang.Pitch</field>
+      <field name="Description">lang.Description</field>
+      <field name="Attrition">lang.Attrition</field>
+    </fields>
+  </page>
+  <!--容器-->
+  <page id="42" title="Pages.ContainerList" recordIdField="ContainerID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Container.BLL.Container"
+searchFields="[Name],[MixShopOrders],[DataTypeName],[Description]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Name">lang.ContainerName</field>
+      <field name="MixShopOrders">lang.MixShopOrders</field>
+      <field name="DataTypeName">lang.ContainerType</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--文档-->
+  <page id="43" title="Pages.Labels_LabelDocumentList" recordIdField="LabelDocumentId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Labels.BLL.LabelDocument"
+   searchFields="[DocumentName],[TemplateName],[Document_Type],[Status]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DocumentName">lang.DocumentName</field>
+      <field name="TemplateName">lang.TemplateName</field>
+      <field name="Document_Type">lang.DocumentType</field>
+      <field name="Status">lang.Status</field>
+    </fields>
+  </page>
+  <!--工单-->
+  <page id="44" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+searchFields="[OrderNO],[ItemCode],Priority" returnFields="1,2,3,4,5,6,7" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="Qty_to_Build">lang.Qty_to_Build</field>
+      <field name="Priority">lang.Priority</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="CustomerOrder">lang.CustomerOrder</field>
+      <field name="ItemId">lang.ItemID</field>
+    </fields>
+  </page>
+  <!--未关闭的包装箱-->
+  <page id="45" title="lang.UnclosedGRNCartonList" recordIdField="MaterialUnitId" selectMethod="GetUnclosedCarton" selectCountMethod="GetPackedGRNCartonCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+searchFields="SerialNumber,VendorCode,ItemName" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SerialNumber">lang.ContainerSN</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="CreateDateTime">lang.CreateDateTime</field>
+    </fields>
+  </page>
+  <!--物料列表(ERP_Item)-->
+  <page id="46" title="lang.MaterialList" recordIdField="ErpItemId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Material"
+searchFields="ItemCode,ItemName" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="ItemModel">lang.ItemModel</field>
+      <field name="Site">lang.FactoryCode</field>
+    </fields>
+  </page>
+  <!--工厂列表-->
+  <page id="47" title="lang.FactoryList" recordIdField="FactoryID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Factory.BLL.Factory"
+searchFields="FactoryName,FactoryCode" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="FactoryCode">lang.FactoryCode</field>
+      <field name="FactoryName">lang.FactoryName</field>
+
+    </fields>
+  </page>
+  <!--钢网列表-->
+  <page id="48" title="lang.SteelMeshList" recordIdField="SteelId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SteelMesh.BLL.SteelMesh"
+searchFields="SteelName,SteelCode,Position" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SteelCode">lang.SteelMeshCode</field>
+      <field name="SteelName">lang.SteelMeshName</field>
+      <field name="Position">lang.PartLocation</field>
+    </fields>
+  </page>
+  <!--班次列表-->
+  <page id="49" title="Pages.ShiftList" recordIdField="ShiftId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.ProductionShift.BLL.ProductionShift"
+searchFields="ShiftName" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ShiftName">lang.ShiftName</field>
+    </fields>
+  </page>
+
+  <!--工艺段列表-->
+  <page id="50" title="Pages.WorkSeqList" recordIdField="Id" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Schedule.BLL.Section"
+searchFields="WorkSEQ" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SectionCode">lang.SectionNO</field>
+    </fields>
+  </page>
+
+  <!--返工工单-->
+  <page id="51" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetReworkAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+  searchFields="[OrderNO],[OrderType],[Priority],A.[Status]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="OrderType">lang.OrderType</field>
+      <field name="Priority">lang.Priority</field>
+      <field name="Qty_to_Build">lang.Qty_to_Build</field>
+      <field name="Status">lang.Status</field>
+    </fields>
+  </page>
+  <!--线别仓列表-->
+  <page id="52" title="Pages.LineEdgeList" recordIdField="EdgeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MaterialDelivery.BLL.EdgeLine"
+  searchFields="[EdgeName],[Remark]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EdgeName">lang.EdgeName</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+  <!--分捡单列表-->
+  <page id="53" title="Pages.PickList" recordIdField="PickId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MaterialDelivery.BLL.PickMaterial"
+  searchFields="[PickCode],[LineName],[OrderNO]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PickCode">lang.PickCode</field>
+      <field name="LineName">lang.LineName</field>
+      <field name="OrderNO">lang.Location</field>
+    </fields>
+  </page>
+  <!--设备列表-->
+  <page id="54" title="Pages.MachineModelList" recordIdField="EquipmentId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.Equipments"
+  searchFields="[EquipmentCode],[EquipmentName],[EquipmentModel]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentCode">lang.EquipmentCode</field>
+      <field name="EquipmentName">lang.EquipmentName</field>
+      <field name="EquipmentModel">lang.EquipmentModels</field>
+      <field name="LineName">lang.LineName</field>
+      <field name="LineID">lang.LineID</field>
+    </fields>
+  </page>
+  <!--保养项目列表-->
+  <page id="55" title="Pages.Maintenance_MaintenanceDemoList" recordIdField="DemoId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Maintenance.BLL.MaintenanceDemo"
+  searchFields="[DemoCode],[DemoName],[Description]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DemoCode">lang.MaintenanceDemoNO</field>
+      <field name="DemoName">lang.MaintenanceDemoName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--工装夹具列表-->
+  <page id="56" title="Pages.JigList" recordIdField="JigTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Jig.BLL.JigType"
+  searchFields="[TypeCode],[TypeName],[Remark]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="TypeCode">lang.JigTypeCode</field>
+      <field name="TypeName">lang.FeederTypeName</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+  <!--陆文元20151216新增部件列表-->
+  <page id="57" title="Pages.PartNameList" recordIdField="PartNameId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.PackPrint.BLL.ShipmentListPartName"
+      searchFields="[PartName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PartNameId">lang.PartNameId</field>
+      <field name="PartName">lang.PartName</field>
+    </fields>
+  </page>
+  <!--ZPL-->
+  <page id="58" title="Pages.Labels_LabelZPLList" recordIdField="LabelZplId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Labels.BLL.LabelZPL"
+searchFields="[ZplName],[Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ZplName">lang.ZPLName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--陆文元2016-01-30供应商物料列表-->
+  <page id="59" title="供应商物料列表" recordIdField="ItemId" selectMethod="GetAllItemByVendor" selectCountMethod="GetVendorItemCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+        searchFields="ItemCode,[ItemName],ItemSpec" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="itemname">lang.MaterialName</field>
+      <field name="ItemSpec">lang.ItemSpec</field>
+    </fields>
+  </page>
+
+  <!--待处理的收货单列表-->
+  <page id="60" title="Pages.Material_IQCFormAttend" recordIdField="PO" selectMethod="GetWaitAttendIQCForm" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.IQCBatch"
+   searchFields="PO" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PO">lang.IQCFormNO</field>
+    </fields>
+  </page>
+
+  <!--供应商列表（登录的用户拥有的供应商列表）陆文元 2016-02-19-->
+  <page id="61" title="Pages.Supplier_SupplierList" recordIdField="SupplierId" selectMethod="GetAllSuppliersByUserId" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierUsers"
+   searchFields="[VendorCode],[VendorName]" returnFields="1,2" defaultSortExpression="VendorCode" returnMethod="">
+    <fields>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.VendorName</field>
+      <field name="Site">lang.FactoryCode</field>
+    </fields>
+  </page>
+
+  <!--工单Bom列表（用于物料发料）陆文元 2016-02-23-->
+  <page id="62" title="Pages.MOCode" recordIdField="MOCode" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.ErpModtl"
+   searchFields="MOCode" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOCode">lang.MOCode</field>
+    </fields>
+  </page>
+  <!--可打印物料条码的IQC检验单列表 陆文元 2016-02-23- -->
+  <page id="63" title="Pages.Material_IQCFormList" recordIdField="ID" selectMethod="GetWaitPrintIQCForm" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.IQCBatch"
+   searchFields="[cCode], [dDate], [cVenCode], [cpocode]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Code">lang.ERPArrivalVouchCode</field>
+      <field name="Date">lang.DateOfArrival</field>
+      <field name="VenCode">lang.VendorCode</field>
+      <field name="POCode">lang.OrderFormNO</field>
+    </fields>
+  </page>
+  <!--调入调出仓库（用于物料调拨）luwenyuan2016-02-26-->
+  <page id="64" title="Pages.BasalWarehouse" recordIdField="ID" selectMethod="GetWareHouseTransferOut" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.TransferOut"
+  searchFields="[CWhCode],[CWhName]" returnFields="1,2,3" defaultSortExpression="CWhCode" returnMethod="">
+    <fields>
+      <field name="WareHouseCode">lang.WarehouseCode</field>
+      <field name="WareHouseName">lang.WarehouseName</field>
+      <field name="IsBinStr">lang.IsBin</field>
+    </fields>
+  </page>
+  <!--陆文元2016-03-15由工单查询得到工单用料列表-->
+  <page id="65" title="工单用料列表" recordIdField="MaterialRequestId" selectMethod="GetErpModtlPrepareMat" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+        searchFields="MOCode,ItemCode,ItemName" returnFields="1,2,3,4,5,6,7,8,9" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOCode">lang.MOCode</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="RequestQty">lang.RequestQty</field>
+      <field name="ResponseQty">lang.ResponseQty</field>
+      <field name="moid">lang.moid</field>
+      <field name="modtlid">lang.modtlid</field>
+      <field name="modtlno">lang.modtlno</field>
+      <field name="ItemID">lang.ItemID</field>
+    </fields>
+  </page>
+  <!--备料单列表-->
+  <page id="66" title="Pages.Material_PrepareMatFormLists" recordIdField="PMID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.PrepareMatForm"
+		searchFields="PMCode,MOCode,DepName,WhName,CreateBy,CreateDateTime" returnFields="1,2,3,4,5,6" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PMCode">lang.PMCode</field>
+      <field name="MOCode">lang.MaterialOrderNumber</field>
+      <field name="DepName">lang.PrepareDeptName</field>
+      <field name="WhName">lang.PrepareWhCode</field>
+      <field name="CreateBy">lang.Creator</field>
+      <field name="CreateDateTime">lang.CreateDateTime</field>
+    </fields>
+  </page>
+  <!--不良代码类型-->
+  <page id="67" title="Pages.NCCode_NCGroupList" recordIdField="NCGroupId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.NCCode.BLL.NCGroup"
+		searchFields="NCGroupName" returnFields="1,2" defaultSortExpression="NCGroupId" returnMethod="">
+    <fields>
+      <field name="NCGroupName">lang.NCGroupName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--报表简易设计器-->
+  <page id="68" title="Pages.ReportTable" recordIdField="DesignMasterID" selectMethod="GetAll"
+    selectCountMethod="GetCount" typeName="SKT.LeanMES.Report.BLL.DesignMaster"
+    searchFields="TableName,ReportName,TableDbType" returnFields="1,2,3" defaultSortExpression="DesignMasterID" returnMethod="">
+    <fields>
+      <field name="TableName">lang.TableName</field>
+      <field name="ReportName">lang.Description</field>
+      <field name="TableDbType">lang.DataType</field>
+    </fields>
+  </page>
+
+  <!--看板设计的容器获取-->
+  <page id="69" title="Pages.KanbanContainer" recordIdField="KanbanContainerId" selectMethod="GetAllContainer"
+    selectCountMethod="GetCount" typeName="SKT.LeanMES.Kanban.BLL.Master"
+    searchFields="ContainerName,Remark,LayoutType" returnFields="1,2,3" defaultSortExpression="KanbanContainerId" returnMethod="">
+    <fields>
+      <field name="ContainerName">lang.KanbanContainerName</field>
+      <field name="Remark">lang.Description</field>
+      <field name="LayoutType">lang.LayoutType</field>
+    </fields>
+  </page>
+
+  <!--看板设计的容器种类获取-->
+  <page id="70" title="Pages.KanbanContainer" recordIdField="ContainerTypeId" selectMethod="GetContainerType"
+    selectCountMethod="GetCount" typeName="SKT.LeanMES.Kanban.BLL.Master"
+    searchFields="LayoutType,Remark,IconSrc" returnFields="1,2,3" defaultSortExpression="ContainerTypeId" returnMethod="">
+    <fields>
+      <field name="LayoutType">lang.LayoutType</field>
+      <field name="Remark">lang.Description</field>
+      <field name="IconSrc">Icon</field>
+    </fields>
+  </page>
+
+
+  <!--看板设计的控件获取-->
+  <page id="71" title="Pages.KanbanComponent" recordIdField="KanbanComponentId" selectMethod="GetAllComponent"
+    selectCountMethod="GetCount" typeName="SKT.LeanMES.Kanban.BLL.Master"
+    searchFields="ComponentName,Remark" returnFields="1,2" defaultSortExpression="KanbanComponentId" returnMethod="">
+    <fields>
+      <field name="ComponentName">lang.ComponentName</field>
+      <field name="Remark">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--供应商物料列表-->
+  <page id="72" title="Pages.Material_MaterialUnitListSuply" recordIdField="ItemId" selectMethod="GetAllItemByVendor" selectCountMethod="GetVendorItemCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+		  searchFields="ItemCode,[ItemName]" returnFields="1,2,3,4,5,6" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="itemname">lang.ItemName</field>
+      <field name="BuyQty">lang.Qty</field>
+      <field name="RowID">lang.PoOrderRowNo</field>
+      <field name="MinPackQty">lang.MinPackQty</field>
+      <field name="ItemSpec">lang.ItemModel</field>
+    </fields>
+  </page>
+  <!--品质检验规则-->
+  <page id="73" title="Pages.QC_InspectionRuleList" recordIdField="InspectionRuleId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Quality.BLL.InspectionRule"
+  searchFields="[InspectionRuleName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionRuleId">lang.InspectionRuleId</field>
+      <field name="InspectionRuleName">lang.InspectionRuleName</field>
+    </fields>
+  </page>
+  <!--品质检验项-->
+  <page id="74" title="Pages.QC_InspectionItemList" recordIdField="InspectionItemId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Quality.BLL.InspectionItem"
+  searchFields="[InspectionItemName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionItemId">lang.InspectionItemId</field>
+      <field name="InspectionItemName">lang.InspectionItemName</field>
+    </fields>
+  </page>
+
+  <!--检验单-->
+  <page id="75" title="Pages.InspectionTemplate" recordIdField="InspectionTemplateId" selectMethod="GetAll" selectCountMethod="GetCount"
+		  typeName="SKT.LeanMES.Quality.BLL.InspectionTemplate"
+	  searchFields="[InspectionTemplateName],[InspectionTypeName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionTemplateName">lang.InspectionTemplateName</field>
+      <field name="InspectionTypeName">lang.InspectionTypeName</field>
+      <field name="InspectionTypeId">lang.InspectionTypeId</field>
+    </fields>
+  </page>
+
+  <!--AQL规则-->
+  <page id="76" title="Pages.AQLRule" recordIdField="AQLRuleId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Quality.BLL.AQLRule"
+	searchFields="RuleName,AQLRuleTypeName" returnFields="1,2" defaultSortExpression="RuleName" returnMethod="">
+    <fields>
+      <field name="RuleName">lang.RuleName</field>
+      <field name="AQLRuleTypeName">lang.TypeName</field>
+    </fields>
+  </page>
+  <!--IQC检验列表-->
+  <page id="77" title="Pages.Material_IQCFormList" recordIdField="InspectionId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialIQC"
+searchFields="InspectionNo,POCode,ItemCode,SuplierCode,Remark" returnFields="1,2,3,4,5,6,7,8,9,10" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionNo">lang.InspectionOrderNo</field>
+      <field name="UrgentName">lang.Priority</field>
+      <field name="POCode">lang.PONO</field>
+      <field name="InspectionQty">lang.Qty</field>
+      <field name="ItemCode">lang.MaterialCode</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="SuplierCode">lang.VendorCode</field>
+      <field name="IsGRN">lang.HaveGRN</field>
+      <field name="Remark">lang.Remark</field>
+      <field name="QualifiedQty">lang.ValidQuantity</field>
+    </fields>
+  </page>
+
+  <!--生产投料单-->
+  <page id="81" title="lang.ERP_MODtl" recordIdField="MOID" selectMethod="MaterialApplySelMO" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+      searchFields="MOCode,ItemCode,ItemName" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOCode">lang.MOCode</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="itemname">lang.ItemName</field>
+      <field name="StartTime">lang.PlanCommitDate</field>
+    </fields>
+  </page>
+  <!--工单用料列表-->
+  <page id="82" title="工单用料列表" recordIdField="MODtlID" selectMethod="MaterialApplySelItem" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+      searchFields="MOCode,ItemCode,ItemName" returnFields="1,2,3,4,5,6,7,8" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOID">lang.MOID</field>
+      <field name="MODtlNO">lang.MODtlNO</field>
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="AuxQtyMust">lang.AuxQtyMust</field>
+      <field name="AuxStockQty">lang.AuxStockQty</field>
+      <field name="Qty">lang.StockQty</field>
+      <field name="ApplyQtySum">lang.ApplyQtySum</field>
+    </fields>
+  </page>
+  <!--领料单列表-->
+  <page id="83" title="Pages.Material_MaterialRequestList" recordIdField="ApplyId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+    searchFields="ApplyNo,MOCode,DepName,WhName" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ApplyNo">lang.ApplyNo</field>
+      <field name="MOCode">lang.MOCode</field>
+      <field name="DepName">lang.DepartmentName</field>
+      <field name="WhName">lang.WarehouseName</field>
+    </fields>
+  </page>
+
+  <!--生产投料单-->
+  <page id="81" title="lang.ERP_MODtl" recordIdField="MOID" selectMethod="MaterialApplySelMO" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+      searchFields="MOCode,ItemCode,ItemName" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOCode">lang.MOCode</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="itemname">lang.ItemName</field>
+      <field name="StartTime">lang.PlanCommitDate</field>
+    </fields>
+  </page>
+  <!--工单用料列表-->
+  <page id="82" title="工单用料列表" recordIdField="MODtlID" selectMethod="MaterialApplySelItem" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+      searchFields="MOCode,ItemCode,ItemName" returnFields="1,2,3,4,5,6,7,8" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MOID">lang.MOID</field>
+      <field name="MODtlNO">lang.MODtlNO</field>
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="AuxQtyMust">lang.AuxQtyMust</field>
+      <field name="AuxStockQty">lang.AuxStockQty</field>
+      <field name="Qty">lang.StockQty</field>
+      <field name="ApplyQtySum">lang.ApplyQtySum</field>
+    </fields>
+  </page>
+  <!--领料单列表-->
+  <page id="83" title="Pages.Material_MaterialRequestList" recordIdField="ApplyId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+    searchFields="ApplyNo,MOCode,DepName,WhName" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ApplyNo">lang.ApplyNo</field>
+      <field name="MOCode">lang.MOCode</field>
+      <field name="DepName">lang.DepartmentName</field>
+      <field name="WhName">lang.WarehouseName</field>
+    </fields>
+  </page>
+
+  <!--仓库管理中数据源使用到的数据源 请不要删除 修改 add by weixia on 2016.9.3-->
+  <!--供应商物料条码打印,物料条码打印的采购订单：过滤已经打印完成的采购订单-->
+  <page id="101" title="lang.POorderList" recordIdField="POID" selectMethod="SupplierDeliveryPONotPrintComplete" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+	  searchFields="[POCode],[VendorCode],[VendorName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+    </fields>
+  </page>
+
+  <!--物料条码打印的IQC检验单-->
+  <page id="102" title="Pages.Material_IQCFormList" recordIdField="InspectionId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialIQC"
+searchFields="InspectionNo,UrgentName,POCode,InspectionQty,ItemCode,SuplierCode,Remark" returnFields="1,2,3,4,5,6,7,8" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionNo">lang.InspectionOrderNo</field>
+      <field name="UrgentName">lang.Priority</field>
+      <field name="POCode">lang.PONO</field>
+      <field name="InspectionQty">lang.Qty</field>
+      <field name="ItemCode">lang.MaterialCode</field>
+      <field name="SuplierCode">lang.VendorCode</field>
+      <field name="Site">lang.FactoryCode</field>
+      <field name="VendorName">lang.VendorName</field>
+      <!--<field name="IsGRN">lang.HaveGRN</field>-->
+      <field name="HaveGRN">lang.HaveGRN</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+  <!--仓库可正常操作的采购订单-->
+  <page id="103" title="lang.POorderList" recordIdField="POID" selectMethod="SupplierDeliveryPO" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+		  searchFields="[POCode],[VendorCode],[VendorName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+    </fields>
+  </page>
+
+  <!--仓库收料的到货单-->
+  <page id="104" title="lang.ERPArrivalVouchList" recordIdField="POID" selectMethod="ReceiveInStock" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+			  searchFields="[POCode],[VendorCode],[VendorName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+    </fields>
+  </page>
+
+  <!--仓库收料的送货单-->
+  <page id="105" title="lang.SendDeliverList" recordIdField="POID" selectMethod="ReceiveDeliverPO" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+			  searchFields="[POCode],[VendorCode],[VendorName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.DeliverNo</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+    </fields>
+  </page>
+
+  <!--供应商交期维护选择采购订单-->
+  <page id="106" title="lang.POorderList" recordIdField="POID" selectMethod="SupplierDeliveryPO" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+		  searchFields="[POCode],[VendorCode],[VendorName],[PurDate]" returnFields="1,2,3,4,5" defaultSortExpression=" PurDate DESC" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+      <field name="PurDate">lang.PurDate</field>
+    </fields>
+  </page>
+
+  <!--产品BOM列表// MES8.5// BirongLiang@2016-11-01-->
+  <page id="108" title="Pages.Product_BomList" recordIdField="ItemBomId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemBom"
+  searchFields="[BomName],[ItemName],[Version],[IsCurrentVer]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="BomName">lang.BomName</field>
+      <field name="ItemName">lang.Description</field>
+      <field name="Version">lang.Revision</field>
+      <field name="IsCurrentVer">lang.IsCurrentRev</field>
+    </fields>
+  </page>
+
+  <!--产品BOM关联的子表物料列表-->
+  <page id="109" title="Pages.Product_ItemList" recordIdField="ItemBomChildId" selectMethod="GetChildInfoAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemBomChild"
+   searchFields="[ItemCode],[ItemName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="Units">lang.PartUnit</field>
+    </fields>
+  </page>
+
+  <!--产品BOM关联的子表物料列表-->
+  <page id="110" title="Pages.Product_CategoryList" recordIdField="ItemCategoryId" selectMethod="GetCategoryAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemCategory"
+   searchFields="[CategoryName],[ParentName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCategoryId">lang.Sequence</field>
+      <field name="CategoryName">lang.CategoryName</field>
+      <field name="ParentName">lang.ParentCategoryName</field>
+    </fields>
+  </page>
+
+  <!--走货单号-->
+  <page id="111" title="Pages.ShippingOrderNumber" recordIdField="ID" selectMethod="GetAllSoOrder" selectCountMethod="GetCount" typeName="SKT.LeanMES.ProductionCollection.ProdCollectBinding"
+  searchFields="Code" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ID">lang.Sequence</field>
+      <field name="Code">Pages.ShippingOrderNumber</field>
+    </fields>
+  </page>
+
+  <!--根据工单，工序，获取物料// MES8.5// BirongLiang@2016-11-17-->
+  <!--使用：手动上料UI-->
+  <page id="112" title="lang.MaterialList" recordIdField="ItemID" selectMethod="GetItemInMenCall" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.OrderBom"
+   searchFields="ItemCode,ItemName,Station " returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <field name="Station">lang.Station</field>
+    </fields>
+  </page>
+
+  <!--End-->
+
+
+
+  <!--不良代码列表-->
+  <page id="113" title="Pages.NCCode_NCCodeList" recordIdField="NCCodeID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.NCCode.BLL.NCCode"
+		searchFields="NCCode" returnFields="1,2" defaultSortExpression="NCCodeID" returnMethod="">
+    <fields>
+      <field name="NCCode">lang.NCCode</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--SPC项目列表-->
+  <page id="114" title="lang.ProjectName" recordIdField="SPCProjectId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SPC.BLL.SPCProject"
+		searchFields="ProjectName,GraphType" returnFields="1,2" defaultSortExpression="SPCProjectId" returnMethod="">
+    <fields>
+      <field name="ProjectName">lang.ProjectName</field>
+      <field name="GraphType">lang.GraphType</field>
+      <field name="ProjectDesc">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--系统通用数据源列表、SDP_DataSource-->
+  <page id="115" title="lang.DataSource" recordIdField="DataSourceID" selectMethod="GetAll"
+        selectCountMethod="GetCount" typeName="SKT.LeanMES.CommonDataSource.BLL.DataSource"
+        searchFields="DataSourceName,DataSourceDesc,SQLType,UseType" returnFields="1,2,3,4,5" defaultSortExpression="DataSourceID" returnMethod="">
+    <fields>
+      <field name="DataSourceName">lang.DataSourceName</field>
+      <field name="DataSourceDesc">lang.Description</field>
+      <field name="SQLType">lang.SQLType</field>
+      <field name="UseType">lang.UseType</field>
+      <field name="SQLInfo">lang.SQLInfo</field>
+
+    </fields>
+  </page>
+
+  <!--带线别工单-->
+  <page id="116" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+searchFields="[OrderNO],[OrderType],[Priority],[ItemCode],[Status]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="LineName">lang.LineName</field>
+      <field name="Priority">lang.Priority</field>
+      <field name="Qty_to_Build">lang.Qty_to_Build</field>
+      <field name="ItemCode">lang.ItemCode</field>
+
+      <!--<field name="Status">lang.Status</field>-->
+    </fields>
+  </page>
+
+  <!--仓库库位列表-->
+  <page id="117" title="Pages.Warehouse_WarehouseLocaion" recordIdField="WarehouseLocationId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseLocation"
+     searchFields="CBarCode,CWhCode,CWhName" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CWhCode">lang.WarehouseCode</field>
+      <field name="CWhName">lang.WarehouseName</field>
+      <field name="CBarCode">lang.WarehouseBarCode</field>
+    </fields>
+  </page>
+
+  <!--退料到供应商-退料单选择-->
+  <page id="118" title="Pages.ReturnOrder" recordIdField="ReturnToVendorID" selectMethod="GetRtvOrderList" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.ReturnToVendor"
+     searchFields="[ReturnOrder], [CreateDateTime]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ReturnOrder">lang.ReturnOrder</field>
+      <field name="CreateDateTime">lang.CreateTime</field>
+    </fields>
+  </page>
+
+  <!--ERP备货单选择-->
+  <page id="119" title="Pages.SalOrder" recordIdField="DNCode" selectMethod="Search" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseCpOutStock"
+     searchFields="[DNCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DNCode">lang.DNCode</field>
+    </fields>
+  </page>
+  <!--MES备货单选择-->
+  <page id="120" title="Pages.SalOrder" recordIdField="SalOrderID" selectMethod="Searchmes" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseCpOutStock"
+   searchFields="[DNCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DNCode">lang.DNCode</field>
+    </fields>
+  </page>
+  <!--二次开发模板-->
+  <page id="121" title="lang.SecondUIModel" recordIdField="ModelId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Web.AjaxServices.AjaxSDP"
+		searchFields="ModelName" returnFields="1,2" defaultSortExpression="ModelId" returnMethod="">
+    <fields>
+      <field name="ModelId">lang.ModelId</field>
+      <field name="ModelName">lang.ModelName</field>
+      <field name="Content">lang.Content</field>
+    </fields>
+  </page>
+  <!--车间选择-->
+  <page id="122" title="lang.WorkShopName" recordIdField="WorkShopID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.WorkShop.BLL.WorkShop"
+		searchFields="WorkShopName,ShiftName" returnFields="1,2" defaultSortExpression="WorkShopID" returnMethod="">
+    <fields>
+      <field name="WorkShopName">lang.WorkShopName</field>
+      <field name="ShiftName">lang.ShiftName</field>
+    </fields>
+  </page>
+
+  <!--二次开发模板 PDA-->
+  <page id="123" title="lang.SecondUIModel" recordIdField="ModelTempId" selectMethod="GetPDAAllModel" selectCountMethod="GetCount" typeName="SKT.LeanMES.Web.AjaxServices.AjaxSDP"
+		searchFields="ModelName" returnFields="1,2,3" defaultSortExpression="ModelTempId" returnMethod="">
+    <fields>
+      <field name="ModelTempId">lang.ModelId</field>
+      <field name="ModelName">lang.ModelName</field>
+      <field name="Url">lang.Url</field>
+    </fields>
+  </page>
+
+  <!--因为其他分支的ChoosePage顺序递增，导致合并后的ChoosePage_ID重复。
+      所以主版本新增的ChoosePage_ID现在中间留些间隔，
+      从200开始，请知悉-->
+  <!--盘点单-->
+  <page id="200" title="Pages.CheckOrder" recordIdField="ProdWarehouseCheckId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.WarehouseCheckOrder"
+   searchFields="[CheckOrder],[CheckOrderName],[CheckType],[BeginTime],Remark" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CheckOrder">lang.CheckOrder</field>
+      <field name="CheckOrderName">lang.CheckOrderName</field>
+      <field name="CheckType">lang.CheckType</field>
+      <field name="BeginTime">lang.WareCheckPlanTime</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+
+  <!--退料IQC列表-->
+  <page id="201" title="退料IQC列表" recordIdField="InspectionNo" selectMethod="GetIqcReturnAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialIQC"
+	  searchFields="[InspectionNo],[DeliverNo],[POCode],[ItemCode]" returnFields="1,2,3,4,5,6,7,8,9" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionNo">lang.IQCFormNO</field>
+      <field name="DeliverNo">lang.DeliverNo</field>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.VendorName</field>
+      <field name="SentQty">lang.ReceiveQty</field>
+      <field name="NgQty">lang.ReturnQtys</field>
+    </fields>
+  </page>
+
+  <!--仓库中的itemCode-->
+  <page id="202" title="仓库物料编码" recordIdField="ErpItemId" selectMethod="GetItemCodeInWarehouse" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Material"
+    searchFields="[ItemCode],[ItemName],[ItemSpec]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="ItemSpec">lang.ItemSpec</field>
+    </fields>
+  </page>
+
+
+  <page id="203" title="采购单物料" recordIdField="ItemID" selectMethod="GetItemInPurOrder" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+  searchFields="[ItemName],[ItemCode]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+    </fields>
+  </page>
+
+  <page id="204" title="生产退料单" recordIdField="ReturnOrderNo" selectMethod="GetProdReturnOrder" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Material"
+searchFields="[ReturnOrderNo],[DepartName],[CreateDateTime]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ReturnOrderNo">lang.ReturnOrder</field>
+      <field name="DepartName">lang.DepartmentName</field>
+      <field name="CWhName">lang.WarehouseName</field>
+      <field name="CreateDateTime">lang.CreateTime</field>
+    </fields>
+  </page>
+
+  <!--工单用料列表-->
+  <page id="205" title="工单用料列表" recordIdField="ItemID" selectMethod="MaterialApplySelItem" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Apply"
+      searchFields="ItemCode,ItemName" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <!--<field name="MOID">lang.MOID</field>-->
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+      <!--<field name="Qty">lang.StockQty</field>
+      <field name="ApplyQtySum">lang.ApplyQtySum</field>-->
+    </fields>
+  </page>
+  <!--备料清单物料（JIT电子备料清单使用）-->
+  <page id="206" title="Pages.Product_ItemList" recordIdField="ItemId" selectMethod="GetStockListMaterial" selectCountMethod="GetCount" typeName="SKT.LeanMES.Plan.BLL.StockList"
+      searchFields="ItemCode,ItemName" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.MaterialSN</field>
+      <field name="ItemName">lang.MaterialName</field>
+    </fields>
+  </page>
+
+  <!--退料单的明细-->
+  <page id="207" title="生产退料单明细" recordIdField="ERPReBillID" selectMethod="GetReturnOrderDetail" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Material"
+    searchFields="[ReturnOrderNo],[ItemCode],[ReturnQty],[ReceiveQty]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ERPReBillID">lang.Sequence</field>
+      <field name="ReturnOrderNo">lang.ReturnOrder</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ReturnQty">lang.ReturnQtys</field>
+      <field name="ReceiveQty">lang.ReceiveQty</field>
+    </fields>
+  </page>
+
+
+  <!--8.5.0的ChoosePageID按顺序往下流，但是8.5.1的ChoosePageID请从500开始，防止之后的文件中ChoosePageID冲突-->
+  <!--8.5.1 page id 从500开始-->
+  <!--设备类型-->
+  <page id="500" title="Pages.MachineTypeList" recordIdField="EquipmentTypeCode" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentType"
+  searchFields="[EquipmentTypeCode]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentTypeCode">lang.EquipmentTypeCode</field>
+      <field name="EquipmentTypeName">lang.EquipmentTypeName</field>
+    </fields>
+  </page>
+  <!--线别设备类型-->
+  <page id="501" title="Pages.MachineLineRelationTypeList" recordIdField="EquipmentLineId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentLineRelation"
+searchFields="[EquipmentLineType]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentLineType">lang.EquipmentLineType</field>
+    </fields>
+  </page>
+
+  <!--加工物料页面-->
+  <page id="502" title="Pages.MaterialMoldingList" recordIdField="MoldingMemberId" selectMethod="GetAllMember" selectCountMethod="GetCount" typeName="SKT.LeanMES.Molding.BLL.MaterialMolding"
+  searchFields="MachineTypeName,SourceItemName" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MachineTypeName">lang.ProcessName</field>
+      <field name="SourceItemName">lang.SourceItemName</field>
+      <field name="TargetItemName">lang.TargetItemName</field>
+      <field name="Usage">lang.Usage</field>
+      <field name="Location">lang.Location</field>
+      <field name="Specification">lang.Specification</field>
+    </fields>
+  </page>
+  <!--辅料类别-->
+  <page id="503" title="Pages.AccessoryTypeList" recordIdField="AccessoryTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.AccessoryManagement.BLL.AccessoryType"
+searchFields="[AccessoryTypeName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="AccessoryTypeId">lang.AccessoryTypeId</field>
+      <field name="AccessoryTypeName">lang.AccessoryTypeName</field>
+    </fields>
+  </page>
+  <!--辅料列表-->
+  <page id="504" title="Pages.AccessoryList" recordIdField="Id" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.AccessoryManagement.BLL.AccessoryList"
+searchFields="[AccessoryCode],[AccessoryName]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="AccessoryCode">lang.AccessoryCode</field>
+      <field name="AccessoryName">lang.AccessoryName</field>
+      <field name="AccessoryTypeName">lang.AccessoryTypeName</field>
+      <field name="AccessoryType">lang.AccessoryType</field>
+      <field name="UnitName">lang.PartUnit</field>
+    </fields>
+  </page>
+  <!--根据产品Id找到Bom，并显示Bom下面的所有物料-->
+  <page id="505" title="Pages.Product_ItemList" recordIdField="ItemId" selectMethod="GetAllByBomItemId" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemBomChild"
+   searchFields="[ItemCode],[ItemName]" returnFields="1,2,3"  defaultSortExpression="ItemId" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="Units">lang.PartUnit</field>
+    </fields>
+  </page>
+  <!--送货单物料列表 //2017-09-09 ,wenshun ,到货单打印功能，创维专利，正式版本不需要, 留下506的序号，后面加的请从507开始
+  <page id="506" title="Pages.DeliverUnitListSuply" recordIdField="ItemId" selectMethod="GetAllItemByPOInStockNo" selectCountMethod="GetVendorItemCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+		  searchFields="ItemCode,[ItemName]" returnFields="1,2,3,4,5,6,7,8" defaultSortExpression="ItemId" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="itemname">lang.ItemName</field>
+      <field name="BuyQty">lang.Qty</field>      
+      <field name="RowID">lang.RowID</field>
+      <field name="MinPackQty">lang.MinPackQty</field>
+      <field name="POQty">lang.POQty</field>
+      <field name="POOrder">lang.OrderFormNO</field>
+      <field name="LotCode">lang.LotCode</field>
+      <field name="ItemSpec">lang.ItemModel</field>
+    </fields>
+  </page>  留下506的序号，后面加的请从507开始-->
+  <!--工具列表-->
+  <page id="507" title="工具列表" recordIdField="PartId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Sparepart.BLL.Sparepart"
+		  searchFields="[PartName],[PartNickName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PartName">lang.GJName</field>
+      <field name="PartNickName">lang.GJCode</field>
+    </fields>
+  </page>
+  <!--Express-->
+  <!--物料DateCode-->
+  <page id="601" title="Pages.MaterialDateCode" recordIdField="DateCode" selectMethod="GetMaterialDateCode" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+  searchFields="[DateCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DateCode">lang.DateCode</field>
+    </fields>
+  </page>
+  <!--物料LotCode-->
+  <page id="602" title="Pages.MaterialLotCode" recordIdField="LotCode" selectMethod="GetMaterialLotCode" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+searchFields="[LotCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="LotCode">lang.LotCode</field>
+    </fields>
+  </page>
+
+  <!--获取MSD 产品列表-->
+  <page id="603" title="Pages.Product_ItemList" recordIdField="ItemID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MSD.BLL.MsdMateriel"
+ searchFields="[ItemCode],[ItemName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="MsdLevel">lang.MsdLevel</field>
+      <field name="BakeCount">lang.BakeCount</field>
+      <field name="FloorLife">lang.FloorLife</field>
+    </fields>
+  </page>
+
+  <!--获取MSD 产品列表-->
+  <page id="604" title="Pages.Production_MslList" recordIdField="MslId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MSD.BLL.Msl"
+ searchFields="[MSL],[FloorLife]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="MSL">lang.MSL</field>
+      <field name="FloorLife">lang.FloorLife</field>
+      <field name="ShelfLife">lang.ShelfLife</field>
+      <field name="BakeCount">lang.BakeCount</field>
+
+    </fields>
+  </page>
+
+  <!--获取烤箱 产品列表-->
+  <page id="605" title="Pages.Production_MsdContainerList" recordIdField="MsdContainerId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MSD.BLL.MsdContainer"
+ searchFields="[ContainerCode],[ContainerName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ContainerName">lang.ContainerNameNew</field>
+      <field name="ContainerCode">lang.ContainerCodeNew</field>
+      <!--<field name="MaxTemp">lang.MaxTemp</field>
+      <field name="MinTemp">lang.MinTemp</field>-->
+      <field name="MaxQty">lang.MaxQty</field>
+      <field name="UseQty">lang.UseQtyNew</field>
+    </fields>
+  </page>
+  <!--物料供应商（QHold使用） -->
+  <page id="606" title="Pages.MaterialLotCode" recordIdField="VendorCode" selectMethod="GetMaterialVendorCode" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.MaterialUnit"
+searchFields="[VendorCode],[VendorName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.VendorName</field>
+    </fields>
+  </page>
+  <!--工单 所有状态工单-->
+  <page id="607" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetAllNoLine" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+searchFields="[OrderNO],[ItemCode],ItemName" returnFields="1,2,3,4,5,6,7" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="Qty_to_Build">lang.Qty_to_Build</field>
+      <field name="Priority">lang.Priority</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="ItemId">lang.ItemID</field>
+      <field name="CPN">lang.CustomerPartNumber</field>
+    </fields>
+  </page>
+  <!--根据ItemCode筛选PO单-->
+  <page id="608" title="lang.POorderList" recordIdField="POID" selectMethod="GetPODtl" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+		  searchFields="[POCode]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="ItemCode">lang.ItemCode</field>
+    </fields>
+  </page>
+  <!--设备管理-->
+
+
+
+  <page id="609" title="Pages.EquipmentPositionList" recordIdField="EquipmentPositionId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentPosition"
+  searchFields="[PositionName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PositionName">lang.PartLocation</field>
+    </fields>
+  </page>
+  <!--保质期方案下拉 2017-11-09 zhuchenglong-->
+  <page id="610" title="" recordIdField="ExpirationDateId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ExpirationDate"
+  searchFields="[ExpirationDateName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ExpirationDateName">保质期方案名称</field>
+    </fields>
+  </page>
+
+
+  <!--备件下拉2-->
+  <page id="670" title="Pages.PartNameList" recordIdField="PartId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.Part"
+  searchFields="[PartCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PartCode">lang.PartCode</field>
+    </fields>
+  </page>
+
+
+
+  <!--领用/归还原因-->
+  <page id="671" title="Pages.UseReturn" recordIdField="EquipmentUseReasonsId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentUseReasons"
+  searchFields="[Content]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentUseReasonsId">编码</field>
+      <field name="Content">lang.Content</field>
+    </fields>
+  </page>
+  <!--备件下拉  update zx 20171018 GetAllPartEqu更新为GetAllPartEquNew-->
+  <page id="672" title="Pages.PartNameList" recordIdField="PartId" selectMethod="GetAllPartEquNew" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.Part"
+  searchFields="[PartCode], [EquipmentCode]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PartCode">lang.PartCode</field>
+      <field name="PartName">lang.myPartName</field>
+    </fields>
+  </page>
+  <!--校验项目-->
+  <page id="673" title="Pages.PartNameList" recordIdField="CheckOutProjectId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.CheckOutProject"
+  searchFields="[CheckOutProjectName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CheckOutProjectId">校验ID</field>
+      <field name="CheckOutProjectName">lang.CheckOutProjectName</field>
+    </fields>
+  </page>
+  <!--重检单 zhucl 2017-11-13-->
+  <page id="674" title="Pages.ExpiredDateList" recordIdField="ReinspectionNo" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Reinspection"
+searchFields="[ReinspectionNo]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ReinspectionNo">lang.ReinspectionNo</field>
+    </fields>
+  </page>
+  <!--保养计划 zx 2017-11-24-->
+  <page id="675" title="Pages.Maintenance_MaintenancePlanList" recordIdField="MaintenancePlanId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Maintenance.BLL.MaintenancePlan"
+searchFields="PlanName" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="PlanName">lang.PlanName</field>
+      <field name="MaintainWayStr">lang.MaintainWay</field>
+      <field name="CycleTypeStr">lang.CycleType</field>
+      <field name="CycleTime">lang.CycleTime</field>
+      <field name="Usage">lang.EquipmentUsedTimes</field>
+      <field name="PrewarningStr">lang.PreWarning</field>
+      <field name="MaintainPerson">lang.MaintainActionPerson</field>
+      <field name="WarningTo">lang.PreWarningReceivePerson</field>
+    </fields>
+  </page>
+  <!--获取导入数据配置列表-->
+  <page id="676" title="Pages.ImportExcelConfigList" recordIdField="ID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.CommonDataSource.BLL.ImportDataConfig"
+ searchFields="[IdcName],[ProcName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="IdcName">lang.IdcName</field>
+      <field name="ProcName">lang.ProcedureOrBusinessName</field>
+      <field name="FileNames">lang.FileName</field>
+
+    </fields>
+  </page>
+  <!--设备类型 zx 20171214-->
+  <page id="680" title="Pages.MachineTypeList" recordIdField="EquipmentTypeId" selectMethod="GetTypeAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentType"
+  searchFields="[EquipmentTypeCode],[EquipmentTypeName]" returnFields="1,2" defaultSortExpression=""  returnMethod="">
+    <fields>
+      <field name="EquipmentTypeCode">lang.EquipmentTypeCode</field>
+      <field name="EquipmentTypeName">lang.EquipmentTypeName</field>
+    </fields>
+  </page>
+
+  <!--导航组-->
+  <page id="700" title="Pages.NavigationGroup" recordIdField="ID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Navigation.BLL.Navigation"
+  searchFields="[NavigationgpName],[Sequence]" returnFields="1,2" defaultSortExpression="" returnMethid="">
+    <fields>
+      <field name="Sequence">lang.Sequence</field>
+      <field name="NavigationgpName">lang.NavigationgpName</field>
+    </fields>
+  </page>
+  <page id="701" title="Pages.Equipment_MouldList" recordIdField="EquipmentId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.Equipments"
+        searchFields="[EquipmentCode],[EquipmentName],[EquipmentModel]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentCode">lang.MouldCode</field>
+      <field name="EquipmentName">lang.MouldName</field>
+      <field name="EquipmentModel">lang.MouldModels</field>
+    </fields>
+  </page>
+  <page id="702" title="Pages.Anormal_TypeList" recordIdField="AnormalTypeId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Anormal.BLL.AnormalType"
+        searchFields="[AnormalTypeName],[AnormalTypeCode],[AnormalGroupName]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="AnormalTypeName">lang.AnormalName</field>
+      <field name="AnormalTypeCode">lang.AnormalCode</field>
+      <field name="AnormalGroupName">lang.AnormalTypeName</field>
+    </fields>
+  </page>
+  <page id="705" title="Pages.Equipment_MouldBomList" recordIdField="MouldBomId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.MoludBom"
+        searchFields="[BomName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="BomName">lang.MouldName</field>
+      <field name="InternalDiameter">lang.InternalDiameter</field>
+      <field name="ExternalDiameter">lang.ExternalDiameter</field>
+      <field name="Acreage">lang.Acreage</field>
+    </fields>
+  </page>
+  <!--构件列表-->
+  <page id="710" title="构件列表" recordIdField="MoldComponentId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.MoldComponent"
+        searchFields="[ComponentName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ComponentName">lang.MoldComponentName</field>
+
+    </fields>
+  </page>
+  <page id="712" title="公司列表" recordIdField="FactoryID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Factory.BLL.Factory"
+        searchFields="FactoryName,FactoryCode" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="FactoryCode">lang.CompanyCode</field>
+      <field name="FactoryName">lang.CompanyNames</field>
+
+    </fields>
+  </page>
+
+  <!--模具BOM列表-->
+  <page id="713" title="模具Bom列表" recordIdField="MouldBomId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.MoludBom"
+        searchFields="BomName" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="BomName">lang.BomName</field>
+
+    </fields>
+  </page>
+  <!--调拨管理add by Zhi.Li on 2018-06-06-->
+  <!--调拨出库，选择调拨单-->
+  <page id="801" title="Pages.TransfersStorage" recordIdField="TransfersId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Transfers.BLL.Transfers"
+			  searchFields="TransfersNo,TransfersTypeName,SourceNo" returnFields="1,2,3,4,5,6"  defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="TransfersNo">lang.TransfersNo</field>
+      <field name="TransfersTypeName">lang.TransfersType</field>
+      <field name="SourceNo">lang.SourceNo</field>
+      <field name="InWhouseName">lang.InWhouseName</field>
+      <field name="OutWhouseName">lang.OutWhouseName</field>
+      <field name="IsBin">lang.InIsBin</field>
+    </fields>
+  </page>
+  <!--查询系统表和视图-->
+  <page id="802" title="lang.DataSource" recordIdField="DataSourceID" selectMethod="GetSysobjectsAll"
+        selectCountMethod="GetCount" typeName="SKT.LeanMES.CommonDataSource.BLL.DataSource"
+        searchFields="DataSourceName,DataSourceType" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="DataSourceName">lang.DataSourceName</field>
+      <field name="DataSourceType">lang.SQLType</field>
+    </fields>
+  </page>
+  <!--超期不良调拨的重检单 add by  2018-06-21-->
+  <page id="803" title="Pages.ExpiredDateList" recordIdField="ReinspectionNo" selectMethod="GetAllTransfersCq" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.Reinspection"
+searchFields="[ReinspectionNo],CWhName,CWhCode" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ReinspectionNo">lang.ReinspectionNo</field>
+      <field name="NgQty">lang.NgQty</field>
+      <field name="OkQty">lang.OkQty</field>
+      <field name="CWhName">lang.WhName</field>
+      <field name="CWhCode">lang.WhCode</field>
+    </fields>
+  </page>
+
+  <!--报废管理add by Zhi.Li on 2018-07-04-->
+  <!--报废出库，选择报废单-->
+  <page id="804" title="Pages.ScrapOut" recordIdField="ScrapId" selectMethod="GetAllScanOut" selectCountMethod="GetCount" typeName="SKT.LeanMES.Scrap.BLL.Scraps"
+			  searchFields="ScrapNo" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ScrapNo">lang.ScrapNo</field>
+      <field name="WhName">lang.WhName</field>
+
+    </fields>
+  </page>
+
+  <!--不良代码列表-->
+  <page id="805" title="Pages.NCCode_NCCodeList" recordIdField="NCCodeID" selectMethod="GetAllNCCode" selectCountMethod="GetCount" typeName="SKT.LeanMES.NCCode.BLL.NCCode"
+		searchFields="NCCode" returnFields="1,2" defaultSortExpression="NCCodeID" returnMethod="">
+    <fields>
+      <field name="NCCode">lang.NCCode</field>
+      <field name="NCGroupName">lang.NCGroupName</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+  <!--物料BOM列表-->
+  <page id="806" title="Pages.Product_ItemList" recordIdField="ItemBomChildId" selectMethod="GetItemBomList" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemBomChild"
+   searchFields="[ItemCode]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="Units">lang.PartUnit</field>
+      <field name="UsePosition">lang.UsePosition</field>
+    </fields>
+  </page>
+  <!--SPC任务列表-->
+  <page id="807" title="SPC任务列表" recordIdField="SPCTaskId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SPC.BLL.SPCTask"
+	  searchFields="[ProjectName],[TaskName],[ItemCode],[USL],[LSL]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ProjectName">lang.ProjectName</field>
+      <field name="TaskName">lang.TaskName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="USL">lang.USL</field>
+      <field name="LSL">lang.LSL</field>
+    </fields>
+  </page>
+  <!--客户条码列表-->
+  <page id="809" title="Pages.ShopOrderList" recordIdField="ProdOrderID" selectMethod="GetCustomerOrder" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+   searchFields="[OrderNO],[CustomerOrder],[SourceBillNo]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OrderNO">lang.ShopOrder</field>
+      <field name="CustomerOrder">lang.CustomerOrder</field>
+      <field name="SourceBillNo">lang.LineNo</field>
+      <field name="Qty">lang.Qty</field>
+    </fields>
+  </page>
+  <!--客户订单列表-->
+  <page id="810" title="Pages.CustomerOrderList" recordIdField="CustomerOrderID" selectMethod="GetSourceBillNo" selectCountMethod="GetCount" typeName="SKT.LeanMES.Order.BLL.ShopOrder"
+   searchFields="[CustomerOrder],[CustomerName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="CustomerOrder">lang.SOCode</field>
+      <field name="CustomerName">lang.CustomerName</field>
+    </fields>
+  </page>
+  <!--采购单物料-->
+  <page id="811" title="采购单物料" recordIdField="ItemId" selectMethod="GetPurOrderItem" selectCountMethod="GetCount" typeName="SKT.LeanMES.Material.BLL.PurOrder"
+		  searchFields="[ItemCode],[ItemName]" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemName">lang.ItemName</field>
+      <field name="AutoID">lang.PoOrderRowNo</field>
+      <field name="PURQty">lang.Qty</field>
+      <field name="ItemSpec">lang.ItemModel</field>
+    </fields>
+  </page>
+
+  <!--ZPL-->
+  <page id="812" title="标签模板" recordIdField="TempId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Labels.BLL.PrintTemplate"
+searchFields="[TempName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="TempName">lang.TempName</field>
+    </fields>
+  </page>
+
+  <page id="815" title="Pages.ModuleList" recordIdField="ModelId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SDP.BLL.UIModel"
+  searchFields="ModelName" returnFields="1,2" defaultSortExpression="ModelId" returnMethod="">
+    <fields>
+      <field name="ModelId">lang.ModelId</field>
+      <field name="ModelName">lang.ModelName</field>
+    </fields>
+  </page>
+  <!--根据产品CODE，并显示Bom下面的所有物料-->
+  <page id="816" title="Pages.Product_ItemList" recordIdField="ItemId" selectMethod="GetAllByBomItemCode" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.ItemBomChild"
+   searchFields="[ItemCode],[ItemName]" returnFields="1,2,3"  defaultSortExpression="ItemId" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="Units">lang.PartUnit</field>
+    </fields>
+  </page>
+
+  <!--钢网刮刀检验项目-->
+  <page id="819" title="钢网刮刀检验项目列表" recordIdField="SMIPId" selectMethod="GetAllSteelMeshInspectionProject" selectCountMethod="GetSteelMeshInspectionProjectCount" typeName="SKT.LeanMES.SteelMesh.BLL.SteelMeshInspectionProjecLogic"
+      searchFields="SMIPCode,SMIPName" returnFields="1,2,3,4,5" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SMIPCode">lang.SMIPCode</field>
+      <field name="SMIPName">lang.SMIPName</field>
+      <field name="SMIPEntryMode">lang.SMIPEntryMode</field>
+      <field name="SMIPCriterion">lang.SMIPCriterion</field>
+      <field name="SMIPUnit">lang.SMIPUnit</field>
+    </fields>
+  </page>
+  <!--供应商列表(子厂选择)-->
+  <page id="820" title="Pages.Supplier_SupplierList" recordIdField="SupplierId" selectMethod="GetAllGroup" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.Suppliers"
+   searchFields="[VendorCode],[VendorName]" returnFields="1,2,3,4,5,6" defaultSortExpression="VendorCode" returnMethod="">
+    <fields>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.VendorName</field>
+      <field name="Site">lang.FactoryCode</field>
+      <field name="VenUserName">lang.SupplierUserName</field>
+      <field name="VenPhone">lang.SupplierPhone</field>
+      <field name="VendorAddress">lang.VendorAddress</field>
+    </fields>
+  </page>
+  <!--MSD烘烤条件-->
+  <page id="821" title="Pages.MSD_MsdBakeContionList" recordIdField="Bid" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.MSD.BLL.MsdBakeContion"
+   searchFields="[Msl]" returnFields="1,2,3,4,5,6" defaultSortExpression="Msl" returnMethod="">
+    <fields>
+      <field name="Msl">lang.MsdMsl</field>
+      <field name="HoursNum">lang.MsdHoursNum</field>
+      <field name="OverrunExposureTime">lang.MsdOverrunExposureTime</field>
+      <field name="HoursNum2">lang.MsdHoursNum2</field>
+      <field name="TemperatureTwo">lang.MsdTemperatureTwo</field>
+      <field name="Temperature">lang.MsdTemperature</field>
+    </fields>
+  </page>
+  <!--数据字典列表， 检验方法（DicProperty ='Inspectionmethod'）-->
+  <page id="822" title="Pages.InspectionmethodsList" recordIdField="DictionaryDataID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SerialNumber.BLL.Dictionary"
+    searchFields="[Value],[Description]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Value">lang.Inspectionmethods</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+  <!--考核内容列表-->
+  <page id="823" title="考核内容列表" recordIdField="SupplierExameContentId" selectMethod="GetExameItemAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.SupplierExameContent"
+   searchFields="[SupplierExameName],[SupplierExameType],[SupplierExameCompute]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SupplierExameName">lang.SupplierExameName</field>
+      <field name="SupplierExameType">lang.SupplierExameType</field>
+      <field name="SupplierExameCompute">lang.SupplierExameCompute</field>
+    </fields>
+  </page>
+  <!--生成送货单可正常操作的采购订单-->
+  <page id="824" title="lang.POorderList" recordIdField="POID" selectMethod="SupplierDeliveryPOMaterialDeliver" selectCountMethod="GetCount" typeName="SKT.LeanMES.Supplier.BLL.SupplierDelivery"
+		  searchFields="[POCode],[VendorCode],[VendorName]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="POCode">lang.OrderFormNO</field>
+      <field name="VendorCode">lang.VendorCode</field>
+      <field name="VendorName">lang.FSupplierName</field>
+      <field name="FactoryCode">lang.Site</field>
+    </fields>
+  </page>
+  <!--获取osp类型-->
+  <page id="827" title="Pages.OSPType" recordIdField="OSPTypeId" selectMethod="GetOSPType" selectCountMethod="GetCount" typeName="SKT.LeanMES.Quality.BLL.OSP"
+   searchFields="OSPTypeName" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="OSPTypeName">Pages.OSPType</field>
+      <field name="OSPTypeTime">Pages.OSPTime</field>
+    </fields>
+  </page>
+  <!--获取楼层列表类型-->
+  <page id="829" title="Pages.DIP_FloorInfoList" recordIdField="FId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Container.BLL.FloorInfo"
+   searchFields="Code,Name,Remark" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="Code">lang.DIP_Code</field>
+      <field name="Name">lang.DIP_Name</field>
+      <field name="Remark">lang.Remark</field>
+    </fields>
+  </page>
+  <!--楼层线别列表-->
+  <page id="830" title="Pages.DIP_FloorLineInfoList" recordIdField="LineId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Container.BLL.FloorLineInfo"
+   searchFields="[LineName]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="LineName">lang.Line</field>
+    </fields>
+  </page>
+  <!--异常类型列表-->
+  <page id="831" title="Pages.Anormal_GroupList" recordIdField="AnormalGroupId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Anormal.BLL.AnormalGroup"
+   searchFields="AnormalGroupName,AnormalGroupCode" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="AnormalGroupName">lang.AnormalGroupName</field>
+      <field name="AnormalGroupCode">lang.AnormalGroupCode</field>
+    </fields>
+  </page>
+
+  <!--复制1，加掩码名和ID-->
+  <page id="832" title="Pages.Product_ItemList" recordIdField="ItemID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Product.BLL.Item"
+   searchFields="[ItemCode],[ItemName]" returnFields="1,2,3,4,5,6,7,8,9" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ItemName">lang.ItemsName</field>
+      <field name="ItemCode">lang.ItemCode</field>
+      <field name="ItemRev">lang.CurrentRevision</field>
+      <field name="Units">lang.PartUnit</field>
+      <field name="Site">lang.Site</field>
+      <field name="ItemSpec">lang.ItemModel</field>
+      <field name="SmtIndustry">lang.SMTIndustry</field>
+      <field name="MaskId">lang.DisplayMask</field>
+      <field name="MaskGroupName">lang.MaskGroup</field>
+    </fields>
+  </page>
+
+  <!--选择飞达列表-->
+  <page id="833" title="Pages.FeederList" recordIdField="ID" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.SMT.BLL.Feeder"
+    searchFields="[SerialNumber]" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="SerialNumber">lang.FeedSN</field>
+    </fields>
+  </page>
+
+  <!--设备点检模板-->
+  <page id="834" title="Pages.Equipment_InspectionTemplateList" recordIdField="InspectionTemplateId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentInspectionTemplate"
+			searchFields="[InspectionTemplateName],[InspectionTypeName]" returnFields="1,2" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionTemplateName">lang.InspectionTemplateName</field>
+      <field name="InspectionTypeName">lang.InspectionTypeName</field>
+    </fields>
+  </page>
+  <!--设备点异常上报方案-->
+  <page id="835" title="Pages.Equipment_InspectionTemplateList" recordIdField="ExceptionReportingId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.EquipmentExceptionReporting"
+			searchFields="[ExceptionReportingCode],[ExceptionReportingName],[ExceptionType]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ExceptionReportingCode">lang.ExceptionReportingCode</field>
+      <field name="ExceptionReportingName">lang.ExceptionReportingName</field>
+      <field name="ExceptionType">lang.ExceptionType</field>
+    </fields>
+  </page>
+
+
+  <!--不良代码列表-->
+  <page id="836" title="Pages.NCCode_NCCodeList" recordIdField="NCCodeID" selectMethod="GetAllByStationAndCategory" selectCountMethod="GetCount" typeName="SKT.LeanMES.NCCode.BLL.NCCode"
+		searchFields="NCCode" returnFields="1,2" defaultSortExpression="a.NCCodeID" returnMethod="">
+    <fields>
+      <field name="NCCode">lang.NCCode</field>
+      <field name="Description">lang.Description</field>
+    </fields>
+  </page>
+
+
+  <!--生产班次列表-->
+  <page id="837" title="Pages.ShiftList" recordIdField="MemberId" selectMethod="Get24All" selectCountMethod="GetCount" typeName="SKT.LeanMES.ProductionShift.BLL.Shift_Member"
+   searchFields="ProductionShift" returnFields="1" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="ProductionShift">lang.ShiftName</field>
+    </fields>
+  </page>
+
+  <!--注塑机台设备列表-->
+  <page id="838" title="Pages.MachineModelList" recordIdField="EquipmentId" selectMethod="GetAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Equipment.BLL.Equipments"
+  searchFields="[EquipmentCode],[EquipmentName],[EquipmentModel]" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="EquipmentCode">lang.EquipmentCode</field>
+      <field name="EquipmentName">lang.EquipmentName</field>
+      <field name="EquipmentModel">lang.EquipmentModels</field>
+      <field name="EquimentExtNo">lang.EquimentExtNo</field>
+    </fields>
+  </page>
+
+  <!--检验单-->
+  <page id="841" title="Pages.InspectionTemplate" recordIdField="InspectionTemplateId" selectMethod="GetInspectionTemplateReItemAll" selectCountMethod="GetCount"
+		  typeName="SKT.LeanMES.Quality.BLL.InspectionTemplate"
+	  searchFields="[InspectionTemplateName],InspectionTypeName" returnFields="1,2,3,4" defaultSortExpression="" returnMethod="">
+    <fields>
+      <field name="InspectionTemplateName">lang.InspectionTemplateName</field>
+      <field name="InspectionTypeName">lang.InspectionTypeName</field>
+      <field name="InspectionTypeId">lang.InspectionTypeId</field>
+      <field name="FileSaveName">lang.FileName</field>
+    </fields>
+  </page>
+	<!--MES备货单选择(详情)-->
+	<page id="842" title="Pages.SalOrder" recordIdField="SalOrderID" selectMethod="GetStockOrderAll" selectCountMethod="GetCount" typeName="SKT.LeanMES.Warehouse.BLL.WarehouseCpOutStock"
+	 searchFields="[DNCode],[SalorderItem],[ItemCode]" returnFields="1,2,3" defaultSortExpression="" returnMethod="">
+		<fields>
+			<field name="DNCode">lang.DNCode</field>
+			<field name="SalorderItem">lang.SalorderItem</field>
+			<field name="ItemCode">lang.ItemCode</field>
+		</fields>
+	</page>
+</pages>

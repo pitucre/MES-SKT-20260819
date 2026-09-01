@@ -1,0 +1,4722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_OrganizationAdd" xml:space="preserve">
+    <value>Add Department</value>
+  </data>
+  <data name="Account_OrganizationChart" xml:space="preserve">
+    <value>O-Chart</value>
+  </data>
+  <data name="Account_OrganizationEdit" xml:space="preserve">
+    <value>Edit Department</value>
+  </data>
+  <data name="Account_OrganizationList" xml:space="preserve">
+    <value>Department List</value>
+  </data>
+  <data name="Account_OrganizationView" xml:space="preserve">
+    <value>View Department</value>
+  </data>
+  <data name="Account_PopedomList" xml:space="preserve">
+    <value>Assign Permission</value>
+  </data>
+  <data name="Account_RoleAdd" xml:space="preserve">
+    <value>Add Role</value>
+  </data>
+  <data name="Account_RoleEdit" xml:space="preserve">
+    <value>Edit Role</value>
+  </data>
+  <data name="Account_RoleList" xml:space="preserve">
+    <value>Role List</value>
+  </data>
+  <data name="Account_RoleView" xml:space="preserve">
+    <value>View Role</value>
+  </data>
+  <data name="Account_UserAdd" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="Account_UserEdit" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="Account_UserList" xml:space="preserve">
+    <value>User List</value>
+  </data>
+  <data name="Account_UserView" xml:space="preserve">
+    <value>View User</value>
+  </data>
+  <data name="Anormal_GroupAdd" xml:space="preserve">
+    <value>Add anormal group</value>
+  </data>
+  <data name="Anormal_GroupEdit" xml:space="preserve">
+    <value>Edit anormal group</value>
+  </data>
+  <data name="Anormal_GroupList" xml:space="preserve">
+    <value>Anormal group list</value>
+  </data>
+  <data name="Anormal_GroupView" xml:space="preserve">
+    <value>View anormal group</value>
+  </data>
+  <data name="Anormal_TypeAdd" xml:space="preserve">
+    <value>Add anormal type</value>
+  </data>
+  <data name="Anormal_TypeEdit" xml:space="preserve">
+    <value>Edit anormal type</value>
+  </data>
+  <data name="Anormal_TypeList" xml:space="preserve">
+    <value>Anormal type list</value>
+  </data>
+  <data name="Anormal_TypeView" xml:space="preserve">
+    <value>View anormal type</value>
+  </data>
+  <data name="DepartmentList" xml:space="preserve">
+    <value>Department list</value>
+  </data>
+  <data name="DictionaryList" xml:space="preserve">
+    <value>Dictionary List</value>
+  </data>
+  <data name="Equipment_EquipmentAdd" xml:space="preserve">
+    <value>Add Equipment</value>
+  </data>
+  <data name="Equipment_EquipmentEdit" xml:space="preserve">
+    <value>Alter equipment info</value>
+  </data>
+  <data name="Equipment_EquipmentList" xml:space="preserve">
+    <value>Equipment list</value>
+  </data>
+  <data name="Equipment_EquipmentTypeAdd" xml:space="preserve">
+    <value>Add Equipment type</value>
+  </data>
+  <data name="Equipment_EquipmentTypeEdit" xml:space="preserve">
+    <value>Alter Equipment type</value>
+  </data>
+  <data name="Equipment_EquipmentTypeList" xml:space="preserve">
+    <value>Equipment type list</value>
+  </data>
+  <data name="Equipment_EquipmentTypeView" xml:space="preserve">
+    <value>View Equipment type info</value>
+  </data>
+  <data name="Equipment_EquipmentView" xml:space="preserve">
+    <value>View equipment info</value>
+  </data>
+  <data name="Labels_LabelFieldAdd" xml:space="preserve">
+    <value>Add label</value>
+  </data>
+  <data name="Labels_LabelFieldEdit" xml:space="preserve">
+    <value>Alter label</value>
+  </data>
+  <data name="Labels_LabelFieldList" xml:space="preserve">
+    <value>Labels list</value>
+  </data>
+  <data name="Labels_LabelFieldView" xml:space="preserve">
+    <value>View label</value>
+  </data>
+  <data name="Labels_LabelFormat" xml:space="preserve">
+    <value>Format label</value>
+  </data>
+  <data name="Labels_LabelPrint" xml:space="preserve">
+    <value>Print label</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanAdd" xml:space="preserve">
+    <value>Add maintenance plan</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEdit" xml:space="preserve">
+    <value>Alter maintenance plan</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanList" xml:space="preserve">
+    <value>Maintenance plan list</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanView" xml:space="preserve">
+    <value>View maintenance plan</value>
+  </data>
+  <data name="Maintenance_MaintenanceRecordList" xml:space="preserve">
+    <value>Maintenance record list</value>
+  </data>
+  <data name="Maintenance_MaintenanceRecordView" xml:space="preserve">
+    <value>View maintenance record</value>
+  </data>
+  <data name="Maintenance_MaintenanceWarningList" xml:space="preserve">
+    <value>Maintenance warning list</value>
+  </data>
+  <data name="Maintenance_MaintenanceWarningView" xml:space="preserve">
+    <value>View maintenance warning</value>
+  </data>
+  <data name="Maintenance_PlanMaintainConfirm" xml:space="preserve">
+    <value>Plan maintain confirm</value>
+  </data>
+  <data name="Material_GenerateGRN" xml:space="preserve">
+    <value>Generate GRN</value>
+  </data>
+  <data name="Material_GRNCarton" xml:space="preserve">
+    <value>GRN Carton</value>
+  </data>
+  <data name="Material_GRNPackList" xml:space="preserve">
+    <value>Packing box list</value>
+  </data>
+  <data name="Material_MaterialIssue" xml:space="preserve">
+    <value>Material issue</value>
+  </data>
+  <data name="Material_MaterialReceive" xml:space="preserve">
+    <value>Material receive</value>
+  </data>
+  <data name="Material_MaterialReturnStore" xml:space="preserve">
+    <value>Material return store</value>
+  </data>
+  <data name="Material_MaterialReturnSupplier" xml:space="preserve">
+    <value>Material return supplier</value>
+  </data>
+  <data name="Material_MaterialSplit" xml:space="preserve">
+    <value>Material split</value>
+  </data>
+  <data name="Material_MaterialUnitList" xml:space="preserve">
+    <value>Material list</value>
+  </data>
+  <data name="Material_ModifyGRN" xml:space="preserve">
+    <value>Alter GRN</value>
+  </data>
+  <data name="Material_PackGRNList" xml:space="preserve">
+    <value>Pack GRN</value>
+  </data>
+  <data name="Material_RemoveGRN" xml:space="preserve">
+    <value>Remove GRN</value>
+  </data>
+  <data name="Material_ReprintGRN" xml:space="preserve">
+    <value>GRN Repeat Print</value>
+  </data>
+  <data name="NCCode_DataType" xml:space="preserve">
+    <value>List of data types</value>
+  </data>
+  <data name="NCCode_NCCodeAdd" xml:space="preserve">
+    <value>Add bad code</value>
+  </data>
+  <data name="NCCode_NCCodeList" xml:space="preserve">
+    <value>Bad Code</value>
+  </data>
+  <data name="NCCode_NCGroupAdd" xml:space="preserve">
+    <value>Add bad code type</value>
+  </data>
+  <data name="NCCode_NCGroupList" xml:space="preserve">
+    <value>Fail Code Type</value>
+  </data>
+  <data name="Product_BomAdd" xml:space="preserve">
+    <value>Add Product Bom</value>
+  </data>
+  <data name="Product_BomComponentAdd" xml:space="preserve">
+    <value>Add Bom Component</value>
+  </data>
+  <data name="Product_BomComponentEdit" xml:space="preserve">
+    <value>Edit Bom Component</value>
+  </data>
+  <data name="Product_BomDelete" xml:space="preserve">
+    <value>Delete Product Bom</value>
+  </data>
+  <data name="Product_BomEdit" xml:space="preserve">
+    <value>Edit Product Bom</value>
+  </data>
+  <data name="Product_BomList" xml:space="preserve">
+    <value>Product Bom list</value>
+  </data>
+  <data name="Product_BomView" xml:space="preserve">
+    <value>View Product Bom</value>
+  </data>
+  <data name="Product_CustomerList" xml:space="preserve">
+    <value>Customer List</value>
+  </data>
+  <data name="Product_ItemAdd" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="Product_ItemDelete" xml:space="preserve">
+    <value>Delete Product</value>
+  </data>
+  <data name="Product_ItemEdit" xml:space="preserve">
+    <value>Edit Product</value>
+  </data>
+  <data name="Product_ItemGroupAdd" xml:space="preserve">
+    <value>Add Product type</value>
+  </data>
+  <data name="Product_ItemGroupEdit" xml:space="preserve">
+    <value>Edit Product type</value>
+  </data>
+  <data name="Product_ItemGroupList" xml:space="preserve">
+    <value>Product type list</value>
+  </data>
+  <data name="Product_ItemGroupView" xml:space="preserve">
+    <value>View Product type</value>
+  </data>
+  <data name="Product_ItemList" xml:space="preserve">
+    <value>Product list</value>
+  </data>
+  <data name="Product_ItemView" xml:space="preserve">
+    <value>View Product</value>
+  </data>
+  <data name="Product_ProjectList" xml:space="preserve">
+    <value>Project List</value>
+  </data>
+  <data name="ResourceList" xml:space="preserve">
+    <value>Resource List</value>
+  </data>
+  <data name="ResourceTypeList" xml:space="preserve">
+    <value>Resource Type List</value>
+  </data>
+  <data name="SerialNumber_SerialNumberAdd" xml:space="preserve">
+    <value>Add Serialnumber</value>
+  </data>
+  <data name="SerialNumber_SerialNumberEdit" xml:space="preserve">
+    <value>Edit Serialnumber</value>
+  </data>
+  <data name="SerialNumber_SerialNumberList" xml:space="preserve">
+    <value>Barcode Rules</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeAdd" xml:space="preserve">
+    <value>Add Serialnumber type</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeEdit" xml:space="preserve">
+    <value>Edit Serialnumber type</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeList" xml:space="preserve">
+    <value>Serialnumber type list</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeView" xml:space="preserve">
+    <value>View SerialNumber Type</value>
+  </data>
+  <data name="SerialNumber_SerialNumberView" xml:space="preserve">
+    <value>View SerialNumber</value>
+  </data>
+  <data name="Station_StationAdd" xml:space="preserve">
+    <value>Add Station </value>
+  </data>
+  <data name="Station_StationEdit" xml:space="preserve">
+    <value>Edit Station</value>
+  </data>
+  <data name="Station_StationList" xml:space="preserve">
+    <value>Station list</value>
+  </data>
+  <data name="Station_StationTypeAdd" xml:space="preserve">
+    <value>Add station type</value>
+  </data>
+  <data name="Station_StationTypeEdit" xml:space="preserve">
+    <value>Edit station  type</value>
+  </data>
+  <data name="Station_StationTypeList" xml:space="preserve">
+    <value>Station type list</value>
+  </data>
+  <data name="Station_StationTypeView" xml:space="preserve">
+    <value>View station type</value>
+  </data>
+  <data name="Station_StationView" xml:space="preserve">
+    <value>View Station</value>
+  </data>
+  <data name="Turnover_TurnoverGroupAdd" xml:space="preserve">
+    <value>Add Turnover group</value>
+  </data>
+  <data name="Turnover_TurnoverGroupEdit" xml:space="preserve">
+    <value>Alter Turnover group</value>
+  </data>
+  <data name="Turnover_TurnoverGroupList" xml:space="preserve">
+    <value>Turnover group list</value>
+  </data>
+  <data name="Turnover_TurnoverGroupView" xml:space="preserve">
+    <value>View turnover group</value>
+  </data>
+  <data name="Turnover_TurnoverRegister" xml:space="preserve">
+    <value>Register Turnover number</value>
+  </data>
+  <data name="Turnover_TurnoverTypeAdd" xml:space="preserve">
+    <value>Add turnover type</value>
+  </data>
+  <data name="Turnover_TurnoverTypeEdit" xml:space="preserve">
+    <value>Alter turnover type</value>
+  </data>
+  <data name="Turnover_TurnoverTypeList" xml:space="preserve">
+    <value>Turnover type list</value>
+  </data>
+  <data name="Turnover_TurnoverTypeView" xml:space="preserve">
+    <value>View turnover type</value>
+  </data>
+  <data name="UserChangePwd" xml:space="preserve">
+    <value>Modify password</value>
+  </data>
+  <data name="UserList" xml:space="preserve">
+    <value>User list</value>
+  </data>
+  <data name="WarehouseType" xml:space="preserve">
+    <value>List of warehouse types</value>
+  </data>
+  <data name="Warehouse_WarehouseAdd" xml:space="preserve">
+    <value>Add warehouse</value>
+  </data>
+  <data name="Warehouse_WarehouseList" xml:space="preserve">
+    <value>Warehouse List</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationAdd" xml:space="preserve">
+    <value>Add shelf space</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationList" xml:space="preserve">
+    <value>Shelf Location</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeAdd" xml:space="preserve">
+    <value>Add warehouse type</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeList" xml:space="preserve">
+    <value>Warehouse Type</value>
+  </data>
+  <data name="Labels_LabelAddDBField" xml:space="preserve">
+    <value>Add database field</value>
+  </data>
+  <data name="Plan_PlanList" xml:space="preserve">
+    <value>Import Plan</value>
+  </data>
+  <data name="Plan_SubsupplierManagement" xml:space="preserve">
+    <value>Subsupplier Management</value>
+  </data>
+  <data name="LabelField" xml:space="preserve">
+    <value>Label field</value>
+  </data>
+  <data name="SerialNumber_VouchList" xml:space="preserve">
+    <value>Rules set documents list</value>
+  </data>
+  <data name="Account_AssignPopedom" xml:space="preserve">
+    <value>Assign Permission</value>
+  </data>
+  <data name="Account_RolesInUser" xml:space="preserve">
+    <value>User's Roles</value>
+  </data>
+  <data name="Account_UsersInRole" xml:space="preserve">
+    <value>Role's Users</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeAdd" xml:space="preserve">
+    <value>Add Vouch Rule</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeEdit" xml:space="preserve">
+    <value>Edit  Vouch Rule</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeList" xml:space="preserve">
+    <value>Vouch Rule List</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeView" xml:space="preserve">
+    <value>View Vouch Rule</value>
+  </data>
+  <data name="Labels_LabelDocumentAdd" xml:space="preserve">
+    <value>Add label</value>
+  </data>
+  <data name="Labels_LabelDocumentList" xml:space="preserve">
+    <value>Label Maintenance</value>
+  </data>
+  <data name="Labels_LabelDocumentView" xml:space="preserve">
+    <value>View label</value>
+  </data>
+  <data name="Labels_LabelZPLAdd" xml:space="preserve">
+    <value>Add ZPL template</value>
+  </data>
+  <data name="Labels_LabelZPLList" xml:space="preserve">
+    <value>ZPL Template</value>
+  </data>
+  <data name="Labels_LabelZPLView" xml:space="preserve">
+    <value>View ZPL template</value>
+  </data>
+  <data name="NCCode_NCCodeView" xml:space="preserve">
+    <value>View bad code</value>
+  </data>
+  <data name="NCCode_NCGroupView" xml:space="preserve">
+    <value>View bad code type</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationView" xml:space="preserve">
+    <value>View shelf space</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeView" xml:space="preserve">
+    <value>View warehouse classification</value>
+  </data>
+  <data name="Warehouse_WarehouseView" xml:space="preserve">
+    <value>View warehouse information</value>
+  </data>
+  <data name="Production_SparepartAdd" xml:space="preserve">
+    <value>Add Sparepart</value>
+  </data>
+  <data name="Production_SparepartEdit" xml:space="preserve">
+    <value>Edit Sparepart</value>
+  </data>
+  <data name="Production_SparepartList" xml:space="preserve">
+    <value>Sparepart List</value>
+  </data>
+  <data name="Production_SparepartView" xml:space="preserve">
+    <value>View Sparepart</value>
+  </data>
+  <data name="TemplatesList" xml:space="preserve">
+    <value>Templates List</value>
+  </data>
+  <data name="Product_ItemIQCParamAdd" xml:space="preserve">
+    <value>Add IQC param</value>
+  </data>
+  <data name="Product_ItemIQCParamEdit" xml:space="preserve">
+    <value>Alter IQC param list</value>
+  </data>
+  <data name="Product_ItemIQCParamList" xml:space="preserve">
+    <value>Item IQC param list</value>
+  </data>
+  <data name="Product_ItemIQCParamView" xml:space="preserve">
+    <value>View IQC Param</value>
+  </data>
+  <data name="Supplier_SupplierAdd" xml:space="preserve">
+    <value>Add Supplier</value>
+  </data>
+  <data name="Supplier_SupplierEdit" xml:space="preserve">
+    <value>Alter Supplier</value>
+  </data>
+  <data name="Supplier_SupplierList" xml:space="preserve">
+    <value>Supplier list</value>
+  </data>
+  <data name="Supplier_SupplierView" xml:space="preserve">
+    <value>View Supplier</value>
+  </data>
+  <data name="Production_PartHistory" xml:space="preserve">
+    <value>Part history</value>
+  </data>
+  <data name="Material_MaterialInStorage" xml:space="preserve">
+    <value>Materials put in storage</value>
+  </data>
+  <data name="Template_TemplateAdd" xml:space="preserve">
+    <value>Add template</value>
+  </data>
+  <data name="Template_TemplateList" xml:space="preserve">
+    <value>Report Template List</value>
+  </data>
+  <data name="Template_TemplateView" xml:space="preserve">
+    <value>View Template</value>
+  </data>
+  <data name="Material_IQCFormAdd" xml:space="preserve">
+    <value>Add IQC Form</value>
+  </data>
+  <data name="Material_IQCFormEdit" xml:space="preserve">
+    <value>Edit IQC Form</value>
+  </data>
+  <data name="Material_IQCFormList" xml:space="preserve">
+    <value>IQC form list</value>
+  </data>
+  <data name="IQCCheck_ChoosePass" xml:space="preserve">
+    <value>IQC choose pass</value>
+  </data>
+  <data name="Material_IQCFormCheck" xml:space="preserve">
+    <value>IQC inspection</value>
+  </data>
+  <data name="AbnormalReport" xml:space="preserve">
+    <value>Abnormal production report</value>
+  </data>
+  <data name="IPQCReport" xml:space="preserve">
+    <value>IPQC inspection report</value>
+  </data>
+  <data name="IQCReport" xml:space="preserve">
+    <value>IQC inspection report</value>
+  </data>
+  <data name="QCStatisticalReport" xml:space="preserve">
+    <value>Quality inspection statistical analysis report</value>
+  </data>
+  <data name="WIPReport" xml:space="preserve">
+    <value>WIP report</value>
+  </data>
+  <data name="YieldReport" xml:space="preserve">
+    <value>Yield report</value>
+  </data>
+  <data name="Production_PartSetting" xml:space="preserve">
+    <value>Warnning Setting</value>
+  </data>
+  <data name="Plan_PlanEdit" xml:space="preserve">
+    <value>Plan Edit</value>
+  </data>
+  <data name="PlanEdit" xml:space="preserve">
+    <value>Plan Edit</value>
+  </data>
+  <data name="Account_AuthorizationEdit" xml:space="preserve">
+    <value>User authorization authentication</value>
+  </data>
+  <data name="Account_AuthorizationList" xml:space="preserve">
+    <value>Authorization</value>
+  </data>
+  <data name="Account_CertificationList" xml:space="preserve">
+    <value>Certification Item</value>
+  </data>
+  <data name="Account_CertificationListAdd" xml:space="preserve">
+    <value>Add certification item</value>
+  </data>
+  <data name="Account_CertificationListDelete" xml:space="preserve">
+    <value>Delete certification item</value>
+  </data>
+  <data name="Account_CertificationListEdit" xml:space="preserve">
+    <value>Edit certification item</value>
+  </data>
+  <data name="Account_CertificationListView" xml:space="preserve">
+    <value>View certification item</value>
+  </data>
+  <data name="Account_CertificationRecord" xml:space="preserve">
+    <value>Certification Record</value>
+  </data>
+  <data name="Material_MaterialRequestList" xml:space="preserve">
+    <value>Material Request List</value>
+  </data>
+  <data name="OrderFormList" xml:space="preserve">
+    <value>Order form list</value>
+  </data>
+  <data name="Customer_CustomerAdd" xml:space="preserve">
+    <value>Add Customer</value>
+  </data>
+  <data name="Customer_CustomerEdit" xml:space="preserve">
+    <value>Edit Customer</value>
+  </data>
+  <data name="Customer_CustomerList" xml:space="preserve">
+    <value>Customer List</value>
+  </data>
+  <data name="Customer_CustomerProjectAdd" xml:space="preserve">
+    <value>Add Customer Project</value>
+  </data>
+  <data name="Customer_CustomerProjectEdit" xml:space="preserve">
+    <value>Edit Customer Project</value>
+  </data>
+  <data name="Customer_CustomerProjectList" xml:space="preserve">
+    <value>Customer Project</value>
+  </data>
+  <data name="Customer_CustomerProjectView" xml:space="preserve">
+    <value>View Customer Project</value>
+  </data>
+  <data name="Customer_CustomerView" xml:space="preserve">
+    <value>View Customer</value>
+  </data>
+  <data name="LineList" xml:space="preserve">
+    <value>Line List</value>
+  </data>
+  <data name="Resource_LineAdd" xml:space="preserve">
+    <value>Add Line</value>
+  </data>
+  <data name="Resource_LineEdit" xml:space="preserve">
+    <value>Edit Line</value>
+  </data>
+  <data name="Resource_LineList" xml:space="preserve">
+    <value>Line maintenance</value>
+  </data>
+  <data name="Resource_LineView" xml:space="preserve">
+    <value>View Line</value>
+  </data>
+  <data name="Resource_ResourceAdd" xml:space="preserve">
+    <value>Add Resource</value>
+  </data>
+  <data name="Resource_ResourceEdit" xml:space="preserve">
+    <value>Edit Rescource</value>
+  </data>
+  <data name="Resource_ResourceList" xml:space="preserve">
+    <value>Resource List</value>
+  </data>
+  <data name="Resource_ResourceTypeAdd" xml:space="preserve">
+    <value>Add Resource Type</value>
+  </data>
+  <data name="Resource_ResourceTypeEdit" xml:space="preserve">
+    <value>Edit Resource Type</value>
+  </data>
+  <data name="Resource_ResourceTypeList" xml:space="preserve">
+    <value>Resource Type maintenance</value>
+  </data>
+  <data name="Resource_ResourceTypeView" xml:space="preserve">
+    <value>View Resource Type</value>
+  </data>
+  <data name="Resource_ResourceView" xml:space="preserve">
+    <value>View Rescource</value>
+  </data>
+  <data name="Router_RouterActivity" xml:space="preserve">
+    <value>Station business configuration</value>
+  </data>
+  <data name="Router_RouterAdd" xml:space="preserve">
+    <value>Add Router</value>
+  </data>
+  <data name="Router_RouterDesign" xml:space="preserve">
+    <value>Router Design</value>
+  </data>
+  <data name="Router_RouterEdit" xml:space="preserve">
+    <value>Edit Router</value>
+  </data>
+  <data name="Router_RouterList" xml:space="preserve">
+    <value>Router List</value>
+  </data>
+  <data name="WarnSettings_YieldAdd" xml:space="preserve">
+    <value>Add yield warning</value>
+  </data>
+  <data name="WarnSettings_YieldDelete" xml:space="preserve">
+    <value>Delete yield warning</value>
+  </data>
+  <data name="WarnSettings_YieldEdit" xml:space="preserve">
+    <value>Edit yield warning</value>
+  </data>
+  <data name="WarnSettings_YieldList" xml:space="preserve">
+    <value>Yield warning</value>
+  </data>
+  <data name="WarnSettings_YieldView" xml:space="preserve">
+    <value>View yield warning</value>
+  </data>
+  <data name="MaskGroupAdd" xml:space="preserve">
+    <value>MaskGroup add</value>
+  </data>
+  <data name="MaskGroupEdit" xml:space="preserve">
+    <value>MaskGroup edit</value>
+  </data>
+  <data name="MaskGroupList" xml:space="preserve">
+    <value>MaskGroup list</value>
+  </data>
+  <data name="MaskGroupMemberAdd" xml:space="preserve">
+    <value>MaskGroup member add</value>
+  </data>
+  <data name="MaskGroupMemberEdit" xml:space="preserve">
+    <value>MaskGroup member edit</value>
+  </data>
+  <data name="ActivitiesList" xml:space="preserve">
+    <value>Activities List</value>
+  </data>
+  <data name="Material_MaterialCombine" xml:space="preserve">
+    <value>Material Combine</value>
+  </data>
+  <data name="Material_ScrapReturnStore" xml:space="preserve">
+    <value>Scrap Return</value>
+  </data>
+  <data name="DataTypeList" xml:space="preserve">
+    <value>Data type list</value>
+  </data>
+  <data name="Product_StationParamList" xml:space="preserve">
+    <value>Product_StationParamList</value>
+  </data>
+  <data name="StationParamAdd" xml:space="preserve">
+    <value>StationParamAdd</value>
+  </data>
+  <data name="StationParamEdit" xml:space="preserve">
+    <value>StationParamEdit</value>
+  </data>
+  <data name="DataTypeAdd" xml:space="preserve">
+    <value>Add data type</value>
+  </data>
+  <data name="DataTypeEdit" xml:space="preserve">
+    <value>Edit data type</value>
+  </data>
+  <data name="Product_StationParamView" xml:space="preserve">
+    <value>Product_StationParamView</value>
+  </data>
+  <data name="DataFieldAdd" xml:space="preserve">
+    <value>Add data type</value>
+  </data>
+  <data name="DataFieldEdit" xml:space="preserve">
+    <value>Edit field edit</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindList" xml:space="preserve">
+    <value>Collect form type bind</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeList" xml:space="preserve">
+    <value>Collect form type</value>
+  </data>
+  <data name="MaterialRequest_Add" xml:space="preserve">
+    <value>Material request add</value>
+  </data>
+  <data name="MaterialRequest_Edit" xml:space="preserve">
+    <value>Material request edit</value>
+  </data>
+  <data name="ProcessFormList" xml:space="preserve">
+    <value>Process form list</value>
+  </data>
+  <data name="ProcessFormTypeList" xml:space="preserve">
+    <value>Process form type</value>
+  </data>
+  <data name="ProcessFormTypeAdd" xml:space="preserve">
+    <value>Add process form type add</value>
+  </data>
+  <data name="ProcessFormTypeEdit" xml:space="preserve">
+    <value>Edit process form type add</value>
+  </data>
+  <data name="ProcessFormTypeView" xml:space="preserve">
+    <value>View process form type</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeAdd" xml:space="preserve">
+    <value>Add collectFormType</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeEdit" xml:space="preserve">
+    <value>Edit collect form type </value>
+  </data>
+  <data name="TraceFormAdd" xml:space="preserve">
+    <value>Add retrospective list</value>
+  </data>
+  <data name="TraceFormDelete" xml:space="preserve">
+    <value>Delete retrospective list</value>
+  </data>
+  <data name="TraceFormEdit" xml:space="preserve">
+    <value>Edit retrospective list</value>
+  </data>
+  <data name="TraceFormList" xml:space="preserve">
+    <value>Retrospective list</value>
+  </data>
+  <data name="TraceFormTypeAdd" xml:space="preserve">
+    <value>Add traceback type</value>
+  </data>
+  <data name="TraceFormTypeDelete" xml:space="preserve">
+    <value>Delete traceback type</value>
+  </data>
+  <data name="TraceFormTypeEdit" xml:space="preserve">
+    <value>Edit traceback type</value>
+  </data>
+  <data name="TraceFormTypeList" xml:space="preserve">
+    <value>Traceback type</value>
+  </data>
+  <data name="TraceFormTypeView" xml:space="preserve">
+    <value>View traceback type</value>
+  </data>
+  <data name="TraceFormView" xml:space="preserve">
+    <value>View retrospective list</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindAdd" xml:space="preserve">
+    <value>Add collect form type bind</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindEdit" xml:space="preserve">
+    <value>Edit  collect form type bind</value>
+  </data>
+  <data name="Mobile_Material_MaterialInStorage" xml:space="preserve">
+    <value>Material in storage</value>
+  </data>
+  <data name="Mobile_Material_MaterialIssue" xml:space="preserve">
+    <value>Material issue</value>
+  </data>
+  <data name="Mobile_Production_Test" xml:space="preserve">
+    <value>Production test</value>
+  </data>
+  <data name="TemplateDesign" xml:space="preserve">
+    <value>Template design</value>
+  </data>
+  <data name="TraceFormTypeTemplate" xml:space="preserve">
+    <value>Template design</value>
+  </data>
+  <data name="MaterialPreKanbanList" xml:space="preserve">
+    <value>MaterialPrepareKanban</value>
+  </data>
+  <data name="EquipMaintKanbanList" xml:space="preserve">
+    <value>EquipMaintKanbanList</value>
+  </data>
+  <data name="EquipStatusKanban" xml:space="preserve">
+    <value>EquipStatusKanban</value>
+  </data>
+  <data name="ProdEfficiencyKanban" xml:space="preserve">
+    <value>ProdEfficiencyKanban</value>
+  </data>
+  <data name="Activities_ActivitiesAdd" xml:space="preserve">
+    <value>Add Activities</value>
+  </data>
+  <data name="Activities_ActivitiesEdit" xml:space="preserve">
+    <value>Edit Activities</value>
+  </data>
+  <data name="Activities_ActivitiesList" xml:space="preserve">
+    <value>Activities List</value>
+  </data>
+  <data name="Activities_TemplatesAdd" xml:space="preserve">
+    <value>Add Templates</value>
+  </data>
+  <data name="Activities_TemplatesEdit" xml:space="preserve">
+    <value>Edit Templates</value>
+  </data>
+  <data name="Activities_TemplatesList" xml:space="preserve">
+    <value>UI Templates</value>
+  </data>
+  <data name="Activities_ActivitiesBindOpeAC" xml:space="preserve">
+    <value>Bind Default Operation Type</value>
+  </data>
+  <data name="Activities_ActivitiesConfigParam" xml:space="preserve">
+    <value>Config Parameter Default Value</value>
+  </data>
+  <data name="Production_ShipmentList" xml:space="preserve">
+    <value>Production shipment list</value>
+  </data>
+  <data name="Production_ShipmentAdd" xml:space="preserve">
+    <value>Add production shipment</value>
+  </data>
+  <data name="Production_ShipmentEdit" xml:space="preserve">
+    <value>Edit production shipmentEdit</value>
+  </data>
+  <data name="Router_RouterView" xml:space="preserve">
+    <value>View Router</value>
+  </data>
+  <data name="TraceFormTemplateList" xml:space="preserve">
+    <value>Traceback type</value>
+  </data>
+  <data name="ViewContent" xml:space="preserve">
+    <value>View content</value>
+  </data>
+  <data name="Mobile_Material_MaterialReturn" xml:space="preserve">
+    <value>Material return</value>
+  </data>
+  <data name="InfoCenter" xml:space="preserve">
+    <value>Info Center</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeList_ChoosePage" xml:space="preserve">
+    <value>CollectForm type tist</value>
+  </data>
+  <data name="Client_ClientScan" xml:space="preserve">
+    <value>Client Scanning</value>
+  </data>
+  <data name="Client_ClientScanner" xml:space="preserve">
+    <value>Client Scanner</value>
+  </data>
+  <data name="ProcessFormList_Choose" xml:space="preserve">
+    <value>Flow sheet list</value>
+  </data>
+  <data name="ProcessFormTypeList_Choose" xml:space="preserve">
+    <value>Flow sheet type</value>
+  </data>
+  <data name="Manufacture_BasicInfo" xml:space="preserve">
+    <value>Info center</value>
+  </data>
+  <data name="ERPArrivalVouchList" xml:space="preserve">
+    <value>Arrival vouch list</value>
+  </data>
+  <data name="MaterialRequest_View" xml:space="preserve">
+    <value>View material request</value>
+  </data>
+  <data name="Material_IQCView" xml:space="preserve">
+    <value>View IQC list</value>
+  </data>
+  <data name="Production_ShipmentView" xml:space="preserve">
+    <value>View shipment</value>
+  </data>
+  <data name="MaterialUnitList" xml:space="preserve">
+    <value>Material list</value>
+  </data>
+  <data name="LoadingList" xml:space="preserve">
+    <value>LoadingList</value>
+  </data>
+  <data name="LoadingListDetailList" xml:space="preserve">
+    <value>LoadingListDetailList</value>
+  </data>
+  <data name="SMTFeedValidationList" xml:space="preserve">
+    <value>SMTFeedValidationList</value>
+  </data>
+  <data name="LoadingListAdd" xml:space="preserve">
+    <value>LoadingListAdd</value>
+  </data>
+  <data name="LoadingListEdit" xml:space="preserve">
+    <value>LoadingListEdit</value>
+  </data>
+  <data name="ShopOrder_Add" xml:space="preserve">
+    <value>Add Work Order</value>
+  </data>
+  <data name="ShopOrder_Edit" xml:space="preserve">
+    <value>Edit Work Order</value>
+  </data>
+  <data name="ShopOrder_List" xml:space="preserve">
+    <value>Production Orders</value>
+  </data>
+  <data name="FeederAdd" xml:space="preserve">
+    <value>FeederAdd</value>
+  </data>
+  <data name="FeederEdit" xml:space="preserve">
+    <value>FeederEdit</value>
+  </data>
+  <data name="FeederGroupAdd" xml:space="preserve">
+    <value>FeederGroupAdd</value>
+  </data>
+  <data name="FeederGroupEdit" xml:space="preserve">
+    <value>FeederGroupEdit</value>
+  </data>
+  <data name="FeederGroupList" xml:space="preserve">
+    <value>FeederGroupList</value>
+  </data>
+  <data name="FeederList" xml:space="preserve">
+    <value>FeederList</value>
+  </data>
+  <data name="FeederTypeAdd" xml:space="preserve">
+    <value>FeederTypeAdd</value>
+  </data>
+  <data name="FeederTypeEdit" xml:space="preserve">
+    <value>FeederTypeEdit</value>
+  </data>
+  <data name="FeederTypeList" xml:space="preserve">
+    <value>FeederTypeList</value>
+  </data>
+  <data name="MachineAdd" xml:space="preserve">
+    <value>MachineAdd</value>
+  </data>
+  <data name="MachineList" xml:space="preserve">
+    <value>MachineList</value>
+  </data>
+  <data name="MachineModelAdd" xml:space="preserve">
+    <value>MachineModelAdd</value>
+  </data>
+  <data name="MachineModelAttributeAdd" xml:space="preserve">
+    <value>MachineModelAttributeAdd</value>
+  </data>
+  <data name="MachineModelAttributeEdit" xml:space="preserve">
+    <value>MachineModelAttributeEdit</value>
+  </data>
+  <data name="MachineModelAttributeList" xml:space="preserve">
+    <value>MachineModelAttributeList</value>
+  </data>
+  <data name="MachineModelEdit" xml:space="preserve">
+    <value>MachineModelEdit</value>
+  </data>
+  <data name="MachineModelFamilyAdd" xml:space="preserve">
+    <value>MachineModelFamilyAdd</value>
+  </data>
+  <data name="MachineModelFamilyEdit" xml:space="preserve">
+    <value>MachineModelFamilyEdit</value>
+  </data>
+  <data name="MachineModelFamilyList" xml:space="preserve">
+    <value>MachineModelFamilyList</value>
+  </data>
+  <data name="MachineModelList" xml:space="preserve">
+    <value>MachineModelList</value>
+  </data>
+  <data name="ContainerAdd" xml:space="preserve">
+    <value>Add box</value>
+  </data>
+  <data name="ContainerEdit" xml:space="preserve">
+    <value>Edit box</value>
+  </data>
+  <data name="ContainerList" xml:space="preserve">
+    <value>Container list</value>
+  </data>
+  <data name="ContainerPrint" xml:space="preserve">
+    <value>Print box</value>
+  </data>
+  <data name="ContainerRePrint" xml:space="preserve">
+    <value>Repack the box</value>
+  </data>
+  <data name="ContainerView" xml:space="preserve">
+    <value>View box</value>
+  </data>
+  <data name="ShopOrder_GenerateOrderSN" xml:space="preserve">
+    <value>Generate order SN</value>
+  </data>
+  <data name="Mobile_MaterialReceive" xml:space="preserve">
+    <value>Mobile_MaterialReceive</value>
+  </data>
+  <data name="Material_MaterialHisIssue" xml:space="preserve">
+    <value>Material history issue</value>
+  </data>
+  <data name="Mobile_Material_MaterialHisIssue" xml:space="preserve">
+    <value>MaterialHisIssue</value>
+  </data>
+  <data name="MaterialReceiptList" xml:space="preserve">
+    <value>MaterialReceiptList</value>
+  </data>
+  <data name="ShopOrderList" xml:space="preserve">
+    <value>Shop order list</value>
+  </data>
+  <data name="Template_ReportTypeList" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="Material_OldMaterial" xml:space="preserve">
+    <value>Old Material</value>
+  </data>
+  <data name="ShopOrder_Detail" xml:space="preserve">
+    <value>Item SN</value>
+  </data>
+  <data name="Quality_SamplingRuleList" xml:space="preserve">
+    <value>Sampling rule list</value>
+  </data>
+  <data name="Quality_SamplingRuleAdd" xml:space="preserve">
+    <value>Add sampling rule</value>
+  </data>
+  <data name="Quality_SamplingRuleEdit" xml:space="preserve">
+    <value>Edit sampling rule</value>
+  </data>
+  <data name="EmailConfig_RecPersonAdd" xml:space="preserve">
+    <value>Add receiver person</value>
+  </data>
+  <data name="EmailConfig_RecPersonEdit" xml:space="preserve">
+    <value>Receiver person edit</value>
+  </data>
+  <data name="EmailConfig_RecPersonList" xml:space="preserve">
+    <value>Receiver person list</value>
+  </data>
+  <data name="EmailConfig_SendEmailConfig" xml:space="preserve">
+    <value>Send email config</value>
+  </data>
+  <data name="Schedule_ScheduleList" xml:space="preserve">
+    <value>Schedule list</value>
+  </data>
+  <data name="FactoryAdd" xml:space="preserve">
+    <value>Add factory</value>
+  </data>
+  <data name="FactoryEdit" xml:space="preserve">
+    <value>Edit factory</value>
+  </data>
+  <data name="FactoryList" xml:space="preserve">
+    <value>Factory list</value>
+  </data>
+  <data name="FactoryView" xml:space="preserve">
+    <value>View factory</value>
+  </data>
+  <data name="WorkShopList" xml:space="preserve">
+    <value>Work shop list</value>
+  </data>
+  <data name="WorkShopAdd" xml:space="preserve">
+    <value>Add work shop</value>
+  </data>
+  <data name="WorkShopEdit" xml:space="preserve">
+    <value>Edit work shop</value>
+  </data>
+  <data name="WorkShopWiew" xml:space="preserve">
+    <value>View work shop</value>
+  </data>
+  <data name="ShiftList" xml:space="preserve">
+    <value>Shift list</value>
+  </data>
+  <data name="ShiftAdd" xml:space="preserve">
+    <value>Add shift</value>
+  </data>
+  <data name="ShiftEdit" xml:space="preserve">
+    <value>Edit shift</value>
+  </data>
+  <data name="ShiftMemberAdd" xml:space="preserve">
+    <value>Add shift member</value>
+  </data>
+  <data name="ShiftMemberEdit" xml:space="preserve">
+    <value>Edit shift member</value>
+  </data>
+  <data name="Schedule_ScheduleUpdateConfirm" xml:space="preserve">
+    <value>Schedule update confirm</value>
+  </data>
+  <data name="Schedule_SchedulingList" xml:space="preserve">
+    <value>Scheduling list</value>
+  </data>
+  <data name="SteelMeshAdd" xml:space="preserve">
+    <value>Add steel mesh</value>
+  </data>
+  <data name="SteelMeshEdit" xml:space="preserve">
+    <value>Edit steel mesh</value>
+  </data>
+  <data name="SteelMeshList" xml:space="preserve">
+    <value>Stencil Scrapers List</value>
+  </data>
+  <data name="SteelMeshView" xml:space="preserve">
+    <value>View steel mesh</value>
+  </data>
+  <data name="Schedule_ScheduleAllot" xml:space="preserve">
+    <value>Schedule allot</value>
+  </data>
+  <data name="Schedule_ScheduleUpdateCompare" xml:space="preserve">
+    <value>Schedule update compare</value>
+  </data>
+  <data name="Schedule_BomChangeConfirm" xml:space="preserve">
+    <value>Bom confirm change</value>
+  </data>
+  <data name="MaterialDelivery_PrepareMaterial" xml:space="preserve">
+    <value>Prepare material list</value>
+  </data>
+  <data name="MaterialDelivery_PrepareMaterialDetail" xml:space="preserve">
+    <value>Prepare material detail</value>
+  </data>
+  <data name="MaterialDelivery_PrepMaSubitemChangeHist" xml:space="preserve">
+    <value>Prepare material subitem change history</value>
+  </data>
+  <data name="LineEdgeWarehouseIssue" xml:space="preserve">
+    <value>Line edge warehouse issue</value>
+  </data>
+  <data name="LineEdgeWarehouseReceive" xml:space="preserve">
+    <value>Line edge warehouse receive</value>
+  </data>
+  <data name="GenerateBoxSN" xml:space="preserve">
+    <value>Generate box SN</value>
+  </data>
+  <data name="PackageBoxList" xml:space="preserve">
+    <value>Package box list</value>
+  </data>
+  <data name="LineEdgeList" xml:space="preserve">
+    <value>Line edge manage</value>
+  </data>
+  <data name="LineEdgeAdd" xml:space="preserve">
+    <value>Add line edge</value>
+  </data>
+  <data name="LineEdgeEdit" xml:space="preserve">
+    <value>Edit line edge</value>
+  </data>
+  <data name="Hold_Hold" xml:space="preserve">
+    <value>QHold</value>
+  </data>
+  <data name="Hold_UnHold" xml:space="preserve">
+    <value>UnHold</value>
+  </data>
+  <data name="Rework_BatchRework" xml:space="preserve">
+    <value>Batch rework</value>
+  </data>
+  <data name="Rework_FinishedProductRework" xml:space="preserve">
+    <value>Finished product rework</value>
+  </data>
+  <data name="Rework_SingleRework" xml:space="preserve">
+    <value>Single rework</value>
+  </data>
+  <data name="CallMaterialList" xml:space="preserve">
+    <value>Call material list</value>
+  </data>
+  <data name="AccessoriesList" xml:space="preserve">
+    <value>AccessoriesList</value>
+  </data>
+  <data name="AccessoryPartAdd" xml:space="preserve">
+    <value>Add Accessory</value>
+  </data>
+  <data name="AccessoryPartDelete" xml:space="preserve">
+    <value>Delete Accessory</value>
+  </data>
+  <data name="AccessoryPartEdit" xml:space="preserve">
+    <value>Edit Accessory</value>
+  </data>
+  <data name="AccessoryPartList" xml:space="preserve">
+    <value>Accessory Maintenance</value>
+  </data>
+  <data name="SetupTime" xml:space="preserve">
+    <value>SetupTime</value>
+  </data>
+  <data name="SolderThawLogList" xml:space="preserve">
+    <value>SolderThawLogList</value>
+  </data>
+  <data name="SolderUseLogList" xml:space="preserve">
+    <value>SolderUseLogList</value>
+  </data>
+  <data name="PartType0" xml:space="preserve">
+    <value>Non-Plumbum</value>
+  </data>
+  <data name="PartType1" xml:space="preserve">
+    <value>Plumbum</value>
+  </data>
+  <data name="RouterBind" xml:space="preserve">
+    <value>Router bind</value>
+  </data>
+  <data name="GeneratePanelSN" xml:space="preserve">
+    <value>Generate Panel SN</value>
+  </data>
+  <data name="PickList" xml:space="preserve">
+    <value>Pick material list</value>
+  </data>
+  <data name="LineEdgeQtyList" xml:space="preserve">
+    <value>Line edge quantity list</value>
+  </data>
+  <data name="LineQtyList" xml:space="preserve">
+    <value>Line quantity list</value>
+  </data>
+  <data name="Schedule_BomUpdateCompare" xml:space="preserve">
+    <value>Shop order bom update compare</value>
+  </data>
+  <data name="ShopOrder_ShopOrderChangeCompare" xml:space="preserve">
+    <value>Shop order change compare</value>
+  </data>
+  <data name="ShopOrder_ShopOrderChangeConfirm" xml:space="preserve">
+    <value>Shop order change confirm</value>
+  </data>
+  <data name="Schedule_BomChangeHistory" xml:space="preserve">
+    <value>View shop order bom change history</value>
+  </data>
+  <data name="Schedule_ShopOrderBomList" xml:space="preserve">
+    <value>Shop order bom list</value>
+  </data>
+  <data name="ShopOrderChangeHistory" xml:space="preserve">
+    <value>Shop order change history</value>
+  </data>
+  <data name="MaintenanceAcountList" xml:space="preserve">
+    <value>Equiment acount list</value>
+  </data>
+  <data name="PartList" xml:space="preserve">
+    <value>Part manage</value>
+  </data>
+  <data name="PartAdd" xml:space="preserve">
+    <value>Add part</value>
+  </data>
+  <data name="PartEdit" xml:space="preserve">
+    <value>Edit part</value>
+  </data>
+  <data name="PartView" xml:space="preserve">
+    <value>View the part</value>
+  </data>
+  <data name="EquimentPartList" xml:space="preserve">
+    <value>Equiment&amp;Part relation</value>
+  </data>
+  <data name="Hold_HoldAndUnHoldHistory" xml:space="preserve">
+    <value>Operate record</value>
+  </data>
+  <data name="ItemSteelList" xml:space="preserve">
+    <value>Item steel list</value>
+  </data>
+  <data name="SteelItemAdd" xml:space="preserve">
+    <value>Add steel item relation</value>
+  </data>
+  <data name="SteelItemEdit" xml:space="preserve">
+    <value>Edit steel item relation</value>
+  </data>
+  <data name="SteelItemView" xml:space="preserve">
+    <value>View steel item relation</value>
+  </data>
+  <data name="MaintenanceDemoAdd" xml:space="preserve">
+    <value>Add maintenance demo</value>
+  </data>
+  <data name="MaintenanceDemoEdit" xml:space="preserve">
+    <value>Edit maintenance demo</value>
+  </data>
+  <data name="Maintenance_MaintenanceDemoList" xml:space="preserve">
+    <value>Maintenance demo list</value>
+  </data>
+  <data name="Maintenance_PlanMaintainCkeck" xml:space="preserve">
+    <value>Maintain ckeck</value>
+  </data>
+  <data name="Schedule_ScheduleAllottedList" xml:space="preserve">
+    <value>Schedule Allotted List</value>
+  </data>
+  <data name="Section_ResourceView" xml:space="preserve">
+    <value>Section&amp;Line</value>
+  </data>
+  <data name="WorkSeqList" xml:space="preserve">
+    <value>Work seq list</value>
+  </data>
+  <data name="ShopOrder_SNReleaseByStation" xml:space="preserve">
+    <value>Release replace SN</value>
+  </data>
+  <data name="JigTypeList" xml:space="preserve">
+    <value>Jig type</value>
+  </data>
+  <data name="JigList" xml:space="preserve">
+    <value>Jig list</value>
+  </data>
+  <data name="JigAdd" xml:space="preserve">
+    <value>Add jig</value>
+  </data>
+  <data name="JigEdit" xml:space="preserve">
+    <value>Edit jig</value>
+  </data>
+  <data name="JigView" xml:space="preserve">
+    <value>View jig</value>
+  </data>
+  <data name="JigTypeAdd" xml:space="preserve">
+    <value>Add jig type</value>
+  </data>
+  <data name="JigTypeEdit" xml:space="preserve">
+    <value>Edit  jig type</value>
+  </data>
+  <data name="JigTypeView" xml:space="preserve">
+    <value>View jig type</value>
+  </data>
+  <data name="CurreTicketConfig_Edit" xml:space="preserve">
+    <value>Current Ticket Config</value>
+  </data>
+  <data name="ShipmentListConfig_Edit" xml:space="preserve">
+    <value>Shipment List Config</value>
+  </data>
+  <data name="TaskContentSignConfig_Edit" xml:space="preserve">
+    <value>Task Content Sign Config</value>
+  </data>
+  <data name="PackPrintConfig_List" xml:space="preserve">
+    <value>Pack Print Config List</value>
+  </data>
+  <data name="PartNameList" xml:space="preserve">
+    <value>PartName List</value>
+  </data>
+  <data name="PackPrint_MaterialLabelConfig" xml:space="preserve">
+    <value>Material Label Config</value>
+  </data>
+  <data name="PackPrint_PackPrintConfigList" xml:space="preserve">
+    <value>Pack Print Config</value>
+  </data>
+  <data name="PackPrint_ProductLabelConfig" xml:space="preserve">
+    <value>Product Label Config</value>
+  </data>
+  <data name="PackPrint_ShipmentListConfig" xml:space="preserve">
+    <value>Shipment List Config</value>
+  </data>
+  <data name="PackPrint_SupplierLabelConfig" xml:space="preserve">
+    <value>Supplier Label Config</value>
+  </data>
+  <data name="Mobile_FinishProdShipment_Client" xml:space="preserve">
+    <value>Mobile Finish Product Shipment Client</value>
+  </data>
+  <data name="Production_FinishShipment" xml:space="preserve">
+    <value>Production Finish Shipment</value>
+  </data>
+  <data name="Production_FinishProdShipMentList" xml:space="preserve">
+    <value>Finish Prod ShipMent List</value>
+  </data>
+  <data name="Production_ESOPFileAdd" xml:space="preserve">
+    <value>Upload ESOP File</value>
+  </data>
+  <data name="Production_ESOPFileList" xml:space="preserve">
+    <value>ESOP File</value>
+  </data>
+  <data name="Labels_ItemDocumentAdd" xml:space="preserve">
+    <value>Add Product Label Document</value>
+  </data>
+  <data name="Labels_ItemDocumentEdit" xml:space="preserve">
+    <value>Edit Product Label Document</value>
+  </data>
+  <data name="Labels_ItemDocumentList" xml:space="preserve">
+    <value>Product Label Document</value>
+  </data>
+  <data name="Labels_ItemDocumentView" xml:space="preserve">
+    <value>View Product Label Document</value>
+  </data>
+  <data name="Labels_LabelDocumentEdit" xml:space="preserve">
+    <value>Document Edit</value>
+  </data>
+  <data name="Labels_LabelZPLEdit" xml:space="preserve">
+    <value>Label ZPL Edit</value>
+  </data>
+  <data name="SerialNumber_SerialNumberCopy" xml:space="preserve">
+    <value>SerialNumber Copy</value>
+  </data>
+  <data name="ShopOrder_RouterBind" xml:space="preserve">
+    <value>Router bind</value>
+  </data>
+  <data name="ESOPStroeConfig" xml:space="preserve">
+    <value>ESOP Configuration</value>
+  </data>
+  <data name="Production_ESOPStroeConfig" xml:space="preserve">
+    <value>ESOP Configuration</value>
+  </data>
+  <data name="Material_PrintGRN" xml:space="preserve">
+    <value>Material bar code printing</value>
+  </data>
+  <data name="StorageTransfer" xml:space="preserve">
+    <value>Library bit transfer</value>
+  </data>
+  <data name="Material_IQCFormView" xml:space="preserve">
+    <value>Material IQC Form View</value>
+  </data>
+  <data name="Material_OffLinePrint" xml:space="preserve">
+    <value>Material OffLine Print</value>
+  </data>
+  <data name="PackPrint_PackPrintOutput" xml:space="preserve">
+    <value>Print List</value>
+  </data>
+  <data name="Client_HDClientScan" xml:space="preserve">
+    <value>Pad Scanning</value>
+  </data>
+  <data name="CollectForm_TemplateFieldAdd" xml:space="preserve">
+    <value>Add operation template field</value>
+  </data>
+  <data name="CollectForm_TemplateFieldList" xml:space="preserve">
+    <value>Template field</value>
+  </data>
+  <data name="ItemLevelAdd" xml:space="preserve">
+    <value>Add item level</value>
+  </data>
+  <data name="ItemLevelEdit" xml:space="preserve">
+    <value>Edit item level</value>
+  </data>
+  <data name="ItemLevelView" xml:space="preserve">
+    <value>View item level</value>
+  </data>
+  <data name="Manufacture_ProductionChanges" xml:space="preserve">
+    <value>Production Changes</value>
+  </data>
+  <data name="Material_InStorageIQCFormList" xml:space="preserve">
+    <value>wait inStorage FormList</value>
+  </data>
+  <data name="Material_IQCCheckFail" xml:space="preserve">
+    <value>Check Fail IQC Form List</value>
+  </data>
+  <data name="Material_MaterialInfo" xml:space="preserve">
+    <value>Material Info</value>
+  </data>
+  <data name="Material_PackGRN" xml:space="preserve">
+    <value>Pack GRN</value>
+  </data>
+  <data name="Material_WaitIQCFormList" xml:space="preserve">
+    <value>wait check FormList</value>
+  </data>
+  <data name="Mobile_Production_Client" xml:space="preserve">
+    <value>Production Client</value>
+  </data>
+  <data name="Plan_CheckMaterial" xml:space="preserve">
+    <value>Check Material</value>
+  </data>
+  <data name="Plan_LoadingAdd" xml:space="preserve">
+    <value>Add Loading List</value>
+  </data>
+  <data name="Plan_LoadingList" xml:space="preserve">
+    <value>Loading List</value>
+  </data>
+  <data name="ProcessForm_PrepareMatFormEdit" xml:space="preserve">
+    <value>Edit Processing List</value>
+  </data>
+  <data name="ProcessForm_PrepareMatFormList" xml:space="preserve">
+    <value>List processing</value>
+  </data>
+  <data name="ProcessForm_TemplateFieldAdd" xml:space="preserve">
+    <value>Add template fields</value>
+  </data>
+  <data name="ProcessForm_TemplateFieldList" xml:space="preserve">
+    <value>Template fields</value>
+  </data>
+  <data name="ProcessProductFormPrint" xml:space="preserve">
+    <value>Process Print</value>
+  </data>
+  <data name="Product_ItemLevelList" xml:space="preserve">
+    <value>Item level list</value>
+  </data>
+  <data name="Product_ItemModelAdd" xml:space="preserve">
+    <value>Add Item Model</value>
+  </data>
+  <data name="Product_ItemModelEdit" xml:space="preserve">
+    <value>Edit ItemModel</value>
+  </data>
+  <data name="Product_ItemModelList" xml:space="preserve">
+    <value>Item Model List</value>
+  </data>
+  <data name="Prod_LoadingList" xml:space="preserve">
+    <value>Loading List</value>
+  </data>
+  <data name="Prod_ProcessFormParams" xml:space="preserve">
+    <value>ProcessForm Paramter Config</value>
+  </data>
+  <data name="TraceForm_TemplateFieldAdd" xml:space="preserve">
+    <value>Add template field</value>
+  </data>
+  <data name="TraceForm_TemplateFieldList" xml:space="preserve">
+    <value>Template field</value>
+  </data>
+  <data name="Turnover_TurnoverPrint" xml:space="preserve">
+    <value>Print TurnOverNumber</value>
+  </data>
+  <data name="Material_StorageTransfer" xml:space="preserve">
+    <value>Material Storage Transfer</value>
+  </data>
+  <data name="PackGRN" xml:space="preserve">
+    <value>Pack GRN</value>
+  </data>
+  <data name="Supplier_AssignItem" xml:space="preserve">
+    <value>Supplier Assign Item</value>
+  </data>
+  <data name="Supplier_AssignUser" xml:space="preserve">
+    <value>Supplier Assign User</value>
+  </data>
+  <data name="IQCFormAttend" xml:space="preserve">
+    <value>IQC Form Attend</value>
+  </data>
+  <data name="Material_IQCFormAttend" xml:space="preserve">
+    <value>IQC  Attend</value>
+  </data>
+  <data name="UserOfSupplierList" xml:space="preserve">
+    <value>User Of Supplier List</value>
+  </data>
+  <data name="Material_TransferOutAdd" xml:space="preserve">
+    <value>Material Transfer Out Add</value>
+  </data>
+  <data name="Material_TransferOutEdit" xml:space="preserve">
+    <value>Material Transfer Out Edit</value>
+  </data>
+  <data name="Material_TransferOutList" xml:space="preserve">
+    <value>Material Transfer Out List</value>
+  </data>
+  <data name="FinishProductInStorageList" xml:space="preserve">
+    <value>Product  Store</value>
+  </data>
+  <data name="MOCode" xml:space="preserve">
+    <value>MOCode</value>
+  </data>
+  <data name="Mobile_FinishedProductInStorageAdd" xml:space="preserve">
+    <value>Module storage</value>
+  </data>
+  <data name="Material_GRNModify" xml:space="preserve">
+    <value>Edit Material barcode quantity</value>
+  </data>
+  <data name="BasalWarehouse" xml:space="preserve">
+    <value>Basal Warehouse</value>
+  </data>
+  <data name="ERPMOBomList" xml:space="preserve">
+    <value>Material preparation kanban</value>
+  </data>
+  <data name="Material_GenerateGRNSuply" xml:space="preserve">
+    <value>Material Generate GRN Suply</value>
+  </data>
+  <data name="Material_MaterialUnitListSuply" xml:space="preserve">
+    <value>Material Material Unit ListSuply</value>
+  </data>
+  <data name="PackGRNSuply" xml:space="preserve">
+    <value>Pack GRN Suply</value>
+  </data>
+  <data name="ERPMOBomListkanban" xml:space="preserve">
+    <value>Warehouse preparation kanban</value>
+  </data>
+  <data name="Mobile_MaterialInStorageList" xml:space="preserve">
+    <value>Material storage</value>
+  </data>
+  <data name="MaterialStorageGRNInputMobile" xml:space="preserve">
+    <value>Scan GRN for storage</value>
+  </data>
+  <data name="Mobile_MaterialInStorageAdd" xml:space="preserve">
+    <value>Material storage</value>
+  </data>
+  <data name="IQCFormCheckKanbanList" xml:space="preserve">
+    <value>Kanban board of material to be inspected area</value>
+  </data>
+  <data name="IQCFormCheckKanbanView" xml:space="preserve">
+    <value>Kanban mode</value>
+  </data>
+  <data name="ProdEfficiency" xml:space="preserve">
+    <value>Production efficiency Kanban</value>
+  </data>
+  <data name="Material_RePrintGRNSuply" xml:space="preserve">
+    <value>Supplier GRN RePrint </value>
+  </data>
+  <data name="Material_PrepareMatFormLists" xml:space="preserve">
+    <value>Material Prepare Mat FormLists</value>
+  </data>
+  <data name="Account_EditProfile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="System_WebConfig" xml:space="preserve">
+    <value>Web Config</value>
+  </data>
+  <data name="System_CacheClear" xml:space="preserve">
+    <value>Clear Cache</value>
+  </data>
+  <data name="System_MenuImport" xml:space="preserve">
+    <value>Import Menu</value>
+  </data>
+  <data name="System_ErrorList" xml:space="preserve">
+    <value>Error Log</value>
+  </data>
+  <data name="System_ErrorDetail" xml:space="preserve">
+    <value>Log Detail</value>
+  </data>
+  <data name="Station_PhaseAdd" xml:space="preserve">
+    <value>Add Station Phase</value>
+  </data>
+  <data name="Station_PhaseEdit" xml:space="preserve">
+    <value>Edit Station Phase</value>
+  </data>
+  <data name="Station_PhaseList" xml:space="preserve">
+    <value>Station Phase List</value>
+  </data>
+  <data name="Station_StationParamAdd" xml:space="preserve">
+    <value>Add Process Station Param</value>
+  </data>
+  <data name="Station_StationParamEdit" xml:space="preserve">
+    <value>Edit Process Station Param</value>
+  </data>
+  <data name="Station_StationParamList" xml:space="preserve">
+    <value>Process Station Param List</value>
+  </data>
+  <data name="Station_StationParamView" xml:space="preserve">
+    <value>View Process Station Param</value>
+  </data>
+  <data name="Station_StationTestCountAdd" xml:space="preserve">
+    <value>Add Station Test Count</value>
+  </data>
+  <data name="Station_StationTestCountDelete" xml:space="preserve">
+    <value>Delete Station Test Count</value>
+  </data>
+  <data name="Station_StationTestCountEdit" xml:space="preserve">
+    <value>Edit Station Test Count</value>
+  </data>
+  <data name="Station_StationTestCountList" xml:space="preserve">
+    <value>Station Test Count List</value>
+  </data>
+  <data name="Station_PhaseView" xml:space="preserve">
+    <value>View Production Phase</value>
+  </data>
+  <data name="Station_StationTestCountView" xml:space="preserve">
+    <value>View Station Test Times</value>
+  </data>
+  <data name="SerialNumber_ResetWayAdd" xml:space="preserve">
+    <value>Add Reset Way</value>
+  </data>
+  <data name="SerialNumber_ResetWayDelete" xml:space="preserve">
+    <value>Delete Reset Way</value>
+  </data>
+  <data name="SerialNumber_ResetWayEdit" xml:space="preserve">
+    <value>Edit Reset Way</value>
+  </data>
+  <data name="SerialNumber_ResetWayList" xml:space="preserve">
+    <value>Reset Way List</value>
+  </data>
+  <data name="NCCode_NCGroupEdit" xml:space="preserve">
+    <value>Edit bad code type</value>
+  </data>
+  <data name="FeederTypeView" xml:space="preserve">
+    <value>View Feeder Type</value>
+  </data>
+  <data name="FeederView" xml:space="preserve">
+    <value>View Feeder</value>
+  </data>
+  <data name="StockCarAdd" xml:space="preserve">
+    <value>Add StockCar</value>
+  </data>
+  <data name="StockCarEdit" xml:space="preserve">
+    <value>Edit StockCar</value>
+  </data>
+  <data name="StockCarList" xml:space="preserve">
+    <value>StockCar List</value>
+  </data>
+  <data name="StockOutList" xml:space="preserve">
+    <value>Stock Out List</value>
+  </data>
+  <data name="StockTypeAdd" xml:space="preserve">
+    <value>Add StockType</value>
+  </data>
+  <data name="StockTypeEdit" xml:space="preserve">
+    <value>Edit StockType</value>
+  </data>
+  <data name="StockTypeList" xml:space="preserve">
+    <value>StockType List</value>
+  </data>
+  <data name="Data_SynchronizationAdd" xml:space="preserve">
+    <value>Add synchronization business</value>
+  </data>
+  <data name="Data_SynchronizationEdit" xml:space="preserve">
+    <value>Edit synchronization business</value>
+  </data>
+  <data name="Data_SynchronizationExecute" xml:space="preserve">
+    <value>Execute synchronization business</value>
+  </data>
+  <data name="Data_SynchronizationList" xml:space="preserve">
+    <value>Synchronization List</value>
+  </data>
+  <data name="ShopOrderPrintRecord_List" xml:space="preserve">
+    <value>Shop Order Print Record</value>
+  </data>
+  <data name="ShopOrderPrintRecord_View" xml:space="preserve">
+    <value>View Shop Order Print Record</value>
+  </data>
+  <data name="Product_StationParamAdd" xml:space="preserve">
+    <value>Station Param Add</value>
+  </data>
+  <data name="Product_StationParamEdit" xml:space="preserve">
+    <value> Station Param Edit</value>
+  </data>
+  <data name="Client_ProInfoConfig" xml:space="preserve">
+    <value>Dynamic Data Display Configuration</value>
+  </data>
+  <data name="Client_ProInfoConfigEdit" xml:space="preserve">
+    <value>Edit Dynamic Data Configuration</value>
+  </data>
+  <data name="Client_PopedomStation" xml:space="preserve">
+    <value>Station Popedom Config</value>
+  </data>
+  <data name="Client_PopedomStationAdd" xml:space="preserve">
+    <value>Add Station Popedom Config</value>
+  </data>
+  <data name="Client_PopedomStationEdit" xml:space="preserve">
+    <value>Edit Station Popedom Config</value>
+  </data>
+  <data name="PickListEdit" xml:space="preserve">
+    <value>Edit hand in the list of materials</value>
+  </data>
+  <data name="PreAssemblyList" xml:space="preserve">
+    <value>Pre-processing information query</value>
+  </data>
+  <data name="MaterielAdd" xml:space="preserve">
+    <value>Materiel Add</value>
+  </data>
+  <data name="MaterielDelete" xml:space="preserve">
+    <value>Materiel Delete</value>
+  </data>
+  <data name="MaterielEdit" xml:space="preserve">
+    <value>Materiel Edit</value>
+  </data>
+  <data name="MaterielView" xml:space="preserve">
+    <value>Materiel View</value>
+  </data>
+  <data name="Client_PopedomStationCopy" xml:space="preserve">
+    <value>Copy Station Popedom Config</value>
+  </data>
+  <data name="ReportDesignAdd" xml:space="preserve">
+    <value>Swift Report Add</value>
+  </data>
+  <data name="ReportTable" xml:space="preserve">
+    <value>ReportTable</value>
+  </data>
+  <data name="ComponentList" xml:space="preserve">
+    <value>Kanban Component</value>
+  </data>
+  <data name="Kanban_ContainerList" xml:space="preserve">
+    <value>Kanban Container</value>
+  </data>
+  <data name="Kanban_TemplateList" xml:space="preserve">
+    <value>Kanban Template </value>
+  </data>
+  <data name="Template_KanbanTypeList" xml:space="preserve">
+    <value>Kanban Type</value>
+  </data>
+  <data name="KanbanContainer" xml:space="preserve">
+    <value>Kanban Container</value>
+  </data>
+  <data name="LayoutType" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="KanbanComponent" xml:space="preserve">
+    <value>Kanban  Component</value>
+  </data>
+  <data name="MaterialConfigAdd" xml:space="preserve">
+    <value>Add Material Config</value>
+  </data>
+  <data name="MaterialConfigEdit" xml:space="preserve">
+    <value>Edit Material Config</value>
+  </data>
+  <data name="MaterialSysConfigList" xml:space="preserve">
+    <value>Material  Config List</value>
+  </data>
+  <data name="MaterialIQCConfigAdd" xml:space="preserve">
+    <value>Add IQC Config</value>
+  </data>
+  <data name="MaterialIQCConfigEdit" xml:space="preserve">
+    <value>Edit IQC Config</value>
+  </data>
+  <data name="MaterialIQCConfigList" xml:space="preserve">
+    <value>Material IQC  Config</value>
+  </data>
+  <data name="MaterialSupplierConfigAdd" xml:space="preserve">
+    <value>Add Supplier Config List</value>
+  </data>
+  <data name="MaterialSupplierConfigEdit" xml:space="preserve">
+    <value>Edit Supplier Config List</value>
+  </data>
+  <data name="MaterialSupplierConfigList" xml:space="preserve">
+    <value>Supplier Config List</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsAdd" xml:space="preserve">
+    <value>Add ExtensionFields ExtensionField</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsEdit" xml:space="preserve">
+    <value>Edit ExtensionFields ExtensionField</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsList" xml:space="preserve">
+    <value>ExtensionFields ExtensionFields List</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsView" xml:space="preserve">
+    <value>View ExtensionFields ExtensionFieldsView</value>
+  </data>
+  <data name="Material_Deliver" xml:space="preserve">
+    <value>Create Deliver List</value>
+  </data>
+  <data name="Material_DeliverList" xml:space="preserve">
+    <value>Material Deliver List</value>
+  </data>
+  <data name="SupplierDelivery" xml:space="preserve">
+    <value>Supplier Delivery</value>
+  </data>
+  <data name="SupplierDeliveryEdit" xml:space="preserve">
+    <value>Edit Supplier Delivery</value>
+  </data>
+  <data name="SupplierDeliveryList" xml:space="preserve">
+    <value>Supplier Delivery List</value>
+  </data>
+  <data name="Supplier_PackList" xml:space="preserve">
+    <value>Supplier Pack List</value>
+  </data>
+  <data name="Material_PackList" xml:space="preserve">
+    <value>Material Pack List</value>
+  </data>
+  <data name="KanbanPage" xml:space="preserve">
+    <value>KanbanPage</value>
+  </data>
+  <data name="AQLRuleAdd" xml:space="preserve">
+    <value>AQL Rule Add</value>
+  </data>
+  <data name="AQLRuleEdit" xml:space="preserve">
+    <value>Edit AQL Rule</value>
+  </data>
+  <data name="AQLRuleList" xml:space="preserve">
+    <value>AQL Rule List</value>
+  </data>
+  <data name="AQLSampleAdd" xml:space="preserve">
+    <value>Add Inspection item</value>
+  </data>
+  <data name="AQLSampleEdit" xml:space="preserve">
+    <value>Edit Inspection item</value>
+  </data>
+  <data name="AQLSampleList" xml:space="preserve">
+    <value>Inspection item  List</value>
+  </data>
+  <data name="InspectionItem" xml:space="preserve">
+    <value>Inspection item</value>
+  </data>
+  <data name="QC_InspectionItemAdd" xml:space="preserve">
+    <value>Add Inspection Item </value>
+  </data>
+  <data name="QC_InspectionItemDialog" xml:space="preserve">
+    <value>QC InspectionItem Dialog</value>
+  </data>
+  <data name="QC_InspectionItemEdit" xml:space="preserve">
+    <value>Edit Inspeciton Item </value>
+  </data>
+  <data name="QC_InspectionItemList" xml:space="preserve">
+    <value>QC InspectionItemList</value>
+  </data>
+  <data name="QC_InspectionTemplateAdd" xml:space="preserve">
+    <value>Add QC Inspection Template</value>
+  </data>
+  <data name="QC_InspectionTemplateCopy" xml:space="preserve">
+    <value>Copy Inspection Template</value>
+  </data>
+  <data name="QC_InspectionTemplateEdit" xml:space="preserve">
+    <value>Edit QC Inspection Template</value>
+  </data>
+  <data name="QC_InspectionTemplateItemAdd" xml:space="preserve">
+    <value>Add QC InspectionTemplate</value>
+  </data>
+  <data name="QC_InspectionTemplateItemEdit" xml:space="preserve">
+    <value>Edit association list</value>
+  </data>
+  <data name="QC_InspectionTemplateItemList" xml:space="preserve">
+    <value>QC InspectionTemplateItemList</value>
+  </data>
+  <data name="QC_InspectionTemplateList" xml:space="preserve">
+    <value>QC InspectionTemplate List</value>
+  </data>
+  <data name="QC_InspectionTypeAdd" xml:space="preserve">
+    <value>Add QC InspectionType</value>
+  </data>
+  <data name="QC_InspectionTypeEdit" xml:space="preserve">
+    <value>Edit QC InspectionType </value>
+  </data>
+  <data name="QC_InspectionTypeList" xml:space="preserve">
+    <value>QC InspectionType List</value>
+  </data>
+  <data name="AQLRule" xml:space="preserve">
+    <value>AQL Rule</value>
+  </data>
+  <data name="InspectionTemplate" xml:space="preserve">
+    <value>Inspection Template</value>
+  </data>
+  <data name="QC_InspectionRuleAdd" xml:space="preserve">
+    <value>QC_Inspection Rule Add</value>
+  </data>
+  <data name="QC_InspectionRuleEdit" xml:space="preserve">
+    <value>Edit QC Inspection Rule</value>
+  </data>
+  <data name="Client_UsersStation" xml:space="preserve">
+    <value>Users Station Config</value>
+  </data>
+  <data name="Client_UsersStationAdd" xml:space="preserve">
+    <value>Add Users Station</value>
+  </data>
+  <data name="Client_UsersStationEdit" xml:space="preserve">
+    <value>Edit Users Station</value>
+  </data>
+  <data name="Material_MaterialInStockConfirm" xml:space="preserve">
+    <value>Material  Confirm</value>
+  </data>
+  <data name="Assemble_ProCollectionUI" xml:space="preserve">
+    <value>Assembly UI</value>
+  </data>
+  <data name="Common_ProCollectionUI" xml:space="preserve">
+    <value>Common UI</value>
+  </data>
+  <data name="Input_ProCollectionUI" xml:space="preserve">
+    <value>Birth UI</value>
+  </data>
+  <data name="NC_ProCollectionUI" xml:space="preserve">
+    <value>NC Collection UI</value>
+  </data>
+  <data name="NC_RepairUI" xml:space="preserve">
+    <value>Repair UI</value>
+  </data>
+  <data name="Packing_ProCollectionUI" xml:space="preserve">
+    <value>Packing UI</value>
+  </data>
+  <data name="Pallet_ProCollectionUI" xml:space="preserve">
+    <value>Pallet Packing UI</value>
+  </data>
+  <data name="Pre_MaterialByItem" xml:space="preserve">
+    <value>Pre Processing UI(By Material Code)</value>
+  </data>
+  <data name="Pre_MaterialByOrder" xml:space="preserve">
+    <value>Pre Processing UI(By Order)</value>
+  </data>
+  <data name="Material_MaterialInStorageGRN" xml:space="preserve">
+    <value>Scan the bar code of the material and enter the warehouse</value>
+  </data>
+  <data name="Material_MaterialInStorageQty" xml:space="preserve">
+    <value>Quantity warehousing</value>
+  </data>
+  <data name="MaterialApplyList" xml:space="preserve">
+    <value>Material Apply List</value>
+  </data>
+  <data name="MaterialScrap" xml:space="preserve">
+    <value>Material Scrap</value>
+  </data>
+  <data name="Turnover_TurnoverGroupCopy" xml:space="preserve">
+    <value>Turnover Group Copy</value>
+  </data>
+  <data name="MaterialPrepare" xml:space="preserve">
+    <value>Material Prepare</value>
+  </data>
+  <data name="MaterialHandover" xml:space="preserve">
+    <value>Material Handover</value>
+  </data>
+  <data name="MaterialProdReturn" xml:space="preserve">
+    <value>Prod Material Return</value>
+  </data>
+  <data name="MaterialReturnCheck" xml:space="preserve">
+    <value>MaterialReturnCheck</value>
+  </data>
+  <data name="MaterialReturnCheckEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="MaterialWhReturn" xml:space="preserve">
+    <value>Material Return</value>
+  </data>
+  <data name="Material_IEWarningSetting" xml:space="preserve">
+    <value>Material Warning Setting</value>
+  </data>
+  <data name="SerialNumber_PrefixSufAdd" xml:space="preserve">
+    <value>Add Prefix Suf</value>
+  </data>
+  <data name="SerialNumber_PrefixSufDelete" xml:space="preserve">
+    <value>Delete Prefix Suf</value>
+  </data>
+  <data name="SerialNumber_PrefixSufEdit" xml:space="preserve">
+    <value>Edit Prefix Suf</value>
+  </data>
+  <data name="SerialNumber_PrefixSufList" xml:space="preserve">
+    <value>Prefix Suf List</value>
+  </data>
+  <data name="JigHistoryList" xml:space="preserve">
+    <value>JigHistoryList</value>
+  </data>
+  <data name="RedGumList" xml:space="preserve">
+    <value>RedGumList</value>
+  </data>
+  <data name="SteelHistoryList" xml:space="preserve">
+    <value>SteelHistoryList</value>
+  </data>
+  <data name="AQLPlanList" xml:space="preserve">
+    <value>AQLPlanList</value>
+  </data>
+  <data name="AQLRuleTypeAdd" xml:space="preserve">
+    <value>AQLRuleTypeAdd</value>
+  </data>
+  <data name="AQLRuleTypeEdit" xml:space="preserve">
+    <value>AQLRuleTypeEdit</value>
+  </data>
+  <data name="AQLRuleTypeList" xml:space="preserve">
+    <value>AQLRuleTypeList</value>
+  </data>
+  <data name="CallMaterial" xml:space="preserve">
+    <value>CallMaterial</value>
+  </data>
+  <data name="FactoryEfficiencyBoard" xml:space="preserve">
+    <value>FactoryEfficiencyBoard</value>
+  </data>
+  <data name="LineReturnMaterial" xml:space="preserve">
+    <value>LineReturnMaterial</value>
+  </data>
+  <data name="OBA_OBARuleAdd" xml:space="preserve">
+    <value>OBA_OBARuleAdd</value>
+  </data>
+  <data name="OBA_OBARuleEdit" xml:space="preserve">
+    <value>OBA_OBARuleEdit</value>
+  </data>
+  <data name="OBA_OBARuleList" xml:space="preserve">
+    <value>OBA_OBARuleList</value>
+  </data>
+  <data name="OrderTrackingList" xml:space="preserve">
+    <value>OrderTrackingList</value>
+  </data>
+  <data name="PannelSNList" xml:space="preserve">
+    <value>PannelSNList</value>
+  </data>
+  <data name="ProdAbnormalList" xml:space="preserve">
+    <value>ProdAbnormalList</value>
+  </data>
+  <data name="ProdLineEfficiencyKanbanList" xml:space="preserve">
+    <value>ProdLineEfficiencyKanbanList</value>
+  </data>
+  <data name="QuickReport" xml:space="preserve">
+    <value>QuickReport</value>
+  </data>
+  <data name="RMAMangement_RMAList" xml:space="preserve">
+    <value>RMAMangement_RMAList</value>
+  </data>
+  <data name="RMAMangement_RMAOrderEdit" xml:space="preserve">
+    <value>RMAMangement_RMAOrderEdit</value>
+  </data>
+  <data name="RMAMangement_RMAOrderReceive" xml:space="preserve">
+    <value>RMAMangement_RMAOrderReceive</value>
+  </data>
+  <data name="RMAMangement_RMAProductReceive" xml:space="preserve">
+    <value>RMAMangement_RMAProductReceive</value>
+  </data>
+  <data name="Router_RouterCopy" xml:space="preserve">
+    <value>Router_RouterCopy</value>
+  </data>
+  <data name="Schedule_ProdOrderSchedule" xml:space="preserve">
+    <value>Schedule_ProdOrderSchedule</value>
+  </data>
+  <data name="Schedule_SchedulingQtyChange" xml:space="preserve">
+    <value>Schedule_SchedulingQtyChange</value>
+  </data>
+  <data name="ShopOrderAdd" xml:space="preserve">
+    <value>Add shop order</value>
+  </data>
+  <data name="ShopOrderEdit" xml:space="preserve">
+    <value>Edit shop order</value>
+  </data>
+  <data name="SnStateView" xml:space="preserve">
+    <value>SN State View</value>
+  </data>
+  <data name="SNStatusManager" xml:space="preserve">
+    <value>SNStatusManager</value>
+  </data>
+  <data name="StdTime_StdTimeAdd" xml:space="preserve">
+    <value>StdTime_StdTimeAdd</value>
+  </data>
+  <data name="StdTime_StdTimeEdit" xml:space="preserve">
+    <value>StdTime_StdTimeEdit</value>
+  </data>
+  <data name="StdTime_StdTimeList" xml:space="preserve">
+    <value>StdTime_StdTimeList</value>
+  </data>
+  <data name="ViewPickList" xml:space="preserve">
+    <value>ViewPickList</value>
+  </data>
+  <data name="Product_BomImport" xml:space="preserve">
+    <value>BOM Import</value>
+  </data>
+  <data name="Product_BomSynchro" xml:space="preserve">
+    <value>BOM Synchro</value>
+  </data>
+  <data name="Product_BomDown" xml:space="preserve">
+    <value>Bom Template Download</value>
+  </data>
+  <data name="Product_BomMatAdd" xml:space="preserve">
+    <value>Add Bom Materiel</value>
+  </data>
+  <data name="Product_BomMatDel" xml:space="preserve">
+    <value>Delete Bom Materiel</value>
+  </data>
+  <data name="Product_BomMatEdit" xml:space="preserve">
+    <value>Edit Bom Materiel</value>
+  </data>
+  <data name="Product_BomStruct" xml:space="preserve">
+    <value>Product Struct</value>
+  </data>
+  <data name="Product_CategoryAdd" xml:space="preserve">
+    <value>Add Category</value>
+  </data>
+  <data name="Product_CategoryDel" xml:space="preserve">
+    <value>Delete Category</value>
+  </data>
+  <data name="Product_CategoryEdit" xml:space="preserve">
+    <value>Edit Category</value>
+  </data>
+  <data name="Product_CategoryList" xml:space="preserve">
+    <value>Category List</value>
+  </data>
+  <data name="Product_StationBomList" xml:space="preserve">
+    <value>Station BOM List</value>
+  </data>
+  <data name="Product_StationBomMatAdd" xml:space="preserve">
+    <value>Add station and bom relation</value>
+  </data>
+  <data name="Product_StationBomMatDel" xml:space="preserve">
+    <value>Delete station and bom relation</value>
+  </data>
+  <data name="Product_StationBomMatEdit" xml:space="preserve">
+    <value>Edit station and bom relation</value>
+  </data>
+  <data name="Product_StationBomMatList" xml:space="preserve">
+    <value>Station and bom relation list</value>
+  </data>
+  <data name="Product_StationBomView" xml:space="preserve">
+    <value>View Station BOM</value>
+  </data>
+  <data name="Product_StationMatAdd" xml:space="preserve">
+    <value>Add Station Material Relation</value>
+  </data>
+  <data name="Product_StationMatDel" xml:space="preserve">
+    <value>Delete Station Material Relation</value>
+  </data>
+  <data name="Product_StationMatEdit" xml:space="preserve">
+    <value>Edit Station Material Relation</value>
+  </data>
+  <data name="Product_StationMatList" xml:space="preserve">
+    <value>Station Material Relation List</value>
+  </data>
+  <data name="Product_BomCopy" xml:space="preserve">
+    <value>BOM Copy</value>
+  </data>
+  <data name="Production_MslAdd" xml:space="preserve">
+    <value>Add MSL</value>
+  </data>
+  <data name="Production_MslDelete" xml:space="preserve">
+    <value>Delete MSL</value>
+  </data>
+  <data name="Production_MslEdit" xml:space="preserve">
+    <value>Edit MSL</value>
+  </data>
+  <data name="Production_MslList" xml:space="preserve">
+    <value>MSL List</value>
+  </data>
+  <data name="Production_MsdContainerAdd" xml:space="preserve">
+    <value>Add MSD Container</value>
+  </data>
+  <data name="Production_MsdContainerDel" xml:space="preserve">
+    <value>Delete MSD Container</value>
+  </data>
+  <data name="Production_MsdContainerEdit" xml:space="preserve">
+    <value>Edit MSD Container</value>
+  </data>
+  <data name="Production_MsdContainerList" xml:space="preserve">
+    <value>MSD Container List</value>
+  </data>
+  <data name="MsdBake_ProCollectionUI" xml:space="preserve">
+    <value>MSD In Bake UI</value>
+  </data>
+  <data name="MsdPack_ProCollectionUI" xml:space="preserve">
+    <value>MSD UnPack UI</value>
+  </data>
+  <data name="MsdUnBake_ProCollectionUI" xml:space="preserve">
+    <value>MSD Out Bake UI</value>
+  </data>
+  <data name="MsdUnPack_ProCollectionUI" xml:space="preserve">
+    <value>MSD  Pack UI</value>
+  </data>
+  <data name="OutStorage_ProCollectionUI" xml:space="preserve">
+    <value>Out Of Storage Collection UI</value>
+  </data>
+  <data name="Storage_ProCollectionUI" xml:space="preserve">
+    <value>Storage Collection UI</value>
+  </data>
+  <data name="AbnormalCauseMaintain" xml:space="preserve">
+    <value>Abnormal Cause Maintain</value>
+  </data>
+  <data name="AssembleReportList" xml:space="preserve">
+    <value>Assemble Report</value>
+  </data>
+  <data name="CheckItem" xml:space="preserve">
+    <value>Check Item</value>
+  </data>
+  <data name="CheckItemGroupList" xml:space="preserve">
+    <value>Check Item Group</value>
+  </data>
+  <data name="CheckItemList" xml:space="preserve">
+    <value>Check Item List</value>
+  </data>
+  <data name="ConfirmCryMaterial" xml:space="preserve">
+    <value>Confirm Cry Material</value>
+  </data>
+  <data name="EnterWareHouse" xml:space="preserve">
+    <value>Enter WareHouse</value>
+  </data>
+  <data name="EnterWarehouseList" xml:space="preserve">
+    <value>Collect Offline Data</value>
+  </data>
+  <data name="Equipment_EquipmentAudit" xml:space="preserve">
+    <value>Equipment Audit</value>
+  </data>
+  <data name="Equipment_EquipmentConfirm" xml:space="preserve">
+    <value>Equipment Confirm</value>
+  </data>
+  <data name="Equipment_EquipmentGroupAdd" xml:space="preserve">
+    <value>Add Equipment Project Group</value>
+  </data>
+  <data name="Equipment_EquipmentGroupEdit" xml:space="preserve">
+    <value>Edit Equipment Project Group</value>
+  </data>
+  <data name="Equipment_EquipmentGroupList" xml:space="preserve">
+    <value>Equipment Maintain Project Group</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainAdd" xml:space="preserve">
+    <value>Add Equipment Maintain List</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainConfigAdd" xml:space="preserve">
+    <value>Equipment Maintain Config</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainCopy" xml:space="preserve">
+    <value>Copy Equipment Maintain Copy</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainEdit" xml:space="preserve">
+    <value>Edit Equipment Maintain List</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainHistory" xml:space="preserve">
+    <value>Equipment Maintain History Record</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainList" xml:space="preserve">
+    <value>Equipment Maintain List</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainRecord" xml:space="preserve">
+    <value>Equipment Maintain Record</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainRecordEdit" xml:space="preserve">
+    <value>Equipment Maintain Edit</value>
+  </data>
+  <data name="Equipment_EquipmentRepair" xml:space="preserve">
+    <value>Equipment Repair</value>
+  </data>
+  <data name="Equipment_EquipmentRepairEdit" xml:space="preserve">
+    <value>Edit equipment maintenance records</value>
+  </data>
+  <data name="Equipment_EquipProjectAdd" xml:space="preserve">
+    <value>Add Equipment Project </value>
+  </data>
+  <data name="Equipment_EquipProjectEdit" xml:space="preserve">
+    <value>Edit Equipment Project</value>
+  </data>
+  <data name="Equipment_EquipProjectList" xml:space="preserve">
+    <value>Equipment Project List</value>
+  </data>
+  <data name="Equipment_RepairList" xml:space="preserve">
+    <value>Repair List</value>
+  </data>
+  <data name="ESOPUpload" xml:space="preserve">
+    <value>ESOP Upload</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="FirstArticleCheckout" xml:space="preserve">
+    <value>First Article Checkout</value>
+  </data>
+  <data name="FirstArticleInspectionReport" xml:space="preserve">
+    <value>First Article Inspection Report</value>
+  </data>
+  <data name="HalfProductInStorage" xml:space="preserve">
+    <value>Half Product In Storage</value>
+  </data>
+  <data name="ItemListType" xml:space="preserve">
+    <value>Item List Type</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Material type</value>
+  </data>
+  <data name="ItemTypeAdd" xml:space="preserve">
+    <value>Add Item Type </value>
+  </data>
+  <data name="ItemTypeEdit" xml:space="preserve">
+    <value>Edit Item Type</value>
+  </data>
+  <data name="KanBanList" xml:space="preserve">
+    <value>Kanban list</value>
+  </data>
+  <data name="KeyPartsSNList" xml:space="preserve">
+    <value>KeyPartsSN List</value>
+  </data>
+  <data name="LineWeekKanban" xml:space="preserve">
+    <value>LineWeekKanban</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapAdd" xml:space="preserve">
+    <value>Add Maintenance Plan Equipment Type</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapDelete" xml:space="preserve">
+    <value>Delete Maintenance Plan Equipment Type</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapEdit" xml:space="preserve">
+    <value>Edit Maintenance Plan Equipment Type</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapList" xml:space="preserve">
+    <value>Maintenance Plan Equipment Type List</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapAdd" xml:space="preserve">
+    <value>Add Maintenance Plan Project Group</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapDelete" xml:space="preserve">
+    <value>Delete Maintenance Plan Project Group</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapEdit" xml:space="preserve">
+    <value>Edit Maintenance Plan Project Group</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapList" xml:space="preserve">
+    <value>Maintenance Plan Project Group</value>
+  </data>
+  <data name="MaterialBatchList" xml:space="preserve">
+    <value>Material Batch List</value>
+  </data>
+  <data name="MaterialGiveOut" xml:space="preserve">
+    <value>Material Give Out</value>
+  </data>
+  <data name="Mobile_MaterialGiveOut" xml:space="preserve">
+    <value>Mobile Material Give Out</value>
+  </data>
+  <data name="Mobile_MaterialInStorage" xml:space="preserve">
+    <value>Mobile Material In Storage</value>
+  </data>
+  <data name="Mobile_MaterialSendBack" xml:space="preserve">
+    <value>Warehouse return</value>
+  </data>
+  <data name="Mobile_PrepareMaterial" xml:space="preserve">
+    <value>Mobile Prepare Material</value>
+  </data>
+  <data name="Mobile_ProductOutStorageGRN" xml:space="preserve">
+    <value>Mobile Product Out Storage</value>
+  </data>
+  <data name="Mobile_ProductReceive" xml:space="preserve">
+    <value>Mobile Product Receive</value>
+  </data>
+  <data name="NoticeList" xml:space="preserve">
+    <value>NoticeList</value>
+  </data>
+  <data name="OQCCheckNumByOrder" xml:space="preserve">
+    <value>OQC Check Num By Order</value>
+  </data>
+  <data name="OQCCheckout" xml:space="preserve">
+    <value>OQC Checkout</value>
+  </data>
+  <data name="OQC_OQCRuleAdd" xml:space="preserve">
+    <value>Add OQC Rule</value>
+  </data>
+  <data name="OQC_OQCRuleEdit" xml:space="preserve">
+    <value>Edit OQC Rule</value>
+  </data>
+  <data name="OQC_OQCRuleList" xml:space="preserve">
+    <value>OQC Rule</value>
+  </data>
+  <data name="PreassembleList" xml:space="preserve">
+    <value>Pressemble List</value>
+  </data>
+  <data name="Preassemble_Add" xml:space="preserve">
+    <value>Pressemble Add</value>
+  </data>
+  <data name="Preassemble_Edit" xml:space="preserve">
+    <value>Pressemble Edit</value>
+  </data>
+  <data name="PrepareMaterial" xml:space="preserve">
+    <value>Prepare Material</value>
+  </data>
+  <data name="PrintKeyPartsSN" xml:space="preserve">
+    <value>Print Key Parts SN</value>
+  </data>
+  <data name="PrintSN" xml:space="preserve">
+    <value>Print Finished Product SN</value>
+  </data>
+  <data name="ProcurementCheck" xml:space="preserve">
+    <value>Procurement Check</value>
+  </data>
+  <data name="ProductBorrow" xml:space="preserve">
+    <value>Product Borrow</value>
+  </data>
+  <data name="ProductCheck_List" xml:space="preserve">
+    <value>Product Check List</value>
+  </data>
+  <data name="ProductDataMaintain" xml:space="preserve">
+    <value>Product Data Maintain</value>
+  </data>
+  <data name="ProductInStorage" xml:space="preserve">
+    <value>ProductIn Storage</value>
+  </data>
+  <data name="ProductInStorageList" xml:space="preserve">
+    <value>ProductIn Storage List</value>
+  </data>
+  <data name="ProductionYearKanban" xml:space="preserve">
+    <value>Production Year Kanban</value>
+  </data>
+  <data name="Production_SparepartTypeList" xml:space="preserve">
+    <value>SparepartType List</value>
+  </data>
+  <data name="ProductOutStorageGRN" xml:space="preserve">
+    <value>Product Out Storage</value>
+  </data>
+  <data name="ProductQualityReport" xml:space="preserve">
+    <value>Product Quality Report</value>
+  </data>
+  <data name="ProductRepay" xml:space="preserve">
+    <value>Product Repay</value>
+  </data>
+  <data name="ProductShipmentOrder" xml:space="preserve">
+    <value>Product Shipment Order</value>
+  </data>
+  <data name="ProductShipmentOrderList" xml:space="preserve">
+    <value>Product Shipment Order List</value>
+  </data>
+  <data name="Product_RMARework" xml:space="preserve">
+    <value>Product RMA Rework</value>
+  </data>
+  <data name="Product_UnBindPackingManage" xml:space="preserve">
+    <value>Product UnBind Packing Manage</value>
+  </data>
+  <data name="Pruduct_ReworkHistory" xml:space="preserve">
+    <value>Pruduct_ Rework History</value>
+  </data>
+  <data name="PurOrderList" xml:space="preserve">
+    <value>Purchase order list</value>
+  </data>
+  <data name="ReportImportToExcel" xml:space="preserve">
+    <value>ReportImportToExcel</value>
+  </data>
+  <data name="ReturnRMAOrder" xml:space="preserve">
+    <value>Return RMA Order</value>
+  </data>
+  <data name="Rework_InlineRework" xml:space="preserve">
+    <value>Inline rework</value>
+  </data>
+  <data name="ScheduleChange" xml:space="preserve">
+    <value>Schedule Change</value>
+  </data>
+  <data name="ScheduleProdConfig" xml:space="preserve">
+    <value>ScheduleProdConfig</value>
+  </data>
+  <data name="SendBackList" xml:space="preserve">
+    <value>List of return orders</value>
+  </data>
+  <data name="ServiceLineCheck_Add" xml:space="preserve">
+    <value>Add Check Records</value>
+  </data>
+  <data name="ServiceLineCheck_Edit" xml:space="preserve">
+    <value>Edit Check Record</value>
+  </data>
+  <data name="ServiceLine_CheckRecords" xml:space="preserve">
+    <value>Check Records</value>
+  </data>
+  <data name="ServiceSchedule" xml:space="preserve">
+    <value>Service Schedule</value>
+  </data>
+  <data name="SNScrapDelete" xml:space="preserve">
+    <value>SN Status Manage</value>
+  </data>
+  <data name="SOCode" xml:space="preserve">
+    <value>SOCode</value>
+  </data>
+  <data name="Template_TemplateAddKanban" xml:space="preserve">
+    <value>Add Kanban</value>
+  </data>
+  <data name="Template_TemplateEditKanban" xml:space="preserve">
+    <value>Edit Kanban</value>
+  </data>
+  <data name="Template_TemplateListKanban" xml:space="preserve">
+    <value>Kanban List</value>
+  </data>
+  <data name="Template_TemplateViewKanban" xml:space="preserve">
+    <value>View Kanban</value>
+  </data>
+  <data name="TimeBucketList" xml:space="preserve">
+    <value>时间点维护</value>
+  </data>
+  <data name="ShippingOrderNumber" xml:space="preserve">
+    <value>Shipping Order</value>
+  </data>
+  <data name="ProdStorageTransfer" xml:space="preserve">
+    <value>Product StorageTransfer</value>
+  </data>
+  <data name="Production_ESOPFileEdit" xml:space="preserve">
+    <value>Edit ESOP File</value>
+  </data>
+  <data name="Production_ESOPFileManage" xml:space="preserve">
+    <value>ESOP File Manage</value>
+  </data>
+  <data name="ESOP_ProCollectionUI" xml:space="preserve">
+    <value>ESOP Collection UI</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeList" xml:space="preserve">
+    <value>Inventory Count Type</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListAdd" xml:space="preserve">
+    <value>Add inventory type</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListDelete" xml:space="preserve">
+    <value>Delete inventory type</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListEdit" xml:space="preserve">
+    <value>Edit inventory type</value>
+  </data>
+  <data name="WarehouseCheckStatusAdd" xml:space="preserve">
+    <value>Add inventory status</value>
+  </data>
+  <data name="WarehouseCheckStatusDelete" xml:space="preserve">
+    <value>Delete inventory status</value>
+  </data>
+  <data name="WarehouseCheckStatusEdit" xml:space="preserve">
+    <value>Edit inventory status</value>
+  </data>
+  <data name="WarehouseCheckStatusList" xml:space="preserve">
+    <value>Inventory status list</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckStatusList" xml:space="preserve">
+    <value>Inventory status</value>
+  </data>
+  <data name="WarehouseCheckOrderAdd" xml:space="preserve">
+    <value>Add Warehouse CheckOrder</value>
+  </data>
+  <data name="WarehouseCheckOrderEdit" xml:space="preserve">
+    <value>Edit Warehouse CheckOrder</value>
+  </data>
+  <data name="WarehouseCheckOrderList" xml:space="preserve">
+    <value>Warehouse Check Order List</value>
+  </data>
+  <data name="SPC_ProjectAdd" xml:space="preserve">
+    <value>Add SPC Project</value>
+  </data>
+  <data name="SPC_ProjectDelete" xml:space="preserve">
+    <value>Delete SPC Project</value>
+  </data>
+  <data name="SPC_ProjectEdit" xml:space="preserve">
+    <value>Edit SPC Project</value>
+  </data>
+  <data name="SPC_ProjectList" xml:space="preserve">
+    <value>SPC Project List</value>
+  </data>
+  <data name="SPC_TaskAdd" xml:space="preserve">
+    <value>Add SPC Task</value>
+  </data>
+  <data name="SPC_TaskDelete" xml:space="preserve">
+    <value>Delete SPC Task</value>
+  </data>
+  <data name="SPC_TaskEdit" xml:space="preserve">
+    <value>Edit SPC Task</value>
+  </data>
+  <data name="SPC_TaskList" xml:space="preserve">
+    <value>SPC Task List</value>
+  </data>
+  <data name="SPC_WarnEdit" xml:space="preserve">
+    <value>Edit SPC Warn</value>
+  </data>
+  <data name="SPC_WarnList" xml:space="preserve">
+    <value>SPC Warn List</value>
+  </data>
+  <data name="DictionaryDataAdd" xml:space="preserve">
+    <value>Add unit information</value>
+  </data>
+  <data name="DictionaryDataDelete" xml:space="preserve">
+    <value>Delete unit information</value>
+  </data>
+  <data name="DictionaryDataEdit" xml:space="preserve">
+    <value>Unit informationedit</value>
+  </data>
+  <data name="DictionaryDataList" xml:space="preserve">
+    <value>Unit Maintenance List</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="ContainerTypeAdd" xml:space="preserve">
+    <value>Add Container Type</value>
+  </data>
+  <data name="SteelIn" xml:space="preserve">
+    <value>SteelIn</value>
+  </data>
+  <data name="CommonDataSource" xml:space="preserve">
+    <value>Source Data Maintenance</value>
+  </data>
+  <data name="Account_UserImport" xml:space="preserve">
+    <value>Import User Info</value>
+  </data>
+  <data name="SMT_FeederImport" xml:space="preserve">
+    <value>Import feeder information</value>
+  </data>
+  <data name="Production_ESOPMacAdd" xml:space="preserve">
+    <value>Add ESOP Machine</value>
+  </data>
+  <data name="Production_ESOPMacDelete" xml:space="preserve">
+    <value>Delete ESOP Machine</value>
+  </data>
+  <data name="Production_ESOPMacEdit" xml:space="preserve">
+    <value>Edit ESOP Machine</value>
+  </data>
+  <data name="Production_ESOPMacList" xml:space="preserve">
+    <value>ESOP Machine Manage</value>
+  </data>
+  <data name="LoadingListGrnRecord" xml:space="preserve">
+    <value>Feeding History</value>
+  </data>
+  <data name="Warehouse_WarehouseLocaion" xml:space="preserve">
+    <value>Warehouse Location</value>
+  </data>
+  <data name="WarehouseCpInConfigAdd" xml:space="preserve">
+    <value>Add finished product storage configuration</value>
+  </data>
+  <data name="WarehouseCpInConfigEdit" xml:space="preserve">
+    <value>Edit finished product storage configuration</value>
+  </data>
+  <data name="WarehouseCpInConfigList" xml:space="preserve">
+    <value>Outgoing and warehousing Settings For FG</value>
+  </data>
+  <data name="Production_ESOPLineAdd" xml:space="preserve">
+    <value>Add ESOP Line</value>
+  </data>
+  <data name="Production_ESOPLineDelete" xml:space="preserve">
+    <value>Delete ESOP Line</value>
+  </data>
+  <data name="Production_ESOPLineEdit" xml:space="preserve">
+    <value>Edit ESOP Line</value>
+  </data>
+  <data name="Production_ESOPLineList" xml:space="preserve">
+    <value>ESOP Line Manage</value>
+  </data>
+  <data name="WarehouseCpInListList" xml:space="preserve">
+    <value>List Of FG Inbound</value>
+  </data>
+  <data name="Production_ESOPMacCopy" xml:space="preserve">
+    <value>ESOP Mac Copy</value>
+  </data>
+  <data name="WarehouseCpInListEdit" xml:space="preserve">
+    <value>Finished product warehousing confirmation</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberAdd" xml:space="preserve">
+    <value>Add OfflineSerialNumber</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberDelete" xml:space="preserve">
+    <value>Delete OfflineSerialNumber</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberEdit" xml:space="preserve">
+    <value>Edit OfflineSerialNumber</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberList" xml:space="preserve">
+    <value>OfflineSerialNumber List</value>
+  </data>
+  <data name="ReturnOrder" xml:space="preserve">
+    <value>ReturnOrder</value>
+  </data>
+  <data name="ReturnToSupplier" xml:space="preserve">
+    <value>Material Return To Supplier</value>
+  </data>
+  <data name="SalOrder" xml:space="preserve">
+    <value>Stocking list</value>
+  </data>
+  <data name="WarehouseCpOutStockList" xml:space="preserve">
+    <value>FG Delivery Management</value>
+  </data>
+  <data name="AQLLotSizeList" xml:space="preserve">
+    <value>AQL LotSize List</value>
+  </data>
+  <data name="SMTStatusList" xml:space="preserve">
+    <value>SMTStatusList</value>
+  </data>
+  <data name="SMTStatusListDtl" xml:space="preserve">
+    <value>SMTStatusListDtl</value>
+  </data>
+  <data name="InspectionQC_ProCollectionUI" xml:space="preserve">
+    <value>QC Collection UI</value>
+  </data>
+  <data name="PrepareToOtherConfigAdd" xml:space="preserve">
+    <value>PrepareToOtherConfigAdd</value>
+  </data>
+  <data name="PrepareToOtherConfigDelete" xml:space="preserve">
+    <value>PrepareToOtherConfigDelete</value>
+  </data>
+  <data name="PrepareToOtherConfigEdit" xml:space="preserve">
+    <value>PrepareToOtherConfigEdit</value>
+  </data>
+  <data name="PrepareToOtherList" xml:space="preserve">
+    <value>PrepareToOtherList</value>
+  </data>
+  <data name="Data_SapInterfaceExeclog" xml:space="preserve">
+    <value>SAP Exec Log</value>
+  </data>
+  <data name="System_APIList" xml:space="preserve">
+    <value>SAP Interface List</value>
+  </data>
+  <data name="System_APIListAdd" xml:space="preserve">
+    <value>Add SAP Interface</value>
+  </data>
+  <data name="System_APIListEdit" xml:space="preserve">
+    <value>Edit SAP Interface</value>
+  </data>
+  <data name="System_APIListSync" xml:space="preserve">
+    <value>Sync SAP Interface</value>
+  </data>
+  <data name="WarehouseCheck" xml:space="preserve">
+    <value>Initial Count Warehouse</value>
+  </data>
+  <data name="WarehouseCheckReplay" xml:space="preserve">
+    <value>Final Count Warehouse</value>
+  </data>
+  <data name="CheckOrder" xml:space="preserve">
+    <value>Inventory order</value>
+  </data>
+  <data name="QC_InspectionLotList" xml:space="preserve">
+    <value>Inspection Lot List</value>
+  </data>
+  <data name="MaterialIQCReturn" xml:space="preserve">
+    <value>MaterialIQCReturn</value>
+  </data>
+  <data name="MaterialIQCReturnList" xml:space="preserve">
+    <value>MaterialIQCReturnList</value>
+  </data>
+  <data name="QC_InspectionLotMemberSNList" xml:space="preserve">
+    <value>View Inspection Lot SN</value>
+  </data>
+  <data name="WarehouseCheckEdit" xml:space="preserve">
+    <value>Warehouse Balance</value>
+  </data>
+  <data name="WarehouseCpOutStockView" xml:space="preserve">
+    <value>List Of FG Outbound</value>
+  </data>
+  <data name="LoadingTypeEdit" xml:space="preserve">
+    <value>Loading Type Edit</value>
+  </data>
+  <data name="LoadingTypeList" xml:space="preserve">
+    <value>Loading Type List</value>
+  </data>
+  <data name="EquipmentLineRelationAdd" xml:space="preserve">
+    <value>Add line equipment type</value>
+  </data>
+  <data name="EquipmentLineRelationEdit" xml:space="preserve">
+    <value>Edit line equipment type</value>
+  </data>
+  <data name="EquipmentLineRelationList" xml:space="preserve">
+    <value>Line equipment type maintenance</value>
+  </data>
+  <data name="LoadingListTable" xml:space="preserve">
+    <value>Layout Setting</value>
+  </data>
+  <data name="LoadingListTableEdit" xml:space="preserve">
+    <value>Edit Layout</value>
+  </data>
+  <data name="LoadingListTableView" xml:space="preserve">
+    <value>View Layout</value>
+  </data>
+  <data name="MachineLineRelationTypeList" xml:space="preserve">
+    <value>Line type equipment type list</value>
+  </data>
+  <data name="MachineTypeList" xml:space="preserve">
+    <value>List of device types</value>
+  </data>
+  <data name="StandardLaborTimeAdd" xml:space="preserve">
+    <value>Add Standard Labor Time</value>
+  </data>
+  <data name="StandardLaborTimeDelete" xml:space="preserve">
+    <value>Delete Standard Labor Time</value>
+  </data>
+  <data name="StandardLaborTimeEdit" xml:space="preserve">
+    <value>Edit Standard Labor Time</value>
+  </data>
+  <data name="StandardLaborTimeList" xml:space="preserve">
+    <value>Standard Labor Time List</value>
+  </data>
+  <data name="WarehouseCheckReport" xml:space="preserve">
+    <value>Warehouse Check Report</value>
+  </data>
+  <data name="Manufacture_ProductionChangesList" xml:space="preserve">
+    <value>Production Changes History</value>
+  </data>
+  <data name="MaterialApplyDetailView" xml:space="preserve">
+    <value>MaterialApplyDetailView</value>
+  </data>
+  <data name="SteelConfig" xml:space="preserve">
+    <value>Date Setting</value>
+  </data>
+  <data name="SteelConfigEdit" xml:space="preserve">
+    <value>Steel Edit</value>
+  </data>
+  <data name="SteelConfigView" xml:space="preserve">
+    <value>Steel View</value>
+  </data>
+  <data name="SteelType" xml:space="preserve">
+    <value>Steel Type</value>
+  </data>
+  <data name="SteelTypeEdit" xml:space="preserve">
+    <value>Steel Type Edit</value>
+  </data>
+  <data name="SteelTypeView" xml:space="preserve">
+    <value>Steel Type View</value>
+  </data>
+  <data name="ReturnToWarehouseList" xml:space="preserve">
+    <value>ReturnToWarehouseList</value>
+  </data>
+  <data name="OfflineProCollection" xml:space="preserve">
+    <value>Offline Production Collection</value>
+  </data>
+  <data name="UI_UIDesigner" xml:space="preserve">
+    <value>UI Designing</value>
+  </data>
+  <data name="ModuleList" xml:space="preserve">
+    <value>Module List</value>
+  </data>
+  <data name="BindLogic" xml:space="preserve">
+    <value>Bound Logic</value>
+  </data>
+  <data name="ReturnToWarehouseListCancel" xml:space="preserve">
+    <value>ReturnToWarehouseListCancel</value>
+  </data>
+  <data name="ReturnToWarehouseListEdit" xml:space="preserve">
+    <value>ReturnToWarehouseListEdit</value>
+  </data>
+  <data name="PanelBindGRNUI" xml:space="preserve">
+    <value>Panel Bind GRN UI</value>
+  </data>
+  <data name="PanelBindUI" xml:space="preserve">
+    <value>Panel Bind UI</value>
+  </data>
+  <data name="ReturnToSupplierList" xml:space="preserve">
+    <value>ReturnToSupplierList</value>
+  </data>
+  <data name="AllMaterialHistoryList" xml:space="preserve">
+    <value>AllMaterialHistoryList</value>
+  </data>
+  <data name="MaterialMoldingList" xml:space="preserve">
+    <value>Material Molding List</value>
+  </data>
+  <data name="PreSNPrint" xml:space="preserve">
+    <value>SN Print</value>
+  </data>
+  <data name="PreSNPrintList" xml:space="preserve">
+    <value>SN Print List</value>
+  </data>
+  <data name="PreSNRePrint" xml:space="preserve">
+    <value>Reprint SN</value>
+  </data>
+  <data name="SMTPackingCollection" xml:space="preserve">
+    <value>SMT Packing Collection</value>
+  </data>
+  <data name="SNPrintDelete" xml:space="preserve">
+    <value>Delete SN</value>
+  </data>
+  <data name="InspectionTemplateEditValue" xml:space="preserve">
+    <value>Test item judgment range setting</value>
+  </data>
+  <data name="InspectionFileManage" xml:space="preserve">
+    <value>Inspection Document Management</value>
+  </data>
+  <data name="PackingAccessoriesAdd" xml:space="preserve">
+    <value>Add packaging accessories</value>
+  </data>
+  <data name="PackingAccessoriesCopy" xml:space="preserve">
+    <value>Copy packaging accessories</value>
+  </data>
+  <data name="PackingAccessoriesDelete" xml:space="preserve">
+    <value>Delete packaging accessories</value>
+  </data>
+  <data name="PackingAccessoriesEdit" xml:space="preserve">
+    <value>Edit packaging accessories</value>
+  </data>
+  <data name="PackingAccessoriesList" xml:space="preserve">
+    <value>Packaging Attachments List</value>
+  </data>
+  <data name="CpPrepare" xml:space="preserve">
+    <value>Output Of Warehouse Of FG</value>
+  </data>
+  <data name="SearchMolding" xml:space="preserve">
+    <value>WO Molding Search</value>
+  </data>
+  <data name="SearchMoldingDetail" xml:space="preserve">
+    <value>molding Detail Search</value>
+  </data>
+  <data name="Anormal_Add" xml:space="preserve">
+    <value>Add Anormal</value>
+  </data>
+  <data name="Anormal_Audit" xml:space="preserve">
+    <value>Audit Anormal</value>
+  </data>
+  <data name="Anormal_Edit" xml:space="preserve">
+    <value>Edit Anormal</value>
+  </data>
+  <data name="Anormal_List" xml:space="preserve">
+    <value>Anormal List</value>
+  </data>
+  <data name="Anormal_View" xml:space="preserve">
+    <value>View Anormal</value>
+  </data>
+  <data name="PickListCollection" xml:space="preserve">
+    <value>Pick List Collection</value>
+  </data>
+  <data name="AccessoryList" xml:space="preserve">
+    <value>Excipients List</value>
+  </data>
+  <data name="MaterialBurnList" xml:space="preserve">
+    <value>Material Burn List</value>
+  </data>
+  <data name="MaterialBurnListAdd" xml:space="preserve">
+    <value>Material Burn Add</value>
+  </data>
+  <data name="MaterialBurnListEdit" xml:space="preserve">
+    <value>Edit burning software</value>
+  </data>
+  <data name="MaterialBurnJoinProd" xml:space="preserve">
+    <value>Burn Join Prod</value>
+  </data>
+  <data name="AccessoryManagement" xml:space="preserve">
+    <value>Accessory management</value>
+  </data>
+  <data name="AccessoryAdd" xml:space="preserve">
+    <value>Add excipients</value>
+  </data>
+  <data name="AccessoryEdit" xml:space="preserve">
+    <value>Edit accessories</value>
+  </data>
+  <data name="AccessoryTypeAdd" xml:space="preserve">
+    <value>Add excipient type</value>
+  </data>
+  <data name="AccessoryTypeEdit" xml:space="preserve">
+    <value>Edit excipient type</value>
+  </data>
+  <data name="AccessoryTypeList" xml:space="preserve">
+    <value>Supplementary Type List</value>
+  </data>
+  <data name="AccessoryListAdd" xml:space="preserve">
+    <value>Add auxiliary materials</value>
+  </data>
+  <data name="AccessoryListEdit" xml:space="preserve">
+    <value>Edit auxiliary materials</value>
+  </data>
+  <data name="AccessoryListList" xml:space="preserve">
+    <value>Supplementary Material List</value>
+  </data>
+  <data name="MaterialDateCode" xml:space="preserve">
+    <value>Material DateCode selection list</value>
+  </data>
+  <data name="MaterialLotCode" xml:space="preserve">
+    <value>Material LotCode selection list</value>
+  </data>
+  <data name="WarningAdd" xml:space="preserve">
+    <value>Add Warning</value>
+  </data>
+  <data name="WarningEdit" xml:space="preserve">
+    <value>Edit Warning</value>
+  </data>
+  <data name="WarningHistoryDeal" xml:space="preserve">
+    <value>Processing alarm information</value>
+  </data>
+  <data name="WarningHistoryList" xml:space="preserve">
+    <value>WarningHistoryView</value>
+  </data>
+  <data name="WarningHistoryView" xml:space="preserve">
+    <value>View alarm list</value>
+  </data>
+  <data name="WarningHistory_OneDeal" xml:space="preserve">
+    <value>Level one processing alarm information</value>
+  </data>
+  <data name="WarningHistory_ThreeDeal" xml:space="preserve">
+    <value>Three-level processing alarm information</value>
+  </data>
+  <data name="WarningHistory_TwoDeal" xml:space="preserve">
+    <value>Secondary processing alarm information</value>
+  </data>
+  <data name="WarningList" xml:space="preserve">
+    <value>Warning List</value>
+  </data>
+  <data name="WarningTypeAdd" xml:space="preserve">
+    <value>Add Warning Type</value>
+  </data>
+  <data name="WarningTypeEdit" xml:space="preserve">
+    <value>Edit Warning Type</value>
+  </data>
+  <data name="Quality_WarningTypeList" xml:space="preserve">
+    <value>Warning Type List</value>
+  </data>
+  <data name="WarningTypeView" xml:space="preserve">
+    <value>View Warning Type</value>
+  </data>
+  <data name="WarningView" xml:space="preserve">
+    <value>View Warning</value>
+  </data>
+  <data name="AccessoryAndItemRelation" xml:space="preserve">
+    <value>Product Accessories List</value>
+  </data>
+  <data name="AccessoryAndItemRelationAdd" xml:space="preserve">
+    <value>Add product accessories</value>
+  </data>
+  <data name="AccessoryAndItemRelationEdit" xml:space="preserve">
+    <value>Edit product accessories</value>
+  </data>
+  <data name="DeliverUnitListSuply" xml:space="preserve">
+    <value>Deliver Item </value>
+  </data>
+  <data name="AccessoryHistoryList" xml:space="preserve">
+    <value>Auxiliary Material Operation Record</value>
+  </data>
+  <data name="ContainerWeightAdd" xml:space="preserve">
+    <value>Add Container Weight</value>
+  </data>
+  <data name="ContainerWeightDelete" xml:space="preserve">
+    <value>Delete Container Weight</value>
+  </data>
+  <data name="ContainerWeightEdit" xml:space="preserve">
+    <value>Edit Container Weight</value>
+  </data>
+  <data name="ContainerWeightList" xml:space="preserve">
+    <value>Container Weight List</value>
+  </data>
+  <data name="MSD_MsdBakeIn" xml:space="preserve">
+    <value>Put in bake</value>
+  </data>
+  <data name="MSD_MsdBakeContionAdd" xml:space="preserve">
+    <value>Add MSD Bake Contion</value>
+  </data>
+  <data name="MSD_MsdBakeContionDel" xml:space="preserve">
+    <value>Delete MSD Bake Contion</value>
+  </data>
+  <data name="MSD_MsdBakeContionEdit" xml:space="preserve">
+    <value>Edit MSD Bake Contion</value>
+  </data>
+  <data name="MSD_MsdBakeContionList" xml:space="preserve">
+    <value>MSD Bake Contion List</value>
+  </data>
+  <data name="MSD_MsdBakeDel" xml:space="preserve">
+    <value>Delete MSD Bake</value>
+  </data>
+  <data name="MSD_MsdBakeOut" xml:space="preserve">
+    <value>Take out to bake</value>
+  </data>
+  <data name="MSD_MsdBakeList" xml:space="preserve">
+    <value>MSD Bake List</value>
+  </data>
+  <data name="MSD_MsdMaterieAdd" xml:space="preserve">
+    <value>Add MSD Materiel</value>
+  </data>
+  <data name="MSD_MsdMaterieDel" xml:space="preserve">
+    <value>Delete MSD Materiel</value>
+  </data>
+  <data name="MSD_MsdMaterieEdit" xml:space="preserve">
+    <value>Edit MSD Materiel</value>
+  </data>
+  <data name="MSD_MsdMaterielList" xml:space="preserve">
+    <value>MSD Materiel List</value>
+  </data>
+  <data name="LoadingListView" xml:space="preserve">
+    <value>Loading query</value>
+  </data>
+  <data name="MSD_MsdConstantIn" xml:space="preserve">
+    <value>MSD Thermostat In</value>
+  </data>
+  <data name="MSD_MsdConstantList" xml:space="preserve">
+    <value>MSD Thermostat List</value>
+  </data>
+  <data name="MSD_MsdConstantOut" xml:space="preserve">
+    <value>MSD Thermostat Out</value>
+  </data>
+  <data name="MSD_MsdEncapsulationList" xml:space="preserve">
+    <value>MSD Encapsulation List</value>
+  </data>
+  <data name="IPQCInspection_ProCollectionUI" xml:space="preserve">
+    <value>IPQC Inspection Collection UI</value>
+  </data>
+  <data name="InspectionOrderAudit_Confirmation" xml:space="preserve">
+    <value>Inspection Order Confirmation</value>
+  </data>
+  <data name="InspectionOrderAudit_GroupAffirm" xml:space="preserve">
+    <value>Team leader confirms</value>
+  </data>
+  <data name="InspectionOrderAudit_List" xml:space="preserve">
+    <value>Inspection Order Audit List</value>
+  </data>
+  <data name="InspectionOrderAudit_Print" xml:space="preserve">
+    <value>Print inspection form information</value>
+  </data>
+  <data name="InspectionOrderAudit_ProjectAffirm" xml:space="preserve">
+    <value>Engineering confirmation</value>
+  </data>
+  <data name="InspectionOrderAudit_View" xml:space="preserve">
+    <value>View inspection order information</value>
+  </data>
+  <data name="MSD_MsdOperationList" xml:space="preserve">
+    <value>MSD Action list</value>
+  </data>
+  <data name="AccessoryDelete" xml:space="preserve">
+    <value>Excipients delete</value>
+  </data>
+  <data name="AccessoryPrint" xml:space="preserve">
+    <value>Accessories printing</value>
+  </data>
+  <data name="AccessoryRegister" xml:space="preserve">
+    <value>Excipient registration</value>
+  </data>
+  <data name="AccessoryReturn" xml:space="preserve">
+    <value>Accessory Return</value>
+  </data>
+  <data name="AccessorySend" xml:space="preserve">
+    <value>Accessory Send Material</value>
+  </data>
+  <data name="AccessoryThaw" xml:space="preserve">
+    <value>Accessory Thaw</value>
+  </data>
+  <data name="AccessoryTypeDelete" xml:space="preserve">
+    <value>Delete excipient type</value>
+  </data>
+  <data name="LoadingTypeDelete" xml:space="preserve">
+    <value>Deletion of loading list type</value>
+  </data>
+  <data name="AccessoriesManagement" xml:space="preserve">
+    <value>Accessory management</value>
+  </data>
+  <data name="AccessoryAndItemRelationDelete" xml:space="preserve">
+    <value>Delete product accessories</value>
+  </data>
+  <data name="AccessoryListListAdd" xml:space="preserve">
+    <value>Accessory List Add</value>
+  </data>
+  <data name="AccessoryListListDelete" xml:space="preserve">
+    <value>Accessory List Delete</value>
+  </data>
+  <data name="AccessoryListListEdit" xml:space="preserve">
+    <value>Accessory List Edit</value>
+  </data>
+  <data name="MaterialMoldingEdit_Save" xml:space="preserve">
+    <value>Save molding details</value>
+  </data>
+  <data name="PickListAdd" xml:space="preserve">
+    <value>Load batch material loading list</value>
+  </data>
+  <data name="PickListDelete" xml:space="preserve">
+    <value>Delete batch material loading list</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlAdd" xml:space="preserve">
+    <value>Product accessories list add material</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlDtl" xml:space="preserve">
+    <value>Product accessories list delete material</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlEdit" xml:space="preserve">
+    <value>Product accessories list edit material</value>
+  </data>
+  <data name="EquipmentLineRelationDelete" xml:space="preserve">
+    <value>Delete line equipment type</value>
+  </data>
+  <data name="EquipmentLineRelationView" xml:space="preserve">
+    <value>View line equipment type</value>
+  </data>
+  <data name="Equipment_EquipmentScrap" xml:space="preserve">
+    <value>Abolish equipment management</value>
+  </data>
+  <data name="Equipment_EquipmentTypeDelete" xml:space="preserve">
+    <value>Delete device type</value>
+  </data>
+  <data name="MaterialMoldingAdd" xml:space="preserve">
+    <value>Add molding</value>
+  </data>
+  <data name="MaterialMoldingDelete" xml:space="preserve">
+    <value>Delete molding</value>
+  </data>
+  <data name="MaterialMoldingEdit" xml:space="preserve">
+    <value>Edit molding</value>
+  </data>
+  <data name="ModelListAdd" xml:space="preserve">
+    <value>Add template</value>
+  </data>
+  <data name="ModelListEdit" xml:space="preserve">
+    <value>Edit template</value>
+  </data>
+  <data name="PickListdDownLoad" xml:space="preserve">
+    <value>Download the batch material loading list template</value>
+  </data>
+  <data name="PickListDetailAdd" xml:space="preserve">
+    <value>Add batch material loading list details</value>
+  </data>
+  <data name="PickListDetailDelete" xml:space="preserve">
+    <value>Delete batch material loading list details</value>
+  </data>
+  <data name="PickListDetailEdit" xml:space="preserve">
+    <value>Edit batch material loading list details</value>
+  </data>
+  <data name="QC_InspectionLotMemberList" xml:space="preserve">
+    <value>View inspection item information</value>
+  </data>
+  <data name="SetLogic" xml:space="preserve">
+    <value>Binding logic</value>
+  </data>
+  <data name="SteelAddKnife" xml:space="preserve">
+    <value>Add scraper</value>
+  </data>
+  <data name="SteelAddSteel" xml:space="preserve">
+    <value>Add steel mesh</value>
+  </data>
+  <data name="SteelItemDel" xml:space="preserve">
+    <value>Edit stencil scraper list delete</value>
+  </data>
+  <data name="SteelMeshClear" xml:space="preserve">
+    <value>Cleaning the steel mesh</value>
+  </data>
+  <data name="SteelMeshDelete" xml:space="preserve">
+    <value>Remove the stencil</value>
+  </data>
+  <data name="SteelMeshIn" xml:space="preserve">
+    <value>Steel mesh registration</value>
+  </data>
+  <data name="SteelMeshOut" xml:space="preserve">
+    <value>Stencil loan</value>
+  </data>
+  <data name="SteelMeshScrap" xml:space="preserve">
+    <value>Steel mesh scrap</value>
+  </data>
+  <data name="UrgentMaterialList" xml:space="preserve">
+    <value>Ugent Material Setting</value>
+  </data>
+  <data name="UrgentMaterialListAdd" xml:space="preserve">
+    <value>Add urgent materials</value>
+  </data>
+  <data name="UrgentMaterialListEdit" xml:space="preserve">
+    <value>Edit urgent materials</value>
+  </data>
+  <data name="Resource_LineSetAdd" xml:space="preserve">
+    <value>Add Line Set</value>
+  </data>
+  <data name="Resource_LineSetDelete" xml:space="preserve">
+    <value>Delete Line Set</value>
+  </data>
+  <data name="Resource_LineSetEdit" xml:space="preserve">
+    <value>Edit Line Set</value>
+  </data>
+  <data name="Resource_LineSetList" xml:space="preserve">
+    <value>Line Set List</value>
+  </data>
+  <data name="FixedBarcodeAdd" xml:space="preserve">
+    <value>Add Config</value>
+  </data>
+  <data name="FixedBarcodeEdit" xml:space="preserve">
+    <value>Edit Config</value>
+  </data>
+  <data name="FixedBarcodeList" xml:space="preserve">
+    <value>Fixed Barcode gun</value>
+  </data>
+  <data name="Kanban_KanbanList" xml:space="preserve">
+    <value>Kanban List</value>
+  </data>
+  <data name="ExpirationDateList" xml:space="preserve">
+    <value>Warranty Period</value>
+  </data>
+  <data name="EquipmentPositionAdd" xml:space="preserve">
+    <value>Add device storage location</value>
+  </data>
+  <data name="EquipmentPositionEdit" xml:space="preserve">
+    <value>Edit device storage location</value>
+  </data>
+  <data name="EquipmentUseReasonsAdd" xml:space="preserve">
+    <value>Add reason for return</value>
+  </data>
+  <data name="EquipmentUseReasonsEdit" xml:space="preserve">
+    <value>Edit reason for return</value>
+  </data>
+  <data name="EquipmentPositionList" xml:space="preserve">
+    <value>Equipment storage location list</value>
+  </data>
+  <data name="EquipmentPositionListAdd" xml:space="preserve">
+    <value>Add device storage location</value>
+  </data>
+  <data name="EquipmentPositionListEdit" xml:space="preserve">
+    <value>Edit device storage location</value>
+  </data>
+  <data name="EquipmentUseReasonsList" xml:space="preserve">
+    <value>Reasons for Equipment Return</value>
+  </data>
+  <data name="EquipmentUseReasonsListAdd" xml:space="preserve">
+    <value>Add Reasons for returning equipment</value>
+  </data>
+  <data name="EquipmentUseReasonsListEdit" xml:space="preserve">
+    <value>Edit Reasons for returning equipment</value>
+  </data>
+  <data name="UseReturn" xml:space="preserve">
+    <value>Requisition/Return List</value>
+  </data>
+  <data name="EquipmentRepairList" xml:space="preserve">
+    <value>Equipment Repair List</value>
+  </data>
+  <data name="EquipmentRepairListAdd" xml:space="preserve">
+    <value>New equipment maintenance list</value>
+  </data>
+  <data name="EquipmentRepairListEdit" xml:space="preserve">
+    <value>Edit equipment maintenance list</value>
+  </data>
+  <data name="EquipmentItemRelationListAdd" xml:space="preserve">
+    <value>Add machine and material relationship</value>
+  </data>
+  <data name="EquipmentItemRelationListAddEdit" xml:space="preserve">
+    <value>Edit machine and material relationship</value>
+  </data>
+  <data name="EquipmentItemRelationList" xml:space="preserve">
+    <value>Relation Between Equipment And Model</value>
+  </data>
+  <data name="EquipmentFileManageList" xml:space="preserve">
+    <value>Equipment Document Management</value>
+  </data>
+  <data name="EquipmentFileManageListAdd" xml:space="preserve">
+    <value>Add device documentation</value>
+  </data>
+  <data name="EquipmentFileManageListEdit" xml:space="preserve">
+    <value>Edit device documentation</value>
+  </data>
+  <data name="CheckOutProjectList" xml:space="preserve">
+    <value>Calibration Project Management</value>
+  </data>
+  <data name="CheckOutProjectListAdd" xml:space="preserve">
+    <value>Add verification item</value>
+  </data>
+  <data name="CheckOutProjectListEdit" xml:space="preserve">
+    <value>Edit verification item</value>
+  </data>
+  <data name="EquipmentCheckOutHistoryList" xml:space="preserve">
+    <value>Calibration Record List</value>
+  </data>
+  <data name="EquipmentCheckOutPlanList" xml:space="preserve">
+    <value>Calibration Schedule List</value>
+  </data>
+  <data name="EquipmentCheckOutPlanListAdd" xml:space="preserve">
+    <value>Add calibration plan</value>
+  </data>
+  <data name="EquipmentCheckOutPlanListEdit" xml:space="preserve">
+    <value>Edit the verification plan</value>
+  </data>
+  <data name="EquipmentEarlyWarning" xml:space="preserve">
+    <value>Equipment warning</value>
+  </data>
+  <data name="PartInOutStockRecordList" xml:space="preserve">
+    <value>Spare parts record</value>
+  </data>
+  <data name="Plan_AddPosition" xml:space="preserve">
+    <value>Add Position</value>
+  </data>
+  <data name="Plan_AddReplaceItem" xml:space="preserve">
+    <value>Add Replace Item</value>
+  </data>
+  <data name="Plan_StockList" xml:space="preserve">
+    <value>Stock List</value>
+  </data>
+  <data name="Product_ItemABCClassEdit" xml:space="preserve">
+    <value>Edit Item ABC Class</value>
+  </data>
+  <data name="Product_ItemABCClassList" xml:space="preserve">
+    <value>Item ABC Class</value>
+  </data>
+  <data name="Plan_ChangeLine" xml:space="preserve">
+    <value>Change Order Line</value>
+  </data>
+  <data name="Product_SubsItem" xml:space="preserve">
+    <value>Edit Substitute material</value>
+  </data>
+  <data name="EquipmentEarlyWarningList" xml:space="preserve">
+    <value>Equipment Early Warning</value>
+  </data>
+  <data name="QHoldImport" xml:space="preserve">
+    <value>QHold Import</value>
+  </data>
+  <data name="ExpiredDateList" xml:space="preserve">
+    <value>Material Overdue Re-inspection</value>
+  </data>
+  <data name="SteelEditKnife" xml:space="preserve">
+    <value>Edit Knife</value>
+  </data>
+  <data name="Equipment_EquipmentChildAdd" xml:space="preserve">
+    <value>Add Child Equipment</value>
+  </data>
+  <data name="Equipment_EquipmentChildEdit" xml:space="preserve">
+    <value>Eidt Child Equipment</value>
+  </data>
+  <data name="Equipment_EquipmentChildList" xml:space="preserve">
+    <value>Child Equipment List</value>
+  </data>
+  <data name="Reinspection" xml:space="preserve">
+    <value>Material Overtime Handling</value>
+  </data>
+  <data name="ReinspectionHistory" xml:space="preserve">
+    <value>Material Overtime Query</value>
+  </data>
+  <data name="ProductionDataCfg" xml:space="preserve">
+    <value>Production Data Config</value>
+  </data>
+  <data name="QHoldDownload" xml:space="preserve">
+    <value>QHold Download</value>
+  </data>
+  <data name="Maintenance_MaintenanceEquimentList" xml:space="preserve">
+    <value>Maintenance Equiment List</value>
+  </data>
+  <data name="ImportData" xml:space="preserve">
+    <value>Import Data</value>
+  </data>
+  <data name="ImportExcelConfigList" xml:space="preserve">
+    <value>Import Excel Config List</value>
+  </data>
+  <data name="ProductionSettingAdd" xml:space="preserve">
+    <value>Add production data configuration</value>
+  </data>
+  <data name="ProductionSettingEdit" xml:space="preserve">
+    <value>Delete production data configuration</value>
+  </data>
+  <data name="ProductionSettingList" xml:space="preserve">
+    <value>Production data configuration</value>
+  </data>
+  <data name="DetectionItemAdd" xml:space="preserve">
+    <value>Add Detection Item</value>
+  </data>
+  <data name="DetectionItemDelete" xml:space="preserve">
+    <value>Delete Detection Item</value>
+  </data>
+  <data name="DetectionItemEdit" xml:space="preserve">
+    <value>Edit Detection Item</value>
+  </data>
+  <data name="DetectionItemList" xml:space="preserve">
+    <value>Detection Item List</value>
+  </data>
+  <data name="DetectionRecordsList" xml:space="preserve">
+    <value>Detection Records List</value>
+  </data>
+  <data name="ExpirationDateListAdd" xml:space="preserve">
+    <value>Add shelf life plan</value>
+  </data>
+  <data name="ExpirationDateListAddEdit" xml:space="preserve">
+    <value>Edit shelf life plan</value>
+  </data>
+  <data name="System_LoginLog" xml:space="preserve">
+    <value>User Login Log</value>
+  </data>
+  <data name="Client_PopedomStationDelete" xml:space="preserve">
+    <value>Delete station template configuration</value>
+  </data>
+  <data name="GlobarParameterAdd" xml:space="preserve">
+    <value>Add global parameters</value>
+  </data>
+  <data name="GlobarParameterDelete" xml:space="preserve">
+    <value>Delete global parameters</value>
+  </data>
+  <data name="GlobarParameterEdit" xml:space="preserve">
+    <value>Edit global parameters</value>
+  </data>
+  <data name="GlobarParameterList" xml:space="preserve">
+    <value>GlobarParameterList</value>
+  </data>
+  <data name="NavigationGroup" xml:space="preserve">
+    <value>NavigationGroup</value>
+  </data>
+  <data name="NavigationGroupAdd" xml:space="preserve">
+    <value>NavigationGroupAdd</value>
+  </data>
+  <data name="NavigationGroupDelete" xml:space="preserve">
+    <value>NavigationGroupDelete</value>
+  </data>
+  <data name="NavigationGroupEdit" xml:space="preserve">
+    <value>NavigationGroupEdit</value>
+  </data>
+  <data name="NavigationItem" xml:space="preserve">
+    <value>NavigationItem</value>
+  </data>
+  <data name="NavigationItemAdd" xml:space="preserve">
+    <value>NavigationItemAdd</value>
+  </data>
+  <data name="NavigationItemDelete" xml:space="preserve">
+    <value>NavigationItemDelete</value>
+  </data>
+  <data name="NavigationItemEdit" xml:space="preserve">
+    <value>NavigationItemEdit</value>
+  </data>
+  <data name="PanelBindSNUI" xml:space="preserve">
+    <value>Panel Bind SN</value>
+  </data>
+  <data name="Material_PurOrderAdd" xml:space="preserve">
+    <value>Add purchase order</value>
+  </data>
+  <data name="Material_PurOrderEdit" xml:space="preserve">
+    <value>Edit purchase order</value>
+  </data>
+  <data name="Material_PurOrderList" xml:space="preserve">
+    <value>Purchase Order List</value>
+  </data>
+  <data name="Kanban_KanbanMacAdd" xml:space="preserve">
+    <value>Add Kanban Mac</value>
+  </data>
+  <data name="Kanban_KanbanMacEdit" xml:space="preserve">
+    <value>Edit Kanban Mac</value>
+  </data>
+  <data name="Kanban_KanbanMacList" xml:space="preserve">
+    <value>Kanban Mac List</value>
+  </data>
+  <data name="Kanban_TagSendAdd" xml:space="preserve">
+    <value>Add Kanban </value>
+  </data>
+  <data name="Kanban_TagSendEdit" xml:space="preserve">
+    <value>Edit Kanban</value>
+  </data>
+  <data name="Kanban_TagSendList" xml:space="preserve">
+    <value>Kanban List</value>
+  </data>
+  <data name="Material_GRNModifyEdit" xml:space="preserve">
+    <value>Modify GRN Qty</value>
+  </data>
+  <data name="OffLineBarCodeCollection" xml:space="preserve">
+    <value>OffLine BarCode Collection</value>
+  </data>
+  <data name="System_Accredit" xml:space="preserve">
+    <value>System Accredit</value>
+  </data>
+  <data name="System_OnlineUser" xml:space="preserve">
+    <value>System Online User</value>
+  </data>
+  <data name="System_Operation" xml:space="preserve">
+    <value>System Operation</value>
+  </data>
+  <data name="System_UserOperation" xml:space="preserve">
+    <value>System UserOperation</value>
+  </data>
+  <data name="SubSystemsList" xml:space="preserve">
+    <value>Module List</value>
+  </data>
+  <data name="CustomPageList" xml:space="preserve">
+    <value>Secondary Menu</value>
+  </data>
+  <data name="Quantity_SNScrapList" xml:space="preserve">
+    <value>Quantity Scrap List</value>
+  </data>
+  <data name="PDA_AccessoryFinish" xml:space="preserve">
+    <value>Accessory Empty Bottle</value>
+  </data>
+  <data name="PDA_AccessoryReturn" xml:space="preserve">
+    <value>Accessory Return</value>
+  </data>
+  <data name="PDA_AccessorySendMaterial" xml:space="preserve">
+    <value>Accessory Send Material</value>
+  </data>
+  <data name="PDA_AccessoryThaw" xml:space="preserve">
+    <value>Accessory Thaw</value>
+  </data>
+  <data name="QC_RMAAdd" xml:space="preserve">
+    <value>Add RMA</value>
+  </data>
+  <data name="QC_RMAEdit" xml:space="preserve">
+    <value>Edit RMA</value>
+  </data>
+  <data name="QC_RMAList" xml:space="preserve">
+    <value>RMA List</value>
+  </data>
+  <data name="RMAReciveDetailList" xml:space="preserve">
+    <value>RMA Product Reprint</value>
+  </data>
+  <data name="RMAReciveList" xml:space="preserve">
+    <value>RMA Receipt</value>
+  </data>
+  <data name="TransfersApply" xml:space="preserve">
+    <value>Application For Allocation</value>
+  </data>
+  <data name="TransfersStorage" xml:space="preserve">
+    <value>Transfer Out Of Stock</value>
+  </data>
+  <data name="TransfersStorageList" xml:space="preserve">
+    <value>Call-out Library List</value>
+  </data>
+  <data name="PDA_MaterialDetailInfo" xml:space="preserve">
+    <value>Warehouse Query</value>
+  </data>
+  <data name="PDA_ProdDetailInfo" xml:space="preserve">
+    <value>Production Query</value>
+  </data>
+  <data name="PDA_WarehouseReturnToSupplier" xml:space="preserve">
+    <value>Warehouse Return To Supplier</value>
+  </data>
+  <data name="FAIInspection" xml:space="preserve">
+    <value>FAI Collection UI</value>
+  </data>
+  <data name="PDA_LineWarehouseReceive" xml:space="preserve">
+    <value>LineWarehouse Receive</value>
+  </data>
+  <data name="Material_OfflinePrintGRN" xml:space="preserve">
+    <value>Offline GRN Print</value>
+  </data>
+  <data name="InspectionQCNEW_ProCollectionUI" xml:space="preserve">
+    <value>QC Collection UI 2</value>
+  </data>
+  <data name="ContainerTypeList" xml:space="preserve">
+    <value>Custom Layout</value>
+  </data>
+  <data name="MaterialReceiveList" xml:space="preserve">
+    <value>Material Receive List</value>
+  </data>
+  <data name="PQCCollection" xml:space="preserve">
+    <value>PQC Collection</value>
+  </data>
+  <data name="ScrapApply" xml:space="preserve">
+    <value>Scrap Application</value>
+  </data>
+  <data name="ScrapNoBillOut" xml:space="preserve">
+    <value>Scrapping Outbound Without Bill</value>
+  </data>
+  <data name="ScrapOut" xml:space="preserve">
+    <value>Scrapping Outbound</value>
+  </data>
+  <data name="ScrapOutList" xml:space="preserve">
+    <value>Scrapping Outbound List</value>
+  </data>
+  <data name="Material_IQCConfirmList" xml:space="preserve">
+    <value>IQC Confirm List</value>
+  </data>
+  <data name="PDA_RepackingOutBox" xml:space="preserve">
+    <value>Repacking OutBox</value>
+  </data>
+  <data name="PDA_RepackingPallet" xml:space="preserve">
+    <value>Repacking Pallet</value>
+  </data>
+  <data name="Report_SmartReport" xml:space="preserve">
+    <value>Report SmartReport</value>
+  </data>
+  <data name="Material_MaterialStorage" xml:space="preserve">
+    <value>Material Storage</value>
+  </data>
+  <data name="OffLineLabelConfigAdd" xml:space="preserve">
+    <value>Add offline label configuration</value>
+  </data>
+  <data name="OffLineLabelConfigEdit" xml:space="preserve">
+    <value>Edit offline label configuration</value>
+  </data>
+  <data name="OffLineLabelConfigList" xml:space="preserve">
+    <value>Offline Label Configuration List</value>
+  </data>
+  <data name="OffLineLabelConfigDetailAdd" xml:space="preserve">
+    <value>Add details</value>
+  </data>
+  <data name="OffLineLabelConfigDetailEdit" xml:space="preserve">
+    <value>Edit details</value>
+  </data>
+  <data name="OffLineLabelConfigDetailList" xml:space="preserve">
+    <value>Item list</value>
+  </data>
+  <data name="StandardOfflinePrintGRN" xml:space="preserve">
+    <value>Standard Off-line Barcode Registration</value>
+  </data>
+  <data name="ReturnNoOrderMaterial" xml:space="preserve">
+    <value>ReturnNo Order Material</value>
+  </data>
+  <data name="ReturnToWarehouse" xml:space="preserve">
+    <value>Return To Warehouse</value>
+  </data>
+  <data name="InterfaceManagementDelete" xml:space="preserve">
+    <value>Delete device interface</value>
+  </data>
+  <data name="InterfaceManagementEdit" xml:space="preserve">
+    <value>Edit device interface</value>
+  </data>
+  <data name="InterfaceManagementList" xml:space="preserve">
+    <value>Equipment Interface Management</value>
+  </data>
+  <data name="InterfaceTypeModel" xml:space="preserve">
+    <value>Equipment Interface Type Maintains</value>
+  </data>
+  <data name="InterfaceTypeModelAdd" xml:space="preserve">
+    <value>Add device interface type model</value>
+  </data>
+  <data name="InterfaceTypeModelDelete" xml:space="preserve">
+    <value>Delete device interface type model</value>
+  </data>
+  <data name="InterfaceTypeModelEdit" xml:space="preserve">
+    <value>Edit device interface type model</value>
+  </data>
+  <data name="MaterialBurnListView" xml:space="preserve">
+    <value>Material Burn View</value>
+  </data>
+  <data name="InterfaceManagementAdd" xml:space="preserve">
+    <value>Add device interface</value>
+  </data>
+  <data name="RMA_Reprint" xml:space="preserve">
+    <value>RMA supplement printing</value>
+  </data>
+  <data name="Quality_WarningAdd" xml:space="preserve">
+    <value>Add Warning</value>
+  </data>
+  <data name="Quality_WarningDelete" xml:space="preserve">
+    <value>Delete Warning</value>
+  </data>
+  <data name="Quality_WarningEdit" xml:space="preserve">
+    <value>Edit Warning</value>
+  </data>
+  <data name="Quality_WarningHistoryList" xml:space="preserve">
+    <value>WarningHistoryList</value>
+  </data>
+  <data name="Quality_WarningHistoryView" xml:space="preserve">
+    <value>WarningHistoryView</value>
+  </data>
+  <data name="Quality_WarningHistory_OneDeal" xml:space="preserve">
+    <value>Quality_WarningHistory_OneDeal</value>
+  </data>
+  <data name="Quality_WarningHistory_ThreeDeal" xml:space="preserve">
+    <value>Quality_WarningHistory_ThreeDeal</value>
+  </data>
+  <data name="Quality_WarningHistory_TwoDeal" xml:space="preserve">
+    <value>Quality_WarningHistory_TwoDeal</value>
+  </data>
+  <data name="Quality_WarningList" xml:space="preserve">
+    <value>Warning List</value>
+  </data>
+  <data name="Quality_WarningTypeAdd" xml:space="preserve">
+    <value>Add Warning Type</value>
+  </data>
+  <data name="Quality_WarningTypeDelete" xml:space="preserve">
+    <value>Delete Warning Type</value>
+  </data>
+  <data name="Quality_WarningTypeEdit" xml:space="preserve">
+    <value>Edit Warning Type</value>
+  </data>
+  <data name="Quality_WarningView" xml:space="preserve">
+    <value>Warning View</value>
+  </data>
+  <data name="PDA_SMTTransferMaterial" xml:space="preserve">
+    <value>Work order material transfer</value>
+  </data>
+  <data name="GenerateVirtualPo" xml:space="preserve">
+    <value>Generate virtual purchase order</value>
+  </data>
+  <data name="SupplierMaterialPrint" xml:space="preserve">
+    <value>Guest feed label printing</value>
+  </data>
+  <data name="ColorBoxValidation" xml:space="preserve">
+    <value>Color Box Validation UI</value>
+  </data>
+  <data name="FinishedGoodsInput" xml:space="preserve">
+    <value>Finished Goods Input UI</value>
+  </data>
+  <data name="CustomerOrderList" xml:space="preserve">
+    <value>Customer Order List</value>
+  </data>
+  <data name="AQLRuleCopy" xml:space="preserve">
+    <value>Copy AQL Rule</value>
+  </data>
+  <data name="Container_Weight" xml:space="preserve">
+    <value>Container Weight</value>
+  </data>
+  <data name="IQCRecivePdfPrint" xml:space="preserve">
+    <value>IQC Recive Pdf Print</value>
+  </data>
+  <data name="IQCRecivePdfRePrint" xml:space="preserve">
+    <value>IQC Recive Pdf RePrint</value>
+  </data>
+  <data name="OfflineSNInput" xml:space="preserve">
+    <value>Offline SN Input</value>
+  </data>
+  <data name="SystemParameterConfigList" xml:space="preserve">
+    <value>System Parameter Config List</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberCopy" xml:space="preserve">
+    <value>Offline SerialNumber Copy</value>
+  </data>
+  <data name="CustomerSNCollection" xml:space="preserve">
+    <value>CustomerSN Collection UI</value>
+  </data>
+  <data name="MaterialApplyMergeAdd" xml:space="preserve">
+    <value>Add picklist to merge</value>
+  </data>
+  <data name="MaterialApplyMergeEdit" xml:space="preserve">
+    <value>Edit picklist to merge</value>
+  </data>
+  <data name="MaterialApplyMergeList" xml:space="preserve">
+    <value>Consolidation of picking lists</value>
+  </data>
+  <data name="OrderPickListAdd" xml:space="preserve">
+    <value>Add Order Pick List</value>
+  </data>
+  <data name="PDA_GRNTransfer" xml:space="preserve">
+    <value>GRN Transfer</value>
+  </data>
+  <data name="CustomerSNAutoCollection" xml:space="preserve">
+    <value>CustomerSN Auto Collection UI</value>
+  </data>
+  <data name="CommonSNReprint" xml:space="preserve">
+    <value>SN Reprint</value>
+  </data>
+  <data name="SerailNumberPrint" xml:space="preserve">
+    <value>SerailNumber Print UI</value>
+  </data>
+  <data name="System_ImportMenu" xml:space="preserve">
+    <value>Import Menu</value>
+  </data>
+  <data name="ReturnToSupplierAdd" xml:space="preserve">
+    <value>Add warehouse return supplier</value>
+  </data>
+  <data name="ReturnToSupplierEdit" xml:space="preserve">
+    <value>Edit warehouse return supplier</value>
+  </data>
+  <data name="PDA_MaterialCombine" xml:space="preserve">
+    <value>Material Combine</value>
+  </data>
+  <data name="ItemContainerAdd" xml:space="preserve">
+    <value>Add Item Container</value>
+  </data>
+  <data name="ItemContainerEdit" xml:space="preserve">
+    <value>Edit Item Container</value>
+  </data>
+  <data name="ItemContainerList" xml:space="preserve">
+    <value>Item Container List</value>
+  </data>
+  <data name="MenuButtonAdd" xml:space="preserve">
+    <value>Add Menu Button</value>
+  </data>
+  <data name="MenuButtonEdit" xml:space="preserve">
+    <value>Edit Menu Button</value>
+  </data>
+  <data name="MenuButtonList" xml:space="preserve">
+    <value>Menu Botton List</value>
+  </data>
+  <data name="BeginRequestAPISetAdd" xml:space="preserve">
+    <value>Edit Application Begin Request API Set</value>
+  </data>
+  <data name="BeginRequestAPISetDelete" xml:space="preserve">
+    <value>Delete Application Begin Request API Set</value>
+  </data>
+  <data name="BeginRequestAPISetEdit" xml:space="preserve">
+    <value>Edit Application Begin Request API Set</value>
+  </data>
+  <data name="BeginRequestAPISetList" xml:space="preserve">
+    <value>Application Begin Request API Set List</value>
+  </data>
+  <data name="Labels_TemplateAdd" xml:space="preserve">
+    <value>Add Template</value>
+  </data>
+  <data name="Labels_TemplateDelete" xml:space="preserve">
+    <value>Delete Template</value>
+  </data>
+  <data name="Labels_TemplateDesign" xml:space="preserve">
+    <value>Design Template</value>
+  </data>
+  <data name="Labels_TemplateEdit" xml:space="preserve">
+    <value>Edit Template</value>
+  </data>
+  <data name="Labels_TemplateList" xml:space="preserve">
+    <value>Template List</value>
+  </data>
+  <data name="PrinterDelete" xml:space="preserve">
+    <value>Delete Printer</value>
+  </data>
+  <data name="PrinterEdit" xml:space="preserve">
+    <value>Edit Printer</value>
+  </data>
+  <data name="PrinterImport" xml:space="preserve">
+    <value>Import Printer</value>
+  </data>
+  <data name="PrinterList" xml:space="preserve">
+    <value>Printer List</value>
+  </data>
+  <data name="TaskAdd" xml:space="preserve">
+    <value>Add Task</value>
+  </data>
+  <data name="TaskEdit" xml:space="preserve">
+    <value>Edit Task</value>
+  </data>
+  <data name="TaskList" xml:space="preserve">
+    <value>Task List</value>
+  </data>
+  <data name="TaskView" xml:space="preserve">
+    <value>View Task</value>
+  </data>
+  <data name="VersionUpGrade" xml:space="preserve">
+    <value>Version Upgrade</value>
+  </data>
+  <data name="Resource_ResourceCapacityList" xml:space="preserve">
+    <value>Resource Capacity List</value>
+  </data>
+  <data name="Resource_ResourceManageAdd" xml:space="preserve">
+    <value>Resource Manage Add</value>
+  </data>
+  <data name="Resource_ResourceManageEdit" xml:space="preserve">
+    <value>Resource Manage Edit</value>
+  </data>
+  <data name="Resource_ResourceManageList" xml:space="preserve">
+    <value>Resource Manage List</value>
+  </data>
+  <data name="Resource_ResourceManageView" xml:space="preserve">
+    <value>Resource Manage View</value>
+  </data>
+  <data name="LineChangingTimeAdd" xml:space="preserve">
+    <value>Line Changing Time Add</value>
+  </data>
+  <data name="LineChangingTimeEdit" xml:space="preserve">
+    <value>Line Changing Time Edit</value>
+  </data>
+  <data name="AccessoryChambrierenRecord" xml:space="preserve">
+    <value>Accessory Chambrieren Record</value>
+  </data>
+  <data name="AccessoryMaterialPrint" xml:space="preserve">
+    <value>Accessory Material Print</value>
+  </data>
+  <data name="AccessoryUseTable" xml:space="preserve">
+    <value>Accessory Use Table</value>
+  </data>
+  <data name="AnormalConfig_Add" xml:space="preserve">
+    <value>Anormal Config Add</value>
+  </data>
+  <data name="AnormalConfig_Delete" xml:space="preserve">
+    <value>Anormal Config Delete</value>
+  </data>
+  <data name="AnormalConfig_Edit" xml:space="preserve">
+    <value>Anormal Config Edit</value>
+  </data>
+  <data name="AnormalConfig_List" xml:space="preserve">
+    <value>Anormal Config List</value>
+  </data>
+  <data name="Warehouse_WarehouseLightColor" xml:space="preserve">
+    <value>Warehouse_WarehouseLightColor</value>
+  </data>
+  <data name="Warehouse_WarehouseLightColorAdd" xml:space="preserve">
+    <value>Warehouse_WarehouseLightColorAdd</value>
+  </data>
+  <data name="PDA_ExpiredMaterial" xml:space="preserve">
+    <value>PDA ExpiredMaterial</value>
+  </data>
+  <data name="PDA_InStorage" xml:space="preserve">
+    <value>PDA InStorage</value>
+  </data>
+  <data name="PDA_MoveMaterial" xml:space="preserve">
+    <value>PDA MoveMaterial</value>
+  </data>
+  <data name="PDA_TakeMaterial" xml:space="preserve">
+    <value>PDA TakeMaterial</value>
+  </data>
+  <data name="PDA_AgeingBadCollection" xml:space="preserve">
+    <value>PDA Ageing Bad Collection</value>
+  </data>
+  <data name="PDA_AgeingCollection" xml:space="preserve">
+    <value>PDA Ageing Collection</value>
+  </data>
+  <data name="AccessoryStir" xml:space="preserve">
+    <value>Accessory Stir</value>
+  </data>
+  <data name="AccessoryRegisterGrn" xml:space="preserve">
+    <value>Accessory Register Grn</value>
+  </data>
+  <data name="StartStirTime" xml:space="preserve">
+    <value>StartStir Time</value>
+  </data>
+  <data name="SteelMeshInspection" xml:space="preserve">
+    <value>Steel Mesh Inspection</value>
+  </data>
+  <data name="SteelMeshInspectionDtl" xml:space="preserve">
+    <value>Steel Mesh Inspection Dtl</value>
+  </data>
+  <data name="SteelMeshInspectionProjectAdd" xml:space="preserve">
+    <value>Steel Mesh Inspection Project Add</value>
+  </data>
+  <data name="SteelMeshInspectionProjectEdit" xml:space="preserve">
+    <value>Steel Mesh Inspection Project Edit</value>
+  </data>
+  <data name="SteelMeshInspectionProjectList" xml:space="preserve">
+    <value>Steel Mesh Inspection Project List</value>
+  </data>
+  <data name="SteelMeshUseHistory" xml:space="preserve">
+    <value>Steel Mesh Use History</value>
+  </data>
+  <data name="SetOfBooksList" xml:space="preserve">
+    <value>Set Of Books List</value>
+  </data>
+  <data name="Account_UserSubList" xml:space="preserve">
+    <value>Account User Sub List</value>
+  </data>
+  <data name="InterfaceList" xml:space="preserve">
+    <value>Interface List</value>
+  </data>
+  <data name="InspectionmethodsAdd" xml:space="preserve">
+    <value>Inspection Methods Add</value>
+  </data>
+  <data name="InspectionmethodsEdit" xml:space="preserve">
+    <value>Inspection Methods Edit</value>
+  </data>
+  <data name="InspectionmethodsList" xml:space="preserve">
+    <value>Inspection methods List</value>
+  </data>
+  <data name="PDA_MaterialDeliver" xml:space="preserve">
+    <value>PDA Material Deliver</value>
+  </data>
+  <data name="PDA_PackGRNSuply" xml:space="preserve">
+    <value>PDA Pack GRN Suply</value>
+  </data>
+  <data name="PDA_AccessoryOperation" xml:space="preserve">
+    <value>Accessory Operation</value>
+  </data>
+  <data name="EquipmentMouldRelationAdd" xml:space="preserve">
+    <value>Equipment Mould Relation Add</value>
+  </data>
+  <data name="EquipmentMouldRelationList" xml:space="preserve">
+    <value>Equipment Mould Relation List</value>
+  </data>
+  <data name="ItemMouldRelationAdd" xml:space="preserve">
+    <value>Item MouldRelation Add</value>
+  </data>
+  <data name="ItemMouldRelationList" xml:space="preserve">
+    <value>Item Mould RelationList</value>
+  </data>
+  <data name="CompanyAdd" xml:space="preserve">
+    <value>Company Add</value>
+  </data>
+  <data name="CompanyEdit" xml:space="preserve">
+    <value>Company Edit</value>
+  </data>
+  <data name="CompanyView" xml:space="preserve">
+    <value>Company View</value>
+  </data>
+  <data name="Warehouse_SupplierExameTypeList" xml:space="preserve">
+    <value>Warehouse Supplier Exame TypeList</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentEdit" xml:space="preserve">
+    <value>Warehouse Supplier Exame Content Edit</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentTree" xml:space="preserve">
+    <value>Warehouse Supplier Exame Content Tree</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentAdd" xml:space="preserve">
+    <value>Warehouse SupplierExame Content Add</value>
+  </data>
+  <data name="Warehouse_SupplierExamTemplet" xml:space="preserve">
+    <value>Warehouse Supplier Exam Templet</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateList" xml:space="preserve">
+    <value>Warehouse Supplier Exame Template List</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateListAdd" xml:space="preserve">
+    <value>Warehouse Supplier Exame Template List Add</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateListEdit" xml:space="preserve">
+    <value>Warehouse Supplier Exame Template List Edit</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultEdit" xml:space="preserve">
+    <value>Exam Result</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultList" xml:space="preserve">
+    <value>Exam Result List</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultReExam" xml:space="preserve">
+    <value>Reexam Result</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialEdit" xml:space="preserve">
+    <value>Edit material to default warehouse space</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialList" xml:space="preserve">
+    <value>Material to default warehouse space</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialAdd" xml:space="preserve">
+    <value>Add material to default warehouse space</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialView" xml:space="preserve">
+    <value>View material to default warehouse space</value>
+  </data>
+  <data name="OSPItemAdd" xml:space="preserve">
+    <value>Operation section Item Add</value>
+  </data>
+  <data name="OSPItemDelete" xml:space="preserve">
+    <value>Operation section Item Delete</value>
+  </data>
+  <data name="OSPItemEdit" xml:space="preserve">
+    <value>Operation section Item Edit</value>
+  </data>
+  <data name="OSPItemList" xml:space="preserve">
+    <value>Product list of operation section</value>
+  </data>
+  <data name="OSPManagement" xml:space="preserve">
+    <value>Operation section Management</value>
+  </data>
+  <data name="OSPSNReleaseList" xml:space="preserve">
+    <value>Operation section SN Release List</value>
+  </data>
+  <data name="OSPTime" xml:space="preserve">
+    <value>Operation section Time</value>
+  </data>
+  <data name="OSPType" xml:space="preserve">
+    <value>Operation section type</value>
+  </data>
+  <data name="OSPTypeAdd" xml:space="preserve">
+    <value>Operation section Type Add</value>
+  </data>
+  <data name="OSPTypeDelete" xml:space="preserve">
+    <value>Operation section Type Delete</value>
+  </data>
+  <data name="OSPTypeEdit" xml:space="preserve">
+    <value>Operation section Type Edit</value>
+  </data>
+  <data name="PQCBatchCollection" xml:space="preserve">
+    <value>PQC Batch Collection</value>
+  </data>
+  <data name="PQCBatchInspectCollection" xml:space="preserve">
+    <value>PQC Batch Inspect Collection</value>
+  </data>
+  <data name="QC_InspectionLotSNList" xml:space="preserve">
+    <value>QC Lot SN List</value>
+  </data>
+  <data name="DIPPackagingPlanAdd" xml:space="preserve">
+    <value>DIP Packaging Plan Add</value>
+  </data>
+  <data name="DIPPackagingPlanEdit" xml:space="preserve">
+    <value>DIP Packaging Plan Edit</value>
+  </data>
+  <data name="DIPPackagingPlanImport" xml:space="preserve">
+    <value>DIP Packaging Plan Import</value>
+  </data>
+  <data name="DIPPackagingPlanList" xml:space="preserve">
+    <value>DIP Packaging Plan List</value>
+  </data>
+  <data name="DIP_FloorInfoAdd" xml:space="preserve">
+    <value>FloorInfo Add</value>
+  </data>
+  <data name="DIP_FloorInfoEdit" xml:space="preserve">
+    <value>FloorInfo Edit</value>
+  </data>
+  <data name="DIP_FloorInfoList" xml:space="preserve">
+    <value>FloorInfo List</value>
+  </data>
+  <data name="DIP_FloorLineInfoAdd" xml:space="preserve">
+    <value>Floor LineInfo Add</value>
+  </data>
+  <data name="DIP_FloorLineInfoEdit" xml:space="preserve">
+    <value>Floor LineInfo Edit</value>
+  </data>
+  <data name="DIP_FloorLineInfoList" xml:space="preserve">
+    <value>Floor LineInfo List</value>
+  </data>
+  <data name="SampleNumberHistory" xml:space="preserve">
+    <value>Sample Number History</value>
+  </data>
+  <data name="SampleNumberList" xml:space="preserve">
+    <value>Sample Number List</value>
+  </data>
+  <data name="SampleNumberListAdd" xml:space="preserve">
+    <value>Sample Number List Add</value>
+  </data>
+  <data name="SampleNumberListDelete" xml:space="preserve">
+    <value>Sample Number List Delete</value>
+  </data>
+  <data name="SampleNumberListDownLoad" xml:space="preserve">
+    <value>Sample Number List DownLoad</value>
+  </data>
+  <data name="SampleNumberListEdit" xml:space="preserve">
+    <value>Sample Number List Edit</value>
+  </data>
+  <data name="SampleNumberManagement" xml:space="preserve">
+    <value>Sample Number Management</value>
+  </data>
+  <data name="PieceworkCompensationAdd" xml:space="preserve">
+    <value>Add piece rate salary</value>
+  </data>
+  <data name="PieceworkCompensationEdit" xml:space="preserve">
+    <value>Edit piece rate salary</value>
+  </data>
+  <data name="StationOutputRateAdd" xml:space="preserve">
+    <value>Standard for dividing the coefficient of new yield increase</value>
+  </data>
+  <data name="OffLineGRNAdd" xml:space="preserve">
+    <value>Off-line code injection</value>
+  </data>
+  <data name="OffLineGRNEdit" xml:space="preserve">
+    <value>Off-line code analysis</value>
+  </data>
+  <data name="OffLineGRNInto" xml:space="preserve">
+    <value>Offline Barcode Injection</value>
+  </data>
+  <data name="ReturnToSupplierDelete" xml:space="preserve">
+    <value>Delete return information</value>
+  </data>
+  <data name="Equipment_EquipmentBOTAdd" xml:space="preserve">
+    <value>Add Equipment list BOT</value>
+  </data>
+  <data name="Equipment_EquipmentBOTEdit" xml:space="preserve">
+    <value>Edit Equipment list BOT</value>
+  </data>
+  <data name="Equipment_EquipmentBOTList" xml:space="preserve">
+    <value>BOT maintenance of equipment list</value>
+  </data>
+  <data name="Equipment_EquipmentBOTView" xml:space="preserve">
+    <value>View Equipment list BOT</value>
+  </data>
+  <data name="PDA_SpotCheckKit" xml:space="preserve">
+    <value>Fixture inspection</value>
+  </data>
+  <data name="PurOrderView" xml:space="preserve">
+    <value>View purchase order</value>
+  </data>
+  <data name="CreateInventoryList" xml:space="preserve">
+    <value>Create inventory list</value>
+  </data>
+  <data name="ConfirmTheClearanceQuantity" xml:space="preserve">
+    <value>Confirm the clearance quantity</value>
+  </data>
+  <data name="AddSteps" xml:space="preserve">
+    <value>Add steps</value>
+  </data>
+  <data name="AdvancedReportNewTemplate" xml:space="preserve">
+    <value>Add templates for advanced reports</value>
+  </data>
+  <data name="AssigningRoles" xml:space="preserve">
+    <value>Assigning Roles</value>
+  </data>
+  <data name="AuthorizedUser" xml:space="preserve">
+    <value>Authorized user</value>
+  </data>
+  <data name="BadMaintenance" xml:space="preserve">
+    <value>Bad repair</value>
+  </data>
+  <data name="BoxWeighing" xml:space="preserve">
+    <value>Box weighing</value>
+  </data>
+  <data name="CheckProductDetails" xml:space="preserve">
+    <value>Check product details</value>
+  </data>
+  <data name="ChooseAnormalType" xml:space="preserve">
+    <value>Select anomaly type</value>
+  </data>
+  <data name="ChooseDepartmentHead" xml:space="preserve">
+    <value>Select department head</value>
+  </data>
+  <data name="ChooseReturnBill" xml:space="preserve">
+    <value>Select return order</value>
+  </data>
+  <data name="ChooseReturnDetails" xml:space="preserve">
+    <value>Select return details</value>
+  </data>
+  <data name="ChooseWindow" xml:space="preserve">
+    <value>Select window</value>
+  </data>
+  <data name="CompleteSetOfMaterials" xml:space="preserve">
+    <value>Complete set of materials</value>
+  </data>
+  <data name="ComponentRelatedDataCollection" xml:space="preserve">
+    <value>Component related data collection</value>
+  </data>
+  <data name="ConsolidatePickingList" xml:space="preserve">
+    <value>Consolidate picking list</value>
+  </data>
+  <data name="Container1Copy" xml:space="preserve">
+    <value>Copy container</value>
+  </data>
+  <data name="Container1Edit" xml:space="preserve">
+    <value>Edit container</value>
+  </data>
+  <data name="Container1Print" xml:space="preserve">
+    <value>Print container</value>
+  </data>
+  <data name="Container1View" xml:space="preserve">
+    <value>View container</value>
+  </data>
+  <data name="ControlAdd" xml:space="preserve">
+    <value>Add control</value>
+  </data>
+  <data name="ControlEdit" xml:space="preserve">
+    <value>Edit control</value>
+  </data>
+  <data name="CopyAnormal" xml:space="preserve">
+    <value>Copy exception</value>
+  </data>
+  <data name="CopyEquipmentListBOT" xml:space="preserve">
+    <value>Copy equipment list BOT</value>
+  </data>
+  <data name="CustomerInfoView" xml:space="preserve">
+    <value>View customer information</value>
+  </data>
+  <data name="CustomerProjectCopy" xml:space="preserve">
+    <value>Copy customer project</value>
+  </data>
+  <data name="DataSourceAdd" xml:space="preserve">
+    <value>Add data source</value>
+  </data>
+  <data name="DataSourceEdit" xml:space="preserve">
+    <value>Edit data source</value>
+  </data>
+  <data name="DevicePropertiesView" xml:space="preserve">
+    <value>View device properties</value>
+  </data>
+  <data name="EditOrViewBusiness" xml:space="preserve">
+    <value>Edit/View Business</value>
+  </data>
+  <data name="EquipmentTypeAdd" xml:space="preserve">
+    <value>Add device type</value>
+  </data>
+  <data name="EquipmentTypeEdit" xml:space="preserve">
+    <value>Edit device type</value>
+  </data>
+  <data name="FeederInfoeCopy" xml:space="preserve">
+    <value>Copy feeder information</value>
+  </data>
+  <data name="FeederTypeCopy" xml:space="preserve">
+    <value>Copy feeder type</value>
+  </data>
+  <data name="FixtureBorrowing" xml:space="preserve">
+    <value>Fixture borrowing</value>
+  </data>
+  <data name="FixtureReturn" xml:space="preserve">
+    <value>Fixture return</value>
+  </data>
+  <data name="FQCRecordsGRNInfo" xml:space="preserve">
+    <value>FQC records GRN information</value>
+  </data>
+  <data name="GoodsList" xml:space="preserve">
+    <value>Goods list</value>
+  </data>
+  <data name="GRNAvailableNumModify" xml:space="preserve">
+    <value>Modify the number of GRN available</value>
+  </data>
+  <data name="ImportStandardOfflineBarcodes" xml:space="preserve">
+    <value>Import standard offline barcodes</value>
+  </data>
+  <data name="InitPassword" xml:space="preserve">
+    <value>Initialize password</value>
+  </data>
+  <data name="InspectionOrderCheck" xml:space="preserve">
+    <value>Inspection order inspection</value>
+  </data>
+  <data name="InventoryDifferenceRecord" xml:space="preserve">
+    <value>Inventory difference record</value>
+  </data>
+  <data name="IPQCInspectionNoAdd" xml:space="preserve">
+    <value>Add IPQC inspection form</value>
+  </data>
+  <data name="IQCRecordsGRNInfo" xml:space="preserve">
+    <value>IQC records GRN information</value>
+  </data>
+  <data name="KanbanAdd" xml:space="preserve">
+    <value>Add Kanban</value>
+  </data>
+  <data name="KanbanTypeAdd" xml:space="preserve">
+    <value>Add Kanban type</value>
+  </data>
+  <data name="KanbanTypeEdit" xml:space="preserve">
+    <value>Edit Kanban type</value>
+  </data>
+  <data name="LabelPrint" xml:space="preserve">
+    <value>Label printing</value>
+  </data>
+  <data name="LoadingDetailsAdd" xml:space="preserve">
+    <value>Loading details added</value>
+  </data>
+  <data name="LogicSetting" xml:space="preserve">
+    <value>Logic setting</value>
+  </data>
+  <data name="MakeUp" xml:space="preserve">
+    <value>Make up</value>
+  </data>
+  <data name="MaskElementCopy" xml:space="preserve">
+    <value>Copy mask element</value>
+  </data>
+  <data name="MaskGroupCopy" xml:space="preserve">
+    <value>Copy mask group</value>
+  </data>
+  <data name="MaterialPreparationListAdd" xml:space="preserve">
+    <value>Add preparation list</value>
+  </data>
+  <data name="MaterialPreparationListEdit" xml:space="preserve">
+    <value>Edit preparation list</value>
+  </data>
+  <data name="MaterialPreparationListView" xml:space="preserve">
+    <value>View preparation list</value>
+  </data>
+  <data name="MaterialReplacement" xml:space="preserve">
+    <value>Material replacement</value>
+  </data>
+  <data name="NoOrderTransferApplicationEdit" xml:space="preserve">
+    <value>Edit a request without an order</value>
+  </data>
+  <data name="OtherWaysOfPickingAdd" xml:space="preserve">
+    <value>Add other picking methods</value>
+  </data>
+  <data name="OtherWaysOfPickingEdit" xml:space="preserve">
+    <value>Edit other picking methods</value>
+  </data>
+  <data name="OutsourcingTransferApplicationEdit" xml:space="preserve">
+    <value>Edit the outsourcing transfer application</value>
+  </data>
+  <data name="PackagingElectronicScaleSettings" xml:space="preserve">
+    <value>Packaging electronic scale settings</value>
+  </data>
+  <data name="PartsReplacementSN" xml:space="preserve">
+    <value>Parts replacement-S/N</value>
+  </data>
+  <data name="PreProcessingMaterialCopy" xml:space="preserve">
+    <value>Processing material before copying</value>
+  </data>
+  <data name="PrimaryMenuAdd" xml:space="preserve">
+    <value>Add a first-level menu</value>
+  </data>
+  <data name="PrimaryMenuEdit" xml:space="preserve">
+    <value>Edit the first level menu</value>
+  </data>
+  <data name="PrintCertificationRecords" xml:space="preserve">
+    <value>Print certification records</value>
+  </data>
+  <data name="ProductionPhaseCopy" xml:space="preserve">
+    <value>Copy the production phase</value>
+  </data>
+  <data name="ProductionVirtualPurchaseOrder" xml:space="preserve">
+    <value>Production virtual purchase order</value>
+  </data>
+  <data name="ProductRateWarningAdd" xml:space="preserve">
+    <value>Add product rate warning</value>
+  </data>
+  <data name="ProductRateWarningEdit" xml:space="preserve">
+    <value>Edit product rate warning</value>
+  </data>
+  <data name="ProductRateWarningView" xml:space="preserve">
+    <value>View product rate warning</value>
+  </data>
+  <data name="QholdiImportsMaterialsInfo" xml:space="preserve">
+    <value>Qhold import material information</value>
+  </data>
+  <data name="QholdiImportsWIPInfo" xml:space="preserve">
+    <value>Qhold imports WIP information</value>
+  </data>
+  <data name="ReceiptPrint" xml:space="preserve">
+    <value>Print receipt</value>
+  </data>
+  <data name="Receive" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="RecordProductBarcodeInfo" xml:space="preserve">
+    <value>Record product barcode information</value>
+  </data>
+  <data name="ReportEdit" xml:space="preserve">
+    <value>Edit report</value>
+  </data>
+  <data name="ReportTemplateEdit" xml:space="preserve">
+    <value>Edit report template</value>
+  </data>
+  <data name="ReportTemplateView" xml:space="preserve">
+    <value>View report template</value>
+  </data>
+  <data name="ReportTypeAdd" xml:space="preserve">
+    <value>Add report type</value>
+  </data>
+  <data name="SecondaryMenuAdd" xml:space="preserve">
+    <value>Add secondary menu</value>
+  </data>
+  <data name="SecondaryMenuEdit" xml:space="preserve">
+    <value>Edit secondary menu</value>
+  </data>
+  <data name="ShenzhenCity" xml:space="preserve">
+    <value>ShenzhenCity</value>
+  </data>
+  <data name="ShipmentDetailsRelatedBarcodeInfoView" xml:space="preserve">
+    <value>View barcode information related to shipment details</value>
+  </data>
+  <data name="ShipmentDetailsView" xml:space="preserve">
+    <value>View shipping details</value>
+  </data>
+  <data name="SimpleReportNewTemplate" xml:space="preserve">
+    <value>Simple report new template</value>
+  </data>
+  <data name="SparePartsInWarehouse" xml:space="preserve">
+    <value>Spare parts storage</value>
+  </data>
+  <data name="SparePartsOutWarehouse" xml:space="preserve">
+    <value>Spare parts out of warehouse</value>
+  </data>
+  <data name="Split" xml:space="preserve">
+    <value>Split</value>
+  </data>
+  <data name="SteelMeshAndScraperProductsAdd" xml:space="preserve">
+    <value>Increase steel mesh, scraper products</value>
+  </data>
+  <data name="SubcontractPickingApplicationAdd" xml:space="preserve">
+    <value>Add subcontract picking application</value>
+  </data>
+  <data name="SupplierConfigurationTable" xml:space="preserve">
+    <value>Supplier configuration table</value>
+  </data>
+  <data name="TestDataDisplay" xml:space="preserve">
+    <value>Test data display</value>
+  </data>
+  <data name="ToolAdd" xml:space="preserve">
+    <value>Add tools</value>
+  </data>
+  <data name="ToolEdit" xml:space="preserve">
+    <value>Edit tools</value>
+  </data>
+  <data name="ToolRequisition" xml:space="preserve">
+    <value>Tool Requisition</value>
+  </data>
+  <data name="ToolReturn" xml:space="preserve">
+    <value>Tool return</value>
+  </data>
+  <data name="ToolStorage" xml:space="preserve">
+    <value>Tool storage</value>
+  </data>
+  <data name="ToolView" xml:space="preserve">
+    <value>View tools</value>
+  </data>
+  <data name="UploadBadReport" xml:space="preserve">
+    <value>Upload bad report</value>
+  </data>
+  <data name="ViewFile" xml:space="preserve">
+    <value>View File</value>
+  </data>
+  <data name="ViewWindow" xml:space="preserve">
+    <value>View window</value>
+  </data>
+  <data name="WorkOrderAllocationRequestAdd" xml:space="preserve">
+    <value>Add work order allocation request</value>
+  </data>
+  <data name="WorkOrderTransferApplicationEdit" xml:space="preserve">
+    <value>Edit the application for transfer by work order</value>
+  </data>
+  <data name="AccessoryLoadingVerification" xml:space="preserve">
+    <value>Auxiliary material loading verification</value>
+  </data>
+  <data name="FeidaBindingGRN" xml:space="preserve">
+    <value>Feida binding GRN</value>
+  </data>
+  <data name="JITIssue" xml:space="preserve">
+    <value>JIT issue</value>
+  </data>
+  <data name="LineSideWarehouseReceiving" xml:space="preserve">
+    <value>Line side warehouse receiving</value>
+  </data>
+  <data name="ManualFeeding" xml:space="preserve">
+    <value>Manual feeding</value>
+  </data>
+  <data name="MSDManagement" xml:space="preserve">
+    <value>MSD management</value>
+  </data>
+  <data name="OverdueMaterialInspection" xml:space="preserve">
+    <value>Overdue material inspection</value>
+  </data>
+  <data name="PreProcessingFeeding" xml:space="preserve">
+    <value>Pre processing feeding</value>
+  </data>
+  <data name="ProductionReceiving" xml:space="preserve">
+    <value>Production receiving</value>
+  </data>
+  <data name="SMTLoading" xml:space="preserve">
+    <value>SMT loading</value>
+  </data>
+  <data name="SplitMaterial" xml:space="preserve">
+    <value>Split material</value>
+  </data>
+  <data name="SpotCheck" xml:space="preserve">
+    <value>Spot check</value>
+  </data>
+  <data name="SpotInspectionOfTools" xml:space="preserve">
+    <value>Spot inspection of tools</value>
+  </data>
+  <data name="SteelMeshOrCcraperUpDown" xml:space="preserve">
+    <value>Steel mesh / scraper up and down</value>
+  </data>
+  <data name="SteelMeshOrScraperCleaning" xml:space="preserve">
+    <value>Steel mesh / scraper cleaning</value>
+  </data>
+  <data name="SteelMeshOrScraperQuery" xml:space="preserve">
+    <value>Steel mesh / scraper query</value>
+  </data>
+  <data name="WarehouseBalance" xml:space="preserve">
+    <value>Warehouse balance</value>
+  </data>
+  <data name="RecheckListDetails" xml:space="preserve">
+    <value>Re check list details</value>
+  </data>
+  <data name="System_LanguageAdd" xml:space="preserve">
+    <value>Add Language</value>
+  </data>
+  <data name="System_LanguageEdit" xml:space="preserve">
+    <value>Edit Language</value>
+  </data>
+  <data name="System_LanguageList" xml:space="preserve">
+    <value>Language Config</value>
+  </data>
+  <data name="FormChangeMES_List" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RouterActivity" xml:space="preserve">
+    <value>Activity Configuration</value>
+  </data>
+  <data name="IncreaseSerialNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ESOP配置" xml:space="preserve">
+    <value>ESOP Config</value>
+  </data>
+  <data name="RouterActivity1" xml:space="preserve">
+    <value>Activity Configuration</value>
+  </data>
+  <data name="MaterielList" xml:space="preserve">
+    <value>Materiel List</value>
+  </data>
+  <data name="AgingKanBanList" xml:space="preserve">
+    <value>AgingKanBanList</value>
+  </data>
+  <data name="Production_WorkOrderSchedule" xml:space="preserve">
+    <value>Production WorkOrder Schedule</value>
+  </data>
+  <data name="MaterialBurnListDelete" xml:space="preserve">
+    <value>Material Burn Delete</value>
+  </data>
+  <data name="WarningTypeList" xml:space="preserve">
+    <value>Warning Type List</value>
+  </data>
+  <data name="MSD_MsdBakeAdd" xml:space="preserve">
+    <value>MSD Bake In</value>
+  </data>
+  <data name="MSD_MsdBakeEdit" xml:space="preserve">
+    <value>MSD Bake Out</value>
+  </data>
+  <data name="AccountRoleSubList" xml:space="preserve">
+    <value>Account Role Sub List</value>
+  </data>
+  <data name="CurrentUserChangePwd" xml:space="preserve">
+    <value>CurrentUserChangePwd</value>
+  </data>
+</root>

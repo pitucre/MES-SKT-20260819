@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Masters/Masters.master" AutoEventWireup="true"
+    ViewStateMode="Disabled" Inherits="SKT.LeanMES.Web.Masters.ChooseListMaster" CodeBehind="ChooseListMaster.master.cs" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.utility.tablelist.js?v=20211209"
+        type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        var RequireOnlyOneRecord = "<%=Resources.Messages.RequireOnlyOneRecord %>";
+        var RequireOperateRecord = "<%=Resources.Messages.RequireOperateRecord %>";
+        var ConfirmDelete = "<%=Resources.Messages.ConfirmDelete %>";
+        var isMultiple = false;
+        var currentRowIndex = -1;
+
+        function hideOrShowSearch(obj) {
+            $(obj).toggleClass("bar_expand_hide");
+            $("#searchField_content").stop(false, true).slideToggle(500)
+        }
+
+        function clearSearch() {
+            $("#searchField_content input[type=text]").val("");
+            $("#searchField_content input[type=hidden]").val("");
+            $("#searchField_content select option:first").prop("selected", "selected");
+            doRefresh();
+        }
+
+        function doRefresh() {
+            document.forms[0].submit();
+        }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!--搜索模块 开始-->
+    <div id="searchField">
+        <div class="divHeader">
+            <div style="position: absolute; left: 10px; top: 5px; font-weight: bold; line-height: 18px;">
+                <img src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/images/search.png" alt="<%= Resources.lang.Search %>"
+                    style="vertical-align: middle;" />&nbsp;<%= Resources.lang.Search %>
+            </div>
+            <div class="bar_expand" onclick="hideOrShowSearch(this)" id="bar_expand" title="">
+            </div>
+        </div>
+        <div id="searchField_content">
+            <asp:ContentPlaceHolder ID="SearchContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clear5">
+            </div>
+            <div style="text-align: center;">
+                <asp:CheckBox ID="chkMatchWholeWord" runat="server" /><label for="<%= this.chkMatchWholeWord.ClientID %>"><%= Resources.Common.MatchWholeWord %></label>
+                <input type="submit" id="searchSubmit" value="<%=Resources.lang.Search %>" class="SearchButton" />
+                <input type="button" id="Button1" value="清空" onclick="clearSearch()" class="SearchButton"
+                    title="清空查询条件" />
+            </div>
+            <div class="clear5">
+            </div>
+        </div>
+    </div>
+    <!--列表模块 开始-->
+    <asp:ContentPlaceHolder ID="GridviewContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:HiddenField ID="hdnPageCount" runat="server" Value="0" />
+</asp:Content>

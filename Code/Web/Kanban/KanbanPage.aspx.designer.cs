@@ -1,0 +1,69 @@
+﻿//------------------------------------------------------------------------------
+// <自动生成>
+//     此代码由工具生成。
+//
+//     对此文件的更改可能导致不正确的行为，如果
+//     重新生成代码，则所做更改将丢失。
+// </自动生成>
+//------------------------------------------------------------------------------
+
+namespace SKT.LeanMES.Web.Kanban {
+    
+    
+    public partial class KanbanSingle {
+        
+        /// <summary>
+        /// form1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// hfMasterTitle 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfMasterTitle;
+        
+        /// <summary>
+        /// hfMasterFoot 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfMasterFoot;
+        
+        /// <summary>
+        /// hfContainList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfContainList;
+        
+        /// <summary>
+        /// hfServerTime 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfServerTime;
+        
+        /// <summary>
+        /// hidMachineMac 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hidMachineMac;
+    }
+}

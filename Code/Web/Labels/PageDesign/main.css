@@ -1,0 +1,220 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.laytable {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+    .laytable td {
+        padding: 0;
+    }
+
+.module {
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+}
+
+.datalist {
+    border-top: 1px solid #e6e6e6;
+    text-align: left;
+}
+
+    .datalist div {
+        line-height: 26px;
+        padding: 2px;
+        border-bottom: 1px solid #e6e6e6;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+        .datalist div:hover:not(.datalist_select) {
+            background: #e6e6e6;
+        }
+
+.datalist_select {
+    background: #0097ac;
+    color: #fff;
+}
+
+.controls {
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+    .controls div {
+        float: left;
+        width: 50%;
+        margin-top: 8px;
+    }
+
+    .controls img {
+        width: 30px;
+        height: 30px;
+    }
+
+.search-text {
+    height: 24px;
+    border: none;
+    padding: 0 5px;
+    width: 100%;
+}
+
+.control-checkbox {
+    width: 14px;
+    height: 14px;
+}
+
+.control-text {
+    width: 88px;
+    height: 24px;
+    border: 1px solid #0097ac;
+    padding: 0 5px;
+}
+
+.layui-tab {
+    margin: 0px !important;
+}
+
+.layui-tab-content {
+    padding: 0px !important;
+}
+
+.control-select {
+    width: 100px;
+    height: 24px;
+    border: 1px solid #0097ac;
+}
+
+.attrtab {
+    border-collapse: collapse;
+}
+
+    .attrtab .tdtitle {
+        text-align: right;
+        width: 80px;
+        font-size: 12px;
+        color: #000;
+    }
+
+    .attrtab .tdvalue {
+        padding: 2px 0;
+        text-align: left;
+        width: 100px;
+    }
+
+.layui-table-view {
+    margin: 0 !important;
+}
+
+.layui-colla-item h2 {
+    line-height: 35px !important;
+    height: 35px !important;
+    padding: 0 0 0 20px !important;
+}
+
+.attrtab .g_title {
+    font-weight: bold;
+    color: #0097ac;
+}
+
+.attrtab .g_line {
+    border-bottom: 1px solid #0097ac;
+}
+
+.tackcolor {
+    padding: 1px 4px !important;
+    z-index: 9999999999;
+}
+
+    .tackcolor:not(.sp-container) {
+        width: 90px;
+    }
+
+.pageItem {
+    box-sizing: border-box;
+    float: left;
+    border-width: 0px;
+    border-style: solid;
+}
+
+.unselectItem {
+    border-width: 1px;
+    border-color: #eee;
+}
+
+.selectItem {
+    border-width: 1px;
+    border-color: #0097ac;
+}
+
+.panelmenu {
+    width: 200px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #0097ac;
+    z-index: 999999;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+    .panelmenu div {
+        line-height: 30px;
+        padding-left: 10px;
+    }
+
+        .panelmenu div:hover {
+            background: #0097ac;
+            color: #fff;
+        }
+
+.tab_tr_td_span:hover {
+    cursor: pointer;
+    color: #0097ac;
+}
+
+.buttonicons i {
+    cursor: pointer;
+    font-size: 26px;
+    margin: 2px;
+}
+
+.tree_attributeset {
+    padding: 20px;
+}
+
+    .tree_attributeset span {
+        padding-right: 10px;
+    }
+
+    .tree_attributeset ul li {
+        padding: 5px;
+        border-left: 1px solid #999;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        width: 5px;
+        white-space: nowrap;
+        margin: -1px;
+    }
+
+.search-panel {
+    overflow-x: hidden;
+}
+
+.preeditable {
+    overflow: auto;
+}
+
+    .preeditable p {
+        margin: 0;
+        padding: 0;
+    }

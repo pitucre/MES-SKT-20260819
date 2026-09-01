@@ -1,0 +1,24 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="SKT.LeanMES.Web.Framework.FileNotFound" Codebehind="FileNotFound.aspx.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%=Resources.Messages.FileNotFound %></title>
+</head>
+<body style="background:#ffffff;">
+    <div style="width:440px; height:50px; position:absolute; top:50%; left:45%; margin-top:-100px; margin-left:-190px;">    
+        <table style="width:100%; height:100%; border-width:0px; font-size:12px;" cellpadding="10">
+            <tr>
+                <td>
+                    <img src="<%= SKT.LeanMES.Web.WebHelper.ImageRoot %>msg_information.gif" alt="" style="border:0px;" />
+                </td>
+                <td>
+                    <img src="" alt="" id="imgfileNotFound" style="border:0px;" runat="server"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

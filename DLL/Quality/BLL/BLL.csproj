@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C425DC6-CEBC-440A-8DC3-20A45FF2F7C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.LeanMES.Quality.BLL</RootNamespace>
+    <AssemblyName>SKT.LeanMES.Quality.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SKT.Common.DAL.Marshal">
+      <HintPath>..\..\Lib\SKT.Common.DAL.Marshal.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.Model">
+      <HintPath>..\..\Lib\SKT.Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.CommonHelper">
+      <HintPath>..\..\Lib\SKT.LeanMES.CommonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AQLPlan.cs" />
+    <Compile Include="AQLRule.cs" />
+    <Compile Include="AQLRuleMember.cs" />
+    <Compile Include="AQLRuleType.cs" />
+    <Compile Include="AQLSample.cs" />
+    <Compile Include="Holds.cs" />
+    <Compile Include="InspectionFQC.cs" />
+    <Compile Include="InspectionItem.cs" />
+    <Compile Include="InspectionLot.cs" />
+    <Compile Include="InspectionOrder.cs" />
+    <Compile Include="InspectionOrderMember.cs" />
+    <Compile Include="InspectionOrderMemberItem.cs" />
+    <Compile Include="InspectionPQC.cs" />
+    <Compile Include="InspectionPQCBatch.cs" />
+    <Compile Include="InspectionRule.cs" />
+    <Compile Include="InspectionTemplate.cs" />
+    <Compile Include="InspectionTemplateItem.cs" />
+    <Compile Include="InspectionTemplateMember.cs" />
+    <Compile Include="InspectionType.cs" />
+    <Compile Include="OBAAudit.cs" />
+    <Compile Include="OSP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rma.cs" />
+    <Compile Include="RMAUnit.cs" />
+    <Compile Include="SealedSample.cs" />
+    <Compile Include="SealedSampleStatus.cs" />
+    <Compile Include="WarnSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{244DFADA-9664-4F6D-B65E-D8DA755FCDBB}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

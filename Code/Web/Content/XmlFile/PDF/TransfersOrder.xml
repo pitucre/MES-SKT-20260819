@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtTransfersForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" font-style="bold">#[Company]#</column>
+        <column width="40%" align="center" font-size="18" font-style="bold">调  拨  单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[TransfersNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left">日期：#[CreateDateTime]#</column>
+     
+        <column width="15%" align="left" >调入仓：#[InWhouseName]#</column>
+        <column width="15%" align="left">调出仓：#[OutWhouseName]#</column>
+        <column width="20%" align="left">调拨单号：#[TransfersNo]#</column>
+
+      </row>
+
+    </table>
+    <data source="dtTransfersForm1" spacing-before="0" font-size="9">
+      <column header="序号" width="3%" align="center" rownum="1"></column>
+      <column header="物料编码" width="12%" align="center">#[ItemCode]#</column>
+      <column header="客户料号" width="9%">#[CPN]#</column>
+	  <column header="物料名称" width="10%" align="center">#[ItemName]#</column>
+      <column header="单位" width="4%" align="center">#[Units]#</column>
+      <column header="调入仓库" width="5%" align="center">#[BarCodeIn]#</column>
+	  <column header="库位" width="14%" align="left">#[CbarCode]#</column>
+      <column header="调拨数量" width="6%" align="center">#[ApplyQty]#</column>
+      <column header="备注" width="8%" align="center">#[Remark]#</column>
+    </data>
+    <table spacing-before="0"  font-size="9">
+      <row>
+        <column width="50%" align="left">制单人：#[SingleMan]#</column>
+        <column width="50%" align="left">调拨审核：#[Auditing]#</column>
+      </row>
+      <row>
+        <column width="50%" align="left">调入仓管员：#[ReceiveUser]#</column>
+        <column width="50%" align="left">调出仓管员：#[SingleMan]#</column>
+      </row>
+      <row>
+        <column width="50%" align="left">记账方式：</column>
+        <column width="50%" align="left">记帐复核：#[FinanceAuditing]#</column>
+      </row>
+    </table>
+  </report>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+</file>

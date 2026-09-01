@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin all="1" ></margin>
+  <report source="dtMaintenance">
+    <table spacing-before="0" border-width="0" font-size="22">
+      <row>
+        <column width="30%" align="left" valign="top"></column>
+        <column width="40%" align="center" valign="top" font-size="22" font-style="bold">设备点检单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="120" barcode-height="35" barcode-content="#[InspectionNo]#" valign="bottom"></column>
+      </row>
+    </table>
+    <table spacing-before="0" font-size="9" border-width="0">
+      <row>
+        <column width="100%" height="10"></column>
+      </row>
+    </table>
+    <table spacing-before="0" font-size="11">
+      <row>
+        <column width="14%" align="center">点检单号</column>
+        <column width="20%" align="left">#[InspectionNo]#</column>
+        <column width="13%" align="center">设备编码</column>
+        <column width="20%" align="left">#[EquipmentCode]#</column>
+        <column width="14%" align="center">检验结果</column>
+        <column width="20%" align="left">#[InspectionResultName]#</column>
+      </row>
+      <row>
+        <column width="14%" align="center">设备类型</column>
+        <column width="20%" align="left">#[EquipmentTypeName]#</column>
+        <column width="13%" align="center">班次</column>
+        <column width="20%" align="left">#[WorkShiftName]#</column>
+        <column width="14%" align="center"></column>
+        <column width="20%" align="left"></column>
+      </row>
+      <row>
+        <column width="14%" align="center">点检人工号</column>
+        <column width="20%" align="left">#[InspectionUser]#</column>
+        <column width="13%" align="center">点检人姓名</column>
+        <column width="20%" align="left">#[InspectionUserCName]#</column>
+        <column width="14%" align="center">点检时间</column>
+        <column width="20%" align="left">#[InspectionTime]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" font-size="9" border-width="0">
+      <row>
+        <column width="100%" height="17"></column>
+      </row>
+    </table>
+    <data source="dtMaintenance1" spacing-before="0" font-size="10">
+      <column header="序号" width="5%" align="center" rownum="1"></column>
+      <column header="检验项目" width="30%">#[InspectionItemName]#</column>
+      <column header="检验方法" width="10%">#[InspectionMethod]#</column>
+      <column header="检验标准" width="15%">#[StandardValue]#</column>
+      <column header="判断结果" width="10%" align="center">#[ResultName]#</column>
+      <column header="不合格描述" width="20%">#[Remark]#</column>
+      <column header="记录时间" width="10%" align="center">#[InspectionItemRecordTime]#</column>
+    </data>
+  </report>
+</file>

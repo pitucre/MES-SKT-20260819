@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/axios")
+    @Scripts.Render("~/bundles/vue")
+
+    @*时间格式化*@
+    @Scripts.Render("~/bundles/moment")
+
+
+    <script>
+        //定义一个全局过滤器实现日期格式化
+        //Vue.filter('datefmt',function (input,fmtstring) {//当input为时间戳时，需转为Number类型
+        //  // 使用momentjs这个日期格式化类库实现日期的格式化功能
+        //  return moment(input).format(fmtstring);
+        //});
+
+        moment.locale('zh-cn'); 
+
+       
+        function getDateString(date, fmt) {
+            if (!date) {
+                return "";
+            }
+            var today = new Date(date);
+            return today.Format(fmt);
+        }
+
+        //时间转字符串
+        Date.prototype.Format = function (fmt) {
+            if (undefined == fmt || null == fmt) {
+                fmt = "yyyy-MM-dd HH:mm:ss";
+            }
+            var t = this;
+            var tf = function (str, len) {
+                if (str.length < len) {
+                    for (var i = 0; i < len - str.length; i++) {
+                        str = "0" + str;
+                    }
+                }
+                return str
+            };
+            var opt = {
+                "y+": t.getFullYear().toString(),        // 年
+                "M+": (t.getMonth() + 1).toString(),     // 月
+                "d+": t.getDate().toString(),            // 日
+                "H+": t.getHours().toString(),           // 时
+                "m+": t.getMinutes().toString(),         // 分
+                "s+": t.getSeconds().toString()          // 秒
+                // 有其他格式化字符需求可以继续添加，必须转化成字符串
+            };
+            var ret;
+            for (var k in opt) {
+                ret = new RegExp("(" + k + ")").exec(fmt);
+                if (ret) {
+                    fmt = fmt.replace(ret[1], ret[1].length == 1 ? opt[k] : tf(opt[k], ret[1].length));
+                }
+            }
+            return fmt;
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SKT数据同步</a>
+                @Html.ActionLink("API列表", "", "swagger", new { area = "" }, new { @class = "navbar-brand", @target = "_blank", style = "margin-left:50px;" })
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <p>&copy; @DateTime.Now.Year - 深圳市深科特信息技术有限公司 版权所有</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

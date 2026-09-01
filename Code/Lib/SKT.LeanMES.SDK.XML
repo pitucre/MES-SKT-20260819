@@ -1,0 +1,1186 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SKT.LeanMES.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:SKT.LeanMES.SDK.APIResult">
+            <summary>
+            API 接口数据返回实体
+            @author xudong.zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.APIResult.Basis">
+            <summary>
+            基础消息
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.APIResult.Result">
+            <summary>
+            返回结果集
+            </summary>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.BaseData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.BaseData.State">
+            <summary>
+            状态码 0=操作成功 -1=操作失败
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.BaseData.Sign">
+            <summary>
+            签名
+            </summary> 
+        </member>
+        <member name="P:SKT.LeanMES.SDK.BaseData.Message">
+            <summary>
+            状态码返回消息说明
+            </summary>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.GlobalPackage">
+            <summary>
+            全局数据包
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.GlobalPackage.Global">
+            <summary>
+            签名包
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.GlobalPackage.Data">
+            <summary>
+            数据包
+            </summary>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.SignPackage">
+            <summary>
+            签名包 
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.IMEI">
+            <summary>
+            手机IMEI号
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.IMSI">
+            <summary>
+            手机IMSI号
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.OS">
+            <summary>
+            2:android，4:IOS, 6：ERP
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.Token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignPackage.Sign">
+            <summary>
+            签名字符串
+            </summary>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.AlgorithmEnum">
+            <summary>
+            签名算法类型
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.SettingsHelper">
+            <summary>
+            ConfigSetting工具
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SettingsHelper.SKT_Key">
+            <summary>
+            动态加密key
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SettingsHelper.Interface_UserName">
+            <summary>
+            接口用户名
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SettingsHelper.Interface_Password">
+            <summary>
+            接口密码
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SettingsHelper.Interface_Key">
+            <summary>
+            接口密钥
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SettingsHelper.Interface_Address">
+            <summary>
+            接口地址
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SettingsHelper.AppSettings(System.String)">
+            <summary>
+            根据key获取配置value
+            </summary>
+            <param name="xmlkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SettingsHelper.AppSettings(System.String,System.String)">
+            <summary>
+            根据key获取配置value
+            没有则返回用户defaultVal
+            </summary>
+            <param name="xmlkey"></param>
+            <param name="defaultUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.SignClient">
+            <summary>
+            签名工具
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.SignClient.TimeOutSec">
+            <summary>
+            超时（秒）
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostMD5Sign(System.String,SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            Http同步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="globalPackage">全局数据包对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostAsynMD5Sign(System.String,System.Object)">
+            <summary>
+            Http异步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostMD5Sign(System.String,System.Object)">
+            <summary>
+            Http同步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostMD5Sign(System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="token">Token</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostAsynMD5SignStream(System.String,System.Object)">
+            <summary>
+            Http异步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignMD5Stream(System.String,System.Object)">
+            <summary>
+            Http异步POST(配置EncryptKey)
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostAsynMD5Sign(System.String,System.String,System.String)">
+            <summary>
+            Http异步POST
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="key">加密Key</param>
+            <param name="postData">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostAsynMD5Sign(System.String,System.String,System.Object)">
+            <summary>
+            Http异步POST
+            </summary>
+            <param name="url">请求URL地址</param>
+            <param name="key">加密Key</param>
+            <param name="dyn">POST数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSyncMD5Sign(System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="key">加密Key</param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSyncMD5Sign(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST(手动组装Token)
+            </summary>
+            <param name="url"></param>
+            <param name="key">加密Key</param>
+            <param name="token"></param>
+            <param name="dyn"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostAsynMD5SignStream(System.String,System.String,System.Object)">
+            <summary>
+            Http异步POST返回字节流
+            </summary>
+            <param name="url"></param>
+            <param name="key">加密Key</param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignMD5Stream(System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST返回字节流
+            </summary>
+            <param name="url"></param>
+            <param name="key">加密Key</param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignRSA(System.String,SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="global"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostRSASign(System.String,System.Object)">
+            <summary>
+            Http同步POST(无Token)
+            </summary>
+            <param name="url"></param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostRSASign(System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="token"></param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignRSA(System.String,System.Object)">
+            <summary>
+            Http同步POST(无Token)
+            </summary>
+            <param name="url"></param>
+            <param name="token"></param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignRSA(System.String,System.String,System.Object)">
+            <summary>
+             Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="token"></param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostRSASignNoToken(System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="key">密钥</param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostRSASign(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url"></param>
+            <param name="key">密钥</param>
+            <param name="token"></param>
+            <param name="dyn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostSignHMACSHA256(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Http同步POST
+            </summary>
+            <param name="url">地址</param>
+            <param name="accessKey"></param>
+            <param name="appSecret">密钥</param>
+            <param name="postData">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetSignHMACSHA256(System.String,System.String,System.String,System.Object)">
+            <summary>
+            Http同步GET
+            </summary>
+            <param name="url"></param>
+            <param name="accessKey"></param>
+            <param name="appSecret"></param>
+            <param name="paramData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetAPIResult(System.String)">
+            <summary>
+            获取返回参数
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.HttpGetAsyn(System.String)">
+            <summary>
+            Http异步GET
+            </summary>
+            <param name="url">请求URL地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.HttpPostAsyn(System.String,System.String)">
+            <summary>
+            异步请求
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.HttpPostAsynStream(System.String,System.String)">
+            <summary>
+             Http异步POST返回字节流
+            </summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.HttpPostStream(System.String,System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Http同步POST返回字节流
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="method"></param>
+            <param name="cer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostURL(System.String)">
+            <summary>
+            POST并接收返回数据
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostURL(System.String,System.String)">
+            <summary>
+            POST带数据并接收返回数据
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostURL(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            POST带数据并接收返回数据(自定义头信息)
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostURL(System.String,System.String,System.String,System.String)">
+            <summary>
+            POST带数据并接收返回数据
+            </summary>
+            <param name="url">请求的URL</param>
+            <param name="data">数据</param>
+            <param name="cert_path">证书本地路径</param>
+            <param name="cert_password">证书密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetURL(System.String)">
+            <summary>
+            Get接收返回数据
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetURL(System.String,System.String)">
+            <summary>
+            Get带数据并接收返回数据
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetURL(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            GET带数据并接收返回数据(自定义头信息)
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.GetRequest(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            默认为Get 请求
+            </summary>
+            <param name="url"></param>
+            <param name="headerParamsData"></param>
+            <param name="paramData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostRequest(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},SKT.LeanMES.SDK.YonBIPPackage)">
+            <summary>
+            默认为Post 请求
+            </summary>
+            <param name="url"></param>
+            <param name="paramsData"></param>
+            <param name="headerParamsData"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.ClientRequest(System.String,System.String)">
+            <summary>
+            默认为Get 请求
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.ClientRequest(System.String,System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            请求
+            </summary>
+            <param name="url"></param>
+            <param name="method"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.ClientRequest(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            请求
+            </summary>
+            <param name="url"></param>
+            <param name="data"></param>
+            <param name="headers">自定义头信息</param>
+            <param name="method"></param>
+            <param name="cer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.HttpGet(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.PostInput(System.IO.Stream)">
+            <summary>
+            获取POST返回来的数据
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            检查验证结果
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignClient.Logs(System.String)">
+            <summary>
+            SDK请求响应日志
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.SignHelper">
+            <summary>
+            签名
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.Get32BitSHA1(System.String)">
+            <summary>
+            获取32字节码 sha1加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetMD5SignStr(System.Object)">
+            <summary>
+            获取MD5签名字符串
+            </summary>
+            <param name="data">数据对象（数据包）</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetMD5SignStr(SKT.LeanMES.SDK.APIResult)">
+            <summary>
+            获取MD5签名字符串
+            </summary>
+            <param name="apiResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetMD5SignStr(System.String,System.Object)">
+            <summary>
+            获取签名字符串
+            </summary>
+            <param name="key"></param>
+            <param name="dataPackage">数据包</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Str(System.String,System.String,System.Object)">
+            <summary>
+             获取请求提交数据签名(手动组装Token)
+            </summary>
+            <param name="key"></param>
+            <param name="token"></param>
+            <param name="dyn_data">数据包</param> 
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Package(System.Object)">
+            <summary>
+            获取请求提交数据签名包
+            </summary> 
+            <param name="data">数据包</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Package(System.String,System.Object)">
+            <summary>
+            获取请求提交数据签名包
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Package(System.String,System.String,System.Object)">
+            <summary>
+            获取请求提交数据签名包(手动组装Token)
+            </summary>
+            <param name="key"></param>
+            <param name="token"></param>
+            <param name="dyn_data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Package(System.String,SKT.LeanMES.SDK.GlobalPackage,System.String)">
+            <summary>
+            获取带签名的数据包
+            </summary>
+            <param name="key"></param>
+            <param name="signPackage"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignMD5Package(SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            获取带签名的数据包
+            </summary> 
+            <param name="signPackage"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignMD5Auth(SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            验签
+            </summary>
+            <param name="globalPackage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignMD5Auth(SKT.LeanMES.SDK.APIResult)">
+            <summary>
+            验签
+            </summary>
+            <param name="apiResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignMD5Auth(System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="globalPackageStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignMD5Auth(System.String,System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="sign_str"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignMD5Auth(System.String,System.String,System.String)">
+            <summary>
+            验签(手动组装Token)
+            </summary>
+            <param name="key"></param>
+            <param name="sign_str"></param>
+            <param name="token"></param>
+            <param name="globalPackageStr">全局数据包Json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignSHA1(System.String)">
+            <summary>
+            SHA1加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignSHA1(System.String,System.String)">
+            <summary>
+            SHA1加密
+            </summary>
+            <param name="str"></param>
+            <param name="key">加密Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignHMACSHA256(System.String)">
+            <summary>
+            HMACSHA256加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.SignHMACSHA256(System.String,System.String)">
+            <summary>
+            HMACSHA256加密
+            </summary>
+            <param name="str">待计算签名的字符串</param>
+            <param name="key">加密Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignRSAStr(SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            获取签名字符串
+            </summary>
+            <param name="globalPackage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignRSAStr(SKT.LeanMES.SDK.APIResult)">
+            <summary>
+            获取签名字符串
+            </summary>
+            <param name="apiResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.RSASignAuth(SKT.LeanMES.SDK.GlobalPackage)">
+            <summary>
+            验签
+            </summary>
+            <param name="globalPackage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.RSASignAuth(SKT.LeanMES.SDK.APIResult)">
+            <summary>
+            验签
+            </summary>
+            <param name="apiResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignRSAStr(System.String,System.Object)">
+            <summary>
+            获取验签字符串(手动组装Token)
+            </summary>
+            <param name="key"></param>
+            <param name="token"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.GetSignRSAStr(System.String,System.String,System.String)">
+            <summary>
+            获取RSA验签字符串(手动组装Token)
+            </summary>
+            <param name="key"></param>
+            <param name="token"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.RSASignAuth(System.String,System.String,System.String)">
+            <summary>
+            RSA非对称加密 验签(手动组装Token)
+            </summary>
+            <param name="sign_str"></param>
+            <param name="token"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.SignHelper.RSASignAuth(System.String,System.String)">
+            <summary>
+            RSA非对称加密 验签(无Token)
+            </summary>
+            <param name="sign_str"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.JsonSort">
+            <summary>
+            JSON排序
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.JsonSort.SortJson(Newtonsoft.Json.Linq.JToken,Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            排序
+            </summary>
+            <param name="jobj"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.StringHelper">
+            <summary>
+            字符串处理
+            @author Xudong.Zhu 
+            @date 2022-08-19
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.UrlEncode(System.String)">
+            <summary>
+            Url编码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.UrlEncode(System.String,System.Text.Encoding,System.Boolean)">
+            <summary>
+            小写转大写，特殊字符特换
+            </summary>
+            <param name="str">原字符串</param>
+            <param name="encoding">编码方式</param>
+            <param name="bToUpper">是否转大写</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.UrlDecode(System.String)">
+            <summary>
+            Url解码
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ConvertTo32BitMD5(System.String)">
+            <summary>
+            加密成３２位(MD5)
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>32位字符串</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ConvertTo32BitSHA1(System.String)">
+            <summary>
+            加密成３２位(SHA1)
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>位字符串</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetMd5Hash(System.String)">
+            <summary>
+            UTF8编码来算出MD5的值,用于短信网关接口用户密码加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.getMD5(System.String)">
+            <summary>
+            获得MD5
+            </summary>
+            <param name="Sourcein">需加密的字符串</param>
+            <returns>MD5码</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.MD5(System.String)">
+            <summary>
+            字符串MD5加密
+            </summary>
+            <param name="Text">要加密的字符串</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.getSHA1(System.String)">
+            <summary>
+            获得SHA1
+            </summary>
+            <param name="Sourcein">需加密的字符串</param>
+            <returns>SHA1码</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.SHA1(System.String)">
+            <summary>
+            字符串SHA-1加密 
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetHMACSHA256(System.String,System.String)">
+            <summary>
+            加密HMACSHA256
+            </summary>
+            <param name="secret">要加密的字符串</param>
+            <param name="signKey">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.DecryptStr(System.String)">
+            <summary>
+            顺序减1解码 (偏移量)
+            </summary>
+            <param name="rs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.EncryptStr(System.String)">
+            <summary>
+            倒序加1加密 （偏移量）
+            </summary>
+            <param name="rs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetDistinctStrToArray(System.String)">
+            <summary>
+            Distinct返回关键词数组
+            </summary>
+            <param name="keywords">关键词组</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RemoveNumber(System.String)">
+            <summary>
+            去掉字符串中的数字
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RemoveNotNumber(System.String)">
+            <summary>
+            去掉字符串中的非数字
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ValidateSqlInput(System.String)">
+            <summary>
+            防SQL注入 通过返回true 未通过返回false
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.StringToIntArray(System.String)">
+            <summary>
+            处理含有英文逗号string字符串转化成Int数组
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.StringToArray(System.String)">
+            <summary>
+            处理含有英文逗号string字符串转化成string数组
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ArrayToString(System.Array,System.String,System.Boolean)">
+            <summary>
+            处理数组转成字符串格式
+            </summary>
+            <param name="array">数组</param>
+            <param name="split">分隔符</param>
+            <param name="quote">每个值加单引号</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetSubString(System.String,System.Int32)">
+            <summary>
+            截取字符长度
+            </summary>
+            <param name="str">字符串</param>
+            <param name="slength">截取长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.bSubstring(System.String,System.Int32)">
+            <summary>
+            截取字符长度
+            </summary>
+            <param name="s"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SKT.LeanMES.SDK.StringHelper.CutStr(System.String,System.Int32)" -->
+        <member name="M:SKT.LeanMES.SDK.StringHelper.CutStr(System.String,System.Int32,System.Int32)">
+            <summary>
+            截取字符串并限制字符串长度，多于给定的长度＋。。。
+            </summary>
+            <param name="str">待截取的字符串</param>
+            <param name="len">每行的长度，多于这个长度自动换行</param>
+            <param name="max">输出字符串最大的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetRandomNum(System.Int32)">
+            <summary>
+            获取随机字符串
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.FormatUrlParaMap(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            参数名ASCII码从小到大排序（字典序）；
+            参数进行URL参数化拼接
+            </summary>
+            <param name="paraMap"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.FormatParaMap(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            参数名ASCII码从小到大排序（字典序）；
+            如果参数的值为空不参与签名；
+            参数名区分大小写； 
+            </summary>
+            <param name="paraMap"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetDictionaryByType``1(``0)">
+            <summary>
+            根据类型获取对应字典集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetEncryption(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetDecryption(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.hexStringToByte(System.String)">
+            <summary>
+              将16进制的字符串转换为字节串
+            </summary>
+            <param name="hex">要转换的16进制的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.toByte(System.Char)">
+            <summary>
+            16进制字符转换为字节
+            </summary>
+            <param name="c">要转换的16进制的字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.DESEncryptor(System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="inputData">要加密的原始数据</param>
+            <param name="encryptorKey">加密密钥，8个字节（64位）</param>
+            <param name="ret">true=加密成功</param>
+            <returns>返回加密后的数据，已转换为可显示的16进制的字符串</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.DESDecryptor(System.String,System.String)">
+            <summary>
+             DES解密
+            </summary>
+            <param name="inputData">已加密的数据（已转换为可显示的16进制的字符串）</param>
+            <param name="encryptorKey">解密密钥，8个字节（64位）</param>
+            <param name="ret">true=解密成功</param>
+            <returns>原始数据</returns>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.StringHelper.RSAKEY">
+            <summary>
+            KEY 结构体
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.StringHelper.RSAKEY.PublicKey">
+            <summary>
+            公钥
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.StringHelper.RSAKEY.PrivateKey">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetKey">
+            <summary>
+            获取公私钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetPublicKeyParameter(System.String)">
+            <summary>
+            获取公钥参数
+            </summary>
+            <param name="keyBase64">公钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetPrivateKeyParameter(System.String)">
+            <summary>
+            获取私钥参数
+            </summary>
+            <param name="keyBase64">私钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.EncryptByPrivateKey(System.String,System.String)">
+            <summary>
+            私钥加密
+            </summary>
+            <param name="data">加密内容</param>
+            <param name="privateKey">私钥（Base64后的）</param>
+            <returns>返回Base64内容</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.DecryptByPrivateKey(System.String,System.String)">
+            <summary>
+            私钥解密
+            </summary>
+            <param name="data">待解密的内容</param>
+            <param name="privateKey">私钥（Base64编码后的）</param>
+            <returns>返回明文</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.EncryptByPublicKey(System.String,System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="data">加密内容</param>
+            <param name="publicKey">公钥（Base64编码后的）</param>
+            <returns>返回Base64内容</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.DecryptByPublicKey(System.String,System.String)">
+            <summary>
+            公钥解密
+            </summary>
+            <param name="data">待解密的内容</param>
+            <param name="publicKey">公钥（Base64编码后的）</param>
+            <returns>返回明文</returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RSAWriteToPemFile">
+            <summary>
+            将秘钥保存到Pem文件
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.WriteToPemFile(System.Boolean,System.String,System.String)">
+            <summary>
+            将秘钥保存到Pem文件
+            </summary>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ReadFromPemFile(System.String)">
+            <summary>
+            从Pem文件中读取秘钥
+            </summary>
+            <param name="pemFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RSASign(System.String)">
+            <summary>
+            RSA私钥签名
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RSAAuth(System.String)">
+            <summary>
+            RSA公钥验签字符串
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RSASign(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="data">数据</param>
+            <param name="keyFilePath">密匙文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.SignByPrivateKey(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="data">数据</param>
+            <param name="key">密匙</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.RSAAuth(System.String,System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="plainData">验证数据</param>
+            <param name="sign">签名</param>
+            <param name="keyFilePath">公匙文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ValidationPublicKey(System.String,System.String,System.String)">
+            <summary>
+            验签
+            </summary>
+            <param name="plainData">验证数据</param>
+            <param name="sign">签名</param>
+            <param name="key">公匙</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.ReadFileContent(System.String,System.Text.Encoding)">
+            <summary>
+            读取文件内容
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKT.LeanMES.SDK.StringHelper.GetKeyContent(System.String)">
+            <summary>
+            替换不用内容
+            </summary>
+            <param name="pemFileContent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKT.LeanMES.SDK.YonBIPPackage">
+            <summary>
+            用友商业创新平台接口数据包
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.YonBIPPackage.async">
+            <summary>
+            是否异步
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.YonBIPPackage.schemeCode">
+            <summary>
+            方案代码
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.YonBIPPackage.data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:SKT.LeanMES.SDK.YonBIPPackage.compressEnable">
+            <summary>
+            可压缩
+            </summary>
+        </member>
+    </members>
+</doc>

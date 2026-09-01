@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0A5C8AA-41E6-4B7C-A906-9D500B8C1CD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.LeanMES.Equipment.BLL</RootNamespace>
+    <AssemblyName>SKT.LeanMES.Equipment.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.DAL.Marshal">
+      <HintPath>..\..\..\Lib\SKT.Common.DAL.Marshal.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.Common.Model">
+      <HintPath>..\..\..\Lib\SKT.Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.CommonHelper">
+      <HintPath>..\..\..\Lib\SKT.LeanMES.CommonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="SKT.LeanMES.CommonLibrary.Common">
+      <HintPath>..\..\..\Lib\SKT.LeanMES.CommonLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckOutProject.cs" />
+    <Compile Include="EquipmentCheckOutHistory.cs" />
+    <Compile Include="EquipmentCheckPlan.cs" />
+    <Compile Include="EquipmentCheckOutPlan.cs" />
+    <Compile Include="EquipmentFileManage.cs" />
+    <Compile Include="EquipmentExceptionReporting.cs" />
+    <Compile Include="EquipmentItemRelation.cs" />
+    <Compile Include="EquipmentLineRelation.cs" />
+    <Compile Include="EquipmentMouldRelation.cs" />
+    <Compile Include="EquipmentPosition.cs" />
+    <Compile Include="EquipmentPressureTest.cs" />
+    <Compile Include="EquipmentRepair.cs" />
+    <Compile Include="EquipmentChild.cs" />
+    <Compile Include="EquipmentRepairUser.cs" />
+    <Compile Include="EquipmentInspectionTemplate.cs" />
+    <Compile Include="EquipmentInspectionTemplateItem.cs" />
+    <Compile Include="EquipmentInspectionTemplateMember.cs" />
+    <Compile Include="EquipmentInspectionType.cs" />
+    <Compile Include="EquipmentInspectionItem.cs" />
+    <Compile Include="Equipments.cs" />
+    <Compile Include="EquipmentUseReasons.cs" />
+    <Compile Include="ItemMouldRelation.cs" />
+    <Compile Include="MoldComponent.cs" />
+    <Compile Include="MoldFixture.cs" />
+    <Compile Include="MoldFixtureItem.cs" />
+    <Compile Include="MoludAbnormal.cs" />
+    <Compile Include="MoludApply.cs" />
+    <Compile Include="MoludBom.cs" />
+    <Compile Include="MoludSizeManger.cs" />
+    <Compile Include="MouldOperateRecord.cs" />
+    <Compile Include="Part.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EquipmentType.cs" />
+    <Compile Include="SteelNet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{1a9f4c28-7642-49cf-8123-4058aef50b37}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

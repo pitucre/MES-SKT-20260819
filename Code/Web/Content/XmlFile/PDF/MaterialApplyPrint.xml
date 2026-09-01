@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+	<page size="A4"></page>
+	<margin top="1" bottom="1"></margin>
+	<report source="dtApplyForm">
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="30%" align="left" font-style="bold">#[Company]#</column>
+				<column width="40%" align="center" font-size="18" font-style="bold"></column>
+				<column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[ApplyNo]#" ></column>
+			</row>
+		</table>
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="20%" align="left">领料部门：#[DepName]#</column>
+				<column width="40%" align="center">工单号：#[MOCode]#</column>
+        
+                <column width="40%" align="right" >日期：#[CreateDateTime]#</column>
+      </row>
+      <row>
+               <column width="20%" align="left">工单数量：#[OrderQty]#</column>
+               <column width="40%" align="center">品名：#[ItemName]#</column>
+			   <column width="40%" align="right" >领料单号：#[ApplyNo]#</column>
+			</row>			
+		</table>
+
+<header>
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="30%" align="left" font-style="bold">#[Company]#</column>
+				<column width="40%" align="center" font-size="18" font-style="bold"></column>
+				<column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[ApplyNo]#" ></column>
+			</row>
+		</table>
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="20%" align="left">领料部门：#[DepName]#</column>
+				<column width="40%" align="center">工单号：#[MOCode]#</column>
+        
+         <column width="40%" align="right" >日期：#[CreateDateTime]#</column>
+      		</row>
+     		<row>
+               <column width="20%" align="left">工单数量：#[OrderQty]#</column>
+               <column width="40%" align="center">品名：#[ItemName]#</column>
+			   <column width="40%" align="right" >领料单号：#[ApplyNo]#</column>
+			</row>		
+		</table>
+</header>
+		<data source="dtApplyForm1" spacing-before="0" spacing-after="20" font-size="9">
+			<column header="序号" width="5%" align="center" rownum="1"></column>
+			<column header="物料代码" width="15%" align="center">#[ItemCode]#</column>
+			<column header="物料名称" width="15%">#[ItemName]#</column>
+			<column header="物料规格" width="20%">#[ItemSpec]#</column>
+			<column header="单位" width="5%" align="center">#[Units]#</column>
+			<column header="申请数量" width="5%" align="center">#[ApplyQty]#</column>
+			<column header="备料数量" width="5%" align="center">#[StockQty]#</column>
+			<column header="仓库" width="10%" align="center">#[WhName]#</column>
+			<column header="库位" width="15%" align="center">#[CbarCode]#</column>
+			<column header="备注" width="5%" align="center"></column>
+
+		</data>
+		
+	   <table spacing-before="0"  font-size="9">
+	      <row>
+	        <column width="30%" align="left" font-size="10">制单人：</column>
+	        <column width="30%" align="left" font-size="10">领料人：</column>
+	        <column width="30%" align="left" font-size="10">领料审核：</column>
+	      </row>
+	      <row>
+	        <column width="30%" align="left" font-size="10">仓管员：</column>
+	        <column width="30%" align="left" font-size="10">记账方式：■ MES  □ ERP</column>
+	        <column width="30%" align="left" font-size="10">记账复核：</column>
+	      </row>
+	    </table>
+		
+	</report>
+
+	<footer>
+		<center>
+			<pageNum>d</pageNum>
+		</center>
+	</footer>
+	<footer>
+		<center>
+			<pageNum>d</pageNum>
+		</center>
+	</footer>
+
+</file>

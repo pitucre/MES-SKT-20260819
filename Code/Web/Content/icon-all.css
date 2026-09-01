@@ -1,0 +1,104 @@
+﻿.icon-32-user{ background:url(images/icon/User.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-users{ background:url(images/icon/Users.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-WebBrowser{ background:url(images/icon/WebBrowser.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-TrashEmpty{ background:url(images/icon/TrashEmpty.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-TrashFull{ background:url(images/icon/TrashFull.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-WriteDocument{ background:url(images/icon/WriteDocument.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-TransferDocument{ background:url(images/icon/TransferDocument.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Transfer{ background:url(images/icon/Transfer.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Star{ background:url(images/icon/Star.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-SendDocument{ background:url(images/icon/SendDocument.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-SendMail{ background:url(images/icon/SendMail.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Run{ background:url(images/icon/Run.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-RenameDocument{ background:url(images/icon/RenameDocument.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Remove{ background:url(images/icon/Remove.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-History{ background:url(images/icon/History.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Favorite{ background:url(images/icon/Favorite.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-Fullscreen{ background:url(images/icon/Fullscreen.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-32-GetDocument{ background:url(images/icon/GetDocument.png) no-repeat; width:32px; height:32px; float:left; margin-right:8px;}
+.icon-16-user{ background:url(images/icon/user_suit.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-useredit{ background:url(images/icon/user_edit.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-useradd{ background:url(images/icon/user_add.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-userdelete{ background:url(images/icon/user_delete.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-usersmale{ background:url(images/icon/user_gray.png) no-repeat; width:16px; height:16px; float:left;margin-right:3px; margin-top:2px;}
+.icon-16-userfemale{ background:url(images/icon/user_female.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-chartbar{ background:url(images/icon/chart_bar.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-comment{ background:url(images/icon/comment.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-folder{ background:url(images/icon/folder.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-help{ background:url(images/icon/help.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-history{ background:url(images/icon/clock_red.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-favorite{ background:url(images/icon/star_favorite.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-delete{ background:url(images/icon/delete.png?v=2) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-add{ background:url(images/icon/add.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-edit{ background:url(images/icon/edit.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-save{ background:url(images/icon/save.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-roles{ background:url(images/icon/group.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-exporttoexcel{ background:url(images/icon/exporttoexcel.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-loading{ background:url(images/gif/loading.gif) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-cert{ background:url(images/icon/cert.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-roleassign{ background:url(images/icon/roleassign.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-popedom{ background:url(images/icon/popedom.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-audit{ background:url(images/icon/popedom.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-line{ background:url(images/icon/line.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-openrouter{ background:url(images/icon/openrouter.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-newrouter{ background:url(images/icon/newrouter.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-addfield{ background:url(images/icon/addfield.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-editfield{ background:url(images/icon/editfield.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-savefield{ background:url(images/icon/savefield.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-accept{ background:url(images/icon/accept.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-resize{ background:url(images/icon/resize.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-config{ background:url(images/icon/config.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-bindOpeType{ background:url(images/icon/bindOpeType.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-resetpwd{ background:url(images/icon/resetpwd.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-unlock{ background:url(images/icon/unlock.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-unpack{ background:url(images/icon/unpack.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-return{ background:url(images/icon/return.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-logout{ background:url(images/icon/logout.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-list{ background:url(images/icon/list.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-receive{ background:url(images/icon/receive.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-receivematerial{ background:url(images/icon/receivematerial.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-storeissue{ background:url(images/icon/storeissue.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-splitmaterial{ background:url(images/icon/splitmaterial.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-modifygrn{ background:url(images/icon/modifygrn.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-returnmaterial{ background:url(images/icon/returnmaterial.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-printer{ background:url(images/icon/printer.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-zone_resize{ background:url(images/icon/zone_resize.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-move{ background:url(images/icon/move.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-labels{ background:url(images/icon/labels.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-package{ background:url(theme/Metro/images/icon/package.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-Import{ background:url(images/icon/Import.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-import{ background:url(images/icon/Import.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-CloseBox{ background:url(images/icon/closeBox.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-BoxSearch{ background:url(images/icon/boxsearch.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-openbox{ background:url(images/icon/box_open.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-removeitem{ background:url(images/icon/brick_delete.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-eqpttype{ background:url(images/icon/eqpttype.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-recycle{ background:url(images/icon/recycle.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-returntosupplier{ background:url(images/icon/returntosupplier.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-close{ background:url(images/icon/close.gif) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-copy{ background:url(images/icon/copy.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-view{ background:url(images/icon/view.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-search{ background:url(images/icon/search.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-into{ background:url(images/icon/into.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-outgo{ background:url(images/icon/outgo.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-stype{ background:url(images/icon/stype.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-slist{ background:url(images/icon/slist.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-ptype{ background:url(images/icon/ptype.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-plist{ background:url(images/icon/plist.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-sparam{ background:url(images/icon/sparam.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-iqparam{ background:url(images/icon/iqparam.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-resource{ background:url(images/icon/resource.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-machine{ background:url(images/icon/machine.png) no-repeat; width:16px;  height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-nccode{ background:url(images/icon/nccode.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-ncgroup{ background:url(images/icon/ncgroup.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-warehouse{ background:url(images/icon/warehouse.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-wahtype{ background:url(images/icon/wahtype.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-shelf{ background:url(images/icon/shelf.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-barcode{ background:url(images/icon/barcode.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-format{ background:url(images/icon/format.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-arrow_up{ background:url(images/icon/arrow_up.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-arrow_down{ background:url(images/icon/arrow_down.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-Preview{ background:url(images/icon/Preview.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-Fullscreen{ background:url(images/icon/Fullscreen.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+.icon-16-info{ background:url(images/icon/info.png) no-repeat; width:16px; height:16px; float:left; margin-right:3px; margin-top:2px;}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>帮助文档</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+    <script type="text/javascript">
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+        window.onload = function () {
+            var helpapge = getQueryString("helppage");
+            if (helpapge != null) {
+                document.getElementById("left").src = "leftmenu.htm#" + helpapge;
+                if (window.frames["left"].document.getElementById(helpapge) != null) {
+                    window.frames["left"].document.getElementById(helpapge).click();
+                }
+                else {
+                    document.getElementById("main").src = "FileNotFound.htm?page=" + helpapge;
+                }
+            }
+        };
+    </script>
+</head>
+<frameset rows="50,*" frameborder="0" framespacing="0" framepadding="3">
+    <frame id="head" name="head" src="top.htm" noresize="noresize"></frame>
+    <frameset cols="200,3,*"  frameborder="0" framespacing="0" framepadding="3">
+        <frame id="left" name="left" src="leftmenu.htm?v=10"></frame>
+        <frame id="slider" name="slider" src="slider.htm" scrolling="no" noresize="noresize"></frame>
+        <frameset rows="35,*,25" frameborder="0" framespacing="0" framepadding="3">
+            <frame id="toolbar" name="toolbar" src="toolbar.htm" noresize="noresize"></frame>
+            <frame id="main" name="main" src="content.htm"></frame>
+            <frame id="foot" name="foot" src="foot.htm" noresize="noresize"></frame>
+        </frameset>
+    </frameset>
+</frameset>
+</html>

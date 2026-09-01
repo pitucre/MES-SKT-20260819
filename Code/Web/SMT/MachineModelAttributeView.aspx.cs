@@ -1,0 +1,48 @@
+﻿using System;
+using SKT.LeanMES.SMT.BLL;
+using SKT.LeanMES.SMT.Model;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
+using SKT.LeanMES.Web.AjaxServices;
+
+namespace SKT.LeanMES.Web.SMT
+{
+    public partial class MachineModelAttributeView : BasePage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!this.IsPostBack)
+            {
+                Int32 ModelAttrID = Convert.ToInt32(Request.QueryString["ID"]);
+
+                if (ModelAttrID != -1)
+                {
+                    SKT.LeanMES.SMT.BLL.MachineModelAttribute bllMachineModelAttribute = new SKT.LeanMES.SMT.BLL.MachineModelAttribute();
+                    SKT.LeanMES.SMT.Model.MachineModelAttributeInfo model = null;
+                    model = bllMachineModelAttribute.GetInfo(ModelAttrID);
+                    if (model != null)
+                    {
+                        this.PageData = model;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 设置页面上的数据。
+        /// </summary>
+        private MachineModelAttributeInfo PageData
+        {
+            set
+            {
+                this.txtMachineModelName.Text = value.MachineModelName;
+                this.txtTablePosition.Text = Convert.ToString(value.TablePosition);
+                this.ddlMachineTableType.Text = Convert.ToString(value.MachineTableType);
+                this.txtStartSlotPosition.Text = Convert.ToString(value.StartSlotPosition);
+                this.txtEndSlotPosition.Text = Convert.ToString(value.EndSlotPosition);
+                this.ddlStatus.Text = value.Status;
+            }
+        }
+
+    }
+}

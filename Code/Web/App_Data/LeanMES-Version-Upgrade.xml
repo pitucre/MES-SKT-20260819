@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Upgrades>
+  <Upgrade Version ="8.5.3.01">
+    <VersionID>1</VersionID>
+    <UpgradeDatetime>2017-08-05 13:00</UpgradeDatetime>
+    <Description>老化功能完成,更新版本</Description>
+    <Remark>
+      1、新增 老化功能
+      2、修复 拼板功能
+      3、完善 成品入库及查询功能
+      4、完善 仓库盘点
+    </Remark>
+  </Upgrade>
+  <Upgrade Version ="8.5.3.02">
+    <VersionID>2</VersionID>
+    <UpgradeDatetime>2017-08-14 19:00</UpgradeDatetime>
+    <Description>仓库功能和SMT上料功能优化</Description>
+    <Remark>
+      1、新功能IQC细项录入
+      2、新功能SMT包装
+      3、仓库备料增加库位显示（目前库位显示还有问题）
+      4、物料调拨在“新增调拨申请单”页面删除“库存数量”列
+      5、修复上料投入工位带出工单选择窗口中，工单对应的产线不是工单排程时绑定的产线（不显示线别）
+      6、SMT上料查询点查看系统报错
+      7、新增物料历史操作明细记录功能
+      8、SMT上料扫描飞达时，系统自动把小写转换为大写
+    </Remark>
+  </Upgrade>
+  <Upgrade Version ="8.5.5.01">
+    <VersionID>3</VersionID>
+    <UpgradeDatetime>2020-09-29 14:09</UpgradeDatetime>
+    <Description>新排产功能开发</Description>
+    <Remark>
+      1、资源基本信息维护  
+      2、产品信息新增面别属性 
+      3、班制新增作息时间段  
+      4、新增资源日历  
+      5、新增换线时间功能 
+      6、新增非工作时间功能
+    </Remark>
+  </Upgrade>
+  <Upgrade Version ="8.5.5.02">
+    <VersionID>3</VersionID>
+    <UpgradeDatetime>2020-10-14 15:09</UpgradeDatetime>
+    <Description>新排产功能第一版本发布</Description>
+    <Remark>
+      1、新增预排产页面
+      2、根据预排页面信息生成每日计划生产工单
+    </Remark>
+  </Upgrade>
+  <Upgrade Version ="8.5.5.03">
+    <VersionID>3</VersionID>
+    <UpgradeDatetime>2020-10-30</UpgradeDatetime>
+    <Description>蓝牙打印发布</Description>
+    <Remark>
+      1、PDA通过蓝牙连接打印机打印标签
+      2、二次开发平台升级
+    </Remark>
+  </Upgrade>
+  <Upgrade Version ="8.5.5.04">
+    <VersionID>3</VersionID>
+    <UpgradeDatetime>2021-03-18</UpgradeDatetime>
+    <Description>自动排产,文件解析,IQC优化</Description>
+    <Remark>
+      1、自动排产排产到小时
+      2、文件解析配置及工具上传
+      3、IQC功能优化
+    </Remark>
+  </Upgrade>
+</Upgrades>

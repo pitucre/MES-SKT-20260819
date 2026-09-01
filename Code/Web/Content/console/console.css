@@ -1,0 +1,62 @@
+﻿/*=========================================
+* Author:   Alen Liu
+* Mail: shzalen@163.com
+* Date: 2016/09/28
+* Version:  1.0.0
+* Description:  控制面板界面样式文件
+===========================================*/
+html, html *
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    list-style-type: none; 
+}
+
+body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    padding: 0px;
+    min-width: 1000px;
+    overflow: auto;
+    margin: auto auto;
+    /*background:#ebebeb;*/
+}
+
+.menu,.menu .dlmenu{padding:0px; margin:0px;}
+.menu{ float:left;}
+.menu>li{height:50px; width:50px; line-height:50px; text-align:center;}
+.menu>li:hover,.menu .opened{height:50px; width:50; line-height:50px; text-align:center; background:#4396e9;color:#ffffff; cursor:pointer;}
+.menu .dlmenu{ width:140px; border:1px solid #d3d3d3; display:none; position:absolute; right:0px; top:49px; background:#fff; color:#000;}
+.menu .dlmenu li{ height:30px; line-height:30px; text-align:left; margin:0px 0px; padding:0px 10px;color:#000; border-bottom:1px solid #ddd;}
+.menu .dlmenu li:hover{ height:30px; line-height:30px; text-align:left; margin:0px 0px; padding:0px 10px;background:#4396e9;color:#fff;}
+    .menu .dlmenu li:last-child {
+    border:0;
+    }
+     
+
+.modules{ padding:0px; margin:auto auto; width:860px; clear:both; margin-top:30px;}
+.modules li{padding:0px 0 0 0; margin:auto auto; width:283px; height:189px; background:url(img/bound.png) center no-repeat; list-style:none; float:left; line-height:45px; text-align:center;  font-size:18px; font-weight:normal; color:#333333;}
+.modules li.m:hover{padding:0px 0 0 0; margin:auto auto;width:283px; height:189px; background:url(img/bound_hover.png) no-repeat; list-style:none; float:left; line-height:79px; text-align:center;font-size:18px; font-weight:normal; color:#ffffff; cursor:pointer;}
+.modules li .btnIcon{height:62px; width:62px; margin-top:5px; vertical-align:middle; white-space:nowrap; overflow:hidden;}
+.modules li .btnIcon.dataCollection{ width:62px; height:62px; background:url(img/datacollection.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.dataCollection{ width:72px; height:72px; background:url(img/datacollection_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.systemInfo{ width:62px; height:62px; background:url(img/sysconfig.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.systemInfo{ width:72px; height:72px; background:url(img/sysconfig_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.basalInfo{ width:62px; height:62px; background:url(img/basalinfo.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.basalInfo{ width:72px; height:72px; background:url(img/basalinfo_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.production{ width:62px; height:62px; background:url(img/prod.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.production{ width:72px; height:72px; background:url(img/prod_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.wms{ width:62px; height:62px; background:url(img/wms.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.wms{ width:72px; height:72px; background:url(img/wms_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.quality{ width:62px; height:62px; background:url(img/qa.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.quality{ width:72px; height:72px; background:url(img/qa_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.equipment{ width:62px; height:62px; background:url(img/eqt.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.equipment{ width:72px; height:72px; background:url(img/eqt_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.biCenter{ width:62px; height:62px; background:url(img/report.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.biCenter{ width:72px; height:72px; background:url(img/report_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.kanban{ width:62px; height:62px; background:url(img/kanban.png) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li.m:hover .btnIcon.kanban{ width:72px; height:72px; background:url(img/kanban_hover.png) no-repeat; margin:auto auto; margin-bottom:-15px; margin-top:25px;}
+.modules li .btnIcon.noaccess{width:62px; height:62px; background:url(img/no-access.jpg) no-repeat; margin:auto auto; text-align:center; margin-top:30px;}
+.modules li .btnIcon.noaccess + p{color:#ddd;}

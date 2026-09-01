@@ -1,0 +1,142 @@
+﻿html, body
+{
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    font-family: Verdana Arial Microsoft YaHei UI;
+}
+
+
+
+.gray
+{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.text
+{
+    font-size: 12px;
+    color: gray;
+    font-weight: normal;
+    text-decoration: none;
+}
+.redtext
+{
+    color: #e84c3d;
+}
+.ui-panel
+{
+}
+
+.ui-panel-inner
+{
+    padding: 16px;
+}
+
+.listview
+{
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.listview li
+{
+    list-style: none;
+    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.listview li.lastli
+{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+
+.ui-collapsible-inset, .ui-collapsible-set
+{
+    margin: 0;
+}
+.ui-content
+{
+    padding: 0;
+}
+.ui-corner-all
+{
+    border-radius: 0;
+}
+html .ui-body-a, html .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a
+{
+    border-color: #2FC1FF;
+}
+.ui-collapsible-heading
+{
+    border-bottom: 1px solid #d3d3d3;
+}
+.ui-header .ui-title, .ui-footer .ui-title
+{
+    font-size: 1em;
+    min-height: 1em;
+    text-align: center;
+    display: block;
+    margin: 0 30%;
+    /*padding: .1em 0;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0 !important;
+}
+.appiconlist
+{
+    margin: 0 0 1em 0;
+    padding: 0 0.6em 1em 0.6em;
+}
+.appiconlist li
+{
+    list-style: none;
+    float: left;
+    padding: 0.5em;
+    padding-top: 26px;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 3em;
+    height: 3em;
+}
+.appiconlist li a
+{
+    text-decoration: none;
+}
+.appiconlist li a img
+{
+    width: 2em;
+    height: 2em;
+    padding: 0.3em;
+    margin: auto auto;
+    display: table;
+    text-align: center;
+}
+.applisttitle
+{
+    clear:left;
+    font-size: 0.8em;
+    background: #ddd;
+    height: 2.5em;
+    line-height: 2.5em;
+    color: gray;
+    padding: 0;
+    padding-left: 1em;
+    font-weight: bold;
+    margin: 0em 0 0.5em 0;
+    font-family: Verdana Arial Microsoft YaHei UI;
+    border-bottom:1px solid #bbb;
+}

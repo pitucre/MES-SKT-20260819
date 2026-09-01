@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:BoardTestXMLExport numberOfIndictedComponents="1" testerTestStartTime="2017-12-14T09:33:54.000+08:00" testTime="2017-12-14T09:33:54.000+08:00" serialnumber="RC16F1910110005" repairStationId="MY13500087FDLV" testStatus="Reviewed Passed" testerTestEndTime="2017-12-14T09:34:00.000+08:00" xmlns:ns1="http://tempuri.org/BoardTestXMLExport.xsd" numberOfIndictedPins="0" numberOfComponentsTested="212" numberOfJointsTested="0" numberOfDefects="1" repairStatus="Reviewed Passed">
+          <ns1:BoardXML imageId="1" serialNumber="RC16F1910110005" assemblyRevision="3A9-22-1604MDZ01B-TOP" boardType="3A9-22-1604MDZ01B-TOP" boardRevision="1513210768000" FailCode="0" Point="1"/>
+		  <ns1:BoardXML imageId="1" serialNumber="RC16F1910110005_02" assemblyRevision="3A9-22-1604MDZ01B-TOP" boardType="3A9-22-1604MDZ01B-TOP" boardRevision="1513210768000" FailCode="Test-001" Point="2"/>
+		  <ns1:BoardXML imageId="1" serialNumber="RC16F1910110005_03" assemblyRevision="3A9-22-1604MDZ01B-TOP" boardType="3A9-22-1604MDZ01B-TOP" boardRevision="1513210768000" FailCode="0" Point="3"/>
+		  <ns1:BoardXML imageId="1" serialNumber="RC16F1910110005_04" assemblyRevision="3A9-22-1604MDZ01B-TOP" boardType="3A9-22-1604MDZ01B-TOP" boardRevision="1513210768000" FailCode="0" Point="4"/>
+		  <ns1:BoardXML imageId="1" serialNumber="RC16F1910110005_05" assemblyRevision="3A9-22-1604MDZ01B-TOP" boardType="3A9-22-1604MDZ01B-TOP" boardRevision="1513210768000" FailCode="Test-002" Point="5"/>
+          <ns1:StationXML testerName="MY13500087FDL" stage="V510"/>
+          <ns1:RepairEventXML numberOfVariationOkDefects="0" numberOfFalseCalledPins="0" numberOfRepairedComponents="0" numberOfVariationOkPins="0" numberOfRepairedPins="0" numberOfRepairLaterPins="0" numberOfFalseCalledDefects="1" numberOfActiveDefects="0" numberOfVariationOkComponents="0" repairEndTime="2017-12-14T10:08:14.000+08:00" repairStartTime="2017-12-14T10:08:14.000+08:00" numberOfRepairLaterDefects="0" repairOperator="Developer" numberOfRepairLaterComponents="0" numberOfActiveComponents="0" numberOfActivePins="0" numberOfRepairedDefects="0" numberOfFalseCalledComponents="1"/>
+          <ns1:TestXML name="1:cn111">
+                    <ns1:IndictmentXML algorithm="uj20p0m522000" indictmentType="Bridging, Missing Lead">
+                              <ns1:RepairActionXML repairOperator="Developer" repairTime="2017-12-14T10:08:14.000+08:00" repairActionType="-" indictmentType="Bridging, Missing Lead" comment="-" repairStatus="False Call"/>
+                              <ns1:ComponentXML packageId="J20P0M522000" partId="J20P0M522000" designator="1:cn111"/>
+                    </ns1:IndictmentXML>
+          </ns1:TestXML>
+</ns1:BoardTestXMLExport>

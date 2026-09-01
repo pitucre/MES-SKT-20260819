@@ -1,0 +1,176 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>文本框</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link href="../../../../../../Content/Main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="skt.uidesigner.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+</head>
+<body>
+    <div class="infoTips">
+        带<em>*</em>为必填项目</div>
+    <table class="EditeContentTable" width="100%">
+        <tr>
+            <td class="Label2">
+                控件名称<em>*</em>
+            </td>
+            <td class="Field2" colspan="3">
+                <input type="text" id="uictrl_name" placeholder="必填项" class="TextBox" />
+            </td>
+        </tr>
+        <tr>
+            <td class="Label2">
+                长*宽
+            </td>
+            <td class="Field2">
+                <input id="uictrl_width" type="text" value="150" class="TextBox" style="width: 35px;"
+                    placeholder="auto" />px *
+                <input id="uictrl_height" type="text" value="" class="TextBox" style="width: 35px;"
+                    placeholder="auto" />px
+            </td>
+            <td class="Label2">
+                字体大小
+            </td>
+            <td class="Field2">
+                <input id="uictrl_fontsize" type="text" value="" class="TextBox" style="width: 35px;"
+                    placeholder="auto" />px
+            </td>
+        </tr>
+        <tr>
+            <td class="Label2">
+                增强
+            </td>
+            <td class="Field2" colspan="3">
+                <input id="uictrl_rich" type="checkbox" />
+                富文本形式
+            </td>
+        </tr>
+        <tr>
+            <td class="Label2">
+                默认值
+            </td>
+            <td class="Field2" colspan="3">
+                <textarea class="TextArea" id="uictrl_value" cols="15" rows="10"></textarea>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var oNode = null, thePlugins = 'textarea'; ;
+        window.onload = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                oNode = UE.plugins[thePlugins].editdom;
+                var gValue = oNode.getAttribute('value').replace(/&quot;/g, "\""), gTitle = oNode.getAttribute('title').replace(/&quot;/g, "\""), gFontSize = oNode.getAttribute('uictrlfontsize'), gWidth = oNode.getAttribute('uictrlwidth'), gHeight = oNode.getAttribute('uictrlheight'), gRich = oNode.getAttribute('uictrlrich');
+
+                gValue = gValue == null ? '' : gValue;
+                gTitle = gTitle == null ? '' : gTitle;
+                $G('uictrl_value').value = gValue;
+                $G('uictrl_name').value = gTitle;
+                if (gRich == '1') {
+                    $G('uictrl_rich').checked = true;
+                }
+                $G('uictrl_fontsize').value = gFontSize;
+                $G('uictrl_width').value = ($getstyle(oNode)[0] == '') ? gWidth : $getstyle(oNode)[0];
+                $G('uictrl_height').value = ($getstyle(oNode)[1] == '') ? gHeight : $getstyle(oNode)[1];
+            }
+        }
+        dialog.oncancel = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                delete UE.plugins[thePlugins].editdom;
+            }
+        };
+        dialog.onok = function () {
+            if ($G('uictrl_name').value == '') {
+                alert('请输入控件名称');
+                $focus($G('uictrl_name'));
+                return false;
+            }
+            var gValue = $G('uictrl_value').value.replace(/\"/g, "&quot;"), gTitle = $G('uictrl_name').value.replace(/\"/g, "&quot;"), gFontSize = $G('uictrl_fontsize').value, gWidth = $G('uictrl_width').value, gHeight = $G('uictrl_height').value;
+
+            if (!oNode) {
+                try {
+                    var ctrlId = $createid(thePlugins);
+                    var html = '<textarea ';
+                    html += ' title = "' + gTitle + '"';
+                    html += ' id = "' + ctrlId + '"';
+                    html += ' name = "' + ctrlId + '"';
+                    html += ' class = "TextArea"';
+                    html += ' uictrltype = "' + thePlugins + '"';
+                    html += ' value = "' + gValue + '"';
+                    if ($G('uictrl_rich').checked) {
+                        html += ' uictrlrich = "1"';
+                    } else {
+                        html += ' uictrlrich = "0"';
+                    }
+                    if (gFontSize != '') {
+                        html += ' uictrlfontsize = "' + gFontSize + '"';
+                    } else {
+                        html += ' uictrlfontsize = ""';
+                    }
+                    if (gWidth != '') {
+                        html += ' uictrlwidth = "' + gWidth + '"';
+                    } else {
+                        html += ' uictrlwidth = ""';
+                    }
+                    if (gHeight != '') {
+                        html += ' uictrlheight = "' + gHeight + '"';
+                    } else {
+                        html += ' uictrlheight = ""';
+                    }
+
+                    html += ' style = "';
+                    if (gFontSize != '') {
+                        html += 'font-size:' + gFontSize + 'px;';
+                    }
+                    if (gWidth != '') {
+                        html += 'width:' + gWidth + 'px;';
+                    }
+                    if (gHeight != '') {
+                        html += 'height:' + gHeight + 'px;';
+                    }
+                    html += '">';
+                    html += gValue + '</textarea>';
+                    editor.execCommand('insertHtml', html);
+                } catch (e) {
+                    try {
+                        editor.execCommand('error');
+                    } catch (e) {
+                        alert('控件异常！');
+                    }
+                    return false;
+                }
+            } else {
+                oNode.setAttribute('title', gTitle);
+                oNode.setAttribute('value', gValue);
+                oNode.innerHTML = gValue;
+                if ($G('uictrl_rich').checked) {
+                    oNode.setAttribute('uictrlrich', 1);
+                } else {
+                    oNode.setAttribute('uictrlrich', 0);
+                }
+
+                if (gFontSize != '') {
+                    oNode.style.fontSize = gFontSize + 'px';
+                    oNode.setAttribute('uictrlfontsize', gFontSize);
+                } else {
+                    oNode.setAttribute('uictrlfontsize', '');
+                }
+                if (gWidth != '') {
+                    oNode.style.width = gWidth + 'px';
+                    oNode.setAttribute('uictrlwidth', gWidth);
+                } else {
+                    oNode.setAttribute('uictrlwidth', '');
+                }
+                if (gHeight != '') {
+                    oNode.style.height = gHeight + 'px';
+                    oNode.setAttribute('uictrlheight', gHeight);
+                } else {
+                    oNode.setAttribute('uictrlheight', '');
+                }
+                delete UE.plugins[thePlugins].editdom;
+            }
+        };
+    </script>
+</body>
+</html>

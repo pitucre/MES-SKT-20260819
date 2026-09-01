@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>且</value>
+  </data>
+  <data name="ApplicationVersion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>LEAN MES - 深科特精益生产制造执行系统</value>
+  </data>
+  <data name="Between" xml:space="preserve">
+    <value>在{0}之内</value>
+  </data>
+  <data name="Cannot" xml:space="preserve">
+    <value>不能</value>
+  </data>
+  <data name="ChooseDate" xml:space="preserve">
+    <value>选择日期</value>
+  </data>
+  <data name="ChooseMultiple" xml:space="preserve">
+    <value>多选</value>
+  </data>
+  <data name="ChooseSingle" xml:space="preserve">
+    <value>单选</value>
+  </data>
+  <data name="ChooseWindow" xml:space="preserve">
+    <value>选择窗口</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>：</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>，</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>深科特信息技术有限公司</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>深科特信息技术有限公司版权所有</value>
+  </data>
+  <data name="CustomerName" xml:space="preserve">
+    <value>产品名称：LeanMES 8.5专业版</value>
+  </data>
+  <data name="CustomerVersion" xml:space="preserve">
+    <value>版本 v8.0</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="EmptyBox" xml:space="preserve">
+    <value>空箱</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>英文</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>女</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="InActive" xml:space="preserve">
+    <value>锁定</value>
+  </data>
+  <data name="Length" xml:space="preserve">
+    <value>长度</value>
+  </data>
+  <data name="Lessthan" xml:space="preserve">
+    <value>小于</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>锁定</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>男</value>
+  </data>
+  <data name="MatchWholeWord" xml:space="preserve">
+    <value>全字匹配</value>
+  </data>
+  <data name="Modules" xml:space="preserve">
+    <value>模块</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>每月</value>
+  </data>
+  <data name="Morethan" xml:space="preserve">
+    <value>大于</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="MsgCaption" xml:space="preserve">
+    <value>系统消息</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="MsgInformation" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="MsgInnerError" xml:space="preserve">
+    <value>内部错误</value>
+  </data>
+  <data name="MsgWarning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Must" xml:space="preserve">
+    <value>必须</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>不是</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>。</value>
+  </data>
+  <data name="Plus" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="Popedoms" xml:space="preserve">
+    <value>权限</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>查询：</value>
+  </data>
+  <data name="SimpleChinese" xml:space="preserve">
+    <value>简体中文</value>
+  </data>
+  <data name="SubSystems" xml:space="preserve">
+    <value>子系统</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>星期天</value>
+  </data>
+  <data name="SystemMessage" xml:space="preserve">
+    <value>系统消息</value>
+  </data>
+  <data name="Termination" xml:space="preserve">
+    <value>离职</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="Times" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="VersionNameDemo" xml:space="preserve">
+    <value>演示版</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>不可用的</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>可用的</value>
+  </data>
+  <data name="SetDataSource" xml:space="preserve">
+    <value>设置数据源</value>
+  </data>
+  <data name="MaterialBurnJoinProd" xml:space="preserve">
+    <value>绑定产品关系</value>
+  </data>
+  <data name="GRNAdd" xml:space="preserve">
+    <value>离线条码注入</value>
+  </data>
+  <data name="GRNInto" xml:space="preserve">
+    <value>离线条码解析</value>
+  </data>
+  <data name="Page_As" xml:space="preserve">
+    <value>第</value>
+  </data>
+  <data name="Page_CurrentDisplay" xml:space="preserve">
+    <value>当前显示</value>
+  </data>
+  <data name="Page_Page" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="Page_Records" xml:space="preserve">
+    <value>条记录</value>
+  </data>
+  <data name="Page_Total" xml:space="preserve">
+    <value>共</value>
+  </data>
+  <data name="Page_Per" xml:space="preserve">
+    <value>每页</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="Millisecond" xml:space="preserve">
+    <value>毫秒</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="Page_JumpToNo" xml:space="preserve">
+    <value>跳转到第</value>
+  </data>
+  <data name="Enlarged" xml:space="preserve">
+    <value>放大</value>
+  </data>
+</root>

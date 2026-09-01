@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtDeliveryForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" image-url="Content\images\logo\logo_pdf.png" image-size="70%" font-style="bold"></column>
+        <column width="40%" align="center" font-size="18" font-style="bold">采购订单</column>
+        <column width="30%" align="center" font-size="18" font-style="bold"></column>
+      </row>
+    </table>
+    <table  font-size="8">
+      <row>
+        <column width="20%" align="right"  font-size="8">采购单号/NO: </column>
+        <column width="30%" align="left"  font-size="8">#[POCode]# </column>
+        <column width="20%" align="right" font-size="8" >下单日期/Date:</column>
+        <column width="30%" align="left"  font-size="8">#[OrderDate]# </column>
+      </row>
+      <row>
+        <column width="20%" align="right"  font-size="8">卖方/Supplier: </column>
+        <column width="30%" align="left"  font-size="8">#[VendorName]# </column>
+        <column width="20%" align="right" font-size="8" >买方/Buy:</column>
+        <column width="30%" align="left"  font-size="8">#[Company]# </column>
+      </row>
+      <row>
+        <column width="20%" align="right"  font-size="8">卖方联系人/Contact: </column>
+        <column width="30%" align="left"  font-size="8">#[VenUserName]# </column>
+        <column width="20%" align="right"  font-size="8">卖方电话/Tel: </column>
+        <column width="30%" align="left"  font-size="8">#[VenPhone]# </column>
+
+      </row>
+      <!--<row>
+         <column width="20%" align="right" font-size="8" >联系人/Contact:</column>
+        <column width="30%" align="left"  font-size="8">唐添娇</column>
+        <column width="20%" align="right" font-size="8" >买方电话/Tel:</column>
+        <column width="30%" align="left"  font-size="8"> 0755-23222566 </column>
+      </row>-->
+
+    </table>
+    <!--<table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="20%" align="right"  font-size="6" colspan="4">11</column>
+      </row>
+    </table>-->
+
+    <data source="dtDeliveryForm1"  font-size="8">
+      <column header="序号" width="5%" align="center" rownum="1" font-size="8"></column>
+      <column header="物料编码" width="15%" font-size="8">#[ItemCode]#</column>
+      <column header="物料名称" width="15%" font-size="8">#[ItemName]#</column>
+      <column header="物料规格" width="15%" font-size="8">#[ItemSpec]#</column>
+      <column header="品牌" width="8%" font-size="8">#[BrandName]#</column>
+      <column header="单位" width="5%" align="center" font-size="8">#[Units]#</column>
+      <column header="数量" width="7%" align="center" font-size="8">#[PURQty]#</column>
+      <column header="单价" width="9%" align="center" font-size="8">#[UnitPrice]#</column>
+      <column header="总价" width="9%" align="center" font-size="8">#[TotalPrice]#</column>
+      <column header="交期" width="12%" align="center" font-size="8">#[DeliveryDate]#</column>
+    </data>
+    <table spacing-before="0"  font-size="8">
+      <row>
+        <column width="20%" align="center"  font-size="8">税率 </column>
+        <column width="30%" align="left"  font-size="8">含税#[TaxRate]#% </column>
+        <column width="20%" align="right" font-size="8" >含税合计</column>
+        <column width="30%" align="center"  font-size="8">#[HeJiPrice]#</column>
+      </row>
+    </table>
+    <table font-size="8" spacing-before="0">
+      <row>
+        <column width="20%" align="center" >付款方式</column>
+        <column width="80%" align="left" >#[PaymentTerms]#</column>
+      </row>
+      <row>
+        <column width="20%" align="center" >交付方式</column>
+        <column width="80%" align="left" >#[PaymentMethod]#</column>
+      </row>
+      <row>
+        <column width="20%" align="center" >交货地址</column>
+        <column width="80%" align="left" >#[DeliveryAddress]#</column>
+      </row>
+      <row>
+        <column width="20%" align="center" >备注</column>
+        <column width="80%" align="left" >#[Remark]#</column>
+      </row>
+    </table>
+    <!--<table spacing-before="0" border-width="0" font-size="8">
+      <row>
+        <column width="100%" align="left" font-style="bold">合同说明：</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >1、订单为人民币，如结算其它币种时，以买方所定汇率为准。</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >2、卖方保证所提供货品为订单所指定的品牌型号，全部为原装正品。</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >3、卖方所提供的产品应严格按买方提供的图纸要求加工。在交货时，买方对货物的验收仅是对货物的数量与对应图号等进行的检验。但不能作为有关质量、规格、性能、数量等的最终检验。如在交货后或买方客户在使用过程中发现质量与验收标准不一致的，卖方仍应承担退换并赔偿因此造成的损失的责任，同时承担违约责任。</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >4、卖方如不能按时按订单交货，应以本合同总价款的百分之一按日向买方赔偿损失，如卖方逾期交货超过3日的，除应向买方支付违约金外，买方有权解除合同，并要求卖方赔偿因逾期交货而造成买方的损失包括但不限于（货款、人工、买方客户索赔）等全部由卖方承担。如由于卖方原因导致发错货物或产生其他异常，卖方要承担由此产生的额外的所有费用（货物、人工、买方索赔等不限于以上各项费用）。</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >5、本采购订单经双方签章时生效；传真件与原件具同等法律效力，卖方应于收到本订单之日起3日内签章确认，并回传至本公司；卖方未确认也未提出任何书面异议的，本订单自3日期满自动生效。</column>
+      </row>
+      <row>
+        <column width="100%" align="left" >6、买卖双方一致同意，凡因本合同发生的争议，由买方所在地人民法院管辖。</column>
+      </row>
+    </table>-->
+    <table spacing-before="0" border-width="0" font-size="8">
+      <row>
+        <column width="30%" align="center" >买方代表签字盖章：</column>
+        <column width="20%" align="center"></column>
+        <column width="30%" align="center">卖方代表签字盖章：</column>
+        <column width="20%" align="center"></column>
+      </row>
+      <row>
+        <column width="30%" align="center" >日期/Date：</column>
+        <column width="20%" align="center"></column>
+        <column width="30%" align="center">日期/Date：</column>
+        <column width="20%" align="center"></column>
+      </row>
+    </table>
+  </report>
+</file>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+	<page size="A5"  orientation="Landscape"></page>
+	<margin top="1" bottom="1" left="1" right="1"></margin>
+	<report source="table">
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="30%" align="left" font-style="bold">#[DefaultFactoryName]#</column>
+				<column width="40%" align="center" font-size="18" font-style="bold">IQC 退  货  单</column>
+				<column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[ReturnFormNo]#" ></column>
+			</row>
+		</table>
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="26%" height="0"></column>
+				<column width="37%" height="0"></column>
+				<column width="37%" height="0"></column>
+			</row>
+			<row>
+				<column width="40%" align="left" font-style="bold">供应商名称：#[VendorName]#</column>
+				<column width="30%" align="left" font-style="bold">源送货单：#[DeliverNo]#</column>
+				<column width="30%" align="left" font-style="bold">退货单号：#[ReturnFormNo]#</column>
+			</row>
+			<row>
+				<column width="40%" align="left" font-style="bold" >供应商代码：#[VendorCode]#</column>
+				<column width="30%" align="left" font-style="bold">收货日期：#[DelDatatime]#</column>
+				<column width="30%" align="left" font-style="bold">退货日期：#[Createdate]#</column>
+			</row>
+		</table>
+		<data source="table" spacing-before="0" font-size="9">
+			<column height="25" header="序号" width="4%" align="center" rownum="1"></column>
+			<column height="25" header="采购单号" width="8%" align="center">#[POCode]#</column>
+			<column height="25" header="物料编码" width="9%" align="center">#[ItemCode]#</column>
+			<column height="25" header="物料名称" width="18%">#[ItemName]#</column>
+			<column height="25" header="单位" width="4%" align="center">#[Units]#</column>
+			<column height="25" header="应退货数量" width="8%" align="center">#[NgQty]#</column>
+			<column height="25" header="实退货数量" width="8%" align="center"></column>
+			<column height="25" header="退货单说明" width="11%">#[Remark]#</column>
+		</data>
+		<table spacing-before="0"  font-size="9">
+			<row>
+				<column width="100%" align="left" colspan="4" font-size="9" font-style="bold">
+					不良描述：#[Reason]#
+
+
+
+
+
+				</column>
+			</row>
+			<row>
+				<column width="45%" align="left" height="25" font-style="bold">制单人：#[UserName]#</column>
+				<column width="55%" align="left" height="25" font-style="bold">供应商签收：</column>
+			</row>
+			<row>
+				<column width="45%" align="left" height="25" font-style="bold">仓管员：</column>
+				<column width="55%" align="left" height="25" font-style="bold">记账复核员：#[UserName]#</column>
+			</row>
+		</table>
+	</report>
+	<footer>
+		<center>
+			<pageNum>d</pageNum>
+		</center>
+	</footer>
+</file>

@@ -1,0 +1,92 @@
+﻿body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+.shadowdiv
+{
+    background: url(images/shadow.png) repeat;
+    z-index: 100009;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+}
+/*对话框 ==开始*/
+#dialogWin
+{
+    z-index: 100010;
+    display: block;
+    position:absolute;
+    width:auto;
+}
+/*弹出框-table样式*/
+#dialogWin>table
+{
+   min-width:102%;
+}
+/*Add By Alen 2016-04-22 使用新的窗口皮肤*/
+.dlg-nw,.dlg-ne,.close,.close:hover,.dlg-body-nw,.dlg-body-ne,.dlg-body-n,.dlg-sw,.dlg-se{background:url(images/chrome.png); background-repeat:no-repeat;}
+
+/*dialog title begin*/
+.dlg-nw{width:6px; height:29px; background-position:0 0;}
+.dlg-n,.dlg-sc{background:url(images/border.png);}
+.dlg-n{width:100%; height:29px;background-position:0 top;}
+.dlg-ne{width:6px; height:29px;background-position: -7px 0;}
+.dlg-nc{height:24px; line-height:23px; font-family:Verdana, 微软雅黑,黑体, 宋体;font-size:12px;/*cursor:move;*/ position:relative;width:100%; text-align:left; z-index:1;}
+#dlg-title{width:100%; height:24px;}
+.dlg-title.icon{background: url(images/dialog.png) no-repeat;width: 16px;height: 16px;position:absolute;left:0px;top:4px;}
+.dlg-title.text{position:absolute; left:20px; top:0px; color:#ffffff; font-weight:bold; font-family:Verdana, 微软雅黑,黑体, 宋体;font-size:12px;}
+.dlg-nc>.nebutton{position:absolute; right:0px;top:-2px;z-index:3; height:24px;   width:80px; cursor:default; padding:0px; }
+.dlg-nc>.nebutton.help{background: url(images/help.png);width: 16px;height: 16px;  cursor:pointer; position:absolute; top:2px; right:55px;}
+.dlg-nc>.nebutton>.close{width:46px; height:19px; cursor:pointer; position:absolute;  top:0px; right:0px; background-position:-14px 0;}
+.dlg-nc>.nebutton>.close:hover{background-position:-14px -19px;}
+/*end of the dialog title*/
+
+/*dialog body begin*/
+.dlg-body-nw{ background-position:-62px 0; background-repeat:repeat-y;}
+.dlg-body-ne{ background-position:-68px 0; background-repeat:repeat-y;}
+.dlg-body-n{ background:#fff; width:100%; position:relative; z-index:1;}
+/*end of the dialog body*/
+
+/*dialog bottom button begin*/
+ 
+.dlg-bottom.button{height:42px; background:#f2f2f2; border:0;border-top:1px solid #eeeeee; text-align:right; padding:0px;}
+.dlg-bottom-buttonlist{ float:right;}
+.dlg-bottom-buttonlist ul{ padding:0px;margin:0px;}
+.dlg-bottom-buttonlist ul li{ list-style:none; float:left; margin-right:5px; width:75px;}
+/*end of the bottom button*/
+
+/*dialog foot begin*/
+.dlg-sw{width:6px; height:6px; background-position: 0px -30px;}
+.dlg-sc{background-position: 0 bottom;}
+.dlg-se{width:6px; height:6px; background-position: -7px -30px; position:relative;}
+/*end of the dialog foot*/
+
+/*resize button begin*/
+.dlg-resize{ width:100%; background:#fff;}
+.resize-btn{background:url(images/resize_btn.png) no-repeat; width:8px; height:8px; position:absolute; top:-3px; left:-3px;}
+/*end of the resize button*/
+
+.clearAll{clear: both;}
+ 
+.dialog-loading
+{
+    background: url(images/bigloading.gif) no-repeat;
+    width: 66px;
+    height: 66px;
+    top: 45%;
+    left: 45%;
+    position: absolute;
+    z-index: 10010;
+}
+/*对话框 ==结束*/
+
+.disable-select *
+{
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}

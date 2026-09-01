@@ -1,0 +1,92 @@
+﻿<!--如非必要，请勿改动本页任何代码-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../../js/jquery.min.js" type="text/javascript"></script>
+    <link href="doc/docs.css" rel="stylesheet" type="text/css" />
+    <link href="lib/codemirror.css" rel="stylesheet" type="text/css" />
+    <link href="theme/eclipse.css" rel="stylesheet" type="text/css" />
+    <script src="lib/codemirror.js" type="text/javascript"></script>
+    <script src="mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="mode/xml/xml.js" type="text/javascript"></script>
+    <script src="mode/css/css.js" type="text/javascript"></script>
+    <script src="mode/vbscript/vbscript.js" type="text/javascript"></script>
+    <script src="mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="adon/selection/active-line.js" type="text/javascript"></script>
+    <script src="adon/edit/matchbrackets.js" type="text/javascript"></script>
+</head>
+<body style="margin: 0px; padding: 0px;">
+    <div>
+        <!--如非必要，请勿改动本页任何代码-->
+        <textarea id="code" name="code" cols="1000" rows="1000">
+/*
+   主函数为入口函数,在所有函数之上,会直接调用执行.
+   如有其他功能函数[非入口函数]，请写于主函数之后.
+*/
+/********************主函数***********************/
+function Main_XXX(param1, param2,......)
+{
+  if(allActivityContinue){
+     /*初始化该Activity所拥有的全局变量，确保一次新的开始*/
+     initPublicParams$Main_XXX();
+    
+     /**********************代码编写区********************/
+     alert(param1);
+     alert(param2);
+     alert(test$Main_XXX);
+     /**************************************************/
+
+   }
+}
+
+/*
+  主函数之后是全局变量初始化函数，若没有全局变量，仍需保留此函数
+  此函数用于将当前Activity的所有全局变量重置到初始值
+*/
+/****************全局变量定义区*********************/
+
+var test$Main_XXX = "test";  /*测试参数*/
+
+function initPublicParams$Main_XXX(){
+    test$Main_XXX = "test";
+}
+
+/*************************************************/
+
+</textarea>
+    </div>
+    <!--如非必要，请勿改动本页任何代码-->
+    <script type="text/javascript">
+        var mixedMode = {
+            name: "htmlmixed",
+            scriptTypes: [{ matches: /\/x-handlebars-template|\/x-mustache/i,
+                mode: null
+            },
+                      { matches: /(text|application)\/(x-)?vb(a|script)/i,
+                          mode: "vbscript"
+                      }]
+        };
+
+        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            matchBrackets: true,
+            styleActiveLine: true,
+            mode: mixedMode,
+            theme: "eclipse"
+        });
+        function getData() {
+            return editor.getValue();
+        }
+        function setData(val) {
+            editor.setValue(val);
+        }
+
+        
+    </script>
+    <!--如非必要，请勿改动本页任何代码-->
+</body>
+</html>

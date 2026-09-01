@@ -1,0 +1,53 @@
+body{ font-size:12px;/*height:100%;margin:0; padding:0; color:#1248AC;*/}
+ 
+
+.treeview ul { background-color: white; padding:3px; }
+ 
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview div.hitarea {
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html div.hitarea {
+	background: #fff;
+	filter: alpha(opacity=0);
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 5px 0pt 5px 18px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li { background: url(tv-item.gif) 0 0 no-repeat; }
+.treeview .collapsable { background-image: url(tv-collapsable.gif); }
+.treeview .expandable { background-image: url(tv-expandable.gif); }
+.treeview .last { background-image: url(tv-item-last.gif); }
+.treeview .lastCollapsable { background-image: url(tv-collapsable-last.gif); }
+.treeview .lastExpandable { background-image: url(tv-expandable-last.gif); }
+
+/*.filetree li { padding: 2px 0 1px 18px; }*/
+.filetree input.checkbox{ width:12px; height: 12px; float:left; padding:1px;margin-top:-3px;}
+.filetree span.folder, .filetree span.file { padding-left: 18px; display: table; /*display: block; width:100px;*/ height: 16px; margin-top:-3px; }
+.filetree span.folder { background: url(organization.png) 0 0 no-repeat;cursor:pointer; margin-left:18px;margin-top:-3px;}
+.filetree span.file { background: url(module.png) 0 0 no-repeat; cursor:pointer;margin-left:18px;}
+
+

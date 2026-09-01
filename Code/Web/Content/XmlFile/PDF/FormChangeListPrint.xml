@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" font-style="bold"></column>
+        <column width="30%" align="center" font-size="18" font-style="bold">形态转换单</column>
+        <column width="40%" align="center" barcode-type="barcodeqrcode" barcode-width="60" barcode-height="60"  barcode-content="#[FormChangeNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="33%" align="left">单号：#[FormChangeNo]#</column>
+        <column width="33%" align="center">仓库：#[WarehouseName]#</column>
+        <column width="33%" align="right" >打印时间：#[PrintTime]#</column>
+      </row>
+    </table>
+    <header>
+      <table spacing-before="0" border-width="0" font-size="9">
+        <row>
+          <column width="33%" align="left">单号：#[FormChangeNo]#</column>
+          <column width="33%" align="center">仓库：#[WarehouseName]#</column>
+          <column width="33%" align="right" >打印时间：#[PrintTime]#</column>
+        </row>
+      </table>
+    </header>
+    <data source="dtForm1" spacing-before="0" spacing-after="20" font-size="9">
+      
+      <column header="行号" width="20%" align="center">#[RowNo]#</column>
+      <column header="转换类别" width="20%" align="center">#[ChangeType]#</column>
+      <column header="料号" width="20%">#[MaterialCode]#</column>
+      <column header="品名" width="20%">#[MaterialName]#</column>
+      <column header="规格" width="20%">#[SpecificationModel]#</column>
+      <column header="数量" width="20%" align="center">#[Quantity]#</column>
+      <column header="单位" width="20%" align="center">#[Unit]#</column>
+     
+    </data>
+
+    <header>
+      <table spacing-before="0" border-width="0" font-size="9">
+        <row>
+          <column width="30%" align="left" font-style="bold"></column>
+          <column width="30%" align="center" font-size="18" font-style="bold">形态转换单</column>
+          <column width="40%" align="center" barcode-type="barcodeqrcode" barcode-width="60" barcode-height="60"  barcode-content="#[FormChangeNo]#" ></column>
+        </row>
+      </table>
+      <table spacing-before="0" border-width="0" font-size="9">
+        <row>
+          <column width="33%" align="left">单号：#[FormChangeNo]#</column>
+          <column width="33%" align="center">仓库：#[WarehouseName]#</column>
+          <column width="33%" align="right" >打印时间：#[PrintTime]#</column>
+        </row>
+      </table>
+    </header>
+    <data source="dtForm2" spacing-before="0" spacing-after="20" font-size="9">
+      <column header="行号" width="20%" align="center">#[RowNo]#</column>
+      <column header="转换类别" width="20%" align="center">#[ChangeType]#</column>
+      <column header="料号" width="20%">#[MaterialCode]#</column>
+      <column header="品名" width="20%">#[MaterialName]#</column>
+      <column header="规格" width="20%">#[SpecificationModel]#</column>
+      <column header="数量" width="20%" align="center">#[Quantity]#</column>
+      <column header="单位" width="20%" align="center">#[Unit]#</column>
+    </data>
+    
+    <table spacing-before="0"  font-size="9">
+      <row>
+        <column width="30%" align="left" font-size="10">制单人：</column>
+        <column width="30%" align="left" font-size="10">仓管员：</column>
+      </row>
+    </table>
+
+  </report>
+
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+
+</file>

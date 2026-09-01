@@ -1,0 +1,480 @@
+﻿body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    min-height: 600px;
+    min-width: 968px;
+}
+
+body td, body input, body span, body div
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+
+html
+{
+    overflow: auto;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+/*登录样式 开始*/
+#log-top
+{
+    background: url(theme/Metro/images/client/top.gif) no-repeat;
+    height: 163px;
+    background-position: center;
+    padding: 0px;
+    margin: 0px;
+}
+#log-bg
+{
+    background: url(theme/Metro/images/client/log_bg.gif) 0px 0px no-repeat;
+    height: 382px;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+
+#logfrm-top
+{
+    background: url(theme/Metro/images/client/logfrm_top.gif) no-repeat;
+    width: 617px;
+    height: 138px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#ver
+{
+    position: absolute;
+    top: 83px;
+    right: 48px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#toprole
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+}
+#logfrm-body
+{
+    background: url(theme/Metro/images/client/logfrm_body.gif) no-repeat;
+    width: 617px;
+    height: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#logfrm-bt
+{
+    background: url(theme/Metro/images/client/logfrm_bt.gif) no-repeat;
+    width: 617px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#cpr
+{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+
+.lo
+{
+    background: url(theme/Metro/images/client/lo.gif) no-repeat;
+    width: 232px;
+    height: 111px;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+#logfrmtab
+{
+    position: absolute;
+    top: 20px;
+    left: 290px;
+    
+}
+.frm
+{
+    margin-top: 5px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    color: #1e5990;
+    overflow: hidden;
+    padding-left: 5px;
+}
+
+.frm .select
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    border: 1px solid #d3d3d3;
+    padding: 1px;
+    width: 120px;
+    overflow: hidden;/*
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;*/
+}
+
+.loginBtn
+{
+    margin-top: 1px;
+}
+
+#frmcontent
+{
+    padding: 0px;
+    margin: 0px 0px 0px -3px;
+    
+}
+#ermsg
+{
+    position: absolute;
+    top: 0px;
+    right: 27px;
+    color: #9f1207;
+    padding: 0px 0px 0px 0px;
+    height: 15px;
+    overflow: hidden;
+    text-align: center;
+    width: 560px;
+}
+.browserInfo
+{
+    text-align: center;
+    color: #800000;
+    height: 20px;
+}
+#lng
+{
+    position: absolute;
+    top: 8px;
+    right: 95px;
+}
+#roletabs
+{
+    width: 65px;
+    float: left;
+    text-align: right;
+}
+.tabitem1
+{
+    height: 20px;
+    border-top: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 0px solid #eeeeee;
+    border-bottom: 0px solid #eeeeee;
+    padding: 5px;
+    line-height: 20px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius:  0;
+    
+}
+.tabitem2
+{
+    height: 20px;
+    border-top: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 0px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px;
+    line-height: 20px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 0;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius:  4px;
+}
+.tabitem1:hover,.tabitem2:hover
+{
+    height: 20px;
+    border-top: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 0px solid #eeeeee;
+    border-bottom: 0px solid #eeeeee;
+    padding: 5px;
+    background: #0b82c6;
+    cursor: pointer;
+    line-height: 20px;
+}
+.seltab
+{
+    background: #0b82c6 /*#ececec*/;
+}
+
+/*登录样式 结束*/
+
+.ButtonBox
+{
+    border: solid 1px #d3d3d3;
+    border-left-width: 0;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    height: 20px;
+    width: 22px;
+    background: #f7f7f7;
+}
+.TextBox
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 20px;
+    outline: none;
+    width: 115px; 
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px; 
+}
+.Password
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 20px;
+    ime-mode: disabled;
+    outline: none;
+    width: 115px; 
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px; 
+}
+.ValidateBox
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 20px;
+    outline: none;
+    width: 55px;
+     
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px; 
+}
+.button
+{
+    border: 1px solid #d3d3d3;
+    font-weight: bold;
+}
+.button:hover
+{
+    border: 1px solid #cccccc;
+    background: #faf9f9;
+    cursor: pointer;
+    font-weight: bold;
+}
+.clear5
+{
+    clear: both;
+    height: 5px;
+}
+.LogBtn
+{
+    border: none;
+    background: url(images/lbtn_bg.png) no-repeat;
+    cursor: pointer;
+    width: 102px;
+    height: 34px;
+    padding: 0;
+    overflow: hidden;
+    color: White;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    font-weight: bold;
+}
+.LogBtn:hover
+{
+    border: none;
+    background: url(images/lbtn__bg_hover.png) no-repeat;
+    cursor: pointer;
+    width: 102px;
+    height: 34px;
+    padding: 0;
+    overflow: hidden;
+    color: White;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 20px;
+    outline: none; /*background:url(Images/input_text_bg.gif) repeat-x;*/
+}
+
+
+.loginfrm
+{
+    width: 220px;
+    float: left;
+    
+}
+.loginfrm .clientscan
+{
+    border: 1px solid #eeeeee;
+    width: 220px;
+    height: 155px;
+    padding:0px 0px 5px 5px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+.loginfrm .adminmanage
+{
+    border: 1px solid #eeeeee;
+    width: 220px;
+    height: 155px;
+    padding:0px 0px 5px 5px;
+    display: none;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+.TextBox
+{
+    width: 130px;
+    line-height: 20px;
+}
+.TextBox:focus
+{
+    width: 130px;
+    line-height: 20px;
+    background-color:#FFFFE0;
+}
+.Password
+{
+    width: 130px;
+    line-height: 20px;
+}
+.Password:focus
+{
+    width: 130px;
+    line-height: 20px;
+    background-color:#FFFFE0;
+}
+.TextBox-Admin
+{
+    height: 20px;
+    vertical-align: middle;
+    width: 130px;
+    line-height: 20px;
+}
+.TextBox.TextBox-Admin:focus
+{
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 130px;
+    background-color:#FFFFE0;
+}
+.Password.TextBox-Admin:focus
+{
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 130px;
+    background-color:#FFFFE0;
+}
+
+.select
+{
+    border: solid 1px #d3d3d3;
+    padding: 2px;
+    height:22px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+     
+}
+
+.clear15
+{
+    clear: both;
+    height: 10px;
+}
+ 
+ 

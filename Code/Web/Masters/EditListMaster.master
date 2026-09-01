@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Masters/Masters.master" AutoEventWireup="true"
+    Inherits="SKT.LeanMES.Web.Masters.EditListMaster" CodeBehind="EditListMaster.master.cs" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.utility.entertotab.min.js"
+        type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.utility.tablelist.js?v=20211209"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        var isMultiple = true;
+        var RequireOnlyOneRecord = "<%=Resources.Messages.RequireOnlyOneRecord %>";
+        var RequireOperateRecord = "<%=Resources.Messages.RequireOperateRecord %>";
+        var ConfirmDelete = "<%=Resources.Messages.ConfirmDelete %>";
+        var currentRowIndex = -1;
+
+        $(function () {
+            $(".DateTimeBox").datepicker();
+        });
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!--编辑部分-->
+    <div class="clear5">
+    </div>
+    <asp:ContentPlaceHolder ID="EditContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--列表部分-->
+    <div class="clear5">
+    </div>
+    <asp:ContentPlaceHolder ID="ListContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        /*插入行*/
+        function InsertRow(gridview, rowContent) {
+            var _TR = "<tr class=\"ListTableOddRow\" onmouseover=\"onMi(this)\" onmouseout=\"onMo(this)\">";
+            _TR += "<td><input onclick=\"chkClk(this)\" type=\"checkbox\" value=\"-1\" name=\"chkSelect\"></td>";
+            _TR += rowContent;
+            _TR += "</tr>";
+            $(_TR).appendTo(gridview);
+        }
+
+        /*删除选中的行*/
+        function DeleteRow() {
+            var idString = getRemoveRowIdString();
+            $(".ListTable input[name='chkSelect']").each(function () {
+                if ($(this).attr("checked")) {
+                    $(this).parent().parent().remove();
+                }
+            });
+        }
+
+        /*获取选中的ID*/
+        function getRemoveRowIdString() {
+            var idStr = "";
+            $(".ListTable input[name='chkSelect']").each(function () {
+                if ($(this).attr("checked")) {
+                    idStr += $(this).val() + ",";
+                }
+            });
+            if (!isNull(idStr)) {
+                idStr = idStr.substring(0, idStr.length - 1);
+            }
+            else {
+                alert(RequireOperateRecord);
+            }
+
+            return idStr;
+        }
+    </script>
+</asp:Content>

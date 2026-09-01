@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtDeliveryForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" font-style="bold">#[Company]#</column>
+        <column width="40%" align="center" font-size="18" font-style="bold">送  货  单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[DeliverNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="60%" align="left">供应商名称：#[VendorName]#</column>
+        <column width="40%" align="right" font-style="bold">送货单号：#[DeliverNo]#</column>
+      </row>
+      <row>
+        <column width="60%" align="left" >供应商编码：#[VenderNo]#</column>
+        <column width="40%" align="right" font-style="bold">日期：#[CreateDateTime]#</column>
+      </row>
+    </table>
+    <data source="dtDeliveryForm1" spacing-before="0" font-size="9">
+	  <column header="序号" width="5%" align="center" rownum="1"></column>
+      <column header="订单号" width="11%" align="center">#[POCode]#</column>
+      <column header="物料编号" width="13%" align="center">#[ItemCode]#</column>
+      <column header="物料名称" width="18%">#[ItemName]#</column>
+      <column header="物料规格" width="18%">#[ItemSpec]#</column>
+      <column header="送货数量" width="6%" align="center">#[SentQty]#</column>
+      <column header="备品数" width="11%" align="center">#[SpareQty]#</column>
+      <column header="单位" width="6%" align="center">#[Units]#</column>
+
+
+      <column header="备注" width="5%" align="center">#[Remark]#</column>
+    </data>
+    <table spacing-before="0"  font-size="9">
+      <row>
+        <column width="50.1%" align="left"   font-size="9" font-style="bold">送货单位及经办（签章）
+
+
+
+
+
+
+        </column>
+        <column width="49%" align="left"  font-size="9" font-style="bold">收货单位签收及（签章)
+
+
+
+
+
+
+        </column>
+      </row>
+      <!--<row>
+        <column width="20%" align="left" font-style="bold">送货人：</column>
+        <column width="20%" align="left" font-style="bold">收货人：</column>
+        <column width="20%" align="left" font-style="bold">送检时间：</column>
+      </row>
+      <row>   
+        <column width="20%" align="left" font-style="bold">质检员：</column>
+        <column width="20%" align="left" font-style="bold">质量部经理：</column>
+        <column width="20%" align="left" font-style="bold">检验时间：</column>
+      </row>
+      <row>
+        <column width="20%" align="left" font-style="bold">仓管员：</column>
+        <column width="20%" align="left" font-style="bold">供应商盖章：</column>
+        <column width="20%" align="left" font-style="bold">复核：</column>
+      </row>-->
+    </table>
+  </report>
+</file>

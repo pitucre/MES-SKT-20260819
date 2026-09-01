@@ -1,0 +1,14 @@
+﻿using System;
+
+namespace SKT.LeanMES.Web.Transfers
+{
+    public partial class TransfersApplyPoEdit : BasePage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxCommon.DBService));
+
+            txtMoCode.Attributes.Add("readonly", "true");
+        }
+    }
+}

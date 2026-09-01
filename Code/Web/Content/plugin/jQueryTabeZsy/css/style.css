@@ -1,0 +1,39 @@
+h3{ text-align: center; line-height: 100px; }
+ul,li{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+.table-list{
+}
+.table-list table{
+	border-collapse: collapse;
+	width: 100%;
+    margin-top:5px;
+    border:1px solid #ddd;border-radius: 5px;box-shadow: 1px 1px 1px #ddd;
+}
+.table-list th{
+	text-align: left;
+	/*padding:10px;*/
+	border-bottom: 1px solid #ddd;
+    text-align:center;
+}
+.table-list td{
+	padding:0px 10px;
+
+}
+.table-list ul{
+	/*background: #f9f9f9;*/
+	margin:10px 0;
+	padding:10px;
+	border:1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #ddd;
+}
+.table-list ul:after{
+	content:"";
+	display: table;
+}
+.table-list ul li{
+	line-height: 24px;
+}

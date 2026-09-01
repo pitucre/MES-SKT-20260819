@@ -1,0 +1,38 @@
+## 忽略编译产物和临时文件
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.user
+*.suo
+
+## Visual Studio
+.vs/
+*.sln.docstates
+*.userprefs
+
+## IIS Express
+.vs/
+*.iisz
+
+## 临时文件
+*.tmp
+*.bak
+*_BAK_*.sql
+~$*
+
+## 日志
+*.log
+logs/
+
+## 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini
+
+## 敏感信息
+*.config.local
+appsettings.Local.json
+secrets.json

@@ -1,0 +1,24 @@
+MainSN:abc
+PanelSN:SN201907000081
+PanelID:3
+ModelName:IPhone7
+Side:T
+MachineName:POST_AOI1
+CustomerName:Apple
+Operator:Jim
+Programer:Lucy
+InspectionDate:2016/12/07
+BeginTime:13:29:52
+EndTime:13:30:07
+CycleTimeSec:15
+InspectionBatch:A
+ReportResult:F
+ConfirmedResult:P
+TotalComponent:123
+ReportFailComponent:2
+ComfirmedFailComponent:0
+
+
+ComponentName,MainSN,PanelSN,PanelID,LibraryModel,PN,Package,AngleReportResult,ReportResultCode,ConfirmedResult,ConfirmedResultCode
+R1,12347,3,C0402,123476789,C0402,270,Miss,7,Pass,0
+R2,12347,3,C0603,234567890,C0603,180,Pseudo Soldering,1,Pass,0

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{Title}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312"/>
+    <link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="padding:5px;">
+<!--帮助页面标题-->
+<div class="help-page-title">
+    <div class="help-line"></div>
+    <div class="title-text">{HTMLPageTitle}</div>
+</div>
+<!--清除样式-->
+<div class="clear10"></div>
+<!--字段描述-->
+<div class="help-field-desc">
+    <div class="field-desc">
+        <div class="field-desc-title">{HTMLFieldDescTitle}</div>
+    </div>
+    <div class="field-desc-content">
+        <table cellpadding="5" cellspacing="1" border="0" width="100%" style=" background:#DBDBDB">
+            <tbody style="background:#ffffff;">
+                <tr style="background:#f8f8f8; height:30px; font-weight:bold;">
+                    <td width="180px">{HTMLDataFieldName}</td>
+                    <td>{HTMLDataFieldDesc}</td>
+                </tr>
+                {HTMLFieldTableRows}
+            </tbody>    
+        </table>
+    </div>
+</div>
+<!--清除样式-->
+<div class="clear10"></div>
+<!--功能描述-->
+<div class="help-fun-desc">
+    <div class="fun-desc">
+        <div class="fun-desc-title">{HTMLFunTitle}</div>
+    </div>
+    <!--功能简介-->
+    <div class="fun-desc-detail">
+        {HTMLFunDesc}
+    </div>
+    <!--清除样式-->
+    <div class="clear10"></div>
+    <!--详细功能描述-->
+    <div class="fun-desc-detail-list">
+        {HTMLFunDetailList}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>宏控件</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-ie6.css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="skt.uidesigner.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <script type="text/javascript">
+        function createElement(type, name) {
+            var element = null;
+            try {
+                element = document.createElement('<' + type + ' name="' + name + '">');
+            } catch (e) { }
+            if (element == null) {
+                element = document.createElement(type);
+                element.name = name;
+            }
+            return element;
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <span>控件名称</span><span class="label label-important">*</span>
+                    </th>
+                    <th>
+                        <span>类型</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="uictrl_name" type="text" placeholder="必填项" />
+                    </td>
+                    <td>
+                        <select id="uictrl_type" class="span7">
+                            <optgroup label="----常用日期宏控件----">
+                                <option value="sys_datetime">当前日期+时间 [ 1997-01-01 12:30 ]</option>
+                                <option value="sys_date">当前日期 [ 1997-01-01 ]</option>
+                                <option value="sys_date_cn">当前日期 [ 1997年1月1日 ]</option>
+                                <option value="sys_date_cn_short1">当前日期 [ 1997年1月 ]</option>
+                                <option value="sys_date_cn_short4">当前年份 [ 1997 ]</option>
+                                <option value="sys_date_cn_short3">当前年份 [ 1997年 ]</option>
+                                <option value="sys_date_cn_short2">当前日期 [ 1月1日 ]</option>
+                                <option value="sys_time">当前时间 [ 12:30 ]</option>
+                                <option value="sys_week">当前星期 [ 星期一 ]</option>
+                            </optgroup>
+                            <optgroup label="----扩展定义----">
+                                <option value="sys_userid">当前用户ID，如 9527</option>
+                                <option value="sys_realname">当前用户姓名，如 唐伯虎</option>
+                                <option value="sys_dept">当前用户部门，如 华府</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id='itemAttr'>
+                <tr>
+                    <th>
+                        <span>控件样式</span>
+                    </th>
+                    <th>
+                        <span>可见性</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        宽
+                        <input id="uictrl_width" type="text" value="150" class="input-small span1" placeholder="auto" />
+                        px &nbsp;&nbsp; 字体大小
+                        <input id="uictrl_fontsize" type="text" value="" class="input-small span1" placeholder="auto" />
+                        px
+                    </td>
+                    <td>
+                        <label class="checkbox">
+                            <input id="uictrl_hide" type="checkbox">
+                            隐藏
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var oNode = null, thePlugins = 'macros';
+        window.onload = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                oNode = UE.plugins[thePlugins].editdom;
+                var gTitle = oNode.getAttribute('title').replace(/&quot;/g, "\""), gHidden = oNode.getAttribute('uictrlhide'), gFontSize = oNode.getAttribute('uictrlfontsize'), gWidth = oNode.getAttribute('uictrlwidth'), gType = oNode.getAttribute('uictrlmacrostype');
+                gTitle = gTitle == null ? '' : gTitle;
+                $G('uictrl_name').value = gTitle;
+                //if( oNode.tagName == 'INPUT' ) {}
+                if (oNode.getAttribute('uictrlhide') == '1') {
+                    $G('uictrl_hide').checked = true;
+                }
+                $G('uictrl_name').value = gTitle;
+                $G('uictrl_type').value = gType;
+                $G('uictrl_width').value = gWidth;
+                $G('uictrl_fontsize').value = gFontSize;
+            }
+        }
+
+        dialog.oncancel = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                delete UE.plugins[thePlugins].editdom;
+            }
+        };
+        dialog.onok = function () {
+            if ($G('uictrl_name').value == '') {
+                alert('控件名称不能为空');
+                return false;
+            }
+            var gTitle = $G('uictrl_name').value.replace(/\"/g, "&quot;"), gFontSize = $G('uictrl_fontsize').value, gWidth = $G('uictrl_width').value, gType = $G('uictrl_type').value;
+            if (!oNode) {
+                try {
+                    /*
+                    if ( $G('uictrl_type').value.indexOf('sys_list')>0 ) {
+                    oNode = document.createElement("select");
+                    var objOption = new Option('{macros}', '');
+                    oNode.options[oNode.options.length] = objOption;
+                    } else {
+                    //input
+                    }*/
+                    oNode = createElement('input', 'uictrl_NewField');
+                    oNode.setAttribute('type', 'text');
+                    oNode.setAttribute('value', '{macros}');
+
+                    oNode.setAttribute('title', gTitle);
+                    oNode.setAttribute('name', 'uictrl_NewField');
+                    oNode.setAttribute('uictrltype', thePlugins);
+                    oNode.setAttribute('uictrlmacrostype', gType);
+                    if ($G('uictrl_hide').checked) {
+                        oNode.setAttribute('uictrlhide', '1');
+                    } else {
+                        oNode.setAttribute('uictrlhide', '0');
+                    }
+                    if (gFontSize != '') {
+                        oNode.style.fontSize = gFontSize + 'px';
+                        oNode.setAttribute('uictrlfontsize', gFontSize);
+                    }
+                    if (gWidth != '') {
+                        oNode.style.width = gWidth + 'px';
+                        oNode.setAttribute('uictrlwidth', gWidth);
+                    }
+                    editor.execCommand('insertHtml', oNode.outerHTML);
+                    return true;
+                } catch (e) {
+                    try {
+                        editor.execCommand('error');
+                    } catch (e) {
+                        alert('控件异常！');
+                    }
+                    return false;
+                }
+            } else {
+                var norgname = oNode.getAttribute('name').replace(/\"/g, "&quot;");
+                var oNewNode = null;
+                domUtils.remove(oNode, false);  //删除当前控件，再创建一个新的
+                /*
+                if ( $G('uictrl_type').value.indexOf('sys_list') > 0 ) {
+                oNewNode = document.createElement("select");
+                var objOption = new Option('{macros}', '');
+                oNewNode.options[oNewNode.options.length] = objOption;
+                }*/
+                oNewNode = createElement('input', 'uictrl_NewField');
+                oNewNode.setAttribute('type', 'text');
+                oNewNode.setAttribute('value', '{macros}');
+                oNewNode.setAttribute('title', gTitle);
+                oNewNode.setAttribute('name', norgname);
+                oNewNode.setAttribute('uictrltype', thePlugins);
+                oNewNode.setAttribute('uictrlmacrostype', gType);
+                if ($G('uictrl_hide').checked) {
+                    oNewNode.setAttribute('uictrlhide', '1');
+                } else {
+                    oNewNode.setAttribute('uictrlhide', '0');
+                }
+                if (gFontSize != '') {
+                    oNewNode.style.fontSize = gFontSize + 'px';
+                    oNewNode.setAttribute('uictrlfontsize', gFontSize);
+                } else {
+                    oNewNode.setAttribute('uictrlfontsize', '');
+                }
+                if (gWidth != '') {
+                    oNewNode.style.width = gWidth + 'px';
+                    oNewNode.setAttribute('uictrlwidth', gWidth);
+                } else {
+                    oNewNode.setAttribute('uictrlwidth', '');
+                }
+                editor.execCommand('insertHtml', oNewNode.outerHTML);
+                delete UE.plugins[thePlugins].editdom;
+            }
+        };
+    </script>
+</body>
+</html>

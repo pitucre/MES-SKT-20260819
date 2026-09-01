@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <!--<page size="A4" orientation="Landscape"></page>-->
+  <page size="A4"></page>
+  <margin all="1" ></margin>
+  <report source="dtFQCReport">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="18%"></column>
+        <column width="64%" align="center" valign="bottom" font-size="22" font-style="bold">成品检验报告(#[GroupName]#)</column>
+        <column width="18%" align="right" valign="bottom"></column>
+      </row>
+      <row>
+        <column width="18%" align="left" valign="bottom" image-url="Content\images\logo\logo.png" image-size="50%"></column>
+        <column width="64%"></column>
+        <column width="18%" align="right">#[PrintLv]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" font-size="9">
+      <row>
+        <column width="10%" align="center" font-style="bold">产品型号</column>
+        <column width="20%" align="left" >#[ItemName]#</column>
+        <column width="10%" align="center"  font-style="bold">物料编码</column>
+        <column width="20%" align="center" >#[ItemCode]#</column>
+        <column width="10%" align="center" font-style="bold">检验日期</column>
+        <column width="20%" align="center" >#[CheckDate]#</column>
+      </row>
+      <row>
+        <column width="10%" align="center" font-style="bold">工单编号</column>
+        <column width="20%" align="left" >#[ProdOrderNo]#</column>
+        <column width="10%" align="center"  font-style="bold">送检数量</column>
+        <column width="20%" align="center" >#[StationFactQty]#</column>
+        <column width="10%" align="center" font-style="bold">生产线别</column>
+        <column width="20%" align="center" >#[ProLine]#</column>
+      </row>
+    </table>
+    <repeat source="dtFQCReport1" RepeatId="InspectionTemplateId">
+      <table spacing-before="5" font-size="9" source="dtItem">
+        <row>
+          <column border-width="0" height="0" width="10%"></column>
+          <column border-width="0" height="0" width="20%"></column>
+          <column border-width="0" height="0" width="10%"></column>
+          <column border-width="0" height="0" width="20%"></column>
+          <column border-width="0" height="0" width="10%"></column>
+          <column border-width="0" height="0" width="20%"></column>
+        </row>
+        <row>
+          <column colspan="6" align="center" font-size="10" font-style="bold">#[InspectionTemplateName]#</column>
+        </row>
+        <row>
+          <column align="center" font-style="bold">抽样水平</column>
+          <column align="center">#[LotNameText]#</column>
+          <column align="center" font-style="bold">抽样数量</column>
+          <column align="center">#[SamplingValue]#</column>
+          <column align="center" font-style="bold">Ac/Re</column>
+          <column align="center" >#[ACREvalue]#</column>
+        </row>
+      </table>
+      <data source="dtItem1" spacing-before="0" font-size="9">
+        <header-style></header-style>
+        <column header="序号" width="5%" align="center" rownum="1"></column>
+        <column header="检验项目" width="20%" >#[InspectionItemName]#</column>
+        <column header="判定标准" width="50%">#[InspectJuge]#</column>
+        <column header="检验方法" align="center" width="20%">#[InspectionAccording]#</column>
+        <column header="检验结果" align="center" width="10%">#[CheckResultText]#</column>
+      </data>
+    </repeat>
+    <table spacing-before="5" font-size="9">
+      <row>
+        <column width="14%" align="center" font-style="bold">最终检验结果</column>
+        <column width="16%" align="center">#[ResultText]#</column>
+        <column width="14%" align="center" font-style="bold">检验员</column>
+        <column width="16%" align="center" >#[CreateBy]#</column>
+        <column width="14%" align="center" font-style="bold">审核</column>
+        <column width="16%" align="center" >#[Auditing]#</column>
+      </row>
+      <row>
+        <column width="14%" colspan="6" font-style="bold">备注:#[Remark]#</column>
+      </row>
+    </table>
+  </report>
+</file>

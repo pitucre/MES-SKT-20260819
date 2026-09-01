@@ -1,0 +1,135 @@
+﻿//------------------------------------------------------------------------------
+// <自动生成>
+//     此代码由工具生成。
+//
+//     对此文件的更改可能导致不正确的行为，如果
+//     重新生成代码，则所做更改将丢失。
+// </自动生成>
+//------------------------------------------------------------------------------
+
+namespace SKT.LeanMES.Web.MaterialCheck {
+    
+    
+    public partial class CheckListToChoose {
+        
+        /// <summary>
+        /// txtGetQty 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGetQty;
+        
+        /// <summary>
+        /// txtWhCodeOne 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWhCodeOne;
+        
+        /// <summary>
+        /// hdnWhCodeOne 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnWhCodeOne;
+        
+        /// <summary>
+        /// hdnWhIDOne 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnWhIDOne;
+        
+        /// <summary>
+        /// txtWhCodeTwo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWhCodeTwo;
+        
+        /// <summary>
+        /// hdnWhCodeTwo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnWhCodeTwo;
+        
+        /// <summary>
+        /// hdnWhIDTwo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnWhIDTwo;
+        
+        /// <summary>
+        /// txtBarcode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBarcode;
+        
+        /// <summary>
+        /// txtBarcodeTwo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBarcodeTwo;
+        
+        /// <summary>
+        /// txtItemCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtItemCode;
+        
+        /// <summary>
+        /// txtItemCodeTwo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtItemCodeTwo;
+        
+        /// <summary>
+        /// ddlItemABC 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlItemABC;
+        
+        /// <summary>
+        /// Master 属性。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的属性。
+        /// </remarks>
+        public new SKT.LeanMES.Web.Masters.ViewMaster Master {
+            get {
+                return ((SKT.LeanMES.Web.Masters.ViewMaster)(base.Master));
+            }
+        }
+    }
+}

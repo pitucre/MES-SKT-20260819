@@ -1,0 +1,1342 @@
+﻿body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px\25px;
+    background-color: #eeeeee;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+}
+body td, body input, body span, body div
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px\25px;
+}
+html
+{
+    overflow: auto;
+}
+/*头部样式 ==开始*/
+#header
+{
+    height: 50px;
+    background-color: #faf9f9;  
+    min-width: 750px;
+    display: block;
+    position: relative;
+}
+.favorityLink
+{
+    text-align: right;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 20px;
+}
+.favorityLink div
+{
+    line-height: 14px;
+    height:20px;
+}
+/*
+.favorityLink div div
+{
+    padding: 2px 3px 2px 3px;
+}
+.favorityLink div div:hover
+{
+    cursor: pointer;
+    padding: 2px 3px 2px 3px;
+    background-color: #0b82c6;
+    border-radius: 4px;
+}
+*/
+
+/*顶部 设置*/
+.quiklink
+{
+    display: none;
+    float: left;
+    line-height: 12px;
+    margin-left: 5px;
+}
+.quiklink-text
+{
+    display: block;
+    float: left;
+    margin-left: 1px;
+    line-height: 12px;
+}
+.quiklink-icon-user
+{
+    background: url(images/ico_bg.png) -59px -490px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-user-hover
+{
+    background: url(images/ico_bg.png) -59px -521px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-setting
+{
+    background: url(images/ico_bg.png) -130px -490px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-setting-hover
+{
+    background: url(images/ico_bg.png) -130px -520px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-shortcut
+{
+    background: url(images/ico_bg.png) -274px -489px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-shortcut-hover
+{
+    background: url(images/ico_bg.png) -274px -520px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+
+.quiklink-icon-search
+{
+    background: url(images/big_bg2.png) -212px 0px no-repeat;
+    width: 10px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+.quiklink-icon-search-hover
+{
+    background: url(images/big_bg2.png) -212px -31px no-repeat;
+    width: 10px;
+    height: 12px;
+    display: block;
+    line-height: 12px;
+    float: left;
+}
+
+/*设置 下拉层*/
+.setting-dropdown
+{
+    clear: both;
+    display: none;
+    position: absolute; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 90px;  
+    text-align: left;
+    border: 1px solid gray;
+    background: url(images/dmenu-bg.gif) repeat-y;
+    background-color: White;
+    -moz-box-shadow: 0px 0px 5px #000;
+    -webkit-box-shadow: 0px 0px 5px #000;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 4px;
+    z-index: 10011;
+}
+
+.setting-dropdown span
+{
+    line-height: 12px;
+    display: block;
+    width: 53px;
+    height: 12px;
+    padding: 5px 7px 5px 30px;
+    border-radius: 3px;
+}
+.setting-dropdown span:hover
+{
+    line-height: 12px;
+    display: block;
+    width: 53px;
+    height: 12px;
+    padding: 5px 7px 5px 30x;
+    border-radius: 3px;
+    background-color: #0b82c6;
+}
+.setting-dropdown p
+{
+    height: 1px;
+    background-color: #c2c2c2;
+    margin: 5px 5px 5px 26px;
+}
+
+.topnav
+{
+    width: 100%;
+    position: relative;
+}
+.logo
+{
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    width: 200px;
+    height: 45px;
+}
+#topmenu
+{
+    left: 210px;
+    top: 24px;
+    overflow: hidden;
+    height: 24px;
+    position: absolute;
+}
+
+.topnav .iselected
+{
+    background: url(images/ico_bg.png) -179px -377px;
+    height: 24px;
+    width: 105px;
+    margin: 0px 0px 0px -5px;
+    text-align: center;
+}
+.topnav ul
+{
+    padding: 0px;
+    margin: 0px 0px 0px 5px;
+    display: block;
+}
+.topnav ul li
+{
+    list-style: none;
+    text-align: center;
+    margin: 0px 0px 0px -5px;
+    background: url(images/ico_bg.png) -179px -349px;
+    height: 24px;
+    width: 105px;
+    float: left;
+    cursor: pointer;
+}
+
+.topnav ul li:hover
+{
+    list-style: none;
+    text-align: center;
+    background: url(images/ico_bg.png) -179px -377px;
+    height: 24px;
+    width: 105px;
+    float: left;
+    margin: 0px 0px 0px -5px;
+    cursor: pointer;
+}
+.topmenutext
+{
+    width: 85px;
+    height: 24px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    margin-left: 10px;
+}
+
+.topnav .line
+{
+    width: 100%;
+    background-color: #4484bf;
+    height: 3px;
+    position: absolute;
+    top: 45px;
+}
+
+.tpbtn
+{
+    padding: 2px 5px 2px 5px;
+    height:35px;
+    margin-right:5px;
+    text-align:center;
+    float:left;
+}
+.tpbtn:hover
+{
+    cursor: pointer;
+    padding: 2px 5px 2px 5px;
+    height:35px;
+    margin-right:5px;
+    text-align:center;
+    float:left;
+    background-color: #d3d3d3;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright:4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:  4px;
+}
+/*头部样式 ==结束*/
+
+.clearAll
+{
+    clear: both;
+    height: 3px;
+}
+.clear
+{
+    clear: both;
+    height: 0px;
+}
+.framecss-loading
+{
+    width: 180px;
+    height: 50px;
+    background:#fafafa;
+    border:1px solid #d3d3d3;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 10010;
+    text-align:center;
+}
+.shadowdiv
+{
+    background: url(images/shadow.png) repeat;
+    z-index: 10009;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+}
+
+/*框架样式 ==开始*/
+#content
+{
+    padding: 1px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 3px;
+    border: 1px solid #d3d3d3;
+    z-index: 100;
+    overflow:hidden;
+     
+    /*
+    border-radius: 4px;
+    -moz-border-radius:4px; 
+    -webkit-border-radius:4px; 
+    */
+    /*
+    -moz-box-shadow: 1px 1px 1px #b8b8b8;
+    -webkit-box-shadow: 1px 1px 1px #b8b8b8;
+    box-shadow: 1px 1px 1px #b8b8b8;
+*/
+}
+#leftmenu
+{
+    margin-left: 2px;
+}
+#menu
+{
+    width: 171px;
+}
+#slider
+{
+    padding: 0px;
+}
+.slidertd:hover
+{
+    cursor: pointer;
+}
+#top-bg
+{
+    background: url(images/ico_bg.png) -381px -49px;
+    width: 172px;
+    height: 33px;
+    background-repeat: no-repeat;
+}
+.leftmenutop
+{
+    text-align: center;
+    padding-top: 7px;
+    font-weight: bold;
+    color: White;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+#menucontent
+{
+    background: url(images/lmenu-bg.gif) repeat-y;
+    width: 172px;
+    text-align: center;
+    overflow: auto;
+}
+#menucontent ul
+{
+    padding: 0px;
+    margin: 0px 0px 3px 0px;
+}
+#menucontent ul li
+{
+    padding: 0px;
+    display: block;
+    margin: 5px 0px 0px 0px;
+}
+#menucontent ul li ul
+{
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    display: none;
+}
+#menucontent ul li ul li
+{
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
+    display: block;
+    height: 24px;
+}
+.isShow ul
+{
+    display: block;
+}
+.iselected-menu
+{
+}
+.iselecting-menu
+{
+    display: none;
+}
+#bot-bg
+{
+    background: url(images/ico_bg.png) -381px -83px;
+    width: 172px;
+    height: 21px;
+    background-repeat: no-repeat;
+    color: #dcdcdc;
+    font-size: 9px;
+    text-align: center;
+    padding-top: 5px;
+    letter-spacing: 1px;
+}
+/*新菜单样式 ==开始*/
+.leftmenu-new
+{
+    width: 198px;
+    border: 1px solid #d3d3d3;
+    margin-left: 3px;
+    padding:1px;
+    position:relative;
+    overflow:hidden;
+    /*
+    -moz-border-radius:4px; 
+    -webkit-border-radius:4px; 
+    border-radius: 4px;
+     */
+}
+.leftmenu-new-header
+{
+    height: 28px;
+    background: url(images/Headerbotton.png) repeat-x;  
+    width: 198px;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    position: relative;
+    
+}
+.leftmenu-new-header div
+{
+    position: absolute;
+}
+.leftmneu-header-icon
+{
+    width: 16px;
+    height: 16px;
+    background: url(images/application.png) no-repeat;  
+    position: absolute;
+    left: 3px;
+    top: 6px;
+}
+.leftmneu-header-text
+{
+    position: absolute;
+    left: 22px;
+    top: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    color: #163050;
+    width: 130px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.leftmneu-header-toggle
+{
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    width: 14px;
+    height: 12px;
+    background: url(images/ico_bg.png) -109px -150px no-repeat;
+}
+.leftmneu-header-toggle:hover
+{
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    width: 14px;
+    height: 12px;
+    background: url(images/ico_bg.png) -228px -175px no-repeat;
+    cursor: pointer;
+}
+.leftmenu-header-showAll
+{
+    width: 10px;
+    height: 12px;
+    background: url(images/ico_bg.png) -109px -200px no-repeat;
+    top: 9px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.leftmenu-header-showAll-showed
+{
+    width: 10px;
+    height: 12px;
+    background: url(images/ico_bg.png) -109px -225px no-repeat;
+    top: 9px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.leftmenu-new-content
+{
+    background-color: #faf9f9;
+    overflow-y:auto;
+    overflow-x:hidden;
+    text-align: left;
+    position:relative;
+    
+}
+
+.leftmenu-group-item
+{
+    width: 198px;
+    height: 32px;
+    background: url(images/nav_link.gif) repeat-x;
+    display: block;
+    position: relative;
+    
+}
+.leftmenu-group-item:hover
+{
+    width: 198px;
+    height: 32px;
+    background:  url(images/nav_link.gif) repeat-x;
+    display: block;
+    position: relative;
+    cursor: pointer;
+     
+}
+
+.leftmenu-group-item-icon
+{
+    width: 16px;
+    height: 16px;
+    /*background: url(images/module.png) no-repeat;  */
+    left: 10px;
+    top: 5px;
+    position: absolute;
+    vertical-align:middle;
+}
+.leftmenu-group-item-text
+{
+    position: absolute;
+    line-height: 28px;
+    left: 32px;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    white-space: nowrap;
+}
+.leftmenu-group-item-toggle
+{
+    width: 9px;
+    height: 10px;
+    background: url(images/ico_bg.png) -154px -286px no-repeat;
+    right: 17px;
+    top: 10px;
+    position: absolute;
+}
+.leftmenu-group-item-toggle-selected
+{
+    width: 9px;
+    height: 10px;
+    background: url(images/ico_bg.png) -154px -275px no-repeat;
+    right: 17px;
+    cursor: pointer;
+    top: 10px;
+    position: absolute;
+}
+.menugroup ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+.menugroup ul li
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.leftmenu-group{display:inline;}
+.menugroup ul li ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+.menugroup ul li ul li
+{
+    padding: 0px;
+    margin:0px;
+    *margin: -2px 0px;
+}
+.pagelink
+{
+    list-style: none;
+    line-height: 30px;
+    text-align: left;
+    width: 198px;
+    padding: 0px;
+    margin:0px;
+    margin: -2px 0px;
+    background: url(images/leftmenu_bg.gif) repeat-x;
+
+    display:block;
+}
+.pagelink:hover
+{
+    list-style: none;
+    line-height: 30px;
+    text-align: left;
+    width: 198px;
+    background: url(images/lhbg.gif) repeat-y;
+    cursor: pointer;
+    padding: 0px;
+    margin:0px;
+    *margin: -2px 0px;
+    display:block;
+}
+ 
+
+.menugrouphover
+{
+    list-style: none;
+    background-color: White;
+    line-height: 30px;
+    text-align: left;
+    width: 198px;
+    background: url(images/lhbg.gif) repeat-y;
+    cursor: pointer;
+}
+.leftmenu-group-link-icon
+{
+    width: 16px;
+    height: 16px;  
+    margin-left: 20px;
+}
+.leftmenu-group-link-text {
+    padding-top: 2px;
+    font-size: 12px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    display: block;
+}
+
+/*新菜单样式 ==结束*/
+#foot
+{
+    text-align: center;
+    vertical-align: middle;
+    color: #a1a2a2;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    padding-top: 2px;
+    height:15px;
+    border-top:1px solid #d3d3d3;
+    border-left:0px;
+    border-right:0px;
+    border-bottom:0px;
+    margin-top:4px;
+    background:#faf9f9;
+    position:relative;
+    overflow: hidden;
+}
+
+/*搜索框*/
+.searchBox
+{
+    background: url(images/bigbg.jpg) -200px -69px;
+    width: 384px;
+    height: 38px;
+    background-repeat: no-repeat;
+    float: right;
+    margin-right: 10px;
+    display: none;
+}
+.searchBox2
+{
+    background: url(images/search.png) no-repeat;
+    width: 391px;
+    height: 37px;
+}
+.searchBox3
+{
+    float: left;
+    margin-top: 3px;
+    background: url(images/ico_bg.png) -308px -275px no-repeat;
+    width: 143px;
+    height: 22px;
+}
+.searchButtonBlue
+{
+    float: left;
+    background: url(images/ico_bg.png) -381px -125px no-repeat;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+.searchButtonBlue:hover
+{
+    float: left;
+    background: url(images/ico_bg.png) -381px -125px no-repeat;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.search-textbox
+{
+    border: none;
+    border-style: none;
+    height: 25px;
+    width: 340px;
+    margin-top: 7px;
+    background-color: transparent;
+    margin-left: -25px;
+}
+.searchTextBox
+{
+    border: 0;
+    border-style: none;
+    height: 11px;
+    width: 115px;
+    background-color: transparent;
+    margin-left: 21px;
+    margin-top: 5px;
+}
+
+/*当前路径*/
+.expendLeftMenu
+{
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background: url(images/ico_bg.png) -84px -350px no-repeat;
+    display: none;
+}
+.expendLeftMenu:hover
+{
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background: url(images/ico_bg.png) -109px -350px no-repeat;
+    cursor: pointer;
+    display: none;
+}
+.currentPath-header
+{
+    position: relative;
+    height: 30px;
+    width: 60px;
+    float: right;
+    padding: 0px;
+    z-index: 1000;
+    display: none;
+}
+.currentPath
+{
+    background: url(images/ico_bg.png) 0px -549px;
+    width: 385px;
+    height: 27px;
+    background-repeat: no-repeat;
+    float: left;
+    font-weight: normal;
+    position: relative;
+    font-size: 11px;
+    color: #d2d2d2;
+    display: none;
+}
+.currentpath-defaulttext
+{
+    left: 30px;
+    top: 8px;
+    position: absolute;
+}
+.current-arrow
+{
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-top: 1px;
+    margin-right: 5px;
+    background: url(images/ico_bg.png) -155px -326px;
+}
+.currentpath-text
+{
+    float: left;
+    left: 90px;
+    top: 8px;
+    position: absolute;
+}
+.currentpath-text span
+{
+    display: block;
+    float: left;
+}
+/*帮助图标*/
+.help
+{
+    float: left;
+    background: url(images/ico_bg.png) -129px -324px no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    display: none;
+    margin-top: -2px;
+}
+.help:hover
+{
+    float: left;
+    background: url(images/ico_bg.png) -129px -349px no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: -2px;
+}
+.history
+{
+    right: 10px;
+    background: url(images/ico_bg.png) -451px -279px no-repeat;
+    width: 40px;
+    height: 18px;
+    padding-top: 3px;
+    top: 3px;
+    z-index: 10000;
+    position: absolute;  
+    border-radius: 4px;
+}
+.history:hover
+{
+    right: 10px;
+    background: url(images/ico_bg.png) -451px -307px no-repeat;
+    width: 40px;
+    height: 20px;
+    padding-top: 2px;
+    position: absolute;
+    border: 1px solid lightgrey;
+    cursor: pointer;  
+    border-radius: 4px;
+}
+.history-icon
+{
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    float: left;
+    line-height: 14px;
+    background: url(images/ico_bg.png) -367px -211px no-repeat;
+}
+.history-text
+{
+    float: left;
+    margin-left: 3px;
+    line-height: 14px;
+}
+.history-down
+{
+    width: 10px;
+    height: 10px;
+    margin-left: 3px;
+    line-height: 14px;
+    margin-top: 3px;
+    float: left;
+    background: url(images/ico_bg.png) -214px -211px no-repeat;
+}
+.history-downlist
+{
+    clear: both;
+    width: 88px;
+    position: absolute;
+    background-color: White;
+    top: 23px;
+    left: -60px;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
+    display: none; 
+    -moz-box-shadow: 0px 0px 5px gray;
+    -webkit-box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 4px;
+}
+.history-downlist span
+{
+    padding: 5px 3px 3px 5px;
+    height: 18px;
+    display: block;
+}
+.history-downlist span:hover
+{
+    padding: 5px 3px 3px 5px;
+    height: 18px;
+    display: block;
+    background-color: #0b82c6;
+    cursor: pointer;  
+    border-radius: 4px;
+}
+/*选项卡样式 ==开始*/
+.showLRmove{display:block;}
+#vleft
+{
+    position: absolute;
+    left: 1px;
+    top: 6px;
+    width: 17px;
+    height: 16px;
+    display:none;
+    cursor: pointer;
+    background: url(images/ico_bg.png) -83px -325px no-repeat;
+    z-index: 100000;
+}
+.vleft-bg
+{
+    background: url(images/Headerbotton.png) repeat-x;
+    width: 20px;
+    height: 28px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 88888;
+    border-right:1px solid #cccccc;
+}
+#vright
+{
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    width: 17px;
+    height: 16px;
+    display:none;
+    cursor: pointer;
+    background: url(images/ico_bg.png) -83px -350px no-repeat;
+    z-index: 100000;
+}
+.vright-bg
+{
+    background: url(images/Headerbotton.png) repeat-x;
+    width: 20px;
+    height: 28px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 88888;
+    border-left:1px solid #cccccc;
+    display: none;
+}
+
+.tabs-container
+{
+    height: 28px; 
+    padding: 0px;
+    background: url(images/Headerbotton.png) repeat-x;  
+    border-bottom: 1px solid #cacaca;
+    position: relative;
+    overflow: hidden;
+}
+.tabs
+{
+    height: 28px;
+    overflow: hidden;
+    padding: 2px 0px 0px 0px;
+    position: absolute; 
+    z-index: 10;
+    width: auto;
+    top: 0px;
+    left: 23px;
+    display:block;
+}
+
+.tabs div
+{
+    z-index: 1000;
+    float: left;
+    margin-right: 5px;
+}
+
+.tabs div .tab-body:hover
+{
+    cursor: default;
+}
+.tabs div .tab-body span:hover
+{
+    cursor: default; 
+}
+
+.tab-left-selected
+{
+    background: url(images/tab_selected_l.png) no-repeat scroll;
+    width: 4px;
+    height: 28px;
+}
+.tab-right-selected
+{
+    background: url(images/tab_selected_r.png) no-repeat scroll;
+    width: 7px;
+    height: 28px;
+    position:relative;
+}
+.tab-body-selected
+{
+    background: url(images/tab_selected_bg.png) repeat-x scroll;
+    height: 28px;
+    cursor: default;
+    min-width:65px;
+    padding-right:10px;
+    line-height:18px;
+}
+.tab-left
+{
+    background: url(images/tab_l.png) no-repeat scroll;
+    width: 5px;
+    height: 28px;
+}
+.tab-right
+{
+    background: url(images/tab_r.png) no-repeat scroll;
+    width: 7px;
+    height: 28px;
+}
+.tab-body
+{
+    background: url(images/tab_bg.png) repeat-x scroll;
+    height: 28px;
+    min-width:65px;
+    line-height:18px;
+}
+
+.tabs-items
+{
+    border-top: 0px solid #d3d3d4;
+}
+.tabs-items .tabs-items-selected
+{
+    display: block;
+}
+.tabs-items div
+{
+    display: none;
+}
+.tabs-line
+{
+    clear: both;
+    float: left;
+    width: 100%;
+    height: 1px;
+    background-color: #cacaca;
+    margin-top: 0px;
+}
+.tabs-text
+{
+    padding: 2px;
+    text-align: center;
+}
+.tabs-close
+{
+    background: url(images/ico_bg.png) -80px -434px no-repeat;
+    width: 9px;
+    height: 9px;
+    right: 3px;
+    top: 1px;
+    padding:3px;
+    display: block;
+    position: absolute;
+    overflow:hidden;
+}
+.tabs-close:hover
+{
+    background: url(images/ico_bg.png) -55px -434px no-repeat;
+    width: 9px;
+    height: 9px;
+    right: 3px;
+    top: 1px;
+    padding:3px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    overflow:hidden;
+}
+
+.showhidetabs
+{
+    z-index: 10001;
+    width: 50px;
+    position: absolute;
+    display: block;
+    margin-right: 5px;
+    background-color: Gray;
+    display: none;
+    cursor: pointer;
+}
+/*选项卡样式 ==结束*/
+
+/*右侧框架内容*/
+#framecenter
+{
+    padding: 0px;
+    background-color: White;  
+}
+/*左侧一级菜单背景*/
+.leftmenubg
+{
+    clear: both;
+    background: url(images/ico_bg.png) -308px -325px;
+    width: 138px;
+    height: 21px;
+    background-repeat: no-repeat;
+    margin-left: 7px;
+    display: block;
+    cursor: pointer;
+    padding-top: 6px;
+    padding-left: 5px;
+    text-align: left;
+    display: block;
+}
+.leftmenubg:hover
+{
+    clear: both;
+    background: url(images/ico_bg.png) -308px -299px;
+    width: 138px;
+    height: 21px;
+    background-repeat: no-repeat;
+    margin-left: 7px;
+    display: block;
+    cursor: pointer;
+    padding-top: 6px;
+    padding-left: 5px;
+    text-align: left;
+    display: block;  
+    -moz-box-shadow: 0px 0px 5px #f7f7f7;
+    -webkit-box-shadow: 0px 0px 5px #f7f7f7;
+    box-shadow: 0px 0px 5px #f7f7f7;
+    border-radius: 4px;
+}
+
+/*模块图标*/
+.menuicon-users
+{
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background: url(images/ico_bg.png) -58px -469px no-repeat;
+}
+.menuicon-users-open
+{
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background: url(images/ico_bg.png) -84px -453px no-repeat;
+}
+.menuicon-user
+{
+    width: 12px;
+    height: 15px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background: url(images/ico_bg.png) -58px -453px no-repeat;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+/*模块文字*/
+.menutext
+{
+    padding-left: 5px;
+    float: left;
+    width: 85px;
+    overflow: hidden;
+    height: 18px;
+}
+/*模块收缩图标*/
+.menucollapse
+{
+    float: left;
+    display: block;
+    width: 9px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: 7px;
+    background: url(images/ico_bg.png) -154px -284px no-repeat;
+}
+.menucollapsed
+{
+    float: left;
+    display: block;
+    width: 9px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: 7px;
+    background: url(images/ico_bg.png) -154px -274px no-repeat;
+}
+/*左侧二级菜单背景*/
+.leftmenubg-sub
+{
+    float: left;  
+    width: 118px;
+    height: 25px;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    margin-left: -10px;
+    color: White;
+}
+.leftmenubg-sub:hover
+{
+    float: left;
+    background: url(images/ico_bg.png) -309px -378px;
+    width: 118px;
+    height: 25px;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 5px;  
+    -moz-box-shadow: 0px 0px 5px #f7f7f7;
+    -webkit-box-shadow: 0px 0px 5px #f7f7f7;
+    box-shadow: 0px 0px 5px #f7f7f7;
+    border-radius: 4px;
+}
+.leftmenubg-sub-visited
+{
+    float: left;
+    background: url(images/ico_bg.png) -309px -378px;
+    width: 118px;
+    height: 25px;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 5px;
+}
+/*左侧二级菜单前箭头*/
+.arrow-white
+{
+    color: White;
+    float: left;
+    margin-left: 18px;
+    height: 13px;
+    width: 6px;
+    background: url(images/ico_bg.png) -158px -351px no-repeat;
+    margin-top: 7px;
+    display: block;
+}
+/*页面链接文字*/
+.linktext
+{
+    margin-left: 5px;
+    display: inline;
+    float: left;
+    margin-top: 6px;
+    overflow: hidden;
+}
+/*框架样式 ==结束*/
+
+/*快捷导航层 ==开始*/
+.shortcut
+{
+    display: none;
+    position: absolute;
+    border: 5px solid #e0e0e0;
+    z-index: 10010;
+}
+.shortcut-content
+{
+    padding: 15px;
+    background-color: #fff;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #fff;
+}
+/*快捷导航层 ==结束*/
+
+/*ContextMenu ==开始*/
+.contextMenu
+{
+    display:none;
+    border:1px solid #eeeeee;   
+    width:100px;
+    background:url(images/contextmenu_bg.gif) repeat-y; 
+}
+/*ContextMenu ==结束*/
+.button{ border:1px solid #d3d3d3;font-weight:bold; }
+.button:hover{ border:1px solid #cccccc; background:#faf9f9; cursor:pointer; font-weight:bold;}

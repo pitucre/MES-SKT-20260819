@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+	<page size="A4" orientation="Landscape"></page>
+	<margin top="1" bottom="1"></margin>
+	<report source="dtAging">
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="15%" align="left" image-url="Content\images\logo\logo.png" image-size="70%" font-style="bold"></column>
+				<column width="70%" align="center" font-size="18" font-style="bold">#[AgingBasicNo]#</column>
+				<column width="15%" align="left">#[AgingLv]#</column>
+			</row>
+		</table>
+		<title font-size="20">产品老化实验报告</title>
+		<table spacing-before="0" border-width="0" font-size="9">
+			<row>
+				<column width="100%" align="right">此报告自动生成:#[RiseTime]#</column>
+			</row>
+		</table>
+		<table spacing-before="0" font-size="9">
+			<row>
+				<column width="20%" font-size="13" font-style="bold" align="left" colspan="5">老化基本信息 </column>
+			</row>
+			<row>
+				<column width="20%" align="center" font-size="10" font-style="bold">计划起始时间</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">计划结束时间 </column>
+				<column width="20%" align="center" font-size="10" font-style="bold">实际起始时间</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">实际结束时间</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">老化温度 </column>
+			</row>
+			<row>
+				<column width="20%" align="center">#[PlanStartTime]#</column>
+				<column width="20%" align="center">#[PlanEndTime]# </column>
+				<column width="20%" align="center">#[FactsStartTime]#</column>
+				<column width="20%" align="center">#[FactsEndTime]#</column>
+				<column width="20%" align="center">#[Temperature]# </column>
+			</row>
+		</table>
+		<table spacing-before="5">
+			<row>
+				<column width="100%"  font-size="13" font-style="bold" align="left">老化产品信息 </column>
+			</row>
+		</table>
+		<data source="dtAging1" spacing-before="0" font-size="8">
+			<column header="产品型号" width="25%">#[ItemDesc]#</column>
+			<column header="样品数量" align="center" width="10%">#[ItemQty]#</column>
+			<column header="告警数量" align="center" width="10%">#[NoticeQty]#</column>
+			<column header="下限告警数量" align="center" width="13%">#[LowerQty]#</column>
+			<column header="下限告警比例" width="13%" align="center">#[LowerProportion]#</column>
+			<column header="上限告警数量" width="13%" align="center">#[UpperQty]#</column>
+			<column header="上限告警比例" width="13%" align="center">#[UpperProportion]#</column>
+		</data>
+		<table spacing-before="0" font-size="9">
+			<row>
+				<column width="20%" font-size="13" font-style="bold" align="left" colspan="5">老化统计信息 </column>
+			</row>
+			<row>
+				<column width="20%" align="center" font-size="10" font-style="bold">老化样品总数量</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">有效老化数量 </column>
+				<column width="20%" align="center" font-size="10" font-style="bold">老化合格数量</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">不合格品数量</column>
+				<column width="20%" align="center" font-size="10" font-style="bold">老化合格率（%）</column>
+			</row>
+			<row>
+				<column width="20%" align="center">#[TotalQty]#</column>
+				<column width="20%" align="center">#[ValidQty]# </column>
+				<column width="20%" align="center">#[QualifiedQty]#</column>
+				<column width="20%" align="center">#[UnqualifiedQty]#</column>
+				<column width="20%" align="center">#[QualifiedRate]#</column>
+			</row>
+		</table>
+		<table spacing-before="5" source="dtAging2" font-size="9">
+			<row>
+				<column border-width="0" height="0" width="28%"></column>
+				<column border-width="0" height="0" width="16%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%"></column>
+				<column border-width="0" height="0" width="4%" ></column>
+			</row>
+			<row>
+				<column  font-size="13" font-style="bold" align="left" colspan="17">产品老化详细信息</column>
+			</row>
+			<row>
+				<column align="center" font-size="10" font-style="bold" rowspan="2">产品型号</column>
+				<column align="center" font-size="10" font-style="bold" rowspan="2">产品序列号 </column>
+				<column align="center" font-size="10" font-style="bold" colspan="13">实时功率(dBm)</column>
+				<column align="center" font-size="10" font-style="bold" rowspan="2">状态</column>
+			</row>
+			<row>
+				<column align="center">#[E]#</column>
+				<column align="center">#[F]#</column>
+				<column align="center">#[G]#</column>
+				<column align="center">#[H]#</column>
+				<column align="center">#[I]#</column>
+				<column align="center">#[J]#</column>
+				<column align="center">#[K]#</column>
+				<column align="center">#[L]#</column>
+				<column align="center">#[M]#</column>
+				<column align="center">#[N]#</column>
+				<column align="center">#[O]#</column>
+				<column align="center">#[P]#</column>
+				<column align="center">#[Q]#</column>
+			</row>
+		</table>
+		<data source="dtAging3" spacing-before="0" font-size="8">
+			<column width="28%">#[ItemDesc]#</column>
+			<column width="16%">#[SerialNumber]#</column>
+			<column width="4%"  align="center">#[E]#</column>
+			<column width="4%"  align="center">#[F]#</column>
+			<column width="4%"  align="center">#[G]#</column>
+			<column width="4%"  align="center">#[H]#</column>
+			<column width="4%"  align="center">#[I]#</column>
+			<column width="4%"  align="center">#[J]#</column>
+			<column width="4%"  align="center">#[K]#</column>
+			<column width="4%"  align="center">#[L]#</column>
+			<column width="4%"  align="center">#[M]#</column>
+			<column width="4%"  align="center">#[N]#</column>
+			<column width="4%"  align="center">#[O]#</column>
+			<column width="4%"  align="center">#[P]#</column>
+			<column width="4%"  align="center">#[Q]#</column>
+			<column width="4%"  align="center">#[R]#</column>
+		</data>
+	</report>
+</file>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <!--<page size="A4" orientation="Landscape"></page>-->
+  <page size="A4"></page>
+  <margin all="1" ></margin>
+  <report source="dtIQCReport">
+    <table spacing-before="0" border-width="0" font-size="10">
+      <row>
+        <column width="30%" align="left" image-url="Content\images\logo\logo_pdf.png" image-size="70%" font-style="bold"></column>
+        <column width="40%" align="center" font-size="18" font-style="bold">IQC  送  检  单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[InspectionNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="11">
+      <row>
+        <column width="50%" align="left">供应商名称：#[VendorName]#</column>
+        <column width="50%" align="right">检验单号：#[InspectionNo]#</column>
+      </row>
+      <row>
+        <column width="50%" align="left">供应商编码：#[SuplierCode]#</column>
+        <column width="50%" align="right">日期：#[CreateDateTime]#</column>
+      </row>
+    </table>
+    
+    <data source="dtIQCReport" spacing-before="0" font-size="10">
+      <header-style></header-style>
+      <column header="采购单号" width="12%" align="center">#[POCode]#</column>
+      <column header="订单号" width="12%" align="center">#[SOCode]#</column>
+      <column header="物料编码" width="12%" align="center" >#[ItemCode]#</column>
+      <column header="物料名称" width="12%" align="center">#[ItemName]#</column>
+      <column header="物料规格" width="18%" align="center">#[ItemSpec]#</column>
+      <column header="单位" width="5%" align="center">#[Units]#</column>
+      <column header="收货数量" width="10%" align="center">#[InspectionQty]#</column>
+      <column header="合格数" width="10%" align="center">#[QualifiedQty]#</column>
+      <column header="不合格数" width="10%" align="center">#[failureQty]#</column>
+      <column header="备注" width="7%"></column>
+    </data>    
+    <table spacing-before="0"  font-size="10">
+      <row>
+        <column width="100%"  align="left" colspan="4" font-size="9" font-style="bold">
+
+不良原因：
+
+
+
+质量部意见：
+
+
+        </column>
+      </row>
+      <row>
+        <column width="10%" align="left" font-size="11" font-style="bold">制单人：#[CName]#</column>
+        <column width="10%" align="left" font-size="11" font-style="bold">仓管员：</column>
+        <column width="10%" align="left" font-size="11" font-style="bold">质检员：</column>
+        <column width="10%" align="left" font-size="11" font-style="bold">检验日期：</column>
+      </row>
+    </table>    
+  </report>
+</file>

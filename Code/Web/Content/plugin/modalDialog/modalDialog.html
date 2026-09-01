@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--Starry 2014.4.16（If no need, please don't modify this page）-->
+<head>
+    <title></title>
+    <link href="../../Main.css" rel="stylesheet" type="text/css" />
+    <link href="../../icon-all.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+
+        <script src="../calendar/js/jquery.ui.core.js" type="text/javascript"></script>
+        <script src="../calendar/js/jquery.ui.datepicker.js" type="text/javascript"></script>
+        <script src="../calendar/js/jquery.ui.datepicker.zn.js" type="text/javascript"></script>
+        <link href="../calendar/skin/datepicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var param = window.dialogArguments;
+        var winParent = param[1];
+        var onloadFunctionName = param[2];
+        var isAutoClose = false;
+
+        $(function () {
+            var $content = $("#content");
+            $content.html(param[0]);
+            loadButtons(param[5]);
+            /*style setting*/
+            document.title = param[3];
+            $content.css("height", (parseInt(param[4]) - 30).toString() + "px");
+            /*page load event*/
+            if (onloadFunctionName != "") {
+                eval('winParent.' + onloadFunctionName + '(window);');
+            }
+        });
+        /*close modal dialog*/
+        function closeModalDialog() {
+            isAutoClose = true;
+            window.close();
+        }
+        /*catch close event*/
+        window.onbeforeunload = function () {
+            if (!isAutoClose) {
+                return winParent.getResource("Messages", "AC_DialogCloseMessage");
+            }
+        }
+        /*check close is lawful*/
+        window.onunload = function () {
+            if (!isAutoClose) {
+                winParent.allActivityContinue = false;
+            }
+        }
+        /*load buttons*/
+        function loadButtons(buttons) {
+            buttons = btnDesc(buttons);
+
+            var strButtons = "";
+            for (var i = 0; i < buttons.length; i++) {
+                strButtons += "<div class=\"toolbar-btn\" style=\"float:right;\" onclick=\"" + buttons[i].click + "\" title=\"" + buttons[i].text + "\"><div class=\"icon-16-" + buttons[i].icon + "\"></div><div class=\"btn-text\" id=\"btns" + (buttons.length - i).toString() + "\" style=\"font-weight:900;font-size:14px;color:#000080\">" + buttons[i].text + "</div></div>";
+                if (i != buttons.length - 1) {
+                    strButtons += "<div class=\"btn-line\" style=\"float:right;\"></div>";
+                }
+            }
+            if (buttons.length > 0) {
+                $("#toolbar").html(strButtons);
+            }
+        }
+        /*reverse btn array*/
+        function btnDesc(ary) {
+            ary = (typeof (ary) == "undefined" ? [] : ary);
+            var newAry = [];
+            for (var i = ary.length - 1; i >= 0; i--) {
+                newAry.push(ary[i]);
+            }
+            return newAry;
+        }
+    </script>
+</head>
+<body style="margin:0px; padding:0px;">
+    <!--Container-->
+    <div id="content" style="width:100%; overflow-y:auto; overflow-x:hidden;"></div>
+    <!--Tool Bar-->
+    <div id="toolbar" style="position:absolute;left:0px;bottom:0px;width:100%;overflow:hidden; border-top:1px solid #d3d3d3; height:27px;padding-right:5px; text-align:right;background:url(../../images/l_bg_hover.gif) repeat-x;"></div> 
+
+    <script type="text/javascript">
+        $(function () {
+            $(".DateTimeBox").datepicker({
+                buttonImageOnly: true,
+                buttonText: winParent.getResource("lang","Date")
+            });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,54 @@
+﻿/*=========================================
+* Author:   Alen Liu
+* Mail: shzalen@163.com
+* Date: 2016/09/14
+* Version:  1.0.0
+* Description:  登录界面样式文件
+===========================================*/
+html, html *
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    list-style-type: none; 
+}
+
+body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    padding: 0px;
+    width: 1000px;
+    min-width: 1000px;
+    overflow: auto;
+    margin: auto auto;
+    background:#d4d3d2 url(img/loginbg.gif) repeat-x;
+}
+  
+.wrap{width: 1000px; position: relative; margin: auto auto; min-height: 600px;overflow: auto;}
+.wrap-logo{width: 304px; height: 66px; background: url(img/logo.png) no-repeat;margin: 50px 30px;}
+.wrap-title{width: 318px; height: 139px; background: url(img/leanmes.png) no-repeat;margin: 0px 50px;}
+.wrap-login{background: url(img/loginbg.png) no-repeat; width: 496px;height: 360px; position: absolute; right: 30px; top: 200px; overflow:hidden;}
+.wrap-login-lang{margin-left: 390px; margin-top: 20px;}
+.wrap-login-version{margin-left: 0px; margin-top: 3px; width: 150px; text-align: right; color: #666}
+.wrap-login-info{text-align: center; padding: 0px 5px; margin-top: 3px; color: #df2128;overflow: hidden; height: 24px;}
+.wrap-login-form{position: absolute; top: 90px; left: 40px; color: #666; font-size: 14px;}
+.wrap-copyright{position: absolute; right: 30px; top: 575px; color: #666}
+/*登录页底部背景*/
+.wrap-bg-l-b{width: 563px; height: 336px; background: url(img/l.png) no-repeat;position: fixed; bottom: 0px; left: -7px;}
+.wrap-bg-l-m{width: 374px; height: 336px; background: url(img/r.png) no-repeat;position: fixed; bottom: 0px; left: 556px;}
+
+div p{ margin:10px;}
+div p>label{ width:70px; text-align:right; display:inline-table; margin-right:20px;}
+div p>input[type=text],div p>input[type=password]{ width:274px; height:34px; padding:3px; line-height:34px; background:url(img/textbox.gif) no-repeat;font-family: Verdana, 微软雅黑,黑体, 宋体;}
+div p>input[type=text]:focus,div p>input[type=password]:focus{ width:274px; height:34px; padding:3px; line-height:34px; background:url(img/textbox_hover.gif) no-repeat; font-family: Verdana, 微软雅黑,黑体, 宋体;}
+div p .ckbrmb{background:url(img/checkbox.png) no-repeat; height:16px; width:auto;padding:0px 0px 0px 18px; margin:0px; text-align:left; vertical-align:middle; line-height:14px;}
+div p .ckbrmb:hover{background:url(img/checkbox.png) no-repeat; height:16px; width:80px;  width:auto;padding:0px 0px 0px 18px; margin:0px; text-align:left; vertical-align:middle; line-height:14px; cursor:pointer;}
+div p .ckbrmb.checked{background:url(img/checked.png) no-repeat; height:16px; width:80px;  width:auto;padding:0px 0px 0px 18px; margin:0px; text-align:left; vertical-align:middle; line-height:14px;}
+div p .placehold{ color:#d3d3d3;}
+.wrap-login-form .loginbtn{background: url(img/loginbtn.png);  width: 280px; height: 40px; font-weight:bold; color:#fff; font-size:16px; font-family: Verdana, 微软雅黑,黑体, 宋体; float:right; text-align:center; line-height:40px;}
+.wrap-login-form .loginbtn:hover{background: url(img/loginbtn_hover.png);  width: 280px; height: 40px; font-weight:bold; color:#fff; font-size:16px; cursor:pointer; font-family: Verdana, 微软雅黑,黑体, 宋体; float:right; text-align:center; line-height:40px;}
+.wrap-login-form .logining{background: url(img/loginbtn_hover.png);  width: 280px; height: 40px; font-weight:bold; color:#fff; font-size:16px; cursor:pointer; font-family: Verdana, 微软雅黑,黑体, 宋体; float:right; text-align:center; line-height:40px;}
+.wrap-login-lang ul{padding:0px; margin:0px; display:none;}
+.wrap-login-lang ul li{ list-style:none; height:18px; padding:3px 5px;}
+.wrap-login-lang ul li:hover{ list-style:none; height:18px; background-color:#518fd0;padding:3px 5px;}

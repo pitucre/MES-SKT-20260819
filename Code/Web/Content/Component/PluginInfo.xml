@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ============================================================================
+  description和updatelog是多行要换在显示的时候换行显示时，请在行尾加上 "#", 
+  如：1、XXXXxXXXX;#2、XXXXXXX;# 则显示的时候显示为：
+  1、XXXXxXXXX;
+  2、XXXXXXX;
+  ============================================================================
+  <plugin plnId="插件/软件ID，整型，不允许重复，如：1，2，3，4....">
+    <name>插件/软件名</name>
+    <ext>插件/软件格式</ext>
+    <version>版本</version>
+    <plnpath>插件或软件的虚拟路径，如：Content/Component/App/PDA客户端软件1.0.zip；注意"/"而不是"\"</plnpath>
+    <cabpath>插件或软件CAB文件的虚拟路径</cabpath>
+    <clsid>插件的CLSID</clsid>
+    <publishdate>发布日期</publishdate>
+    <updatedate>最后一次更新日期</updatedate>
+    <description>插件/软件简介</description>
+    <updatelog>插件/软件的升级日志，如：
+      【2.0.0.0】增加 增加调用codesoft打印功能；#
+      【1.2.0.0】增加 增加打印多份功能；#
+      【1.1.0.0】修复 修复打印超时报错；#
+    </updatelog>
+  </plugin>
+-->
+<plugins>
+  <plugin plnId="1">
+    <name>PDA客户端软件</name>
+    <ext>.apk</ext>
+    <version>3.3.7</version>
+    <plnpath>Content/Component/App/PDA3.3.9.apk</plnpath>
+    <cabpath></cabpath>
+    <clsid></clsid>
+    <publishdate>2021/12/01</publishdate>
+    <updatedate>2023/02/21</updatedate>
+    <description>Android版的MES移动端,支持斑马、精臣、盈达、霍尼韦尔品牌蓝牙连接打印</description>
+    <updatelog>
+		版本：3.4.0 【更新内容】#
+		1、升级版本统一优化
+		版本：3.3.9 【更新内容】#
+		1、升级盈达SDK版本修复盈达蓝牙打印机走纸偏离的问题#
+		版本：3.3.7 【更新内容】#
+		1、增加TSC蓝牙打印机支持（打印机包含PS标识为TSC打印机）#
+		版本：3.3.6 【更新内容】#
+		1、增加成功的播放声音（js方法名:PassSound）#
+		版本：3.3.3 【更新内容】#
+		1、增加PDA拍照功能的支持#
+		版本：3.2.0 【更新内容】#
+		1、精臣打印修复横向打印问题#
+		2、霍尼韦尔打印修复偏移不正确的问题#
+		版本：2.4.3 【更新内容】#
+		1、JCPrint SDK 增加打印机筛选#
+		版本：2.4.1 【更新内容】#
+		1、JCPrint SDK 更新到3.1.6 增加精臣打印机B3S等型号支持#
+		版本：3.1.0 【更新内容】#
+		1、新增支持盈达与霍尼韦尔蓝牙打印功能
+	</updatelog>
+  </plugin>
+  <plugin plnId="4">
+    <name>.Net Framework 4.0</name>
+    <ext>.zip</ext>
+    <version>4.0.30128.1</version>
+    <plnpath>Content/Component/NetFramework/dotNetFx40_Full_x86_x64.zip</plnpath>
+    <cabpath></cabpath>
+    <clsid></clsid>
+    <publishdate></publishdate>
+    <updatedate></updatedate>
+    <description>
+      .Net Framework 4.0
+    </description>
+    <updatelog>
+    </updatelog>
+  </plugin>
+ <plugin plnId="8">
+    <name>SKT-LEANMES服务</name>
+    <ext>.zip</ext>
+    <version>3.0.10.7</version>
+    <plnpath>Content/Component/PrintingPlugin/SKT-LEANMES服务.zip</plnpath>
+    <cabpath></cabpath>
+    <clsid></clsid>
+    <publishdate></publishdate>
+    <updatedate></updatedate>
+    <description>
+     SKT服务安装程序(MES9.0打印服务,MES9.0打印自动更新服务,称重插件，烧录插件)
+    </description>
+    <updatelog>
+		版本：3.0.10.7 【更新内容】#
+		1、添加公司版权 #
+		版本：3.0.10.6 【更新内容】#
+		1、修改最新打印服务安装后后台服务名称 #
+		版本：3.0.10.5 【更新内容】#
+		1、调整更新兼容9.0接口token验证不通过401错误 #
+		版本：3.0.10.4 【更新内容】#
+		1、更新兼容安装多个版本打印服务 #
+		2、修改Socket通信端口为53817 #
+		3、修改安装后，后台程序服务名为SKTServiceMOM.exe，SKTUpdateServiceMOM.exe  #
+		版本：3.0.10.2 【更新内容】#
+		1、更新9.0接口请求token名 #
+		版本：3.0.10.1 【更新内容】#
+		1、为适配8.5.7与9.0统一，在基础版本2.0.13.0分支升级出版本3.0.10.1 #
+		2、取消打印服务前端修改接口地址，按打印请求自动后台记录地址 #
+		3、取消更新服务接口地址配置，下载地址配置，根据打印请求修改的参数传入 #
+		4、适配9.0与8.5.7版本系统，统一安装一个版本打印服务 #
+		版本：2.0.13.0 【更新内容】#
+		1、去除原版本1.0.0.46修复绘制同时虚线和实线时显示不正常BUG修改 #
+		版本：2.0.12.0 【更新内容】#
+		1、增加扫码枪接口 #
+		版本：2.0.11.0 【更新内容】#
+		1、烧录插件下载FTP增加是否启用Passive模式的配置 #
+		2、增加MES请求超时配置MesTimeout（单位秒）功能 #
+		3、修复加载系统无效文件提示NotFind的BUG #
+		版本：2.0.10.0 【更新内容】#
+		1、修复绘制同时虚线和实线时显示不正常得BUG #
+		版本：2.0.9.0 【更新内容】#
+		1、增加软件数字签名，避免误杀可能性 #
+		2、增加打印时是否自动设置默认打印机配置，解决多个打印机同时工作切换时打印配置混乱得问题 #
+		3、增加称重插件单位设置后才会验证得处理 #
+		版本：2.0.7.0 【更新内容】#
+		1、增加模板文件是否存在和0KB检测 #
+		2、解决codesoft打印释放模板文件导致的异常问题 #
+		版本：2.0.6.0 【更新内容】#
+		1、优化电子秤得数据接受方式，避免数据不完整导致得报错 #
+		2、提供电子秤配置(接受数据间隔、是否启用接受数据日志)，接受数据间隔可根据设备厂商得文档要求来，默认是200ms #
+		版本：2.0.5.0 【更新内容】#
+		1、彻底修复codesoft资源释放导致的异常退出问题#
+		2、优化codesoft和bartender提示，更方便故障排除#
+		版本：2.0.4.0 【更新内容】#
+		1、修复条码历史数据不兼容导致得条码变大得BUG#
+		2、取消打印机状态校验，避免系统COM组件缺失导致得卡顿问题#
+		版本：2.0.3.0 【更新内容】#
+		1、修复codesoft打印因为资源释放得问题异常报错得BUG#
+		版本：2.0.2.0 【更新内容】#
+		1、修改打印字体从系统字体中读取#
+		2、打印支持多字体，优化英文字体中文无法显示得问题#
+		3、增加新增字体自动安装功能（需要管理员权限）#
+		4、增加Bartender旧版本10.1 R3/R4得支持#
+		版本：1.0.0.53 【更新内容】#
+		1、增加扫码枪接口 #
+		版本：1.0.0.52 【更新内容】#
+		1、 修复MES请求超时配置MesTimeout计算不正确的BUG#
+		版本：1.0.0.51 【更新内容】#
+		1、 增加MES请求超时配置MesTimeout（单位秒）功能#
+		版本：1.0.0.50 【更新内容】#
+		1、 烧录插件下载FTP增加是否启用Passive模式的配置#
+		版本：1.0.0.48 【更新内容】#
+		1、增加单文件更新模式（解决模板文件全部下载导致的性能问题），使用时修改安装程序的Config配置IsEnableSingleUpdate为True，IsUpdate为False，并且修改MES代码参考项目(LeanWES_8_5_5_LF)的变更集合  8994 #
+		版本：1.0.0.46 【更新内容】#
+		1、修复绘制同时虚线和实线时显示不正常得BUG #
+		版本：1.0.0.45 【更新内容】#
+		1、增加打印时是否自动设置默认打印机配置，解决多个打印机同时工作切换时打印配置混乱得问题 #
+		版本：1.0.0.43 【更新内容】#
+		1、单位取值范围修改为非必填（支持电子秤不传单位场景） #
+		版本：1.0.0.41 【更新内容】#
+		1、修复条码为默认类型时，内容为空打印的条码不能显示为空白的BUG #
+		2、所有字体加入直流符号支持 #
+		版本：1.0.0.40 【更新内容】#
+		1、增加模板文件是否存在和0KB检测 #
+		2、解决codesoft打印释放模板文件导致的异常问题 #
+		3、增加更新时是否重启服务的配置 #
+		版本：1.0.0.36 【更新内容】#
+		1、优化电子秤得数据接受方式，避免数据不完整导致得报错#
+		2、提供电子秤配置(接受数据间隔、是否启用接受数据日志)，接受数据间隔可根据设备厂商得文档要求来，默认是200ms#
+		版本：1.0.0.35 【更新内容】#
+		1、彻底修复codesoft资源释放导致的异常退出问题#
+		2、优化codesoft和bartender提示，更方便故障排除#
+		版本：1.0.0.34 【更新内容】#
+		1、修复条码历史数据不兼容导致得条码变大得BUG#
+		2、退回不支持线宽设置得版本#
+		3、增加数字签名#
+		版本：1.0.0.32 【更新内容】#
+		1、修复codesoft打印因为资源释放得问题异常报错得BUG#
+		版本：1.0.0.31 【更新内容】#
+		1、增加默认配置Bartender版本和平台#
+		2、增加bartender版本10.1 R3/R4两个版本得支持#
+		3、增加bartender打印未注册时得提示功能#
+	</updatelog>
+  </plugin>
+  <plugin plnId="9">
+    <name>文件解析程序</name>
+    <ext>.rar</ext>
+    <version>8.5.5</version>
+    <plnpath>Content/Component/FileMonitor/FileMonitor.rar</plnpath>
+    <cabpath></cabpath>
+    <clsid></clsid>
+    <publishdate></publishdate>
+    <updatedate></updatedate>
+    <description>
+      SKT标准文件解析程序
+    </description>
+    <updatelog>
+    </updatelog>
+  </plugin>
+</plugins>

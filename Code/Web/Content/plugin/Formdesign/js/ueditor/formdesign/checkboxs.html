@@ -1,0 +1,533 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>复选框</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link href="../../../../../../Content/Main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="skt.uidesigner.style.css">
+    <script type="text/javascript" src="../dialogs/internal.js"></script>
+    <script type="text/javascript">
+        function createElement(type, name) {
+            var element = null;
+            try {
+                element = document.createElement('<' + type + ' name="' + name + '">');
+            } catch (e) { }
+            if (element == null) {
+                element = document.createElement(type);
+                element.name = name;
+            }
+            return element;
+        }
+
+
+        //checkboxs
+        function isIE() {
+            if (window.attachEvent) {
+                return true;
+            }
+            return false;
+        }
+        //moveRow在IE支持而在火狐里不支持！以下是扩展火狐下的moveRow
+        if (!isIE()) {
+            function getTRNode(nowTR, sibling) {
+                while (nowTR = nowTR[sibling]) if (nowTR.tagName == 'TR') break;
+                return nowTR;
+            }
+            if (typeof Element != 'undefined') {
+                Element.prototype.moveRow = function (sourceRowIndex, targetRowIndex) //执行扩展操作
+                {
+                    if (!/^(table|tbody|tfoot|thead)$/i.test(this.tagName) || sourceRowIndex === targetRowIndex) return false;
+                    var pNode = this;
+                    if (this.tagName == 'TABLE') pNode = this.getElementsByTagName('tbody')[0]; //firefox会自动加上tbody标签，所以需要取tbody，直接table.insertBefore会error
+                    var sourceRow = pNode.rows[sourceRowIndex],
+            targetRow = pNode.rows[targetRowIndex];
+                    if (sourceRow == null || targetRow == null) return false;
+                    var targetRowNextRow = sourceRowIndex > targetRowIndex ? false : getTRNode(targetRow, 'nextSibling');
+                    if (targetRowNextRow === false) pNode.insertBefore(sourceRow, targetRow); //后面行移动到前面，直接insertBefore即可
+                    else { //移动到当前行的后面位置，则需要判断要移动到的行的后面是否还有行，有则insertBefore，否则appendChild
+                        if (targetRowNextRow == null) pNode.appendChild(sourceRow);
+                        else pNode.insertBefore(sourceRow, targetRowNextRow);
+                    }
+                }
+            }
+        }
+
+        /*删除tr*/
+        function fnDeleteRow(obj) {
+            var oTable = document.getElementById("options_table");
+            while (obj.tagName != 'TR') {
+                obj = obj.parentNode;
+            }
+            oTable.deleteRow(obj.rowIndex);
+            if (oTable.rows.length == 1) {
+                var new_tr_node = oTable.insertRow(oTable.rows.length);
+                var new_td_node0 = new_tr_node.insertCell(0);
+                new_tr_node.className = 'ListTableEmptyDataRow';
+                new_td_node0.setAttribute('colspan', 3);
+                new_td_node0.innerHTML = '<td colspan="3">请点击“添加选项”按钮来为单选框添加选项。</td>';
+            }
+            updateClass();
+        }
+        /*上移*/
+        function fnMoveUp(obj) {
+            var oTable = document.getElementById("options_table");
+            while (obj.tagName != 'TR') {
+                obj = obj.parentNode;
+            }
+            var minRowIndex = 1;
+            var curRowIndex = obj.rowIndex;
+            if (curRowIndex - 1 >= minRowIndex) {
+                oTable.moveRow(curRowIndex, curRowIndex - 1);
+            }
+            updateClass();
+        }
+        /*下移*/
+        function fnMoveDown(obj) {
+            var oTable = document.getElementById("options_table");
+            while (obj.tagName != 'TR') {
+                obj = obj.parentNode;
+            }
+            var maxRowIndex = oTable.rows.length;
+            var curRowIndex = obj.rowIndex;
+            if (curRowIndex + 1 < maxRowIndex) {
+                oTable.moveRow(curRowIndex, curRowIndex + 1);
+            }
+            updateClass();
+        }
+
+        /*生成tr*/
+        function fnAddComboTr(obj) {
+            var oTable = document.getElementById('options_table');
+            //如果有空行要先删除空行
+            if (oTable.rows[1].className == 'ListTableEmptyDataRow')
+                oTable.deleteRow(oTable.rows[1].rowIndex);
+            var new_tr_node = oTable.insertRow(oTable.rows.length);
+            var new_td_node0 = new_tr_node.insertCell(0), new_td_node1 = new_tr_node.insertCell(1), new_td_node2 = new_tr_node.insertCell(2);
+
+            var sChecked = '';
+            if (obj.checked) sChecked = 'checked="checked"';
+            if (!obj.name) obj.name = '';
+            if (!obj.value) obj.value = '';
+            if (oTable.rows.length % 2 == 0)
+                new_tr_node.className = 'ListTableOddRow';
+            else
+                new_tr_node.className = 'ListTableEvenRow';
+
+            new_td_node0.innerHTML = '<td><input type="checkbox" ' + sChecked + '></td>';
+            new_td_node1.innerHTML = '<td><input type="text" value="' + obj.value + '" name="' + obj.name + '" placeholder="选项值"></td>';
+            new_td_node2.innerHTML = '<td><div class="btn-group"><a title="上移" class="btn btn-small btn-info" href="javascript:void(0);" onclick="fnMoveUp(this)"><i class="icon-white icon-arrow-up"></i></a><a title="下移" class="btn btn-small btn-info" href="javascript:void(0);" onclick="fnMoveDown(this)"><i class="icon-white icon-arrow-down"></i></a><a title="删除" class="btn btn-small btn-default" href="javascript:void(0);" onclick="fnDeleteRow(this)"><i class="icon-ban-circle"></i></a></div></td>';
+            return true;
+        }
+        function fnAdd() {
+            fnAddComboTr({
+                "checked": false,
+                "name": 'uictrl_NewField',
+                "value": ''
+            });
+        }
+        /*组合checkbox*/
+        function fnParseOptions(gChecked) {
+            var oTable = document.getElementById('options_table');
+            var nTr = oTable.getElementsByTagName('tr'), trLength = nTr.length, html = "";
+            for (var i = 0; i < trLength; i++) {
+                var inputs = nTr[i].getElementsByTagName('input');
+                if (inputs.length > 0) {
+                    if (!inputs[1].value) continue;
+                    var sChecked = '';
+                    if (inputs[0].checked) sChecked = 'checked="checked"';
+                    html += '<input name="' + inputs[1].name + '" value="' + inputs[1].value + '" ' + sChecked + ' type="checkbox"/>' + inputs[1].value + '&nbsp;';
+                    if (gChecked == 'uictrl_checked1')//竖排
+                        html += '<br/>';
+                }
+            }
+            return html;
+
+        }
+
+        function updateClass() {
+            var oTable = document.getElementById('options_table');
+            var nTr = oTable.getElementsByTagName('tr');
+            var trLength = nTr.length;
+            if (trLength > 2) {
+                for (var i = 1, j = trLength; i < j; i++) {
+                    if (i % 2 == 0) {
+                        nTr[i].className = "ListTableOddRow";
+                    }
+                    else {
+                        nTr[i].className = "ListTableEvenRow";
+                    }
+                }
+            }
+        }
+    </script>
+     <style type="text/css">
+    .btn-primary.active{
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+          padding:4px 12px;
+          line-height:20px;
+          font-size:14px;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  *background-color: #0044cc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #0044cc;
+  *background-color: #003bb3;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #003399 \9;
+}
+
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *margin-left: .3em;
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.btn-group:first-child {
+  *margin-left: 0;
+}
+
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+.btn-small {
+  padding: 2px 10px;
+  font-size: 11.9px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+
+
+.btn-info {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #49afcd;
+  *background-color: #2f96b4;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  color: #ffffff;
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+}
+
+.btn-info:active,
+.btn-info.active {
+  background-color: #24748c \9;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("images/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:focus > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > li > a:focus > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: url("images/glyphicons-halflings-white.png");
+}
+.icon-arrow-up {
+  background-position: -289px -96px;
+}
+
+.icon-arrow-down {
+  background-position: -312px -96px;
+}
+.icon-ban-circle {
+  background-position: -216px -96px;
+}
+
+
+    </style>
+</head>
+<body>
+<div class="infoTips">
+        带<em>*</em>为必填项目</div>
+    <table class="EditeContentTable" width="100%">
+        <tr>
+            <td class="Label2">
+                控件名称<em>*</em>
+            </td>
+            <td class="Field2">
+                <input type="text" id="uictrl_name" placeholder="必填项" class="TextBox" />
+            </td>
+            <td class="Label2">
+                排列方式
+            </td>
+            <td class="Field2">
+                <label class="radio" title="横排：选项一 选项二">
+                    <input id="uictrl_checked0" checked="checked" name="checked" type="radio">
+                    横排
+                </label>
+                <label class="radio" title="竖排：&#10;选项一&#10;选项二">
+                    <input id="uictrl_checked1" name="checked" type="radio">
+                    竖排
+                </label>
+            </td>
+        </tr>
+    </table>
+    <div class="clear5">
+    </div>
+    <table class="ListTable" id="options_table" width="100%">
+        <tr class="ListTableHeader">
+            <th width="15%">
+                选中
+            </th>
+            <th>
+                选项值
+            </th>
+            <th width="25%">
+                操作
+            </th>
+        </tr>
+        <tr class="ListTableEmptyDataRow">
+            <td colspan="3">
+                请点击“添加选项”按钮来为单选框添加选项。
+            </td>
+        </tr>
+    </table>
+    <div class="clear5">
+    </div>
+    <div>
+        <a title="添加选项" class="btn btn-primary" onclick="fnAdd();">添加选项</a></div>
+    <script type="text/javascript">
+        var oNode = null, thePlugins = 'checkboxs';
+        window.onload = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                oNode = UE.plugins[thePlugins].editdom;
+                var gTitle = oNode.getAttribute('title').replace(/&quot;/g, "\"");
+                $G('uictrl_name').value = gTitle;
+                var checked = oNode.getAttribute('uictrl_checked');
+                checked == 'uictrl_checked1' ? $G('uictrl_checked1').checked = true : $G('uictrl_checked0').checked = true;
+
+                var inputTags = oNode.getElementsByTagName('input');
+                var length = inputTags.length;
+                var aInputs = [];
+                for (var i = 0; i < length; i++) {
+                    //testEle.setAttribute("test","aaa"); // 自定义属性 设置  
+                    //testEle.attributes["test"].nodeValue; // 获得 
+                    if (inputTags[i].type == 'checkbox')
+                        fnAddComboTr(inputTags[i]);
+                }
+
+
+            }
+        }
+        dialog.oncancel = function () {
+            if (UE.plugins[thePlugins].editdom) {
+                delete UE.plugins[thePlugins].editdom;
+            }
+        };
+        dialog.onok = function () {
+            if ($G('uictrl_name').value == '') {
+                alert('控件名称不能为空');
+                $focus($G('uictrl_name'));
+                return false;
+            }
+            var gTitle = $G('uictrl_name').value.replace(/\"/g, "&quot;");
+            var gChecked = 'uictrl_checked0';
+            if ($G('uictrl_checked1').checked) gChecked = 'uictrl_checked1';
+
+
+            if (!oNode) {
+                try {
+                    var gTimestamp = new Date().getTime(); //相同的gTimestamp为同一组checkbox
+                    var options = fnParseOptions(gTitle, gChecked, gTimestamp);
+                    if (!options) {
+                        alert('请添加选项');
+                        return false;
+                    }
+                    //{|- 使用边界，防止用户删除了span标签，程序处理要把边界替换为空
+                    var html = '{|-<span uictrltype="checkboxs" title="' + gTitle + '" name="uictrl_NewField" id="' + $createid(thePlugins) + '" uictrldatasource="" uictrldatasourcetype="">';
+                    html += options;
+                    html += '</span>-|}';
+                    editor.execCommand('insertHtml', html);
+                    return true;
+                } catch (e) {
+                    try {
+                        editor.execCommand('error');
+                    } catch (e) {
+                        alert('控件异常！');
+                    }
+                    return false;
+                }
+            } else {
+                oNode.setAttribute('title', gTitle);
+                oNode.setAttribute('uictrl_checked', gChecked);
+                oNode.innerHTML = fnParseOptions(gChecked);
+                delete UE.plugins[thePlugins].editdom;
+                return true;
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿.center
+{
+    text-align: center;
+}
+.message
+{
+    font-size: 12px;
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
+}
+.ui-li-rightlabel
+{
+    float: right;
+    font-family:Microsoft YaHei UI;
+    color:#cccccc;
+}
+.ui-icon-myicon:after
+{
+    background-image: url("img/title.png"); /**你的图片，路径是相对于当前使用文件可以访问到的*/
+    background-size: 18px 18px;
+    border-radius: 0; /*图标形态，0=方形，不设置就是默认的圆形*/
+}
+.listview
+{
+}
+.listview li
+{
+    list-style: none;
+    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: left;
+}
+.listview li.lastli
+{
+    border-bottom: 1px solid #ddd;
+}
+.ui-mobile label
+{
+    font-weight: bolder;
+}

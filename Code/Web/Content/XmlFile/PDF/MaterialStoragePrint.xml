@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtMaterialStorageForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+
+      <row>
+        <column width="40%" align="left" font-size="13" font-style="bold">#[Company]#</column>
+        <column width="30%" align="center" font-size="18" font-style="bold">入 库 单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[MaterialStorageNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="40%" align="left">日期：#[CreateDateTime]#</column>
+        <column width="20%" align="left" >供应商编码：#[SuplierCode]#</column>
+        <column width="40%" align="right">供应商名称：#[VendorName]#</column>
+      </row>
+    </table>
+    
+    <data source="dtMaterialStorageForm1" spacing-before="0" font-size="9">
+      <column header="序号" width="4%" align="center" rownum="1"></column>
+      <column header="PO单号" width="10%" align="center" rownum="1">#[POCode]#</column>
+      <column header="物料编码" width="13%" align="center">#[ItemCode]#</column>
+      <column header="物料名称" width="13%">#[ItemName]#</column>
+		<column header="批次号" width="10%">#[LotCode]#</column>
+      <column header="物料规格" width="15%" align="center">#[ItemSpec]#</column>
+      <column header="入库数量" width="8%" align="center">#[Qty]#</column>
+      <column header="仓库" width="6%" align="center">#[CWhName]#</column>
+      <!--<column header="采购数" width="6%" align="center">#[ApplyQty]#</column>
+      <column header="已交数" width="6%" align="center">#[StorageQty]#</column>-->
+      <!--<column header="客户订单号" width="10%" align="center">#[CustomerNo]#</column>-->
+    </data>
+    <table spacing-before="0"  font-size="9">
+      <row>
+        <column width="30%" align="left">收料人：#[CreateBy]#</column>
+        <column width="30%" align="left">仓库主管：</column>
+        <column width="40%" align="left">签收人：</column>
+      </row>
+      <row>
+        <column width="30%" align="left">第三联：供应商（黄色）</column>
+        <column width="30%" align="left">第二联：货仓（白色）</column>
+        <column width="40%" align="left">第一联：财务（红色）</column>
+      </row>
+    </table>
+  </report>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+</file>

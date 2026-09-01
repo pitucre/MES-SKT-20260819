@@ -1,0 +1,1730 @@
+﻿/*=========================================
+* Author:   Alen Liu
+* Mail: shzalen@163.com
+* Date: 2014/03/01
+* Version:  1.0.1
+* Description:  系统主样式文件
+===========================================*/
+ html,html *
+ {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    list-style-type:none;
+}
+
+body
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    height:auto;
+}
+div,span,h1,h2,h3,h4,h5,h6,pre,code,em,small,strong,sub,sup,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label{border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    padding: 0;
+    outline: 0;
+    font-size:12px;background:transparent;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+fieldset,img,table{border:none}
+a
+{
+    text-decoration: none;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+a:link
+{
+    text-decoration: none;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    color:#0000FF;
+}
+a:hover
+{
+    text-decoration: underline;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+select
+{
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    border: 1px solid #aaaaaa;
+    padding: 1px 1px 1px 2px;
+    height:22px;
+    line-height:22px;
+    margin:3px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright:4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:  4px;
+}
+.StrongFont{ font-weight:bold;}
+/*表格样式 ==开始*/
+.gridTable
+{
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    overflow: auto;
+    z-index: 10000;
+    height: 80px;
+}
+.gridTable-header
+{
+    background-color: #4682b4;/*steelblue-> #4682b4*/
+    height: 25px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    z-index: 10001;
+    top: 0;
+}
+/*表格样式 ==结束*/
+
+/*清除样式*/
+.clear0
+{
+    clear: both;
+    height:0px;
+}
+.clear1
+{
+    clear: both;
+    height: 1px;   
+}
+.clear2
+{
+    clear: both;
+    height: 2px;   
+}
+.clear5
+{
+    clear: both;
+    height: 5px;
+}
+.clear30
+{
+    clear: both;
+    height: 35px;
+    padding:0px;
+    margin:0px;
+}
+/*表格样式 ==开始*/
+/*编辑页面表格 --开始*/
+.EditeContentTable,.ContentTable
+{
+    border: 1px solid #d3d3d3;
+    border-collapse: collapse;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+.Label
+{
+    height: 26px;
+    padding: 5px 5px 5px 0px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #f7f7f7;
+}
+.Field
+{
+     height: 26px;
+    background-color: #fff;
+    padding: 5px 0px 5px 5px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    
+}
+
+.Label1
+{
+    width: 40%;
+     height: 26px;
+    text-align: right;
+    padding: 5px 5px 5px 0px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #f7f7f7;
+}
+.Field1
+{
+    word-break: break-all;
+    width: 60%;
+     height: 26px;
+    text-align: left;
+    background-color: #fff;
+    padding: 5px 0px 5px 5px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.Label2
+{
+    width: 15%;
+     height: 26px;
+    text-align: right;
+    background-color: #f7f7f7;
+    padding: 5px 5px 5px 0px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.Field2
+{
+    width: 35%;
+     height: 26px;
+    text-align: left;
+    background-color: #fff;
+    padding: 5px 0px 5px 5px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    word-break: break-all;
+}
+.Label3
+{
+    width: 10%;
+     height: 26px;
+    text-align: right;
+    background-color: #f7f7f7;
+    padding: 3px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.Field3
+{
+    width: 23.3%;
+     height: 26px;
+    text-align: left;
+    background-color: #fff;
+    padding: 3px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    word-break: break-all;
+}
+.Label4
+{
+    width: 8%;
+     height: 26px;
+    text-align: right;
+    background-color: #f7f7f7;
+    padding: 3px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    white-space: nowrap;
+}
+.Field4
+{
+    width: 17%;
+     height: 26px;
+    text-align: left;
+    background-color: #fff;
+    padding: 3px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    white-space: nowrap;
+    word-break: break-all;
+}
+.Label5
+{
+    width: 6%;
+    height: 26px;
+    text-align: right;
+    background-color: #f7f7f7;
+    padding: 5px 5px 5px 0px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.Field5
+{
+    width: 14%;
+     height: 26px;  
+    text-align: left;
+    background-color: #fff;
+    padding: 5px 0px 5px 5px;
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+    word-break: break-all;
+}
+/*编辑页面表格 --结束*/
+/*表单控件样式 ==开始*/
+input[type="button"]
+{
+    border: solid 1px #2771b7;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 26px;
+    outline: none;
+    color:#ffffff;
+    padding:3px;
+    background:url(Images/btn_bg_common.gif) repeat-x;
+}
+
+input[type="button"]:hover
+{
+    border: solid 1px #2771b7;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 26px;
+    outline: none;
+    color:#ffffff;
+    background:url(Images/btn_bg_cm_hover.gif) repeat-x;
+}
+
+input[type="text"]
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    outline: none;
+    line-height:22px;
+    vertical-align:middle;
+    padding-left:2px;
+    padding-right:2px;
+    /*background:url(Images/input_text_bg.gif) repeat-x;*/
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright:4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:  4px;
+}
+input[type="text"]:hover
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /*background:url(Images/input_text_bg.gif) repeat-x;*/
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+input[type='text']:focus{background-color:#FFFFE0;}
+input.TextBox
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    outline: none;
+    line-height:22px;
+    vertical-align:middle;
+    padding-left:2px;
+    padding-right:2px;
+    /*background:url(Images/input_text_bg.gif) repeat-x;*/
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright:4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius:4px;
+    -webkit-border-bottom-left-radius:4px;
+    -webkit-border-bottom-right-radius:4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:  4px;
+}
+input.TextBox:hover
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /*background:url(Images/input_text_bg.gif) repeat-x;*/
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+input.TextBox:focus{background-color:#FFFFE0;}
+input.Password
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+     line-height:22px;
+    ime-mode: disabled;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+input.Password:hover
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+     line-height:22px;
+    ime-mode: disabled;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    background-color:#FFFFE0;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+input.Password:focus{background-color:#FFFFE0;}
+input.NumericBox
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    text-align: right;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+
+input.NumericBox50
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    text-align: right;
+    width: 30px;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    margin-left:3px;
+    margin-right:3px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+ /*2014-01-08*/
+input.DateTimeBox,input.DateTimeBox:hover
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    width: 80px;
+    padding-right:13px;
+    background:#f2f2f2;
+    padding-left:2px;
+     /*background: #f2f2f2 url(images/icon/icon.png) 100% 50% no-repeat;*/
+    outline: none;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+input.DateTimeBox.ShowTime{/*width:140px;*/}
+/*23:03*/
+input.TimeBox
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+    line-height:22px;
+    width: 35px;
+    background: #eff6fd;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+/*2014-01*/
+input.YearMonthBox
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+     line-height:22px;
+    width: 60px;
+    outline: none;
+    background: #eff6fd;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+/*2014*/
+input.YearBox
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 22px;
+     line-height:22px;
+    width: 30px;
+    outline: none;
+    background: #eff6fd;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+    
+.TextArea
+{
+    border: solid 1px #aaaaaa;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 45px;
+    width: 200px;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+.TextArea:hover
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 45px;
+    width: 200px;
+    outline: none;
+    padding-left:2px;
+    padding-right:2px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:  4px;
+}
+
+/*不限定按钮的宽度,自适应按钮文字。*/
+.AdaptButton
+{
+    border: solid 1px #d3d3d3;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 23px;
+    background: #f7f7f7;
+    line-height:23px;
+    text-align:center;
+    padding:0px 5px;
+    margin-left:-5px;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+
+input[type='button'].ButtonBox
+{
+    border: solid 1px #aaaaaa;
+    border-left-width: 0;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    color:#000000;
+    height: 24px;
+    line-height:24px;
+    width: 22px;
+    background: #f7f7f7;
+    vertical-align:middle;
+     
+    text-align:center;
+    padding:2px;
+    margin-left:-6px;
+    *margin-left:-6px;
+    /* Gecko browsers */
+    -moz-border-radius-topleft:0;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:0;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius:0;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius:0;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius:0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:0;
+}
+input[type='button'].ButtonBox:hover
+{
+    border: solid 1px #aaaaaa;
+    border-left-width: 0;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    height: 24px;
+    line-height:24px;
+    width: 22px;
+    color:#000000;
+    background: #d3d3d3;
+    vertical-align:middle;
+     
+    text-align:center;
+    padding:2px;
+    margin-left:-6px;
+    *margin-left:-6px;
+    cursor:pointer;
+    /* Gecko browsers */
+    -moz-border-radius-topleft:0;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomleft:0;
+    -moz-border-radius-bottomright: 4px;
+ 
+    /* Webkit browsers */
+    -webkit-border-top-left-radius:0;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius:0;
+    -webkit-border-bottom-right-radius: 4px;
+ 
+    /* W3C syntax */
+    border-top-left-radius:0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius:0;
+}
+
+.ErrTextBox
+{
+    border: solid 1px red;
+}
+/*表单控件样式 ==结束*/
+
+/*用户中心 ==开始*/
+.informationContainer
+{
+    background-color: White;
+    border: 0px solid #c4c4c4;
+    padding: 0px;
+    
+}
+.divHeader
+{
+    background: url(images/l_bg_hover.gif) repeat-x;
+    color: black;
+    height: 26px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    padding: 0px 0px 0px 10px;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-top:1px solid #d3d3d3;
+    position: relative;
+    margin:0px;
+    line-height:24px;
+}
+
+#searchField, #searchField input
+{
+    font-size: 12px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+}
+
+#searchField input:button
+{
+    border:1px solid #d3d3d3;
+    padding:3px 5px 3px 5px;
+}
+.divContent
+{
+    padding: 0px;
+}
+.eventRow
+{
+    background-color: #f7f7f7;
+    height: 35px;
+    padding:3px;
+}
+.oddRow
+{
+    background-color: #fff;
+    height: 35px;
+    padding:3px;
+}
+.hoverRow
+{
+    background-color: #ededed;
+    height: 35px;
+    padding:3px;
+}
+#historyVisited-content
+{
+    border-top: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+#favorite-content
+{
+    border-top: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+}
+#analisy-content
+{
+    border-top: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    text-align: center;
+}
+/*用户中心 ==结束*/
+
+/*工具栏 ==开始*/
+ .toolBar
+{
+    /*height: 27px;*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 2px 0px;
+    background: url(images/l_bg_hover.gif) repeat-x;
+    position:relative;
+    z-index: 1;
+    width:100%;
+}
+.toolbar-btn
+{
+   float: left;
+     padding: 1px 2px 1px 2px;
+     margin: 4px 0px 0px 5px; 
+     height:20px;
+      display:inline;
+       
+}
+.toolbar-btn:hover
+{
+    float: left;
+    padding: 1px 2px 1px 2px;
+     margin: 4px 0px 0px 5px; 
+     height:20px;
+    /*background: #0b82c6;*/
+    cursor: pointer;
+    
+    color:#2a85d8;
+    /* 
+    border-radius: 4px;
+    -moz-border-radius:4px; 
+    -webkit-border-radius:4px;
+*/
+}
+ 
+.btn-text
+{
+    float: left;
+    
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    line-height:18px;
+    *line-height:22px;
+    height:22px;
+    text-decoration:none;
+}
+.btn-text:hover
+{
+    float: left;
+    
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    line-height:18px;
+    *line-height:22px;
+    height:22px;
+     text-decoration:underline;
+}
+.btn-line
+{
+    background: url(images/updownsep.png) -41px 0px repeat-y;
+    width: 12px;
+    height: 16px;
+ 
+     float: left; vertical-align: middle; margin-top: 6px; 
+}
+
+.floatToolbar
+{
+   /* height: 28px;
+    position: absolute;
+    top: 0px;
+    left: 90px;*/
+}
+.floatbuttonsitem
+{
+    cursor: pointer;
+    font-weight: normal;
+    display: block;
+    padding: 4px 4px 4px 4px;
+    margin-top: -3px;
+}
+.floatbuttonsitem:hover
+{
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 4px;
+    -moz-border-radius:4px; 
+    -webkit-border-radius:4px;
+    display: block;
+    background-color: #0b82c6;
+    padding: 4px 4px 4px 4px;
+    margin-top: -3px;
+}
+.floatToolbar-line
+{
+    background: url(images/updownsep.png) -41px 0px repeat-y;
+    width: 10px;
+    height: 14px;
+    display: block;
+    margin-top: -2px;
+}
+.lineBlock
+{
+    height: 28px;
+    width: 4px;
+    background: #4985bf;
+    float: left;
+}
+ /*工具栏 ==结束*/
+
+/*列表样式 ==开始*/
+.ListTableContent
+{
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+.ListTableHeader th
+{
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 24px;
+    background-color: #d3d3d3;
+    padding: 3px;
+}
+.EventTableRow td
+{
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 24px;
+    background-color: #fff;
+    padding: 3px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+.OddTableRow td
+{
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 24px;
+    background-color: #f7f7f7;
+    padding: 3px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+/*列表样式 ==结束*/
+
+.Tips
+{
+    clear:both;
+    color: #810000;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    margin-left:3px;
+}
+
+.ErrorMessage
+{
+    clear:both;
+    color:#810000; /*#810000*/;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    margin-left:3px;
+}
+
+/*数据列表--Start*/
+.ListTable
+{
+    background-color: #d6d2c2;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    cursor: default;
+    padding: 0px;
+    border-collapse:collapse;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.ListTable tr td
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 1px solid  #d3d3d3;
+    border: 1px solid  #d3d3d3 !important; 
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    padding-top:3px;
+    *padding-top:1px;
+    padding-bottom:3px;
+    *padding-bottom:1px;
+    
+}
+
+.ListTableHeader
+{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    height: 21px;
+    overflow: hidden;
+    line-height: 18px;
+    color: #183152;
+    margin-left: 3px;
+    border: 0px;
+    padding: 0px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.ListTableHeader th
+{
+     
+    height: 19px;
+    border: 1px solid #d3d3d3;
+    background: #ececec url(images/gridheaderbg.jpg) repeat-x;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+ .ListTableEmptyDataRow
+{
+    
+    height: 28px;
+    line-height:28px;
+    text-align: center;
+    color: #810000;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    border:1px solid #FFEC8B;    
+    background:#FFFFE0;
+}
+.ListTableOddRow
+{
+    background-color: #fff;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+     height: 28px;
+    line-height:28px;
+}
+.ListTableEvenRow
+{
+    background-color: #F8F8F8;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 28px;
+    line-height:28px;
+}
+.ListTableHoverRow
+{
+    background: #eceff1;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+     height: 28px;
+    line-height:28px;
+}
+.ListTableSelectedRow
+{
+    background: #FFFFE0;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    height: 28px;
+    line-height:28px;
+}
+.ListTablePager
+{
+    background: #f7f7f7;/*#f7f7f7;url('images/tablistbg.png') repeat-x left bottom;*/
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    border:0px;
+    padding:0px;
+    margin:0px;
+    white-space:nowrap;
+    height:26px
+}
+.ListTablePager td table
+{
+    padding-left:0px; 
+    padding-top:0px; 
+    padding-bottom:0px; 
+    padding-right:0px; 
+    border-collapse:collapse;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    border-bottom:0;
+    *margin-top:-1px;
+} 
+.ListTablePager td table tr td 
+{
+    clear:both;                             
+    border: 0px solid  #d3d3d3;
+    border: 0px solid  #d3d3d3 !important; 
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+    padding-left:5px; 
+    padding-top:0px; 
+    padding-bottom:0px; 
+    padding-right:5px; 
+    }
+
+.ListTableTitle {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    background: #f7f7f7 url(images/l_bg_hover.gif) repeat-x; /*Headerbotton*/
+    border-top: 1px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    border-bottom: 0px solid #d3d3d3;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-left: 10px;
+    position: relative;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+.pagerText{}
+.pagerText img{ vertical-align:middle;}
+.pagerText span{ vertical-align:middle;}
+
+.ListTableFooter
+{
+    z-index:1000;
+    background-color:#eafbc9;
+    font-family:宋体;
+    font-weight:bold;
+    border:1px #719626 solid;
+    color:red;
+}
+/*数据列表--End*/
+/*必填标识*/
+em
+{
+    color: #F75000;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+/*错误图标*/
+.error
+{
+    background: url(images/icon/error.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+}
+
+/*编辑页面选项卡--Begin*/
+.infoTabs
+{
+    border-bottom: #d3d3d3 1px solid;
+    border-top: 0;
+    border-left:0;
+    border-right: 0;
+    height: 24px;
+    width: auto;
+    padding:0px;
+ }
+
+.infoTabs div
+{
+    background-color: #EAEAEA;
+    cursor: default;
+    color: #999999;
+    border-left: 0;
+    border-top: 0;
+    border-right: 1px solid gray;
+    border-bottom:  0;
+    font-weight: normal;
+    float: left;
+    padding: 5px;
+}
+
+.infoTabs .infoTabItem-selected
+{
+    background-color: #F4F4F4;
+    cursor: default;
+    color: #000000;
+    border-left: 1px solid #FFFFFF;
+    border-top: 0;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid #FFFFFF;
+    float: left;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.infoTabContent
+{
+}
+
+.infoTabContent div
+{
+    display: none;
+}
+
+.infoTabContent .infoTabContent-selected
+{
+    display: block;
+}
+.infoTabContent .infoTabContent-selected div
+{
+    display: block;
+}
+
+/*编辑页面选项卡--End*/
+
+/*标签字段样式--Begin*/
+.tree-root
+{
+    line-height: 20px;
+}
+.root-expand
+{
+    line-height: 20px;
+    width: 19px;
+    height: 20px;
+    float: left;
+    display: block;
+    background: url(images/tree.png)0px -4px no-repeat;
+}
+.root-collapsed
+{
+    line-height: 20px;
+    width: 19px;
+    height: 20px;
+    float: left;
+    display: block;
+    background: url(images/tree.png)-57px -4px no-repeat;
+}
+.root-text
+{
+    width: 200px;
+    line-height: 20px;
+    height: 20px;
+    float: left;
+    display: block;
+    font-weight: bold;
+}
+#tree-content
+{
+    position: absolute;
+    top: 20px;
+    left: 19px;
+    text-align: left;
+}
+.children-line
+{
+    line-height: 20px;
+    width: 19px;
+    height: 20px;
+    display: block;
+    float: left;
+    background: url(images/tree.png)-18px -4px no-repeat;
+}
+.foot-line
+{
+    line-height: 20px;
+    width: 19px;
+    height: 20px;
+    display: block;
+    float: left;
+    background: url(images/tree.png)-37px -4px no-repeat;
+}
+.item-text
+{
+    width: 200px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-left: 2px;
+    line-height: 20px;
+    cursor: default;
+}
+.tree-item
+{
+    clear: both;
+}
+.abc
+{
+    display: none;
+    float:right;
+    margin-right:10px;
+}
+.abc span
+{
+    cursor: pointer;
+}
+#fieldList span
+{
+    line-height: 20px;
+    vertical-align: middle;
+}
+.fieldFun
+{
+    line-height: 20px;
+    cursor: pointer;
+    height: 20px;
+    padding: 5px 3px 3px 10px;
+}
+.fieldFun:hover
+{
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    height: 20px;
+    padding: 5px 3px 3px 10px;
+}
+#fielddemo
+{
+    color: GRAY;
+    background-color: #f7f7f7;
+    border-top: 0px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    font-size: 11px;
+    padding-top: 6px;
+    padding-left: 10px;
+    position: relative;
+    height: 30px;
+    line-height:28px;
+
+}
+
+/*标签字段样式--End*/
+
+/*标签格式样式--Begin*/
+.label-format
+{
+    position: relative;
+    margin-top: 0px;
+}
+.labeldocument
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    padding: 5px;
+}
+.labelfield
+{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    padding: 5px;
+}
+.labelformat
+{
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    padding: 5px;
+}
+.label-format-title
+{
+    background-color: #eeeeee;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 20px;
+    font-weight: bold;
+    padding: 8px 0px 0px 5px;
+}
+.formatlabel
+{
+    border: 1px solid #cccccc;
+    background: #f7f7f7;
+    height: 26px;
+    line-height:24px;
+    padding:5px 0px 5px 0px;
+    margin-top: 2px;
+    margin-left:0px;
+    position:relative;
+}
+.formatlabel-hover
+{
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    height: 26px;
+    line-height:24px;
+    padding:5px 0px 5px 0px;
+    margin-top: 2px;
+    margin-left:0px;
+    position:relative;
+}
+.removelabelformat
+{
+    float: right;
+    margin-right: 0px;
+    cursor: pointer;
+    display: none;
+    position:absolute; 
+    right:10px;
+    top:7px;
+    width:18px;
+}
+ 
+/*标签格式样式--End*/
+
+/*路由Activity样式--Begin*/
+.actList
+{
+    border: 1px solid #999;
+    height: 20px;
+    width: 158px;
+    padding: 3px;
+    line-height: 20px;
+    background: #ccc;
+    cursor: pointer;
+    position: relative;
+}
+.actText
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 110px;
+}
+.actList-hover
+{
+    border: 1px solid #ccc;
+    height: 20px;
+    width: 158px;
+    padding: 3px;
+    line-height: 20px;
+    background: #eee;
+    cursor: pointer;
+}
+.actParam-selected
+{
+    border: 0px solid #ccc;
+    background: #ccc;
+    padding: 0px;
+}
+.actParam
+{
+    padding: 2px;
+    margin-top:5px;
+}
+.routeractfloatbar
+{
+    display: none;
+    height: 18px;
+    line-height: 18px;
+    width: 60px;
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    text-align: right;
+}
+
+.routeractfloatbar span{ margin:2px;}
+/*路由Activity样式--End*/
+.bar_expand
+{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: url(images/updownsep.png) -4px -7px no-repeat;
+    width: 10px;
+    height: 6px;
+    cursor: pointer;
+}
+.bar_expand_hide
+{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: url(images/updownsep.png) -24px -7px no-repeat;
+    width: 10px;
+    height: 6px;
+    cursor: pointer;
+}
+.button{ border:1px solid #d3d3d3;font-weight:bold; }
+.button:hover{ border:1px solid #cccccc; background:#faf9f9; cursor:pointer; font-weight:bold;}
+.LogBtn{border:none; background:url(images/lbtn_bg.png) no-repeat; cursor:pointer; width:100px; height:32px;}
+.LogBtn:hover{border:none; background:url(images/lbtn_bg_hover.png) no-repeat; cursor:pointer; width:100px; height:32px;}
+
+/*Search button ==开始*/
+input[type=button].SearchButton,input[type=submit].SearchButton{ border:none; color:#000000; outline:0px; background:url(images/btn_search.png) no-repeat; cursor:pointer; width:43px; height:23px; padding:2px; font-size:11px;}
+input[type=button].SearchButton:hover,input[type=submit].SearchButton:hover{ border:none;color:#000000; background:url(images/btn_search_hover.png) no-repeat; cursor:pointer; width:43px; height:23px; padding:2px;font-size:11px;}
+
+input[type=button].GoButton{ border:none; border-right:1px solid #c1c0c0; color:#000000; outline:0px; background:url(images/btn_search.png) no-repeat; cursor:pointer; width:30px; height:23px; padding:2px; font-size:11px;}
+input[type=button].GoButton:hover{border:none; border-right:1px solid #c1c0c0;color:#000000; background:url(images/btn_search_hover.png) no-repeat; cursor:pointer; width:30px; height:23px; padding:2px;font-size:11px;}
+/*Search button ==结束*/
+
+/*编辑页面信息提示图标 ==开始*/
+.information
+{
+    height:32px;margin-left:5px; display:block; float:left; width:16px; background:url(images/icon/information.png) no-repeat 35%
+}
+.information16
+{
+    height:16px;margin-left:5px; display:block; float:left; width:16px; background:url(images/icon/information.png) no-repeat 35%
+}
+.informationlink
+{
+    height:16px;margin-right:25px; display:block; float:right; width:16px; background:url(images/icon/information.png) no-repeat 35%
+}
+/*编辑页面信息提示图标 ==结束*/
+
+/*产品结构树形样式 ==开始*/
+.tree-collapsed{ background:url(theme/Metro/images/tree.gif) -6px -7px; width:15px; height:9px; float:left; margin-top:5px; margin-right:0px;}
+.tree-collapsed-folder{ background:url(theme/Metro/images/tree.gif) -25px -93px; width:15px; height:12px; float:left; margin-top:3px; margin-right:5px;}
+.tree-expanded{ background:url(theme/Metro/images/tree.gif) -6px -95px; width:15px; height:9px; float:left; margin-top:5px; margin-right:0px;}
+.tree-expanded-folder{ background:url(theme/Metro/images/tree.gif) -47px -93px; width:15px; height:12px; float:left; margin-top:3px; margin-right:5px;}
+.tree-noItem{ background:url(theme/Metro/images/tree.gif) -9px -200px; width:13px; height:18px; float:left; margin-top:0px; margin-right:0px;}
+.tree-noItem-icon{ background:url(theme/Metro/images/tree.gif) -25px -115px; width:15px; height:15px; float:left; margin-top:3px; margin-right:5px;}
+/*产品结构树形样式 ==结束*/
+
+/*提示图标 ==开始*/
+.tooltips{ background:url(images/icon/help.png); margin-left:3px; width:16px; height:16px; display:inline-block; line-height:12px; cursor:pointer;}
+/*提示图标 ==结束*/
+
+.loadingmessage{border:1px solid #cccccc; color:#800100; background:#f7f7f7; position:absolute;left:35%;top:35%; width:150px; height:30px; line-height:25px; text-align:center}
+
+.pageInfo
+{
+    text-align: left; 
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px; 
+    padding: 5px; 
+    white-space:nowrap;
+    border-top: 0px solid #d3d3d3;
+    border-left: 1px solid #d3d3d3; 
+    border-right: 1px solid #d3d3d3; 
+    border-bottom: 1px solid #d3d3d3;
+    height: 28px; 
+    line-height: 28px; 
+    background: #f7f7f7;
+}
+.inputerror{ border:1px solid red;}
+
+/*插件下载按钮 ==开始*/
+.Download_Pda:link{ background:url(images/pdaapp.png); width:157px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px; text-align:left; padding-left:13px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Pda:hover{ background:url(images/pdaapp_h.png); width:157px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:13px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Pda:visited{ background:url(images/pdaapp_h.png); width:157px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:13px; text-decoration:none; color:White; font-weight:bold;}
+
+.Download_Print:link{ background:url(images/printplug.png); width:152px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:20px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Print:hover{ background:url(images/printplug_h.png); width:152px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:20px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Print:visited{ background:url(images/printplug_h.png); width:152px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:20px; text-decoration:none; color:White; font-weight:bold;}
+
+.Download_Router:link{ background:url(images/router.png); width:162px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:10px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Router:hover{ background:url(images/router_h.png); width:162px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:10px; text-decoration:none; color:White; font-weight:bold;}
+.Download_Router:visited{ background:url(images/router_h.png); width:162px; height:43px; line-height:43px; font-size:16px; display:block; float:left; margin-right:10px;text-align:left; padding-left:10px; text-decoration:none; color:White; font-weight:bold;}
+/*插件下载按钮 ==结束*/
+
+/*列表页面高级搜索 ==开始*/
+.advanceSearch{display:none;}
+.advanceSearchLink:link{ text-decoration:none;}
+.advanceSearchLink:hover{ text-decoration:underline;}
+.advanceSearchLink:visited{ text-decoration:none;}
+/*列表页面高级搜索 ==结束*/
+
+input[type=checkbox]{vertical-align:middle; margin:3px; padding:0px; border:0px solid #d3d3d3;}
+input[type=radio]{vertical-align:middle; margin:3px; padding:0px; border:none;}
+.infoTips{margin:2px 0px 5px 0px; height:30px; border:1px solid #FFEC8B;  line-height:30px; background:#FFFFE0 url(images/icon/information.png) 5px 50% no-repeat; padding-left:25px; color:#2a85d8;}
+
+/*左右移动按钮，如用户角色分配页面 ==开始*/
+input[type=button].rightButton{background:url(images/icon/Arrow_Right.png) no-repeat; width:32px; height:32px; border:none; cursor:pointer;}
+input[type=button].leftButton{background:url(images/icon/Arrow_Left.png) no-repeat; width:32px; height:32px; border:none; cursor:pointer;}
+/*左右移动按钮 ==结束*/
+
+/*灰色线*/
+.line{ height:1px; background:#d3d3d3; padding:0px; margin:3px 0px;}
+
+/*隐藏*/
+.hide{clear:both; display:none;}
+
+.Padd7{padding-top: 7px;}
+.redBg{ background:red;}
+.noInstallPrintPlugin{ margin-bottom:2px;}
+.imgText{ vertical-align:middle;}
+
+/*消息提示样式*/
+.messageRed
+{
+    display:inline-block;
+    text-align:left;
+    color:Red;
+    font-weight:bolder;
+    font-size:16px;
+}
+.messageGreen
+{
+    display:inline-block;
+    text-align:left;
+    color:Green;
+    font-weight:bolder;
+    font-size:16px;
+}
+
+.header-fixed{
+    position:fixed;
+}

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="dtScrapForm">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="30%" align="left" font-style="bold">#[Company]#</column>
+        <column width="40%" align="center" font-size="18" font-style="bold">报  废  单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[ScrapNo]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="50%" align="left">日期：#[CreateDateTime]#</column>
+        <column width="15%"></column>
+        <column width="15%" align="left" >仓库：#[CWhName]#</column>
+        <column width="20%" align="left">报废单号：#[ScrapNo]#</column>
+       
+      </row>
+
+    </table>
+    <data source="dtScrapForm1" spacing-before="0" font-size="9">
+      <column header="序号" width="5%" align="center" rownum="1"></column>
+      <column header="物料编码" width="13%" align="center">#[ItemCode]#</column>
+      <column header="物料描述" width="18%">#[ItemName]#</column>
+      <column header="单位" width="6%" align="center">#[Units]#</column>
+      <column header="仓位" width="6%" align="center">#[BarCode]#</column>
+
+      <column header="申请转移数量" width="6%" align="center">#[ApplyQty]#</column>
+      <column header="实际转移数量" width="6%" align="center">#[FinishQty]#</column>
+      <column header="备注" width="10%" align="center">#[Remark]#</column>
+    </data>
+    <table spacing-before="0"  font-size="9">
+      <row>
+        <column width="50%" align="left">制单人：#[SingleMan]#</column>
+        <column width="50%" align="left">调拨审核：#[Auditing]#</column>
+      </row>
+      <row>
+        <column width="50%" align="left">调入仓管员：#[ReceiveUser]#</column>
+        <column width="50%" align="left">调出仓管员：#[SingleMan]#</column>
+      </row>
+
+    </table>
+  </report>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+</file>

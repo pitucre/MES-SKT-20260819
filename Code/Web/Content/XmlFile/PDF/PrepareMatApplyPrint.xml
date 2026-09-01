@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="Prepare">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="40%" align="right" font-size="18" font-style="bold">生产备料单</column>
+        <column width="30%" align="right" barcode-type="barcode128" barcode-width="130" barcode-height="40"  barcode-content="#[PMCode]#" ></column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="100%" align="left">领料单号：#[PMCode]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="25%" align="left">生产部门：#[DepCode]#</column>
+        <column width="25%" align="left">仓库：#[WhCode]#</column>
+        <column width="25%" align="left">使用日期：#[PMDate]#</column>
+        <column width="25%" align="left">创建日期：#[CreateDateTime]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="100%" align="left">备注：#[Remark]#</column>
+      </row>
+    </table>
+    <data source="PrepareMember" spacing-before="0" font-size="9">
+      <column header="序号" width="5%" align="center" rownum="1"></column>
+      <column header="物料编码" width="10%" align="center">#[ItemCode]#</column>
+      <column header="物料名称" width="20%">#[ItemName]#</column>
+      <column header="需求数量" width="5%" align="center">#[SourceQty]#</column>
+      <column header="备料数量" width="5%" align="center">#[Qty]#</column>
+      <column header="备注" width="5%" align="center">#[Remarks]#</column>
+    </data>
+  </report>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+</file>

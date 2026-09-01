@@ -1,0 +1,3094 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessoriesAlreadySetTime" xml:space="preserve">
+    <value>AccessoriesAlreadySetTime</value>
+  </data>
+  <data name="AccessoriesCancel" xml:space="preserve">
+    <value>AccessoriesCancel</value>
+  </data>
+  <data name="AccessoriesCountEmpty" xml:space="preserve">
+    <value>Accessories Count Cannot Empty</value>
+  </data>
+  <data name="AccessoriesEmpty" xml:space="preserve">
+    <value>AccessoriesEmpty</value>
+  </data>
+  <data name="AccessoriesLeaveTime" xml:space="preserve">
+    <value>AccessoriesLeaveTime</value>
+  </data>
+  <data name="AccessoriesNoThaw" xml:space="preserve">
+    <value>AccessoriesNoThaw</value>
+  </data>
+  <data name="AccessoriesNowThaw" xml:space="preserve">
+    <value>AccessoriesNowThaw</value>
+  </data>
+  <data name="AccessoriesNowUse" xml:space="preserve">
+    <value>AccessoriesNowUse</value>
+  </data>
+  <data name="AccessoriesOverdue" xml:space="preserve">
+    <value>AccessoriesOverdue</value>
+  </data>
+  <data name="AccessoriesThawAfter" xml:space="preserve">
+    <value>AccessoriesThawAfter</value>
+  </data>
+  <data name="AccessoriesUseTime" xml:space="preserve">
+    <value>AccessoriesUseTime</value>
+  </data>
+  <data name="AccountIsLoginInOtherLocation" xml:space="preserve">
+    <value>The account is login in another computer, one account only login system on one computer at the same time.</value>
+  </data>
+  <data name="ActivityFunctionCodeMustDefineAfunction" xml:space="preserve">
+    <value>Activity Function Code Must Define A function.</value>
+  </data>
+  <data name="ActivityFunctionCodeNotAllowEmpty" xml:space="preserve">
+    <value>Activity Function Code Not Allow Empty.</value>
+  </data>
+  <data name="ActivityFunctionNameNotMapBaseInfoFunctionName" xml:space="preserve">
+    <value>Main Function Name Not Map BaseInfo Main Function Name.</value>
+  </data>
+  <data name="ActivityFunctionParametersNotMapParametersList" xml:space="preserve">
+    <value>Main Function Parameters Not Map Parameters List.</value>
+  </data>
+  <data name="AC_CheckNo_Invalid" xml:space="preserve">
+    <value>Not find this  code ,please scan again!</value>
+  </data>
+  <data name="AC_DialogCloseMessage" xml:space="preserve">
+    <value>【----Do you want to stop？----】</value>
+  </data>
+  <data name="AC_DR_CanNotCloseWin" xml:space="preserve">
+    <value>Can Close Window, Please Choose a Failure to Repair!</value>
+  </data>
+  <data name="AC_DR_DuplicateNCDataRecord" xml:space="preserve">
+    <value>The code has been added</value>
+  </data>
+  <data name="AC_DR_DuplicateRepairRecord" xml:space="preserve">
+    <value>Duplicate Repair Record Detected!</value>
+  </data>
+  <data name="AC_DR_FailToSaveRepairData" xml:space="preserve">
+    <value>Fail to Save Repair Data, please try again!</value>
+  </data>
+  <data name="AC_DR_PleaseChooseDefect" xml:space="preserve">
+    <value>Please Choose a Defect Code from List!</value>
+  </data>
+  <data name="AC_DR_PleaseChooseNC" xml:space="preserve">
+    <value>Please Choose a Record from NC List!</value>
+  </data>
+  <data name="AC_DR_PleaseChooseRepair" xml:space="preserve">
+    <value>Please Choose a Repair Code from List!</value>
+  </data>
+  <data name="AC_LMQty1" xml:space="preserve">
+    <value>Quantity is invalidated, Not greater than WO.</value>
+  </data>
+  <data name="AC_LMQty2" xml:space="preserve">
+    <value>Quantity is invalidated, Not greater than Input.</value>
+  </data>
+  <data name="AC_MPIPQC_remind01" xml:space="preserve">
+    <value>Invalid container number or container isn't locked by user!</value>
+  </data>
+  <data name="AC_MPIPQC_remind02" xml:space="preserve">
+    <value>Board basket or Cabinet data initial successfully!</value>
+  </data>
+  <data name="AC_MPIPQC_remind03" xml:space="preserve">
+    <value>Invalid container number and hasn't data with it!</value>
+  </data>
+  <data name="AC_MPIPQC_remind04" xml:space="preserve">
+    <value>Scan Barcode &amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="AC_MPIPQC_remind05" xml:space="preserve">
+    <value>doesn't exist &amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="AC_MPIPQC_remind06" xml:space="preserve">
+    <value>&amp;nbsp;&amp;nbsp;in the designated container</value>
+  </data>
+  <data name="AC_MPIPQC_remind07" xml:space="preserve">
+    <value>The first times scan IPQC barcode successful,please scan next times.</value>
+  </data>
+  <data name="AC_MPIPQC_remind08" xml:space="preserve">
+    <value>having already deal with badness code of IPQC, please continue to the next operation.</value>
+  </data>
+  <data name="AC_MPIPQC_remind09" xml:space="preserve">
+    <value>The First and the second scan  is different for IPQC barcode, please scan the badness code!</value>
+  </data>
+  <data name="AC_MPIPQC_remind10" xml:space="preserve">
+    <value>Two times scanning IPQC barcode is the same, please continue to the next operation.</value>
+  </data>
+  <data name="AC_MPIPQC_remind11" xml:space="preserve">
+    <value>Scanning times of sampling number is not enough, badness code couldn't directly be scanned!
+</value>
+  </data>
+  <data name="AC_MPIPQC_remind12" xml:space="preserve">
+    <value>Badness code of IPQC validation is successful, please continue to check.</value>
+  </data>
+  <data name="AC_MPIPQC_remind13" xml:space="preserve">
+    <value>Badness code of IPQC is invalidation,Please check the it again.</value>
+  </data>
+  <data name="AC_MPIPQC_remind14" xml:space="preserve">
+    <value>Sampling number does not allow null values for IPQC!</value>
+  </data>
+  <data name="AC_MPIPQC_remind15" xml:space="preserve">
+    <value>No checking record! Please first for checking!</value>
+  </data>
+  <data name="AC_MPIPQC_remind16" xml:space="preserve">
+    <value>Data processing is successful, please continue!</value>
+  </data>
+  <data name="AC_MPIPQC_remind17" xml:space="preserve">
+    <value>Do not allow the repeated sampling</value>
+  </data>
+  <data name="AC_MPIPQC_remind18" xml:space="preserve">
+    <value>All sampling inspection is successful, Couldn't click on the Lot Good button.</value>
+  </data>
+  <data name="AC_MPIPQC_remind19" xml:space="preserve">
+    <value>All sampling inspection is failure, Couldn't click on the Lot Badness button.</value>
+  </data>
+  <data name="AC_MPIPQC_UISN" xml:space="preserve">
+    <value>Please scan the correct container number or Parent board number!</value>
+  </data>
+  <data name="AC_MSOBA_Carton_Not_Exist" xml:space="preserve">
+    <value>Scan No. is not exist!</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OK" xml:space="preserve">
+    <value>Carton is OK!</value>
+  </data>
+  <data name="AC_MSOBA_Carton_OpeID_error" xml:space="preserve">
+    <value>Carton production status is not correctly!</value>
+  </data>
+  <data name="AC_MSOBA_Carton_status_error" xml:space="preserve">
+    <value>Carton status is not closed!</value>
+  </data>
+  <data name="AC_MSOBA_remind01" xml:space="preserve">
+    <value>Carton barcode scanning has completed, start sampling inspection, please enter the inspection number.</value>
+  </data>
+  <data name="AC_MSOBA_remind02" xml:space="preserve">
+    <value>The end of the carton barcode scanning  by enter 0000, began to undertake checking.</value>
+  </data>
+  <data name="AC_MSOBA_remind03" xml:space="preserve">
+    <value>the first times barcode scan successfully, please begin the second times.</value>
+  </data>
+  <data name="AC_MSOBA_remind04" xml:space="preserve">
+    <value>Please inspect once again.</value>
+  </data>
+  <data name="AC_MSOBA_remind05" xml:space="preserve">
+    <value>Inspect successfully,Please continue.</value>
+  </data>
+  <data name="AC_MSOBA_remind06" xml:space="preserve">
+    <value>Is invalid OBA badness code, please scan once again!</value>
+  </data>
+  <data name="AC_MSOBA_remind07" xml:space="preserve">
+    <value>Please scan OBA badness code.</value>
+  </data>
+  <data name="AC_MSOBA_remind08" xml:space="preserve">
+    <value>The sum number that has been scanning the quantity and carton</value>
+  </data>
+  <data name="AC_MSOBA_remind09" xml:space="preserve">
+    <value>,It is not  greater system Batch quantity.</value>
+  </data>
+  <data name="AC_MSOBA_remind10" xml:space="preserve">
+    <value>OBA Inspection number is not null.</value>
+  </data>
+  <data name="AC_MSOBA_remind11" xml:space="preserve">
+    <value>OBA inspect successfully,please continue.</value>
+  </data>
+  <data name="AC_MSOBA_remind12" xml:space="preserve">
+    <value>Please scan inspect barcode.</value>
+  </data>
+  <data name="AC_MSOBA_remind13" xml:space="preserve">
+    <value>Sampling data saved successfully, please scan the carton barcode.</value>
+  </data>
+  <data name="AC_MSOBA_SNnoLot" xml:space="preserve">
+    <value>SN is not exist specified the Lotno!</value>
+  </data>
+  <data name="AC_MSOBA_SNuseinLot" xml:space="preserve">
+    <value>the SN is inspected in the Lotno!</value>
+  </data>
+  <data name="AC_MSOBA_SN_OK" xml:space="preserve">
+    <value>SN is OK!</value>
+  </data>
+  <data name="AC_NotExistsTheNCCodeInCurrentGroup" xml:space="preserve">
+    <value>Not Exists The NC Code In Current Group.</value>
+  </data>
+  <data name="AC_NumberOnly" xml:space="preserve">
+    <value>Number Only.</value>
+  </data>
+  <data name="AC_OBA_ItemNotSetOBA" xml:space="preserve">
+    <value>The Item does not set OBA Lot and Sample Size!</value>
+  </data>
+  <data name="AC_PleaseAddNCCode" xml:space="preserve">
+    <value>Please Add NC Code.</value>
+  </data>
+  <data name="AC_PleaseChooseNCCode" xml:space="preserve">
+    <value>Please Choose NC Code.</value>
+  </data>
+  <data name="AC_PleaseSelectOneRecord" xml:space="preserve">
+    <value>Please Select One Record.</value>
+  </data>
+  <data name="AC_RepairNo_Invalid" xml:space="preserve">
+    <value>Not find this code,pleasee scan again!</value>
+  </data>
+  <data name="AC_Scan_BoxNo" xml:space="preserve">
+    <value>Please  Scan BoxNumber!</value>
+  </data>
+  <data name="AC_SystemAddDataAutomaticAndPassed" xml:space="preserve">
+    <value>System Added Data Automatic And Already Passed.</value>
+  </data>
+  <data name="AC_TheOperationHasNoNCCodeGroup" xml:space="preserve">
+    <value>Current Operation Has No NC Code Group.</value>
+  </data>
+  <data name="AddressLengthError" xml:space="preserve">
+    <value>Address length can not more than 30 chars!</value>
+  </data>
+  <data name="AdminCannotChangePassword" xml:space="preserve">
+    <value>Admin cannot change password in the front.</value>
+  </data>
+  <data name="AlradyExistsIntheList" xml:space="preserve">
+    <value>Alrady Exists In the List.</value>
+  </data>
+  <data name="AlreadyExistOpenCarton" xml:space="preserve">
+    <value>Already exist opened carton, change carton please re-enter the packing page.</value>
+  </data>
+  <data name="AlreadyHasResourceType" xml:space="preserve">
+    <value>Already Has Resource Type.</value>
+  </data>
+  <data name="Areyousureremovethispart" xml:space="preserve">
+    <value>Are you sure remove this part?</value>
+  </data>
+  <data name="AssignSuccess" xml:space="preserve">
+    <value>Assign Successed!</value>
+  </data>
+  <data name="AssignUserToRoleFailed" xml:space="preserve">
+    <value>Assign User To Role Failed!</value>
+  </data>
+  <data name="Audit_SN_Already_Exist" xml:space="preserve">
+    <value>SerialNumber already pass Audit!</value>
+  </data>
+  <data name="Audit_SN_Not_Exist" xml:space="preserve">
+    <value>SerialNumber is not in this batch!</value>
+  </data>
+  <data name="BoardNumNotZero" xml:space="preserve">
+    <value>The Board number cannot be less than or equal zero!</value>
+  </data>
+  <data name="BoardQTYEmpty" xml:space="preserve">
+    <value>BoardQTY Cannot Empty!</value>
+  </data>
+  <data name="BomInProcessing" xml:space="preserve">
+    <value>Bom is in process, cannot be modify.</value>
+  </data>
+  <data name="BomNameIsRequired" xml:space="preserve">
+    <value>Bom name is required.</value>
+  </data>
+  <data name="BOMStatusNotAllowedShopOrderRelease" xml:space="preserve">
+    <value>BOM Status Not Allowed Shop Order Release.</value>
+  </data>
+  <data name="BoxHasTheGRNWei" xml:space="preserve">
+    <value>The Box  has the material, please don't scan it!</value>
+  </data>
+  <data name="BoxScanOnlyGRN" xml:space="preserve">
+    <value>CartonNo already scan compelety,please scan GRN!</value>
+  </data>
+  <data name="BrowserVersionSug" xml:space="preserve">
+    <value>Using Microsoft Internet explorer 8 or above, DPI 1366x768, to get the best experience.</value>
+  </data>
+  <data name="CartonBeClosedSuccessful" xml:space="preserve">
+    <value>The carton has been closed successfully.</value>
+  </data>
+  <data name="CartonCannotBeClosed" xml:space="preserve">
+    <value>The carton is empty, and it cannot be closed.</value>
+  </data>
+  <data name="CartonInfoIsEmpty" xml:space="preserve">
+    <value>The carton information is empty, please confirm the vendor is correct, and then use the Re-print to print the carton label.</value>
+  </data>
+  <data name="CartonIsClosed" xml:space="preserve">
+    <value>the carton is closed.</value>
+  </data>
+  <data name="CartonIsEmpty" xml:space="preserve">
+    <value>the GRN carton is not empty, cannot be deleted.</value>
+  </data>
+  <data name="CartonIsOpen" xml:space="preserve">
+    <value>GRN carton is open, should be closed firstly!</value>
+  </data>
+  <data name="TurnoverNumberImportFail" xml:space="preserve">
+    <value>Please select a format for. TXT file and make sure the barcode format correct!</value>
+  </data>
+  <data name="ImportSuccess" xml:space="preserve">
+    <value>Import success</value>
+  </data>
+  <data name="CertAssignToUser" xml:space="preserve">
+    <value>Certification Assign To User,Can Not Delete!</value>
+  </data>
+  <data name="CertificationEmpty" xml:space="preserve">
+    <value>Certification cannot empty!</value>
+  </data>
+  <data name="CertificationExists" xml:space="preserve">
+    <value>The Certification already exists！</value>
+  </data>
+  <data name="CertificationTypeEmpty" xml:space="preserve">
+    <value>Certification type must be selected!</value>
+  </data>
+  <data name="ChangePwdSuccessed" xml:space="preserve">
+    <value>Change password successed!</value>
+  </data>
+  <data name="ChangeSNStepFail" xml:space="preserve">
+    <value>Change SN Step Fail !</value>
+  </data>
+  <data name="ChangeSNStepSuccess" xml:space="preserve">
+    <value>Change SN Step In Success !</value>
+  </data>
+  <data name="ChoiceLineWei" xml:space="preserve">
+    <value>LoadingList can't be empty, please  choice  line !</value>
+  </data>
+  <data name="ChoiceOrderWei" xml:space="preserve">
+    <value>LoadingList not  belongs to the choice order , please select  order !</value>
+  </data>
+  <data name="CirBoxNotExists" xml:space="preserve">
+    <value>This  BoxNumber    Not  Exists!</value>
+  </data>
+  <data name="CirBoxStatus" xml:space="preserve">
+    <value>This  CartonNumber  Is    Invalid!</value>
+  </data>
+  <data name="CirContainerNumberFormatError" xml:space="preserve">
+    <value>Circulation Container Number Can only contain letters and numbers and underline. Also length can't more than 50</value>
+  </data>
+  <data name="CirContainerNumberNotNull" xml:space="preserve">
+    <value>Circulation Container Number Not Null</value>
+  </data>
+  <data name="ClearScreen" xml:space="preserve">
+    <value>Clear screen just clear the content of the product structure!</value>
+  </data>
+  <data name="ComfirmToQuit" xml:space="preserve">
+    <value>Are you sure to quit system?</value>
+  </data>
+  <data name="ConfirmAllFaild" xml:space="preserve">
+    <value>Confirm All Faild?</value>
+  </data>
+  <data name="ConfirmAllPass" xml:space="preserve">
+    <value>Confirm All Pass?</value>
+  </data>
+  <data name="ConfirmCertExpirationDate" xml:space="preserve">
+    <value>Please confirm the certification expiration date\nStart Date:{0}\nExpiration Date:{1}\nIf they are right please click [OK] or click[NO]and then select the right date.</value>
+  </data>
+  <data name="ConfirmChooseToPass" xml:space="preserve">
+    <value>Confirm Choose To Pass?</value>
+  </data>
+  <data name="ConfirmClearScreen" xml:space="preserve">
+    <value>Confirm to clear the screen?</value>
+  </data>
+  <data name="ConfirmCloseCarton" xml:space="preserve">
+    <value>Carton sn:{0}\nPack item quantity:{1}\nConfirm to close the carton?</value>
+  </data>
+  <data name="ConfirmContainerRemoveSN" xml:space="preserve">
+    <value>Be sure remove SFC from container?</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure to delete the record?</value>
+  </data>
+  <data name="ConfirmDeletePck" xml:space="preserve">
+    <value>Confirm delete the picking list?</value>
+  </data>
+  <data name="ConfirmDelPckGrn" xml:space="preserve">
+    <value>Confirm delete the GRN in the current picking list line?</value>
+  </data>
+  <data name="ConfirmGoOnReturnMaterial" xml:space="preserve">
+    <value>confirm to go on?</value>
+  </data>
+  <data name="ConfirmIssueFinished" xml:space="preserve">
+    <value>Confirm issue material finished?</value>
+  </data>
+  <data name="ConfirmMoveSNStep" xml:space="preserve">
+    <value>Be sure to move SN current step?</value>
+  </data>
+  <data name="ConfirmNewPwd" xml:space="preserve">
+    <value>Please enter a new password again!</value>
+  </data>
+  <data name="ConfirmOutOfStore" xml:space="preserve">
+    <value>Confirm let GRN out of store?</value>
+  </data>
+  <data name="ConfirmPacktoThisCarton" xml:space="preserve">
+    <value>Confirm pack to this carton?</value>
+  </data>
+  <data name="ConfirmPrintTheseGRNs" xml:space="preserve">
+    <value>Confirm Print These GRNs!</value>
+  </data>
+  <data name="ConfirmResetPwd" xml:space="preserve">
+    <value>Are you sure to reset the selected users's password to 123456</value>
+  </data>
+  <data name="ConfirmReUser" xml:space="preserve">
+    <value>Confirm to re-use the selected picking list which is deleted.</value>
+  </data>
+  <data name="ConfirmSetLineWei" xml:space="preserve">
+    <value>Are you sure  set the   line?</value>
+  </data>
+  <data name="ConfirmSetupLineWei" xml:space="preserve">
+    <value>This line maybe  Material Validate,Sure set the  line?</value>
+  </data>
+  <data name="ConfirmToCloseTheCarton" xml:space="preserve">
+    <value>Confirm to close the carton?</value>
+  </data>
+  <data name="ConfirmToDelActivity" xml:space="preserve">
+    <value>Confirm to delete the activity?</value>
+  </data>
+  <data name="ConfirmToDeleteCarton" xml:space="preserve">
+    <value>Confirm to delete the selected carton?\n it is unrecoverable,please be careful.</value>
+  </data>
+  <data name="ConfirmToNewCartonSN" xml:space="preserve">
+    <value>There are some opened cartons, still to create a new carton sn?</value>
+  </data>
+  <data name="ConfirmToRemoveLabelFormat" xml:space="preserve">
+    <value>Are you sure to remove the label field from this label?</value>
+  </data>
+  <data name="ConfirmToReturnToKitting" xml:space="preserve">
+    <value>Are you sure to return the material to Kitting area?</value>
+  </data>
+  <data name="ConfirmToReturnToStore" xml:space="preserve">
+    <value>Are you sure to return the material to store?</value>
+  </data>
+  <data name="ConfirmToReturnToVendor" xml:space="preserve">
+    <value>Confirm to return the GRN to vendor?</value>
+  </data>
+  <data name="ConfirmToSplit" xml:space="preserve">
+    <value>Confirm To Split Material?</value>
+  </data>
+  <data name="ConfirmToUnpack" xml:space="preserve">
+    <value>confirm to unpack the carton?</value>
+  </data>
+  <data name="ConfirmToUpdateActSeq" xml:space="preserve">
+    <value>Confirm to update the activity sequence?</value>
+  </data>
+  <data name="ConfirmUnlockUser" xml:space="preserve">
+    <value>Are you sure to unlock the selected users</value>
+  </data>
+  <data name="ContainerCloseConfirm" xml:space="preserve">
+    <value>Are you sure close this container?</value>
+  </data>
+  <data name="ContainerEmpty" xml:space="preserve">
+    <value>Container Name Cannot Empty!</value>
+  </data>
+  <data name="ContainerNoMaterial" xml:space="preserve">
+    <value>The Container  no  material!</value>
+  </data>
+  <data name="ContainerUnit_Already_Exist" xml:space="preserve">
+    <value>ContainerUnit Already Exist!</value>
+  </data>
+  <data name="ContainerUnit_Exist_In_Another" xml:space="preserve">
+    <value>ContainerUnit Exist  In Another!</value>
+  </data>
+  <data name="ContainerUnit_Saved" xml:space="preserve">
+    <value>Containerunit  save success!</value>
+  </data>
+  <data name="ContinueFeedSuccess" xml:space="preserve">
+    <value>Continue Feed Success!</value>
+  </data>
+  <data name="CreateSN_Already_Exist" xml:space="preserve">
+    <value>Serial Number already exists!</value>
+  </data>
+  <data name="CreateSN_OK" xml:space="preserve">
+    <value>Serial number is created!</value>
+  </data>
+  <data name="CreateSN_PO_Used_Out" xml:space="preserve">
+    <value>Order quantity is used out!</value>
+  </data>
+  <data name="CreateSN_Router_Invalid" xml:space="preserve">
+    <value>No router linked to order or item!</value>
+  </data>
+  <data name="CustomerAddress1Empty" xml:space="preserve">
+    <value>CustomerAddress1 Empty</value>
+  </data>
+  <data name="CustomerNameEmpty" xml:space="preserve">
+    <value>Customer Name Empty</value>
+  </data>
+  <data name="CustomerRemarkeEmpty" xml:space="preserve">
+    <value>Customer Name Empty</value>
+  </data>
+  <data name="CycleTimeGreaterPrewarning" xml:space="preserve">
+    <value>Interval must be greater than prewarning</value>
+  </data>
+  <data name="DataFieldSequenceExist" xml:space="preserve">
+    <value>DataField Sequence already exist</value>
+  </data>
+  <data name="DataTypeEmpty" xml:space="preserve">
+    <value>Data Type cannot empty!</value>
+  </data>
+  <data name="DataTypeMasterSaveFirst" xml:space="preserve">
+    <value>Please Save Master Data Type First.</value>
+  </data>
+  <data name="DateBothEmpty" xml:space="preserve">
+    <value>日期都必须为空！</value>
+  </data>
+  <data name="DateCodeDismatch" xml:space="preserve">
+    <value>DateCode dismatch</value>
+  </data>
+  <data name="DateError" xml:space="preserve">
+    <value>Date error!</value>
+  </data>
+  <data name="DBAccessError" xml:space="preserve">
+    <value>Database Access Error.</value>
+  </data>
+  <data name="DBConnectFailed" xml:space="preserve">
+    <value>Database connect is failed.</value>
+  </data>
+  <data name="DecimalChangeFail" xml:space="preserve">
+    <value>Decimal Change to others fail!</value>
+  </data>
+  <data name="DefaultPasswordMsg" xml:space="preserve">
+    <value>if the password is blank and the default password is 123456</value>
+  </data>
+  <data name="DefautTabNotAllowDelete" xml:space="preserve">
+    <value>Defaut Tab Is Not Allow Delete!</value>
+  </data>
+  <data name="DefautValueNotAllowDelete" xml:space="preserve">
+    <value>Defaut Value Not Allow Delete.</value>
+  </data>
+  <data name="DeleteCartonSuccessful" xml:space="preserve">
+    <value>Delete Carton Successful！</value>
+  </data>
+  <data name="DeleteFaild" xml:space="preserve">
+    <value>Delete Faild.</value>
+  </data>
+  <data name="DeleteGRNsError" xml:space="preserve">
+    <value>Delete GRNs Error!</value>
+  </data>
+  <data name="DeletePckSuccessful" xml:space="preserve">
+    <value>Delete picking list successfully.</value>
+  </data>
+  <data name="DeletePickingGrnFailed" xml:space="preserve">
+    <value>Delete the GRN which assigned to the picking list failed.</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete Success.</value>
+  </data>
+  <data name="DeleteSuccessWithInfo" xml:space="preserve">
+    <value>Delete Data Successed\nBut reocords [{0}] delete failed, as they are using by others.</value>
+  </data>
+  <data name="DelPckGrnFailed" xml:space="preserve">
+    <value>Delete the GRN which is in picking list failed.</value>
+  </data>
+  <data name="DepartmentCodeEmpty" xml:space="preserve">
+    <value>Department Code cannot empty!</value>
+  </data>
+  <data name="DepartmentDeleteFailed" xml:space="preserve">
+    <value>cannot delete department. it is referenced in table user</value>
+  </data>
+  <data name="DepartmentExists" xml:space="preserve">
+    <value>The Department already exists！</value>
+  </data>
+  <data name="DepartmentNameEmpty" xml:space="preserve">
+    <value>Department Name cannot empty!</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>Description length can not more than 20 chars!</value>
+  </data>
+  <data name="DictionaryNameEmpty" xml:space="preserve">
+    <value>Dictionary name can not empty!</value>
+  </data>
+  <data name="DictionaryPropertyEmpty" xml:space="preserve">
+    <value>Dictionary property can not empty!</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Sorry, you lose connection with the server,\nyou have been forced to offline;</value>
+  </data>
+  <data name="DocumentNameEmpty" xml:space="preserve">
+    <value>Document Name Cannot Empty!</value>
+  </data>
+  <data name="DoubleOperation" xml:space="preserve">
+    <value>Double Operation.</value>
+  </data>
+  <data name="DuplicateGRN" xml:space="preserve">
+    <value>Duplicate GRN!</value>
+  </data>
+  <data name="DuplicateGRNCartonSN" xml:space="preserve">
+    <value>Duplicate GRN carton sn.</value>
+  </data>
+  <data name="EmptyDataText" xml:space="preserve">
+    <value>there is no item to show.</value>
+  </data>
+  <data name="EnterPasswordsDiffer" xml:space="preserve">
+    <value>Entered passwords differ!</value>
+  </data>
+  <data name="EqptConfirmFail" xml:space="preserve">
+    <value>The plan does not meet the requirements for the maintenance</value>
+  </data>
+  <data name="EqptModelEmpty" xml:space="preserve">
+    <value>Equipment model can't be empty!</value>
+  </data>
+  <data name="EqptNowLeaveUnused" xml:space="preserve">
+    <value>EqptNowLeaveUnused</value>
+  </data>
+  <data name="EqptNowMaintain" xml:space="preserve">
+    <value>EqptNowMaintain</value>
+  </data>
+  <data name="EqptNowUse" xml:space="preserve">
+    <value>EqptNowUse</value>
+  </data>
+  <data name="EqptNowUseing" xml:space="preserve">
+    <value>EqptNowUseing</value>
+  </data>
+  <data name="EqptTimeIsRequired" xml:space="preserve">
+    <value>Date cannot be earlier than date of production equipment!</value>
+  </data>
+  <data name="EquipmentExistMaintenance" xml:space="preserve">
+    <value>EquipmentExistMaintenance</value>
+  </data>
+  <data name="EquipmentNoUse" xml:space="preserve">
+    <value>EquipmentNoUse</value>
+  </data>
+  <data name="EquipmentUseNoCount" xml:space="preserve">
+    <value>EquipmentUseNoCount</value>
+  </data>
+  <data name="ERPNoOrderNotPrint" xml:space="preserve">
+    <value>ERP can not find the corresponding work order, cannot print!</value>
+  </data>
+  <data name="ErrorCodeEmpty" xml:space="preserve">
+    <value>ErrorCodeEmpty!</value>
+  </data>
+  <data name="ErrorCodeLengthWrong" xml:space="preserve">
+    <value>Error Code Length Wrong!</value>
+  </data>
+  <data name="EveryActivityJustAllowOnlyOneFunction" xml:space="preserve">
+    <value>Every Activity Just Allow Only One Function.</value>
+  </data>
+  <data name="ExcelActiveXObjectError" xml:space="preserve">
+    <value>To export the report, you must install the Excel software, your browser must be allowed the ActiveX control at the same time.</value>
+  </data>
+  <data name="ExistsErrorRecordNotValidate" xml:space="preserve">
+    <value>This Machine  Exists Error Recird,Cannot  validate material!</value>
+  </data>
+  <data name="ExistsNCcannotScanPass" xml:space="preserve">
+    <value>Exists NC cannot scan pass</value>
+  </data>
+  <data name="ExpirationDateEmpty" xml:space="preserve">
+    <value>Expiration Date Can not Empty!</value>
+  </data>
+  <data name="ExportingDataWaiting" xml:space="preserve">
+    <value>Exporting data, please waiting...</value>
+  </data>
+  <data name="FAICheckNonotNull" xml:space="preserve">
+    <value>FAI Check Number Cannot Empty!</value>
+  </data>
+  <data name="FAICheckNoWei" xml:space="preserve">
+    <value>OrderNo  Cannot Empty!</value>
+  </data>
+  <data name="FAIComeplete" xml:space="preserve">
+    <value>FAL already  complete,please choose process !</value>
+  </data>
+  <data name="FAINotComeplete" xml:space="preserve">
+    <value>First confirm not completed, please select the process again！</value>
+  </data>
+  <data name="FAIStatusNotNull" xml:space="preserve">
+    <value>FAI Status Cannot  Empty!</value>
+  </data>
+  <data name="FAITypeNotNull" xml:space="preserve">
+    <value>FAIType  Cannot  Empty!</value>
+  </data>
+  <data name="FeederTypeEmpty" xml:space="preserve">
+    <value>Feeder Type Cannot Empty！</value>
+  </data>
+  <data name="FeederTypeNameEmpty" xml:space="preserve">
+    <value>Feeder Type Name  Cannot Empty！</value>
+  </data>
+  <data name="FeedNotExists" xml:space="preserve">
+    <value>This feedSn  not  exists!</value>
+  </data>
+  <data name="FeedSNErrorWei" xml:space="preserve">
+    <value>FeedSN scan error!</value>
+  </data>
+  <data name="FielLoadPathEmpty" xml:space="preserve">
+    <value>upload path is not null!</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="FileTypeError" xml:space="preserve">
+    <value>The file type error!</value>
+  </data>
+  <data name="FormatInvild" xml:space="preserve">
+    <value>Format Invild.</value>
+  </data>
+  <data name="FullOnlineUsers" xml:space="preserve">
+    <value>The number of online user reached the limit.</value>
+  </data>
+  <data name="GenerateContainerError" xml:space="preserve">
+    <value>Generate container number failed!</value>
+  </data>
+  <data name="GenerateGRNCartonSNFailed" xml:space="preserve">
+    <value>Generate GRN Carton SN Failed!</value>
+  </data>
+  <data name="GenerateUnitFail" xml:space="preserve">
+    <value>Generate Unit fail!</value>
+  </data>
+  <data name="GenerateUnitHistoryFail" xml:space="preserve">
+    <value>Generate Unit History Fail!</value>
+  </data>
+  <data name="GenGrnFinishAndPrintInProcess" xml:space="preserve">
+    <value>Generate GRN successful, and printting in process, please wait...</value>
+  </data>
+  <data name="GenGrnQtyMoreThan" xml:space="preserve">
+    <value>The number of GRN to print should less than {0}!</value>
+  </data>
+  <data name="GenSubGRNFailed" xml:space="preserve">
+    <value>Generate Sub-GRN Failed!</value>
+  </data>
+  <data name="GetDBTimeError" xml:space="preserve">
+    <value>Get DataBase Time Error!</value>
+  </data>
+  <data name="GettingGRNQty" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="GetUnitInfoError" xml:space="preserve">
+    <value>Get Unit Info Error!</value>
+  </data>
+  <data name="GetUserIdFailed" xml:space="preserve">
+    <value>Get user's id failed.</value>
+  </data>
+  <data name="GetWOInputQtyError" xml:space="preserve">
+    <value>Get order input qty error!</value>
+  </data>
+  <data name="GrnCartonIsClosed" xml:space="preserve">
+    <value>the GRN carton is closed, should be do unpack firstly.</value>
+  </data>
+  <data name="GRNCartonIsOpen" xml:space="preserve">
+    <value>the GRN carton is open, please move the grn from carton or close the carton</value>
+  </data>
+  <data name="GrnComepleteMaterialWei" xml:space="preserve">
+    <value>This GRN already   complete   Material,please  again Scan!</value>
+  </data>
+  <data name="GRNDismatchOperation" xml:space="preserve">
+    <value>GRN dismatch operation!</value>
+  </data>
+  <data name="GRNDismatchOrder" xml:space="preserve">
+    <value>GRN dismatch order!</value>
+  </data>
+  <data name="GrnEmptyWei" xml:space="preserve">
+    <value>GRN  not Empty!</value>
+  </data>
+  <data name="GRNFeedCompletexia" xml:space="preserve">
+    <value>This GRN is completed, please scan again!</value>
+  </data>
+  <data name="GRNgenerateFinished" xml:space="preserve">
+    <value>GRN generate finished!</value>
+  </data>
+  <data name="GrnHasbeenIssued" xml:space="preserve">
+    <value>The GRN has been issued!</value>
+  </data>
+  <data name="GrnHasBeenUsed" xml:space="preserve">
+    <value>The GRN is in use, cannot return to vendor.</value>
+  </data>
+  <data name="GrnIsInVendor" xml:space="preserve">
+    <value>The GRN is already in vendor!</value>
+  </data>
+  <data name="GrnIsNotBeReceived" xml:space="preserve">
+    <value>The GRN has not been received.</value>
+  </data>
+  <data name="GrnIsNotInVendor" xml:space="preserve">
+    <value>The GRN is not in vendor.</value>
+  </data>
+  <data name="GrnIsOutOfStore" xml:space="preserve">
+    <value>The picking list is in production.</value>
+  </data>
+  <data name="GrnIsOutOfStoreNotAllowDel" xml:space="preserve">
+    <value>GRN is out of store and the picking list cannot be deleted.</value>
+  </data>
+  <data name="GRNIsPackedInCurrentCarton" xml:space="preserve">
+    <value>The GRN is packed into current carton.</value>
+  </data>
+  <data name="GrnIssuedNotAllowSplit" xml:space="preserve">
+    <value>GRN is out of store and not allow split!</value>
+  </data>
+  <data name="GRNNotExists" xml:space="preserve">
+    <value>GRN not exists!</value>
+  </data>
+  <data name="GrnNotMatchPackedGrn" xml:space="preserve">
+    <value>One carton only pack the same type GRN.</value>
+  </data>
+  <data name="GrnNotMatchVendorCode" xml:space="preserve">
+    <value>The scanning GRN is not match current vendor.</value>
+  </data>
+  <data name="GrnPackedIntoOtherCarton" xml:space="preserve">
+    <value>The GRN is packed into other carton.</value>
+  </data>
+  <data name="GRNQtyIsInvalid" xml:space="preserve">
+    <value>GRN Quantity Is Invalid</value>
+  </data>
+  <data name="GRNRemoveBoxError" xml:space="preserve">
+    <value>GRN Remove Box Error!</value>
+  </data>
+  <data name="GRNSuccessWei" xml:space="preserve">
+    <value>GRN Validation  Success!</value>
+  </data>
+  <data name="GrnVendorNotMatchVendor" xml:space="preserve">
+    <value>GRN vendor is not match current vendor.</value>
+  </data>
+  <data name="GroupNameEmpty" xml:space="preserve">
+    <value>Group Name Cannot Empty</value>
+  </data>
+  <data name="HandBoxValidatePass" xml:space="preserve">
+    <value>BoxNumber Validation Passed!</value>
+  </data>
+  <data name="HandGRNValidatePass" xml:space="preserve">
+    <value>GRN  Validate Passed!</value>
+  </data>
+  <data name="HandNotSMTSameWei" xml:space="preserve">
+    <value>Hand Order not same the SMT Order!</value>
+  </data>
+  <data name="HasBeenAssignedSkillCertificationsAndCouldNotDeleteDirectly" xml:space="preserve">
+    <value>Has Been Assigned SkillCertifications And Could Not Delete Directly.</value>
+  </data>
+  <data name="HighlyRecommendIEBrowser" xml:space="preserve">
+    <value>Highly recommend you to use IE browser to get the best effect.</value>
+  </data>
+  <data name="HiredDateIsGreaterThanTermiationDate" xml:space="preserve">
+    <value>Hired Date Cannot be GreaterThanTermiation Date.</value>
+  </data>
+  <data name="HttpRequestValidationExp" xml:space="preserve">
+    <value>Invalidate request string.</value>
+  </data>
+  <data name="IMEI_Already_Exists" xml:space="preserve">
+    <value>IMEI already exists！</value>
+  </data>
+  <data name="InComingSuccess" xml:space="preserve">
+    <value>InComing Success</value>
+  </data>
+  <data name="InputConditions" xml:space="preserve">
+    <value>please input search values!</value>
+  </data>
+  <data name="InsertNextNumberSequenceFail" xml:space="preserve">
+    <value>Insert NextNumber Sequence Fail!</value>
+  </data>
+  <data name="InsertPckStatusFailed" xml:space="preserve">
+    <value>Update the picking list status 'Delete' failed.</value>
+  </data>
+  <data name="InsertUnitHistoryError" xml:space="preserve">
+    <value>Insert unit history error!</value>
+  </data>
+  <data name="InterrelatedRecordExists" xml:space="preserve">
+    <value>Interal related record exist,can not delete!</value>
+  </data>
+  <data name="InvalidateDate" xml:space="preserve">
+    <value>Invalidate Date Format！</value>
+  </data>
+  <data name="InvalidateGRNPackStatus" xml:space="preserve">
+    <value>the GRNs in the carton have been received, not allow to unpack.</value>
+  </data>
+  <data name="InvalidateHiredDate" xml:space="preserve">
+    <value>Invalidate Hired Date.</value>
+  </data>
+  <data name="InvalidateParameter" xml:space="preserve">
+    <value>Invalidate Parameter</value>
+  </data>
+  <data name="InvalidateTerminationDate" xml:space="preserve">
+    <value>Invalidate Termination Date.</value>
+  </data>
+  <data name="InvalidBatchQty" xml:space="preserve">
+    <value>Invalid Batch Quantity</value>
+  </data>
+  <data name="InvalidBrowserVersion" xml:space="preserve">
+    <value>Invalid browser version, this system is required IE 7.0 or above.</value>
+  </data>
+  <data name="InvalidGRN" xml:space="preserve">
+    <value>Invalid GRN!</value>
+  </data>
+  <data name="InvalidGrnCarton" xml:space="preserve">
+    <value>The GRN carton is not exists!</value>
+  </data>
+  <data name="InvalidMembership" xml:space="preserve">
+    <value>The user's information has been damaged.</value>
+  </data>
+  <data name="InvalidNCCode" xml:space="preserve">
+    <value>Bad code is invalid!</value>
+  </data>
+  <data name="InvalidNewGRN" xml:space="preserve">
+    <value>Invalid  New GRN!</value>
+  </data>
+  <data name="InvalidOldGRN" xml:space="preserve">
+    <value>Invalid  Old  GRN!</value>
+  </data>
+  <data name="InvalidOldPassword" xml:space="preserve">
+    <value>Invalid Old Password!</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Invalid password</value>
+  </data>
+  <data name="InvalidPickingListGRN" xml:space="preserve">
+    <value>the scaning GRN is not match the picking list.</value>
+  </data>
+  <data name="InvalidRelieveAlert" xml:space="preserve">
+    <value>Invalid Relieve Alert!</value>
+  </data>
+  <data name="InvalidReturnMaterialLocation" xml:space="preserve">
+    <value>Invalid Return Material Location!</value>
+  </data>
+  <data name="InvalidReturnQuantity" xml:space="preserve">
+    <value>Invalid Return Quantity!</value>
+  </data>
+  <data name="InvalidSNwei" xml:space="preserve">
+    <value>SN  is  invalid!</value>
+  </data>
+  <data name="InvalidSplitQuantity" xml:space="preserve">
+    <value>Invalid Split Quantity!</value>
+  </data>
+  <data name="InvalidSubGRN" xml:space="preserve">
+    <value>Invalid GRN!</value>
+  </data>
+  <data name="InvalidUser" xml:space="preserve">
+    <value>Invalid user.</value>
+  </data>
+  <data name="InvalidWoNumber" xml:space="preserve">
+    <value>Invalid WO Number</value>
+  </data>
+  <data name="Invalid_FDSN" xml:space="preserve">
+    <value>Invalid Feeder Serial Number！</value>
+  </data>
+  <data name="Invalid_MachineSN" xml:space="preserve">
+    <value>Invalid Machine Serial Number!</value>
+  </data>
+  <data name="Invalid_MUSN" xml:space="preserve">
+    <value>Invalid Material Unit Serial Number！</value>
+  </data>
+  <data name="Invalid_MUStatus" xml:space="preserve">
+    <value>Invalid Material Unit Status！</value>
+  </data>
+  <data name="IPQC_ResultOnlyPassorFail" xml:space="preserve">
+    <value>Sampling result  only   enter  Pass or Fail !</value>
+  </data>
+  <data name="IPQC_SampResult" xml:space="preserve">
+    <value>Sampling  result  Cannot  Empty!</value>
+  </data>
+  <data name="IQCAlreadyCompleted" xml:space="preserve">
+    <value>IQC Already Completed.</value>
+  </data>
+  <data name="IsBlankRouter" xml:space="preserve">
+    <value>This router is not available.</value>
+  </data>
+  <data name="IsLetterOrNumberOrUnderline" xml:space="preserve">
+    <value>be letter or number or underline.</value>
+  </data>
+  <data name="IsLockedOut" xml:space="preserve">
+    <value>Account is locked.</value>
+  </data>
+  <data name="IssueGrnNotFinished" xml:space="preserve">
+    <value>The picking list has no GRN picking line.</value>
+  </data>
+  <data name="IssueInProcess" xml:space="preserve">
+    <value>Issue In Process...</value>
+  </data>
+  <data name="ItemError" xml:space="preserve">
+    <value>Item error!</value>
+  </data>
+  <data name="ItemImportInSuccess" xml:space="preserve">
+    <value>Item import in success!</value>
+  </data>
+  <data name="ItemIsRequired" xml:space="preserve">
+    <value>Item Is Required</value>
+  </data>
+  <data name="ItemNameIsRequired" xml:space="preserve">
+    <value>Item Name Is Required.</value>
+  </data>
+  <data name="ItemRevisionIsRequired" xml:space="preserve">
+    <value>Item Revision Is Required.</value>
+  </data>
+  <data name="ItemsNameEmpty" xml:space="preserve">
+    <value>Production Name is not null!</value>
+  </data>
+  <data name="ItemStatusOfShopOrderNotAllowedRelease" xml:space="preserve">
+    <value>Item Status Of Shop Order Not Allowed Release.</value>
+  </data>
+  <data name="Item_Mismatch" xml:space="preserve">
+    <value>this item mismatch!</value>
+  </data>
+  <data name="LabelFieldDefNeeded" xml:space="preserve">
+    <value>please insert a definition for label field.</value>
+  </data>
+  <data name="LabelFieldIsBlank" xml:space="preserve">
+    <value>need label field name.</value>
+  </data>
+  <data name="LicenseAccessError" xml:space="preserve">
+    <value>License Access Error.</value>
+  </data>
+  <data name="LineNameEmpty" xml:space="preserve">
+    <value>Line Name Cannot Empty!</value>
+  </data>
+  <data name="LineQtyLimit" xml:space="preserve">
+    <value>Line License Not Enough. \n\n Please Contact SKT.</value>
+  </data>
+  <data name="LoadHasStopLine" xml:space="preserve">
+    <value>This already stop,please again  submit!</value>
+  </data>
+  <data name="LoadingData" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="LoadingList_Item_Not_Linked" xml:space="preserve">
+    <value>Loading List and Item are not linked!</value>
+  </data>
+  <data name="LoadingList_Machine_Not_Linked" xml:space="preserve">
+    <value>Loading List and Machine are not linked!</value>
+  </data>
+  <data name="LoadListEmpetyWei" xml:space="preserve">
+    <value>LoadingList not Empty!</value>
+  </data>
+  <data name="LoadListNoCompleteWei" xml:space="preserve">
+    <value>This Order no Complete!</value>
+  </data>
+  <data name="LoadListNotStatusWei" xml:space="preserve">
+    <value>This loadingList not  using state !</value>
+  </data>
+  <data name="LoadListNoUse" xml:space="preserve">
+    <value>This order no material!</value>
+  </data>
+  <data name="LoadOpenNoWei" xml:space="preserve">
+    <value>This LoadingList is start status,Cannot  continue Material!</value>
+  </data>
+  <data name="LoadOperationFailed" xml:space="preserve">
+    <value>Load Operation Failed</value>
+  </data>
+  <data name="LoadResourcesFailed" xml:space="preserve">
+    <value>Load Resources Failed</value>
+  </data>
+  <data name="LoadStopNoWei" xml:space="preserve">
+    <value>This LoadingList is stop status,Cannot continue Material!</value>
+  </data>
+  <data name="LoginIdIsNeeded" xml:space="preserve">
+    <value>LoginID is needed!</value>
+  </data>
+  <data name="LotSizeIsNumerical" xml:space="preserve">
+    <value>Lot Size should be Numerical.</value>
+  </data>
+  <data name="LotSizeIsRequired" xml:space="preserve">
+    <value>Lot Size Is Required.</value>
+  </data>
+  <data name="LowBrowserVersion" xml:space="preserve">
+    <value>Your IE browser is lower than 7.0, please update your IE browser.</value>
+  </data>
+  <data name="MaintainRecordInfo" xml:space="preserve">
+    <value>Equipment maintenance record details</value>
+  </data>
+  <data name="MasterDataSaveFirst" xml:space="preserve">
+    <value>Please save master data first</value>
+  </data>
+  <data name="MaterialHasBeenReceived" xml:space="preserve">
+    <value>the GRN is already in store!</value>
+  </data>
+  <data name="MaterialHasBeenUsedUp" xml:space="preserve">
+    <value>Material Has Been Used Up!</value>
+  </data>
+  <data name="MaterialInKittingArea" xml:space="preserve">
+    <value>Material Already In Kitting Area!</value>
+  </data>
+  <data name="MaterialInStore" xml:space="preserve">
+    <value>Material in store!</value>
+  </data>
+  <data name="MaterialOrderNotRight" xml:space="preserve">
+    <value>The current feeding work order is not correct!</value>
+  </data>
+  <data name="Material_Validation_Fail" xml:space="preserve">
+    <value>Material failed to pass the validation!</value>
+  </data>
+  <data name="Material_Validation_Success" xml:space="preserve">
+    <value>Material is validated successfully!</value>
+  </data>
+  <data name="MaxMustLargeMin" xml:space="preserve">
+    <value>Max must large than Min</value>
+  </data>
+  <data name="Mismatch_Item_Slot" xml:space="preserve">
+    <value>Material and Slot does not match, please check!</value>
+  </data>
+  <data name="Mismatch_Slot_FeederType" xml:space="preserve">
+    <value>Feeder Type and Slot does not match, please check!</value>
+  </data>
+  <data name="ModelFamilyNameEmpty" xml:space="preserve">
+    <value>Family Name Cannot Empty!</value>
+  </data>
+  <data name="ModelNameEmpty" xml:space="preserve">
+    <value>Model Name Cannot  Empty！</value>
+  </data>
+  <data name="MoreOrderWei" xml:space="preserve">
+    <value>Is greater than the work order number！</value>
+  </data>
+  <data name="MustbeNumber" xml:space="preserve">
+    <value>input must be number</value>
+  </data>
+  <data name="MustbeNumberOrLetter" xml:space="preserve">
+    <value>Must be number or letters</value>
+  </data>
+  <data name="NCCodeEmpty" xml:space="preserve">
+    <value>NC Code cannot empty!</value>
+  </data>
+  <data name="NeedScanGRN" xml:space="preserve">
+    <value>Please scan or enter GRN to reprint!</value>
+  </data>
+  <data name="NeedStartEndOperation" xml:space="preserve">
+    <value>Need Start and End Operations.</value>
+  </data>
+  <data name="NewBOMisexist" xml:space="preserve">
+    <value>Destination BOM NO had exist!</value>
+  </data>
+  <data name="NewGRNAExists" xml:space="preserve">
+    <value>The NewGRN already  completed, please  choice another  GRN!</value>
+  </data>
+  <data name="NewGRNNotEmpty" xml:space="preserve">
+    <value>NewGRN Cannot  Empty!</value>
+  </data>
+  <data name="NewPwdIsRequired" xml:space="preserve">
+    <value>New password is required!</value>
+  </data>
+  <data name="NextNumberResetError" xml:space="preserve">
+    <value>NextNumber Reset Error!</value>
+  </data>
+  <data name="NextNumberSequenceDuplicate" xml:space="preserve">
+    <value>Next Number Sequence Duplicate!</value>
+  </data>
+  <data name="NoAccessPermission" xml:space="preserve">
+    <value>No Access Permission</value>
+  </data>
+  <data name="NoCartonToClose" xml:space="preserve">
+    <value>There is no carton should be closed.</value>
+  </data>
+  <data name="NoGrnInTheCarton" xml:space="preserve">
+    <value>There is no any GRN in the carton.</value>
+  </data>
+  <data name="NoGRNToSplit" xml:space="preserve">
+    <value>No GRN To Split</value>
+  </data>
+  <data name="NoItemCert" xml:space="preserve">
+    <value>User no this item certification!</value>
+  </data>
+  <data name="NoLabelFormat" xml:space="preserve">
+    <value>this label has no any format.</value>
+  </data>
+  <data name="NoLabelTemplate" xml:space="preserve">
+    <value>Label file not exists or label template is empty.</value>
+  </data>
+  <data name="NoLineWei" xml:space="preserve">
+    <value>No line !</value>
+  </data>
+  <data name="NonPackingStatus" xml:space="preserve">
+    <value>Invalid packing status!</value>
+  </data>
+  <data name="NonReleatedVendor" xml:space="preserve">
+    <value>Non Releated Vendor Code!</value>
+  </data>
+  <data name="NoOperation" xml:space="preserve">
+    <value>No Operation.</value>
+  </data>
+  <data name="NoOperationCert" xml:space="preserve">
+    <value>User no this operation certification!</value>
+  </data>
+  <data name="NoOperationOrResource" xml:space="preserve">
+    <value>Please select operation and resource!</value>
+  </data>
+  <data name="NoParameterForTheActivity" xml:space="preserve">
+    <value>There is no parameter for current activity.</value>
+  </data>
+  <data name="NoPickingLine" xml:space="preserve">
+    <value>No item.</value>
+  </data>
+  <data name="NoPrinterPlugin" xml:space="preserve">
+    <value>Your computer has not install print plug-in!</value>
+  </data>
+  <data name="NoRescourceByLineWei" xml:space="preserve">
+    <value>Not find  rescource,please  again choice line!</value>
+  </data>
+  <data name="NoResourceCert" xml:space="preserve">
+    <value>User no this resource certification!</value>
+  </data>
+  <data name="NoResources" xml:space="preserve">
+    <value>No Resources</value>
+  </data>
+  <data name="NoRouterDesignerPlugin" xml:space="preserve">
+    <value>The system detected that your browser did not install router designer plugin.</value>
+  </data>
+  <data name="NoSMTInfoStopWei" xml:space="preserve">
+    <value>There is no data yet, can't do!</value>
+  </data>
+  <data name="NoSMTInfoWei" xml:space="preserve">
+    <value>There is no data yet, can't do!</value>
+  </data>
+  <data name="NoSubGrn" xml:space="preserve">
+    <value>There is no any sub-GRN item.</value>
+  </data>
+  <data name="NotAllowSelectMoreThanOne" xml:space="preserve">
+    <value>Not Allow Select More Than One.</value>
+  </data>
+  <data name="NotConformToTheConditionsOfInformation" xml:space="preserve">
+    <value>Not conform to the conditions of information</value>
+  </data>
+  <data name="NotEnoughQuantityToIssue" xml:space="preserve">
+    <value>Not Enough Quantity To Issue!</value>
+  </data>
+  <data name="NotExistsIQCForm" xml:space="preserve">
+    <value>Not Exists IQC Form.</value>
+  </data>
+  <data name="NotInCurrentIQCBatch" xml:space="preserve">
+    <value>Not In Current IQC Batch.</value>
+  </data>
+  <data name="NotWarranttedToOperater" xml:space="preserve">
+    <value>Not Warrantted To The Operater</value>
+  </data>
+  <data name="NotWarranttedToPage" xml:space="preserve">
+    <value>Not Warrantted To The Page.</value>
+  </data>
+  <data name="NoVendorItem" xml:space="preserve">
+    <value>there is no vendor item or the data has not been synchronized from ERP.</value>
+  </data>
+  <data name="OBA_Carton_Exists_Lotno" xml:space="preserve">
+    <value>Scan No. has existed in other Lot No!</value>
+  </data>
+  <data name="OfflineSNDuplicated" xml:space="preserve">
+    <value>Offline SN Duplicated!</value>
+  </data>
+  <data name="OfflineSNNotEmpty" xml:space="preserve">
+    <value>Offline barcode  Cannot Empty!</value>
+  </data>
+  <data name="OldAndNewNotItemWei" xml:space="preserve">
+    <value>OldGRN and newGRN don't belong to the same material!</value>
+  </data>
+  <data name="OldBOMnotexist" xml:space="preserve">
+    <value>Source BOM NO is not exist!</value>
+  </data>
+  <data name="OldGGRNNotEmpty" xml:space="preserve">
+    <value>OldGRN  Cannot  Empty!</value>
+  </data>
+  <data name="OldGRNandNewGRN" xml:space="preserve">
+    <value>OldGRN NewGRN cannot be the same!</value>
+  </data>
+  <data name="oldGRNNotOrderNo" xml:space="preserve">
+    <value>oldGRN  not belong to this orderNo!</value>
+  </data>
+  <data name="OldGRNStop" xml:space="preserve">
+    <value>OldGRN has done stop, temporarily can't continue!</value>
+  </data>
+  <data name="OldPwdIsRequired" xml:space="preserve">
+    <value>Old password is required!</value>
+  </data>
+  <data name="OnlyAllowNormalShopOrderRelease" xml:space="preserve">
+    <value>Only Allow Normal Shop Order Release.</value>
+  </data>
+  <data name="OnlyBigPanelWei" xml:space="preserve">
+    <value>Cannot  scan bar,Only scan panel!</value>
+  </data>
+  <data name="OnlyPanleNotSmall" xml:space="preserve">
+    <value>Can't scan small  board,Only scan big board!</value>
+  </data>
+  <data name="OpenBoxConfirm" xml:space="preserve">
+    <value>Be sure to open box?</value>
+  </data>
+  <data name="OpenContainerError" xml:space="preserve">
+    <value>Open Container Error！</value>
+  </data>
+  <data name="OpenContainerFirst" xml:space="preserve">
+    <value>Need to open container at first!</value>
+  </data>
+  <data name="OperationError" xml:space="preserve">
+    <value>Scan operation error!</value>
+  </data>
+  <data name="OperationFailure" xml:space="preserve">
+    <value>Operation failure!</value>
+  </data>
+  <data name="OrderEmptyWei" xml:space="preserve">
+    <value>Please choice  order!</value>
+  </data>
+  <data name="OrderNoMaterial" xml:space="preserve">
+    <value>This Order no material!</value>
+  </data>
+  <data name="OrderNotFoundMaterialWei" xml:space="preserve">
+    <value>This  order not found the Material infomation!</value>
+  </data>
+  <data name="OrderNotHandMaterialWei" xml:space="preserve">
+    <value>This Order not Validate material,don't  upper now!</value>
+  </data>
+  <data name="OrderReleaseFullWei" xml:space="preserve">
+    <value>Order  Number already full,please  again  select  order!</value>
+  </data>
+  <data name="OutComingSuccess" xml:space="preserve">
+    <value>OutComing Success</value>
+  </data>
+  <data name="PackGrnCartonIsClosed" xml:space="preserve">
+    <value>The carton that is packed into  is closed, please pack to other cartons.</value>
+  </data>
+  <data name="PackGRNToCartonFailed" xml:space="preserve">
+    <value>Pack GRN To Carton Failed!</value>
+  </data>
+  <data name="PackingSuccessful" xml:space="preserve">
+    <value>Packing GRN successfully!</value>
+  </data>
+  <data name="PagerInfo" xml:space="preserve">
+    <value>Total Records {0}，{1} Records/Page，Total Pages {2}，Current Page {3} </value>
+  </data>
+  <data name="PanleErrorWei" xml:space="preserve">
+    <value>The Panle  is Error!</value>
+  </data>
+  <data name="ParameterErrorNoCartonSN" xml:space="preserve">
+    <value>Parameter error, didnot get the carton sn;\n Please select the correct carton sn in the carton list.</value>
+  </data>
+  <data name="ParametersListNotEmpty" xml:space="preserve">
+    <value>Main function Parameters List Not Allow Empty.</value>
+  </data>
+  <data name="PartNONotExists" xml:space="preserve">
+    <value>PartNO Not Exists.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password is required.</value>
+  </data>
+  <data name="PCBGRNUsed" xml:space="preserve">
+    <value>PCB GRN has been used!</value>
+  </data>
+  <data name="PckListIsDeleted" xml:space="preserve">
+    <value>The picking list is deleted, please click re-use button to re-use it, if you need.</value>
+  </data>
+  <data name="PcklistIsOutOfStore" xml:space="preserve">
+    <value>The picking list is out of store.</value>
+  </data>
+  <data name="PleaseInputToQueryInformation" xml:space="preserve">
+    <value>Please input to query information!</value>
+  </data>
+  <data name="PleaseSelectFile" xml:space="preserve">
+    <value>Please Select a File !</value>
+  </data>
+  <data name="PleaseSelectLine" xml:space="preserve">
+    <value>PleaseSelectLine</value>
+  </data>
+  <data name="PleaseSelectOneCode" xml:space="preserve">
+    <value>Please select  one code</value>
+  </data>
+  <data name="PleaseSelectOnePartAsParentPartOnTheLeft" xml:space="preserve">
+    <value>Please Select One Part As Parent Part On The Left.</value>
+  </data>
+  <data name="PlsInputActivityNameFirst" xml:space="preserve">
+    <value>Please Input Activity Name First.</value>
+  </data>
+  <data name="PlsInputPartNO" xml:space="preserve">
+    <value>Please Input PartNO</value>
+  </data>
+  <data name="PlsInputQty" xml:space="preserve">
+    <value>Please Input Qty</value>
+  </data>
+  <data name="PreprocessConfirmWei" xml:space="preserve">
+    <value>Are you sure all material  validate success!</value>
+  </data>
+  <data name="PrintCartonNumber" xml:space="preserve">
+    <value>Is printed packaging cartons, please later...</value>
+  </data>
+  <data name="PrintDocumentIsRequired" xml:space="preserve">
+    <value>Please choose a print document.</value>
+  </data>
+  <data name="PrinterNameExists" xml:space="preserve">
+    <value>Printer name is exist!</value>
+  </data>
+  <data name="PrinterRegularExists" xml:space="preserve">
+    <value>Printer rule is exist!</value>
+  </data>
+  <data name="PrintGrnSuccessful" xml:space="preserve">
+    <value>Print GRN successful...</value>
+  </data>
+  <data name="PrintInProcess" xml:space="preserve">
+    <value>printing is in process...</value>
+  </data>
+  <data name="PRNotNull" xml:space="preserve">
+    <value>could not  Null</value>
+  </data>
+  <data name="ProNoRouter" xml:space="preserve">
+    <value>Production  no Router!</value>
+  </data>
+  <data name="ProShiftNotEmpty" xml:space="preserve">
+    <value>Production Shift Cannot Empty!</value>
+  </data>
+  <data name="QualificationCertificatinIsRequired" xml:space="preserve">
+    <value>Qualification Certificatin Is Required.</value>
+  </data>
+  <data name="QualificationNCCodeIsRequired" xml:space="preserve">
+    <value>Qualification NCCode Is Required.</value>
+  </data>
+  <data name="QualificationOperationIsRequired" xml:space="preserve">
+    <value>Qualification Operation Is Required.</value>
+  </data>
+  <data name="ReceiveGRNSuccessful" xml:space="preserve">
+    <value>receive GRN successfully.</value>
+  </data>
+  <data name="RecieveMaterialFinished" xml:space="preserve">
+    <value>Contuinue Recieve Material?</value>
+  </data>
+  <data name="RecordExists" xml:space="preserve">
+    <value>Record Exists！</value>
+  </data>
+  <data name="ReleaseQtyLargeMax" xml:space="preserve">
+    <value>Release qty Large than Max</value>
+  </data>
+  <data name="ReleaseSuccess" xml:space="preserve">
+    <value>Release Success.</value>
+  </data>
+  <data name="RelieveAlert" xml:space="preserve">
+    <value>Relieve Alert successful!</value>
+  </data>
+  <data name="RelieveExistsAlert" xml:space="preserve">
+    <value>The Error already  remove,Don't need remove!</value>
+  </data>
+  <data name="RemainChance" xml:space="preserve">
+    <value>Only {0} times left.</value>
+  </data>
+  <data name="RemoveGrnSuccessful" xml:space="preserve">
+    <value>Remove GRN successfully!</value>
+  </data>
+  <data name="RemoveSNfromContainerError" xml:space="preserve">
+    <value>Remove SN from container fail!</value>
+  </data>
+  <data name="ReprintGRNSuccessed" xml:space="preserve">
+    <value>Reprint GRN Successed!</value>
+  </data>
+  <data name="RequiredGRN" xml:space="preserve">
+    <value>Please scan or enter GRN.</value>
+  </data>
+  <data name="RequiredPopedom" xml:space="preserve">
+    <value>Popedom is required!</value>
+  </data>
+  <data name="RequiredWONumber" xml:space="preserve">
+    <value>WO required.</value>
+  </data>
+  <data name="RequireItem" xml:space="preserve">
+    <value>Require Item</value>
+  </data>
+  <data name="RequireOnlyOneRecord" xml:space="preserve">
+    <value>Require Only One Record.</value>
+  </data>
+  <data name="RequireOperateRecord" xml:space="preserve">
+    <value>Require Operate Record.</value>
+  </data>
+  <data name="RequireTypeInfo" xml:space="preserve">
+    <value>The type has the device context information, and cannot be deleted!</value>
+  </data>
+  <data name="RequireUserName" xml:space="preserve">
+    <value>User Name is needed.</value>
+  </data>
+  <data name="RescourceNotExistsWei" xml:space="preserve">
+    <value>Rescource  not  exists!</value>
+  </data>
+  <data name="RescourceNotSetLineWei" xml:space="preserve">
+    <value>Rescource  not set  up line!</value>
+  </data>
+  <data name="ResetPasswordSuccess" xml:space="preserve">
+    <value>Reset Password Success!</value>
+  </data>
+  <data name="ResNoProdOrderIdWei" xml:space="preserve">
+    <value>The Resource  hasn't done  hand on material  validation,Don't buckle material!</value>
+  </data>
+  <data name="ResourceIsRequired" xml:space="preserve">
+    <value>Resource Is Required</value>
+  </data>
+  <data name="ResourceTypeHasResource" xml:space="preserve">
+    <value>The Resource type has been used.</value>
+  </data>
+  <data name="ReturnDateError" xml:space="preserve">
+    <value>Return Date Error!</value>
+  </data>
+  <data name="ReturnMaterialQtyInvalid" xml:space="preserve">
+    <value>Return Material Quantity Invalid</value>
+  </data>
+  <data name="ReturnMaterialSuccessful" xml:space="preserve">
+    <value>Return material successfully, the material has been returned to </value>
+  </data>
+  <data name="ReUsePckSuccessful" xml:space="preserve">
+    <value>Re-use picking list successfully.</value>
+  </data>
+  <data name="RevisionEmpty" xml:space="preserve">
+    <value>Rev is not null!</value>
+  </data>
+  <data name="RMAOrderNotFount" xml:space="preserve">
+    <value>Not found the RMA  Order,Please  go to material  validate!</value>
+  </data>
+  <data name="RMAUpdateSFC" xml:space="preserve">
+    <value>Are you sure to save these SFC into RMA?</value>
+  </data>
+  <data name="RoleNameExists" xml:space="preserve">
+    <value>Role Name Exists.</value>
+  </data>
+  <data name="RoleNameIsNeeded" xml:space="preserve">
+    <value>Role Name is needed.</value>
+  </data>
+  <data name="RorterDesignerConditionOne" xml:space="preserve">
+    <value>1. the IE version should be 7.0 or above, and .net framework version should be 4.0 or above, [&lt;a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=17851" target="_blank"&gt;DOWNLOAD&lt;/a&gt;]</value>
+  </data>
+  <data name="RorterDesignerConditionTwo" xml:space="preserve">
+    <value>2. install the visual router designer which developed by SKT. [&lt;a href="../Content/Component/RouterDesigner/Lean MES系统工艺流程设计器插件2.1.2.zip" target="_blank"&gt;DOWNLOAD&lt;/a&gt;]</value>
+  </data>
+  <data name="RouterError" xml:space="preserve">
+    <value>Router error!</value>
+  </data>
+  <data name="RouterHasbeenReleased" xml:space="preserve">
+    <value>Router Has Been Released</value>
+  </data>
+  <data name="RouterNoLink" xml:space="preserve">
+    <value>This router is not available.</value>
+  </data>
+  <data name="RouterNoLink1" xml:space="preserve">
+    <value>This router is not available.</value>
+  </data>
+  <data name="RouterStatusNotAllowedShopOrderRelease" xml:space="preserve">
+    <value>Router Status Not Allowed Shop Order Release.</value>
+  </data>
+  <data name="SaveFailRepeat" xml:space="preserve">
+    <value>Duplicate records,Save data  failed!</value>
+  </data>
+  <data name="SaveFault" xml:space="preserve">
+    <value>Save data fault!</value>
+  </data>
+  <data name="SaveInSuccess" xml:space="preserve">
+    <value>Save in success！</value>
+  </data>
+  <data name="SaveRouterBaseInfoFirst" xml:space="preserve">
+    <value>Please Save Router Base Info First Before Save Design.</value>
+  </data>
+  <data name="ScanCartonSN" xml:space="preserve">
+    <value>Please  Scan Carton Sn !</value>
+  </data>
+  <data name="ScanGrnToRemove" xml:space="preserve">
+    <value>Please scan GRN to remove.</value>
+  </data>
+  <data name="ScanModelSpec" xml:space="preserve">
+    <value>Please enter the name specifications!</value>
+  </data>
+  <data name="ScanOrInputSerialNumber" xml:space="preserve">
+    <value>After input or scanning serial number, press enter key, commit operation directly.</value>
+  </data>
+  <data name="ScanSN" xml:space="preserve">
+    <value>Please Scan  Sn !</value>
+  </data>
+  <data name="SelectItemInTheLeft" xml:space="preserve">
+    <value>Please select a label in the left to set format.</value>
+  </data>
+  <data name="SelectMaterial" xml:space="preserve">
+    <value>please select the material.</value>
+  </data>
+  <data name="SelectPickingList" xml:space="preserve">
+    <value>Please select wo.</value>
+  </data>
+  <data name="SelectVendor" xml:space="preserve">
+    <value>Please select a vendor.</value>
+  </data>
+  <data name="SelectVendorCode" xml:space="preserve">
+    <value>please select the vendor code.</value>
+  </data>
+  <data name="SequenceIsRequired" xml:space="preserve">
+    <value>Sequence Is Required</value>
+  </data>
+  <data name="SequenceMustBeNumber" xml:space="preserve">
+    <value>Sequence must input number</value>
+  </data>
+  <data name="SerialNumbeEmpty" xml:space="preserve">
+    <value>SerialNumbe Cannot Empty！</value>
+  </data>
+  <data name="SerialNumberDeleted" xml:space="preserve">
+    <value>The serial number deleted</value>
+  </data>
+  <data name="SerialNumberError" xml:space="preserve">
+    <value>The serial number error</value>
+  </data>
+  <data name="SerialNumberNotRetore" xml:space="preserve">
+    <value>The serial number no for scrap or deleted, don't need a resume!</value>
+  </data>
+  <data name="SerialNumberNotScrapDeleted" xml:space="preserve">
+    <value>The serial number has been used, are not allowed to scrap or deleted</value>
+  </data>
+  <data name="SerialNumberScrapedOrDeleted" xml:space="preserve">
+    <value>The serial number scraped or deleted</value>
+  </data>
+  <data name="SetSuccess" xml:space="preserve">
+    <value>SetSuccess</value>
+  </data>
+  <data name="SFCAlreadydone" xml:space="preserve">
+    <value>SFC Already done!</value>
+  </data>
+  <data name="SFCAlreadypacked" xml:space="preserve">
+    <value>SFC Already packed!</value>
+  </data>
+  <data name="SFC_Already_Exist" xml:space="preserve">
+    <value>SN already exists！</value>
+  </data>
+  <data name="SFC_Invalid" xml:space="preserve">
+    <value>SN Invalid.</value>
+  </data>
+  <data name="SFC_Invalid_Status" xml:space="preserve">
+    <value>SN not completed.</value>
+  </data>
+  <data name="SFC_Is_Already_Used" xml:space="preserve">
+    <value>SN Is Already Used.</value>
+  </data>
+  <data name="SFC_Item_Mismatch" xml:space="preserve">
+    <value>SN not match the compoment.</value>
+  </data>
+  <data name="SFC_Reassign_Success" xml:space="preserve">
+    <value>Serial Number reassignment complete successfully!</value>
+  </data>
+  <data name="ShopOrderHasBeenReleased" xml:space="preserve">
+    <value>Shop Order Has Been Released.</value>
+  </data>
+  <data name="ShopOrderHaveNoBOM" xml:space="preserve">
+    <value>Shop Order Have No BOM.</value>
+  </data>
+  <data name="ShopOrderHaveNoRouter" xml:space="preserve">
+    <value>Shop Order Have No Router.</value>
+  </data>
+  <data name="ShopOrderInvalid" xml:space="preserve">
+    <value>This OrderNo  Is  Invalid!</value>
+  </data>
+  <data name="ShopOrderNotEnoughToRelease" xml:space="preserve">
+    <value>Shop Order Not Enough To Release.</value>
+  </data>
+  <data name="ShopOrderRequired" xml:space="preserve">
+    <value>ShopOrder Required!</value>
+  </data>
+  <data name="ShopOrderStatusNotAllowedRelease" xml:space="preserve">
+    <value>Shop Orde rStatus Not Allowed Release.</value>
+  </data>
+  <data name="SlotIDNeedFeedSNWei" xml:space="preserve">
+    <value>This MachineTableSlotID need FeedSN,please scan FeedSN!</value>
+  </data>
+  <data name="SlotIDNoFeedSNWei" xml:space="preserve">
+    <value>This MachineTableSlotID  not  FeedSN, don't need to scan FeedSN!</value>
+  </data>
+  <data name="SlotSnEmptyWei" xml:space="preserve">
+    <value>SlotSN not Empty!</value>
+  </data>
+  <data name="SlotSNNotLoad" xml:space="preserve">
+    <value>The LoadingList not  exists the SlotSN!</value>
+  </data>
+  <data name="SMTFeedSuccess" xml:space="preserve">
+    <value>SMT Validate  Success!</value>
+  </data>
+  <data name="SMTStartComplete" xml:space="preserve">
+    <value>This order  haven't started, don't  be stopped !</value>
+  </data>
+  <data name="SMTStopComplete" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SMTValidatenotComplete" xml:space="preserve">
+    <value>The work order loading test haven't finished, can't open!</value>
+  </data>
+  <data name="SNAppend0Fail" xml:space="preserve">
+    <value>Serial append 0 fail!</value>
+  </data>
+  <data name="SNCannotEmpty" xml:space="preserve">
+    <value>SN can not empty!</value>
+  </data>
+  <data name="SNCannotPackToContainer" xml:space="preserve">
+    <value>SN dismatch container!</value>
+  </data>
+  <data name="SNNotCompleteWei" xml:space="preserve">
+    <value>SN not completely!</value>
+  </data>
+  <data name="SNNotExists" xml:space="preserve">
+    <value>Serial Number not exits!</value>
+  </data>
+  <data name="SNNotScan" xml:space="preserve">
+    <value>Serial Number status error!</value>
+  </data>
+  <data name="SNScanError" xml:space="preserve">
+    <value>SN  Scan  Error !</value>
+  </data>
+  <data name="SolveErrorWei" xml:space="preserve">
+    <value>This machine is alarm, please remove alarm after verified loading again!</value>
+  </data>
+  <data name="SplitDetail" xml:space="preserve">
+    <value>GRN:[{0}]be splited to sub-GRN qty is：{1}</value>
+  </data>
+  <data name="SplitErrorInfo" xml:space="preserve">
+    <value>Split quantity: qty ={0},should be smaller then the GRN qty{1}!</value>
+  </data>
+  <data name="SplitMaterialSuccessed" xml:space="preserve">
+    <value>Successed.</value>
+  </data>
+  <data name="SplitQtyInvalid" xml:space="preserve">
+    <value>Split Quantity Invalid</value>
+  </data>
+  <data name="StartAlert" xml:space="preserve">
+    <value>Start  Alert!</value>
+  </data>
+  <data name="StartDateTimeGreaterThanEndDateTime" xml:space="preserve">
+    <value>Start DateTime Greater Than EndDateTime.</value>
+  </data>
+  <data name="StartFeedSuccess" xml:space="preserve">
+    <value>Start Feed  Success!</value>
+  </data>
+  <data name="StopFeedSuccess" xml:space="preserve">
+    <value>Stop Feed Success!</value>
+  </data>
+  <data name="StoreIssueSuccessful" xml:space="preserve">
+    <value>Store issue to </value>
+  </data>
+  <data name="SupplierLogin" xml:space="preserve">
+    <value>The supplier should login system from the supplier login interface.</value>
+  </data>
+  <data name="SureOpenWei" xml:space="preserve">
+    <value>Are  you sure Open?</value>
+  </data>
+  <data name="SureStopWei" xml:space="preserve">
+    <value>Are you  sure the line already  stop?</value>
+  </data>
+  <data name="Sysdoing" xml:space="preserve">
+    <value>Please wait......</value>
+  </data>
+  <data name="SystemMessage" xml:space="preserve">
+    <value>System Message:</value>
+  </data>
+  <data name="TemplateNameEmpty" xml:space="preserve">
+    <value>Template Name Cannot Empty!</value>
+  </data>
+  <data name="TestUserName" xml:space="preserve">
+    <value>the default username is 'admin' and password is '123456'</value>
+  </data>
+  <data name="TheActivityHasBeenAssignedToOperationType" xml:space="preserve">
+    <value>The Activity Has Been Assigned To Operation Type</value>
+  </data>
+  <data name="TheActivityHasBeenUsedByRouter" xml:space="preserve">
+    <value>The Activity Has Been Used By Router.</value>
+  </data>
+  <data name="TheLineBindResource" xml:space="preserve">
+    <value>The line bind by some resources.</value>
+  </data>
+  <data name="TheOpeTypeBindOperation" xml:space="preserve">
+    <value>The Operation Type Bind Operation.</value>
+  </data>
+  <data name="TheParameterDescriptionExists" xml:space="preserve">
+    <value>The Parameter Description Exists.</value>
+  </data>
+  <data name="TheStatusNotAllowedEdit" xml:space="preserve">
+    <value>The Status Not Allowed Edit or Delete.</value>
+  </data>
+  <data name="ThisCCgroupNotIncludeTheCC" xml:space="preserve">
+    <value>This Circulation Container Group Not Include This Circulation Container</value>
+  </data>
+  <data name="TimeFormatError" xml:space="preserve">
+    <value>Time format error！</value>
+  </data>
+  <data name="txtShiftNameEmpty" xml:space="preserve">
+    <value>tShift Name Empty</value>
+  </data>
+  <data name="TypeCodeCountRequire" xml:space="preserve">
+    <value>The device code already exists. Please enter again!</value>
+  </data>
+  <data name="TypeCodeEmpty" xml:space="preserve">
+    <value>Equipment Type  Code  cannot  empty!</value>
+  </data>
+  <data name="TypeNameEmpty" xml:space="preserve">
+    <value>Equipment Type Name cannot empty!</value>
+  </data>
+  <data name="UnitBingdSNFail" xml:space="preserve">
+    <value>Unit Bind SN Fail</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>unknow error.</value>
+  </data>
+  <data name="UnknownErrorAndReleaseFaild" xml:space="preserve">
+    <value>Unknown Error And Release Faild</value>
+  </data>
+  <data name="UnlockUserSuccess" xml:space="preserve">
+    <value>Unlock User Success!</value>
+  </data>
+  <data name="UnpackFirstly" xml:space="preserve">
+    <value>the carton is closed, please unpack it firstly.</value>
+  </data>
+  <data name="UnpackSuccessful" xml:space="preserve">
+    <value>unpack successful</value>
+  </data>
+  <data name="UpdateContainerStatusError" xml:space="preserve">
+    <value>Update container status fail!</value>
+  </data>
+  <data name="UpdateGrnStatusFailed" xml:space="preserve">
+    <value>Update the GRN's Status failed when deleting the picking list.</value>
+  </data>
+  <data name="UpdateNextNumberSequenceFail" xml:space="preserve">
+    <value>Update NextNumber Sequence Fail!</value>
+  </data>
+  <data name="UpdatePckGrnFailed" xml:space="preserve">
+    <value>Update the GRN's status failed, delete the GRN which is in picking list failed.</value>
+  </data>
+  <data name="UpdateRecordFail" xml:space="preserve">
+    <value>Update record  fail!</value>
+  </data>
+  <data name="UpdateRMADATAFail" xml:space="preserve">
+    <value>Update RMADATA Fail!</value>
+  </data>
+  <data name="UpdateRouteFail" xml:space="preserve">
+    <value>Update route fail!</value>
+  </data>
+  <data name="UpdateUnitError" xml:space="preserve">
+    <value>Update unit information error!</value>
+  </data>
+  <data name="UpdateUnitStatusError" xml:space="preserve">
+    <value>Update unit status error!</value>
+  </data>
+  <data name="UpdateWOFail" xml:space="preserve">
+    <value>Update production order fail!</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>User name is required.</value>
+  </data>
+  <data name="UsingRouterDesignerCondition" xml:space="preserve">
+    <value>To using the router designer the follow conditions are required:</value>
+  </data>
+  <data name="ValidateCodeError" xml:space="preserve">
+    <value>Validate Code Error!</value>
+  </data>
+  <data name="ValidateCodeRequired" xml:space="preserve">
+    <value>Validate Code Is Required!</value>
+  </data>
+  <data name="ValidateLineMessage" xml:space="preserve">
+    <value>Please stop pulling continued after operation</value>
+  </data>
+  <data name="VendorCodeCannotEmpty" xml:space="preserve">
+    <value>Vendor Code can not emptyVendorCodeCannotEmpty!</value>
+  </data>
+  <data name="VendorCodeIsNull" xml:space="preserve">
+    <value>Vendor code is null, and the GRN cannot be splited.</value>
+  </data>
+  <data name="VendorIsNotExists" xml:space="preserve">
+    <value>Vendor is not exists.</value>
+  </data>
+  <data name="VendorIsNull" xml:space="preserve">
+    <value>Vendor code is null!</value>
+  </data>
+  <data name="VendorSortIsEmpty" xml:space="preserve">
+    <value>Required vendor sort.</value>
+  </data>
+  <data name="VersionIsRequired" xml:space="preserve">
+    <value>Revision is required.</value>
+  </data>
+  <data name="WarehouseCodeLength" xml:space="preserve">
+    <value>Warehouse's code can not more than 10 chars!</value>
+  </data>
+  <data name="WareHouseIdIsNeeded" xml:space="preserve">
+    <value>Warehouse Id is needed!</value>
+  </data>
+  <data name="WareHouseNameIsNeeded" xml:space="preserve">
+    <value>Warehouse Name is needed!</value>
+  </data>
+  <data name="WarehouseNameLength" xml:space="preserve">
+    <value>Warehouse's name length is 10 chars!</value>
+  </data>
+  <data name="WithAsteriskIsRequired" xml:space="preserve">
+    <value>&lt;em&gt;*&lt;/em&gt; is required.</value>
+  </data>
+  <data name="WithAsteriskIsRequiredAlert" xml:space="preserve">
+    <value>Field with * must input</value>
+  </data>
+  <data name="WMSChars" xml:space="preserve">
+    <value>chars</value>
+  </data>
+  <data name="wmsIsNotNull" xml:space="preserve">
+    <value>Column can not be empty!</value>
+  </data>
+  <data name="WMSLenNoMoreThan" xml:space="preserve">
+    <value>length is not more than</value>
+  </data>
+  <data name="WOBOMnotexist" xml:space="preserve">
+    <value>WO BOM not exist in system!</value>
+  </data>
+  <data name="WOCannotIssueGRN" xml:space="preserve">
+    <value>Order did not issue this GRN!</value>
+  </data>
+  <data name="WOError" xml:space="preserve">
+    <value>WO error!</value>
+  </data>
+  <data name="WOGenerateSNError" xml:space="preserve">
+    <value>WO Generate SN error,please confirm item sequence setting!</value>
+  </data>
+  <data name="WOInfoError" xml:space="preserve">
+    <value>Work order information error!</value>
+  </data>
+  <data name="WOItemNotMatchGRN" xml:space="preserve">
+    <value>WO Item Not Match!</value>
+  </data>
+  <data name="WoItemNotMatchGrnItem" xml:space="preserve">
+    <value>WO Item Not Match Grn Item!</value>
+  </data>
+  <data name="WONOItem" xml:space="preserve">
+    <value>WO NO Item！</value>
+  </data>
+  <data name="WONORouter" xml:space="preserve">
+    <value>Order no router!</value>
+  </data>
+  <data name="WoOrderNoItem" xml:space="preserve">
+    <value>The Order no itemName!</value>
+  </data>
+  <data name="WORMAError" xml:space="preserve">
+    <value>Non RMA WO!</value>
+  </data>
+  <data name="ZPLNameEmpty" xml:space="preserve">
+    <value>ZPL Name Cannot Empty!</value>
+  </data>
+  <data name="InProcessOfLogout" xml:space="preserve">
+    <value>Logoff in process...</value>
+  </data>
+  <data name="LoginInProcess" xml:space="preserve">
+    <value>Login In Process...</value>
+  </data>
+  <data name="DataLoading" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="InvalidAccessPage" xml:space="preserve">
+    <value>Invalid access page.</value>
+  </data>
+  <data name="InvalidLicense" xml:space="preserve">
+    <value>Invalid license.</value>
+  </data>
+  <data name="NoLicense" xml:space="preserve">
+    <value>Have not found the license.</value>
+  </data>
+  <data name="CycleTimeMustGreaterPrewarning" xml:space="preserve">
+    <value>Cycle time must greater Prewarning！</value>
+  </data>
+  <data name="CycleTimeMustGreaterZero" xml:space="preserve">
+    <value>Cycle time must greater zero！</value>
+  </data>
+  <data name="EquipmentCodeNotEmpty" xml:space="preserve">
+    <value>Equipment code not empty！</value>
+  </data>
+  <data name="EquipmentModelsNotEmpty" xml:space="preserve">
+    <value>Equipment models not empty！</value>
+  </data>
+  <data name="EquipmentNameNotEmpty" xml:space="preserve">
+    <value>Equipment name not empty！</value>
+  </data>
+  <data name="EquipmentTypeCodeNotEmpty" xml:space="preserve">
+    <value>Equipment type code not empty！</value>
+  </data>
+  <data name="EquipmentTypeNameNotEmpty" xml:space="preserve">
+    <value>Equipment type name not empty！</value>
+  </data>
+  <data name="PreWarningMustGreaterZero" xml:space="preserve">
+    <value>PreWarning must greater zero！</value>
+  </data>
+  <data name="ProduceDateNotLaterThanEnterFactoryDate" xml:space="preserve">
+    <value>ProduceDate not later than enter factory date！</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>Save fail！</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Save success！</value>
+  </data>
+  <data name="PlanMaintainConfirmFail" xml:space="preserve">
+    <value>Plan maintain confirm fail！</value>
+  </data>
+  <data name="PlanMaintainConfirmSuccess" xml:space="preserve">
+    <value>Plan maintain confirm success！</value>
+  </data>
+  <data name="ChangePasswordFailed" xml:space="preserve">
+    <value>Change password failed.</value>
+  </data>
+  <data name="InitPasswordFailed" xml:space="preserve">
+    <value>Initialize user's password failed.</value>
+  </data>
+  <data name="MaxStowQtyMustGreaterZero" xml:space="preserve">
+    <value>Max stow Qty must greater zero！</value>
+  </data>
+  <data name="MinStowQtyMustGreaterZero" xml:space="preserve">
+    <value>Min stow Qty must greater zero！</value>
+  </data>
+  <data name="TurnoverGroupNameNotEmpty" xml:space="preserve">
+    <value>Turnover group name not empty！</value>
+  </data>
+  <data name="TurnoverNumberFormatError" xml:space="preserve">
+    <value>Turnover number format error！</value>
+  </data>
+  <data name="TurnoverTypeCodeNotEmpty" xml:space="preserve">
+    <value>Turnover type code not empty！</value>
+  </data>
+  <data name="TurnoverTypeNameNotEmpty" xml:space="preserve">
+    <value>Turnover type name not empty！</value>
+  </data>
+  <data name="AnormalGroupNameEmpty" xml:space="preserve">
+    <value>Anormal group name can not be Empty!</value>
+  </data>
+  <data name="CannotMoreThan" xml:space="preserve">
+    <value>length can not more than</value>
+  </data>
+  <data name="Chars" xml:space="preserve">
+    <value>chars</value>
+  </data>
+  <data name="ThisTurnoverNotIncludeTheTurnoverGroup" xml:space="preserve">
+    <value>This turnover not include the turnover group</value>
+  </data>
+  <data name="InterrelatedOrganizationExists" xml:space="preserve">
+    <value>Interrelated Record Exists.</value>
+  </data>
+  <data name="AnormalTypeNameEmpty" xml:space="preserve">
+    <value>Anormal type name can not be empty!</value>
+  </data>
+  <data name="PartLocationCannotNull" xml:space="preserve">
+    <value>Part location can not be empty!</value>
+  </data>
+  <data name="PartNameCannotNull" xml:space="preserve">
+    <value>Part name can not be empty!</value>
+  </data>
+  <data name="PartNickNameCannotNull" xml:space="preserve">
+    <value>Part nick name can not be empty!</value>
+  </data>
+  <data name="PartNOCannotNull" xml:space="preserve">
+    <value>PartNO can not be empty!</value>
+  </data>
+  <data name="PartQtyCannotNull" xml:space="preserve">
+    <value>Part Quantity  can not be empty!</value>
+  </data>
+  <data name="PartSafeQtyCannotNull" xml:space="preserve">
+    <value>Part safe Quantity  can not be empty!</value>
+  </data>
+  <data name="InStorageSuccessful" xml:space="preserve">
+    <value>Warehousing success!</value>
+  </data>
+  <data name="FormatErrorDownloadTemplate" xml:space="preserve">
+    <value>The format is wrong, you can download the module reference！</value>
+  </data>
+  <data name="NotNull" xml:space="preserve">
+    <value>NOT NULL！</value>
+  </data>
+  <data name="RecMaterialOverCharge" xml:space="preserve">
+    <value>Receive material fail Qty over charge </value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Please save master data first</value>
+  </data>
+  <data name="GRNPrintError" xml:space="preserve">
+    <value>GRN print error</value>
+  </data>
+  <data name="MaterialExist" xml:space="preserve">
+    <value>The material is</value>
+  </data>
+  <data name="PleaseAddMaterial" xml:space="preserve">
+    <value>Please add to the application of the material</value>
+  </data>
+  <data name="CannotModify" xml:space="preserve">
+    <value>Can not modify</value>
+  </data>
+  <data name="ProductLocationBindingType" xml:space="preserve">
+    <value>This product has binding document types in this location!</value>
+  </data>
+  <data name="PickedCannotOperation" xml:space="preserve">
+    <value>Has been picking cannot operation！</value>
+  </data>
+  <data name="OnlyVarApplicable" xml:space="preserve">
+    <value>except nvarchar or varchar not applicable</value>
+  </data>
+  <data name="Abandoned" xml:space="preserve">
+    <value>Abandoned！</value>
+  </data>
+  <data name="AbandonSuccess" xml:space="preserve">
+    <value>Abandon whose success！</value>
+  </data>
+  <data name="AuditOrShipmentNotDelete" xml:space="preserve">
+    <value>Already audit and has set up a shipment is not allowed to delete！</value>
+  </data>
+  <data name="NonOperational" xml:space="preserve">
+    <value>Non Operational</value>
+  </data>
+  <data name="AreYouSureAbandon" xml:space="preserve">
+    <value>Sure you want to put on the record?</value>
+  </data>
+  <data name="AreYouSureAudit" xml:space="preserve">
+    <value>Sure you want to review the record?</value>
+  </data>
+  <data name="AreLiningUpToPrint" xml:space="preserve">
+    <value>Are lining up to print ,but have</value>
+  </data>
+  <data name="ConfirmBatchGiveInUse" xml:space="preserve">
+    <value>Confirm batch give in use</value>
+  </data>
+  <data name="ConfirmClearReceiveMaterialList" xml:space="preserve">
+    <value>Confirm clear receive material list</value>
+  </data>
+  <data name="ConfirmRemoveCurrentCode" xml:space="preserve">
+    <value>Confirm remove current code?</value>
+  </data>
+  <data name="HaveNothingData" xml:space="preserve">
+    <value>Have nothing data</value>
+  </data>
+  <data name="InBacthNotWaitCheckMaterial" xml:space="preserve">
+    <value>In current bacth not wait check material</value>
+  </data>
+  <data name="MaterialCodeInCurrentBatch" xml:space="preserve">
+    <value>Material code in current batch</value>
+  </data>
+  <data name="MaterialNotSetIQCType" xml:space="preserve">
+    <value>Material not set IQC type</value>
+  </data>
+  <data name="PCSCodeWaitPrint" xml:space="preserve">
+    <value>PCS code wait print</value>
+  </data>
+  <data name="PleaseNeedReceiveMaterialPO" xml:space="preserve">
+    <value>Please need receive material PO</value>
+  </data>
+  <data name="PleaseScanNeedCheckOfMaterial" xml:space="preserve">
+    <value>Please scan need check of material</value>
+  </data>
+  <data name="ReceivingMaterial" xml:space="preserve">
+    <value>Receiving material</value>
+  </data>
+  <data name="ThisCodeWithOtherCodeNotSameMaterial" xml:space="preserve">
+    <value>This code with other code not same material</value>
+  </data>
+  <data name="GRNGenerateFail" xml:space="preserve">
+    <value>GRN generate fail</value>
+  </data>
+  <data name="IQCFormCreateFail" xml:space="preserve">
+    <value>IQC form create fail</value>
+  </data>
+  <data name="MaterialChecked" xml:space="preserve">
+    <value>Material checked</value>
+  </data>
+  <data name="MaterialCodeAbnormal" xml:space="preserve">
+    <value>Material code abnormal</value>
+  </data>
+  <data name="MaterialInOtherIQCForm" xml:space="preserve">
+    <value>Material in other IQC form</value>
+  </data>
+  <data name="MaterialNotInTempWH" xml:space="preserve">
+    <value>Material not in temp ware house</value>
+  </data>
+  <data name="ThisMaterialNotSetLabelTemplate" xml:space="preserve">
+    <value>This material not set label template</value>
+  </data>
+  <data name="ThisMaterialNotSetMinQty" xml:space="preserve">
+    <value>This material not set min Qty</value>
+  </data>
+  <data name="ThisMaterialNotSetSNRule" xml:space="preserve">
+    <value>This material not set SN rule</value>
+  </data>
+  <data name="LifeTimeMustGreaterCycleTime" xml:space="preserve">
+    <value>Life time must greater cycle time</value>
+  </data>
+  <data name="ParamNameRepetition" xml:space="preserve">
+    <value>Param name repetition ！</value>
+  </data>
+  <data name="EmptyArrivalFormNO" xml:space="preserve">
+    <value>Empty arrival form NO</value>
+  </data>
+  <data name="InvalidIQCFormNO" xml:space="preserve">
+    <value>Invalid IQC form NO</value>
+  </data>
+  <data name="InvalidMaterialSN" xml:space="preserve">
+    <value>Invalid material SN</value>
+  </data>
+  <data name="MaterialSNStatusError" xml:space="preserve">
+    <value>Material SN status error</value>
+  </data>
+  <data name="NotMeetConditionsOfMaterial" xml:space="preserve">
+    <value>Not meet the conditions of material testing!</value>
+  </data>
+  <data name="PleaseEnterAValidShippingNumber" xml:space="preserve">
+    <value>Please enter a valid shipping number!</value>
+  </data>
+  <data name="ThisFormNONotExistsOrRecevedCompleted" xml:space="preserve">
+    <value>This form NO not exists or receved completed</value>
+  </data>
+  <data name="ThisMaterialNotSetCheckParams" xml:space="preserve">
+    <value>This material not set check params</value>
+  </data>
+  <data name="IQCFailSuccess" xml:space="preserve">
+    <value>IQC fail success</value>
+  </data>
+  <data name="IQCPassSuccess" xml:space="preserve">
+    <value>IQC pass success</value>
+  </data>
+  <data name="PleaseEnterAValidMinPackQty" xml:space="preserve">
+    <value>Please enter a valid min pack Qty</value>
+  </data>
+  <data name="StartDateTimeGreaterThanEndDateTime1" xml:space="preserve">
+    <value>Start DateTime Greater Than EndDateTime.</value>
+  </data>
+  <data name="ProducedCannotOperation" xml:space="preserve">
+    <value>Produced cannot operation</value>
+  </data>
+  <data name="CancelSuccess" xml:space="preserve">
+    <value>Cancel success！</value>
+  </data>
+  <data name="FinishAssignedTasks" xml:space="preserve">
+    <value>Finish assigned tasks!</value>
+  </data>
+  <data name="LineJoin" xml:space="preserve">
+    <value>this Line is join!</value>
+  </data>
+  <data name="ConfirmAllSpecial" xml:space="preserve">
+    <value>ConfirmAllSpecial</value>
+  </data>
+  <data name="IQCSpecialSuccess" xml:space="preserve">
+    <value>IQCSpecialSuccess</value>
+  </data>
+  <data name="ShopOrderStatusNotAllowedRelease1" xml:space="preserve">
+    <value>Shop Orde rStatus Not Allowed Release.</value>
+  </data>
+  <data name="GrnPackedToCarton" xml:space="preserve">
+    <value>The GRN is packed into carton, please remove it from carton firstly.</value>
+  </data>
+  <data name="InsertGrnHistoryFailed" xml:space="preserve">
+    <value>Insert GRN history failed, delete GRN failed!</value>
+  </data>
+  <data name="ResourceEmpty" xml:space="preserve">
+    <value>Resource Cannot  Empty!</value>
+  </data>
+  <data name="CartonIsNotEmpty" xml:space="preserve">
+    <value>Carton Is Not Empty.</value>
+  </data>
+  <data name="GrnCartonIsEmpty" xml:space="preserve">
+    <value>Carton is empty.</value>
+  </data>
+  <data name="GrnCartonIsStillOpen" xml:space="preserve">
+    <value>the GRN carton is still open.</value>
+  </data>
+  <data name="ReportCNNameIsNull" xml:space="preserve">
+    <value>Report's chinese name is null!</value>
+  </data>
+  <data name="ReportENNameIsNull" xml:space="preserve">
+    <value>Report's english name is null!</value>
+  </data>
+  <data name="ReportTypeIsNull" xml:space="preserve">
+    <value>Please select a report type!</value>
+  </data>
+  <data name="ReportTypeNameCNIsEmpty" xml:space="preserve">
+    <value>Report Type Chinese Name Cannot Be Empty.</value>
+  </data>
+  <data name="ReportTypeNameENIsEmpty" xml:space="preserve">
+    <value>Report Type English Name Cannot Be Empty.</value>
+  </data>
+  <data name="SequenceShouldBeNumber" xml:space="preserve">
+    <value>SequenceShouldBeNumber</value>
+  </data>
+  <data name="InvalidGRNOrIsPacked" xml:space="preserve">
+    <value>The scanning sn is invalidate or is packed to carton.</value>
+  </data>
+  <data name="NewMaterialNumberInvalid" xml:space="preserve">
+    <value>New material receiving number is invalid!</value>
+  </data>
+  <data name="ItemCodeIsRequired" xml:space="preserve">
+    <value>Item code is required.</value>
+  </data>
+  <data name="PleaseSelectDestinationOpe" xml:space="preserve">
+    <value>Please select destination ope</value>
+  </data>
+  <data name="MaterialNotExist" xml:space="preserve">
+    <value>Material is not exist!</value>
+  </data>
+  <data name="CreatePickFail" xml:space="preserve">
+    <value>Create picking list fail</value>
+  </data>
+  <data name="LintSequenceCompletedSubmit" xml:space="preserve">
+    <value>Listing the sequence has been completed, please submit!</value>
+  </data>
+  <data name="PartValueCannotNull" xml:space="preserve">
+    <value>PartValueCannotNull</value>
+  </data>
+  <data name="SerialNumberIsExistsWhetherReplace" xml:space="preserve">
+    <value>Sequence listing already exists, whether to replace?</value>
+  </data>
+  <data name="TemplatePathEmpty" xml:space="preserve">
+    <value>Template path empty</value>
+  </data>
+  <data name="TypeEmpty" xml:space="preserve">
+    <value>Type Empty</value>
+  </data>
+  <data name="LabelFormatRepeat" xml:space="preserve">
+    <value>Label Format Repeat</value>
+  </data>
+  <data name="SelectModelName" xml:space="preserve">
+    <value>Select model name</value>
+  </data>
+  <data name="SelectFieldName" xml:space="preserve">
+    <value>Select field name</value>
+  </data>
+  <data name="IQCParamsGetFail" xml:space="preserve">
+    <value>IQC Params GetFail</value>
+  </data>
+  <data name="IQCPartPassSuccess" xml:space="preserve">
+    <value>IQC Part Pass Success</value>
+  </data>
+  <data name="EqptModelEmpty1" xml:space="preserve">
+    <value>Equipment model can't be empty!</value>
+  </data>
+  <data name="GRNPrintSuccessful" xml:space="preserve">
+    <value>GRN Print Successful</value>
+  </data>
+  <data name="HasSameName" xml:space="preserve">
+    <value>Has the same name is</value>
+  </data>
+  <data name="NotAllowDeleteReportType" xml:space="preserve">
+    <value>There are reports binding to this report type ,it cannot be deleted.</value>
+  </data>
+  <data name="PrintFailOfGRN" xml:space="preserve">
+    <value>Print fail of GRN</value>
+  </data>
+  <data name="PrintingItem" xml:space="preserve">
+    <value>Printing Item</value>
+  </data>
+  <data name="PrintingSN" xml:space="preserve">
+    <value>Printing SN</value>
+  </data>
+  <data name="PrintReady" xml:space="preserve">
+    <value>Ready print......</value>
+  </data>
+  <data name="PrintSNQtyOverCharge" xml:space="preserve">
+    <value>Print SN Qty over charge：</value>
+  </data>
+  <data name="RouterNoLink11" xml:space="preserve">
+    <value>This router is not available.</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>Please save master data first</value>
+  </data>
+  <data name="UnitBingdSNFail1" xml:space="preserve">
+    <value>Unit Bind SN Fail</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>SuccessFully Operate</value>
+  </data>
+  <data name="SystemResetWayCannotDelete" xml:space="preserve">
+    <value>System reset way cannot be deleted!</value>
+  </data>
+  <data name="SystemResetWayCannotEdit" xml:space="preserve">
+    <value>System reset way cannot be edited!</value>
+  </data>
+  <data name="NoPickListDetail" xml:space="preserve">
+    <value>NoPickListDetail</value>
+  </data>
+  <data name="SetupNameEmpty" xml:space="preserve">
+    <value>SetupNameEmpty</value>
+  </data>
+  <data name="NoLoadingListDetail" xml:space="preserve">
+    <value>NoLoadingListDetail</value>
+  </data>
+  <data name="SlotNoRepeat" xml:space="preserve">
+    <value>SlotNoRepeat</value>
+  </data>
+  <data name="SystemRuleTypeCannotEdit" xml:space="preserve">
+    <value>Can not Edit System Rule Type !</value>
+  </data>
+  <data name="SystemRuleTypeCannotDelete" xml:space="preserve">
+    <value>Can not delete system rule type!</value>
+  </data>
+  <data name="ScrapSuccess" xml:space="preserve">
+    <value>ScrapSuccess</value>
+  </data>
+  <data name="EmailServerError" xml:space="preserve">
+    <value>The mail server address illegal</value>
+  </data>
+  <data name="PackGrnCannotScrap" xml:space="preserve">
+    <value>The GRN was packed, if you went script GRN, please delete the pack's caton first!</value>
+  </data>
+  <data name="StationFailError" xml:space="preserve">
+    <value>Has reached the max fail count !</value>
+  </data>
+  <data name="StationPassError" xml:space="preserve">
+    <value>Has reached the max pass count !</value>
+  </data>
+  <data name="OrderCloseError" xml:space="preserve">
+    <value>The order has been closed!</value>
+  </data>
+  <data name="OrderDoneError" xml:space="preserve">
+    <value>The order is completed!</value>
+  </data>
+  <data name="OrderHoldError" xml:space="preserve">
+    <value>The order has been locked[QHold]!</value>
+  </data>
+  <data name="ModelWasUsed" xml:space="preserve">
+    <value>Model has been used!</value>
+  </data>
+  <data name="RequireWarehouse" xml:space="preserve">
+    <value>Please Choose Warehouse</value>
+  </data>
+  <data name="PlanListByTime" xml:space="preserve">
+    <value>Only the production scheduling information of the day is displayed!</value>
+  </data>
+  <data name="UnTest" xml:space="preserve">
+    <value>UnTest</value>
+  </data>
+  <data name="UspCheckResource_UnExistsResource" xml:space="preserve">
+    <value>The resource is not exists! [uspCheckResource]</value>
+  </data>
+  <data name="UspCheckResource_UnExpiredResource" xml:space="preserve">
+    <value>The resource is expired![uspCheckResource]</value>
+  </data>
+  <data name="UspCheckResource_UnFindResource" xml:space="preserve">
+    <value>Did not find resource information![uspCheckResource]</value>
+  </data>
+  <data name="uspCheckUser_UserResigned" xml:space="preserve">
+    <value>User resigned！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserLocked" xml:space="preserve">
+    <value>User Locked！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserStopped" xml:space="preserve">
+    <value>User Stopped！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckUser_UserNotExist" xml:space="preserve">
+    <value>User not exist！[uspCheckUser]</value>
+  </data>
+  <data name="uspCheckStation_NoWorkOrderInformation" xml:space="preserve">
+    <value>No Work order information！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckStation_WorkdOrderBlocked" xml:space="preserve">
+    <value>Workd order blocked！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckStation_WorkOrderOutOfTime" xml:space="preserve">
+    <value>Work order out of time！[uspCheckStation]</value>
+  </data>
+  <data name="uspCheckSerialNumber_NoSerialNumberInfo" xml:space="preserve">
+    <value>No Serial number information！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberScrapped" xml:space="preserve">
+    <value>Serial number {0} scrapped！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_ModelQHold" xml:space="preserve">
+    <value>Model {0} QHold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberQHold" xml:space="preserve">
+    <value>Serial number {0} QHold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHoldInPanel" xml:space="preserve">
+    <value>Serial number Hold in panel！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHasFinishRoute" xml:space="preserve">
+    <value>Serial number has finish route！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberHold" xml:space="preserve">
+    <value>Serial number Hold！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_CannotPassLastStation" xml:space="preserve">
+    <value>This S/N cannot pass last station！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckSerialNumber_SerialNumberStoppedThisModel" xml:space="preserve">
+    <value>This Serial number has been stopped on this Model！[uspCheckSerialNumber]</value>
+  </data>
+  <data name="uspCheckRouter_DidNotFindTheRouteInfo" xml:space="preserve">
+    <value>Did not find the route information！[uspCheckRouter]</value>
+  </data>
+  <data name="uspCheckRouter_RouteHasBeenStopped" xml:space="preserve">
+    <value>Route {0} has been stopped！[uspCheckRouter]</value>
+  </data>
+  <data name="uspCheckRouter_ProcessError" xml:space="preserve">
+    <value>Process Error！[uspCheckRouter]</value>
+  </data>
+  <data name="LabelIsNotExist" xml:space="preserve">
+    <value>Label is not exist！</value>
+  </data>
+  <data name="StationIsNotExist" xml:space="preserve">
+    <value>Station is not exist！</value>
+  </data>
+  <data name="ResourcesIsNotExist" xml:space="preserve">
+    <value>The resources is not exist！</value>
+  </data>
+  <data name="SNIsNotInTheNextStation" xml:space="preserve">
+    <value>SN is not in the next station {0}！</value>
+  </data>
+  <data name="MaximumAllowedTestTimes" xml:space="preserve">
+    <value>This S/N has tested with maximum allowed test times！</value>
+  </data>
+  <data name="DayShift" xml:space="preserve">
+    <value>Day Shift</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>Night Shift</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisResource" xml:space="preserve">
+    <value>User has no certification on this resource ！[uspCheckCertification]</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisStation" xml:space="preserve">
+    <value>User has no certification on this station！[uspCheckCertification]</value>
+  </data>
+  <data name="uspCheckCertification_UserHasNoCertificationOnThisModel" xml:space="preserve">
+    <value>User has no certification on this Model！[uspCheckCertification]</value>
+  </data>
+  <data name="uspUnitComplete_ResourceUnboundFace" xml:space="preserve">
+    <value>Resource not linked with top/bottom side ！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_CheckTheSteelMesh" xml:space="preserve">
+    <value>No stencil information in this Line and Work order, please check stencil！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_CheckTheScraper" xml:space="preserve">
+    <value>No scraper information in this Line and Work order, please check scraper！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_LoadingVerification" xml:space="preserve">
+    <value>Please finish kitting material and then start！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_WorkOrderStartTime" xml:space="preserve">
+    <value>Fault on updating work order start time！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_ModelBasicInfo" xml:space="preserve">
+    <value>Fault on updating Model basic information！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_ModelWorkOrderClosingStatus" xml:space="preserve">
+    <value>Fault on updating model work order closing status！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_WorkOrderQuantity" xml:space="preserve">
+    <value>Fault on updating work order quantity！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_unlockingPanelInfo" xml:space="preserve">
+    <value>Fault on unlocking panel information！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_InsertingStatisticData" xml:space="preserve">
+    <value>Fault on inserting statistic data！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_insertingmodelhistorydata" xml:space="preserve">
+    <value>Fault on inserting model history data！[uspUnitComplete]</value>
+  </data>
+  <data name="uspUnitComplete_updatingworkorderclosingstatus" xml:space="preserve">
+    <value>Fault on updating work order closing status！[uspUnitComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_isnotfoundinsystem" xml:space="preserve">
+    <value>Barcode is not found in system！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Processisnotfound" xml:space="preserve">
+    <value>Process is not found！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Faultonaddingstationpassinformation" xml:space="preserve">
+    <value>Fault on adding station pass information！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_Faultonprocessingstationfailureinformation" xml:space="preserve">
+    <value>Fault on processing station failure information！[uspWSBarcodeComplete]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_RevisingUnitTestingResult" xml:space="preserve">
+    <value>Fault on revising Unit testing result！[uspUpdateUnitResult]</value>
+  </data>
+  <data name="uspWSBarcodeComplete_RevisingStatiscQuantity" xml:space="preserve">
+    <value>Fault on revising statisc quantity！[uspBackOffStatisticalData]</value>
+  </data>
+  <data name="uspGetSNStationInfo_FinishedProduction" xml:space="preserve">
+    <value>Scan process erro,The SN has finished production！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspGetSNStationInfo_HasPassedTheProcess" xml:space="preserve">
+    <value>Scan process erro,SN {0} has gone through process {1},Next station is:{2}！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspGetSNStationInfo_Noprocessinformationonworkorderroute" xml:space="preserve">
+    <value>No process information on work order route！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspUnitProcessValidation_notfinishedinrecevingprocess" xml:space="preserve">
+    <value>S/N is not finished in receving process！[uspGetSNStationInfo]</value>
+  </data>
+  <data name="uspCheckOrder_Noworkorderinformation" xml:space="preserve">
+    <value>No work order information！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Noplanforthisworkorder" xml:space="preserve">
+    <value>No plan for this work order！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_WorkorderhasbeenQHold" xml:space="preserve">
+    <value>Work order has been QHold！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Workorderfinished" xml:space="preserve">
+    <value>Work order finished！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_Workorderclosed" xml:space="preserve">
+    <value>Work order closed！[uspCheckOrder]</value>
+  </data>
+  <data name="uspCheckOrder_ThisworkorderhasbeenQHold" xml:space="preserve">
+    <value>This work order has been QHold！[uspCheckOrder]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_Maintainsrules" xml:space="preserve">
+    <value>No S/N Maintains rules！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_ModelMaximum" xml:space="preserve">
+    <value>Model maximum S/N is:{0},Current released S/N quantity is greater than its allowed,Allowed maximum quantity is {1}！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_FaultOnGenerating" xml:space="preserve">
+    <value>Fault on generating S/N！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_RepeatedSN" xml:space="preserve">
+    <value>Repeated S/N！Please check S/N rules！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="uspGenerateSNByBatch_RepeatedSNpleaseCheckSNrules" xml:space="preserve">
+    <value>Repeated S/N, please check S/N rules！[uspGenerateSNByBatch]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_cannotBePrinted" xml:space="preserve">
+    <value>Work order is not released, S/N cannot be printed！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_notAllowedInThisWorkOrder" xml:space="preserve">
+    <value>Sub board is not allowed in this Work order！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="Prod_OrderCheckCanbeRelease_NotlinkedWithModelBOM" xml:space="preserve">
+    <value>Not linked with Model BOM！[Prod_OrderCheckCanbeRelease]</value>
+  </data>
+  <data name="uspPordQHoldByOrder_WorkOrderhasbeenQhold" xml:space="preserve">
+    <value>Work order has been Qhold, cannot move！[uspPordQHoldByOrder]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_FaultOnUpdatingFailRecord" xml:space="preserve">
+    <value>Fault on updating Fail record！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_NewAddingRepairRecord" xml:space="preserve">
+    <value>New adding repair record！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspWSAutoFixedNCData_FaultOnUpdatingFailTimes" xml:space="preserve">
+    <value>Fault on updating Fail times！[uspWSAutoFixedNCData]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_Faultoninsertingpacking" xml:space="preserve">
+    <value>Fault on inserting packing S/N detailed information！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_FaultOn" xml:space="preserve">
+    <value>Fault on S/N testing information！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspUnitCompleteBySN_unlockingpanel" xml:space="preserve">
+    <value>Fault on unlocking panel information！[uspUnitCompleteBySN]</value>
+  </data>
+  <data name="uspUnitCompleteBySN_TestingOfLastStation" xml:space="preserve">
+    <value>Fault on S/N testing of last station！[uspUnitCompleteBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_A" xml:space="preserve">
+    <value>Please scan carton box serial number！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_B" xml:space="preserve">
+    <value>Did not find the product's carton box setting！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_C" xml:space="preserve">
+    <value>Fault on generating carton box serial number！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_D" xml:space="preserve">
+    <value>S/N repeated in carton box, please check serial number rules！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_E" xml:space="preserve">
+    <value>Fault on generating caton box serial number！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_F" xml:space="preserve">
+    <value>Fault on linking Serial number with carton box！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_G" xml:space="preserve">
+    <value>Carton box closed！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_H" xml:space="preserve">
+    <value>Carton box scrapped！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_AlreadyPackedIntoCartonBox" xml:space="preserve">
+    <value>Already packed into carton box！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CartonBoxAllowedQuantity" xml:space="preserve">
+    <value>Packing quantity is greated than carton box allowed quantity！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_UpdatingCartonBoxStatus" xml:space="preserve">
+    <value>Fault on updating carton box status！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_DidNotFind" xml:space="preserve">
+    <value>Did not find the S/N！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CannotPackIntoCartonBox" xml:space="preserve">
+    <value>Current S/N is off-line, cannot pack into carton box！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_GeneratingCartonBoxNumberFault" xml:space="preserve">
+    <value>Fault with generating carton box serial number！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_CartonBoxSnRepeated" xml:space="preserve">
+    <value>Carton box S/N repeated, please check the rules of S/N ！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspGetBoxNumberBySN_UpdatingCartonBoxInfoFault" xml:space="preserve">
+    <value>Fault with updating carton box information！[uspGetBoxNumberBySN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackedIntoCartonBox" xml:space="preserve">
+    <value>This S/n has been packed into carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_NoCartonBoxInfo" xml:space="preserve">
+    <value>No carton box information！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackedModelInsideCartonBox" xml:space="preserve">
+    <value>Model name is not same as packed model inside carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_SameAsPackedModel" xml:space="preserve">
+    <value>Work order is not same as packed model！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_FullOnCurrentModel" xml:space="preserve">
+    <value>Carton box quantity is full on current model！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_CartonBoxInfo" xml:space="preserve">
+    <value>Fault on updating carton box information！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_OfflineCartonBox" xml:space="preserve">
+    <value>Fault on updating off-line carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_SerialNumberWithCartonBox" xml:space="preserve">
+    <value>Fault on setting Serial number with carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_ModelPackingCartonBox" xml:space="preserve">
+    <value>Model packing carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackingInfo" xml:space="preserve">
+    <value>Fault on recording packing information！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_UpdatingCartonBoxInfo" xml:space="preserve">
+    <value>Fault on updating carton box information！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_PackingStationWithBatch" xml:space="preserve">
+    <value>Fault on releasing packing station with batch！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_BoxClosed" xml:space="preserve">
+    <value>Carton box closed！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectPackSN_BoxScrapped" xml:space="preserve">
+    <value>Carton box scrapped！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspCollectOrderInput_InputStationError" xml:space="preserve">
+    <value>Order error of last station！[uspCollectOrderInput]</value>
+  </data>
+  <data name="uspChangeOrder_NotFindSn" xml:space="preserve">
+    <value>not find this S/N！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_NotFinishRouter" xml:space="preserve">
+    <value>S/N did not finish route！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderCanNotSwitch" xml:space="preserve">
+    <value>Switch oder can not same as current order！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ModelQHold" xml:space="preserve">
+    <value>Model QHold！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderTypeCanNotSwith" xml:space="preserve">
+    <value>Order type is different on current and switch order！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_HasBeenPackedIntoWarehosue" xml:space="preserve">
+    <value>Cannot switch order, S/N has been packed into warehosue！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderHasLocked" xml:space="preserve">
+    <value>Work order has been locked！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderFinished" xml:space="preserve">
+    <value>Work order finished！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderClosed" xml:space="preserve">
+    <value>Work order closed！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderBomAndMaterialInfo" xml:space="preserve">
+    <value>Did not find the scanned material inside the work order BOM, please check the work order BOM and material information！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_OrderFullQuantity" xml:space="preserve">
+    <value>Work order quantity is full according to planned！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_RouterNoStation" xml:space="preserve">
+    <value>No station information in work order route  Please setup the route！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_UpdatingSnFault" xml:space="preserve">
+    <value>Fault on udpating S/N information！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ReleasedOrderFault" xml:space="preserve">
+    <value>Fault on updating work order released information！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_ProductLastStation" xml:space="preserve">
+    <value>No Product Test information of last station！[uspChangeOrder]</value>
+  </data>
+  <data name="uspChangeOrder_UnlockSMTPackageFault" xml:space="preserve">
+    <value>Fault with unlock SMT package information！[uspChangeOrder]</value>
+  </data>
+  <data name="uspGenerateItemSN_BatchNumberRulesNoMaintains" xml:space="preserve">
+    <value>No maintains for batch number rules ！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGenerateItemSN_SerialNumberRulesNoMaintains" xml:space="preserve">
+    <value>No maintains for serial number rules！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGenerateItemSN_IQCReleasedQuantity" xml:space="preserve">
+    <value>IQC released quantity is greater than allowed S/N maximum！[uspGenerateItemSN]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_GeneratingCustomerFault" xml:space="preserve">
+    <value>Fault with generating customer S/N ！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_CustomerSnRepeated" xml:space="preserve">
+    <value>Customer S/N repeated, please check the rules！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="uspGetCustomerSNJoinInfo_InsertingCustomerFault" xml:space="preserve">
+    <value>Fault with generating customer S/N ！[uspGetCustomerSNJoinInfo]</value>
+  </data>
+  <data name="CheckSNAndCSN_NotExist" xml:space="preserve">
+    <value>{0} Not exist ！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_NotCustomer" xml:space="preserve">
+    <value>{0} Not customer S/N！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadPacked" xml:space="preserve">
+    <value>{0} Already packed, unlock customer S/N if want to replace SN！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadLinkedWithCustomer" xml:space="preserve">
+    <value>S/N:{0} Already linked with Customer S/N, Customer S/N is:{1}！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="CheckSNAndCSN_AlreadyLink" xml:space="preserve">
+    <value>Customer S/N {0} Already linked S/N, The related S/N is: {1}！[Prod_SerialNumber_CheckSNAndCSN]</value>
+  </data>
+  <data name="SNAndCSNJoin_NotFiadCustomer" xml:space="preserve">
+    <value>Did not find the effectived customer S/N！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_DeleteCustomerSnError" xml:space="preserve">
+    <value>Error with deleting customer S/N！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_UpdateCustomerSnError" xml:space="preserve">
+    <value>Error with revising customer S/N！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_AddCustomerSnError" xml:space="preserve">
+    <value>Errow with adding customer S/N！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_InsertingCustomerFault" xml:space="preserve">
+    <value>Fault with inserting customer S/N linked information！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_UpdatingCustomerUsageFault" xml:space="preserve">
+    <value>Fault with updating customer S/N usage information！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="SNAndCSNJoin_LinkingCustomerSnFault" xml:space="preserve">
+    <value>Fault with Linking customer S/N test station！[Prod_SerialNumber_SNAndCSNJoin]</value>
+  </data>
+  <data name="uspGetProcessFormBySearch_SnNotExist" xml:space="preserve">
+    <value>S/N is not exist！[uspGetProcessFormBySearch]</value>
+  </data>
+  <data name="uspGetProcessFormBySearch_OrderNotExist" xml:space="preserve">
+    <value>Work Order is not exist！[uspGetProcessFormBySearch]</value>
+  </data>
+  <data name="InsertLogError" xml:space="preserve">
+    <value>Fault with inserting Log！</value>
+  </data>
+  <data name="ContainerEdit_BoxInfo" xml:space="preserve">
+    <value>Carton box information {0}  Already packed into carton box {1}！[Basal_Container_Edit]</value>
+  </data>
+  <data name="uspCollectPackSN_AlreadyPackedInCartonBox" xml:space="preserve">
+    <value>Already packed in carton box！[uspCollectPackSN]</value>
+  </data>
+  <data name="uspGetPackNumberBySN_NotFindPackingCartonInfo" xml:space="preserve">
+    <value>Not find the packing carton information！[uspGetPackNumberBySN]</value>
+  </data>
+  <data name="InPackage" xml:space="preserve">
+    <value>In package</value>
+  </data>
+  <data name="PackedAlready" xml:space="preserve">
+    <value>Packed already</value>
+  </data>
+  <data name="Tips_CurrentOpertion_NoProcess" xml:space="preserve">
+    <value>There are no process parameters for the currently selected operation. Please click 'add parameters' to add process parameters for the operation</value>
+  </data>
+  <data name="Tips_MaxInputChars" xml:space="preserve">
+    <value>Up to {0} characters can be entered</value>
+  </data>
+  <data name="Tips_OnlyValuesCanBeEntered" xml:space="preserve">
+    <value>Only values can be entered</value>
+  </data>
+  <data name="Tips_PleaseSelect" xml:space="preserve">
+    <value>Please select {0}</value>
+  </data>
+  <data name="Tips_ResourcesAllowed_TimeRange" xml:space="preserve">
+    <value>Resources are allowed to be used within this time frame</value>
+  </data>
+  <data name="Tips_Select" xml:space="preserve">
+    <value>Select {0}</value>
+  </data>
+  <data name="Tips_Use24Hour_Eg" xml:space="preserve">
+    <value>Please use 24-hour time, such as 13:30</value>
+  </data>
+  <data name="Tips_IsCanBadCodesUseInAllProcesses" xml:space="preserve">
+    <value>Can bad codes in such bad code types be used in all processes?</value>
+  </data>
+  <data name="Tips_PackingBoxHasNoContent" xml:space="preserve">
+    <value>The packing box has not set any packing content. Click the "add" button to set the packing content</value>
+  </data>
+  <data name="Tips_PackingBoxHasNoLabel" xml:space="preserve">
+    <value>No label has been set for the packing box. Click the "add" button to set the label of the packing box</value>
+  </data>
+  <data name="Tips_HowToImpportCertificate" xml:space="preserve">
+    <value>How to import a certificate?</value>
+  </data>
+  <data name="Tips_PrintPlugin_SupportsIE_Only" xml:space="preserve">
+    <value>The system detects that you are not using IE browser and can't print. The print plug-in only supports IE kernel temporarily. Please use IE browser to print!</value>
+  </data>
+  <data name="Tips_SetBOMContent" xml:space="preserve">
+    <value>Click the "add" button to set the BOM content</value>
+  </data>
+  <data name="uspUnitProcessValidation_Test" xml:space="preserve">
+    <value>This {0} on {1}!{1}tested 2times, first time NG, second time pass, need retest agin on testing rules，If failure, need repair again![uspUnitProcessValidation]</value>
+  </data>
+  <data name="uspPackingAccessoriesDetailEdit_NeedChange" xml:space="preserve">
+    <value>Accessories is same of mains, need change！[uspPackingAccessoriesDetailEdit]</value>
+  </data>
+  <data name="uspChangeOrder_SNisQhold" xml:space="preserve">
+    <value>S/N is QHold！[uspChangeOrder]</value>
+  </data>
+  <data name="Tips_ProductHasNoProcessParameters" xml:space="preserve">
+    <value>This product has no process parameters</value>
+  </data>
+  <data name="Tips_AllowedProduction_Qualified" xml:space="preserve">
+    <value>Qualified, allowed to continue production</value>
+  </data>
+  <data name="Tips_Set" xml:space="preserve">
+    <value>Set {0}</value>
+  </data>
+  <data name="Tips_RemakeFirstPiece_Unqualified" xml:space="preserve">
+    <value>Unqualified, improve the defect and remake the first piece</value>
+  </data>
+  <data name="Tips_StopProduction_Unqualified" xml:space="preserve">
+    <value>Unqualified, stop production, report to relevant departments for rectification</value>
+  </data>
+  <data name="Tips_CalculateTotalOfSubBoards_Eg" xml:space="preserve">
+    <value>For example: 4 x 6, where 4 represents the number of rows of the PCB panel and 6 represents the number of columns of the PCB panel, so the total number of sub boards in the panel is 24</value>
+  </data>
+  <data name="Tips_InputBadNumMaterialBarcode" xml:space="preserve">
+    <value>Please enter the barcode of the material to be entered in bad numbers</value>
+  </data>
+  <data name="Tips_InputRefueledMaterialBarcode" xml:space="preserve">
+    <value>Please enter the barcode of the material to be refueled</value>
+  </data>
+  <data name="Tips_NoDataToCollect" xml:space="preserve">
+    <value>There is no data to collect</value>
+  </data>
+  <data name="LoadingWait" xml:space="preserve">
+    <value>Loading, please wait</value>
+  </data>
+  <data name="Tips_ClickToClearNo" xml:space="preserve">
+    <value>Click to clear the serial number</value>
+  </data>
+  <data name="Tips_CustomerSNRetyped" xml:space="preserve">
+    <value>If your customer barcode label needs to be retyped, click to select this check box</value>
+  </data>
+  <data name="Tips_InstrumentCode_Eg" xml:space="preserve">
+    <value>A caliper, B tape, C steel ruler, D film thickness meter, e projector, f-pass gauge, g-ring gauge, h-gauge, i-feeler, j-network analyzer, k-intermodulation meter, l-colorimeter, m marble platform, n others</value>
+  </data>
+  <data name="Tips_NoStaffInTheDepartment" xml:space="preserve">
+    <value>There are no staff in the Department</value>
+  </data>
+  <data name="Tips_PalletLabelReTyped" xml:space="preserve">
+    <value>If your pallet label needs to be retyped, click to select this check box</value>
+  </data>
+  <data name="Tips_PleaseScan" xml:space="preserve">
+    <value>Please scan {0}</value>
+  </data>
+  <data name="Tips_ScanXBorad_Eg" xml:space="preserve">
+    <value>Please use XXXXXX to scan the X board</value>
+  </data>
+  <data name="Tips_SelectForMaterialPreparation" xml:space="preserve">
+    <value>Please select the production work order number and material code for material preparation</value>
+  </data>
+  <data name="DataLoding" xml:space="preserve">
+    <value>Data loading</value>
+  </data>
+  <data name="Formula_Capacity" xml:space="preserve">
+    <value>(cumulative actual output of the workshop work order on the current day / cumulative planned output on the current day) * 100%</value>
+  </data>
+  <data name="Formula_IeEfficiency" xml:space="preserve">
+    <value>The average ie efficiency of single machine type for final assembly: &lt; br / &gt; ie efficiency of each model = ((bottleneck time of each model (in seconds) * current output of the model) &lt; br / &gt; (last board output time of each model - first board input time of each model - abnormal time)) * 3600 * 100%</value>
+  </data>
+  <data name="Formula_WhiteCard" xml:space="preserve">
+    <value>(accumulated white cards of corresponding work orders of the workshop on the same day / accumulated output of the workshop on the same day) * 100%</value>
+  </data>
+  <data name="Tips_MaintainInspectionEntryMethod" xml:space="preserve">
+    <value>Please maintain the entry method of inspection items</value>
+  </data>
+  <data name="Welcome_1" xml:space="preserve">
+    <value>Warmly welcome all leaders to visit and guide</value>
+  </data>
+  <data name="UnloadPrintPlugin" xml:space="preserve">
+    <value>The print plug-in failed to load properly. Unable to get the local printer list</value>
+  </data>
+  <data name="CopyTargetRole" xml:space="preserve">
+    <value>Copy Target Role Name</value>
+  </data>
+  <data name="SetRoleName" xml:space="preserve">
+    <value>Set Role Name</value>
+  </data>
+  <data name="TipOperation" xml:space="preserve">
+    <value>Tip: This operation will copy all permissions of the target role name, and all existing permissions will be cleared With</value>
+  </data>
+  <data name="AntiXsrfFaildExcetion" xml:space="preserve">
+    <value>Validation of Anti-XSRF token failed.</value>
+  </data>
+</root>

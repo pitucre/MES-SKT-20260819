@@ -1,0 +1,5253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_OrganizationAdd" xml:space="preserve">
+    <value>新增部门</value>
+  </data>
+  <data name="Account_OrganizationChart" xml:space="preserve">
+    <value>组织架构</value>
+  </data>
+  <data name="Account_OrganizationEdit" xml:space="preserve">
+    <value>编辑部门</value>
+  </data>
+  <data name="Account_OrganizationList" xml:space="preserve">
+    <value>部门列表</value>
+  </data>
+  <data name="Account_OrganizationView" xml:space="preserve">
+    <value>查看部门</value>
+  </data>
+  <data name="Account_PopedomList" xml:space="preserve">
+    <value>分配权限</value>
+  </data>
+  <data name="Account_RoleAdd" xml:space="preserve">
+    <value>新增角色</value>
+  </data>
+  <data name="Account_RoleEdit" xml:space="preserve">
+    <value>编辑角色</value>
+  </data>
+  <data name="Account_RoleList" xml:space="preserve">
+    <value>角色列表</value>
+  </data>
+  <data name="Account_RoleView" xml:space="preserve">
+    <value>查看角色</value>
+  </data>
+  <data name="Account_UserAdd" xml:space="preserve">
+    <value>新增用户</value>
+  </data>
+  <data name="Account_UserEdit" xml:space="preserve">
+    <value>编辑用户</value>
+  </data>
+  <data name="Account_UserList" xml:space="preserve">
+    <value>用户列表</value>
+  </data>
+  <data name="Account_UserView" xml:space="preserve">
+    <value>查看用户</value>
+  </data>
+  <data name="Anormal_GroupAdd" xml:space="preserve">
+    <value>新增异常类型</value>
+  </data>
+  <data name="Anormal_GroupEdit" xml:space="preserve">
+    <value>编辑异常类型</value>
+  </data>
+  <data name="Anormal_GroupList" xml:space="preserve">
+    <value>异常类型</value>
+  </data>
+  <data name="Anormal_GroupView" xml:space="preserve">
+    <value>查看异常类型</value>
+  </data>
+  <data name="Anormal_TypeAdd" xml:space="preserve">
+    <value>新增异常名称</value>
+  </data>
+  <data name="Anormal_TypeEdit" xml:space="preserve">
+    <value>编辑异常名称</value>
+  </data>
+  <data name="Anormal_TypeList" xml:space="preserve">
+    <value>异常名称</value>
+  </data>
+  <data name="Anormal_TypeView" xml:space="preserve">
+    <value>查看异常名称</value>
+  </data>
+  <data name="DepartmentList" xml:space="preserve">
+    <value>部门列表</value>
+  </data>
+  <data name="DictionaryList" xml:space="preserve">
+    <value>数据字典列表</value>
+  </data>
+  <data name="Equipment_EquipmentAdd" xml:space="preserve">
+    <value>新增设备</value>
+  </data>
+  <data name="Equipment_EquipmentEdit" xml:space="preserve">
+    <value>修改设备信息</value>
+  </data>
+  <data name="Equipment_EquipmentList" xml:space="preserve">
+    <value>设备列表</value>
+  </data>
+  <data name="Equipment_EquipmentTypeAdd" xml:space="preserve">
+    <value>新增设备类型</value>
+  </data>
+  <data name="Equipment_EquipmentTypeEdit" xml:space="preserve">
+    <value>修改设备类型</value>
+  </data>
+  <data name="Equipment_EquipmentTypeList" xml:space="preserve">
+    <value>设备类型列表</value>
+  </data>
+  <data name="Equipment_EquipmentTypeView" xml:space="preserve">
+    <value>查看设备类型</value>
+  </data>
+  <data name="Equipment_EquipmentView" xml:space="preserve">
+    <value>查看设备信息</value>
+  </data>
+  <data name="Labels_LabelFieldAdd" xml:space="preserve">
+    <value>新增标签字段</value>
+  </data>
+  <data name="Labels_LabelFieldEdit" xml:space="preserve">
+    <value>修改标签字段</value>
+  </data>
+  <data name="Labels_LabelFieldList" xml:space="preserve">
+    <value>标签字段维护</value>
+  </data>
+  <data name="Labels_LabelFieldView" xml:space="preserve">
+    <value>查看标签字段</value>
+  </data>
+  <data name="Labels_LabelFormat" xml:space="preserve">
+    <value>标签格式维护</value>
+  </data>
+  <data name="Labels_LabelPrint" xml:space="preserve">
+    <value>打印标签</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanAdd" xml:space="preserve">
+    <value>新增保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEdit" xml:space="preserve">
+    <value>修改保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanList" xml:space="preserve">
+    <value>保养计划列表</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanView" xml:space="preserve">
+    <value>查看保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenanceRecordList" xml:space="preserve">
+    <value>保养记录</value>
+  </data>
+  <data name="Maintenance_MaintenanceRecordView" xml:space="preserve">
+    <value>查看保养记录</value>
+  </data>
+  <data name="Maintenance_MaintenanceWarningList" xml:space="preserve">
+    <value>保养预警</value>
+  </data>
+  <data name="Maintenance_MaintenanceWarningView" xml:space="preserve">
+    <value>查看保养预警</value>
+  </data>
+  <data name="Maintenance_PlanMaintainConfirm" xml:space="preserve">
+    <value>计划保养确认</value>
+  </data>
+  <data name="Material_GenerateGRN" xml:space="preserve">
+    <value>生成物料条码</value>
+  </data>
+  <data name="Material_GRNCarton" xml:space="preserve">
+    <value>物料包装箱</value>
+  </data>
+  <data name="Material_GRNPackList" xml:space="preserve">
+    <value>包装箱列表</value>
+  </data>
+  <data name="Material_MaterialIssue" xml:space="preserve">
+    <value>仓库发料</value>
+  </data>
+  <data name="Material_MaterialReceive" xml:space="preserve">
+    <value>仓库收料</value>
+  </data>
+  <data name="Material_MaterialReturnStore" xml:space="preserve">
+    <value>生产退料</value>
+  </data>
+  <data name="Material_MaterialReturnSupplier" xml:space="preserve">
+    <value>产线退料</value>
+  </data>
+  <data name="Material_MaterialSplit" xml:space="preserve">
+    <value>分料截料</value>
+  </data>
+  <data name="Material_MaterialUnitList" xml:space="preserve">
+    <value>物料列表</value>
+  </data>
+  <data name="Material_ModifyGRN" xml:space="preserve">
+    <value>修改GRN</value>
+  </data>
+  <data name="Material_PackGRNList" xml:space="preserve">
+    <value>包装物料</value>
+  </data>
+  <data name="Material_RemoveGRN" xml:space="preserve">
+    <value>移除物料</value>
+  </data>
+  <data name="Material_ReprintGRN" xml:space="preserve">
+    <value>GRN重打印</value>
+  </data>
+  <data name="NCCode_DataType" xml:space="preserve">
+    <value>数据类型列表</value>
+  </data>
+  <data name="NCCode_NCCodeImport" xml:space="preserve">
+    <value>导入不良代码信息</value>
+  </data>
+  <data name="NCCode_NCCodeAdd" xml:space="preserve">
+    <value>新增不良代码</value>
+  </data>
+  <data name="NCCode_NCCodeList" xml:space="preserve">
+    <value>不良代码</value>
+  </data>
+  <data name="NCCode_NCGroupAdd" xml:space="preserve">
+    <value>新增不良代码类型</value>
+  </data>
+  <data name="NCCode_NCGroupList" xml:space="preserve">
+    <value>不良代码类型</value>
+  </data>
+  <data name="Product_BomAdd" xml:space="preserve">
+    <value>新增物料BOM</value>
+  </data>
+  <data name="Product_BomComponentAdd" xml:space="preserve">
+    <value>添加组件</value>
+  </data>
+  <data name="Product_BomComponentEdit" xml:space="preserve">
+    <value>编辑组件</value>
+  </data>
+  <data name="Product_BomDelete" xml:space="preserve">
+    <value>删除物料BOM</value>
+  </data>
+  <data name="Product_BomEdit" xml:space="preserve">
+    <value>编辑物料BOM</value>
+  </data>
+  <data name="Product_BomList" xml:space="preserve">
+    <value>物料BOM列表</value>
+  </data>
+  <data name="Product_BomView" xml:space="preserve">
+    <value>查看物料BOM</value>
+  </data>
+  <data name="Product_CustomerList" xml:space="preserve">
+    <value>客户列表</value>
+  </data>
+  <data name="Product_ItemAdd" xml:space="preserve">
+    <value>新增产品</value>
+  </data>
+  <data name="Product_ItemDelete" xml:space="preserve">
+    <value>删除产品</value>
+  </data>
+  <data name="Product_ItemEdit" xml:space="preserve">
+    <value>编辑产品</value>
+  </data>
+  <data name="Product_ItemGroupAdd" xml:space="preserve">
+    <value>新增产品类型</value>
+  </data>
+  <data name="Product_ItemGroupEdit" xml:space="preserve">
+    <value>编辑产品类型</value>
+  </data>
+  <data name="Product_ItemGroupList" xml:space="preserve">
+    <value>产品类型</value>
+  </data>
+  <data name="Product_ItemGroupView" xml:space="preserve">
+    <value>查看产品分类</value>
+  </data>
+  <data name="Product_ItemList" xml:space="preserve">
+    <value>产品列表</value>
+  </data>
+  <data name="Product_ItemView" xml:space="preserve">
+    <value>查看产品</value>
+  </data>
+  <data name="Product_ProjectList" xml:space="preserve">
+    <value>项目列表</value>
+  </data>
+  <data name="ResourceList" xml:space="preserve">
+    <value>资源列表</value>
+  </data>
+  <data name="ResourceTypeList" xml:space="preserve">
+    <value>资源类型列表</value>
+  </data>
+  <data name="SerialNumber_SerialNumberAdd" xml:space="preserve">
+    <value>新增条码规则</value>
+  </data>
+  <data name="SerialNumber_SerialNumberEdit" xml:space="preserve">
+    <value>编辑条码规则</value>
+  </data>
+  <data name="SerialNumber_SerialNumberList" xml:space="preserve">
+    <value>条码规则</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeAdd" xml:space="preserve">
+    <value>新增条码规则类型</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeEdit" xml:space="preserve">
+    <value>编辑条码规则类型</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeList" xml:space="preserve">
+    <value>条码规则类型</value>
+  </data>
+  <data name="SerialNumber_SerialNumberTypeView" xml:space="preserve">
+    <value>查看规则类型</value>
+  </data>
+  <data name="SerialNumber_SerialNumberView" xml:space="preserve">
+    <value>查看规则</value>
+  </data>
+  <data name="Station_StationAdd" xml:space="preserve">
+    <value>新增工序</value>
+  </data>
+  <data name="Station_StationEdit" xml:space="preserve">
+    <value>编辑工序</value>
+  </data>
+  <data name="Station_StationList" xml:space="preserve">
+    <value>工序列表</value>
+  </data>
+  <data name="Station_StationTypeAdd" xml:space="preserve">
+    <value>新增工序类型</value>
+  </data>
+  <data name="Station_StationTypeEdit" xml:space="preserve">
+    <value>编辑工序类型</value>
+  </data>
+  <data name="Station_StationTypeList" xml:space="preserve">
+    <value>工序类型</value>
+  </data>
+  <data name="Station_StationTypeView" xml:space="preserve">
+    <value>查看工序类型</value>
+  </data>
+  <data name="Station_StationView" xml:space="preserve">
+    <value>查看工序</value>
+  </data>
+  <data name="Turnover_TurnoverGroupAdd" xml:space="preserve">
+    <value>新增周转工具</value>
+  </data>
+  <data name="Turnover_TurnoverGroupEdit" xml:space="preserve">
+    <value>修改周转工具</value>
+  </data>
+  <data name="Turnover_TurnoverGroupList" xml:space="preserve">
+    <value>周转工具列表</value>
+  </data>
+  <data name="Turnover_TurnoverGroupView" xml:space="preserve">
+    <value>查看周转工具</value>
+  </data>
+  <data name="Turnover_TurnoverRegister" xml:space="preserve">
+    <value>周转工具编码注册</value>
+  </data>
+  <data name="Turnover_TurnoverTypeAdd" xml:space="preserve">
+    <value>新增周转工具类型</value>
+  </data>
+  <data name="Turnover_TurnoverTypeEdit" xml:space="preserve">
+    <value>修改周转工具类型</value>
+  </data>
+  <data name="Turnover_TurnoverTypeList" xml:space="preserve">
+    <value>周转工具类型</value>
+  </data>
+  <data name="Turnover_TurnoverTypeView" xml:space="preserve">
+    <value>查看周转工具类型</value>
+  </data>
+  <data name="UserChangePwd" xml:space="preserve">
+    <value>修改用户密码</value>
+  </data>
+  <data name="UserList" xml:space="preserve">
+    <value>用户列表</value>
+  </data>
+  <data name="WarehouseType" xml:space="preserve">
+    <value>仓库类型列表</value>
+  </data>
+  <data name="Warehouse_WarehouseAdd" xml:space="preserve">
+    <value>新增仓库</value>
+  </data>
+  <data name="Warehouse_WarehouseList" xml:space="preserve">
+    <value>仓库列表</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationAdd" xml:space="preserve">
+    <value>新增货架货位</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationList" xml:space="preserve">
+    <value>货架货位</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeAdd" xml:space="preserve">
+    <value>新增仓库类型</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeList" xml:space="preserve">
+    <value>仓库类型</value>
+  </data>
+  <data name="Labels_LabelAddDBField" xml:space="preserve">
+    <value>新增数据库字段</value>
+  </data>
+  <data name="Plan_PlanList" xml:space="preserve">
+    <value>标准排产列表</value>
+  </data>
+  <data name="Plan_SubsupplierManagement" xml:space="preserve">
+    <value>排产管理</value>
+  </data>
+  <data name="LabelField" xml:space="preserve">
+    <value>标签字段</value>
+  </data>
+  <data name="SerialNumber_VouchList" xml:space="preserve">
+    <value>规则设置单据列表</value>
+  </data>
+  <data name="Account_AssignPopedom" xml:space="preserve">
+    <value>设置权限</value>
+  </data>
+  <data name="Account_RolesInUser" xml:space="preserve">
+    <value>用户中的角色</value>
+  </data>
+  <data name="Account_UsersInRole" xml:space="preserve">
+    <value>角色中的用户</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeAdd" xml:space="preserve">
+    <value>新增单据规则</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeEdit" xml:space="preserve">
+    <value>编辑单据规则</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeList" xml:space="preserve">
+    <value>单据规则</value>
+  </data>
+  <data name="SerialNumber_MesVouchTypeView" xml:space="preserve">
+    <value>查看单据规则</value>
+  </data>
+  <data name="Labels_LabelDocumentAdd" xml:space="preserve">
+    <value>新增标签</value>
+  </data>
+  <data name="Labels_LabelDocumentList" xml:space="preserve">
+    <value>标签维护</value>
+  </data>
+  <data name="Labels_LabelDocumentView" xml:space="preserve">
+    <value>查看标签</value>
+  </data>
+  <data name="Labels_LabelZPLAdd" xml:space="preserve">
+    <value>新增指令模板</value>
+  </data>
+  <data name="Labels_LabelZPLList" xml:space="preserve">
+    <value>指令模板维护</value>
+  </data>
+  <data name="Labels_LabelZPLView" xml:space="preserve">
+    <value>查看指令模板</value>
+  </data>
+  <data name="NCCode_NCCodeView" xml:space="preserve">
+    <value>查看不良代码</value>
+  </data>
+  <data name="NCCode_NCGroupView" xml:space="preserve">
+    <value>查看不良代码类型</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationView" xml:space="preserve">
+    <value>查看货架货位</value>
+  </data>
+  <data name="Warehouse_WarehouseTypeView" xml:space="preserve">
+    <value>查看仓库分类</value>
+  </data>
+  <data name="Warehouse_WarehouseView" xml:space="preserve">
+    <value>查看仓库信息</value>
+  </data>
+  <data name="Production_SparepartAdd" xml:space="preserve">
+    <value>添加工具清单</value>
+  </data>
+  <data name="Production_SparepartEdit" xml:space="preserve">
+    <value>编辑工具清单</value>
+  </data>
+  <data name="Production_SparepartList" xml:space="preserve">
+    <value>工具清单</value>
+  </data>
+  <data name="Production_SparepartView" xml:space="preserve">
+    <value>查看工具清单</value>
+  </data>
+  <data name="TemplatesList" xml:space="preserve">
+    <value>模板列表</value>
+  </data>
+  <data name="Product_ItemIQCParamAdd" xml:space="preserve">
+    <value>新增IQC检验参数</value>
+  </data>
+  <data name="Product_ItemIQCParamEdit" xml:space="preserve">
+    <value>修改IQC检验参数</value>
+  </data>
+  <data name="Product_ItemIQCParamList" xml:space="preserve">
+    <value>IQC检验参数</value>
+  </data>
+  <data name="Product_ItemIQCParamView" xml:space="preserve">
+    <value>查看IQC检验参数</value>
+  </data>
+  <data name="Supplier_SupplierAdd" xml:space="preserve">
+    <value>新增供应商</value>
+  </data>
+  <data name="Supplier_SupplierEdit" xml:space="preserve">
+    <value>编辑供应商</value>
+  </data>
+  <data name="Supplier_SupplierList" xml:space="preserve">
+    <value>供应商列表</value>
+  </data>
+  <data name="Supplier_SupplierView" xml:space="preserve">
+    <value>查看供应商</value>
+  </data>
+  <data name="Production_PartHistory" xml:space="preserve">
+    <value>工具操作历史</value>
+  </data>
+  <data name="Material_MaterialInStorage" xml:space="preserve">
+    <value>物料入库</value>
+  </data>
+  <data name="Template_TemplateAdd" xml:space="preserve">
+    <value>添加模板</value>
+  </data>
+  <data name="Template_TemplateList" xml:space="preserve">
+    <value>报表模板列表</value>
+  </data>
+  <data name="Template_TemplateView" xml:space="preserve">
+    <value>查看模板</value>
+  </data>
+  <data name="Material_IQCFormAdd" xml:space="preserve">
+    <value>生成IQC检验单</value>
+  </data>
+  <data name="Material_IQCFormEdit" xml:space="preserve">
+    <value>编辑IQC检验单</value>
+  </data>
+  <data name="Material_IQCFormList" xml:space="preserve">
+    <value>IQC来料检查</value>
+  </data>
+  <data name="IQCCheck_ChoosePass" xml:space="preserve">
+    <value>IQC选择通过</value>
+  </data>
+  <data name="Material_IQCFormCheck" xml:space="preserve">
+    <value>IQC检验</value>
+  </data>
+  <data name="AbnormalReport" xml:space="preserve">
+    <value>生产异常报告</value>
+  </data>
+  <data name="IPQCReport" xml:space="preserve">
+    <value>IPQC巡检报告</value>
+  </data>
+  <data name="IQCReport" xml:space="preserve">
+    <value>IQC检验报告</value>
+  </data>
+  <data name="QCStatisticalReport" xml:space="preserve">
+    <value>质检统计分析报告</value>
+  </data>
+  <data name="WIPReport" xml:space="preserve">
+    <value>WIP报告</value>
+  </data>
+  <data name="YieldReport" xml:space="preserve">
+    <value>良品率报告</value>
+  </data>
+  <data name="Production_PartSetting" xml:space="preserve">
+    <value>预警设置</value>
+  </data>
+  <data name="Plan_PlanEdit" xml:space="preserve">
+    <value>计划编辑</value>
+  </data>
+  <data name="PlanEdit" xml:space="preserve">
+    <value>计划编辑</value>
+  </data>
+  <data name="Account_AuthorizationEdit" xml:space="preserve">
+    <value>用户授权认证</value>
+  </data>
+  <data name="Account_AuthorizationList" xml:space="preserve">
+    <value>授权认证</value>
+  </data>
+  <data name="Account_CertificationList" xml:space="preserve">
+    <value>认证项</value>
+  </data>
+  <data name="Account_CertificationListAdd" xml:space="preserve">
+    <value>新增认证项</value>
+  </data>
+  <data name="Account_CertificationListDelete" xml:space="preserve">
+    <value>删除认证项</value>
+  </data>
+  <data name="Account_CertificationListEdit" xml:space="preserve">
+    <value>编辑认证项</value>
+  </data>
+  <data name="Account_CertificationListView" xml:space="preserve">
+    <value>查看认证项</value>
+  </data>
+  <data name="Account_CertificationRecord" xml:space="preserve">
+    <value>认证记录</value>
+  </data>
+  <data name="Material_MaterialRequestList" xml:space="preserve">
+    <value>生产领料单</value>
+  </data>
+  <data name="OrderFormList" xml:space="preserve">
+    <value>PO单列表</value>
+  </data>
+  <data name="Customer_CustomerAdd" xml:space="preserve">
+    <value>新增客户</value>
+  </data>
+  <data name="Customer_CustomerEdit" xml:space="preserve">
+    <value>编辑客户</value>
+  </data>
+  <data name="Customer_CustomerList" xml:space="preserve">
+    <value>客户列表</value>
+  </data>
+  <data name="Customer_CustomerProjectAdd" xml:space="preserve">
+    <value>新增客户项目</value>
+  </data>
+  <data name="Customer_CustomerProjectEdit" xml:space="preserve">
+    <value>编辑客户项目</value>
+  </data>
+  <data name="Customer_CustomerProjectList" xml:space="preserve">
+    <value>客户项目</value>
+  </data>
+  <data name="Customer_CustomerProjectView" xml:space="preserve">
+    <value>查看客户项目</value>
+  </data>
+  <data name="Customer_CustomerView" xml:space="preserve">
+    <value>查看客户</value>
+  </data>
+  <data name="LineList" xml:space="preserve">
+    <value>线别列表</value>
+  </data>
+  <data name="Resource_LineAdd" xml:space="preserve">
+    <value>新增线别</value>
+  </data>
+  <data name="Resource_LineEdit" xml:space="preserve">
+    <value>编辑线别</value>
+  </data>
+  <data name="Resource_LineList" xml:space="preserve">
+    <value>线别维护</value>
+  </data>
+  <data name="Resource_LineView" xml:space="preserve">
+    <value>查看线别</value>
+  </data>
+  <data name="Resource_ResourceAdd" xml:space="preserve">
+    <value>新增资源</value>
+  </data>
+  <data name="Resource_ResourceEdit" xml:space="preserve">
+    <value>编辑资源</value>
+  </data>
+  <data name="Resource_ResourceList" xml:space="preserve">
+    <value>资源列表</value>
+  </data>
+  <data name="Resource_ResourceTypeAdd" xml:space="preserve">
+    <value>新增资源类型</value>
+  </data>
+  <data name="Resource_ResourceTypeEdit" xml:space="preserve">
+    <value>编辑资源类型</value>
+  </data>
+  <data name="Resource_ResourceTypeList" xml:space="preserve">
+    <value>资源类型</value>
+  </data>
+  <data name="Resource_ResourceTypeView" xml:space="preserve">
+    <value>查看资源类型</value>
+  </data>
+  <data name="Resource_ResourceView" xml:space="preserve">
+    <value>查看资源</value>
+  </data>
+  <data name="Router_RouterActivity" xml:space="preserve">
+    <value>站位业务配置</value>
+  </data>
+  <data name="Router_RouterAdd" xml:space="preserve">
+    <value>新增路由</value>
+  </data>
+  <data name="Router_RouterDesign" xml:space="preserve">
+    <value>路由设计</value>
+  </data>
+  <data name="Router_RouterEdit" xml:space="preserve">
+    <value>编辑路由</value>
+  </data>
+  <data name="Router_RouterList" xml:space="preserve">
+    <value>路由列表</value>
+  </data>
+  <data name="WarnSettings_YieldAdd" xml:space="preserve">
+    <value>新增良品率预警</value>
+  </data>
+  <data name="WarnSettings_YieldDelete" xml:space="preserve">
+    <value>删除良品率预警</value>
+  </data>
+  <data name="WarnSettings_YieldEdit" xml:space="preserve">
+    <value>编辑良品率预警</value>
+  </data>
+  <data name="WarnSettings_YieldList" xml:space="preserve">
+    <value>良品率预警</value>
+  </data>
+  <data name="WarnSettings_YieldView" xml:space="preserve">
+    <value>查看良品率预警</value>
+  </data>
+  <data name="MaskGroupAdd" xml:space="preserve">
+    <value>新增掩码</value>
+  </data>
+  <data name="MaskGroupEdit" xml:space="preserve">
+    <value>编辑掩码</value>
+  </data>
+  <data name="MaskGroupList" xml:space="preserve">
+    <value>掩码列表</value>
+  </data>
+  <data name="MaskGroupMemberAdd" xml:space="preserve">
+    <value>新增掩码规则</value>
+  </data>
+  <data name="MaskGroupMemberEdit" xml:space="preserve">
+    <value>编辑掩码规则</value>
+  </data>
+  <data name="ActivitiesList" xml:space="preserve">
+    <value>业务列表</value>
+  </data>
+  <data name="Material_MaterialCombine" xml:space="preserve">
+    <value>物料合并</value>
+  </data>
+  <data name="Material_ScrapReturnStore" xml:space="preserve">
+    <value>物料报废</value>
+  </data>
+  <data name="DataTypeList" xml:space="preserve">
+    <value>数据类型列表</value>
+  </data>
+  <data name="Product_StationParamList" xml:space="preserve">
+    <value>生产工艺参数 </value>
+  </data>
+  <data name="StationParamAdd" xml:space="preserve">
+    <value>新增产品参数</value>
+  </data>
+  <data name="StationParamEdit" xml:space="preserve">
+    <value>编辑产品参数</value>
+  </data>
+  <data name="DataTypeAdd" xml:space="preserve">
+    <value>添加数据类型</value>
+  </data>
+  <data name="DataTypeEdit" xml:space="preserve">
+    <value>编辑数据类型</value>
+  </data>
+  <data name="Product_StationParamView" xml:space="preserve">
+    <value>查看产品参数</value>
+  </data>
+  <data name="DataFieldAdd" xml:space="preserve">
+    <value>添加数据类型</value>
+  </data>
+  <data name="DataFieldEdit" xml:space="preserve">
+    <value>编辑数据类型</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindList" xml:space="preserve">
+    <value>类型绑定</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeList" xml:space="preserve">
+    <value>单据类型</value>
+  </data>
+  <data name="MaterialRequest_Add" xml:space="preserve">
+    <value>新增领料单</value>
+  </data>
+  <data name="MaterialRequest_Edit" xml:space="preserve">
+    <value>编辑领料单</value>
+  </data>
+  <data name="ProcessFormList" xml:space="preserve">
+    <value>单据列表</value>
+  </data>
+  <data name="ProcessFormTypeList" xml:space="preserve">
+    <value>单据类型</value>
+  </data>
+  <data name="ProcessFormTypeAdd" xml:space="preserve">
+    <value>新增单据类型</value>
+  </data>
+  <data name="ProcessFormTypeEdit" xml:space="preserve">
+    <value>编辑单据类型</value>
+  </data>
+  <data name="ProcessFormTypeView" xml:space="preserve">
+    <value>查看单据类型</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeAdd" xml:space="preserve">
+    <value>添加工序单据</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeEdit" xml:space="preserve">
+    <value>编辑工序单据</value>
+  </data>
+  <data name="TraceFormAdd" xml:space="preserve">
+    <value>新增追溯列表</value>
+  </data>
+  <data name="TraceFormDelete" xml:space="preserve">
+    <value>删除追溯列表</value>
+  </data>
+  <data name="TraceFormEdit" xml:space="preserve">
+    <value>编辑追溯列表</value>
+  </data>
+  <data name="TraceFormList" xml:space="preserve">
+    <value>追溯列表</value>
+  </data>
+  <data name="TraceFormTypeAdd" xml:space="preserve">
+    <value>新增追溯类型</value>
+  </data>
+  <data name="TraceFormTypeDelete" xml:space="preserve">
+    <value>删除追溯类型</value>
+  </data>
+  <data name="TraceFormTypeEdit" xml:space="preserve">
+    <value>编辑追溯类型</value>
+  </data>
+  <data name="TraceFormTypeList" xml:space="preserve">
+    <value>追溯类型</value>
+  </data>
+  <data name="TraceFormTypeView" xml:space="preserve">
+    <value>查看追溯类型</value>
+  </data>
+  <data name="TraceFormView" xml:space="preserve">
+    <value>查看追溯列表</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindAdd" xml:space="preserve">
+    <value>新增类型绑定</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeBindEdit" xml:space="preserve">
+    <value>编辑类型绑定</value>
+  </data>
+  <data name="Mobile_Material_MaterialInStorage" xml:space="preserve">
+    <value>物料入库 </value>
+  </data>
+  <data name="Mobile_Material_MaterialIssue" xml:space="preserve">
+    <value>仓库发料</value>
+  </data>
+  <data name="Mobile_Production_Test" xml:space="preserve">
+    <value>生产测试</value>
+  </data>
+  <data name="TemplateDesign" xml:space="preserve">
+    <value>模版设计</value>
+  </data>
+  <data name="TraceFormTypeTemplate" xml:space="preserve">
+    <value>模板设计</value>
+  </data>
+  <data name="MaterialPreKanbanList" xml:space="preserve">
+    <value>仓库备料看板</value>
+  </data>
+  <data name="EquipMaintKanbanList" xml:space="preserve">
+    <value>设备保养看板</value>
+  </data>
+  <data name="EquipStatusKanban" xml:space="preserve">
+    <value>设备状态看板</value>
+  </data>
+  <data name="ProdEfficiencyKanban" xml:space="preserve">
+    <value>生产效率看板</value>
+  </data>
+  <data name="Activities_ActivitiesAdd" xml:space="preserve">
+    <value>新增业务</value>
+  </data>
+  <data name="Activities_ActivitiesEdit" xml:space="preserve">
+    <value>编辑业务</value>
+  </data>
+  <data name="Activities_ActivitiesList" xml:space="preserve">
+    <value>业务列表</value>
+  </data>
+  <data name="Activities_TemplatesAdd" xml:space="preserve">
+    <value>新增模板</value>
+  </data>
+  <data name="Activities_TemplatesEdit" xml:space="preserve">
+    <value>编辑模板</value>
+  </data>
+  <data name="Activities_TemplatesList" xml:space="preserve">
+    <value>UI模板</value>
+  </data>
+  <data name="Activities_ActivitiesBindOpeAC" xml:space="preserve">
+    <value>绑定默认工位类型</value>
+  </data>
+  <data name="Activities_ActivitiesConfigParam" xml:space="preserve">
+    <value>配置参数默认值</value>
+  </data>
+  <data name="Production_ShipmentList" xml:space="preserve">
+    <value>发货订单</value>
+  </data>
+  <data name="Production_ShipmentAdd" xml:space="preserve">
+    <value>新增发货订单</value>
+  </data>
+  <data name="Production_ShipmentEdit" xml:space="preserve">
+    <value>编辑发货订单</value>
+  </data>
+  <data name="Router_RouterView" xml:space="preserve">
+    <value>查看路由</value>
+  </data>
+  <data name="TraceFormTemplateList" xml:space="preserve">
+    <value>追溯类型</value>
+  </data>
+  <data name="ViewContent" xml:space="preserve">
+    <value>查看内容</value>
+  </data>
+  <data name="Mobile_Material_MaterialReturn" xml:space="preserve">
+    <value>物料退料</value>
+  </data>
+  <data name="InfoCenter" xml:space="preserve">
+    <value>信息中心</value>
+  </data>
+  <data name="CollectForm_CollectFormTypeList_ChoosePage" xml:space="preserve">
+    <value>工序采集单据类型</value>
+  </data>
+  <data name="Client_ClientScan" xml:space="preserve">
+    <value>客户端扫描界面</value>
+  </data>
+  <data name="Client_ClientScanner" xml:space="preserve">
+    <value>扫描界面</value>
+  </data>
+  <data name="ProcessFormList_Choose" xml:space="preserve">
+    <value>流程单列表</value>
+  </data>
+  <data name="ProcessFormTypeList_Choose" xml:space="preserve">
+    <value>流程单类型</value>
+  </data>
+  <data name="Manufacture_BasicInfo" xml:space="preserve">
+    <value>信息中心</value>
+  </data>
+  <data name="ERPArrivalVouchList" xml:space="preserve">
+    <value>可收料的到货单列表</value>
+  </data>
+  <data name="MaterialRequest_View" xml:space="preserve">
+    <value>查看领料单</value>
+  </data>
+  <data name="Material_IQCView" xml:space="preserve">
+    <value>查看IQC检验单</value>
+  </data>
+  <data name="Production_ShipmentView" xml:space="preserve">
+    <value>查看发货订单</value>
+  </data>
+  <data name="MaterialUnitList" xml:space="preserve">
+    <value>物料</value>
+  </data>
+  <data name="LoadingList" xml:space="preserve">
+    <value>SMT上料清单</value>
+  </data>
+  <data name="LoadingListDetailList" xml:space="preserve">
+    <value>上料清单明细</value>
+  </data>
+  <data name="SMTFeedValidationList" xml:space="preserve">
+    <value>上料验证</value>
+  </data>
+  <data name="LoadingListAdd" xml:space="preserve">
+    <value>载入上料清单</value>
+  </data>
+  <data name="LoadingListEdit" xml:space="preserve">
+    <value>编辑上料清单</value>
+  </data>
+  <data name="ShopOrder_Add" xml:space="preserve">
+    <value>新增工单</value>
+  </data>
+  <data name="ShopOrder_Edit" xml:space="preserve">
+    <value>编辑工单</value>
+  </data>
+  <data name="ShopOrder_List" xml:space="preserve">
+    <value>工单列表</value>
+  </data>
+  <data name="FeederAdd" xml:space="preserve">
+    <value>新增Feeder</value>
+  </data>
+  <data name="FeederEdit" xml:space="preserve">
+    <value>编辑Feeder</value>
+  </data>
+  <data name="FeederGroupAdd" xml:space="preserve">
+    <value>新增Feeder组</value>
+  </data>
+  <data name="FeederGroupEdit" xml:space="preserve">
+    <value>编辑Feeder组</value>
+  </data>
+  <data name="FeederGroupList" xml:space="preserve">
+    <value>Feeder组列表</value>
+  </data>
+  <data name="FeederList" xml:space="preserve">
+    <value>Feeder列表</value>
+  </data>
+  <data name="FeederTypeAdd" xml:space="preserve">
+    <value>新增Feeder类型</value>
+  </data>
+  <data name="FeederTypeEdit" xml:space="preserve">
+    <value>编辑Feeder类型</value>
+  </data>
+  <data name="FeederTypeList" xml:space="preserve">
+    <value>Feeder类型列表</value>
+  </data>
+  <data name="MachineAdd" xml:space="preserve">
+    <value>新增SMT设备</value>
+  </data>
+  <data name="MachineList" xml:space="preserve">
+    <value>SMT设备列表</value>
+  </data>
+  <data name="MachineModelAdd" xml:space="preserve">
+    <value>新增设备</value>
+  </data>
+  <data name="MachineModelAttributeAdd" xml:space="preserve">
+    <value>新增设备属性</value>
+  </data>
+  <data name="MachineModelAttributeEdit" xml:space="preserve">
+    <value>编辑设备属性</value>
+  </data>
+  <data name="MachineModelAttributeList" xml:space="preserve">
+    <value>设备属性列表</value>
+  </data>
+  <data name="MachineModelEdit" xml:space="preserve">
+    <value>编辑设备</value>
+  </data>
+  <data name="MachineModelFamilyAdd" xml:space="preserve">
+    <value>新增设备组</value>
+  </data>
+  <data name="MachineModelFamilyEdit" xml:space="preserve">
+    <value>编辑设备组</value>
+  </data>
+  <data name="MachineModelFamilyList" xml:space="preserve">
+    <value>设备组列表</value>
+  </data>
+  <data name="MachineModelList" xml:space="preserve">
+    <value>设备列表</value>
+  </data>
+  <data name="ContainerAdd" xml:space="preserve">
+    <value>新增包装箱</value>
+  </data>
+  <data name="ContainerEdit" xml:space="preserve">
+    <value>编辑包装箱</value>
+  </data>
+  <data name="ContainerList" xml:space="preserve">
+    <value>包装箱列表</value>
+  </data>
+  <data name="ContainerPrint" xml:space="preserve">
+    <value>打印包装箱</value>
+  </data>
+  <data name="ContainerRePrint" xml:space="preserve">
+    <value>重打包装箱</value>
+  </data>
+  <data name="ContainerView" xml:space="preserve">
+    <value>查看包装箱</value>
+  </data>
+  <data name="ShopOrder_GenerateOrderSN" xml:space="preserve">
+    <value>生成工单SN</value>
+  </data>
+  <data name="Mobile_MaterialReceive" xml:space="preserve">
+    <value>仓库收料</value>
+  </data>
+  <data name="Material_MaterialHisIssue" xml:space="preserve">
+    <value>历史物料发料</value>
+  </data>
+  <data name="Mobile_Material_MaterialHisIssue" xml:space="preserve">
+    <value>历史物料发料</value>
+  </data>
+  <data name="MaterialReceiptList" xml:space="preserve">
+    <value>收货单</value>
+  </data>
+  <data name="ShopOrderList" xml:space="preserve">
+    <value>工单列表</value>
+  </data>
+  <data name="Template_ReportTypeList" xml:space="preserve">
+    <value>报表类型</value>
+  </data>
+  <data name="Material_OldMaterial" xml:space="preserve">
+    <value>历史物料</value>
+  </data>
+  <data name="ShopOrder_Detail" xml:space="preserve">
+    <value>工单条码</value>
+  </data>
+  <data name="Quality_SamplingRuleList" xml:space="preserve">
+    <value>抽检规则列表</value>
+  </data>
+  <data name="Quality_SamplingRuleAdd" xml:space="preserve">
+    <value>新增抽检规则</value>
+  </data>
+  <data name="Quality_SamplingRuleEdit" xml:space="preserve">
+    <value>编辑抽检规则</value>
+  </data>
+  <data name="EmailConfig_RecPersonAdd" xml:space="preserve">
+    <value>新增收件人</value>
+  </data>
+  <data name="EmailConfig_RecPersonEdit" xml:space="preserve">
+    <value>编辑收件人</value>
+  </data>
+  <data name="EmailConfig_RecPersonList" xml:space="preserve">
+    <value>收件人维护</value>
+  </data>
+  <data name="EmailConfig_SendEmailConfig" xml:space="preserve">
+    <value>邮件服务器配置</value>
+  </data>
+  <data name="Schedule_ScheduleList" xml:space="preserve">
+    <value>等待排产</value>
+  </data>
+  <data name="FactoryAdd" xml:space="preserve">
+    <value>添加工厂</value>
+  </data>
+  <data name="FactoryEdit" xml:space="preserve">
+    <value>编辑工厂</value>
+  </data>
+  <data name="FactoryList" xml:space="preserve">
+    <value>工厂列表</value>
+  </data>
+  <data name="FactoryView" xml:space="preserve">
+    <value>查看工厂</value>
+  </data>
+  <data name="WorkShopList" xml:space="preserve">
+    <value>车间列表</value>
+  </data>
+  <data name="WorkShopAdd" xml:space="preserve">
+    <value>添加车间</value>
+  </data>
+  <data name="WorkShopEdit" xml:space="preserve">
+    <value>编辑车间</value>
+  </data>
+  <data name="WorkShopWiew" xml:space="preserve">
+    <value>查看车间</value>
+  </data>
+  <data name="ShiftList" xml:space="preserve">
+    <value>生产班次列表</value>
+  </data>
+  <data name="ShiftAdd" xml:space="preserve">
+    <value>添加班次</value>
+  </data>
+  <data name="ShiftEdit" xml:space="preserve">
+    <value>编辑班次</value>
+  </data>
+  <data name="ShiftMemberAdd" xml:space="preserve">
+    <value>新增班次子表信息</value>
+  </data>
+  <data name="ShiftMemberEdit" xml:space="preserve">
+    <value>编辑班次子表信息</value>
+  </data>
+  <data name="Schedule_ScheduleUpdateConfirm" xml:space="preserve">
+    <value>确认排产更新</value>
+  </data>
+  <data name="Schedule_SchedulingList" xml:space="preserve">
+    <value>已经排产</value>
+  </data>
+  <data name="SteelMeshAdd" xml:space="preserve">
+    <value>添加钢网</value>
+  </data>
+  <data name="SteelMeshEdit" xml:space="preserve">
+    <value>编辑钢网</value>
+  </data>
+  <data name="SteelMeshList" xml:space="preserve">
+    <value>钢网刮刀列表</value>
+  </data>
+  <data name="SteelMeshView" xml:space="preserve">
+    <value>查看钢网</value>
+  </data>
+  <data name="Schedule_ScheduleAllot" xml:space="preserve">
+    <value>排产分配</value>
+  </data>
+  <data name="Schedule_ScheduleUpdateCompare" xml:space="preserve">
+    <value>更新内容对比</value>
+  </data>
+  <data name="Schedule_BomChangeConfirm" xml:space="preserve">
+    <value>BOM确认变更</value>
+  </data>
+  <data name="MaterialDelivery_PrepareMaterial" xml:space="preserve">
+    <value>备料清单</value>
+  </data>
+  <data name="MaterialDelivery_PrepareMaterialDetail" xml:space="preserve">
+    <value>备料明细</value>
+  </data>
+  <data name="MaterialDelivery_PrepMaSubitemChangeHist" xml:space="preserve">
+    <value>备料单子项变更历史</value>
+  </data>
+  <data name="LineEdgeWarehouseIssue" xml:space="preserve">
+    <value>线边仓发料</value>
+  </data>
+  <data name="LineEdgeWarehouseReceive" xml:space="preserve">
+    <value>线边仓收料</value>
+  </data>
+  <data name="GenerateBoxSN" xml:space="preserve">
+    <value>生成包装箱</value>
+  </data>
+  <data name="PackageBoxList" xml:space="preserve">
+    <value>包装箱列表</value>
+  </data>
+  <data name="LineEdgeList" xml:space="preserve">
+    <value>线边仓管理</value>
+  </data>
+  <data name="LineEdgeAdd" xml:space="preserve">
+    <value>添加线边仓</value>
+  </data>
+  <data name="LineEdgeEdit" xml:space="preserve">
+    <value>编辑线边仓</value>
+  </data>
+  <data name="Hold_Hold" xml:space="preserve">
+    <value>QHold</value>
+  </data>
+  <data name="Hold_UnHold" xml:space="preserve">
+    <value>UnHold</value>
+  </data>
+  <data name="Rework_BatchRework" xml:space="preserve">
+    <value>批量返工</value>
+  </data>
+  <data name="Rework_FinishedProductRework" xml:space="preserve">
+    <value>成品返工</value>
+  </data>
+  <data name="Rework_SingleRework" xml:space="preserve">
+    <value>零星返工</value>
+  </data>
+  <data name="CallMaterialList" xml:space="preserve">
+    <value>拉式叫料看板</value>
+  </data>
+  <data name="AccessoriesList" xml:space="preserve">
+    <value>辅料列表</value>
+  </data>
+  <data name="AccessoryPartAdd" xml:space="preserve">
+    <value>新增辅料料号</value>
+  </data>
+  <data name="AccessoryPartDelete" xml:space="preserve">
+    <value>删除辅料料号</value>
+  </data>
+  <data name="AccessoryPartEdit" xml:space="preserve">
+    <value>编辑辅料料号</value>
+  </data>
+  <data name="AccessoryPartList" xml:space="preserve">
+    <value>辅料料号维护</value>
+  </data>
+  <data name="SetupTime" xml:space="preserve">
+    <value>设置时间</value>
+  </data>
+  <data name="SolderThawLogList" xml:space="preserve">
+    <value>辅料解冻查询</value>
+  </data>
+  <data name="SolderUseLogList" xml:space="preserve">
+    <value>辅料使用查询</value>
+  </data>
+  <data name="PartType0" xml:space="preserve">
+    <value>无铅</value>
+  </data>
+  <data name="PartType1" xml:space="preserve">
+    <value>有铅</value>
+  </data>
+  <data name="RouterBind" xml:space="preserve">
+    <value>路由绑定</value>
+  </data>
+  <data name="GeneratePanelSN" xml:space="preserve">
+    <value>生成拼板条码</value>
+  </data>
+  <data name="PickList" xml:space="preserve">
+    <value>批次料上料清单</value>
+  </data>
+  <data name="LineEdgeQtyList" xml:space="preserve">
+    <value>线边仓存量</value>
+  </data>
+  <data name="LineQtyList" xml:space="preserve">
+    <value>产线存量</value>
+  </data>
+  <data name="Schedule_BomUpdateCompare" xml:space="preserve">
+    <value>工单BOM更新内容对比</value>
+  </data>
+  <data name="ShopOrder_ShopOrderChangeCompare" xml:space="preserve">
+    <value>工单更新内容对比</value>
+  </data>
+  <data name="ShopOrder_ShopOrderChangeConfirm" xml:space="preserve">
+    <value>工单确认更新</value>
+  </data>
+  <data name="Schedule_BomChangeHistory" xml:space="preserve">
+    <value>工单BOM变更历史</value>
+  </data>
+  <data name="Schedule_ShopOrderBomList" xml:space="preserve">
+    <value>工单领料明细</value>
+  </data>
+  <data name="ShopOrderChangeHistory" xml:space="preserve">
+    <value>工单变更历史</value>
+  </data>
+  <data name="MaintenanceAcountList" xml:space="preserve">
+    <value>设备台账</value>
+  </data>
+  <data name="PartList" xml:space="preserve">
+    <value>备件管理</value>
+  </data>
+  <data name="PartAdd" xml:space="preserve">
+    <value>添加备件</value>
+  </data>
+  <data name="PartEdit" xml:space="preserve">
+    <value>编辑备件</value>
+  </data>
+  <data name="PartView" xml:space="preserve">
+    <value>查看部件</value>
+  </data>
+  <data name="EquimentPartList" xml:space="preserve">
+    <value>备件与设备关系</value>
+  </data>
+  <data name="Hold_HoldAndUnHoldHistory" xml:space="preserve">
+    <value>操作记录</value>
+  </data>
+  <data name="ItemSteelList" xml:space="preserve">
+    <value>产品与钢网关系</value>
+  </data>
+  <data name="SteelItemAdd" xml:space="preserve">
+    <value>添加产品与钢网关系</value>
+  </data>
+  <data name="SteelItemEdit" xml:space="preserve">
+    <value>编辑产品与钢网关系</value>
+  </data>
+  <data name="SteelItemView" xml:space="preserve">
+    <value>产品与钢网关系</value>
+  </data>
+  <data name="MaintenanceDemoAdd" xml:space="preserve">
+    <value>添加项目维护</value>
+  </data>
+  <data name="MaintenanceDemoEdit" xml:space="preserve">
+    <value>编辑项目维护</value>
+  </data>
+  <data name="Maintenance_MaintenanceDemoList" xml:space="preserve">
+    <value>保养项目</value>
+  </data>
+  <data name="Maintenance_PlanMaintainCkeck" xml:space="preserve">
+    <value>保养</value>
+  </data>
+  <data name="Schedule_ScheduleAllottedList" xml:space="preserve">
+    <value>排产发布</value>
+  </data>
+  <data name="Section_ResourceView" xml:space="preserve">
+    <value>作业编号与线别</value>
+  </data>
+  <data name="WorkSeqList" xml:space="preserve">
+    <value>作业编号列表</value>
+  </data>
+  <data name="ShopOrder_SNReleaseByStation" xml:space="preserve">
+    <value>生成置换条码</value>
+  </data>
+  <data name="JigTypeList" xml:space="preserve">
+    <value>工装夹具类型</value>
+  </data>
+  <data name="JigList" xml:space="preserve">
+    <value>工装夹具列表</value>
+  </data>
+  <data name="JigAdd" xml:space="preserve">
+    <value>添加工装夹具</value>
+  </data>
+  <data name="JigEdit" xml:space="preserve">
+    <value>编辑工装夹具</value>
+  </data>
+  <data name="JigView" xml:space="preserve">
+    <value>查看工装夹具</value>
+  </data>
+  <data name="JigTypeAdd" xml:space="preserve">
+    <value>添加类型</value>
+  </data>
+  <data name="JigTypeEdit" xml:space="preserve">
+    <value>编辑类型</value>
+  </data>
+  <data name="JigTypeView" xml:space="preserve">
+    <value>查看类型</value>
+  </data>
+  <data name="CurreTicketConfig_Edit" xml:space="preserve">
+    <value>现票品打印配置</value>
+  </data>
+  <data name="ShipmentListConfig_Edit" xml:space="preserve">
+    <value>出货序列配置</value>
+  </data>
+  <data name="TaskContentSignConfig_Edit" xml:space="preserve">
+    <value>作业内容标识配置</value>
+  </data>
+  <data name="PackPrintConfig_List" xml:space="preserve">
+    <value>包装打印配置</value>
+  </data>
+  <data name="PartNameList" xml:space="preserve">
+    <value>备件列表</value>
+  </data>
+  <data name="PackPrint_MaterialLabelConfig" xml:space="preserve">
+    <value>作业内容标识配置</value>
+  </data>
+  <data name="PackPrint_PackPrintConfigList" xml:space="preserve">
+    <value>打印配置</value>
+  </data>
+  <data name="PackPrint_ProductLabelConfig" xml:space="preserve">
+    <value>现票品配置</value>
+  </data>
+  <data name="PackPrint_ShipmentListConfig" xml:space="preserve">
+    <value>出货清单配置</value>
+  </data>
+  <data name="PackPrint_SupplierLabelConfig" xml:space="preserve">
+    <value>配置表配置</value>
+  </data>
+  <data name="Mobile_FinishProdShipment_Client" xml:space="preserve">
+    <value>成品出货</value>
+  </data>
+  <data name="Production_FinishShipment" xml:space="preserve">
+    <value>成品出货列表</value>
+  </data>
+  <data name="Production_FinishProdShipMentList" xml:space="preserve">
+    <value>成品出货管理</value>
+  </data>
+  <data name="Production_ESOPFileAdd" xml:space="preserve">
+    <value>ESOP文件上传</value>
+  </data>
+  <data name="Production_ESOPFileList" xml:space="preserve">
+    <value>ESOP文件</value>
+  </data>
+  <data name="Labels_ItemDocumentAdd" xml:space="preserve">
+    <value>新增产品标签</value>
+  </data>
+  <data name="Labels_ItemDocumentEdit" xml:space="preserve">
+    <value>编辑产品标签</value>
+  </data>
+  <data name="Labels_ItemDocumentList" xml:space="preserve">
+    <value>产品标签</value>
+  </data>
+  <data name="Labels_ItemDocumentView" xml:space="preserve">
+    <value>查看产品标签</value>
+  </data>
+  <data name="Labels_LabelDocumentEdit" xml:space="preserve">
+    <value>编辑标签</value>
+  </data>
+  <data name="Labels_LabelZPLEdit" xml:space="preserve">
+    <value>编辑指令模板</value>
+  </data>
+  <data name="SerialNumber_SerialNumberCopy" xml:space="preserve">
+    <value>复制规则</value>
+  </data>
+  <data name="ShopOrder_RouterBind" xml:space="preserve">
+    <value>路由绑定</value>
+  </data>
+  <data name="ESOPStroeConfig" xml:space="preserve">
+    <value>ESOP配置</value>
+  </data>
+  <data name="Production_ESOPStroeConfig" xml:space="preserve">
+    <value>FTP配置</value>
+  </data>
+  <data name="Material_PrintGRN" xml:space="preserve">
+    <value>物料条码打印</value>
+  </data>
+  <data name="StorageTransfer" xml:space="preserve">
+    <value>库位转移</value>
+  </data>
+  <data name="Material_IQCFormView" xml:space="preserve">
+    <value>查看检验单</value>
+  </data>
+  <data name="Material_OffLinePrint" xml:space="preserve">
+    <value>离线条码打印</value>
+  </data>
+  <data name="PackPrint_PackPrintOutput" xml:space="preserve">
+    <value>打印清单</value>
+  </data>
+  <data name="Client_HDClientScan" xml:space="preserve">
+    <value>工业平板扫描界面</value>
+  </data>
+  <data name="CollectForm_TemplateFieldAdd" xml:space="preserve">
+    <value>新增工序模板字段</value>
+  </data>
+  <data name="CollectForm_TemplateFieldList" xml:space="preserve">
+    <value>模板字段</value>
+  </data>
+  <data name="ItemLevelAdd" xml:space="preserve">
+    <value>新增产品等级</value>
+  </data>
+  <data name="ItemLevelEdit" xml:space="preserve">
+    <value>编辑产品等级</value>
+  </data>
+  <data name="ItemLevelView" xml:space="preserve">
+    <value>查看产品等级</value>
+  </data>
+  <data name="Manufacture_ProductionChanges" xml:space="preserve">
+    <value>生产变更</value>
+  </data>
+  <data name="Material_InStorageIQCFormList" xml:space="preserve">
+    <value>可入库的IQC检验单</value>
+  </data>
+  <data name="Material_IQCCheckFail" xml:space="preserve">
+    <value>检验未通过的IQC检验单</value>
+  </data>
+  <data name="Material_MaterialInfo" xml:space="preserve">
+    <value>物料信息</value>
+  </data>
+  <data name="Material_PackGRN" xml:space="preserve">
+    <value>包装物料</value>
+  </data>
+  <data name="Material_WaitIQCFormList" xml:space="preserve">
+    <value>可检验的IQC检验单</value>
+  </data>
+  <data name="Mobile_Production_Client" xml:space="preserve">
+    <value>客户端操作</value>
+  </data>
+  <data name="Plan_CheckMaterial" xml:space="preserve">
+    <value>上料验证</value>
+  </data>
+  <data name="Plan_LoadingAdd" xml:space="preserve">
+    <value>新增上料清单</value>
+  </data>
+  <data name="Plan_LoadingList" xml:space="preserve">
+    <value>上料清单</value>
+  </data>
+  <data name="ProcessForm_PrepareMatFormEdit" xml:space="preserve">
+    <value>编辑加工备料单</value>
+  </data>
+  <data name="ProcessForm_PrepareMatFormList" xml:space="preserve">
+    <value>加工备料单</value>
+  </data>
+  <data name="ProcessForm_TemplateFieldAdd" xml:space="preserve">
+    <value>添加模板字段</value>
+  </data>
+  <data name="ProcessForm_TemplateFieldList" xml:space="preserve">
+    <value>模板字段</value>
+  </data>
+  <data name="ProcessProductFormPrint" xml:space="preserve">
+    <value>单据打印</value>
+  </data>
+  <data name="Product_ItemLevelList" xml:space="preserve">
+    <value>产品等级列表</value>
+  </data>
+  <data name="Product_ItemModelAdd" xml:space="preserve">
+    <value>新增产品型号</value>
+  </data>
+  <data name="Product_ItemModelEdit" xml:space="preserve">
+    <value>编辑产品型号</value>
+  </data>
+  <data name="Product_ItemModelList" xml:space="preserve">
+    <value>产品型号分组</value>
+  </data>
+  <data name="Prod_LoadingList" xml:space="preserve">
+    <value>可上料的加工流程单</value>
+  </data>
+  <data name="Prod_ProcessFormParams" xml:space="preserve">
+    <value>工序参数配置</value>
+  </data>
+  <data name="TraceForm_TemplateFieldAdd" xml:space="preserve">
+    <value>新增模板字段</value>
+  </data>
+  <data name="TraceForm_TemplateFieldList" xml:space="preserve">
+    <value>模板字段</value>
+  </data>
+  <data name="Turnover_TurnoverPrint" xml:space="preserve">
+    <value>工具条码打印</value>
+  </data>
+  <data name="Material_StorageTransfer" xml:space="preserve">
+    <value>库位转移</value>
+  </data>
+  <data name="PackGRN" xml:space="preserve">
+    <value>包装物料条码</value>
+  </data>
+  <data name="Supplier_AssignItem" xml:space="preserve">
+    <value>分配物料</value>
+  </data>
+  <data name="Supplier_AssignUser" xml:space="preserve">
+    <value>分配用户</value>
+  </data>
+  <data name="IQCFormAttend" xml:space="preserve">
+    <value>IQC判定结果</value>
+  </data>
+  <data name="Material_IQCFormAttend" xml:space="preserve">
+    <value>IQC判定结果</value>
+  </data>
+  <data name="UserOfSupplierList" xml:space="preserve">
+    <value>供应商帐号管理</value>
+  </data>
+  <data name="Material_TransferOutAdd" xml:space="preserve">
+    <value>新增物料调拨</value>
+  </data>
+  <data name="Material_TransferOutEdit" xml:space="preserve">
+    <value>编辑物料调拨</value>
+  </data>
+  <data name="Material_TransferOutList" xml:space="preserve">
+    <value>无单调拨出库</value>
+  </data>
+  <data name="FinishProductInStorageList" xml:space="preserve">
+    <value>模块入库</value>
+  </data>
+  <data name="MOCode" xml:space="preserve">
+    <value>工单列表</value>
+  </data>
+  <data name="Mobile_FinishedProductInStorageAdd" xml:space="preserve">
+    <value>模块入库</value>
+  </data>
+  <data name="Material_GRNModify" xml:space="preserve">
+    <value>物料条码数量修改</value>
+  </data>
+  <data name="BasalWarehouse" xml:space="preserve">
+    <value>仓库档案信息</value>
+  </data>
+  <data name="ERPMOBomList" xml:space="preserve">
+    <value>备料看板</value>
+  </data>
+  <data name="Material_GenerateGRNSuply" xml:space="preserve">
+    <value>供应商生成物料条码</value>
+  </data>
+  <data name="Material_MaterialUnitListSuply" xml:space="preserve">
+    <value>供应商物料列表</value>
+  </data>
+  <data name="PackGRNSuply" xml:space="preserve">
+    <value>供应商包装物料条码</value>
+  </data>
+  <data name="ERPMOBomListkanban" xml:space="preserve">
+    <value>仓库备料看板</value>
+  </data>
+  <data name="Mobile_MaterialInStorageList" xml:space="preserve">
+    <value>物料入库</value>
+  </data>
+  <data name="MaterialStorageGRNInputMobile" xml:space="preserve">
+    <value>扫描GRN入库</value>
+  </data>
+  <data name="Mobile_MaterialInStorageAdd" xml:space="preserve">
+    <value>物料入库</value>
+  </data>
+  <data name="IQCFormCheckKanbanList" xml:space="preserve">
+    <value>物料待检区看板</value>
+  </data>
+  <data name="IQCFormCheckKanbanView" xml:space="preserve">
+    <value>看板模式</value>
+  </data>
+  <data name="ProdEfficiency" xml:space="preserve">
+    <value>生产效率看板</value>
+  </data>
+  <data name="Material_RePrintGRNSuply" xml:space="preserve">
+    <value>供应商GRN重打印</value>
+  </data>
+  <data name="Material_PrepareMatFormLists" xml:space="preserve">
+    <value>物料备料</value>
+  </data>
+  <data name="Account_EditProfile" xml:space="preserve">
+    <value>编辑个人资料</value>
+  </data>
+  <data name="System_WebConfig" xml:space="preserve">
+    <value>数据库链接配置</value>
+  </data>
+  <data name="System_CacheClear" xml:space="preserve">
+    <value>清空缓存</value>
+  </data>
+  <data name="System_MenuImport" xml:space="preserve">
+    <value>导入菜单</value>
+  </data>
+  <data name="System_ErrorList" xml:space="preserve">
+    <value>系统错误日志</value>
+  </data>
+  <data name="System_ErrorDetail" xml:space="preserve">
+    <value>错误日志详情</value>
+  </data>
+  <data name="Station_PhaseAdd" xml:space="preserve">
+    <value>新增生产阶段</value>
+  </data>
+  <data name="Station_PhaseEdit" xml:space="preserve">
+    <value>编辑生产阶段</value>
+  </data>
+  <data name="Station_PhaseList" xml:space="preserve">
+    <value>生产阶段列表</value>
+  </data>
+  <data name="Station_StationParamAdd" xml:space="preserve">
+    <value>添加工序工艺参数</value>
+  </data>
+  <data name="Station_StationParamEdit" xml:space="preserve">
+    <value>编辑工序工艺参数</value>
+  </data>
+  <data name="Station_StationParamList" xml:space="preserve">
+    <value>工序工艺参数</value>
+  </data>
+  <data name="Station_StationParamView" xml:space="preserve">
+    <value>查看工序工艺参数</value>
+  </data>
+  <data name="Station_StationTestCountAdd" xml:space="preserve">
+    <value>新增工序测试次数</value>
+  </data>
+  <data name="Station_StationTestCountDelete" xml:space="preserve">
+    <value>删除工序测试次数</value>
+  </data>
+  <data name="Station_StationTestCountEdit" xml:space="preserve">
+    <value>编辑工序测试次数</value>
+  </data>
+  <data name="Station_StationTestCountList" xml:space="preserve">
+    <value>工序测试次数</value>
+  </data>
+  <data name="Station_PhaseView" xml:space="preserve">
+    <value>查看生产阶段</value>
+  </data>
+  <data name="Station_StationTestCountView" xml:space="preserve">
+    <value>查看工序测试次数</value>
+  </data>
+  <data name="SerialNumber_ResetWayAdd" xml:space="preserve">
+    <value>新增复位方式</value>
+  </data>
+  <data name="SerialNumber_ResetWayDelete" xml:space="preserve">
+    <value>删除复位方式</value>
+  </data>
+  <data name="SerialNumber_ResetWayEdit" xml:space="preserve">
+    <value>编辑复位方式</value>
+  </data>
+  <data name="SerialNumber_ResetWayList" xml:space="preserve">
+    <value>复位方式列表</value>
+  </data>
+  <data name="NCCode_NCGroupEdit" xml:space="preserve">
+    <value>编辑不良代码类型</value>
+  </data>
+  <data name="FeederTypeView" xml:space="preserve">
+    <value>查看飞达类型</value>
+  </data>
+  <data name="FeederView" xml:space="preserve">
+    <value>查看飞达</value>
+  </data>
+  <data name="StockCarAdd" xml:space="preserve">
+    <value>新增备料车</value>
+  </data>
+  <data name="StockCarEdit" xml:space="preserve">
+    <value>编辑备料车</value>
+  </data>
+  <data name="StockCarList" xml:space="preserve">
+    <value>备料车列表</value>
+  </data>
+  <data name="StockOutList" xml:space="preserve">
+    <value>订单列表</value>
+  </data>
+  <data name="StockTypeAdd" xml:space="preserve">
+    <value>新增备料车类型</value>
+  </data>
+  <data name="StockTypeEdit" xml:space="preserve">
+    <value>编辑备料车类型</value>
+  </data>
+  <data name="StockTypeList" xml:space="preserve">
+    <value>备料车类型列表</value>
+  </data>
+  <data name="Data_SynchronizationAdd" xml:space="preserve">
+    <value>新增同步业务</value>
+  </data>
+  <data name="Data_SynchronizationEdit" xml:space="preserve">
+    <value>编辑同步业务</value>
+  </data>
+  <data name="Data_SynchronizationExecute" xml:space="preserve">
+    <value>执行同步业务</value>
+  </data>
+  <data name="Data_SynchronizationList" xml:space="preserve">
+    <value>数据同步列表</value>
+  </data>
+  <data name="ShopOrderPrintRecord_List" xml:space="preserve">
+    <value>工单条码打印记录</value>
+  </data>
+  <data name="ShopOrderPrintRecord_View" xml:space="preserve">
+    <value>查看工单条码打印记录</value>
+  </data>
+  <data name="Product_StationParamAdd" xml:space="preserve">
+    <value>增加参数</value>
+  </data>
+  <data name="Product_StationParamEdit" xml:space="preserve">
+    <value>编辑参数</value>
+  </data>
+  <data name="Client_ProInfoConfig" xml:space="preserve">
+    <value>动态信息显示配置</value>
+  </data>
+  <data name="Client_ProInfoConfigEdit" xml:space="preserve">
+    <value>编辑动态信息配置</value>
+  </data>
+  <data name="Client_PopedomStation" xml:space="preserve">
+    <value>站位模板配置</value>
+  </data>
+  <data name="Client_PopedomStationAdd" xml:space="preserve">
+    <value>新增站位模板配置</value>
+  </data>
+  <data name="Client_PopedomStationEdit" xml:space="preserve">
+    <value>编辑站位模板配置</value>
+  </data>
+  <data name="PickListEdit" xml:space="preserve">
+    <value>编辑手插上料清单</value>
+  </data>
+  <data name="PreAssemblyList" xml:space="preserve">
+    <value>前置加工信息查询</value>
+  </data>
+  <data name="MaterielAdd" xml:space="preserve">
+    <value>新增物料</value>
+  </data>
+  <data name="MaterielDelete" xml:space="preserve">
+    <value>删除物料</value>
+  </data>
+  <data name="MaterielEdit" xml:space="preserve">
+    <value>编辑物料</value>
+  </data>
+  <data name="MaterielView" xml:space="preserve">
+    <value>查看物料</value>
+  </data>
+  <data name="Client_PopedomStationCopy" xml:space="preserve">
+    <value>复制站位模板配置</value>
+  </data>
+  <data name="ReportDesignAdd" xml:space="preserve">
+    <value>简易报表添加</value>
+  </data>
+  <data name="ReportTable" xml:space="preserve">
+    <value>报表表格</value>
+  </data>
+  <data name="ComponentList" xml:space="preserve">
+    <value>看板控件维护</value>
+  </data>
+  <data name="Kanban_ContainerList" xml:space="preserve">
+    <value>看板容器维护</value>
+  </data>
+  <data name="Kanban_TemplateList" xml:space="preserve">
+    <value>看板维护</value>
+  </data>
+  <data name="Template_KanbanTypeList" xml:space="preserve">
+    <value>看板类型维护</value>
+  </data>
+  <data name="KanbanContainer" xml:space="preserve">
+    <value>看板容器</value>
+  </data>
+  <data name="LayoutType" xml:space="preserve">
+    <value>布局</value>
+  </data>
+  <data name="KanbanComponent" xml:space="preserve">
+    <value>看板控件</value>
+  </data>
+  <data name="MaterialConfigAdd" xml:space="preserve">
+    <value>新增仓库配置</value>
+  </data>
+  <data name="MaterialConfigEdit" xml:space="preserve">
+    <value>编辑仓库配置</value>
+  </data>
+  <data name="MaterialSysConfigList" xml:space="preserve">
+    <value>仓库配置列表</value>
+  </data>
+  <data name="MaterialIQCConfigAdd" xml:space="preserve">
+    <value>新增IQC检验配置</value>
+  </data>
+  <data name="MaterialIQCConfigEdit" xml:space="preserve">
+    <value>编辑IQC检验配置</value>
+  </data>
+  <data name="MaterialIQCConfigList" xml:space="preserve">
+    <value>IQC检验配置列表</value>
+  </data>
+  <data name="MaterialSupplierConfigAdd" xml:space="preserve">
+    <value>新增供应商配置</value>
+  </data>
+  <data name="MaterialSupplierConfigEdit" xml:space="preserve">
+    <value>编辑供应商配置</value>
+  </data>
+  <data name="MaterialSupplierConfigList" xml:space="preserve">
+    <value>供应商配置列表</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsAdd" xml:space="preserve">
+    <value>新增扩展信息</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsEdit" xml:space="preserve">
+    <value>编辑扩展信息</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsList" xml:space="preserve">
+    <value>扩展信息列表</value>
+  </data>
+  <data name="ExtensionFields_ExtensionFieldsView" xml:space="preserve">
+    <value>查看扩展信息</value>
+  </data>
+  <data name="Material_Deliver" xml:space="preserve">
+    <value>生成送货单</value>
+  </data>
+  <data name="Material_DeliverList" xml:space="preserve">
+    <value>送货单列表</value>
+  </data>
+  <data name="SupplierDelivery" xml:space="preserve">
+    <value>供应商交期维护</value>
+  </data>
+  <data name="SupplierDeliveryEdit" xml:space="preserve">
+    <value>供应商交期编辑</value>
+  </data>
+  <data name="SupplierDeliveryList" xml:space="preserve">
+    <value>供应商交期维护列表</value>
+  </data>
+  <data name="Supplier_PackList" xml:space="preserve">
+    <value>供应商包装箱列表</value>
+  </data>
+  <data name="Material_PackList" xml:space="preserve">
+    <value>包装箱列表</value>
+  </data>
+  <data name="KanbanPage" xml:space="preserve">
+    <value>看板页面</value>
+  </data>
+  <data name="AQLRuleAdd" xml:space="preserve">
+    <value>新增抽检规则</value>
+  </data>
+  <data name="AQLRuleEdit" xml:space="preserve">
+    <value>编辑抽检规则</value>
+  </data>
+  <data name="AQLRuleList" xml:space="preserve">
+    <value>AQL抽样规则列表</value>
+  </data>
+  <data name="AQLSampleAdd" xml:space="preserve">
+    <value>新增检验项</value>
+  </data>
+  <data name="AQLSampleEdit" xml:space="preserve">
+    <value>编辑检验项</value>
+  </data>
+  <data name="AQLSampleList" xml:space="preserve">
+    <value>检验项列表</value>
+  </data>
+  <data name="InspectionItem" xml:space="preserve">
+    <value>检验项</value>
+  </data>
+  <data name="QC_InspectionItemAdd" xml:space="preserve">
+    <value>新增检验项</value>
+  </data>
+  <data name="QC_InspectionItemDialog" xml:space="preserve">
+    <value>检验项目窗口</value>
+  </data>
+  <data name="QC_InspectionItemEdit" xml:space="preserve">
+    <value>编辑检验项</value>
+  </data>
+  <data name="QC_InspectionItemList" xml:space="preserve">
+    <value>检验项清单</value>
+  </data>
+  <data name="QC_InspectionTemplateAdd" xml:space="preserve">
+    <value>新增检验模板</value>
+  </data>
+  <data name="QC_InspectionTemplateCopy" xml:space="preserve">
+    <value>复制检验模板</value>
+  </data>
+  <data name="QC_InspectionTemplateEdit" xml:space="preserve">
+    <value>编辑检验模板</value>
+  </data>
+  <data name="QC_InspectionTemplateItemAdd" xml:space="preserve">
+    <value>新增关联列表</value>
+  </data>
+  <data name="QC_InspectionTemplateItemEdit" xml:space="preserve">
+    <value>编辑关联列表</value>
+  </data>
+  <data name="QC_InspectionTemplateItemList" xml:space="preserve">
+    <value>模板关联列表</value>
+  </data>
+  <data name="QC_InspectionTemplateList" xml:space="preserve">
+    <value>检验模板列表</value>
+  </data>
+  <data name="QC_InspectionTypeAdd" xml:space="preserve">
+    <value>新增检验类型</value>
+  </data>
+  <data name="QC_InspectionTypeEdit" xml:space="preserve">
+    <value>编辑检验类型</value>
+  </data>
+  <data name="QC_InspectionTypeList" xml:space="preserve">
+    <value>检验类型列表</value>
+  </data>
+  <data name="AQLRule" xml:space="preserve">
+    <value>AQL规则</value>
+  </data>
+  <data name="InspectionTemplate" xml:space="preserve">
+    <value>检验模块</value>
+  </data>
+  <data name="QC_InspectionRuleAdd" xml:space="preserve">
+    <value>新增检验规则</value>
+  </data>
+  <data name="QC_InspectionRuleEdit" xml:space="preserve">
+    <value>编辑检验规则</value>
+  </data>
+  <data name="Client_UsersStation" xml:space="preserve">
+    <value>用户工序配置</value>
+  </data>
+  <data name="Client_UsersStationAdd" xml:space="preserve">
+    <value>新增用户工序关联</value>
+  </data>
+  <data name="Client_UsersStationEdit" xml:space="preserve">
+    <value>编辑用户工序关联</value>
+  </data>
+  <data name="Material_MaterialInStockConfirm" xml:space="preserve">
+    <value>IQC交接确认</value>
+  </data>
+  <data name="Assemble_ProCollectionUI" xml:space="preserve">
+    <value>装配采集模板</value>
+  </data>
+  <data name="Common_ProCollectionUI" xml:space="preserve">
+    <value>通用采集模板</value>
+  </data>
+  <data name="Input_ProCollectionUI" xml:space="preserve">
+    <value>投入采集模板</value>
+  </data>
+  <data name="NC_ProCollectionUI" xml:space="preserve">
+    <value>不良采集模板</value>
+  </data>
+  <data name="NC_RepairUI" xml:space="preserve">
+    <value>维修模板</value>
+  </data>
+  <data name="Packing_ProCollectionUI" xml:space="preserve">
+    <value>包装模板</value>
+  </data>
+  <data name="Pallet_ProCollectionUI" xml:space="preserve">
+    <value>栈板包装模板</value>
+  </data>
+  <data name="Pre_MaterialByItem" xml:space="preserve">
+    <value>前置加工模板(料号)</value>
+  </data>
+  <data name="Pre_MaterialByOrder" xml:space="preserve">
+    <value>前置加工模板(工单)</value>
+  </data>
+  <data name="Material_MaterialInStorageGRN" xml:space="preserve">
+    <value>扫描物料条码入库</value>
+  </data>
+  <data name="Material_MaterialInStorageQty" xml:space="preserve">
+    <value>数量入库</value>
+  </data>
+  <data name="MaterialApplyList" xml:space="preserve">
+    <value>领料申请</value>
+  </data>
+  <data name="MaterialScrap" xml:space="preserve">
+    <value>条码报废</value>
+  </data>
+  <data name="Turnover_TurnoverGroupCopy" xml:space="preserve">
+    <value>复制周转工具</value>
+  </data>
+  <data name="MaterialPrepare" xml:space="preserve">
+    <value>仓库备料</value>
+  </data>
+  <data name="MaterialHandover" xml:space="preserve">
+    <value>备料接收</value>
+  </data>
+  <data name="MaterialProdReturn" xml:space="preserve">
+    <value>生产退料申请</value>
+  </data>
+  <data name="MaterialReturnCheck" xml:space="preserve">
+    <value>退料检验</value>
+  </data>
+  <data name="MaterialReturnCheckEdit" xml:space="preserve">
+    <value>编辑退料检验单</value>
+  </data>
+  <data name="MaterialWhReturn" xml:space="preserve">
+    <value>生产退料入库</value>
+  </data>
+  <data name="Material_IEWarningSetting" xml:space="preserve">
+    <value>库存预警设置</value>
+  </data>
+  <data name="SerialNumber_PrefixSufAdd" xml:space="preserve">
+    <value>添加规则函数</value>
+  </data>
+  <data name="SerialNumber_PrefixSufDelete" xml:space="preserve">
+    <value>删除规则函数</value>
+  </data>
+  <data name="SerialNumber_PrefixSufEdit" xml:space="preserve">
+    <value>编辑规则函数</value>
+  </data>
+  <data name="SerialNumber_PrefixSufList" xml:space="preserve">
+    <value>规则函数列表</value>
+  </data>
+  <data name="JigHistoryList" xml:space="preserve">
+    <value>工装夹具历史</value>
+  </data>
+  <data name="RedGumList" xml:space="preserve">
+    <value>红胶管理</value>
+  </data>
+  <data name="SteelHistoryList" xml:space="preserve">
+    <value>钢网历史信息查询</value>
+  </data>
+  <data name="AQLPlanList" xml:space="preserve">
+    <value>AQL抽样计划列表</value>
+  </data>
+  <data name="AQLRuleTypeAdd" xml:space="preserve">
+    <value>新增AQL抽样类别</value>
+  </data>
+  <data name="AQLRuleTypeEdit" xml:space="preserve">
+    <value>编辑AQL抽样类别</value>
+  </data>
+  <data name="AQLRuleTypeList" xml:space="preserve">
+    <value>AQL抽样类别列表</value>
+  </data>
+  <data name="CallMaterial" xml:space="preserve">
+    <value>手动叫料</value>
+  </data>
+  <data name="FactoryEfficiencyBoard" xml:space="preserve">
+    <value>工厂效率看板</value>
+  </data>
+  <data name="LineReturnMaterial" xml:space="preserve">
+    <value>产线退料</value>
+  </data>
+  <data name="OBA_OBARuleAdd" xml:space="preserve">
+    <value>新增抽检规则</value>
+  </data>
+  <data name="OBA_OBARuleEdit" xml:space="preserve">
+    <value>编辑抽检规则</value>
+  </data>
+  <data name="OBA_OBARuleList" xml:space="preserve">
+    <value>OBA抽检规则</value>
+  </data>
+  <data name="OrderTrackingList" xml:space="preserve">
+    <value>订单追踪看板</value>
+  </data>
+  <data name="PannelSNList" xml:space="preserve">
+    <value>拼板条码</value>
+  </data>
+  <data name="ProdAbnormalList" xml:space="preserve">
+    <value>生产异常看板</value>
+  </data>
+  <data name="ProdLineEfficiencyKanbanList" xml:space="preserve">
+    <value>产线效率看板</value>
+  </data>
+  <data name="QuickReport" xml:space="preserve">
+    <value>快速报表</value>
+  </data>
+  <data name="RMAMangement_RMAList" xml:space="preserve">
+    <value>RMA工单列表</value>
+  </data>
+  <data name="RMAMangement_RMAOrderEdit" xml:space="preserve">
+    <value>RMA工单编辑</value>
+  </data>
+  <data name="RMAMangement_RMAOrderReceive" xml:space="preserve">
+    <value>RMA工单接收</value>
+  </data>
+  <data name="RMAMangement_RMAProductReceive" xml:space="preserve">
+    <value>RMA产品接收</value>
+  </data>
+  <data name="Router_RouterCopy" xml:space="preserve">
+    <value>复制路由</value>
+  </data>
+  <data name="Schedule_ProdOrderSchedule" xml:space="preserve">
+    <value>工单排程</value>
+  </data>
+  <data name="Schedule_SchedulingQtyChange" xml:space="preserve">
+    <value>排产数量变更</value>
+  </data>
+  <data name="ShopOrderAdd" xml:space="preserve">
+    <value>新增工单</value>
+  </data>
+  <data name="ShopOrderEdit" xml:space="preserve">
+    <value>编辑工单</value>
+  </data>
+  <data name="SnStateView" xml:space="preserve">
+    <value>SN状态管理</value>
+  </data>
+  <data name="SNStatusManager" xml:space="preserve">
+    <value>SN状态管理</value>
+  </data>
+  <data name="StdTime_StdTimeAdd" xml:space="preserve">
+    <value>新增标准工时</value>
+  </data>
+  <data name="StdTime_StdTimeEdit" xml:space="preserve">
+    <value>编辑标准工时</value>
+  </data>
+  <data name="StdTime_StdTimeList" xml:space="preserve">
+    <value>标准工时列表</value>
+  </data>
+  <data name="ViewPickList" xml:space="preserve">
+    <value>分捡单明细</value>
+  </data>
+  <data name="Product_BomImport" xml:space="preserve">
+    <value>物料BOM导入</value>
+  </data>
+  <data name="Product_BomSynchro" xml:space="preserve">
+    <value>物料BOM同步</value>
+  </data>
+  <data name="Product_BomDown" xml:space="preserve">
+    <value>物料BOM模板下载</value>
+  </data>
+  <data name="Product_BomMatAdd" xml:space="preserve">
+    <value>添加物料</value>
+  </data>
+  <data name="Product_BomMatDel" xml:space="preserve">
+    <value>删除物料</value>
+  </data>
+  <data name="Product_BomMatEdit" xml:space="preserve">
+    <value>编辑物料</value>
+  </data>
+  <data name="Product_BomStruct" xml:space="preserve">
+    <value>产品结构</value>
+  </data>
+  <data name="Product_CategoryAdd" xml:space="preserve">
+    <value>添加产品类别</value>
+  </data>
+  <data name="Product_CategoryDel" xml:space="preserve">
+    <value>删除产品类别</value>
+  </data>
+  <data name="Product_CategoryEdit" xml:space="preserve">
+    <value>编辑产品类别</value>
+  </data>
+  <data name="Product_CategoryList" xml:space="preserve">
+    <value>产品类别列表</value>
+  </data>
+  <data name="Product_StationBomList" xml:space="preserve">
+    <value>制造BOM列表</value>
+  </data>
+  <data name="Product_StationBomMatAdd" xml:space="preserve">
+    <value>添加工序与物料BOM关系</value>
+  </data>
+  <data name="Product_StationBomMatDel" xml:space="preserve">
+    <value>删除工序与物料BOM关系</value>
+  </data>
+  <data name="Product_StationBomMatEdit" xml:space="preserve">
+    <value>编辑工序与物料BOM关系</value>
+  </data>
+  <data name="Product_StationBomMatList" xml:space="preserve">
+    <value>工序与物料BOM关系列表</value>
+  </data>
+  <data name="Product_StationBomView" xml:space="preserve">
+    <value>查看制造BOM</value>
+  </data>
+  <data name="Product_StationMatAdd" xml:space="preserve">
+    <value>添加工序与物料关系</value>
+  </data>
+  <data name="Product_StationMatDel" xml:space="preserve">
+    <value>删除工序与物料关系</value>
+  </data>
+  <data name="Product_StationMatEdit" xml:space="preserve">
+    <value>维护工序与物料关系</value>
+  </data>
+  <data name="Product_StationMatList" xml:space="preserve">
+    <value>工序物料关系列表</value>
+  </data>
+  <data name="Product_BomCopy" xml:space="preserve">
+    <value>物料BOM复制</value>
+  </data>
+  <data name="Production_MslAdd" xml:space="preserve">
+    <value>新增MSD等级</value>
+  </data>
+  <data name="Production_MslDelete" xml:space="preserve">
+    <value>删除MSD等级</value>
+  </data>
+  <data name="Production_MslEdit" xml:space="preserve">
+    <value>编辑MSD等级</value>
+  </data>
+  <data name="Production_MslList" xml:space="preserve">
+    <value>MSD等级列表</value>
+  </data>
+  <data name="Production_MsdContainerAdd" xml:space="preserve">
+    <value>新增MSD容器</value>
+  </data>
+  <data name="Production_MsdContainerDel" xml:space="preserve">
+    <value>删除MSD容器</value>
+  </data>
+  <data name="Production_MsdContainerEdit" xml:space="preserve">
+    <value>编辑MSD容器</value>
+  </data>
+  <data name="Production_MsdContainerList" xml:space="preserve">
+    <value>MSD容器列表</value>
+  </data>
+  <data name="MsdBake_ProCollectionUI" xml:space="preserve">
+    <value>MSD 入炉采集UI</value>
+  </data>
+  <data name="MsdPack_ProCollectionUI" xml:space="preserve">
+    <value>MSD 封装采集UI</value>
+  </data>
+  <data name="MsdUnBake_ProCollectionUI" xml:space="preserve">
+    <value>MSD 出炉采集UI</value>
+  </data>
+  <data name="MsdUnPack_ProCollectionUI" xml:space="preserve">
+    <value>MSD 开包采集UI</value>
+  </data>
+  <data name="OutStorage_ProCollectionUI" xml:space="preserve">
+    <value>成品出库采集UI</value>
+  </data>
+  <data name="Storage_ProCollectionUI" xml:space="preserve">
+    <value>成品入库采集UI</value>
+  </data>
+  <data name="AbnormalCauseMaintain" xml:space="preserve">
+    <value>异常原因维护</value>
+  </data>
+  <data name="AssembleReportList" xml:space="preserve">
+    <value>装配流转板报表</value>
+  </data>
+  <data name="CheckItem" xml:space="preserve">
+    <value>检验项目列表</value>
+  </data>
+  <data name="CheckItemGroupList" xml:space="preserve">
+    <value>检验项目分组</value>
+  </data>
+  <data name="CheckItemList" xml:space="preserve">
+    <value>检验项目清单</value>
+  </data>
+  <data name="ConfirmCryMaterial" xml:space="preserve">
+    <value>确认叫料</value>
+  </data>
+  <data name="EnterWareHouse" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="EnterWarehouseList" xml:space="preserve">
+    <value>完工下线数据采集</value>
+  </data>
+  <data name="Equipment_EquipmentAudit" xml:space="preserve">
+    <value>维修审核</value>
+  </data>
+  <data name="Equipment_EquipmentConfirm" xml:space="preserve">
+    <value>维修确认</value>
+  </data>
+  <data name="Equipment_EquipmentGroupAdd" xml:space="preserve">
+    <value>新增保养项目分组</value>
+  </data>
+  <data name="Equipment_EquipmentGroupEdit" xml:space="preserve">
+    <value>编辑保养项目分组</value>
+  </data>
+  <data name="Equipment_EquipmentGroupList" xml:space="preserve">
+    <value>设备保养项目分组</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainAdd" xml:space="preserve">
+    <value>新增设备保养清单</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainConfigAdd" xml:space="preserve">
+    <value>设备保养确认</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainCopy" xml:space="preserve">
+    <value>复制清单</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainEdit" xml:space="preserve">
+    <value>编辑设备保养清单</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainHistory" xml:space="preserve">
+    <value>设备保养历史记录</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainList" xml:space="preserve">
+    <value>设备保养清单</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainRecord" xml:space="preserve">
+    <value>设备工作台确认</value>
+  </data>
+  <data name="Equipment_EquipmentMaintainRecordEdit" xml:space="preserve">
+    <value>设备保养编辑</value>
+  </data>
+  <data name="Equipment_EquipmentRepair" xml:space="preserve">
+    <value>设备维修</value>
+  </data>
+  <data name="Equipment_EquipmentRepairEdit" xml:space="preserve">
+    <value>编辑设备维修记录</value>
+  </data>
+  <data name="Equipment_EquipProjectAdd" xml:space="preserve">
+    <value>新增保养项目</value>
+  </data>
+  <data name="Equipment_EquipProjectEdit" xml:space="preserve">
+    <value>编辑保养项目</value>
+  </data>
+  <data name="Equipment_EquipProjectList" xml:space="preserve">
+    <value>设备保养项目</value>
+  </data>
+  <data name="Equipment_RepairList" xml:space="preserve">
+    <value>维修列表</value>
+  </data>
+  <data name="ESOPUpload" xml:space="preserve">
+    <value>ESOP文件上传</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="FirstArticleCheckout" xml:space="preserve">
+    <value>首件检验</value>
+  </data>
+  <data name="FirstArticleInspectionReport" xml:space="preserve">
+    <value>首件检验报告</value>
+  </data>
+  <data name="HalfProductInStorage" xml:space="preserve">
+    <value>半成品入库</value>
+  </data>
+  <data name="ItemListType" xml:space="preserve">
+    <value>项目清单类型</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>物料类型</value>
+  </data>
+  <data name="ItemTypeAdd" xml:space="preserve">
+    <value>新增物料类型</value>
+  </data>
+  <data name="ItemTypeEdit" xml:space="preserve">
+    <value>编辑物料类型</value>
+  </data>
+  <data name="KanBanList" xml:space="preserve">
+    <value>看板列表</value>
+  </data>
+  <data name="KeyPartsSNList" xml:space="preserve">
+    <value>关键部件条码列表</value>
+  </data>
+  <data name="LineWeekKanban" xml:space="preserve">
+    <value>3号线生产周报</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapAdd" xml:space="preserve">
+    <value>新增设备类型保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapDelete" xml:space="preserve">
+    <value>删除设备类型保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapEdit" xml:space="preserve">
+    <value>编辑设备类型保养计划</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanEquipTypeMapList" xml:space="preserve">
+    <value>设备类型保养计划列表</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapAdd" xml:space="preserve">
+    <value>新增保养计划项目组</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapDelete" xml:space="preserve">
+    <value>删除保养计划项目组</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapEdit" xml:space="preserve">
+    <value>编辑保养计划项目组</value>
+  </data>
+  <data name="Maintenance_MaintenancePlanMaintainListMapList" xml:space="preserve">
+    <value>保养计划项目组</value>
+  </data>
+  <data name="MaterialBatchList" xml:space="preserve">
+    <value>收货单列表</value>
+  </data>
+  <data name="MaterialGiveOut" xml:space="preserve">
+    <value>仓库发料</value>
+  </data>
+  <data name="Mobile_MaterialGiveOut" xml:space="preserve">
+    <value>仓库发料</value>
+  </data>
+  <data name="Mobile_MaterialInStorage" xml:space="preserve">
+    <value>物料入库</value>
+  </data>
+  <data name="Mobile_MaterialSendBack" xml:space="preserve">
+    <value>仓库退料</value>
+  </data>
+  <data name="Mobile_PrepareMaterial" xml:space="preserve">
+    <value>物料备料</value>
+  </data>
+  <data name="Mobile_ProductOutStorageGRN" xml:space="preserve">
+    <value>成品出库</value>
+  </data>
+  <data name="Mobile_ProductReceive" xml:space="preserve">
+    <value>成品入库</value>
+  </data>
+  <data name="NoticeList" xml:space="preserve">
+    <value>公告列表</value>
+  </data>
+  <data name="OQCCheckNumByOrder" xml:space="preserve">
+    <value>工单OQC抽检数</value>
+  </data>
+  <data name="OQCCheckout" xml:space="preserve">
+    <value>OQC抽检</value>
+  </data>
+  <data name="OQC_OQCRuleAdd" xml:space="preserve">
+    <value>新增抽检规则</value>
+  </data>
+  <data name="OQC_OQCRuleEdit" xml:space="preserve">
+    <value>编辑抽检规则</value>
+  </data>
+  <data name="OQC_OQCRuleList" xml:space="preserve">
+    <value>OQC抽检规则</value>
+  </data>
+  <data name="PreassembleList" xml:space="preserve">
+    <value>预装采集</value>
+  </data>
+  <data name="Preassemble_Add" xml:space="preserve">
+    <value>添加预装采集</value>
+  </data>
+  <data name="Preassemble_Edit" xml:space="preserve">
+    <value>编辑预装采集</value>
+  </data>
+  <data name="PrepareMaterial" xml:space="preserve">
+    <value>物料备料</value>
+  </data>
+  <data name="PrintKeyPartsSN" xml:space="preserve">
+    <value>打印关键部件条码</value>
+  </data>
+  <data name="PrintSN" xml:space="preserve">
+    <value>成品条码打印</value>
+  </data>
+  <data name="ProcurementCheck" xml:space="preserve">
+    <value>采购审核</value>
+  </data>
+  <data name="ProductBorrow" xml:space="preserve">
+    <value>成品借机</value>
+  </data>
+  <data name="ProductCheck_List" xml:space="preserve">
+    <value>商检列表</value>
+  </data>
+  <data name="ProductDataMaintain" xml:space="preserve">
+    <value>生产数据维护</value>
+  </data>
+  <data name="ProductInStorage" xml:space="preserve">
+    <value>成品入库</value>
+  </data>
+  <data name="ProductInStorageList" xml:space="preserve">
+    <value>成品入库单</value>
+  </data>
+  <data name="ProductionYearKanban" xml:space="preserve">
+    <value>生产部年报</value>
+  </data>
+  <data name="Production_SparepartTypeList" xml:space="preserve">
+    <value>备件类别列表</value>
+  </data>
+  <data name="ProductOutStorageGRN" xml:space="preserve">
+    <value>成品出库</value>
+  </data>
+  <data name="ProductQualityReport" xml:space="preserve">
+    <value>产品生产质量报表</value>
+  </data>
+  <data name="ProductRepay" xml:space="preserve">
+    <value>成品还机</value>
+  </data>
+  <data name="ProductShipmentOrder" xml:space="preserve">
+    <value>成品出货</value>
+  </data>
+  <data name="ProductShipmentOrderList" xml:space="preserve">
+    <value>成品出货单</value>
+  </data>
+  <data name="Product_RMARework" xml:space="preserve">
+    <value>RMA重工</value>
+  </data>
+  <data name="Product_UnBindPackingManage" xml:space="preserve">
+    <value>解包装管理</value>
+  </data>
+  <data name="Pruduct_ReworkHistory" xml:space="preserve">
+    <value>重工历史</value>
+  </data>
+  <data name="PurOrderList" xml:space="preserve">
+    <value>采购订单列表</value>
+  </data>
+  <data name="ReportImportToExcel" xml:space="preserve">
+    <value>数字报表导出</value>
+  </data>
+  <data name="ReturnRMAOrder" xml:space="preserve">
+    <value>返工和重工工单</value>
+  </data>
+  <data name="Rework_InlineRework" xml:space="preserve">
+    <value>产线返工</value>
+  </data>
+  <data name="ScheduleChange" xml:space="preserve">
+    <value>排程变更</value>
+  </data>
+  <data name="ScheduleProdConfig" xml:space="preserve">
+    <value>排程排产基础数据维护</value>
+  </data>
+  <data name="SchedulingPause" xml:space="preserve">
+    <value>SchedulingPause</value>
+  </data>
+  <data name="SendBackList" xml:space="preserve">
+    <value>退货单列表</value>
+  </data>
+  <data name="ServiceLineCheck_Add" xml:space="preserve">
+    <value>添加巡检记录</value>
+  </data>
+  <data name="ServiceLineCheck_Edit" xml:space="preserve">
+    <value>编辑巡检记录</value>
+  </data>
+  <data name="ServiceLine_CheckRecords" xml:space="preserve">
+    <value>巡检记录</value>
+  </data>
+  <data name="ServiceSchedule" xml:space="preserve">
+    <value>服务线排程</value>
+  </data>
+  <data name="SNScrapDelete" xml:space="preserve">
+    <value>条码状态管理</value>
+  </data>
+  <data name="SOCode" xml:space="preserve">
+    <value>销售单号</value>
+  </data>
+  <data name="Template_TemplateAddKanban" xml:space="preserve">
+    <value>添加看板</value>
+  </data>
+  <data name="Template_TemplateEditKanban" xml:space="preserve">
+    <value>编辑看板</value>
+  </data>
+  <data name="Template_TemplateListKanban" xml:space="preserve">
+    <value>看板列表</value>
+  </data>
+  <data name="Template_TemplateViewKanban" xml:space="preserve">
+    <value>查看看板</value>
+  </data>
+  <data name="TimeBucketList" xml:space="preserve">
+    <value>时间点维护</value>
+  </data>
+  <data name="ShippingOrderNumber" xml:space="preserve">
+    <value>走货单号</value>
+  </data>
+  <data name="ProdStorageTransfer" xml:space="preserve">
+    <value>成品库位转移</value>
+  </data>
+  <data name="Production_ESOPFileEdit" xml:space="preserve">
+    <value>编辑ESOP文件</value>
+  </data>
+  <data name="Production_ESOPFileManage" xml:space="preserve">
+    <value>ESOP文件管理</value>
+  </data>
+  <data name="ESOP_ProCollectionUI" xml:space="preserve">
+    <value>ESOP帮助 UI</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeList" xml:space="preserve">
+    <value>盘点类型</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListAdd" xml:space="preserve">
+    <value>新增盘点类型</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListDelete" xml:space="preserve">
+    <value>删除盘点类型</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckTypeListEdit" xml:space="preserve">
+    <value>编辑盘点类型</value>
+  </data>
+  <data name="WarehouseCheckStatusAdd" xml:space="preserve">
+    <value>新增盘点状态</value>
+  </data>
+  <data name="WarehouseCheckStatusDelete" xml:space="preserve">
+    <value>删除盘点状态</value>
+  </data>
+  <data name="WarehouseCheckStatusEdit" xml:space="preserve">
+    <value>编辑盘点状态</value>
+  </data>
+  <data name="WarehouseCheckStatusList" xml:space="preserve">
+    <value>盘点状态列表</value>
+  </data>
+  <data name="Warehouse_WarehouseCheckStatusList" xml:space="preserve">
+    <value>盘点状态</value>
+  </data>
+  <data name="WarehouseCheckOrderAdd" xml:space="preserve">
+    <value>新增仓库盘点单</value>
+  </data>
+  <data name="WarehouseCheckOrderEdit" xml:space="preserve">
+    <value>编辑仓库盘点单</value>
+  </data>
+  <data name="WarehouseCheckOrderList" xml:space="preserve">
+    <value>仓库盘点列表</value>
+  </data>
+  <data name="SPC_ProjectAdd" xml:space="preserve">
+    <value>新增SPC项目</value>
+  </data>
+  <data name="SPC_ProjectDelete" xml:space="preserve">
+    <value>删除SPC项目</value>
+  </data>
+  <data name="SPC_ProjectEdit" xml:space="preserve">
+    <value>编辑SPC项目</value>
+  </data>
+  <data name="SPC_ProjectList" xml:space="preserve">
+    <value>SPC项目列表</value>
+  </data>
+  <data name="SPC_TaskAdd" xml:space="preserve">
+    <value>新增SPC任务</value>
+  </data>
+  <data name="SPC_TaskDelete" xml:space="preserve">
+    <value>删除SPC任务</value>
+  </data>
+  <data name="SPC_TaskEdit" xml:space="preserve">
+    <value>编辑SPC任务</value>
+  </data>
+  <data name="SPC_TaskList" xml:space="preserve">
+    <value>SPC任务列表</value>
+  </data>
+  <data name="SPC_WarnEdit" xml:space="preserve">
+    <value>编辑SPC警报信息</value>
+  </data>
+  <data name="SPC_WarnList" xml:space="preserve">
+    <value>SPC警报列表</value>
+  </data>
+  <data name="DictionaryDataAdd" xml:space="preserve">
+    <value>新增单位信息</value>
+  </data>
+  <data name="DictionaryDataDelete" xml:space="preserve">
+    <value>删除单位信息</value>
+  </data>
+  <data name="DictionaryDataEdit" xml:space="preserve">
+    <value>单位信息编辑</value>
+  </data>
+  <data name="DictionaryDataList" xml:space="preserve">
+    <value>单位维护列表</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>编码</value>
+  </data>
+  <data name="ContainerTypeAdd" xml:space="preserve">
+    <value>新增自定义布局</value>
+  </data>
+  <data name="SteelIn" xml:space="preserve">
+    <value>钢网入库</value>
+  </data>
+  <data name="CommonDataSource" xml:space="preserve">
+    <value>数据源维护</value>
+  </data>
+  <data name="Account_UserImport" xml:space="preserve">
+    <value>导入用户信息</value>
+  </data>
+  <data name="SMT_FeederImport" xml:space="preserve">
+    <value>导入Feeder信息</value>
+  </data>
+  <data name="Production_ESOPMacAdd" xml:space="preserve">
+    <value>新增ESOP设备</value>
+  </data>
+  <data name="Production_ESOPMacDelete" xml:space="preserve">
+    <value>删除ESOP设备</value>
+  </data>
+  <data name="Production_ESOPMacEdit" xml:space="preserve">
+    <value>编辑ESOP设备</value>
+  </data>
+  <data name="Production_ESOPMacList" xml:space="preserve">
+    <value>ESOP设备管理</value>
+  </data>
+  <data name="LoadingListGrnRecord" xml:space="preserve">
+    <value>上料历史记录</value>
+  </data>
+  <data name="Warehouse_WarehouseLocaion" xml:space="preserve">
+    <value>库位列表</value>
+  </data>
+  <data name="WarehouseCpInConfigAdd" xml:space="preserve">
+    <value>新增成品入库配置</value>
+  </data>
+  <data name="WarehouseCpInConfigEdit" xml:space="preserve">
+    <value>更新成品入库配置</value>
+  </data>
+  <data name="WarehouseCpInConfigList" xml:space="preserve">
+    <value>成品出入库配置列表 </value>
+  </data>
+  <data name="Production_ESOPLineAdd" xml:space="preserve">
+    <value>新增ESOP显示</value>
+  </data>
+  <data name="Production_ESOPLineDelete" xml:space="preserve">
+    <value>删除ESOP显示</value>
+  </data>
+  <data name="Production_ESOPLineEdit" xml:space="preserve">
+    <value>编辑ESOP显示</value>
+  </data>
+  <data name="Production_ESOPLineList" xml:space="preserve">
+    <value>ESOP显示管理</value>
+  </data>
+  <data name="WarehouseCpInListList" xml:space="preserve">
+    <value>成品入库列表</value>
+  </data>
+  <data name="Production_ESOPMacCopy" xml:space="preserve">
+    <value>复制ESOP设备信息</value>
+  </data>
+  <data name="WarehouseCpInListEdit" xml:space="preserve">
+    <value>成品入库确认</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberAdd" xml:space="preserve">
+    <value>新增离线条码规则</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberDelete" xml:space="preserve">
+    <value>删除离线条码规则</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberEdit" xml:space="preserve">
+    <value>编辑离线条码规则</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberList" xml:space="preserve">
+    <value>离线条码规则列表</value>
+  </data>
+  <data name="ReturnOrder" xml:space="preserve">
+    <value>退货单</value>
+  </data>
+  <data name="ReturnToSupplier" xml:space="preserve">
+    <value>仓库退供应商</value>
+  </data>
+  <data name="SalOrder" xml:space="preserve">
+    <value>备货单</value>
+  </data>
+  <data name="WarehouseCpOutStockList" xml:space="preserve">
+    <value>成品出货管理</value>
+  </data>
+  <data name="AQLLotSizeList" xml:space="preserve">
+    <value>批量检验水平列表</value>
+  </data>
+  <data name="SMTStatusList" xml:space="preserve">
+    <value>SMT上料状态查询</value>
+  </data>
+  <data name="SMTStatusListDtl" xml:space="preserve">
+    <value>上料状态明细信息</value>
+  </data>
+  <data name="InspectionQC_ProCollectionUI" xml:space="preserve">
+    <value>QC检验UI</value>
+  </data>
+  <data name="PrepareToOtherConfigAdd" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="PrepareToOtherConfigDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="PrepareToOtherConfigEdit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="PrepareToOtherList" xml:space="preserve">
+    <value>备货接收地列表</value>
+  </data>
+  <data name="Data_SapInterfaceExeclog" xml:space="preserve">
+    <value>SAP接口日志</value>
+  </data>
+  <data name="System_APIList" xml:space="preserve">
+    <value>SAP接口列表</value>
+  </data>
+  <data name="System_APIListAdd" xml:space="preserve">
+    <value>新增SAP接口</value>
+  </data>
+  <data name="System_APIListEdit" xml:space="preserve">
+    <value>修改SAP接口</value>
+  </data>
+  <data name="System_APIListSync" xml:space="preserve">
+    <value>同步SAP接口</value>
+  </data>
+  <data name="WarehouseCheck" xml:space="preserve">
+    <value>仓库初盘</value>
+  </data>
+  <data name="WarehouseCheckReplay" xml:space="preserve">
+    <value>仓库复盘</value>
+  </data>
+  <data name="CheckOrder" xml:space="preserve">
+    <value>盘点单</value>
+  </data>
+  <data name="QC_InspectionLotList" xml:space="preserve">
+    <value>QC检验列表</value>
+  </data>
+  <data name="MaterialIQCReturn" xml:space="preserve">
+    <value>IQC退料</value>
+  </data>
+  <data name="MaterialIQCReturnList" xml:space="preserve">
+    <value>IQC退料列表</value>
+  </data>
+  <data name="QC_InspectionLotMemberSNList" xml:space="preserve">
+    <value>查看检验产品详情</value>
+  </data>
+  <data name="WarehouseCheckEdit" xml:space="preserve">
+    <value>仓库平帐</value>
+  </data>
+  <data name="WarehouseCpOutStockView" xml:space="preserve">
+    <value>成品出货列表</value>
+  </data>
+  <data name="LoadingTypeEdit" xml:space="preserve">
+    <value>上料清单类型编辑</value>
+  </data>
+  <data name="LoadingTypeList" xml:space="preserve">
+    <value>SMT上料清单类型</value>
+  </data>
+  <data name="EquipmentLineRelationAdd" xml:space="preserve">
+    <value>新增线别设备类型</value>
+  </data>
+  <data name="EquipmentLineRelationEdit" xml:space="preserve">
+    <value>线别设备类型编辑</value>
+  </data>
+  <data name="EquipmentLineRelationList" xml:space="preserve">
+    <value>线别设备类型维护</value>
+  </data>
+  <data name="LoadingListTable" xml:space="preserve">
+    <value>面别设置</value>
+  </data>
+  <data name="LoadingListTableEdit" xml:space="preserve">
+    <value>面别修改</value>
+  </data>
+  <data name="LoadingListTableView" xml:space="preserve">
+    <value>查看面别</value>
+  </data>
+  <data name="MachineLineRelationTypeList" xml:space="preserve">
+    <value>线别设备类型列表</value>
+  </data>
+  <data name="MachineTypeList" xml:space="preserve">
+    <value>设备类型列表</value>
+  </data>
+  <data name="StandardLaborTimeAdd" xml:space="preserve">
+    <value>新增标准工时</value>
+  </data>
+  <data name="StandardLaborTimeDelete" xml:space="preserve">
+    <value>删除标准工时</value>
+  </data>
+  <data name="StandardLaborTimeEdit" xml:space="preserve">
+    <value>编辑标准工时</value>
+  </data>
+  <data name="StandardLaborTimeList" xml:space="preserve">
+    <value>标准工时列表</value>
+  </data>
+  <data name="WarehouseCheckReport" xml:space="preserve">
+    <value>盘亏盘盈报表</value>
+  </data>
+  <data name="Manufacture_ProductionChangesList" xml:space="preserve">
+    <value>生产变更历史</value>
+  </data>
+  <data name="MaterialApplyDetailView" xml:space="preserve">
+    <value>仓库备料出库列表</value>
+  </data>
+  <data name="SteelConfig" xml:space="preserve">
+    <value>数据设置</value>
+  </data>
+  <data name="SteelConfigEdit" xml:space="preserve">
+    <value>钢网设置修改</value>
+  </data>
+  <data name="SteelConfigView" xml:space="preserve">
+    <value>钢网设置查看</value>
+  </data>
+  <data name="SteelType" xml:space="preserve">
+    <value>钢网刮刀类型</value>
+  </data>
+  <data name="SteelTypeEdit" xml:space="preserve">
+    <value>钢网刮刀类型修改</value>
+  </data>
+  <data name="SteelTypeView" xml:space="preserve">
+    <value>钢网刮刀类型查看</value>
+  </data>
+  <data name="ReturnToWarehouseList" xml:space="preserve">
+    <value>生产退料单列表</value>
+  </data>
+  <data name="OfflineProCollection" xml:space="preserve">
+    <value>离线生产采集UI</value>
+  </data>
+  <data name="UI_UIDesigner" xml:space="preserve">
+    <value>设计UI</value>
+  </data>
+  <data name="ModuleList" xml:space="preserve">
+    <value>模板列表</value>
+  </data>
+  <data name="BindLogic" xml:space="preserve">
+    <value>UI绑定逻辑列表</value>
+  </data>
+  <data name="ReturnToWarehouseListCancel" xml:space="preserve">
+    <value>取消生产退料</value>
+  </data>
+  <data name="ReturnToWarehouseListEdit" xml:space="preserve">
+    <value>保存生产退料</value>
+  </data>
+  <data name="PanelBindGRNUI" xml:space="preserve">
+    <value>拼板绑定小板UI-001</value>
+  </data>
+  <data name="PanelBindUI" xml:space="preserve">
+    <value>拼板绑定小板UI-002</value>
+  </data>
+  <data name="ReturnToSupplierList" xml:space="preserve">
+    <value>仓库退供应商列表</value>
+  </data>
+  <data name="AllMaterialHistoryList" xml:space="preserve">
+    <value>物料操作历史查询</value>
+  </data>
+  <data name="MaterialMoldingList" xml:space="preserve">
+    <value>前加工物料维护清单</value>
+  </data>
+  <data name="PreSNPrint" xml:space="preserve">
+    <value>条码打印</value>
+  </data>
+  <data name="PreSNPrintList" xml:space="preserve">
+    <value>条码列表</value>
+  </data>
+  <data name="PreSNRePrint" xml:space="preserve">
+    <value>补打条码</value>
+  </data>
+  <data name="SMTPackingCollection" xml:space="preserve">
+    <value>SMT装箱采集UI</value>
+  </data>
+  <data name="SNPrintDelete" xml:space="preserve">
+    <value>删除条码</value>
+  </data>
+  <data name="InspectionTemplateEditValue" xml:space="preserve">
+    <value>检验项判断范围设置</value>
+  </data>
+  <data name="InspectionFileManage" xml:space="preserve">
+    <value>检验文档管理</value>
+  </data>
+  <data name="PackingAccessoriesAdd" xml:space="preserve">
+    <value>新增包装附件</value>
+  </data>
+  <data name="PackingAccessoriesCopy" xml:space="preserve">
+    <value>复制包装附件</value>
+  </data>
+  <data name="PackingAccessoriesDelete" xml:space="preserve">
+    <value>删除包装附件</value>
+  </data>
+  <data name="PackingAccessoriesEdit" xml:space="preserve">
+    <value>编辑包装附件</value>
+  </data>
+  <data name="PackingAccessoriesList" xml:space="preserve">
+    <value>包装附件列表</value>
+  </data>
+  <data name="CpPrepare" xml:space="preserve">
+    <value>产成品领料出库</value>
+  </data>
+  <data name="SearchMolding" xml:space="preserve">
+    <value>前加工工单信息查询</value>
+  </data>
+  <data name="SearchMoldingDetail" xml:space="preserve">
+    <value>前加工明细查询</value>
+  </data>
+  <data name="Anormal_Add" xml:space="preserve">
+    <value>新增异常</value>
+  </data>
+  <data name="Anormal_Audit" xml:space="preserve">
+    <value>审核异常</value>
+  </data>
+  <data name="Anormal_Edit" xml:space="preserve">
+    <value>编辑异常</value>
+  </data>
+  <data name="Anormal_List" xml:space="preserve">
+    <value>异常列表</value>
+  </data>
+  <data name="Anormal_View" xml:space="preserve">
+    <value>查看异常</value>
+  </data>
+  <data name="PickListCollection" xml:space="preserve">
+    <value>手插上料采集UI</value>
+  </data>
+  <data name="AccessoryList" xml:space="preserve">
+    <value>辅料列表</value>
+  </data>
+  <data name="MaterialBurnList" xml:space="preserve">
+    <value>烧录软件列表</value>
+  </data>
+  <data name="MaterialBurnListAdd" xml:space="preserve">
+    <value>新增烧录软件</value>
+  </data>
+  <data name="MaterialBurnListEdit" xml:space="preserve">
+    <value>修改烧录软件</value>
+  </data>
+  <data name="MaterialBurnJoinProd" xml:space="preserve">
+    <value>绑定产品关系</value>
+  </data>
+  <data name="AccessoryManagement" xml:space="preserve">
+    <value>辅料管理</value>
+  </data>
+  <data name="AccessoryAdd" xml:space="preserve">
+    <value>新增辅料</value>
+  </data>
+  <data name="AccessoryEdit" xml:space="preserve">
+    <value>编辑辅料</value>
+  </data>
+  <data name="AccessoryTypeAdd" xml:space="preserve">
+    <value>新增辅料类型</value>
+  </data>
+  <data name="AccessoryTypeEdit" xml:space="preserve">
+    <value>编辑辅料类型</value>
+  </data>
+  <data name="AccessoryTypeList" xml:space="preserve">
+    <value>辅料类别列表</value>
+  </data>
+  <data name="AccessoryListAdd" xml:space="preserve">
+    <value>新增辅料物料</value>
+  </data>
+  <data name="AccessoryListEdit" xml:space="preserve">
+    <value>编辑辅料物料</value>
+  </data>
+  <data name="AccessoryListList" xml:space="preserve">
+    <value>辅料物料列表</value>
+  </data>
+  <data name="MaterialDateCode" xml:space="preserve">
+    <value>物料DateCode选择列表</value>
+  </data>
+  <data name="MaterialLotCode" xml:space="preserve">
+    <value>物料LotCode选择列表</value>
+  </data>
+  <data name="WarningAdd" xml:space="preserve">
+    <value>新增警报</value>
+  </data>
+  <data name="WarningEdit" xml:space="preserve">
+    <value>编辑警报</value>
+  </data>
+  <data name="WarningHistoryDeal" xml:space="preserve">
+    <value>处理警报信息</value>
+  </data>
+  <data name="WarningHistoryList" xml:space="preserve">
+    <value>警报列表</value>
+  </data>
+  <data name="WarningHistoryView" xml:space="preserve">
+    <value>查看警报信息</value>
+  </data>
+  <data name="WarningHistory_OneDeal" xml:space="preserve">
+    <value>一级处理警报信息</value>
+  </data>
+  <data name="WarningHistory_ThreeDeal" xml:space="preserve">
+    <value>三级处理警报信息</value>
+  </data>
+  <data name="WarningHistory_TwoDeal" xml:space="preserve">
+    <value>二级处理警报信息</value>
+  </data>
+  <data name="WarningList" xml:space="preserve">
+    <value>警报填写</value>
+  </data>
+  <data name="WarningTypeAdd" xml:space="preserve">
+    <value>新增警报类型</value>
+  </data>
+  <data name="WarningTypeEdit" xml:space="preserve">
+    <value>编辑警报类型</value>
+  </data>
+  <data name="Quality_WarningTypeList" xml:space="preserve">
+    <value>警报类型</value>
+  </data>
+  <data name="WarningTypeView" xml:space="preserve">
+    <value>查看警报类型</value>
+  </data>
+  <data name="WarningView" xml:space="preserve">
+    <value>查看警报</value>
+  </data>
+  <data name="AccessoryAndItemRelation" xml:space="preserve">
+    <value>产品辅料列表</value>
+  </data>
+  <data name="AccessoryAndItemRelationAdd" xml:space="preserve">
+    <value>新增产品辅料</value>
+  </data>
+  <data name="AccessoryAndItemRelationEdit" xml:space="preserve">
+    <value>编辑产品辅料</value>
+  </data>
+  <data name="DeliverUnitListSuply" xml:space="preserve">
+    <value>送货单列表</value>
+  </data>
+  <data name="AccessoryHistoryList" xml:space="preserve">
+    <value>辅料操作记录</value>
+  </data>
+  <data name="ContainerWeightAdd" xml:space="preserve">
+    <value>新增包装重量</value>
+  </data>
+  <data name="ContainerWeightDelete" xml:space="preserve">
+    <value>删除包装重量</value>
+  </data>
+  <data name="ContainerWeightEdit" xml:space="preserve">
+    <value>编辑包装重量</value>
+  </data>
+  <data name="ContainerWeightList" xml:space="preserve">
+    <value>包装重量设置</value>
+  </data>
+  <data name="MSD_MsdBakeIn" xml:space="preserve">
+    <value>放入烘烤</value>
+  </data>
+  <data name="MSD_MsdBakeContionAdd" xml:space="preserve">
+    <value>新增烘烤条件</value>
+  </data>
+  <data name="MSD_MsdBakeContionDel" xml:space="preserve">
+    <value>删除烘烤条件</value>
+  </data>
+  <data name="MSD_MsdBakeContionEdit" xml:space="preserve">
+    <value>修改烘烤条件</value>
+  </data>
+  <data name="MSD_MsdBakeContionList" xml:space="preserve">
+    <value>MSD烘烤条件列表</value>
+  </data>
+  <data name="MSD_MsdBakeDel" xml:space="preserve">
+    <value>删除烘烤</value>
+  </data>
+  <data name="MSD_MsdBakeOut" xml:space="preserve">
+    <value>拿出烘烤</value>
+  </data>
+  <data name="MSD_MsdBakeList" xml:space="preserve">
+    <value>MSD烘烤列表</value>
+  </data>
+  <data name="MSD_MsdMaterieAdd" xml:space="preserve">
+    <value>新增MSD物料信息</value>
+  </data>
+  <data name="MSD_MsdMaterieDel" xml:space="preserve">
+    <value>删除MSD物料信息</value>
+  </data>
+  <data name="MSD_MsdMaterieEdit" xml:space="preserve">
+    <value>修改MSD物料信息</value>
+  </data>
+  <data name="MSD_MsdMaterielList" xml:space="preserve">
+    <value>MSD物料信息列表</value>
+  </data>
+  <data name="LoadingListView" xml:space="preserve">
+    <value>上料查询</value>
+  </data>
+  <data name="MSD_MsdBakeContionForceOut" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MSD_MsdConstantIn" xml:space="preserve">
+    <value>放入恒温箱</value>
+  </data>
+  <data name="MSD_MsdConstantList" xml:space="preserve">
+    <value>MSD恒温列表</value>
+  </data>
+  <data name="MSD_MsdConstantOut" xml:space="preserve">
+    <value>拿出恒温箱</value>
+  </data>
+  <data name="MSD_MsdEncapsulationList" xml:space="preserve">
+    <value>MSD封装列表</value>
+  </data>
+  <data name="IPQCInspection_ProCollectionUI" xml:space="preserve">
+    <value>IPQC巡检采集UI</value>
+  </data>
+  <data name="InspectionOrderAudit_Confirmation" xml:space="preserve">
+    <value>检验单确认</value>
+  </data>
+  <data name="InspectionOrderAudit_GroupAffirm" xml:space="preserve">
+    <value>组长确认</value>
+  </data>
+  <data name="InspectionOrderAudit_List" xml:space="preserve">
+    <value>检验单审核列表</value>
+  </data>
+  <data name="InspectionOrderAudit_Print" xml:space="preserve">
+    <value>打印检验单信息</value>
+  </data>
+  <data name="InspectionOrderAudit_ProjectAffirm" xml:space="preserve">
+    <value>工程确认</value>
+  </data>
+  <data name="InspectionOrderAudit_View" xml:space="preserve">
+    <value>查看检验单信息</value>
+  </data>
+  <data name="MSD_MsdOperationList" xml:space="preserve">
+    <value>MSD操作记录列表</value>
+  </data>
+  <data name="AccessoryDelete" xml:space="preserve">
+    <value>辅料删除</value>
+  </data>
+  <data name="AccessoryPrint" xml:space="preserve">
+    <value>辅料打印</value>
+  </data>
+  <data name="AccessoryRegister" xml:space="preserve">
+    <value>辅料登记</value>
+  </data>
+  <data name="AccessoryReturn" xml:space="preserve">
+    <value>辅料退回</value>
+  </data>
+  <data name="AccessorySend" xml:space="preserve">
+    <value>辅料发料</value>
+  </data>
+  <data name="AccessoryThaw" xml:space="preserve">
+    <value>辅料解冻</value>
+  </data>
+  <data name="AccessoryTypeDelete" xml:space="preserve">
+    <value>删除辅料类型</value>
+  </data>
+  <data name="LoadingTypeDelete" xml:space="preserve">
+    <value>上料清单类型删除</value>
+  </data>
+  <data name="AccessoriesManagement" xml:space="preserve">
+    <value>辅料管理</value>
+  </data>
+  <data name="AccessoryAndItemRelationDelete" xml:space="preserve">
+    <value>删除产品辅料</value>
+  </data>
+  <data name="AccessoryListListAdd" xml:space="preserve">
+    <value>新增辅料物料列表</value>
+  </data>
+  <data name="AccessoryListListDelete" xml:space="preserve">
+    <value>删除辅料物料列表</value>
+  </data>
+  <data name="AccessoryListListEdit" xml:space="preserve">
+    <value>编辑辅料物料列表</value>
+  </data>
+  <data name="MaterialMoldingEdit_Save" xml:space="preserve">
+    <value>保存成型明细</value>
+  </data>
+  <data name="PickListAdd" xml:space="preserve">
+    <value>载入批次料上料清单</value>
+  </data>
+  <data name="PickListDelete" xml:space="preserve">
+    <value>删除批次料上料清单</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlAdd" xml:space="preserve">
+    <value>产品辅料列表添加物料</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlDtl" xml:space="preserve">
+    <value>产品辅料列表删除物料</value>
+  </data>
+  <data name="AccessoryAndItemRelationDtlEdit" xml:space="preserve">
+    <value>产品辅料列表编辑物料</value>
+  </data>
+  <data name="EquipmentLineRelationDelete" xml:space="preserve">
+    <value>删除线别设备类型</value>
+  </data>
+  <data name="EquipmentLineRelationView" xml:space="preserve">
+    <value>查看线别设备类型</value>
+  </data>
+  <data name="Equipment_EquipmentScrap" xml:space="preserve">
+    <value>废除设备管理</value>
+  </data>
+  <data name="Equipment_EquipmentTypeDelete" xml:space="preserve">
+    <value>删除设备类型</value>
+  </data>
+  <data name="MaterialMoldingAdd" xml:space="preserve">
+    <value>添加成型</value>
+  </data>
+  <data name="MaterialMoldingDelete" xml:space="preserve">
+    <value>删除成型</value>
+  </data>
+  <data name="MaterialMoldingEdit" xml:space="preserve">
+    <value>编辑成型</value>
+  </data>
+  <data name="ModelListAdd" xml:space="preserve">
+    <value>增加模板</value>
+  </data>
+  <data name="ModelListEdit" xml:space="preserve">
+    <value>修改模板</value>
+  </data>
+  <data name="PickListdDownLoad" xml:space="preserve">
+    <value>下载批次料上料清单模板</value>
+  </data>
+  <data name="PickListDetailAdd" xml:space="preserve">
+    <value>批次料上料清单明细新增</value>
+  </data>
+  <data name="PickListDetailDelete" xml:space="preserve">
+    <value>批次料上料清单明细删除</value>
+  </data>
+  <data name="PickListDetailEdit" xml:space="preserve">
+    <value>批次料上料清单明细编辑</value>
+  </data>
+  <data name="QC_InspectionLotMemberList" xml:space="preserve">
+    <value>查看检验项信息</value>
+  </data>
+  <data name="SetLogic" xml:space="preserve">
+    <value>绑定逻辑</value>
+  </data>
+  <data name="SteelAddKnife" xml:space="preserve">
+    <value>新增刮刀</value>
+  </data>
+  <data name="SteelAddSteel" xml:space="preserve">
+    <value>新增钢网</value>
+  </data>
+  <data name="SteelItemDel" xml:space="preserve">
+    <value>编辑钢网刮刀列表删除</value>
+  </data>
+  <data name="SteelMeshClear" xml:space="preserve">
+    <value>清洗钢网</value>
+  </data>
+  <data name="SteelMeshDelete" xml:space="preserve">
+    <value>删除钢网</value>
+  </data>
+  <data name="SteelMeshIn" xml:space="preserve">
+    <value>钢网登记</value>
+  </data>
+  <data name="SteelMeshOut" xml:space="preserve">
+    <value>钢网借出</value>
+  </data>
+  <data name="SteelMeshScrap" xml:space="preserve">
+    <value>钢网报废</value>
+  </data>
+  <data name="UrgentMaterialList" xml:space="preserve">
+    <value>急料设置</value>
+  </data>
+  <data name="UrgentMaterialListAdd" xml:space="preserve">
+    <value>新增急料</value>
+  </data>
+  <data name="UrgentMaterialListEdit" xml:space="preserve">
+    <value>编辑急料</value>
+  </data>
+  <data name="Resource_LineSetAdd" xml:space="preserve">
+    <value>新增开线设定</value>
+  </data>
+  <data name="Resource_LineSetDelete" xml:space="preserve">
+    <value>删除开线设定</value>
+  </data>
+  <data name="Resource_LineSetEdit" xml:space="preserve">
+    <value>编辑开线设定</value>
+  </data>
+  <data name="Resource_LineSetList" xml:space="preserve">
+    <value>开线设定列表</value>
+  </data>
+  <data name="FixedBarcodeAdd" xml:space="preserve">
+    <value>添加配置</value>
+  </data>
+  <data name="FixedBarcodeEdit" xml:space="preserve">
+    <value>修改配置</value>
+  </data>
+  <data name="FixedBarcodeList" xml:space="preserve">
+    <value>生产数据设置</value>
+  </data>
+  <data name="Kanban_KanbanList" xml:space="preserve">
+    <value>看板列表</value>
+  </data>
+  <data name="ExpirationDateList" xml:space="preserve">
+    <value>保质期方案管理</value>
+  </data>
+  <data name="EquipmentPositionAdd" xml:space="preserve">
+    <value>新增设备存放位置</value>
+  </data>
+  <data name="EquipmentPositionEdit" xml:space="preserve">
+    <value>编辑设备存放位置</value>
+  </data>
+  <data name="EquipmentUseReasonsAdd" xml:space="preserve">
+    <value>新增领用归还原因</value>
+  </data>
+  <data name="EquipmentUseReasonsEdit" xml:space="preserve">
+    <value>编辑领用归还原因</value>
+  </data>
+  <data name="EquipmentPositionList" xml:space="preserve">
+    <value>设备存放位置列表</value>
+  </data>
+  <data name="EquipmentPositionListAdd" xml:space="preserve">
+    <value>新增设备存放位置</value>
+  </data>
+  <data name="EquipmentPositionListEdit" xml:space="preserve">
+    <value>编辑设备存放位置</value>
+  </data>
+  <data name="EquipmentUseReasonsList" xml:space="preserve">
+    <value>设备领用归还原因管理</value>
+  </data>
+  <data name="EquipmentUseReasonsListAdd" xml:space="preserve">
+    <value>新增设备领用归还原因</value>
+  </data>
+  <data name="EquipmentUseReasonsListEdit" xml:space="preserve">
+    <value>编辑设备领用归还原因</value>
+  </data>
+  <data name="UseReturn" xml:space="preserve">
+    <value>领用/归还列表</value>
+  </data>
+  <data name="EquipmentRepairList" xml:space="preserve">
+    <value>维修列表</value>
+  </data>
+  <data name="EquipmentRepairListAdd" xml:space="preserve">
+    <value>新增设备维修单</value>
+  </data>
+  <data name="EquipmentRepairListEdit" xml:space="preserve">
+    <value>编辑设备维修单</value>
+  </data>
+  <data name="EquipmentItemRelationListAdd" xml:space="preserve">
+    <value>新增机台与物料关系</value>
+  </data>
+  <data name="EquipmentItemRelationListAddEdit" xml:space="preserve">
+    <value>编辑机台与物料关系</value>
+  </data>
+  <data name="EquipmentItemRelationList" xml:space="preserve">
+    <value>设备与机种关系</value>
+  </data>
+  <data name="EquipmentFileManageList" xml:space="preserve">
+    <value>设备文档管理</value>
+  </data>
+  <data name="EquipmentFileManageListAdd" xml:space="preserve">
+    <value>新增设备文档</value>
+  </data>
+  <data name="EquipmentFileManageListEdit" xml:space="preserve">
+    <value>编辑设备文档</value>
+  </data>
+  <data name="CheckOutProjectList" xml:space="preserve">
+    <value>校验项目管理</value>
+  </data>
+  <data name="CheckOutProjectListAdd" xml:space="preserve">
+    <value>新增校验项目</value>
+  </data>
+  <data name="CheckOutProjectListEdit" xml:space="preserve">
+    <value>编辑校验项目</value>
+  </data>
+  <data name="EquipmentCheckOutHistoryList" xml:space="preserve">
+    <value>校验记录列表</value>
+  </data>
+  <data name="EquipmentCheckOutPlanList" xml:space="preserve">
+    <value>校验计划列表</value>
+  </data>
+  <data name="EquipmentCheckOutPlanListAdd" xml:space="preserve">
+    <value>新增校验计划</value>
+  </data>
+  <data name="EquipmentCheckOutPlanListEdit" xml:space="preserve">
+    <value>编辑校验计划</value>
+  </data>
+  <data name="EquipmentEarlyWarning" xml:space="preserve">
+    <value>设备预警</value>
+  </data>
+  <data name="PartInOutStockRecordList" xml:space="preserve">
+    <value>备件出入库记录</value>
+  </data>
+  <data name="Plan_AddPosition" xml:space="preserve">
+    <value>增加料站</value>
+  </data>
+  <data name="Plan_AddReplaceItem" xml:space="preserve">
+    <value>增加替代料</value>
+  </data>
+  <data name="Plan_StockList" xml:space="preserve">
+    <value>电子备料清单维护</value>
+  </data>
+  <data name="Product_ItemABCClassEdit" xml:space="preserve">
+    <value>编辑物料ABC等级</value>
+  </data>
+  <data name="Product_ItemABCClassList" xml:space="preserve">
+    <value>物料ABC等级</value>
+  </data>
+  <data name="Plan_ChangeLine" xml:space="preserve">
+    <value>工单换线</value>
+  </data>
+  <data name="Product_SubsItem" xml:space="preserve">
+    <value>替代料维护</value>
+  </data>
+  <data name="EquipmentEarlyWarningList" xml:space="preserve">
+    <value>设备预警</value>
+  </data>
+  <data name="QHoldImport" xml:space="preserve">
+    <value>Qhold批量导入保存</value>
+  </data>
+  <data name="ExpiredDateList" xml:space="preserve">
+    <value>物料超期复检</value>
+  </data>
+  <data name="SteelEditKnife" xml:space="preserve">
+    <value>编辑刮刀</value>
+  </data>
+  <data name="Equipment_EquipmentChildAdd" xml:space="preserve">
+    <value>新增子设备</value>
+  </data>
+  <data name="Equipment_EquipmentChildEdit" xml:space="preserve">
+    <value>编辑子设备</value>
+  </data>
+  <data name="Equipment_EquipmentChildList" xml:space="preserve">
+    <value>子设备列表</value>
+  </data>
+  <data name="Reinspection" xml:space="preserve">
+    <value>物料超期处理</value>
+  </data>
+  <data name="ReinspectionHistory" xml:space="preserve">
+    <value>物料复检结果变更</value>
+  </data>
+  <data name="ProductionDataCfg" xml:space="preserve">
+    <value>生产数据设置</value>
+  </data>
+  <data name="QHoldDownload" xml:space="preserve">
+    <value>在制品模板下载</value>
+  </data>
+  <data name="Maintenance_MaintenanceEquimentList" xml:space="preserve">
+    <value>设备保养计划列表</value>
+  </data>
+  <data name="ImportData" xml:space="preserve">
+    <value>导入数据</value>
+  </data>
+  <data name="ImportExcelConfigList" xml:space="preserve">
+    <value>数据导入配置</value>
+  </data>
+  <data name="ProductionSettingAdd" xml:space="preserve">
+    <value>新增生产数据配置</value>
+  </data>
+  <data name="ProductionSettingDelete" xml:space="preserve">
+    <value>删除生产数据配置</value>
+  </data>
+  <data name="ProductionSettingEdit" xml:space="preserve">
+    <value>编辑生产数据配置</value>
+  </data>
+  <data name="ProductionSettingList" xml:space="preserve">
+    <value>生产数据设置</value>
+  </data>
+  <data name="DetectionItemAdd" xml:space="preserve">
+    <value>新增检测项</value>
+  </data>
+  <data name="DetectionItemDelete" xml:space="preserve">
+    <value>删除检测项</value>
+  </data>
+  <data name="DetectionItemEdit" xml:space="preserve">
+    <value>编辑检测项</value>
+  </data>
+  <data name="DetectionItemList" xml:space="preserve">
+    <value>检测项列表</value>
+  </data>
+  <data name="DetectionRecordsList" xml:space="preserve">
+    <value>检测数据列表</value>
+  </data>
+  <data name="ExpirationDateListAdd" xml:space="preserve">
+    <value>新增保质期方案</value>
+  </data>
+  <data name="ExpirationDateListAddEdit" xml:space="preserve">
+    <value>编辑保质期方案</value>
+  </data>
+  <data name="System_LoginLog" xml:space="preserve">
+    <value>系统登录日志</value>
+  </data>
+  <data name="Client_PopedomStationDelete" xml:space="preserve">
+    <value>删除站位模板配置</value>
+  </data>
+  <data name="GlobarParameterAdd" xml:space="preserve">
+    <value>新增全局参数</value>
+  </data>
+  <data name="GlobarParameterDelete" xml:space="preserve">
+    <value>删除全局参数</value>
+  </data>
+  <data name="GlobarParameterEdit" xml:space="preserve">
+    <value>编辑全局参数</value>
+  </data>
+  <data name="GlobarParameterList" xml:space="preserve">
+    <value>全局参数列表</value>
+  </data>
+  <data name="NavigationGroup" xml:space="preserve">
+    <value>导航组维护</value>
+  </data>
+  <data name="NavigationGroupAdd" xml:space="preserve">
+    <value>新增导航组维护</value>
+  </data>
+  <data name="NavigationGroupDelete" xml:space="preserve">
+    <value>删除导航组维护</value>
+  </data>
+  <data name="NavigationGroupEdit" xml:space="preserve">
+    <value>编辑导航组维护</value>
+  </data>
+  <data name="NavigationItem" xml:space="preserve">
+    <value>导航项维护</value>
+  </data>
+  <data name="NavigationItemAdd" xml:space="preserve">
+    <value>新增导航项维护</value>
+  </data>
+  <data name="NavigationItemDelete" xml:space="preserve">
+    <value>删除导航项维护</value>
+  </data>
+  <data name="NavigationItemEdit" xml:space="preserve">
+    <value>编辑导航项维护</value>
+  </data>
+  <data name="PanelBindSNUI" xml:space="preserve">
+    <value>拼板绑定小板UI-003</value>
+  </data>
+  <data name="Material_PurOrderAdd" xml:space="preserve">
+    <value>新增采购单</value>
+  </data>
+  <data name="Material_PurOrderEdit" xml:space="preserve">
+    <value>编辑采购单</value>
+  </data>
+  <data name="Material_PurOrderList" xml:space="preserve">
+    <value>采购单列表</value>
+  </data>
+  <data name="Kanban_KanbanMacAdd" xml:space="preserve">
+    <value>新增看板终端</value>
+  </data>
+  <data name="Kanban_KanbanMacEdit" xml:space="preserve">
+    <value>编辑看板终端</value>
+  </data>
+  <data name="Kanban_KanbanMacList" xml:space="preserve">
+    <value>看板终端</value>
+  </data>
+  <data name="Kanban_TagSendAdd" xml:space="preserve">
+    <value>新增看板列表</value>
+  </data>
+  <data name="Kanban_TagSendEdit" xml:space="preserve">
+    <value>编辑看板列表</value>
+  </data>
+  <data name="Kanban_TagSendList" xml:space="preserve">
+    <value>看板列表</value>
+  </data>
+  <data name="Material_GRNModifyEdit" xml:space="preserve">
+    <value>修改GRN数量</value>
+  </data>
+  <data name="OffLineBarCodeCollection" xml:space="preserve">
+    <value>离线条码注册</value>
+  </data>
+  <data name="System_Accredit" xml:space="preserve">
+    <value>系统授权日志</value>
+  </data>
+  <data name="System_OnlineUser" xml:space="preserve">
+    <value>系统在线用户</value>
+  </data>
+  <data name="System_Operation" xml:space="preserve">
+    <value>系统操作日志</value>
+  </data>
+  <data name="System_UserOperation" xml:space="preserve">
+    <value>用户操作日志</value>
+  </data>
+  <data name="SubSystemsList" xml:space="preserve">
+    <value>一级菜单</value>
+  </data>
+  <data name="CustomPageList" xml:space="preserve">
+    <value>二级菜单</value>
+  </data>
+  <data name="Quantity_SNScrapList" xml:space="preserve">
+    <value>报废列表</value>
+  </data>
+  <data name="PDA_AccessoryFinish" xml:space="preserve">
+    <value>辅料空瓶管理</value>
+  </data>
+  <data name="PDA_AccessoryReturn" xml:space="preserve">
+    <value>辅料退回</value>
+  </data>
+  <data name="PDA_AccessorySendMaterial" xml:space="preserve">
+    <value>辅料发料</value>
+  </data>
+  <data name="PDA_AccessoryThaw" xml:space="preserve">
+    <value>辅料解冻</value>
+  </data>
+  <data name="QC_RMAAdd" xml:space="preserve">
+    <value>新增RMA</value>
+  </data>
+  <data name="QC_RMAEdit" xml:space="preserve">
+    <value>编辑RMA</value>
+  </data>
+  <data name="QC_RMAList" xml:space="preserve">
+    <value>RMA单列表</value>
+  </data>
+  <data name="RMAReciveDetailList" xml:space="preserve">
+    <value>RMA产品重印</value>
+  </data>
+  <data name="RMAReciveList" xml:space="preserve">
+    <value>RMA接收</value>
+  </data>
+  <data name="TransfersApply" xml:space="preserve">
+    <value>调拨申请</value>
+  </data>
+  <data name="TransfersStorage" xml:space="preserve">
+    <value>调拨出库</value>
+  </data>
+  <data name="TransfersStorageList" xml:space="preserve">
+    <value>调拨出库列表</value>
+  </data>
+  <data name="PDA_MaterialDetailInfo" xml:space="preserve">
+    <value>仓库查询</value>
+  </data>
+  <data name="PDA_ProdDetailInfo" xml:space="preserve">
+    <value>生产查询</value>
+  </data>
+  <data name="PDA_WarehouseReturnToSupplier" xml:space="preserve">
+    <value>仓库退供应商</value>
+  </data>
+  <data name="FAIInspection" xml:space="preserve">
+    <value>首件采集UI</value>
+  </data>
+  <data name="PDA_LineWarehouseReceive" xml:space="preserve">
+    <value>线边仓接收</value>
+  </data>
+  <data name="Material_OfflinePrintGRN" xml:space="preserve">
+    <value>客户离线条码登记</value>
+  </data>
+  <data name="InspectionQCNEW_ProCollectionUI" xml:space="preserve">
+    <value>QC2检验UI</value>
+  </data>
+  <data name="ContainerTypeList" xml:space="preserve">
+    <value>自定义布局</value>
+  </data>
+  <data name="MaterialReceiveList" xml:space="preserve">
+    <value>仓库收料列表</value>
+  </data>
+  <data name="PQCCollection" xml:space="preserve">
+    <value>PQC检验</value>
+  </data>
+  <data name="ScrapApply" xml:space="preserve">
+    <value>报废申请</value>
+  </data>
+  <data name="ScrapNoBillOut" xml:space="preserve">
+    <value>无单报废出库</value>
+  </data>
+  <data name="ScrapOut" xml:space="preserve">
+    <value>报废出库</value>
+  </data>
+  <data name="ScrapOutList" xml:space="preserve">
+    <value>报废出库列表</value>
+  </data>
+  <data name="Material_IQCConfirmList" xml:space="preserve">
+    <value>IQC交接确认列表</value>
+  </data>
+  <data name="PDA_RepackingOutBox" xml:space="preserve">
+    <value>重新包装-外箱</value>
+  </data>
+  <data name="PDA_RepackingPallet" xml:space="preserve">
+    <value>重新包装-栈板</value>
+  </data>
+  <data name="Report_SmartReport" xml:space="preserve">
+    <value>智能查询</value>
+  </data>
+  <data name="Material_MaterialStorage" xml:space="preserve">
+    <value>物料入库列表</value>
+  </data>
+  <data name="OffLineLabelConfigAdd" xml:space="preserve">
+    <value>新增离线标签配置</value>
+  </data>
+  <data name="OffLineLabelConfigEdit" xml:space="preserve">
+    <value>编辑离线标签配置</value>
+  </data>
+  <data name="OffLineLabelConfigList" xml:space="preserve">
+    <value>离线标签配置列表</value>
+  </data>
+  <data name="OffLineLabelConfigDetailAdd" xml:space="preserve">
+    <value>新增细项</value>
+  </data>
+  <data name="OffLineLabelConfigDetailEdit" xml:space="preserve">
+    <value>编辑细项</value>
+  </data>
+  <data name="OffLineLabelConfigDetailList" xml:space="preserve">
+    <value>细项列表</value>
+  </data>
+  <data name="StandardOfflinePrintGRN" xml:space="preserve">
+    <value>标准离线条码登记</value>
+  </data>
+  <data name="ReturnNoOrderMaterial" xml:space="preserve">
+    <value>无单退料入库保存</value>
+  </data>
+  <data name="ReturnToWarehouse" xml:space="preserve">
+    <value>无单仓库确认退料</value>
+  </data>
+  <data name="InterfaceManagementDelete" xml:space="preserve">
+    <value>删除设备接口</value>
+  </data>
+  <data name="InterfaceManagementEdit" xml:space="preserve">
+    <value>修改设备接口</value>
+  </data>
+  <data name="InterfaceManagementList" xml:space="preserve">
+    <value>设备接口管理</value>
+  </data>
+  <data name="InterfaceTypeModel" xml:space="preserve">
+    <value>设备接口类型型号维护</value>
+  </data>
+  <data name="InterfaceTypeModelAdd" xml:space="preserve">
+    <value>新增设备接口类型型号</value>
+  </data>
+  <data name="InterfaceTypeModelDelete" xml:space="preserve">
+    <value>删除设备接口类型型号</value>
+  </data>
+  <data name="InterfaceTypeModelEdit" xml:space="preserve">
+    <value>编辑设备接口类型型号</value>
+  </data>
+  <data name="MaterialBurnListView" xml:space="preserve">
+    <value>查看烧录软件</value>
+  </data>
+  <data name="InterfaceManagementAdd" xml:space="preserve">
+    <value>新增设备接口</value>
+  </data>
+  <data name="RMA_Reprint" xml:space="preserve">
+    <value>RMA补打印</value>
+  </data>
+  <data name="Quality_WarningAdd" xml:space="preserve">
+    <value>新增警报</value>
+  </data>
+  <data name="Quality_WarningDelete" xml:space="preserve">
+    <value>编辑删除</value>
+  </data>
+  <data name="Quality_WarningEdit" xml:space="preserve">
+    <value>编辑警报</value>
+  </data>
+  <data name="Quality_WarningHistoryList" xml:space="preserve">
+    <value>警报列表</value>
+  </data>
+  <data name="Quality_WarningHistoryView" xml:space="preserve">
+    <value>查看警报信息</value>
+  </data>
+  <data name="Quality_WarningHistory_OneDeal" xml:space="preserve">
+    <value>一级处理警报信息</value>
+  </data>
+  <data name="Quality_WarningHistory_ThreeDeal" xml:space="preserve">
+    <value>三级处理警报信息</value>
+  </data>
+  <data name="Quality_WarningHistory_TwoDeal" xml:space="preserve">
+    <value>二级处理警报信息</value>
+  </data>
+  <data name="Quality_WarningList" xml:space="preserve">
+    <value>警报填写</value>
+  </data>
+  <data name="Quality_WarningTypeAdd" xml:space="preserve">
+    <value>新增警报类型</value>
+  </data>
+  <data name="Quality_WarningTypeDelete" xml:space="preserve">
+    <value>删除警报类型</value>
+  </data>
+  <data name="Quality_WarningTypeEdit" xml:space="preserve">
+    <value>编辑警报类型</value>
+  </data>
+  <data name="Quality_WarningView" xml:space="preserve">
+    <value>查看警报</value>
+  </data>
+  <data name="PDA_SMTTransferMaterial" xml:space="preserve">
+    <value>工单转料</value>
+  </data>
+  <data name="Material_MaterialStoragePrint" xml:space="preserve">
+    <value>物料入库打印</value>
+  </data>
+  <data name="BarCodeScopeSetEdit" xml:space="preserve">
+    <value>编辑条码范围设定</value>
+  </data>
+  <data name="BarCodeScopeSetList" xml:space="preserve">
+    <value>号码范围设定</value>
+  </data>
+  <data name="GenerateVirtualPo" xml:space="preserve">
+    <value>生成虚拟采购订单</value>
+  </data>
+  <data name="PrintGRNAndPack" xml:space="preserve">
+    <value>物料条码以及箱号打印</value>
+  </data>
+  <data name="SupplierMaterialPrint" xml:space="preserve">
+    <value>客供料标签打印</value>
+  </data>
+  <data name="ColorBoxValidation" xml:space="preserve">
+    <value>彩盒扫描UI</value>
+  </data>
+  <data name="FinishedGoodsInput" xml:space="preserve">
+    <value>整机投入UI</value>
+  </data>
+  <data name="BarCodeScopeDtlList" xml:space="preserve">
+    <value>号码范围条码列表</value>
+  </data>
+  <data name="SupplierMaterialAnalysis" xml:space="preserve">
+    <value>客供料标签解析</value>
+  </data>
+  <data name="CustomerOrderList" xml:space="preserve">
+    <value>订单列表</value>
+  </data>
+  <data name="AQLRuleCopy" xml:space="preserve">
+    <value>复制AQL抽样规则</value>
+  </data>
+  <data name="Container_Weight" xml:space="preserve">
+    <value>包装箱称重</value>
+  </data>
+  <data name="StockOrderAdd" xml:space="preserve">
+    <value>新增备料单信息</value>
+  </data>
+  <data name="StockOrderEdit" xml:space="preserve">
+    <value>编辑备料单信息</value>
+  </data>
+  <data name="StockOrderDtlList" xml:space="preserve">
+    <value>备货单明细列表</value>
+  </data>
+  <data name="StockOrderDtlListAdd" xml:space="preserve">
+    <value>新增备货单明细</value>
+  </data>
+  <data name="StockOrderDtlListEdit" xml:space="preserve">
+    <value>编辑备货单明细</value>
+  </data>
+  <data name="EquipmentInterfaceEdit" xml:space="preserve">
+    <value>编辑设备接口</value>
+  </data>
+  <data name="EquipmentInterfaceList" xml:space="preserve">
+    <value>设备接口列表</value>
+  </data>
+  <data name="EquipmentInterfaceView" xml:space="preserve">
+    <value>设备接口详情</value>
+  </data>
+  <data name="InterfaceManagementDefEdit" xml:space="preserve">
+    <value>编辑设备接口详情</value>
+  </data>
+  <data name="IQCRecivePdfPrint" xml:space="preserve">
+    <value>打印送检单</value>
+  </data>
+  <data name="IQCRecivePdfRePrint" xml:space="preserve">
+    <value>重新打印送检单</value>
+  </data>
+  <data name="OfflineSNInput" xml:space="preserve">
+    <value>烽火投入UI</value>
+  </data>
+  <data name="PackRelationAdd" xml:space="preserve">
+    <value>新增包装对应关系</value>
+  </data>
+  <data name="PackRelationDtlList" xml:space="preserve">
+    <value>包装对应明细</value>
+  </data>
+  <data name="PackRelationEdit" xml:space="preserve">
+    <value>编辑包装对应关系</value>
+  </data>
+  <data name="PackRelationList" xml:space="preserve">
+    <value>包装对应关系</value>
+  </data>
+  <data name="SystemParameterConfigEdit" xml:space="preserve">
+    <value>编辑参数配置列表</value>
+  </data>
+  <data name="SystemParameterConfigList" xml:space="preserve">
+    <value>系统参数配置列表</value>
+  </data>
+  <data name="SystemParameterConfigView" xml:space="preserve">
+    <value>查看参数配置列表</value>
+  </data>
+  <data name="SerialNumber_OfflineSerialNumberCopy" xml:space="preserve">
+    <value>复制离线条码规则</value>
+  </data>
+  <data name="ManualSyncEdit" xml:space="preserve">
+    <value>编辑手动同步列表</value>
+  </data>
+  <data name="ManualSyncList" xml:space="preserve">
+    <value>手动同步列表</value>
+  </data>
+  <data name="CustomerSNCollection" xml:space="preserve">
+    <value>客户条码采集UI</value>
+  </data>
+  <data name="MaterialApplyMergeAdd" xml:space="preserve">
+    <value>新增领料单合并</value>
+  </data>
+  <data name="MaterialApplyMergeEdit" xml:space="preserve">
+    <value>编辑领料单合并</value>
+  </data>
+  <data name="MaterialApplyMergeList" xml:space="preserve">
+    <value>领料单合并</value>
+  </data>
+  <data name="UpdateGRNState" xml:space="preserve">
+    <value>修改GRN状态</value>
+  </data>
+  <data name="PDA_PackingPallet" xml:space="preserve">
+    <value>包装栈板</value>
+  </data>
+  <data name="OrderPickListAdd" xml:space="preserve">
+    <value>自动生成批次上料清单</value>
+  </data>
+  <data name="PDA_GRNTransfer" xml:space="preserve">
+    <value>GRN转移</value>
+  </data>
+  <data name="CustomerSNAutoCollection" xml:space="preserve">
+    <value>客户条码采集(自动)UI</value>
+  </data>
+  <data name="BarCodeScopeImport" xml:space="preserve">
+    <value>号码范围导入</value>
+  </data>
+  <data name="PackRelationImport" xml:space="preserve">
+    <value>包装对应关系导入</value>
+  </data>
+  <data name="CommonSNReprint" xml:space="preserve">
+    <value>标签补打</value>
+  </data>
+  <data name="SerailNumberPrint" xml:space="preserve">
+    <value>标签打印UI</value>
+  </data>
+  <data name="Material_IQCFormRecive" xml:space="preserve">
+    <value>IQC接收</value>
+  </data>
+  <data name="IQCRecive" xml:space="preserve">
+    <value>IQC接收</value>
+  </data>
+  <data name="IQCMRBList" xml:space="preserve">
+    <value>IQC判定结果</value>
+  </data>
+  <data name="PrePalletScatter" xml:space="preserve">
+    <value>栈板打散</value>
+  </data>
+  <data name="COM_PalletScatter" xml:space="preserve">
+    <value>栈板注册</value>
+  </data>
+  <data name="System_ImportMenu" xml:space="preserve">
+    <value>导出菜单</value>
+  </data>
+  <data name="ReturnToSupplierAdd" xml:space="preserve">
+    <value>新增仓库退供应商</value>
+  </data>
+  <data name="ReturnToSupplierEdit" xml:space="preserve">
+    <value>编辑仓库退供应商</value>
+  </data>
+  <data name="PDA_MaterialCombine" xml:space="preserve">
+    <value>物料合并</value>
+  </data>
+  <data name="ItemContainerAdd" xml:space="preserve">
+    <value>新增包装多层配置</value>
+  </data>
+  <data name="ItemContainerEdit" xml:space="preserve">
+    <value>编辑包装多层配置</value>
+  </data>
+  <data name="ItemContainerList" xml:space="preserve">
+    <value>包装多层配置列表</value>
+  </data>
+  <data name="MenuButtonAdd" xml:space="preserve">
+    <value>添加菜单扩展按钮</value>
+  </data>
+  <data name="MenuButtonEdit" xml:space="preserve">
+    <value>修改菜单扩展按钮</value>
+  </data>
+  <data name="MenuButtonList" xml:space="preserve">
+    <value>菜单扩展按钮列表</value>
+  </data>
+  <data name="BeginRequestAPISetAdd" xml:space="preserve">
+    <value>添加开始请求API设置</value>
+  </data>
+  <data name="BeginRequestAPISetDelete" xml:space="preserve">
+    <value>删除开始请求API设置</value>
+  </data>
+  <data name="BeginRequestAPISetEdit" xml:space="preserve">
+    <value>编辑开始请求API设置</value>
+  </data>
+  <data name="BeginRequestAPISetList" xml:space="preserve">
+    <value>开始请求API设置</value>
+  </data>
+  <data name="Labels_TemplateAdd" xml:space="preserve">
+    <value>添加标签模板</value>
+  </data>
+  <data name="Labels_TemplateDelete" xml:space="preserve">
+    <value>删除标签模板</value>
+  </data>
+  <data name="Labels_TemplateDesign" xml:space="preserve">
+    <value>标签模板设计</value>
+  </data>
+  <data name="Labels_TemplateEdit" xml:space="preserve">
+    <value>修改标签模板</value>
+  </data>
+  <data name="Labels_TemplateList" xml:space="preserve">
+    <value>标签模板列表</value>
+  </data>
+  <data name="PrinterDelete" xml:space="preserve">
+    <value>删除打印机</value>
+  </data>
+  <data name="PrinterEdit" xml:space="preserve">
+    <value>编辑打印机</value>
+  </data>
+  <data name="PrinterImport" xml:space="preserve">
+    <value>导入打印机</value>
+  </data>
+  <data name="PrinterList" xml:space="preserve">
+    <value>打印机列表</value>
+  </data>
+  <data name="TaskAdd" xml:space="preserve">
+    <value>新增任务</value>
+  </data>
+  <data name="TaskEdit" xml:space="preserve">
+    <value>编辑任务</value>
+  </data>
+  <data name="TaskList" xml:space="preserve">
+    <value>任务列表</value>
+  </data>
+  <data name="TaskView" xml:space="preserve">
+    <value>查看任务</value>
+  </data>
+  <data name="KanbanCarouselConfigList" xml:space="preserve">
+    <value>看板轮播配置列表</value>
+  </data>
+  <data name="VersionUpGrade" xml:space="preserve">
+    <value>版本升级记录</value>
+  </data>
+  <data name="LineChangingTimeList" xml:space="preserve">
+    <value>换线时间列表</value>
+  </data>
+  <data name="ResourceCalendarList" xml:space="preserve">
+    <value>资源排产日历</value>
+  </data>
+  <data name="Resource_ResourceCapacityList" xml:space="preserve">
+    <value>资源产能列表</value>
+  </data>
+  <data name="Resource_ResourceManageAdd" xml:space="preserve">
+    <value>新增资源负荷能力</value>
+  </data>
+  <data name="Resource_ResourceManageCopy" xml:space="preserve">
+    <value>复制资源负荷能力</value>
+  </data>
+  <data name="Resource_ResourceManageDelete" xml:space="preserve">
+    <value>删除资源负荷能力</value>
+  </data>
+  <data name="Resource_ResourceManageEdit" xml:space="preserve">
+    <value>编辑资源负荷能力</value>
+  </data>
+  <data name="Resource_ResourceManageList" xml:space="preserve">
+    <value>资源负荷能力列表</value>
+  </data>
+  <data name="Resource_ResourceManageView" xml:space="preserve">
+    <value>查看资源负荷能力</value>
+  </data>
+  <data name="WorkTimeSetList" xml:space="preserve">
+    <value>非工作时间列表</value>
+  </data>
+  <data name="LineChangingTimeAdd" xml:space="preserve">
+    <value>新增换线时间</value>
+  </data>
+  <data name="LineChangingTimeDelete" xml:space="preserve">
+    <value>删除换线时间</value>
+  </data>
+  <data name="LineChangingTimeEdit" xml:space="preserve">
+    <value>编辑换线时间</value>
+  </data>
+  <data name="OrderSchedulList" xml:space="preserve">
+    <value>工单排产列表</value>
+  </data>
+  <data name="PreviewSchedulList" xml:space="preserve">
+    <value>自动排产</value>
+  </data>
+  <data name="WorkTimeSetAdd" xml:space="preserve">
+    <value>新增非工作时间</value>
+  </data>
+  <data name="WorkTimeSetDelete" xml:space="preserve">
+    <value>删除非工作时间</value>
+  </data>
+  <data name="WorkTimeSetEdit" xml:space="preserve">
+    <value>编辑非工作时间</value>
+  </data>
+  <data name="System_SchedulPlanConfig" xml:space="preserve">
+    <value>Job执行配置</value>
+  </data>
+  <data name="SearchingMaterialBurnList" xml:space="preserve">
+    <value>烧录软件明细查询</value>
+  </data>
+  <data name="AccessoryChambrierenRecord" xml:space="preserve">
+    <value>辅料解冻记录</value>
+  </data>
+  <data name="AccessoryMaterialPrint" xml:space="preserve">
+    <value>锡膏条码转印</value>
+  </data>
+  <data name="AccessoryUseTable" xml:space="preserve">
+    <value>辅料使用记录</value>
+  </data>
+  <data name="AnormalConfig_Add" xml:space="preserve">
+    <value>异常配置新增</value>
+  </data>
+  <data name="AnormalConfig_Delete" xml:space="preserve">
+    <value>异常配置删除</value>
+  </data>
+  <data name="AnormalConfig_Edit" xml:space="preserve">
+    <value>异常配置编辑</value>
+  </data>
+  <data name="AnormalConfig_List" xml:space="preserve">
+    <value>异常推送列表</value>
+  </data>
+  <data name="Warehouse_WarehouseLightColor" xml:space="preserve">
+    <value>货位亮灯颜色设定</value>
+  </data>
+  <data name="Warehouse_WarehouseLightColorAdd" xml:space="preserve">
+    <value>新增货位亮灯颜色设定</value>
+  </data>
+  <data name="PDA_ExpiredMaterial" xml:space="preserve">
+    <value>超期物料</value>
+  </data>
+  <data name="PDA_InStorage" xml:space="preserve">
+    <value>上架入库</value>
+  </data>
+  <data name="PDA_MoveMaterial" xml:space="preserve">
+    <value>物料移库</value>
+  </data>
+  <data name="PDA_TakeMaterial" xml:space="preserve">
+    <value>物料备料</value>
+  </data>
+  <data name="PDA_AgeingBadCollection" xml:space="preserve">
+    <value>老化结束</value>
+  </data>
+  <data name="PDA_AgeingCollection" xml:space="preserve">
+    <value>老化开始</value>
+  </data>
+  <data name="PreviewConfig" xml:space="preserve">
+    <value>预排产设置</value>
+  </data>
+  <data name="AccessoryStir" xml:space="preserve">
+    <value>辅料搅拌</value>
+  </data>
+  <data name="AccessoryRegisterGrn" xml:space="preserve">
+    <value>扫描注册</value>
+  </data>
+  <data name="StartStirTime" xml:space="preserve">
+    <value>搅拌</value>
+  </data>
+  <data name="SteelMeshInspection" xml:space="preserve">
+    <value>钢网刮刀检验报告</value>
+  </data>
+  <data name="SteelMeshInspectionDtl" xml:space="preserve">
+    <value>钢网刮刀检验项目</value>
+  </data>
+  <data name="SteelMeshInspectionProjectAdd" xml:space="preserve">
+    <value>新增钢网刮刀检验项目</value>
+  </data>
+  <data name="SteelMeshInspectionProjectEdit" xml:space="preserve">
+    <value>修改钢网刮刀检验项目</value>
+  </data>
+  <data name="SteelMeshInspectionProjectList" xml:space="preserve">
+    <value>钢网刮刀检验项目</value>
+  </data>
+  <data name="SteelMeshUseHistory" xml:space="preserve">
+    <value>钢网刮刀操作记录</value>
+  </data>
+  <data name="LineProductLoadList" xml:space="preserve">
+    <value>资源生产负荷</value>
+  </data>
+  <data name="SetOfBooksList" xml:space="preserve">
+    <value>帐套管理</value>
+  </data>
+  <data name="Account_UserSubList" xml:space="preserve">
+    <value>用户列表(子厂)</value>
+  </data>
+  <data name="InterfaceList" xml:space="preserve">
+    <value>接口清单列表</value>
+  </data>
+  <data name="InspectionmethodsAdd" xml:space="preserve">
+    <value>检验方法新增</value>
+  </data>
+  <data name="InspectionmethodsEdit" xml:space="preserve">
+    <value>检验方法修改</value>
+  </data>
+  <data name="InspectionmethodsList" xml:space="preserve">
+    <value>检验方法列表</value>
+  </data>
+  <data name="CPExpiredDateList" xml:space="preserve">
+    <value>成品超期复检</value>
+  </data>
+  <data name="CPReinspectionHistory" xml:space="preserve">
+    <value>成品超期复检列表</value>
+  </data>
+  <data name="PDA_MaterialDeliver" xml:space="preserve">
+    <value>生成送货单</value>
+  </data>
+  <data name="PDA_PackGRNSuply" xml:space="preserve">
+    <value>供应商包装物料条码</value>
+  </data>
+  <data name="PDA_AccessoryOperation" xml:space="preserve">
+    <value>辅料作业</value>
+  </data>
+  <data name="Production_ESOPAuditList" xml:space="preserve">
+    <value>ESOP审核管理</value>
+  </data>
+  <data name="Production_ESOPFastView" xml:space="preserve">
+    <value>ESOP快速查看</value>
+  </data>
+  <data name="PlanSchedulOrderList" xml:space="preserve">
+    <value>工单排产计划图</value>
+  </data>
+  <data name="SchedulOrderGantt" xml:space="preserve">
+    <value>工单排产计划图(小时)</value>
+  </data>
+  <data name="EquipmentMouldRelationAdd" xml:space="preserve">
+    <value>新增设备模具关联</value>
+  </data>
+  <data name="EquipmentMouldRelationEdit" xml:space="preserve">
+    <value>编辑设备模具关联</value>
+  </data>
+  <data name="EquipmentMouldRelationList" xml:space="preserve">
+    <value>设备与模具关联列表</value>
+  </data>
+  <data name="Equipment_MouldAdd" xml:space="preserve">
+    <value>新增模治具</value>
+  </data>
+  <data name="Equipment_MouldEdit" xml:space="preserve">
+    <value>编辑模治具</value>
+  </data>
+  <data name="Equipment_MouldList" xml:space="preserve">
+    <value>模治具列表</value>
+  </data>
+  <data name="Equipment_MouldBomAdd" xml:space="preserve">
+    <value>新增模具BOM</value>
+  </data>
+  <data name="Equipment_MouldBomDelete" xml:space="preserve">
+    <value>删除模具BOM</value>
+  </data>
+  <data name="Equipment_MouldBomEdit" xml:space="preserve">
+    <value>编辑模具BOM</value>
+  </data>
+  <data name="Equipment_MouldBomList" xml:space="preserve">
+    <value>模治具BOM列表</value>
+  </data>
+  <data name="ItemMouldRelationAdd" xml:space="preserve">
+    <value>新增产品与模具BOM关联</value>
+  </data>
+  <data name="ItemMouldRelationDelete" xml:space="preserve">
+    <value>删除产品与模具BOM关联</value>
+  </data>
+  <data name="ItemMouldRelationEdit" xml:space="preserve">
+    <value>编辑产品与模具BOM关联</value>
+  </data>
+  <data name="ItemMouldRelationList" xml:space="preserve">
+    <value>产品与模具BOM关联列表</value>
+  </data>
+  <data name="MoldComponentAdd" xml:space="preserve">
+    <value>新增模具构件</value>
+  </data>
+  <data name="MoldComponentDelete" xml:space="preserve">
+    <value>删除模具构件</value>
+  </data>
+  <data name="MoldComponentEdit" xml:space="preserve">
+    <value>编辑模具构件</value>
+  </data>
+  <data name="MoldComponentList" xml:space="preserve">
+    <value>模具构件列表</value>
+  </data>
+  <data name="MoldComponentStockList" xml:space="preserve">
+    <value>模具构件库存列表</value>
+  </data>
+  <data name="MouldChangeApplyList" xml:space="preserve">
+    <value>换模申请列表</value>
+  </data>
+  <data name="MouldAbnormalList" xml:space="preserve">
+    <value>模具异常列表</value>
+  </data>
+  <data name="EquipmentPressureTestAdd" xml:space="preserve">
+    <value>新增机台压力测试</value>
+  </data>
+  <data name="EquipmentPressureTestDel" xml:space="preserve">
+    <value>删除机台压力测试</value>
+  </data>
+  <data name="EquipmentPressureTestEdit" xml:space="preserve">
+    <value>编辑机台压力测试</value>
+  </data>
+  <data name="EquipmentPressureTestExport" xml:space="preserve">
+    <value>导出机台压力测试</value>
+  </data>
+  <data name="EquipmentPressureTestList" xml:space="preserve">
+    <value>机台压力测试列表</value>
+  </data>
+  <data name="EquipmentPressureTestView" xml:space="preserve">
+    <value>查看机台压力测试</value>
+  </data>
+  <data name="EquipmentPressureTestTest" xml:space="preserve">
+    <value>校准测试</value>
+  </data>
+  <data name="MouldSizeCopy" xml:space="preserve">
+    <value>复制模具尺寸信息</value>
+  </data>
+  <data name="MouldSizeAdd" xml:space="preserve">
+    <value>新增模具尺寸信息</value>
+  </data>
+  <data name="MouldSizeDel" xml:space="preserve">
+    <value>删除模具尺寸信息</value>
+  </data>
+  <data name="MouldSizeEdit" xml:space="preserve">
+    <value>编辑模具尺寸信息</value>
+  </data>
+  <data name="MouldSizeList" xml:space="preserve">
+    <value>模具尺寸管控列表</value>
+  </data>
+  <data name="EquipmentOnLineMouldList" xml:space="preserve">
+    <value>设备在机模具列表</value>
+  </data>
+  <data name="CompanyAdd" xml:space="preserve">
+    <value>新增公司信息</value>
+  </data>
+  <data name="CompanyDelete" xml:space="preserve">
+    <value>删除公司信息</value>
+  </data>
+  <data name="CompanyEdit" xml:space="preserve">
+    <value>编辑公司信息</value>
+  </data>
+  <data name="CompanyList" xml:space="preserve">
+    <value>公司列表</value>
+  </data>
+  <data name="CompanyView" xml:space="preserve">
+    <value>查看公司信息</value>
+  </data>
+  <data name="Warehouse_SupplierExameTypeList" xml:space="preserve">
+    <value>供应商考核类型列表</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentEdit" xml:space="preserve">
+    <value>编辑考核内容</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentTree" xml:space="preserve">
+    <value>供应商考核内容</value>
+  </data>
+  <data name="Warehouse_SupplierExameContentAdd" xml:space="preserve">
+    <value>新增考核内容</value>
+  </data>
+  <data name="Warehouse_SupplierExamTemplet" xml:space="preserve">
+    <value>考核模版</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateList" xml:space="preserve">
+    <value>供应商考核模版</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateListAdd" xml:space="preserve">
+    <value>新增考核模版</value>
+  </data>
+  <data name="Warehouse_SupplierExameTemplateListEdit" xml:space="preserve">
+    <value>编辑考核模版</value>
+  </data>
+  <data name="SupplierIQCList" xml:space="preserve">
+    <value>IQC检验结果</value>
+  </data>
+  <data name="PlanSchedulLineList" xml:space="preserve">
+    <value>资源排产计划图</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultEdit" xml:space="preserve">
+    <value>供应商考核</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultList" xml:space="preserve">
+    <value>供应商考核结果</value>
+  </data>
+  <data name="Warehouse_SupplierExameResultReExam" xml:space="preserve">
+    <value>供应商考核重算</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialEdit" xml:space="preserve">
+    <value>编辑物料默认货位</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialList" xml:space="preserve">
+    <value>物料默认货位</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialAdd" xml:space="preserve">
+    <value>新增物料默认货位</value>
+  </data>
+  <data name="Warehouse_WarehouseLocationMaterialView" xml:space="preserve">
+    <value>查看物料默认货位</value>
+  </data>
+  <data name="OSPItemAdd" xml:space="preserve">
+    <value>新增工序段产品</value>
+  </data>
+  <data name="OSPItemDelete" xml:space="preserve">
+    <value>删除工序段产品</value>
+  </data>
+  <data name="OSPItemEdit" xml:space="preserve">
+    <value>编辑工序段产品</value>
+  </data>
+  <data name="OSPItemList" xml:space="preserve">
+    <value>工序段产品列表</value>
+  </data>
+  <data name="OSPManagement" xml:space="preserve">
+    <value>工序段管理</value>
+  </data>
+  <data name="OSPSNReleaseList" xml:space="preserve">
+    <value>超期号码解除</value>
+  </data>
+  <data name="OSPTime" xml:space="preserve">
+    <value>时间（分）</value>
+  </data>
+  <data name="OSPType" xml:space="preserve">
+    <value>工序段类型</value>
+  </data>
+  <data name="OSPTypeAdd" xml:space="preserve">
+    <value>新增工序段类型</value>
+  </data>
+  <data name="OSPTypeDelete" xml:space="preserve">
+    <value>删除工序段类型</value>
+  </data>
+  <data name="OSPTypeEdit" xml:space="preserve">
+    <value>编辑工序段类型</value>
+  </data>
+  <data name="PQCBatchCollection" xml:space="preserve">
+    <value>PQC批次送检</value>
+  </data>
+  <data name="PQCBatchInspectCollection" xml:space="preserve">
+    <value>PQC批次检验</value>
+  </data>
+  <data name="Plan_ProductionControlList" xml:space="preserve">
+    <value>生产管控列表</value>
+  </data>
+  <data name="QC_InspectionLotSNList" xml:space="preserve">
+    <value>批次明细列表</value>
+  </data>
+  <data name="Account_RoleSubList" xml:space="preserve">
+    <value>角色列表(子厂)</value>
+  </data>
+  <data name="DIPPackagingPlanAdd" xml:space="preserve">
+    <value>增加DIP包装计划</value>
+  </data>
+  <data name="DIPPackagingPlanEdit" xml:space="preserve">
+    <value>编辑DIP包装计划</value>
+  </data>
+  <data name="DIPPackagingPlanImport" xml:space="preserve">
+    <value>导入DIP包装计划</value>
+  </data>
+  <data name="DIPPackagingPlanList" xml:space="preserve">
+    <value>DIP包装计划</value>
+  </data>
+  <data name="DIP_FloorInfoAdd" xml:space="preserve">
+    <value>增加楼层</value>
+  </data>
+  <data name="DIP_FloorInfoEdit" xml:space="preserve">
+    <value>编辑楼层</value>
+  </data>
+  <data name="DIP_FloorInfoList" xml:space="preserve">
+    <value>楼层列表</value>
+  </data>
+  <data name="DIP_FloorLineInfoAdd" xml:space="preserve">
+    <value>增加楼层线别关联</value>
+  </data>
+  <data name="DIP_FloorLineInfoEdit" xml:space="preserve">
+    <value>编辑楼层线别关联</value>
+  </data>
+  <data name="DIP_FloorLineInfoList" xml:space="preserve">
+    <value>楼层线别列表</value>
+  </data>
+  <data name="SteelMeshInspectionList" xml:space="preserve">
+    <value>钢网刮刀检验报告列表</value>
+  </data>
+  <data name="Plan_ProductionControlList_Standard" xml:space="preserve">
+    <value>生产管控列表</value>
+  </data>
+  <data name="PDA_MaterialWhReturnToPDA" xml:space="preserve">
+    <value>生产退料入库</value>
+  </data>
+  <data name="PDA_ReturnMaterialFast" xml:space="preserve">
+    <value>生产快捷退料</value>
+  </data>
+  <data name="Router_RouterDesingerEditB" xml:space="preserve">
+    <value>路由设计</value>
+  </data>
+  <data name="SampleNumberHistory" xml:space="preserve">
+    <value>样机使用记录</value>
+  </data>
+  <data name="SampleNumberList" xml:space="preserve">
+    <value>样品序号列表</value>
+  </data>
+  <data name="SampleNumberListAdd" xml:space="preserve">
+    <value>新增样品序号</value>
+  </data>
+  <data name="SampleNumberListDelete" xml:space="preserve">
+    <value>删除样品序号</value>
+  </data>
+  <data name="SampleNumberListDownLoad" xml:space="preserve">
+    <value>样品序号模版下载</value>
+  </data>
+  <data name="SampleNumberListEdit" xml:space="preserve">
+    <value>修改样品序号</value>
+  </data>
+  <data name="SampleNumberManagement" xml:space="preserve">
+    <value>样品点检管理</value>
+  </data>
+  <data name="SampleNumberReCheck" xml:space="preserve">
+    <value>重检样品序号</value>
+  </data>
+  <data name="EquipmentRepairUser" xml:space="preserve">
+    <value>设备维修人员</value>
+  </data>
+  <data name="EquipmentRepairUserAdd" xml:space="preserve">
+    <value>新增设备维修人员</value>
+  </data>
+  <data name="EquipmentRepairUserEdit" xml:space="preserve">
+    <value>编辑设备维修人员</value>
+  </data>
+  <data name="EquipmentRepairUserView" xml:space="preserve">
+    <value>查看设备维修人员</value>
+  </data>
+  <data name="PieceworkCompensationAdd" xml:space="preserve">
+    <value>新增计件工资</value>
+  </data>
+  <data name="PieceworkCompensationEdit" xml:space="preserve">
+    <value>编辑计件工资</value>
+  </data>
+  <data name="PieceworkCompensationList" xml:space="preserve">
+    <value>计件工资列表</value>
+  </data>
+  <data name="Product_AllowanceAdd" xml:space="preserve">
+    <value>新增津贴</value>
+  </data>
+  <data name="Product_AllowanceDelete" xml:space="preserve">
+    <value>删除津贴</value>
+  </data>
+  <data name="Product_AllowanceEdit" xml:space="preserve">
+    <value>编辑津贴</value>
+  </data>
+  <data name="Product_AllowanceList" xml:space="preserve">
+    <value>津贴维护</value>
+  </data>
+  <data name="Product_CapacityVerfyRecordEdit" xml:space="preserve">
+    <value>修改产能确认</value>
+  </data>
+  <data name="Product_CapacityVerfyRecordList" xml:space="preserve">
+    <value>审核产能确认列表</value>
+  </data>
+  <data name="Product_HolidayMaintenanceAdd" xml:space="preserve">
+    <value>添加节假日</value>
+  </data>
+  <data name="Product_HolidayMaintenanceDelete" xml:space="preserve">
+    <value>删除节假日</value>
+  </data>
+  <data name="Product_HolidayMaintenanceEdit" xml:space="preserve">
+    <value>修改节假日</value>
+  </data>
+  <data name="Product_HolidayMaintenanceList" xml:space="preserve">
+    <value>节假日维护</value>
+  </data>
+  <data name="Product_PieceWage" xml:space="preserve">
+    <value>计件标准维护</value>
+  </data>
+  <data name="Product_PieceWageAdd" xml:space="preserve">
+    <value>添加计件工资标准</value>
+  </data>
+  <data name="Product_PieceWageDelete" xml:space="preserve">
+    <value>删除计件工资标准</value>
+  </data>
+  <data name="Product_PieceWageEdit" xml:space="preserve">
+    <value>修改计件工资标准</value>
+  </data>
+  <data name="Product_PieceWageList" xml:space="preserve">
+    <value>计件工资标准维护</value>
+  </data>
+  <data name="Product_StationOutputRateList" xml:space="preserve">
+    <value>产出率系数划分标准列表</value>
+  </data>
+  <data name="Product_UserAttendanceAdd" xml:space="preserve">
+    <value>新增月出勤</value>
+  </data>
+  <data name="Product_UserAttendanceDelete" xml:space="preserve">
+    <value>删除月出勤</value>
+  </data>
+  <data name="Product_UserAttendanceEdit" xml:space="preserve">
+    <value>编辑月出勤</value>
+  </data>
+  <data name="Product_UserAttendanceList" xml:space="preserve">
+    <value>月出勤维护</value>
+  </data>
+  <data name="StationOutputRateAdd" xml:space="preserve">
+    <value>新增产出率系数划分标准</value>
+  </data>
+  <data name="StationOutputRateEdit" xml:space="preserve">
+    <value>编辑产出率系数划分标准</value>
+  </data>
+  <data name="Product_ConfirmCapacity" xml:space="preserve">
+    <value>产能确认</value>
+  </data>
+  <data name="EquipmentRepairListNew" xml:space="preserve">
+    <value>维修列表</value>
+  </data>
+  <data name="SparePartsItemRelationList" xml:space="preserve">
+    <value>工具设备与产品关系</value>
+  </data>
+  <data name="Packing_Batch_ProCollectionUI" xml:space="preserve">
+    <value>包装批量模板</value>
+  </data>
+  <data name="System_WriteBackConfigureList" xml:space="preserve">
+    <value>ERP回写配置</value>
+  </data>
+  <data name="ERPSyncList" xml:space="preserve">
+    <value>ERP同步接口列表</value>
+  </data>
+  <data name="ERPSyncLogList" xml:space="preserve">
+    <value>ERP同步日志</value>
+  </data>
+  <data name="System_WriteBackLogList" xml:space="preserve">
+    <value>回写ERP日志列表</value>
+  </data>
+  <data name="PDA_SWMSAgeOfStorage" xml:space="preserve">
+    <value>物料库龄</value>
+  </data>
+  <data name="PDA_SWMSCheckMaterial" xml:space="preserve">
+    <value>物料盘点</value>
+  </data>
+  <data name="PDA_SWMSExpiredMaterial" xml:space="preserve">
+    <value>超期物料</value>
+  </data>
+  <data name="PDA_SWMSInStorage" xml:space="preserve">
+    <value>上架入库</value>
+  </data>
+  <data name="PDA_SWMSMoveMaterial" xml:space="preserve">
+    <value>物料移库</value>
+  </data>
+  <data name="PDA_SWMSQueryMaterial" xml:space="preserve">
+    <value>物料查询</value>
+  </data>
+  <data name="PDA_SWMSTakeMaterial" xml:space="preserve">
+    <value>物料备料</value>
+  </data>
+  <data name="PDA_GRNPrint" xml:space="preserve">
+    <value>GRN补打</value>
+  </data>
+  <data name="ShopOrderDataDistributionOperate" xml:space="preserve">
+    <value>工单数据下发【工单列表】</value>
+  </data>
+  <data name="ShopOrder_Recovery" xml:space="preserve">
+    <value>恢复【工单条码】</value>
+  </data>
+  <data name="Equipment_InspectionItemList" xml:space="preserve">
+    <value>点检项清单</value>
+  </data>
+  <data name="Equipment_InspectionItemAdd" xml:space="preserve">
+    <value>新增【点检项清单】</value>
+  </data>
+  <data name="Equipment_InspectionItemDialog" xml:space="preserve">
+    <value>点检项目窗口</value>
+  </data>
+  <data name="Equipment_InspectionItemEdit" xml:space="preserve">
+    <value>编辑【点检项清单】</value>
+  </data>
+  <data name="Equipment_InspectionTemplateAdd" xml:space="preserve">
+    <value>新增点检模板</value>
+  </data>
+  <data name="Equipment_InspectionTemplateCopy" xml:space="preserve">
+    <value>复制点检模板</value>
+  </data>
+  <data name="Equipment_InspectionTemplateEdit" xml:space="preserve">
+    <value>编辑点检模板</value>
+  </data>
+  <data name="Equipment_InspectionTemplateItemAdd" xml:space="preserve">
+    <value>新增点检关联列表</value>
+  </data>
+  <data name="Equipment_InspectionTemplateItemEdit" xml:space="preserve">
+    <value>编辑点检关联列表</value>
+  </data>
+  <data name="Equipment_InspectionTemplateItemList" xml:space="preserve">
+    <value>点检模板关联列表</value>
+  </data>
+  <data name="Equipment_InspectionTemplateList" xml:space="preserve">
+    <value>点检模板列表</value>
+  </data>
+  <data name="Equipment_InspectionTypeAdd" xml:space="preserve">
+    <value>新增点检类型</value>
+  </data>
+  <data name="Equipment_InspectionTypeEdit" xml:space="preserve">
+    <value>编辑点检类型</value>
+  </data>
+  <data name="Equipment_InspectionTypeList" xml:space="preserve">
+    <value>点检类型列表</value>
+  </data>
+  <data name="Equipment_ExceptionReportingAdd" xml:space="preserve">
+    <value>新增点检异常上报方案</value>
+  </data>
+  <data name="Equipment_ExceptionReportingEdit" xml:space="preserve">
+    <value>编辑点检异常上报方案</value>
+  </data>
+  <data name="Equipment_ExceptionReportingList" xml:space="preserve">
+    <value>异常上报方案</value>
+  </data>
+  <data name="EquipmentSpotCheckHistoryList" xml:space="preserve">
+    <value>点检操作记录</value>
+  </data>
+  <data name="EquipmentSpotCheckList" xml:space="preserve">
+    <value>点检列表</value>
+  </data>
+  <data name="OffLineGRNAdd" xml:space="preserve">
+    <value>离线条码注入</value>
+  </data>
+  <data name="OffLineGRNEdit" xml:space="preserve">
+    <value>离线条码解析</value>
+  </data>
+  <data name="OffLineGRNInto" xml:space="preserve">
+    <value>离线条码注入</value>
+  </data>
+  <data name="ReturnToSupplierDelete" xml:space="preserve">
+    <value>删除退料信息</value>
+  </data>
+  <data name="Equipment_EquipmentBOTAdd" xml:space="preserve">
+    <value>新增设备清单BOT</value>
+  </data>
+  <data name="Equipment_EquipmentBOTEdit" xml:space="preserve">
+    <value>编辑设备清单BOT</value>
+  </data>
+  <data name="Equipment_EquipmentBOTList" xml:space="preserve">
+    <value>设备清单BOT维护</value>
+  </data>
+  <data name="Equipment_EquipmentBOTView" xml:space="preserve">
+    <value>查看设备清单BOT</value>
+  </data>
+  <data name="PDA_SpotCheckKit" xml:space="preserve">
+    <value>工治具点检</value>
+  </data>
+  <data name="PurOrderView" xml:space="preserve">
+    <value>查看采购单</value>
+  </data>
+  <data name="CreateInventoryList" xml:space="preserve">
+    <value>创建清库单</value>
+  </data>
+  <data name="ConfirmTheClearanceQuantity" xml:space="preserve">
+    <value>确认清库数量</value>
+  </data>
+  <data name="AddSteps" xml:space="preserve">
+    <value>增加步骤</value>
+  </data>
+  <data name="AdvancedReportNewTemplate" xml:space="preserve">
+    <value>高级报表新增模板</value>
+  </data>
+  <data name="AssigningRoles" xml:space="preserve">
+    <value>分配角色</value>
+  </data>
+  <data name="AuthorizedUser" xml:space="preserve">
+    <value>权限用户</value>
+  </data>
+  <data name="BadMaintenance" xml:space="preserve">
+    <value>不良维修</value>
+  </data>
+  <data name="BoxWeighing" xml:space="preserve">
+    <value>包装箱称重</value>
+  </data>
+  <data name="CheckProductDetails" xml:space="preserve">
+    <value>检验产品详情</value>
+  </data>
+  <data name="ChooseAnormalType" xml:space="preserve">
+    <value>选择异常类型</value>
+  </data>
+  <data name="ChooseDepartmentHead" xml:space="preserve">
+    <value>选择部门主管</value>
+  </data>
+  <data name="ChooseReturnBill" xml:space="preserve">
+    <value>选择退料单</value>
+  </data>
+  <data name="ChooseReturnDetails" xml:space="preserve">
+    <value>选择退料明细</value>
+  </data>
+  <data name="ChooseWindow" xml:space="preserve">
+    <value>选择窗口</value>
+  </data>
+  <data name="CompleteSetOfMaterials" xml:space="preserve">
+    <value>物料齐套明细</value>
+  </data>
+  <data name="ComponentRelatedDataCollection" xml:space="preserve">
+    <value>组件相关数据采集</value>
+  </data>
+  <data name="ConsolidatePickingList" xml:space="preserve">
+    <value>合并领料单</value>
+  </data>
+  <data name="Container1Copy" xml:space="preserve">
+    <value>复制容器</value>
+  </data>
+  <data name="Container1Edit" xml:space="preserve">
+    <value>编辑容器</value>
+  </data>
+  <data name="Container1Print" xml:space="preserve">
+    <value>打印容器</value>
+  </data>
+  <data name="Container1View" xml:space="preserve">
+    <value>查看容器</value>
+  </data>
+  <data name="ControlAdd" xml:space="preserve">
+    <value>新增控件</value>
+  </data>
+  <data name="ControlEdit" xml:space="preserve">
+    <value>编辑控件</value>
+  </data>
+  <data name="CopyAnormal" xml:space="preserve">
+    <value>复制异常</value>
+  </data>
+  <data name="CopyEquipmentListBOT" xml:space="preserve">
+    <value>复制设备清单BOT</value>
+  </data>
+  <data name="CustomerInfoView" xml:space="preserve">
+    <value>查看客户信息</value>
+  </data>
+  <data name="CustomerProjectCopy" xml:space="preserve">
+    <value>复制客户项目</value>
+  </data>
+  <data name="DataSourceAdd" xml:space="preserve">
+    <value>新增数据源</value>
+  </data>
+  <data name="DataSourceEdit" xml:space="preserve">
+    <value>编辑数据源</value>
+  </data>
+  <data name="DevicePropertiesView" xml:space="preserve">
+    <value>查看设备属性</value>
+  </data>
+  <data name="EditOrViewBusiness" xml:space="preserve">
+    <value>编辑/查看业务</value>
+  </data>
+  <data name="EquipmentTypeAdd" xml:space="preserve">
+    <value>添加设备类型</value>
+  </data>
+  <data name="EquipmentTypeEdit" xml:space="preserve">
+    <value>编辑设备类型</value>
+  </data>
+  <data name="FeederInfoeCopy" xml:space="preserve">
+    <value>复制飞达信息</value>
+  </data>
+  <data name="FeederTypeCopy" xml:space="preserve">
+    <value>复制飞达类型</value>
+  </data>
+  <data name="FixtureBorrowing" xml:space="preserve">
+    <value>夹具借用</value>
+  </data>
+  <data name="FixtureReturn" xml:space="preserve">
+    <value>夹具归还</value>
+  </data>
+  <data name="FQCRecordsGRNInfo" xml:space="preserve">
+    <value>FQC记录GRN信息</value>
+  </data>
+  <data name="GoodsList" xml:space="preserve">
+    <value>走货单列表</value>
+  </data>
+  <data name="GRNAvailableNumModify" xml:space="preserve">
+    <value>修改GRN可用数量</value>
+  </data>
+  <data name="ImportStandardOfflineBarcodes" xml:space="preserve">
+    <value>导入标准离线条码</value>
+  </data>
+  <data name="InitPassword" xml:space="preserve">
+    <value>初始化密码</value>
+  </data>
+  <data name="InspectionOrderCheck" xml:space="preserve">
+    <value>检验单检验</value>
+  </data>
+  <data name="InventoryDifferenceRecord" xml:space="preserve">
+    <value>盘点差异记录</value>
+  </data>
+  <data name="IPQCInspectionNoAdd" xml:space="preserve">
+    <value>新增IPQC检验单</value>
+  </data>
+  <data name="IQCRecordsGRNInfo" xml:space="preserve">
+    <value>IQC记录GRN信息</value>
+  </data>
+  <data name="KanbanAdd" xml:space="preserve">
+    <value>新增看板</value>
+  </data>
+  <data name="KanbanTypeAdd" xml:space="preserve">
+    <value>新增看板类型</value>
+  </data>
+  <data name="KanbanTypeEdit" xml:space="preserve">
+    <value>编辑看板类型</value>
+  </data>
+  <data name="LabelPrint" xml:space="preserve">
+    <value>标签打印</value>
+  </data>
+  <data name="LoadingDetailsAdd" xml:space="preserve">
+    <value>新增上料明细</value>
+  </data>
+  <data name="LogicSetting" xml:space="preserve">
+    <value>逻辑设置</value>
+  </data>
+  <data name="MakeUp" xml:space="preserve">
+    <value>补打</value>
+  </data>
+  <data name="MaskElementCopy" xml:space="preserve">
+    <value>复制掩码元素</value>
+  </data>
+  <data name="MaskGroupCopy" xml:space="preserve">
+    <value>复制掩码组</value>
+  </data>
+  <data name="MaterialPreparationListAdd" xml:space="preserve">
+    <value>新增备料单</value>
+  </data>
+  <data name="MaterialPreparationListEdit" xml:space="preserve">
+    <value>编辑备料单</value>
+  </data>
+  <data name="MaterialPreparationListView" xml:space="preserve">
+    <value>查看备料单</value>
+  </data>
+  <data name="MaterialReplacement" xml:space="preserve">
+    <value>物料更换</value>
+  </data>
+  <data name="NoOrderTransferApplicationEdit" xml:space="preserve">
+    <value>编辑无订单调拨申请</value>
+  </data>
+  <data name="OtherWaysOfPickingAdd" xml:space="preserve">
+    <value>新增其他领料方式</value>
+  </data>
+  <data name="OtherWaysOfPickingEdit" xml:space="preserve">
+    <value>编辑其他领料方式</value>
+  </data>
+  <data name="OutsourcingTransferApplicationEdit" xml:space="preserve">
+    <value>编辑委外调拨申请</value>
+  </data>
+  <data name="PackagingElectronicScaleSettings" xml:space="preserve">
+    <value>包装电子称设定</value>
+  </data>
+  <data name="PartsReplacementSN" xml:space="preserve">
+    <value>部件更换-S/N</value>
+  </data>
+  <data name="PreProcessingMaterialCopy" xml:space="preserve">
+    <value>复制前加工料</value>
+  </data>
+  <data name="PrimaryMenuAdd" xml:space="preserve">
+    <value>新增一级菜单</value>
+  </data>
+  <data name="PrimaryMenuEdit" xml:space="preserve">
+    <value>编辑一级菜单</value>
+  </data>
+  <data name="PrintCertificationRecords" xml:space="preserve">
+    <value>打印认证记录</value>
+  </data>
+  <data name="ProductionPhaseCopy" xml:space="preserve">
+    <value>复制生产阶段</value>
+  </data>
+  <data name="ProductionVirtualPurchaseOrder" xml:space="preserve">
+    <value>生产虚拟采购订单</value>
+  </data>
+  <data name="ProductRateWarningAdd" xml:space="preserve">
+    <value>新增产品率预警</value>
+  </data>
+  <data name="ProductRateWarningEdit" xml:space="preserve">
+    <value>编辑产品率预警</value>
+  </data>
+  <data name="ProductRateWarningView" xml:space="preserve">
+    <value>查看产品率预警</value>
+  </data>
+  <data name="QholdiImportsMaterialsInfo" xml:space="preserve">
+    <value>Qhold导入物料信息</value>
+  </data>
+  <data name="QholdiImportsWIPInfo" xml:space="preserve">
+    <value>Qhold导入在制品信息</value>
+  </data>
+  <data name="ReceiptPrint" xml:space="preserve">
+    <value>打印收货单</value>
+  </data>
+  <data name="Receive" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="RecordProductBarcodeInfo" xml:space="preserve">
+    <value>记录产品条码信息</value>
+  </data>
+  <data name="ReportEdit" xml:space="preserve">
+    <value>编辑报表</value>
+  </data>
+  <data name="ReportTemplateEdit" xml:space="preserve">
+    <value>编辑报表模板</value>
+  </data>
+  <data name="ReportTemplateView" xml:space="preserve">
+    <value>查看报表模板</value>
+  </data>
+  <data name="ReportTypeAdd" xml:space="preserve">
+    <value>新增报表类型</value>
+  </data>
+  <data name="SecondaryMenuAdd" xml:space="preserve">
+    <value>添加二级菜单</value>
+  </data>
+  <data name="SecondaryMenuEdit" xml:space="preserve">
+    <value>编辑二级菜单</value>
+  </data>
+  <data name="ShenzhenCity" xml:space="preserve">
+    <value>深圳市</value>
+  </data>
+  <data name="ShipmentDetailsRelatedBarcodeInfoView" xml:space="preserve">
+    <value>查看出货明细相关条码信息</value>
+  </data>
+  <data name="ShipmentDetailsView" xml:space="preserve">
+    <value>查看出货明细</value>
+  </data>
+  <data name="SimpleReportNewTemplate" xml:space="preserve">
+    <value>简易报表新增模板</value>
+  </data>
+  <data name="SparePartsInWarehouse" xml:space="preserve">
+    <value>备件入库</value>
+  </data>
+  <data name="SparePartsOutWarehouse" xml:space="preserve">
+    <value>备件出库</value>
+  </data>
+  <data name="Split" xml:space="preserve">
+    <value>拆分</value>
+  </data>
+  <data name="SteelMeshAndScraperProductsAdd" xml:space="preserve">
+    <value>增加钢网,刮刀产品</value>
+  </data>
+  <data name="SubcontractPickingApplicationAdd" xml:space="preserve">
+    <value>添加委外领料申请</value>
+  </data>
+  <data name="SupplierConfigurationTable" xml:space="preserve">
+    <value>供应商配置表</value>
+  </data>
+  <data name="TestDataDisplay" xml:space="preserve">
+    <value>测试数据展示</value>
+  </data>
+  <data name="ToolAdd" xml:space="preserve">
+    <value>新增工具</value>
+  </data>
+  <data name="ToolEdit" xml:space="preserve">
+    <value>编辑工具</value>
+  </data>
+  <data name="ToolRequisition" xml:space="preserve">
+    <value>工具领用</value>
+  </data>
+  <data name="ToolReturn" xml:space="preserve">
+    <value>工具归还</value>
+  </data>
+  <data name="ToolStorage" xml:space="preserve">
+    <value>工具入库</value>
+  </data>
+  <data name="ToolView" xml:space="preserve">
+    <value>查看工具</value>
+  </data>
+  <data name="UploadBadReport" xml:space="preserve">
+    <value>上传不良报告</value>
+  </data>
+  <data name="ViewFile" xml:space="preserve">
+    <value>查看文件</value>
+  </data>
+  <data name="ViewWindow" xml:space="preserve">
+    <value>查看窗口</value>
+  </data>
+  <data name="WorkOrderAllocationRequestAdd" xml:space="preserve">
+    <value>添加工单调拨申请</value>
+  </data>
+  <data name="WorkOrderTransferApplicationEdit" xml:space="preserve">
+    <value>编辑按工单调拨申请</value>
+  </data>
+  <data name="LableMakeUp" xml:space="preserve">
+    <value>标签补打</value>
+  </data>
+  <data name="AccessoryLoadingVerification" xml:space="preserve">
+    <value>辅料上料校验</value>
+  </data>
+  <data name="FeidaBindingGRN" xml:space="preserve">
+    <value>飞达绑定GRN</value>
+  </data>
+  <data name="JITIssue" xml:space="preserve">
+    <value>JIT发料</value>
+  </data>
+  <data name="LineSideWarehouseReceiving" xml:space="preserve">
+    <value>线边仓接收</value>
+  </data>
+  <data name="ManualFeeding" xml:space="preserve">
+    <value>手插上料</value>
+  </data>
+  <data name="MSDManagement" xml:space="preserve">
+    <value>MSD管理</value>
+  </data>
+  <data name="OverdueMaterialInspection" xml:space="preserve">
+    <value>过期物料送检</value>
+  </data>
+  <data name="PreProcessingFeeding" xml:space="preserve">
+    <value>前置加工上料</value>
+  </data>
+  <data name="ProductionReceiving" xml:space="preserve">
+    <value>生产接收</value>
+  </data>
+  <data name="SMTLoading" xml:space="preserve">
+    <value>SMT上料</value>
+  </data>
+  <data name="SplitMaterial" xml:space="preserve">
+    <value>拆分物料</value>
+  </data>
+  <data name="SpotCheck" xml:space="preserve">
+    <value>点检</value>
+  </data>
+  <data name="SpotInspectionOfTools" xml:space="preserve">
+    <value>工治具点检</value>
+  </data>
+  <data name="SteelMeshOrCcraperUpDown" xml:space="preserve">
+    <value>钢网/刮刀上下线</value>
+  </data>
+  <data name="SteelMeshOrScraperCleaning" xml:space="preserve">
+    <value>钢网/刮刀清洗</value>
+  </data>
+  <data name="SteelMeshOrScraperQuery" xml:space="preserve">
+    <value>钢网/刮刀查询</value>
+  </data>
+  <data name="WarehouseBalance" xml:space="preserve">
+    <value>仓库平账</value>
+  </data>
+  <data name="RecheckListDetails" xml:space="preserve">
+    <value>重检单详情</value>
+  </data>
+  <data name="System_LanguageAdd" xml:space="preserve">
+    <value>新增多语言</value>
+  </data>
+  <data name="System_LanguageEdit" xml:space="preserve">
+    <value>编辑多语言</value>
+  </data>
+  <data name="System_LanguageList" xml:space="preserve">
+    <value>多语言配置</value>
+  </data>
+  <data name="PDA_ProductionCollection" xml:space="preserve">
+    <value>PDA生产采集</value>
+  </data>
+  <data name="Common_ProCollectionUI_Batch" xml:space="preserve">
+    <value>通用批次采集</value>
+  </data>
+  <data name="ProdBatchPrintProCollection" xml:space="preserve">
+    <value>批次在线打印UI</value>
+  </data>
+  <data name="FinishedSaleReturnList" xml:space="preserve">
+    <value>成品退货列表</value>
+  </data>
+  <data name="MoldFixtureFileManageList" xml:space="preserve">
+    <value>模治具文件管理列表</value>
+  </data>
+  <data name="MoldFixtureFileManageListAdd" xml:space="preserve">
+    <value>模治具文件【新增】</value>
+  </data>
+  <data name="MoldFixtureFileManageListEdit" xml:space="preserve">
+    <value>模治具文件【编辑】</value>
+  </data>
+  <data name="MoldFixtureUseHistoryList" xml:space="preserve">
+    <value>模治具操作记录</value>
+  </data>
+  <data name="EAIInspection" xml:space="preserve">
+    <value>末件采集UI</value>
+  </data>
+  <data name="AnormalCompleteList" xml:space="preserve">
+    <value>异常完结列表</value>
+  </data>
+  <data name="AnormalProcessConfigAdd" xml:space="preserve">
+    <value>新增异常处理人员</value>
+  </data>
+  <data name="AnormalProcessConfigEdit" xml:space="preserve">
+    <value>编辑异常处理人员</value>
+  </data>
+  <data name="AnormalProcessConfigList" xml:space="preserve">
+    <value>异常处理人员列表</value>
+  </data>
+  <data name="AnormalProcessConfigView" xml:space="preserve">
+    <value>查看异常处理人员</value>
+  </data>
+  <data name="AnormalResponseList" xml:space="preserve">
+    <value>异常响应列表</value>
+  </data>
+  <data name="Warehouse_WarehouseAGVMarkList" xml:space="preserve">
+    <value>仓库AGV地标码维护</value>
+  </data>
+  <data name="FormChange_List" xml:space="preserve">
+    <value>形态转换单</value>
+  </data>
+  <data name="WarehouseCpInPrint" xml:space="preserve">
+    <value>历史标签-成品打印</value>
+  </data>
+  <data name="CPPackGRN" xml:space="preserve">
+    <value>包装成品条码</value>
+  </data>
+  <data name="Product_MaterialBucketItemRelationList" xml:space="preserve">
+    <value>料桶列表</value>
+  </data>
+  <data name="StockOrderPrint" xml:space="preserve">
+    <value>成品出货列表【单据打印】</value>
+  </data>
+  <data name="InjectionMoldingBatchPrintCollection" xml:space="preserve">
+    <value>塑批次在线打印UI</value>
+  </data>
+  <data name="FinishedSaleReturnAdd" xml:space="preserve">
+    <value>新增退货明细</value>
+  </data>
+  <data name="FinishedSaleReturnDelete" xml:space="preserve">
+    <value>删除退货明细</value>
+  </data>
+  <data name="FinishedSaleReturnEdit" xml:space="preserve">
+    <value>编辑退货明细</value>
+  </data>
+  <data name="FormChangeMES_List" xml:space="preserve">
+    <value>MES形态转换单</value>
+  </data>
+  <data name="CurrentUserChangePwd" xml:space="preserve">
+    <value>当前用户修改密码</value>
+  </data>
+</root>

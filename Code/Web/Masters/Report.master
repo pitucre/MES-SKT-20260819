@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Masters/EditMaster.master" AutoEventWireup="true"
+    CodeBehind="Report.master.cs" Inherits="SKT.LeanMES.Web.Masters.Report" %>
+
+<asp:Content ID="ContentReport" ContentPlaceHolderID="EditContent" runat="Server">
+    <link href="../Content/plugin/JGrid/skins/Silvery/css/Jgrid.css" rel="stylesheet"
+        type="text/css" />
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/JGrid/js/plugins/JG.js?v=20211245"
+        type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/js/skt.report.core.js?v=20211026"
+        type="text/javascript"></script>
+    <script src="<%=SKT.LeanMES.Web.WebHelper.WebRoot %>/Content/plugin/echarts/echarts.min.js"
+        type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="EditContentReport" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="loadCurrent" runat="server">
+        <style type="text/css">
+            #ReportList
+            {
+                border: 1px solid #d3d3d3;
+            }
+        </style>
+        <div id="divReport">
+        </div>
+        <div class="clear5">
+        </div>
+        <div id="divChart">
+        </div>
+        <div id="divLoading" style="width: 350px; height: 350px; position: absolute; top: 30%;
+            left: 30%;">
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                //如果同时存在数据表和图表，分TAB;  Birong@2016-08-12
+                if ($("#ReportList").length > 0 && $("#ChartContainer").length > 0) {
+                    $("#divReport").append($("#ReportList"));
+                    $("#divChart").append($("#ChartContainer"));
+                    $("#divReport,#divChart").wrapAll('<div class="wrap_tb"></div>');
+                    $("#divReport").before('<ul class="tb"><li class="current">表格查询</li><li>图表展示</li></ul>');
+                    $("#divReport").addClass("tb_c");
+                }
+                //------------------
+                setTimeout(function () {
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('divLoading'));
+                    // 指定图表的配置项和数据
+                    var option = {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        series: [
+                            {
+                                name: '',
+                                type: 'pie',
+                                radius: '55%',
+                                center: ['50%', '60%'],
+                                data: [
+                                    { value: 20, name: getResource("lang", "Extendibility") },
+                                    { value: 20, name: getResource("lang", "Customized") },
+                                    { value: 20, name: getResource("lang", "Richandvaried") },
+                                    { value: 20, name: getResource("lang", "Humanization") },
+                                    { value: 20, name: getResource("lang", "Bulidexport") }
+                                ],
+                                itemStyle: {
+                                    emphasis: {
+                                        shadowBlur: 20,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                    $(".DateTimeBox").attr("readonly", "false");
+                }, 50);
+                $("#bnView").bind("click", function () {
+                    $("#divLoading").hide().remove();
+                });
+                $(".DateTimeBox").attr("readonly", "true");
+            });
+        </script>
+    </asp:ContentPlaceHolder>
+</asp:Content>

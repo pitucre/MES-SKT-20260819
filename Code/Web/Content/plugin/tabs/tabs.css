@@ -1,0 +1,180 @@
+﻿body
+{
+    margin: 20px;
+    padding: 0px;
+    font-family: Verdana, 微软雅黑,黑体, 宋体;
+    font-size: 12px;
+}
+.tb
+{
+    border: none;
+    border-bottom: 1px solid #CDCDCD;
+    height: 26px;
+    zoom: 1;
+    padding: 0px;
+    padding-left: 10px;
+    margin: 0px;
+}
+.tb > li
+{
+    list-style: none;
+    margin: 0px 5px 0px 0px;
+    float: left;
+    border: 1px solid #CDCDCD;
+    padding: 0px 10px;
+    border-bottom: none;
+    line-height: 25px;
+    background: #f1f1f1;
+}
+.tb > li:hover
+{
+    list-style: none;
+    margin: 0px 5px 0px 0px;
+    float: left;
+    border: 1px solid #CDCDCD;
+    padding: 0px 10px;
+    border-bottom: none;
+    line-height: 25px;
+    background: #f1f1f1;
+    color: #2a85d8;
+    cursor: pointer;
+}
+.tb > li.current
+{
+    line-height: 26px;
+    background: #ffffff;
+    font-weight: bold;
+}
+.wrap_tb
+{
+    clear: both;
+}
+.wrap_tb > div
+{
+    clear: both;
+    display: none;
+    height: 100px;
+    padding-top: 5px;
+}
+.wrap_tb > .tb_c
+{
+    display: block;
+}
+/*坚型选项卡*/
+.wrap_vtb
+{
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+.wrap_vtb > div
+{
+    display: none;
+    border: 1px solid #CDCDCD;
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    height: 100px;
+    width: 85%;
+    padding: 5px;
+}
+.vtb
+{
+    float:left;
+    border: none;
+    border-right: 1px solid #CDCDCD;
+    width: 90px;
+    margin: 0px;
+    padding: 0px;
+}
+.wrap_vtb > .vtb_c
+{
+    display: block;
+}
+.vtb > li
+{
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px 0px 5px 0px;
+    border: 1px solid #CDCDCD;
+    border-right: none;
+    background: #f1f1f1;
+    line-height: 26px;
+}
+.vtb > li:hover
+{
+    list-style: none;
+    padding: 0px 10px;
+    margin: 0px 0px 5px 0px;
+    border: 1px solid #CDCDCD;
+    border-right: none;
+    background: #f1f1f1;
+    line-height: 26px;
+    color: #2a85d8;
+    cursor: pointer;
+}
+.vtb > li.current
+{
+    line-height: 26px;
+    background: #ffffff;
+    font-weight: bold;
+}
+
+/*选项卡在底部-模板编辑页面特殊选项卡*/
+.tb_onbtm
+{
+    border: 1px solid #CDCDCD;
+    background:#f1f1f1;
+    height: 26px;
+    zoom: 1;
+    padding: 0px;
+    padding-left: 10px;
+    margin: 0px;
+}
+.tb_onbtm > li
+{
+    list-style: none;
+    margin: 0px 3px 0px 0px;
+    float: left;
+    border: 0px solid #CDCDCD;
+    padding: 0px 10px;
+    border-top: none;
+    line-height: 26px;
+    background: #f1f1f1;
+    vertical-align:middle;
+}
+.tb_onbtm > li:hover
+{
+    list-style: none;
+    margin: 0px 3px 0px 0px;
+    float: left;
+    border: 0px solid #CDCDCD;
+    padding: 0px 10px;
+    border-top: none;
+    line-height: 26px;
+    background: #f1f1f1;
+    color: #2a85d8;
+    cursor: pointer;
+}
+.tb_onbtm > li.current
+{
+    line-height: 26px;
+    background: #ffffff;
+    font-weight: bold;
+}
+.wrap_tb_onbtm
+{
+    clear: both;
+}
+.wrap_tb_onbtm > div
+{
+    clear: both;
+    display: none;
+    height: 100px;
+    padding-top: 0px;
+}
+.wrap_tb_onbtm > .tb_onbtm_c
+{
+    display: block;
+}

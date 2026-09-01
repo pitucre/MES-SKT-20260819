@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<file>
+  <page size="A4"></page>
+  <margin top="1" bottom="1"></margin>
+  <report source="InspectionOrder">
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="40%" align="center" font-size="15" font-style="bold">#[InspectionTypeName]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="50%" align="left">工单：#[OrderNo]#</column>
+        <column width="50%" align="left">订单数量：#[OrderQty]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="50%" align="left">产品名称：#[ItemName]#</column>
+        <column width="50%" align="left">产线：#[LineName]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="50%" align="left">单据名称：#[InspectionTemplateName]#</column>
+        <column width="50%" align="left">班别：#[Class]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="50%" align="left">检验人：#[SendMan]#</column>
+        <column width="50%" align="left">样本数量：#[SampleQty]#</column>
+      </row>
+    </table>
+    <data source="InspectionOrderMember" spacing-before="0" font-size="9">
+      <column header="NO" width="5%" align="center" rownum="1"></column>
+      <column header="检验项名称" width="10%" align="center">#[InspectionItemName]#</column>
+      <column header="检验方法" width="20%">#[TestMethod]#</column>
+      <column header="检验依据" width="10%" align="center">#[InspectionAccording]#</column>
+
+      <column header="检验结果" width="10%" align="center">#[InspectionResult]#</column>
+      <column header="备注" width="10%" align="center">#[Remark]#</column>
+    </data>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="40%" align="center" font-size="11" font-style="bold">解决方案</column>
+      </row>
+      <row>
+        <column width="40%" align="center" font-size="9">#[ProjectAffirmResult]#</column>
+      </row>
+    </table>
+    <table spacing-before="0" border-width="0" font-size="9">
+      <row>
+        <column width="25%" align="left">IPQC：#[CreateBy]#</column>
+        <column width="25%" align="left">组长确认：#[GroupAffirmResult]#/#[GroupAffirmBy]#</column>
+        <column width="25%" align="left">工程确认：#[ProjectAffirmResult]#/#[ProjectAffirmBy]#</column>
+        <column width="25%" align="left">审核：#[AuditResult]#/#[AuditBy]#</column>
+      </row>
+    </table>
+  </report>
+  <footer>
+    <center>
+      <pageNum>d</pageNum>
+    </center>
+  </footer>
+</file>
