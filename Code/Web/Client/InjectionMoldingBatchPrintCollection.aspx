@@ -158,6 +158,14 @@
         var prodline = '<%=Request.QueryString["prodline"]%>';
         $(document).ready(function () {
             $('#txtPrintNumber').val('1');
+            // 注塑班长可编辑打印张数
+            try {
+                var isTL = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('注塑班长').value;
+                if (isTL) {
+                    $('#txtPrintNumber').prop('disabled', false).prop('readonly', false);
+                }
+            } catch(e) {}
+
             //初始化称重插件
             initElectronic();
             bindPrinters('selPrintersList');
@@ -214,6 +222,9 @@
         }
 
         function SavePrint() {
+            // ========== 注塑班长角色跳过100秒限制 ==========
+            var isTeamLeader = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('注塑班长').value;
+            if (!isTeamLeader) {
             // ========== 持久化100秒防重复（刷新页面不失效）Start ==========
             const limitSecond = 100; // 限制间隔100秒
             const storageKey = "LastGoodPrintClickTime";
@@ -248,6 +259,7 @@
                 $("#printMessage").text("");
             }, limitSecond * 1000);
             // ========== 持久化防重复 End ==========
+            } // end if (!isTeamLeader)
 
             //1.获取当前基本信息                 
             var resourceId = $("#hdnCurrResourceId").val(); //资源Id
@@ -305,15 +317,15 @@
                 labelProdOrderId = orderId;
 
                 getDocumentInfo();
+                // 注塑班长：用手工输入的打印张数覆盖模板默认值
+                if (isTeamLeader) {
+                    var manualCount = parseInt($('#txtPrintNumber').val());
+                    if (!isNaN(manualCount) && manualCount > 0) {
+                        printCount = manualCount;
+                    }
+                }
                 //获取标签信息
                 SNInfo = myajax.value;
-                //for (var i = 0; i < SNInfo.SNList.length; i++) {
-                //    updateCollectionList(SNInfo.SNList[i], 'OK');
-                //    setMessageBox(SNInfo.SNList[i] + ':打印完成，通过', "messageGreen");
-                //    showAreaMessge(SNInfo.SNList[i] + ':打印完成，通过 ！' + (prodWeight > 0 ? "当前产品重量为：" + prodWeight + " " + units : ""), 'messageGreen');
-                //    //根据SN刷新侧边栏动态信息
-                //    refreshProInfoBySN(SNInfo.SNList[i]);
-                //}
                 LoadOrderInfo($("#txtOrderNo").val());
                 setTimeout(function () {
                     try {
@@ -573,7 +585,7 @@
             $("#labQty").text(newQyt);
             updateCollectionList(Sn, 'NG');
 
-            labelType = -36;
+            labelType = -39;
             labelItemId = myItemID;
             labelStationId = $("#hdnCurrStationId").val();
             labelProdOrderId = $("#hdnOrderId").val();

@@ -824,5 +824,34 @@ namespace SKT.LeanMES.Web.AjaxServices
             SQLHelper.ExecuteNonQueryStoredProcedure(!string.IsNullOrEmpty(ConnStr)? ConnStr:SQLHelper.MESConnString, "uspSaveAssignUsersToRoleleLog", parms);
         }
 
+        /// <summary>
+        /// 检查当前用户是否拥有指定角色
+        /// </summary>
+        [AjaxMethod]
+        public bool CheckUserRole(string roleName)
+        {
+            try
+            {
+                MembershipInfo user = AccountController.GetCurrentUser();
+                if (user == null) return false;
+                using (SqlDataReader reader = SQLHelper.ExecuteReaderSqlText(SQLHelper.MESConnString,
+                    @"SELECT COUNT(1) qty FROM SYS_UsersInRole a
+                      INNER JOIN SYS_Role b ON b.RoleId = a.RoleId
+                      WHERE a.UserId = @UserId AND b.RoleName = @RoleName",
+                    new SqlParameter[] {
+                        new SqlParameter("@UserId", user.UserId),
+                        new SqlParameter("@RoleName", roleName)
+                    }))
+                {
+                    if (reader.Read())
+                    {
+                        return Convert.ToInt32(reader["qty"]) > 0;
+                    }
+                }
+            }
+            catch { }
+            return false;
+        }
+
     }
 }
