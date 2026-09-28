@@ -1,0 +1,3 @@
+--- P90_monthly_production.html exit=0 => SYNTAX_OK
+--- P91_daily_work.html exit=0 => SYNTAX_OK
+--- Q90_monthly_quality.html exit=0 => SYNTAX_OK

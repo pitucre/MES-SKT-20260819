@@ -1,0 +1,18 @@
+{
+  "server": "172.16.5.144",
+  "database": "LeanMes",
+  "createBy": "admin",
+  "modifyBy": "admin",
+  "items": [
+    {
+      "templateFile": "M03_oee_new.html",
+      "cnName": "M03_设备OEE报表_新逻辑",
+      "enName": "M03OEENew",
+      "reportType": "F0257AA3-4A50-44E6-912E-06FC4ED29F8D",
+      "sequence": 6,
+      "icon": "",
+      "description": "ΔShot判产的设备OEE报表,含管理状态时长与机台产量趋势图表",
+      "spName": "uspEquipmentOEEReport_Program"
+    }
+  ]
+}

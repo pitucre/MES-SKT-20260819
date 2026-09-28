@@ -515,15 +515,16 @@
             //    $("#txtGRN").focus();
             //    return false;
             //}
+            var scannedSN = entity.GRN;  // 保存被扫描的SN
             grn = entity.PSN == null ? entity.GRN : entity.PSN;  //如果包装箱PSN不为空则grn为包装箱号
             balanceQty = entity.StockQty;
-            //校验GRN是否已经盘点
-            var ajaxCheck = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanCancelCheck(CheckListNo, grn, 1);
+            //校验GRN是否已经盘点（使用具体SN判断，而非包装箱号）
+            var ajaxCheck = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanCancelCheck(CheckListNo, grn, 1, scannedSN);
             if (ajaxCheck.value == 1) {
                 if (confirm("条码【" + grn + "】已经扫描，是否撤销扫描")) {
                     if (ajax.value.Flag != -1) {
                         //直接进行盘点撤销
-                        var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 1);
+                        var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 1, scannedSN);
                         if (ajaxRollBack.error != null) {
                             alert(ajaxRollBack.error.Message);
                             return false;
@@ -552,7 +553,7 @@
                     }
                     else {
                         //直接进行盘点撤销
-                        var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 1);
+                        var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 1, scannedSN);
                         $('#infotab tr[grn="' + grn + '"]').css("background-color", "#F8F8F8");
                         $("#grn").val("");
                         $("#txtsum").val("");

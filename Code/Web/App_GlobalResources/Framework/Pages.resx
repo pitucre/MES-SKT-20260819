@@ -5250,4 +5250,7 @@
   <data name="CurrentUserChangePwd" xml:space="preserve">
     <value>当前用户修改密码</value>
   </data>
+  <data name="ShopOrderLabelReprintList" xml:space="preserve">
+    <value>补打标签</value>
+  </data>
 </root>

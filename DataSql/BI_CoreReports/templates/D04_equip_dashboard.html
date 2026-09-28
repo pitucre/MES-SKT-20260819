@@ -1,0 +1,230 @@
+<style type="text/css">
+    #divReport
+    {
+        height: auto;
+    }
+    #divChart
+    {
+        height: auto;
+    }
+    #ChartContainer
+    {
+        width: 100%;
+        height: 860px;
+        overflow: hidden;
+    }
+    #ChartA, #ChartB, #ChartC, #ChartD
+    {
+        float: left;
+        width: 49.6%;
+        height: 420px;
+        margin-bottom: 10px;
+    }
+    #ChartB, #ChartD
+    {
+        float: right;
+    }
+</style>
+<table class="EditeContentTable" style="width: 100%; margin-bottom: 2px;">
+    <tr class="ListTableHeader">
+        <th id="title" scope="col" colspan="4">D04 设备驾驶舱</th>
+    </tr>
+    <tr>
+        <td class="Label4">统计天数</td>
+        <td class="Field4">
+            <select id="selDays" style="width: 100px;">
+                <option value="7">近7天</option>
+                <option value="14">近14天</option>
+                <option value="30">近30天</option>
+            </select></td>
+        <td class="Label4"></td>
+        <td class="Field4"></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div id="bnView" style="text-align: center; font-size: 16px; width: 25%; cursor: pointer; float: left; text-decoration: underline;">
+                <img src="../Content/images/search.png" />查询</div>
+            <div id="bnImport" style="font-size: 16px; cursor: pointer; text-decoration: underline; float: left; margin-left: 10px; width: 150px;">
+                <img src="../Content/images/icon/Import.png" />导出到EXCEL</div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" value="" id="hdnPararms" name="hdnPararms" />
+<input type="hidden" value="" id="hdnPararmValue" name="hdnPararmValue" />
+<input type="hidden" value="" id="hdnOperation" name="hdnOperation" />
+<input type="hidden" value="" id="hdnFileName" name="hdnFileName" />
+<div id="ReportList">
+</div>
+<div id="ChartContainer">
+    <div id="ChartA">
+    </div>
+    <div id="ChartB">
+    </div>
+    <div id="ChartC">
+    </div>
+    <div id="ChartD">
+    </div>
+</div>
+<script type="text/javascript">
+    var biChart = { c: [], optA: null, optB: null, optC: null, optD: null };
+    var biSpName = 'uspBI_DashboardCore_Program';
+    var biRole = 'equip';
+
+    $(function () {
+        $(window).resize(function () {
+            for (var i = 0; i < biChart.c.length; i++) { if (biChart.c[i]) { biChart.c[i].resize(); } }
+        });
+        setTimeout(function () { runQuery(); }, 400);
+    });
+
+    $(".wrap_tb ul.tb li").live("click", function () {
+        var idx = $(this).index();
+        setTimeout(function () {
+            if (idx == 1) {
+                showChart();
+            } else {
+                var $g = $("#ReportList");
+                if ($g.length > 0) {
+                    var gm = $g.SktMesGetGridManager();
+                    if (gm && gm.onResize) { gm.onResize(); }
+                }
+            }
+        }, 80);
+    });
+
+    function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+
+    function pick(rows, chart) {
+        var out = [], i;
+        for (i = 0; i < rows.length; i++) { if (rows[i]['图表'] === chart) { out.push(rows[i]); } }
+        return out;
+    }
+
+    function biFetchRows() {
+        var tries = [true, false], k;
+        for (k = 0; k < tries.length; k++) {
+            var isProc = tries[k];
+            biFetchRows.ok = false;
+            biFetchRows.data = null;
+            biFetchRows.msg = "";
+            var req = {
+                type: "post",
+                url: "../Handler/ReportingServer.ashx?gridviewname=" + biSpName + "&rnd=" + Math.random(),
+                data: { dataAction: "PROC", paramters: getParamStr() },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    biFetchRows.ok = true;
+                    biFetchRows.data = data;
+                },
+                error: function (xhr) {
+                    biFetchRows.ok = false;
+                    biFetchRows.msg = (xhr && xhr.status ? xhr.status + " " : "")
+                        + (xhr && xhr.responseText ? xhr.responseText : "");
+                }
+            };
+            if (isProc) {
+                req.data.isProcPage = "true";
+                req.data.page = "1";
+                req.data.pagesize = "100000";
+                req.data.conditions = "1=1";
+            }
+            $.ajax(req);
+            if (biFetchRows.ok && biFetchRows.data && typeof biFetchRows.data === "object") {
+                return biFetchRows.data;
+            }
+        }
+        alert("Get Data Error: " + (biFetchRows.msg || "no response").substring(0, 400));
+        return { Rows: [] };
+    }
+    function getParamStr() {
+        return '[{"name":"@RoleName","type":"varchar","size":"20","value":"' + biRole + '"}'
+             + ',{"name":"@Days","type":"int","size":"4","value":"' + $("#selDays").val() + '"}]';
+    }
+
+    function runQuery() {
+        $("#divLoading").hide().remove();
+        $("#ReportList").replaceWith("<div id='ReportList'></div>");
+        $("#ReportList").SktMesGrid({
+            columns: [
+                { display: '区块', name: '区块', align: 'center', width: 70, minWidth: 50 },
+                { display: '图表', name: '图表', align: 'center', width: 100, minWidth: 60 },
+                { display: '横轴', name: '横轴', align: 'left', width: 160, minWidth: 60 },
+                { display: '系列', name: '系列', align: 'center', width: 100, minWidth: 60 },
+                { display: '值', name: '值', align: 'right', width: 100, minWidth: 60 },
+                { display: '值2', name: '值2', align: 'right', width: 90, minWidth: 60 },
+                { display: '文本', name: '文本', align: 'left', width: 150, minWidth: 60 }
+            ],
+            width: '100%',
+            height: '99%',
+            dataAction: 'PROC',
+            dataSource: biSpName,
+            paramters: getParamStr(),
+            pageSize: 50,
+            isProcPage: true
+        });
+        var ds = biFetchRows();
+        buildChart(ds && ds.Rows ? ds.Rows : []);
+        showChart();
+    }
+
+    $("#bnView").click(function () { runQuery(); });
+
+    $("#bnImport").click(function () {
+        $("#hdnPararms").val("@RoleName,@Days");
+        $("#hdnPararmValue").val(biRole + "," + $("#selDays").val());
+        $("#hdnOperation").val(biSpName);
+        $("#hdnFileName").val('D04 设备驾驶舱');
+        document.forms[0].submit();
+    });
+
+    function buildChart(rows) {
+        var i;
+        var pie = pick(rows, 'statusPie');
+        biChart.optA = {
+            title: { text: '设备状态占比(小时)', left: 'center' },
+            tooltip: { trigger: 'item', formatter: '{b}: {c} h ({d}%)' },
+            legend: { bottom: 0, type: 'scroll' },
+            series: [{
+                type: 'pie', radius: ['35%', '62%'], center: ['50%', '48%'],
+                data: pie.map(function (r) { return { name: r['横轴'], value: num(r['值']) }; }),
+                label: { formatter: '{b}\n{d}%' }
+            }]
+        };
+        var ft = pick(rows, 'faultTop');
+        var fLabels = [], fVals = [];
+        for (i = 0; i < ft.length; i++) { fLabels.push(ft[i]['横轴'] + ' ' + (ft[i]['文本'] || '')); fVals.push(num(ft[i]['值'])); }
+        fLabels.reverse(); fVals.reverse();
+        biChart.optB = {
+            title: { text: '故障时长TOP10(小时)', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 10, right: 70, top: 50, bottom: 40 },
+            xAxis: { type: 'value', name: '小时' },
+            yAxis: { type: 'category', data: fLabels },
+            series: [{ name: '故障小时', type: 'bar', data: fVals, label: { show: true, position: 'right' } }]
+        };
+        var rr = pick(rows, 'runRate');
+        var rLabels = [], rVals = [];
+        for (i = 0; i < rr.length; i++) { rLabels.push(rr[i]['横轴'] + ' ' + (rr[i]['文本'] || '')); rVals.push(num(rr[i]['值'])); }
+        rLabels.reverse(); rVals.reverse();
+        biChart.optC = {
+            title: { text: '机台运行率(%)', left: 'center' },
+            tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+            grid: { left: 10, right: 70, top: 50, bottom: 40 },
+            xAxis: { type: 'value', name: '%', max: 100 },
+            yAxis: { type: 'category', data: rLabels },
+            series: [{ name: '运行率%', type: 'bar', data: rVals, label: { show: true, position: 'right', formatter: '{c}%' } }]
+        };
+        biChart.optD = null;
+    }
+    function showChart() {
+        var ids = ['ChartA', 'ChartB', 'ChartC', 'ChartD'];
+        var opts = [biChart.optA, biChart.optB, biChart.optC, biChart.optD];
+        for (var i = 0; i < 4; i++) {
+            var el = document.getElementById(ids[i]);
+            if (!el || el.offsetWidth === 0 || !opts[i]) { continue; }
+            if (!biChart.c[i]) { biChart.c[i] = echarts.init(el); }
+            biChart.c[i].setOption(opts[i], true);
+        }
+    }
+</script>

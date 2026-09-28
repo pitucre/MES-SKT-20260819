@@ -100,6 +100,7 @@
 
                     <span id="lblResName" style="width: 100%"></span>
                     <input type="hidden" id="hdnResName" />
+                    <input type="hidden" id="hdnPrintResId" value="-1" />
                     <div class="clear">
                     </div>
                     <label for="fGRN">
@@ -681,11 +682,11 @@
                             hdnResName += data[i].ResName
                         }
                         $("#lblResNameX").text(hdnResName);
-
+                        $("#hdnPrintResId").val(data[0].ResourceId || -1);
                     } else {
                         $("#lblResNameX").text("");
                         $("#lblMaterialBucketQty").text("");
-
+                        $("#hdnPrintResId").val(-1);
                     }
 
                     getPickListDetail(2, 'InfoTableGrnX');
@@ -836,17 +837,21 @@
                         SaveUserUILog(orderNo, ajax.error.Message);
                         return false;
                     }
+                    var savedPrintResId = parseInt($("#hdnPrintResId").val(), 10) || -1;
                     $("#InfoTableGrnX tbody").html("");
                     $("#lblMaterialBucketCodeX").text("");
                     $("#txtMaterialBucketCodeX").val("").focus().select();
                     $("#lblMaterialBucketQty").text("");
                     $("#lblResNameX").text("");
+                    $("#hdnPrintResId").val(-1);
                     confirmDialog("卸料执行成功！");
                     pStatus = 0;
                     if (grnArray != null && grnArray.length > 0) {
                         setTimeout(function () {
                             try {
+                                $("#hdnPrintResId").val(savedPrintResId);
                                 Print(grnArray);
+                                $("#hdnPrintResId").val(-1);
                             }
                             catch (e) {
                                 alert(e);
@@ -1077,7 +1082,9 @@
                     for (var i = 0; i < lableArr.length; i++) {
                         var labelStr = lableArr[i];
                         var lablabItem = labItemList[i];
-                        var ajaxLabContent = SKT.LeanMES.Web.AjaxServices.AjaxPrint.returnLabelInfoForLab(labelDocumentId, labelStr, -1, -1, -1, lablabItem, -1);
+                        var printResId = parseInt($("#hdnPrintResId").val(), 10) || -1;
+                        if (printResId < 1) { printResId = -1; }
+                        var ajaxLabContent = SKT.LeanMES.Web.AjaxServices.AjaxPrint.returnLabelInfoForLab(labelDocumentId, labelStr, -1, printResId, -1, lablabItem, -1);
                         if (ajaxLabContent.error == null) {
                             var list = ajaxLabContent.value;
                             var page = { LabelContent: [] };

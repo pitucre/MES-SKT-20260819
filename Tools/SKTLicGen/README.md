@@ -1,7 +1,30 @@
-# SKTLicGen —— LeanMES 合法 SKTLicense.cer 生成器
+# SKTLicGen —— LeanMES 合法 SKTLicense.cer 生成器 v2.0
 
-基于本机硬件信息（CPU + MAC + 磁盘序列号）生成合法的 `SKTLicense.cer` 认证文件，
-供 LeanMES Web 系统在 IIS Express 本地运行使用。
+基于硬件信息（CPU + MAC + 磁盘序列号）生成合法的 `SKTLicense.cer` 认证文件，
+供 LeanMES Web 系统在 IIS 本地运行使用。
+
+## 快速开始
+
+### 方式一：从 hwinfo.txt 文件生成（推荐）
+
+1. 在目标电脑运行 `SKTHwCollector.exe`，生成 `hwinfo.txt`
+2. 将 `hwinfo.txt` 拷贝到开发商电脑
+3. 运行：
+```
+SKTLicGen.exe --hwinfo hwinfo.txt --out SKTLicense.cer --customer "客户名"
+```
+
+### 方式二：本机生成
+
+```
+SKTLicGen.exe --out "E:\source\MES\SKT\20260819\Code\Web\SKTLicense.cer"
+```
+
+### 方式三：命令行指定硬件（远程发授权）
+
+```
+SKTLicGen.exe --out "SKTLicense.cer" --cpu "CPU_ID" --mac "MAC_ADDR" --disk "DISK_SERIAL"
+```
 
 ## 原理（结合逆向分析结论）
 
@@ -36,6 +59,7 @@ SKTLicGen.exe [参数]
 
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
+| `--hwinfo` | 无 | 从 SKTHwCollector 生成的文件读取硬件信息 |
 | `--out` | `SKTLicense.cer` | 输出 .cer 文件路径 |
 | `--customer` | `LeanMES Dev` | 客户名称 |
 | `--system` | `LeanMES` | 系统名称 |

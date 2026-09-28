@@ -1,0 +1,11 @@
+144 procs (7): uspCollectionEquipmentProd, uspEquimentCollection, uspEquimentCollection_250908, uspEquimentCollectionHMG, uspEquimentCollectionHMGTest, uspEquimentCollectionHT, uspGetCollectionEngelDataHistoryReport
+179 procs (7): uspCollectionEquipmentProd, uspEquimentCollection, uspEquimentCollection_250908, uspEquimentCollectionHMG, uspEquimentCollectionHMGTest, uspEquimentCollectionHT, uspGetCollectionEngelDataHistoryReport
+Missing on 179: 
+Extra on 179: 
+144 jobs: s3, syspolicy_purge_history, 标准出货开立单据自动获取, 定时删除采集历史表数据, 定时执行设备状态变更时间, 日常备份和拷贝, 同步销售退回处理单, 注塑机台自动预警, 自动插入设备采集当前状态表数据, 自动发送注塑生产应急邮件
+179 jobs: syspolicy_purge_history, 定时删除采集历史表数据, 定时执行设备状态变更时间, 开立标准出货自动获取, 同步销售退回处理单, 注塑机台数据自动预警, 自动插入设备采集当前状态表数据, 自动发送注塑生产应急邮件
+144 linked: 172.16.5.179 -> 172.16.5.179
+144 linked: 172.16.5.155 -> 172.16.5.155
+179 linked: 172.16.5.155 -> 172.16.5.155
+144 activity ERR: 使用“0”个参数调用“ExecuteReader”时发生异常:“列名 'CollectTime' 无效。”
+179 activity ERR: 使用“0”个参数调用“ExecuteReader”时发生异常:“列名 'CollectTime' 无效。”

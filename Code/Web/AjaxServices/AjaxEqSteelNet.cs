@@ -54,8 +54,8 @@ namespace SKT.LeanMES.Web.AjaxServices
             try
             {
                 SearchSettings s = new SearchSettings();
-                s.ExtensionCondition += "MachineNumber='"+equCode+"' and   OrderNo like '%" + order + "%' and Planned_Start_Time >='" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd") + "' AND Planned_Start_Time <'" + DateTime.Now.AddDays(2).ToString("yyyy-MM-dd") + "'";
-
+                s.ExtensionCondition += "MachineNumber='"+equCode+"' and   OrderNo like '%" + order + "%' and Planned_Start_Time >='" + DateTime.Now.AddDays(-3).ToString("yyyy-MM-dd") + "' AND Planned_Start_Time <'" + DateTime.Now.AddDays(2).ToString("yyyy-MM-dd") + "'";
+                //2026.08.19 修改原因：模具可能要查询3天前的工单
                 return new SKT.LeanMES.Order.BLL.ShopOrder().GetInjectMoudlLinePlanAll(0, 20, "OrderNo  DESC", s);
             }
             catch (Exception)

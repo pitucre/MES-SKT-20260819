@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>LeanMES.FileMonitor</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net462</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <GenerateResourceUsePreserializedResources>false</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Remove="LeanMES.FileMonitor.FrmFileMonitor.resx" />
+    <EmbeddedResource Remove="LeanMES.FileMonitor.Properties.Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Quartz">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="M2Mqtt.Net">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\M2Mqtt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcUaHelper">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\OpcUaHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Core">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\Opc.Ua.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Client">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\Opc.Ua.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Dapper">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\DataCapature\MES软件\设备采集程序\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

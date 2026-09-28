@@ -1,0 +1,12 @@
+﻿# LeanMES 硬件信息 - 2026-09-24 10:25:08
+# 计算机名: ALLEN
+# 操作系统: Microsoft Windows NT 6.2.9200.0
+# 读取方式: Engine
+
+CPU=BFEBFBFF000B0671
+MAC=B0:DC:EF:BE:BE:14
+DISK=NVMe Samsung SSD 990 PRO 4TB
+MACHINE=BFEBFBFF000B0671B0:DC:EF:BE:BE:14NVMe Samsung SSD 990 PRO 4TB
+
+# SKTLicGen 命令行:
+# SKTLicGen.exe --out "SKTLicense.cer" --cpu "BFEBFBFF000B0671" --mac "B0:DC:EF:BE:BE:14" --disk "NVMe Samsung SSD 990 PRO 4TB"

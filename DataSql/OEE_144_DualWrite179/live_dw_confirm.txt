@@ -1,0 +1,10 @@
+A_144 MaxEngel=09/23/2026 12:56:30 MaxHid=42649799 Engel2m=26 Equip2m=26
+A_179 MaxEngel=09/23/2026 12:56:30 MaxHid=36507709 Engel2m=26 Equip2m=26
+B_144 MaxEngel=09/23/2026 12:57:59 MaxHid=42649831 Engel2m=26 Equip2m=26
+B_179 MaxEngel=09/23/2026 12:58:00 MaxHid=36507741 Engel2m=26 Equip2m=26
+C_144 MaxEngel=09/23/2026 12:59:15 MaxHid=42649847 Engel2m=26 Equip2m=26
+C_179 MaxEngel=09/23/2026 12:59:15 MaxHid=36507756 Engel2m=26 Equip2m=26
+144 uspEquimentCollection dual=True dup=False
+144 uspEquimentCollectionHMG dual=True dup=False
+144 uspEquimentCollectionHT dual=True dup=False
+144 uspEquimentCollection_250908 dual=True dup=False

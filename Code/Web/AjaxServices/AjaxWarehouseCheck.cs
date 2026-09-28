@@ -99,10 +99,10 @@ namespace SKT.LeanMES.Web.AjaxServices
         /// <param name="UserName"></param>
         /// <param name="Type">1:初盘 2：复盘</param>
         [AjaxMethod]
-        public int ScanCancelCheck(string CheckNo, string GRN, int Type)
+        public int ScanCancelCheck(string CheckNo, string GRN, int Type, string ScannedSN = null)
         {
             WarehouseCheck w = new WarehouseCheck();
-           return w.ScanCancelCheck(CheckNo, GRN, Type);
+           return w.ScanCancelCheck(CheckNo, GRN, Type, ScannedSN);
         }
         /// <summary>
         /// 盘点撤销检验
@@ -113,10 +113,10 @@ namespace SKT.LeanMES.Web.AjaxServices
         /// <param name="UserName"></param>
         /// <param name="Type">1:初盘 2：复盘</param>
         [AjaxMethod]
-        public void ScanRollback(string CheckNo, string GRN, string UserName, int Type)
+        public void ScanRollback(string CheckNo, string GRN, string UserName, int Type, string ScannedSN = null)
         {
             WarehouseCheck w = new WarehouseCheck();
-            w.ScanRollback(CheckNo, GRN, UserName, Type);
+            w.ScanRollback(CheckNo, GRN, UserName, Type, ScannedSN);
         }
 
         /// <summary>

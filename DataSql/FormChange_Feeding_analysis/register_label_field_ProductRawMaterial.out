@@ -1,0 +1,6 @@
+﻿消息 544，级别 16，状态 1，服务器 MESTEST，第 16 行
+当 IDENTITY_INSERT 设置为 OFF 时，不能为表 'Basal_LabelFieldDF' 中的标识列插入显式值。
+Inserted FieldDF: 1631
+Inserted DFDetail
+Inserted Basal_LabelField for doc 2
+       1631

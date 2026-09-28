@@ -1,0 +1,580 @@
+﻿	
+
+CREATE  PROCEDURE [dbo].[uspGetLabelContentForLabPrint]
+/*************************************************************************
+存储过程名： uspGetLabelContentForLabPrint
+功能描述 : 用于获取此标签的标签名、值。 
+		   Lab模板路径，已调整为在获取文档信息的时候，一并获取。
+		   支持联板Lab打印。 
+ 
+ 
+参数说明:   
+			@LabelDocumentId int,		--标签文档ID
+			@SN nvarchar(100),			--SN 产品条码/物料条码/包装条码，如果是多联标签此参数为多个SN的组合字符串，如2联，此参数值格式为：”BPS_YSK_00001P,BPS_YSK_00002P,“
+			@StationId int =-1,			--StationId 站位ID
+			@ResId int = -1,			--ResId 资源ID
+			@LineId int = -1,			--LineId 线别ID
+			@ItemId int = -1,			--ItemId 产品ID
+			@WOId int = -1				--WOId 工单ID
+			
+作	  者 ：zhibin.chen   
+创建时间 : 2016.03.11
+修改时间 : 2016.03.16 zhibin.Chen 修复一个标签字段设置多个变量时，在最终的Lab内容中，多次出现此标签名的Bug。
+								  修复一个标签字段设置多个变量时，最终打印的内容，是其中某一个变量的值的Bug。
+/**
+ * Update							Time						Description
+ * Sperkey.Zhong					2019-09-09-09				修复打印遇到‘\’符号的时候，打印不出来的问题
+ * yz.xiong							2023-05-26					修改标签字段Value值为VARHCAR(max)，支持JSON格式的表数据传值
+ */
+*************************************************************************/
+(
+	@LabelDocumentId int,		--标签文档ID
+	@SN nvarchar(max),			--SN 产品条码/物料条码/包装条码，如果是多联标签此参数为多个SN的组合字符串，如2联，此参数值格式为：”BPS_YSK_00001P,BPS_YSK_00002P,“
+	@StationId int =-1,			--StationId 站位ID
+	@ResId int = -1,			--ResId 资源ID
+	@LineId int = -1,			--LineId 线别ID
+	@ItemId int = -1,			--ItemId 产品ID
+	@WOId int = -1				--WOId 工单ID
+)
+   AS
+--20240202 Yang
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+BEGIN
+ 
+	--标签模板属性 - 标签联数
+	DECLARE @BatchCounts INT, @I INT, @SNString NVARCHAR(MAX),@documentName NVARCHAR(50)
+	SELECT @BatchCounts = PlateQty,@documentName=DocumentName FROM Basal_LabelDocument WHERE LabelDocumentId = @LabelDocumentId
+	SET @I = 1
+ 
+	--定义临时表，存储标签字段名和标签字段值
+	DECLARE @TemplateTable TABLE(
+		Id INT IDENTITY(1,1),
+		PlateIndex INT,		--联板序号
+		Name nvarchar(100),
+		Value nvarchar(MAX),
+		DFTableName  NVARCHAR(100),
+		DFContent  NVARCHAR(1000),
+		DfTableFieldFnName VARCHAR(500),
+		DFType INT,
+		VARName NVARCHAR(100),	--未加联板序号的最初标签字段名
+		OriginalName NVARCHAR(100),	 --最初定义在模板上的名称，在打印的时候，通过这个去更改模板的变量名称为上面的VARName
+		JoinIndex INT,			--同一个标签字段不同变量，在做内容拼接时的先后顺序号。
+		IsSetValue BIT			-- 是否已赋过值
+	)
+	IF @BatchCounts = 1
+	BEGIN
+		INSERT INTO @TemplateTable 
+		SELECT 1, A.FieldDesc , '', DfTableName, DfContent, DfTableFieldFnName, DfType, A.FieldDesc, A.FieldDesc, C.JoinIndex, 0  FROM Basal_LabelField  AS A 
+		INNER JOIN  Basal_LabelFieldDF AS B ON A.FieldDfID = B.FieldDfID  
+		INNER JOIN Basal_LabelFieldDFDetail AS C ON c.FieldDfID = B.FieldDfID
+		INNER JOIN Basal_LabelDocument  AS D ON A.LabelFieldID = D.LabelDocumentId
+		WHERE D.LabelDocumentId =  @LabelDocumentId ORDER BY C.JoinIndex ASC
+		SET @SNString = @SN+','		
+	END
+	ELSE IF @BatchCounts > 1
+	BEGIN
+		--新版打印方式，有多少个SN，就需要多少个标签字段，数据库不自动累加（旧版联板只设置1个标签字段，通过数据库累加）		
+		
+		--如果是联板，那么循环给标签变量名 加上一个序号数字。 另外PlateIndex 代表 联板中的第 N 个标签位
+		WHILE @I <= @BatchCounts
+		BEGIN
+		
+			INSERT INTO @TemplateTable 
+			SELECT @I, A.FieldDesc + CAST(@I AS VARCHAR(3)) AS FieldDesc , '', DfTableName, DfContent, DfTableFieldFnName, DfType, A.FieldDesc, A.FieldDesc, C.JoinIndex, 0  FROM Basal_LabelField  AS A 
+			INNER JOIN  Basal_LabelFieldDF AS B ON A.FieldDfID = B.FieldDfID  
+			INNER JOIN Basal_LabelFieldDFDetail AS C ON c.FieldDfID = B.FieldDfID
+			INNER JOIN Basal_LabelDocument  AS D ON A.LabelFieldID = D.LabelDocumentId
+			WHERE D.LabelDocumentId =  @LabelDocumentId ORDER BY C.JoinIndex ASC
+			 
+			SET @I = @I + 1 
+		END 
+		/*
+		INSERT INTO @TemplateTable 
+		SELECT ROW_NUMBER() OVER(ORDER BY C.JoinIndex), A.FieldDesc , '', DfTableName, DfContent, DfTableFieldFnName, DfType, A.FieldDesc, C.JoinIndex, 0  FROM Basal_LabelField  AS A 
+		INNER JOIN  Basal_LabelFieldDF AS B ON A.FieldDfID = B.FieldDfID  
+		INNER JOIN Basal_LabelFieldDFDetail AS C ON c.FieldDfID = B.FieldDfID
+		INNER JOIN Basal_LabelDocument  AS D ON A.LabelFieldID = D.LabelDocumentId
+		WHERE D.LabelDocumentId =  @LabelDocumentId ORDER BY C.JoinIndex ASC
+		*/
+		SET @SNString = @SN + ','
+		
+	END  
+     
+	--Basal_LabelFieldDF: DfType 1 - 数据库字段；2 - 函数； 3 - 常量
+	declare @LabelFieldString nvarchar(4000), @Sperator VARCHAR(5), @Value NVARCHAR(max), @JoinIndex INT,
+	@LabelFieldContent nvarchar(500), @LabelFieldTableName varchar(100), @LabelFieldTableField nvarchar(200), @LabelFieldContentType int,
+	@DBTableName varchar(100),
+	@sql nvarchar(4000),
+	@LabelValue nvarchar(max)
+	set @LabelFieldString = ''
+	set @Sperator = ','
+	set @Value = ''
+	set @sql = ''
+	set @LabelValue = ''
+ 
+ 
+	SET @I = 1
+	while CHARINDEX(@Sperator, @SNString) > 0
+	begin
+		set @LabelFieldString = ''
+ 
+		select  @LabelFieldString = @LabelFieldString + Name + @Sperator from @TemplateTable WHERE PlateIndex = @I
+ 
+		set @SN = SUBSTRING(@SNString, 0, CHARINDEX(@Sperator, @SNString))
+		 
+		--循环处理标签字段，并取出具体值 
+		while CHARINDEX(@Sperator, @LabelFieldString) > 0
+		begin
+			begin transaction	--将单个字段的处理作为一个事务，事务开始
+			select @Value = SUBSTRING(@LabelFieldString,0, CHARINDEX(@Sperator,@LabelFieldString))	--截取第一个标签字段
+ 
+			--解析标签字段内容 Basal_LabelFieldDF
+			declare cur_LabelFieldContent cursor for --定义游标
+			select DfContent,DfTableName,DfTableFieldFnName,DfType, JoinIndex from @TemplateTable 
+				WHERE PlateIndex = @I AND Name = @Value AND IsSetValue = 0
+			open cur_LabelFieldContent	--打开游标
+			
+			--将游标向下移动一行，将获取的数据放入变量@LabelFieldContent,@LabelFieldTableName,@LabelFieldTableField,@LabelFieldContentType中
+			fetch next from cur_LabelFieldContent into @LabelFieldContent,
+														@LabelFieldTableName,
+														@LabelFieldTableField,
+														@LabelFieldContentType,
+														@JoinIndex
+			
+			while @@FETCH_STATUS = 0	--判断是否成功获取数据
+			BEGIN
+				set @LabelValue = ''
+				--处理标签字段值 
+				--@LabelFieldContentType = 1 则此标签字段定义的节点为获取数据库字段值，关联Basal_LableDbMaping数据库表找到具体的数据库表
+				if @LabelFieldContentType = 1
+				BEGIN
+					--获取数据库实际表名
+					select @DBTableName = DBTableName from Basal_LableDbMaping where DBTableNameMaping = @LabelFieldTableName
+					
+					if LOWER(@DBTableName) = 'basal_item'
+					begin
+						select @sql = 'select @LabelValue = ' + @LabelFieldTableField + ' from Basal_Item where ItemId = ' + cast(@ItemId as varchar(20))
+						exec sp_executesql @sql,N'@LabelValue nvarchar(max) output',@LabelValue output
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end
+					else if LOWER(@DBTableName) = 'prod_serialnumber'
+					begin
+						select @sql = 'select @LabelValue = ' + @LabelFieldTableField + ' from Prod_SerialNumber where SNTypeID = 0 and Value = @SN'
+						exec sp_executesql @sql,N'@LabelValue nvarchar(max) output, @SN nvarchar(100)',@LabelValue output, @SN
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end
+					else if LOWER(@DBTableName) = 'prod_order' --工单信息
+					begin
+						select @sql = 'select @LabelValue = ' + @LabelFieldTableField + ' from Prod_Order where ProdOrderID = ' + cast(@WOId as varchar(20))
+						exec sp_executesql @sql,N'@LabelValue nvarchar(max) output',@LabelValue output
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end
+					else if LOWER(@DBTableName) = 'basal_itemdetail' --Basal_Item 的扩展字段
+					begin
+						select @LabelValue = isnull(ExtFieldValue,'') from vwExtensionTableFields 
+						where TableName = 'Basal_Item' and TableDataId = @ItemId 
+						and ExtensionFieldName = @LabelFieldTableField 
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end
+					else if LOWER(@DBTableName) = 'prod_unitdetail' --Prod_Unit 的扩展字段
+					begin
+						select @LabelValue = isnull(ExtFieldValue,'') from vwExtensionTableFields as a
+						inner join Prod_SerialNumber as b on a.TableDataId = b.[UID]
+						where TableName = 'Prod_Unit' and b.Value = @SN and b.SNTypeID = 0 
+						and ExtensionFieldName = @LabelFieldTableField 
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					END
+  					else if LOWER(@DBTableName) = 'prod_materialunit' --Prod_MaterialUnit 的字段
+					BEGIN
+						--Sperkey.Zhong 2021-04-17 去除Decimal后面的0
+						IF @LabelFieldTableField = 'balanceqty'
+						BEGIN
+							SET @LabelFieldTableField = 'CAST(BalanceQty AS varchar(100))'
+						END
+						SELECT @sql = 'select @LabelValue = ' + @LabelFieldTableField + ' from Prod_MaterialUnit where SerialNumber = ''' + @SN + ''''
+						PRINT @sql
+						EXEC sp_executesql @sql,N'@LabelValue nvarchar(max) output',@LabelValue output
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end                  
+					--其它表或扩展字段可以在此继续扩展
+					--//TO DO
+				end
+				else if @LabelFieldContentType = 2  --@LabelFieldContentType = 2 为函数
+				begin
+					if CHARINDEX('UdfGetLBL_',@LabelFieldTableField) > 0  --数据库函数
+					begin
+						select @sql = 'select @LabelValue = dbo.'+ @LabelFieldTableField +'(@SN,@StationId,@ResId,@LineId,@ItemId,@WOId)'
+						exec sp_executesql @sql, N'@LabelValue nvarchar(max) output,@SN nvarchar(100),@StationId int,@ResId int,@LineId int,@ItemId int,@WOId int', @LabelValue output,@SN,@StationId,@ResId,@LineId,@ItemId,@WOId
+						if @@ERROR <> 0
+						begin
+							rollback transaction
+							return
+						end
+					end
+					else
+					begin
+						--系统内置函数 year, month, day, week
+						/*
+						 select CONVERT(varchar(20),GETDATE(),120) --2015-12-07 12:15:24
+						 select CONVERT(varchar(10),GETDATE(),120) --2015-12-07
+						 select CONVERT(varchar(20),GETDATE(),110) --12-07-2015
+						 select CONVERT(varchar(20),GETDATE(),101) --12/07/2015
+						 select CONVERT(varchar(20),GETDATE(),109) --Dec  7 2015 12:16:17
+						 select CONVERT(varchar(20),GETDATE(),111) --2015/12/07
+						 select CONVERT(varchar(20),GETDATE(),24)  --12:18:06
+						 select CONVERT(varchar(20),GETDATE(),8)   --12:18:06
+						 */
+						 if LOWER(@LabelFieldTableField) = 'year'
+						 begin
+							select @LabelValue = datepart(YEAR,getdate()) 
+						 end
+						 if LOWER(@LabelFieldTableField) = 'year2'
+						 begin
+							select @LabelValue = datepart(YEAR,getdate()) 
+							select @LabelValue = SUBSTRING(@LabelValue,3,4)
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'month'
+						 begin
+							DECLARE @month VARCHAR(2)
+							SET @month = cast(datepart(MONTH,getdate()) AS VARCHAR(2))
+							IF LEN(@month) = 1
+							BEGIN
+								SET @month = '0' + @month                 
+							END  
+							          
+							SET @LabelValue = @month
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'day'
+						 begin
+							select @LabelValue = datepart(DAY,getdate()) 
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'week'
+						 begin
+							select @LabelValue = datepart(WEEK,getdate()) 
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'hour'
+						 begin
+							select @LabelValue = datepart(HOUR,getdate()) 
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'minute'
+						 begin
+							select @LabelValue = datepart(MINUTE,getdate()) 
+						 end
+						 else if LOWER(@LabelFieldTableField) = 'second'
+						 begin
+							select @LabelValue = datepart(SECOND,getdate()) 
+						 end
+					end
+				end
+				else if @LabelFieldContentType = 3  --@LabelFieldContentType = 3 为常量
+				begin
+					select @LabelValue = REPLACE(@LabelFieldContent,'"','')
+				END
+                ELSE IF @LabelFieldContentType = 4
+				BEGIN
+					DECLARE @DFTableName NVARCHAR(100), @DFContent  NVARCHAR(1000), @DfTableFieldFnName VARCHAR(500), @DFType INT, @VARName NVARCHAR(100), @OriginalName VARCHAR(100)
+					SELECT @DFTableName = DFTableName, @DFContent = DFContent, @DfTableFieldFnName = DfTableFieldFnName, @DFType = DFType, @VARName = VARName, @OriginalName = OriginalName
+					FROM @TemplateTable  WHERE PlateIndex = @I AND Name = @Value AND JoinIndex = @JoinIndex
+ 
+					--更新临时表对应的字段值
+					DELETE @TemplateTable  WHERE PlateIndex = @I AND Name = @Value AND JoinIndex = @JoinIndex
+					if @@ERROR <> 0
+					begin
+						rollback transaction
+						return
+					END
+					
+					--执行存储过程
+					DECLARE @EXECPROC VARCHAR(MAX) = ''
+					SET @EXECPROC = (
+					SELECT 'EXEC '+c.DfContent + ' '''+@SN+''';'
+					FROM Basal_LabelField  AS A 
+					INNER JOIN  Basal_LabelFieldDF AS B ON A.FieldDfID = B.FieldDfID  
+					INNER JOIN Basal_LabelFieldDFDetail AS C ON c.FieldDfID = B.FieldDfID
+					INNER JOIN Basal_LabelDocument  AS D ON A.LabelFieldID = D.LabelDocumentId
+					WHERE D.LabelDocumentId = @LabelDocumentId AND DfType = 4
+					ORDER BY C.JoinIndex ASC
+					FOR XML PATH(''))
+	
+					DECLARE @keyValue AS TABLE(Name VARCHAR(100),Value VARCHAR(MAX))
+					IF @EXECPROC <> ''
+					BEGIN
+						DELETE FROM @keyValue;
+						INSERT INTO @keyValue(Name,Value)
+						EXEC(@EXECPROC)
+						--select @EXECPROC
+ 
+						INSERT INTO @TemplateTable
+						        ( PlateIndex ,
+						          Name ,
+						          Value ,
+						          DFTableName ,
+						          DFContent ,
+						          DfTableFieldFnName ,
+								  OriginalName,
+						          DFType ,
+						          VARName ,
+						          JoinIndex ,
+						          IsSetValue
+						        )
+						SELECT @I, CASE WHEN @BatchCounts = 1 THEN Name ELSE Name  + CAST(@I AS VARCHAR(3)) END, Value, @DBTableName, @DFContent, @DfTableFieldFnName, @OriginalName, @DFType, Name, @JoinIndex, 1
+						FROM @keyValue 
+					END	
+				END
+								
+				--更新临时表对应的字段值
+				update @TemplateTable set Value = Value + @LabelValue, IsSetValue = 1 WHERE PlateIndex = @I AND Name = @Value AND JoinIndex = @JoinIndex
+				if @@ERROR <> 0
+				begin
+					rollback transaction
+					return
+				END
+  
+  				----拼接 相同标签名的值  
+				UPDATE @TemplateTable SET Value = Value + @LabelValue              
+				WHERE PlateIndex = @I AND Name = @Value AND JoinIndex = 0 AND @JoinIndex > 0
+ 
+				--将游标向下移动一行
+				fetch next from cur_LabelFieldContent into @LabelFieldContent,@LabelFieldTableName,@LabelFieldTableField,@LabelFieldContentType,@JoinIndex
+			end
+			--关闭游标
+			close cur_LabelFieldContent
+			deallocate cur_LabelFieldContent
+			
+			SET @LabelFieldString = SUBSTRING(@LabelFieldString,CHARINDEX(@Sperator,@LabelFieldString) + 1,LEN(@LabelFieldString) - CHARINDEX(@Sperator,@LabelFieldString))
+			 
+			commit transaction	--提交事务
+		END
+		SET @SNString = SUBSTRING(@SNString,CHARINDEX(@Sperator,@SNString) + 1, LEN(@SNString) - CHARINDEX(@Sperator,@SNString))
+		SET @i = @i + 1
+	end
+ 
+	----删除多余行记录
+	DELETE a FROM @TemplateTable AS a , @TemplateTable AS b WHERE a.NAME = b.NAME  AND a.JoinIndex > 0
+ 
+	--1088 维护了需要打印2个标签，成品包装完后系统只打印出一个标签  Snow.hu 20230629  标签模板里未维护字段数据提示 
+	--DECLARE @msg NVARCHAR(max)
+	--IF	NOT EXISTS(SELECT 1 FROM @TemplateTable)
+	--BEGIN
+	--	SET @msg='标签模板【'+@documentName+'】未维护对应的标签字段数据'
+	--	RAISERROR(@msg,12,1)
+	--	return
+	--END
+
+	--Sperkey.Zhong 2019-09-09-09 修复打印遇到‘\’符号的时候，打印不出来的问题
+	--SELECT ISNULL(Name,''), ISNULL(Value,'') FROM @TemplateTable
+	SELECT ISNULL(Name,''),REPLACE( ISNULL(Value,''),'\','\\'),OriginalName FROM @TemplateTable
+END
+ 
+
+
+
+
+
+CREATE FUNCTION [dbo].[UdfGetLBL_CrusherCode]
+(
+	@SN NVARCHAR(100),
+	@StationID INT,
+	@ResID INT,
+	@LineID INT,
+	@ItemId INT,
+	@WOId INT
+)
+RETURNS NVARCHAR(100)
+AS
+BEGIN
+	
+	DECLARE @ResultStr NVARCHAR(100) = ''; 
+
+	SELECT @ResultStr = b.EquipmentCode FROM dbo.Prod_MaterialUnit a INNER JOIN dbo.Prod_SrapFeeding b ON a.SrapFeedingNo = b.SrapFeedingNo WHERE a.SerialNumber = @SN
+
+    RETURN @ResultStr;
+
+END
+
+
+CREATE FUNCTION [dbo].[UdfGetLBL_SNRawMaterial]  
+/*************************************************************************  
+函数名： [UdfGetLBL_ItemCode]  
+功能描述 : 获取原材料  
+  
+参数说明:   @SN NVARCHAR(100),  
+   @StationID INT,  
+   @ResID INT,  
+   @LineID INT,  
+   @ItemId INT,  
+   @WOId INT  
+  
+作者 ：Hans  
+创建时间 : 2024.11.2  
+  
+*************************************************************************/  
+(  
+ @SN NVARCHAR(100),  
+ @StationID INT,  
+ @ResID INT,  
+ @LineID INT,  
+ @ItemId INT,  
+ @WOId INT  
+)  
+RETURNS NVARCHAR(50)  
+AS  
+BEGIN  
+  
+    DECLARE @rowmaterial VARCHAR(500);   
+  
+         SELECT @rowmaterial = isnull(c.ExtFieldValue,'') FROM dbo.Prod_Unit a WITH(NOLOCK)  
+		 INNER JOIN dbo.Basal_Item b WITH(NOLOCK) ON a.ItemID = b.ItemID  
+		 inner join dbo.Basal_Item_Ext c on b.ItemID = c.TableDataId  
+		 inner join Basal_ExtensionFields d on c.ExtFieldsId = d.ExtensionFieldsId and d.TableName = 'Basal_Item' and d.ExtensionFieldName = '原材料'  
+		 WHERE a.SN=@SN  
+  
+  	  --分料截料在GRN条码Prod_Unit表没有数据 所以查找物料表
+	IF  ISNULL(@rowmaterial,'')=''
+	BEGIN 
+	    SELECT @rowmaterial = isnull(c.ExtFieldValue,'') FROM dbo.Prod_MaterialUnit a WITH(NOLOCK)  
+		 INNER JOIN dbo.Basal_Item b WITH(NOLOCK) ON a.PartId = b.ItemID  
+		 inner join dbo.Basal_Item_Ext c on b.ItemID = c.TableDataId  
+		 inner join Basal_ExtensionFields d on c.ExtFieldsId = d.ExtensionFieldsId and d.TableName = 'Basal_Item' and d.ExtensionFieldName = '原材料'  
+		 WHERE a.SerialNumber=@SN  
+
+		
+	END 
+
+
+    RETURN @rowmaterial;  
+  
+END
+
+
+CREATE FUNCTION dbo.UdfGetLBL_ProductRawMaterial
+(
+    @SN NVARCHAR(100),
+    @StationID INT,
+    @ResID INT,
+    @LineID INT,
+    @ItemId INT,
+    @WOId INT
+)
+RETURNS NVARCHAR(MAX)
+AS
+BEGIN
+    DECLARE @Result NVARCHAR(MAX) = N'';
+    DECLARE @EquipmentCode VARCHAR(20);
+    DECLARE @MachineNo VARCHAR(10);
+    DECLARE @OrderNO VARCHAR(50);
+    DECLARE @ItemCode VARCHAR(50);
+    DECLARE @ItemName NVARCHAR(200);
+    DECLARE @BOMId INT;
+    DECLARE @Product NVARCHAR(MAX) = N'';
+    DECLARE @RawList NVARCHAR(MAX) = N'';
+
+    IF ISNULL(@ResID, -1) <= 0
+        RETURN @Result;
+
+    -- ResName「N号注塑机通用资源」→ 号前数字
+    SELECT @MachineNo = CASE
+        WHEN PATINDEX('%[0-9]%', ResName) > 0
+             AND CHARINDEX(N'号', ResName) > PATINDEX('%[0-9]%', ResName)
+        THEN SUBSTRING(ResName, PATINDEX('%[0-9]%', ResName),
+                       CHARINDEX(N'号', ResName) - PATINDEX('%[0-9]%', ResName))
+        ELSE NULL
+    END
+    FROM dbo.Basal_Resource WITH (NOLOCK)
+    WHERE ResourceId = @ResID;
+
+    IF @MachineNo IS NULL
+        RETURN @Result;
+
+    SET @EquipmentCode = RIGHT('000' + @MachineNo, 3);
+
+    -- 机台当前工单（与 usp_OrderControl_GetMachineCurrentOrder 口径对齐，并兼容测试库在制状态）
+    SELECT TOP 1
+        @OrderNO = o.OrderNO,
+        @ItemCode = o.ItemCode,
+        @BOMId = o.BOMId
+    FROM dbo.ERP_Prod_Order o WITH (NOLOCK)
+    WHERE o.MachineNumber = @EquipmentCode
+      AND o.Status IN (1, 2, 0, 3)
+      AND o.Qty_to_Build > 0
+    ORDER BY CASE o.Status WHEN 1 THEN 0 WHEN 2 THEN 1 ELSE 2 END,
+             o.Planned_Start_Time DESC;
+
+    IF @OrderNO IS NULL
+        RETURN @Result;
+
+    SELECT @ItemName = ISNULL(i.ItemName, '')
+    FROM dbo.Basal_Item i WITH (NOLOCK)
+    WHERE i.ItemCode = @ItemCode;
+
+    SET @Product = N'产品:' + ISNULL(@ItemCode, '') + N' ' + ISNULL(@ItemName, N'');
+
+    -- BOMId 为空时按产品反查
+    IF ISNULL(@BOMId, 0) = 0
+    BEGIN
+        SELECT TOP 1 @BOMId = b.ItemBomId
+        FROM dbo.Basal_ItemBom b WITH (NOLOCK)
+        WHERE b.ItemCode = @ItemCode
+           OR b.ItemId IN (SELECT ItemId FROM dbo.Basal_Item WITH (NOLOCK) WHERE ItemCode = @ItemCode)
+        ORDER BY b.ItemBomId DESC;
+    END
+
+    IF ISNULL(@BOMId, 0) > 0
+    BEGIN
+        SELECT @RawList = STUFF((
+            SELECT N',' + c.ItemCode + N' ' + ISNULL(c.ItemName, N'')
+            FROM dbo.Basal_ItemBomChild c WITH (NOLOCK)
+            WHERE c.ItemBomId = @BOMId
+              AND ISNULL(c.IsFictitious, 0) = 0
+              AND (
+                    c.ItemCode LIKE '03%'
+                    OR (
+                        NOT EXISTS (
+                            SELECT 1 FROM dbo.Basal_ItemBomChild c2 WITH (NOLOCK)
+                            WHERE c2.ItemBomId = @BOMId AND c2.ItemCode LIKE '03%'
+                        )
+                    )
+              )
+            ORDER BY c.ItemBomChildId
+            FOR XML PATH(''), TYPE
+        ).value('.', 'NVARCHAR(MAX)'), 1, 1, N'');
+    END
+
+    IF ISNULL(@RawList, N'') <> N''
+        SET @Result = @Product + N' | 原料:' + @RawList;
+    ELSE
+        SET @Result = @Product;
+
+    RETURN @Result;
+END
+
+       1631 产品原料信息               fn.UdfGetLBL_ProductRawMaterial()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+       1630 形态转换单号               fn.UdfGetLBL_MaterialFormChangeNo()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+       1628 销退客户名称               fn.UdfGetLBL_SaleReturnCustomerName()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+       1627 销退单号                 fn.UdfGetLBL_SaleReturnNo()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+       1626 碎料机台号                fn.UdfGetLBL_CrusherCode()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

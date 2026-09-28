@@ -39,12 +39,29 @@ namespace SKT.LeanMES.ProductionCollection.Client
             ComMethod.Edit("uspSrapFeedingDeleteBarCode", parms);
         }
 
+        public string GetMaterialCandidates(string BarCode, string Prefix)
+        {
+            SqlParameter[] parms = new SqlParameter[]{
+                    new SqlParameter("@BarCode", SqlDbType.VarChar) { Value=BarCode},
+                    new SqlParameter("@Prefix", SqlDbType.VarChar) { Value=Prefix}
+            };
+            return ComMethod.GetList("uspGetMaterialCandidates", parms);
+        }
+
         public string FeedingHopperLoadCrusher(string CrusherCode, string BarCode, string CreateBy)
+        {
+            return FeedingHopperLoadCrusher(CrusherCode, BarCode, CreateBy, null);
+        }
+
+        public string FeedingHopperLoadCrusher(string CrusherCode, string BarCode, string CreateBy, string SelectedMaterial)
         {
             SqlParameter[] parms = new SqlParameter[]{
                     new SqlParameter("@CrusherCode", SqlDbType.VarChar) { Value=CrusherCode},
                     new SqlParameter("@BarCode", SqlDbType.VarChar) { Value=BarCode},
-                    new SqlParameter("@CreateBy", SqlDbType.NVarChar) { Value=CreateBy}
+                    new SqlParameter("@CreateBy", SqlDbType.NVarChar) { Value=CreateBy},
+                    new SqlParameter("@SelectedMaterial", SqlDbType.VarChar) {
+                        Value = string.IsNullOrEmpty(SelectedMaterial) ? (object)DBNull.Value : SelectedMaterial
+                    }
             };
             return ComMethod.GetList("uspFeedingHopperLoadCrusher", parms);
         }

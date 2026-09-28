@@ -1,0 +1,168 @@
+{
+  "server": "172.16.5.144",
+  "database": "LeanMes",
+  "createBy": "admin",
+  "modifyBy": "admin",
+  "items": [
+    {
+      "templateFile": "templates/P90_monthly_production.html",
+      "cnName": "P90 每月产量情况",
+      "enName": "P90 Monthly Production Report",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 27,
+      "icon": "",
+      "description": "按月/设备统计产量与不良率,含图表分析",
+      "spName": "uspBI_MonthlyProductionReport"
+    },
+    {
+      "templateFile": "templates/P91_daily_work.html",
+      "cnName": "P91 每日报工数量",
+      "enName": "P91 Daily Work Report",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 28,
+      "icon": "",
+      "description": "按日/班别统计报工数量与笔数,含图表分析",
+      "spName": "uspBI_DailyWorkReport"
+    },
+    {
+      "templateFile": "templates/Q90_monthly_quality.html",
+      "cnName": "Q90 每月质量情况",
+      "enName": "Q90 Monthly Quality Report",
+      "reportType": "BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71",
+      "sequence": 7,
+      "icon": "",
+      "description": "按月/不良代码/类别统计发生件数与数量及月内占比,含图表分析",
+      "spName": "uspBI_MonthlyQualityReport"
+    },
+    {
+      "templateFile": "templates/P92_loading_bom_analysis.html",
+      "cnName": "P92 上料BOM分析报表",
+      "enName": "P92 Loading BOM Analysis",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 29,
+      "icon": "",
+      "description": "按工单/机台核对上料与BOM用料差异,含图表分析",
+      "spName": "uspBI_LoadingBomAnalysis_Program"
+    },
+    {
+      "templateFile": "templates/P93_mould_shots.html",
+      "cnName": "P93 模具模次报表",
+      "enName": "P93 Mould Shots Report",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 30,
+      "icon": "",
+      "description": "按日/模具统计模次与开机机台,含图表分析",
+      "spName": "uspBI_MouldShotsReport_Program"
+    },
+    {
+      "templateFile": "templates/P96_capacity_achieve.html",
+      "cnName": "P96 产能达成报表",
+      "enName": "P96 Capacity Achievement",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 31,
+      "icon": "",
+      "description": "按日/机台统计计划与实际产能达成率,含图表分析",
+      "spName": "uspBI_CapacityAchieveReport_Program"
+    },
+    {
+      "templateFile": "templates/D01_prod_dashboard.html",
+      "cnName": "D01 生产驾驶舱",
+      "enName": "D01 Production Dashboard",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 32,
+      "icon": "",
+      "description": "生产模块综合看板:产量达成趋势/机台完成/停机原因构成",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/D05_mold_dashboard.html",
+      "cnName": "D05 模具驾驶舱",
+      "enName": "D05 Mould Dashboard",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 33,
+      "icon": "",
+      "description": "模具模块综合看板:模次趋势/模具TOP10/换模次数",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/P95_scrap_nc_analysis.html",
+      "cnName": "P95 不良报废分析报表",
+      "enName": "P95 Scrap NC Analysis",
+      "reportType": "BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71",
+      "sequence": 8,
+      "icon": "",
+      "description": "按日/不良代码统计登记报废与不良数量,含图表分析",
+      "spName": "uspBI_ScrapNcAnalysis_Program"
+    },
+    {
+      "templateFile": "templates/D02_quality_dashboard.html",
+      "cnName": "D02 品质驾驶舱",
+      "enName": "D02 Quality Dashboard",
+      "reportType": "BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71",
+      "sequence": 9,
+      "icon": "",
+      "description": "品质模块综合看板:不良趋势/不良TOP10/报废趋势/退货TOP8",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/Q91_regrind_source.html",
+      "cnName": "Q91 粉碎料来源报表",
+      "enName": "Q91 Regrind Source Report",
+      "reportType": "C7A32644-8771-458D-88F3-9DF6CFB7E49B",
+      "sequence": 17,
+      "icon": "",
+      "description": "按日/来源统计粉碎料入库与物料收料入库,含图表分析",
+      "spName": "uspBI_RegrindSourceAnalysis_Program"
+    },
+    {
+      "templateFile": "templates/D03_wh_dashboard.html",
+      "cnName": "D03 仓库驾驶舱",
+      "enName": "D03 Warehouse Dashboard",
+      "reportType": "C7A32644-8771-458D-88F3-9DF6CFB7E49B",
+      "sequence": 18,
+      "icon": "",
+      "description": "仓库模块综合看板:粉碎料趋势/来源占比/物料入库趋势",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/P94_downtime_analysis.html",
+      "cnName": "P94 停机分析报表",
+      "enName": "P94 Downtime Analysis",
+      "reportType": "85F55665-3CA3-42B4-949B-F9496AFAD683",
+      "sequence": 4,
+      "icon": "",
+      "description": "按日/机台/状态统计停机时长与原因,含图表分析",
+      "spName": "uspBI_DowntimeAnalysis_Program"
+    },
+    {
+      "templateFile": "templates/D04_equip_dashboard.html",
+      "cnName": "D04 设备驾驶舱",
+      "enName": "D04 Equipment Dashboard",
+      "reportType": "85F55665-3CA3-42B4-949B-F9496AFAD683",
+      "sequence": 5,
+      "icon": "",
+      "description": "设备模块综合看板:状态占比/故障TOP10/机台运行率",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/D06_mgmt_dashboard.html",
+      "cnName": "D06 管理驾驶舱",
+      "enName": "D06 Management Dashboard",
+      "reportType": "F0257AA3-4A50-44E6-912E-06FC4ED29F8D",
+      "sequence": 5,
+      "icon": "",
+      "description": "管理模块综合看板:核心KPI/产量达成/不良TOP10/设备状态",
+      "spName": "uspBI_DashboardCore_Program"
+    },
+    {
+      "templateFile": "templates/P97_workorder_production.html",
+      "cnName": "P97_工单产品生产报表",
+      "enName": "P97 WorkOrder Production Report",
+      "reportType": "16217B99-6CCC-456E-A0C3-8E5A3EF66F7E",
+      "sequence": 34,
+      "icon": "",
+      "description": "按工单统计开关模次数/实际产品数/良品数,含图表分析",
+      "spName": "uspBI_WorkOrderProductionReport_Program"
+    }
+  ]
+}

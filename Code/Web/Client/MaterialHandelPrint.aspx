@@ -388,7 +388,9 @@
                 for (var i = 0; i < lableArr.length; i++) {
                     var labelStr = lableArr[i];
 
-                    var ajaxLabContent = SKT.LeanMES.Web.AjaxServices.AjaxPrint.returnLabelInfoForLab(labelDocumentId, labelStr, -1, -1, -1, lablabItem, -1);
+                    var printResId = parseInt(resourceId, 10) || -1;
+                    if (printResId < 1) { printResId = -1; }
+                    var ajaxLabContent = SKT.LeanMES.Web.AjaxServices.AjaxPrint.returnLabelInfoForLab(labelDocumentId, labelStr, -1, printResId, -1, lablabItem, -1);
                     if (ajaxLabContent.error == null) {
                         var list = ajaxLabContent.value;
                         var page = { LabelContent: [] };

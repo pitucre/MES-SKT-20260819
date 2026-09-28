@@ -75,6 +75,15 @@ namespace SKT.LeanMES.ProductionCollection.Client
             return ComMethod.GetList("uspGetItem", parms);
         }
 
+        public string GetMaterialCandidates(string BarCode, string Prefix)
+        {
+            SqlParameter[] parms = new SqlParameter[]{
+                    new SqlParameter("@BarCode", SqlDbType.VarChar) { Value=BarCode},
+                    new SqlParameter("@Prefix", SqlDbType.VarChar) { Value=Prefix}
+            };
+            return ComMethod.GetList("uspGetMaterialCandidates", parms);
+        }
+
         /// <summary>
         /// 形态转换-ERP回写
         /// </summary>

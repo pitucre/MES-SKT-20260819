@@ -1,0 +1,7 @@
+idx=41395 len=41868
+snippet_written
+TEST REMOTE_OK |  | 
+probe_in_179 cnt=2 maxHid=36507683
+TESTLINK_ERR 使用“0”个参数调用“ExecuteNonQuery”时发生异常:“过程需要类型为 'sysname' 的参数 '@servername'。”
+179 MaxEngel=09/23/2026 12:52:04
+179 MaxHid=36507683

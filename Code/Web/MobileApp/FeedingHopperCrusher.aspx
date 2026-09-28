@@ -96,10 +96,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="GRN">
+                            <label for="MaterialSelect">
                                 所用原料</label>
                         </td>
                         <td>
+                            <select id="MaterialSelect" data-mini="true" style="width:100%;display:none;">
+                            </select>
                             <input type="text" id="MaterialName" disabled="disabled" />
                         </td>
                         <td>
@@ -181,7 +183,7 @@
             $('#listno').on("keydown", function (e) {
                 var curKey = 0, e = e || window.event;
                 curKey = e.keyCode || e.which || e.charCode;
-                if (curKey == 13) {
+                    if (curKey == 13) {
                     $("#msg").html("");
 
                     if ($.trim($(this).val()) == "") {
@@ -197,6 +199,16 @@
                         $(this).val('').focus();
                         return false;
                     }
+                    // 换机台时重置本单原料会话
+                    sessionMaterial = "";
+                    sessionMaterialName = "";
+                    lastLoadedBarCode = "";
+                    lastLoadedDtId = 0;
+                    pendingBarCode = "";
+                    pendingCrusher = "";
+                    $("#MaterialSelect").hide().html("");
+                    $("#MaterialName").val("");
+                    $("#MaterialCode").val("");
                     GetFeedingHopper(CrusherCode);
                     $("#GRN").val('').focus();
                 }
@@ -224,6 +236,15 @@
             function ResList(EquipmentCode) {
                 $("#msg").html("");
                 $("#listno").val(EquipmentCode);
+                sessionMaterial = "";
+                sessionMaterialName = "";
+                lastLoadedBarCode = "";
+                lastLoadedDtId = 0;
+                pendingBarCode = "";
+                pendingCrusher = "";
+                $("#MaterialSelect").hide().html("");
+                $("#MaterialName").val("");
+                $("#MaterialCode").val("");
                 GetFeedingHopper(EquipmentCode);
                 $("input[data-type='search']").val('');
                 $("#OrderPanel").panel("close");
@@ -233,17 +254,16 @@
             function GetFeedingHopper(EquipmentCode) {
                 var ajax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.GetSrapFeedingDtl(EquipmentCode);
                 if (ajax.error != null) {
-                    confirmDialog(ajax.error.Message);
+                    showTip(ajax.error.Message, "red");
                     return false;
                 }
-                var list = JSON.parse(ajax.value).data;
                 if (ajax.value == null) {
                     return false;
                 }
-
+                var list = JSON.parse(ajax.value).data || [];
+                var htmlstr = "";
                 $("#InfoTableGrn tbody").html("");
                 if (list.length > 0) {
-                    var htmlstr = "";
                     for (var i = 0; i < list.length; i++) {
                         htmlstr += "<tr>";
                         htmlstr += "<td>" + list[i].BarCode + "</td>";
@@ -253,8 +273,27 @@
                         htmlstr += "<td><a href='javascript:void(0);' onclick=\"DeleteBarCode('" + list[i].SrapFeedingDtId + "','" + list[i].EquipmentCode + "')\"><%=Resources.lang.Delete %></a></td>";
                         htmlstr += "</tr>";
                     }
-                    $("#MaterialName").val(list[0]["MaterialPartNumberName"]);
-                    $("#MaterialCode").val(list[0]["MaterialPartNumberCode"]);
+                    // 本单原料以服务端单头为准
+                    if (list[0]["MaterialPartNumberCode"]) {
+                        sessionMaterial = list[0]["MaterialPartNumberCode"];
+                        sessionMaterialName = list[0]["MaterialPartNumberName"] || sessionMaterial;
+                    }
+                    $("#MaterialName").val(sessionMaterialName || "");
+                    $("#MaterialCode").val(sessionMaterial || "");
+                    if (lastLoadedBarCode) {
+                        lastLoadedDtId = findDtlIdByBarCode(list);
+                    } else {
+                        lastLoadedBarCode = list[list.length - 1].BarCode;
+                        lastLoadedDtId = list[list.length - 1].SrapFeedingDtId;
+                    }
+                } else {
+                    sessionMaterial = "";
+                    sessionMaterialName = "";
+                    lastLoadedBarCode = "";
+                    lastLoadedDtId = 0;
+                    $("#MaterialName").val("");
+                    $("#MaterialCode").val("");
+                    $("#MaterialSelect").hide().html("");
                 }
 
                 $("#InfoTableGrn tbody").html(htmlstr);
@@ -265,10 +304,17 @@
             function DeleteBarCode(SrapFeedingDtId, EquipmentCode) {
                 var ajax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.SrapFeedingDeleteBarCode(SrapFeedingDtId);
                 if (ajax.error != null) {
-                    confirmDialog(ajax.error.Message);
+                    showTip(ajax.error.Message, "red");
                     return false;
                 }
+                if (SrapFeedingDtId == lastLoadedDtId) {
+                    lastLoadedDtId = 0;
+                    lastLoadedBarCode = "";
+                }
+                showTip("已删除", "#0a8f00");
+                // 删完若无明细，重置本单原料，允许重新扫
                 GetFeedingHopper(EquipmentCode);
+                focusScan();
             }
 
 
@@ -280,43 +326,235 @@
                 getPickListDetail(1, "InfoTableGrn");
             }
 
-            var scanSN;
-            //上料
-            $("#GRN").on("keydown", function () {
-                var curKey = 0, e = e || window.event;
-                curKey = e.keyCode || e.which || e.charCode;
-                if (curKey == 13) {
-                    $(".msg").html("");
-                    var fMaterialBucketCode = $.trim($("#listno").val());
-                    if (fMaterialBucketCode == "") {
-                        confirmDialogFocus("请选择或扫描碎料机编码", function () {
-                            $("#listno").select();
-                        });
-                        return false;
-                    }
-                    scanSN = $.trim($("#GRN").val());
-                    if (scanSN == "") {
-                        confirmDialogFocus("请输入GRN", function () {
-                            $("#GRN").select();
-                        });
-                        return false;
-                    }
+            var scanSN = "";
+            var pendingCandidates = [];
+            var pendingBarCode = "";
+            var pendingCrusher = "";
+            var sessionMaterial = "";
+            var sessionMaterialName = "";
+            var lastLoadedBarCode = "";
+            var lastLoadedDtId = 0;
+            var isLoading = false;
 
-                    var ajax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.FeedingHopperLoadCrusher(fMaterialBucketCode, scanSN);
-                    if (ajax.error != null) {
-                        confirmDialog(ajax.error.Message);
-                        $("#GRN").val("").focus();
-                        return false;
-                    }
+            function showTip(text, color) {
+                $("#msg").html(text).css("color", color || "#1d1007");
+            }
 
-                    $(".msg").html(scanSN + "上料成功!").css("color", "#7FFF00");
-                    scanSN = "";
-                    setTimeout(function () {
-                        $(".msg").html("");
-                    }, 1500);
-                    $("#GRN").val("").focus();
-                    GetFeedingHopper(fMaterialBucketCode);
+            function focusScan() {
+                $("#GRN").val("").focus();
+            }
+
+            function materialNameOf(code) {
+                for (var i = 0; i < pendingCandidates.length; i++) {
+                    if (pendingCandidates[i].ItemCode == code) {
+                        return pendingCandidates[i].ItemName || "";
+                    }
                 }
+                return sessionMaterialName || "";
+            }
+
+            function fillMaterialSelect(candData, selectedCode) {
+                var $sel = $("#MaterialSelect");
+                $sel.html("<option value=''>--请选择原料--</option>");
+                for (var i = 0; i < candData.length; i++) {
+                    var selected = (selectedCode && candData[i].ItemCode == selectedCode) ? " selected='selected'" : "";
+                    $sel.append("<option value='" + candData[i].ItemCode + "'" + selected + ">" + candData[i].ItemCode + " " + (candData[i].ItemName || "") + "</option>");
+                }
+                $sel.show();
+            }
+
+            function findInCand(candData, code) {
+                if (!code) {
+                    return null;
+                }
+                for (var i = 0; i < candData.length; i++) {
+                    if (candData[i].ItemCode == code) {
+                        return candData[i];
+                    }
+                }
+                return null;
+            }
+
+            function findDtlIdByBarCode(list) {
+                for (var i = 0; i < list.length; i++) {
+                    if (list[i].BarCode == lastLoadedBarCode) {
+                        return list[i].SrapFeedingDtId;
+                    }
+                }
+                return 0;
+            }
+
+            // 核心：扫 GRN → 解析 03 原料 → 与本单原料一致才上料，不一致直接报错
+            $("#GRN").on("keydown", function (e) {
+                var curKey = e.keyCode || e.which || e.charCode;
+                if (curKey != 13) {
+                    return;
+                }
+                if (isLoading) {
+                    return false;
+                }
+                var fMaterialBucketCode = $.trim($("#listno").val());
+                if (fMaterialBucketCode == "") {
+                    showTip("请先扫描粉碎机编码", "red");
+                    $("#listno").focus();
+                    return false;
+                }
+                var barCode = $.trim($("#GRN").val());
+                if (barCode == "") {
+                    showTip("请扫描条码", "red");
+                    return false;
+                }
+
+                isLoading = true;
+                scanSN = barCode;
+                try {
+                    var candAjax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.GetMaterialCandidates(barCode, "03");
+                    if (candAjax.error != null) {
+                        showTip(candAjax.error.Message, "red");
+                        focusScan();
+                        return false;
+                    }
+                    var candData = JSON.parse(candAjax.value).data || [];
+                    pendingCandidates = candData;
+
+                    // 本单已有原料：必须解析到同一原料，否则拒绝
+                    if (sessionMaterial) {
+                        var hit = findInCand(candData, sessionMaterial);
+                        if (candData.length > 0 && !hit) {
+                            var other = candData[0].ItemCode || "?";
+                            showTip("原料不一样！本单【" + sessionMaterial + "】，条码【" + barCode + "】为【" + other + "】，不可一起上料", "red");
+                            focusScan();
+                            return false;
+                        }
+                        // 同料：直接上料（候选里带上本单原料，或无候选时交给 SP 用 L1 校验）
+                        $("#MaterialSelect").hide().html("");
+                        doLoadCrusher(fMaterialBucketCode, barCode, sessionMaterial, sessionMaterialName, false);
+                        return false;
+                    }
+
+                    // 首扫确立原料
+                    if (candData.length == 0) {
+                        showTip("条码【" + barCode + "】未找到候选原料(03)!", "red");
+                        focusScan();
+                        return false;
+                    }
+                    if (candData.length == 1) {
+                        $("#MaterialSelect").hide().html("");
+                        doLoadCrusher(fMaterialBucketCode, barCode, candData[0].ItemCode, candData[0].ItemName, false);
+                        return false;
+                    }
+
+                    // 首扫多候选：展示下拉，点选即触发（不回车）
+                    pendingBarCode = barCode;
+                    pendingCrusher = fMaterialBucketCode;
+                    fillMaterialSelect(candData, "");
+                    $("#MaterialName").val("");
+                    $("#MaterialCode").val("");
+                    showTip("共" + candData.length + "个候选原料，请选择（点选即上料）", "orange");
+                    $("#MaterialSelect").focus();
+                } catch (ex) {
+                    showTip(ex.message || String(ex), "red");
+                    focusScan();
+                } finally {
+                    isLoading = false;
+                }
+                return false;
+            });
+
+            // PDA 点选下拉 → 立即上料，不需回车
+            $("#MaterialSelect").on("change", function () {
+                if (isLoading) {
+                    return;
+                }
+                var code = $(this).val();
+                if (!code) {
+                    showTip("请选择原料", "orange");
+                    return;
+                }
+                var name = materialNameOf(code);
+                $("#MaterialName").val(name);
+                $("#MaterialCode").val(code);
+
+                // 首扫待确认：点选即上料
+                if (pendingBarCode) {
+                    isLoading = true;
+                    try {
+                        doLoadCrusher(pendingCrusher || $.trim($("#listno").val()), pendingBarCode, code, name, false);
+                        pendingBarCode = "";
+                        pendingCrusher = "";
+                    } finally {
+                        isLoading = false;
+                    }
+                    return;
+                }
+
+                // 已有明细后不允许悄悄改单头原料（避免多条不一致）
+                if (sessionMaterial && code != sessionMaterial) {
+                    var rows = $("#InfoTableGrn tbody tr").length;
+                    if (rows > 1) {
+                        showTip("本单已有多条明细，原料【" + sessionMaterial + "】不可改", "red");
+                        $(this).val(sessionMaterial);
+                        $("#MaterialCode").val(sessionMaterial);
+                        $("#MaterialName").val(sessionMaterialName);
+                        return;
+                    }
+                    // 仅1条：删后按新原料重上
+                    var fMaterialBucketCode = $.trim($("#listno").val());
+                    if (!fMaterialBucketCode || !lastLoadedBarCode) {
+                        return;
+                    }
+                    isLoading = true;
+                    try {
+                        if (lastLoadedDtId > 0) {
+                            var delAjax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.SrapFeedingDeleteBarCode(lastLoadedDtId);
+                            if (delAjax.error != null) {
+                                showTip(delAjax.error.Message, "red");
+                                return;
+                            }
+                        }
+                        doLoadCrusher(fMaterialBucketCode, lastLoadedBarCode, code, name, false);
+                    } finally {
+                        isLoading = false;
+                    }
+                }
+            });
+
+            function doLoadCrusher(crusherCode, barCode, selectedMaterial, materialName, keepSelect) {
+                var ajax = SKT.LeanMES.Web.AjaxServices.Client.AjaxFeedingHoppeCrusher.FeedingHopperLoadCrusherWithMaterial(crusherCode, barCode, selectedMaterial);
+                if (ajax.error != null) {
+                    showTip(ajax.error.Message, "red");
+                    pendingBarCode = "";
+                    pendingCrusher = "";
+                    focusScan();
+                    return false;
+                }
+                sessionMaterial = selectedMaterial;
+                sessionMaterialName = materialName || selectedMaterial;
+                lastLoadedBarCode = barCode;
+                $("#MaterialCode").val(selectedMaterial);
+                $("#MaterialName").val(materialName || selectedMaterial);
+                if (keepSelect) {
+                    $("#MaterialSelect").show();
+                } else {
+                    $("#MaterialSelect").hide().html("");
+                }
+                pendingBarCode = "";
+                pendingCrusher = "";
+                pendingCandidates = [];
+                showTip(barCode + " 上料成功", "#0a8f00");
+                setTimeout(function () {
+                    if ($("#msg").html().indexOf("上料成功") >= 0) {
+                        $("#msg").html("");
+                    }
+                }, 1200);
+                focusScan();
+                GetFeedingHopper(crusherCode);
+                return true;
+            }
+
+            // 点条码框继续扫
+            $("#GRN").on("click", function () {
+                $(this).focus();
             });
 
             /**
@@ -362,6 +600,15 @@
                 $("#listno").val("");
                 $("#MaterialName").val("");
                 $("#MaterialCode").val("");
+                $("#MaterialSelect").hide().html("");
+                pendingCandidates = [];
+                pendingBarCode = "";
+                pendingCrusher = "";
+                sessionMaterial = "";
+                sessionMaterialName = "";
+                lastLoadedBarCode = "";
+                lastLoadedDtId = 0;
+                scanSN = "";
             }
 
 

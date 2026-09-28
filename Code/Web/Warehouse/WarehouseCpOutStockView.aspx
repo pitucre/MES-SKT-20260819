@@ -147,29 +147,49 @@
                 var SalOrderID = trObj.find("td input[type=hidden][name='SalOrderID']").val();
 
                 //var No = $('input[name="chkSelect"]:checked').val();
-                var ajax = SKT.LeanMES.Web.AjaxServices.AjaxCpOutStock.GetSalOrderMemberListDetails(SalOrderID);
+                //var ajax = SKT.LeanMES.Web.AjaxServices.AjaxCpOutStock.GetSalOrderMemberListDetailsNew(SalOrderID);
+                //王江波
+                //优化成品出库列表中的查看界面，增加产品名称，产品编码，客户料号，入库日期及批次号
+                //去掉原来为空的客户号码、包装箱号码、栈板号码及批次号
+                //2026.9.1
+                var ajax = SKT.LeanMES.Web.AjaxServices.AjaxCpOutStock.GetSalOrderMemberListDetailsNew(SalOrderID);
                 if (ajax.error != null) {
                     alert(ajax.error.Message);
                 }
              
-                var htmlstr = '<table class="ListTable" style="width:100%"><tbody><tr class="ListTableHeader"><th>' + mesLang('备货单号') + '</th><th>' + mesLang('数量') + '</th><th>' + mesLang('序列号') + '</th><th>' + mesLang('客户号码') + '</th><th>' + mesLang('包装箱号码') + '</th><th>' + mesLang('栈板号码') + '</th><th>' + mesLang('批次号') + '</th><th>' + mesLang('出货人') + '</th><th>' + mesLang('扫描时间') +'</th></tr>';
+                //var htmlstr = '<table class="ListTable" style="width:100%"><tbody><tr class="ListTableHeader"><th>' + mesLang('备货单号') + '</th><th>' + mesLang('数量') + '</th><th>' + mesLang('序列号') + '</th><th>' + mesLang('客户号码') + '</th><th>' + mesLang('包装箱号码') + '</th><th>' + mesLang('栈板号码') + '</th><th>' + mesLang('批次号') + '</th><th>' + mesLang('出货人') + '</th><th>' + mesLang('扫描时间') +'</th></tr>';
+                //王江波
+                //优化成品出库列表中的查看界面，增加产品名称，产品编码，客户料号，入库日期及批次号
+                //去掉原来为空的客户号码、包装箱号码、栈板号码及批次号
+                //2026.9.1
+                var htmlstr = '<table class="ListTable" style="width:100%"><tbody><tr class="ListTableHeader"><th>' + mesLang('备货单号') + '</th><th>' + mesLang('数量') + '</th><th>' + mesLang('序列号') + '</th><th>' + mesLang('产品名称') + '</th><th>' + mesLang('产品编码') + '</th><th>' + mesLang('客户料号') + '</th><th>' + mesLang('入库日期') + '</th><th>' + mesLang('批次号') + '</th><th>' + mesLang('出货人') + '</th><th>' + mesLang('扫描时间') + '</th></tr>';
 
                 if (ajax.value.length <= 0) {
-                    htmlstr += '<tr class="ListTableEmptyDataRow"><td colspan=9>没有记录。</td></tr>';
+                    htmlstr += '<tr class="ListTableEmptyDataRow"><td colspan=10>没有记录。</td></tr>';
                 }
                 for (var i = 0; i < ajax.value.length; i++) {
 
+                    //if (i % 2 == 0) {
+                    //    htmlstr += '<tr class="ListTableEvenRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>' + ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].CustomerSN + '</td><td>' + ajax.value[i].CartonNo + '</td><td>' + ajax.value[i].PalletNo + '</td><td>' + ajax.value[i].QcLotNo + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
+                    //} else {
+
+                    //    htmlstr += '<tr class="ListTableOddRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>' + ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].CustomerSN + '</td><td>' + ajax.value[i].CartonNo + '</td><td>' + ajax.value[i].PalletNo + '</td><td>' + ajax.value[i].QcLotNo + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
+                    //}
+                    //王江波
+                    //优化成品出库列表中的查看界面，增加产品名称，产品编码，客户料号，入库日期及批次号
+                    //去掉原来为空的客户号码、包装箱号码、栈板号码及批次号
+                    //2026.9.1
                     if (i % 2 == 0) {
-                        htmlstr += '<tr class="ListTableEvenRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>'+ ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].CustomerSN + '</td><td>' + ajax.value[i].CartonNo + '</td><td>' + ajax.value[i].PalletNo + '</td><td>' + ajax.value[i].QcLotNo + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
+                        htmlstr += '<tr class="ListTableEvenRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>' + ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].ItemName + '</td><td>' + ajax.value[i].ItemCode + '</td><td>' + ajax.value[i].CPN + '</td><td>' + Format(ajax.value[i].StorageDate, "yyyy-MM-dd HH:mm") + '</td><td>' + ajax.value[i].LotCode + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
                     } else {
 
-                        htmlstr += '<tr class="ListTableOddRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>' + ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].CustomerSN + '</td><td>' + ajax.value[i].CartonNo + '</td><td>' + ajax.value[i].PalletNo + '</td><td>' + ajax.value[i].QcLotNo + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
+                        htmlstr += '<tr class="ListTableOddRow" id="' + ajax.value[i].DNCode + '"><td>' + ajax.value[i].DNCode + '</td><td>' + ajax.value[i].Qty + "</td><td>" + ajax.value[i].SerialNumber + '</td><td>' + ajax.value[i].ItemName + '</td><td>' + ajax.value[i].ItemCode + '</td><td>' + ajax.value[i].CPN + '</td><td>' + Format(ajax.value[i].StorageDate, "yyyy-MM-dd HH:mm") + '</td><td>' + ajax.value[i].LotCode + '</td><td>' + ajax.value[i].CreateBy + '</td><td>' + Format(ajax.value[i].CreateDateTime, "yyyy-MM-dd HH:mm") + '</td></tr>';
                     }
 
                 }
                 state = getOneRecordCellTextByFiled("StatusName");
                 if (state == "已出货") {
-                    htmlstr += "<tr style='background: rgb(248,248,248);' ><td colspan='9' style='text-align: center;' >";
+                    htmlstr += "<tr style='background: rgb(248,248,248);' ><td colspan='10' style='text-align: center;' >";
                     htmlstr += "<input type='button'  value='" + mesLang("导出明细") + "' onclick='ImportToExcel()'>";
                     htmlstr += "</td></tr>";
                    

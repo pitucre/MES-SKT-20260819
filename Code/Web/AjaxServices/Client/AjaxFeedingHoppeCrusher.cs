@@ -52,11 +52,39 @@ namespace SKT.LeanMES.Web.AjaxServices.Client
         }
 
         [AjaxMethod]
+        public string GetMaterialCandidates(string BarCode, string Prefix)
+        {
+            try
+            {
+                return new FeedingHopperCrusherBLL().GetMaterialCandidates(BarCode, Prefix);
+            }
+            catch (Exception ex)
+            {
+                WebHelper.HandleException(ex);
+                return null;
+            }
+        }
+
+        [AjaxMethod]
         public string FeedingHopperLoadCrusher(string CrusherCode, string BarCode)
         {
             try
             {
                 return new FeedingHopperCrusherBLL().FeedingHopperLoadCrusher(CrusherCode, BarCode, AccountController.GetCurrentUser().UserName);
+            }
+            catch (Exception ex)
+            {
+                WebHelper.HandleException(ex);
+                return null;
+            }
+        }
+
+        [AjaxMethod]
+        public string FeedingHopperLoadCrusherWithMaterial(string CrusherCode, string BarCode, string SelectedMaterial)
+        {
+            try
+            {
+                return new FeedingHopperCrusherBLL().FeedingHopperLoadCrusher(CrusherCode, BarCode, AccountController.GetCurrentUser().UserName, SelectedMaterial);
             }
             catch (Exception ex)
             {

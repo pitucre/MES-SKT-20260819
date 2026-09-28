@@ -1,0 +1,242 @@
+<style type="text/css">
+    #divReport
+    {
+        height: auto;
+    }
+    #divChart
+    {
+        height: auto;
+    }
+    #ChartContainer
+    {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+    #ChartA, #ChartB
+    {
+        float: left;
+        width: 49.6%;
+        height: 450px;
+    }
+    #ChartB
+    {
+        float: right;
+    }
+</style>
+<table class="EditeContentTable" style="width: 100%; margin-bottom: 2px;">
+    <tr class="ListTableHeader">
+        <th id="title" scope="col" colspan="6">P90 每月产量情况</th>
+    </tr>
+    <tr>
+        <td class="Label4">开始日期</td>
+        <td class="Field4">
+            <input type="text" id="txtStartTime" class="DateTimeBox" /></td>
+        <td class="Label4">结束日期</td>
+        <td class="Field4">
+            <input type="text" id="txtEndTime" class="DateTimeBox" /></td>
+        <td class="Label4">设备编码</td>
+        <td class="Field4">
+            <input type="text" id="txtEquipmentCode" class="TextBox" /></td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <div id="bnView" style="text-align: center; font-size: 16px; width: 20%; cursor: pointer; float: left; text-decoration: underline;">
+                <img src="../Content/images/search.png" />查询</div>
+            <div id="bnImport" style="font-size: 16px; cursor: pointer; text-decoration: underline; float: left; margin-left: 10px; width: 150px;">
+                <img src="../Content/images/icon/Import.png" />导出到EXCEL</div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" value="" id="hdnPararms" name="hdnPararms" />
+<input type="hidden" value="" id="hdnPararmValue" name="hdnPararmValue" />
+<input type="hidden" value="" id="hdnOperation" name="hdnOperation" />
+<input type="hidden" value="" id="hdnFileName" name="hdnFileName" />
+<div id="ReportList">
+</div>
+<div id="ChartContainer">
+    <div id="ChartA">
+    </div>
+    <div id="ChartB">
+    </div>
+</div>
+<script type="text/javascript">
+    var biChart = { a: null, b: null, optA: null, optB: null };
+    var biSpName = 'uspBI_MonthlyProductionReport';
+
+    $(function () {
+        $(".DateTimeBox").datepicker({ showHms: true });
+        $("#txtStartTime").val(GetDateStr(-180));
+        $("#txtEndTime").val(GetDateStr(0));
+        $(window).resize(function () {
+            if (biChart.a) { biChart.a.resize(); }
+            if (biChart.b) { biChart.b.resize(); }
+        });
+        setTimeout(function () { runQuery(); }, 400);
+    });
+
+    $(".wrap_tb ul.tb li").live("click", function () {
+        var idx = $(this).index();
+        setTimeout(function () {
+            if (idx == 1) {
+                showChart();
+            } else {
+                var $g = $("#ReportList");
+                if ($g.length > 0) {
+                    var gm = $g.SktMesGetGridManager();
+                    if (gm && gm.onResize) { gm.onResize(); }
+                }
+            }
+        }, 80);
+    });
+
+    function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+
+    function biFetchRows() {
+        var tries = [true, false], k;
+        for (k = 0; k < tries.length; k++) {
+            var isProc = tries[k];
+            biFetchRows.ok = false;
+            biFetchRows.data = null;
+            biFetchRows.msg = "";
+            var req = {
+                type: "post",
+                url: "../Handler/ReportingServer.ashx?gridviewname=" + biSpName + "&rnd=" + Math.random(),
+                data: { dataAction: "PROC", paramters: getParamStr() },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    biFetchRows.ok = true;
+                    biFetchRows.data = data;
+                },
+                error: function (xhr) {
+                    biFetchRows.ok = false;
+                    biFetchRows.msg = (xhr && xhr.status ? xhr.status + " " : "")
+                        + (xhr && xhr.responseText ? xhr.responseText : "");
+                }
+            };
+            if (isProc) {
+                req.data.isProcPage = "true";
+                req.data.page = "1";
+                req.data.pagesize = "100000";
+                req.data.conditions = "1=1";
+            }
+            $.ajax(req);
+            if (biFetchRows.ok && biFetchRows.data && typeof biFetchRows.data === "object") {
+                return biFetchRows.data;
+            }
+        }
+        alert("Get Data Error: " + (biFetchRows.msg || "no response").substring(0, 400));
+        return { Rows: [] };
+    }
+    function getParamStr() {
+        return '[{"name":"@StartDate","type":"varchar","size":"100","value":"' + $("#txtStartTime").val() + '"}'
+             + ',{"name":"@EndDate","type":"varchar","size":"100","value":"' + $("#txtEndTime").val() + '"}'
+             + ',{"name":"@EquipmentCode","type":"varchar","size":"50","value":"' + $("#txtEquipmentCode").val() + '"}]';
+    }
+
+    function runQuery() {
+        $("#divLoading").hide().remove();
+        $("#ReportList").replaceWith("<div id='ReportList'></div>");
+        $("#ReportList").SktMesGrid({
+            columns: [
+                { display: '月份', name: '月份', align: 'center', width: 90, minWidth: 60 },
+                { display: '设备编码', name: '设备编码', align: 'center', width: 100, minWidth: 60 },
+                { display: '设备名称', name: '设备名称', align: 'left', width: 130, minWidth: 60 },
+                { display: '良品数', name: '良品数', align: 'right', width: 110, minWidth: 60 },
+                { display: '不良数', name: '不良数', align: 'right', width: 90, minWidth: 60 },
+                { display: '合计产量', name: '合计产量', align: 'right', width: 110, minWidth: 60 },
+                { display: '开关模次数', name: '开关模次数', align: 'right', width: 110, minWidth: 60 },
+                { display: '不良率(%)', name: '不良率', align: 'right', width: 90, minWidth: 60 }
+            ],
+            width: '100%',
+            height: '99%',
+            dataAction: 'PROC',
+            dataSource: biSpName,
+            paramters: getParamStr(),
+            pageSize: 50,
+            isProcPage: true
+        });
+        var ds = biFetchRows();
+        buildChart(ds && ds.Rows ? ds.Rows : []);
+        showChart();
+    }
+
+    $("#bnView").click(function () { runQuery(); });
+
+    $("#bnImport").click(function () {
+        $("#hdnPararms").val("@StartDate,@EndDate,@EquipmentCode");
+        $("#hdnPararmValue").val($("#txtStartTime").val() + "," + $("#txtEndTime").val() + "," + $("#txtEquipmentCode").val());
+        $("#hdnOperation").val(biSpName);
+        $("#hdnFileName").val('P90 每月产量情况');
+        document.forms[0].submit();
+    });
+
+    function buildChart(rows) {
+        var monthMap = {}, months = [], eqMap = {}, eqs = [];
+        var i;
+        for (i = 0; i < rows.length; i++) {
+            var r = rows[i];
+            var m = r['月份'];
+            var ec = r['设备编码'];
+            if (!monthMap[m]) { monthMap[m] = { ok: 0, ng: 0, shots: 0 }; months.push(m); }
+            monthMap[m].ok += num(r['良品数']);
+            monthMap[m].ng += num(r['不良数']);
+            monthMap[m].shots += num(r['开关模次数']);
+            if (!eqMap[ec]) { eqMap[ec] = 0; eqs.push(ec); }
+            eqMap[ec] += num(r['合计产量']);
+        }
+        months.sort();
+        eqs.sort(function (x, y) { return eqMap[y] - eqMap[x]; });
+        var okArr = [], ngArr = [], rateArr = [], shArr = [];
+        for (i = 0; i < months.length; i++) {
+            var a = monthMap[months[i]];
+            var total = a.ok + a.ng;
+            okArr.push(a.ok);
+            ngArr.push(a.ng);
+            shArr.push(a.shots);
+            rateArr.push(total > 0 ? Math.round(10000 * a.ng / total) / 100 : 0);
+        }
+        var topE = eqs.slice(0, 10), topV = [];
+        for (i = 0; i < topE.length; i++) { topV.push(eqMap[topE[i]]); }
+        topE.reverse();
+        topV.reverse();
+        biChart.optA = {
+            title: { text: '每月产量趋势', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['良品数', '不良数', '不良率', '开关模次数'], top: 28 },
+            grid: { left: 70, right: 60, top: 70, bottom: 40 },
+            xAxis: { type: 'category', data: months },
+            yAxis: [
+                { type: 'value', name: '数量' },
+                { type: 'value', name: '%', splitLine: { show: false } }
+            ],
+            series: [
+                { name: '良品数', type: 'bar', stack: 'q', data: okArr },
+                { name: '不良数', type: 'bar', stack: 'q', data: ngArr },
+                { name: '不良率', type: 'line', yAxisIndex: 1, data: rateArr, label: { show: true, formatter: '{c}%' } },
+                { name: '开关模次数', type: 'line', data: shArr }
+            ]
+        };
+        biChart.optB = {
+            title: { text: '设备产量 TOP10', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 70, right: 60, top: 50, bottom: 40 },
+            xAxis: { type: 'value' },
+            yAxis: { type: 'category', data: topE },
+            series: [{ name: '合计产量', type: 'bar', data: topV, label: { show: true, position: 'right' } }]
+        };
+    }
+
+    function showChart() {
+        if (!biChart.optA || !biChart.optB) { return; }
+        var el = document.getElementById('ChartA');
+        if (!el || el.offsetWidth === 0) { return; }
+        if (!biChart.a) {
+            biChart.a = echarts.init(el);
+            biChart.b = echarts.init(document.getElementById('ChartB'));
+        }
+        biChart.a.setOption(biChart.optA, true);
+        biChart.b.setOption(biChart.optB, true);
+    }
+</script>

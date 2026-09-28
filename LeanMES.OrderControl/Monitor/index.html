@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注塑机真实状态监控</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1600px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; color: #fff; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.1em; color: #aaa; }
+        .header .db-info { font-size: 0.9em; color: #666; margin-top: 5px; }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 20px 35px;
+            text-align: center;
+            color: #fff;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .stat-card .number { font-size: 2.8em; font-weight: bold; }
+        .stat-card .label { font-size: 0.9em; color: #aaa; margin-top: 5px; }
+        .stat-card.total .number { color: #4488ff; }
+        .stat-card.online .number { color: #00ff88; }
+        .stat-card.offline .number { color: #ff4444; }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .legend-dot.online { background: #00ff88; }
+        .legend-dot.offline { background: #ff4444; }
+        .legend-dot.no-config { background: #666; }
+        
+        .machine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .machine-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .machine-card.online { border-left: 5px solid #00ff88; }
+        .machine-card.offline { border-left: 5px solid #ff4444; }
+        .machine-card.no-config { border-left: 5px solid #666; }
+        
+        .machine-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .machine-name { font-size: 1.2em; color: #fff; font-weight: bold; }
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .status-badge.online { background: rgba(0,255,136,0.2); color: #00ff88; }
+        .status-badge.offline { background: rgba(255,68,68,0.2); color: #ff4444; }
+        .status-badge.no-config { background: rgba(100,100,100,0.3); color: #888; }
+        
+        .machine-info { color: #aaa; font-size: 0.9em; line-height: 2; }
+        .machine-info .row { display: flex; justify-content: space-between; }
+        .machine-info .label { color: #666; }
+        .machine-info .value { color: #fff; }
+        .machine-info .value.ok { color: #00ff88; font-weight: bold; }
+        .machine-info .value.err { color: #ff4444; }
+        
+        .loading {
+            text-align: center;
+            color: #fff;
+            padding: 100px;
+            font-size: 1.3em;
+        }
+        .loading .spinner {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top: 4px solid #4488ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-primary { background: #4488ff; color: #fff; }
+        .btn-primary:hover { background: #3377ee; }
+        .btn-success { background: #00cc66; color: #fff; }
+        .btn-success:hover { background: #00aa55; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> 注塑机真实状态监控</h1>
+            <div class="subtitle">TCP连接检测 | 32台注塑机</div>
+            <div class="db-info" id="updateTime">数据加载中...</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card total">
+                <div class="number" id="total">32</div>
+                <div class="label">设备总数</div>
+            </div>
+            <div class="stat-card online">
+                <div class="number" id="online">0</div>
+                <div class="label">在线连接</div>
+            </div>
+            <div class="stat-card offline">
+                <div class="number" id="offline">0</div>
+                <div class="label">连接失败</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item"><div class="legend-dot online"></div>在线 (TCP连接成功)</div>
+            <div class="legend-item"><div class="legend-dot offline"></div>离线 (TCP连接失败)</div>
+            <div class="legend-item"><div class="legend-dot no-config"></div>未配置 (无IP/端口)</div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="loadData()">刷新数据</button>
+            <button class="btn btn-success" onclick="runChecker()">运行状态检测程序</button>
+        </div>
+
+        <div class="machine-grid" id="grid">
+            <div class="loading">
+                <div class="spinner"></div>
+                正在加载数据...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let data = [];
+
+        async function loadData() {
+            try {
+                const response = await fetch('status.json?' + Date.now());
+                if (response.ok) {
+                    data = await response.json();
+                    render();
+                } else {
+                    document.getElementById('grid').innerHTML = 
+                        '<div class="loading" style="color:#ff4444">找不到status.json文件<br>请先运行状态检测程序</div>';
+                }
+            } catch (e) {
+                document.getElementById('grid').innerHTML = 
+                    '<div class="loading" style="color:#ff4444">加载数据失败<br>请先运行状态检测程序生成status.json</div>';
+            }
+        }
+
+        function render() {
+            document.getElementById('total').textContent = data.total;
+            document.getElementById('online').textContent = data.online;
+            document.getElementById('offline').textContent = data.offline;
+            document.getElementById('updateTime').textContent = '检测时间: ' + data.timestamp;
+
+            const grid = document.getElementById('grid');
+            grid.innerHTML = '';
+
+            data.data.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'machine-card ' + m.status;
+
+                let statusText = '未配置';
+                let statusIcon = '⚪';
+                if (m.status === 'online') { statusText = '在线'; statusIcon = '🟢'; }
+                else if (m.status === 'offline') { statusText = '离线'; statusIcon = '🔴'; }
+
+                let connType = '无连接';
+                if (m.port === '1883') connType = 'MQTT';
+                else if (m.port === '4842') connType = 'OPC UA';
+                else if (m.port) connType = 'TCP:' + m.port;
+
+                let mesStatus = {'0':'停用','1':'运行','2':'待机','4':'维护'}[m.mesStatus] || '未知';
+                let runStatus = {'1':'正常','2':'关模','5':'调试','6':'报警','7':'故障','12':'取件','13':'射出'}[m.runStatus] || '状态' + m.runStatus;
+
+                card.innerHTML = `
+                    <div class="machine-header">
+                        <div class="machine-name">${statusIcon} ${m.name}</div>
+                        <div class="status-badge ${m.status}">${statusText}</div>
+                    </div>
+                    <div class="machine-info">
+                        <div class="row"><span class="label">设备编号:</span><span class="value">${m.code}</span></div>
+                        <div class="row"><span class="label">连接类型:</span><span class="value">${connType}</span></div>
+                        <div class="row"><span class="label">IP地址:</span><span class="value ${m.ip?'':'err'}">${m.ip||'未配置'}</span></div>
+                        <div class="row"><span class="label">端口:</span><span class="value ${m.port?'':'err'}">${m.port||'未配置'}</span></div>
+                        <div class="row"><span class="label">TCP检测:</span><span class="value ${m.status==='online'?'ok':'err'}">${statusText}</span></div>
+                        <div class="row"><span class="label">MES状态:</span><span class="value">${mesStatus}</span></div>
+                        <div class="row"><span class="label">运行状态:</span><span class="value">${runStatus}</span></div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function runChecker() {
+            alert('请在命令行运行:\nLeanMES.OrderControl.exe --check-status\n\n或直接运行StatusChecker程序');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

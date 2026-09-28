@@ -851,8 +851,12 @@ namespace SKT.LeanMES.Warehouse.BLL
 
                             if (dataList.Count > 0 && !dataList[0].m_isSucess)
                             {
-                                msg = "打开ERP工单失败!" + dataList[0].m_errorMsg;
-                                throw new Exception(msg);
+                                if(dataList[0].m_errorMsg!="只有完工的订单可以打开")
+                                {
+                                    msg = "打开ERP工单失败!" + dataList[0].m_errorMsg;
+                                    throw new Exception(msg);
+                                }
+                                
                             }
                         }
                         //调用接口

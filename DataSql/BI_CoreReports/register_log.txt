@@ -1,0 +1,62 @@
+register start 2026-09-25 13:37:36 target=172.16.5.144/LeanMes
+INFO P90 每月产量情况 htmlLen=7777 encLen=14669 cipherLen=19564
+INFO P90 每月产量情况 mode=UPDATE reportId=2268 reportName=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223
+OK P90 每月产量情况 TemplateId=2268 TemplateName=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223 Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=27 InMenu=True Flag=1 Popedom=50140040
+OK P90 每月产量情况 Url=http://172.16.5.144/Report/ReportPage.aspx?name=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223&Flag=1
+INFO P91 每日报工数量 htmlLen=7282 encLen=13794 cipherLen=18400
+INFO P91 每日报工数量 mode=UPDATE reportId=2269 reportName=341EA390-EDE1-4DEA-BB60-0394D8B395E9
+OK P91 每日报工数量 TemplateId=2269 TemplateName=341EA390-EDE1-4DEA-BB60-0394D8B395E9 Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=28 InMenu=True Flag=1 Popedom=50140041
+OK P91 每日报工数量 Url=http://172.16.5.144/Report/ReportPage.aspx?name=341EA390-EDE1-4DEA-BB60-0394D8B395E9&Flag=1
+INFO Q90 每月质量情况 htmlLen=7876 encLen=14792 cipherLen=19736
+INFO Q90 每月质量情况 mode=UPDATE reportId=2270 reportName=F3282883-D6D1-41ED-B9F5-0ED18C55C593
+OK Q90 每月质量情况 TemplateId=2270 TemplateName=F3282883-D6D1-41ED-B9F5-0ED18C55C593 Category=2 Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71 Seq=7 InMenu=True Flag=1 Popedom=50130013
+OK Q90 每月质量情况 Url=http://172.16.5.144/Report/ReportPage.aspx?name=F3282883-D6D1-41ED-B9F5-0ED18C55C593&Flag=1
+INFO P92 上料BOM分析报表 htmlLen=8587 encLen=16389 cipherLen=21856
+INFO P92 上料BOM分析报表 mode=INSERT reportId=-1 reportName=P92 上料BOM分析报表
+OK P92 上料BOM分析报表 TemplateId=2271 TemplateName=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37 Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=29 InMenu=True Flag=1 Popedom=50140042
+OK P92 上料BOM分析报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37&Flag=1
+INFO P93 模具模次报表 htmlLen=7975 encLen=15043 cipherLen=20064
+INFO P93 模具模次报表 mode=INSERT reportId=-1 reportName=P93 模具模次报表
+OK P93 模具模次报表 TemplateId=2272 TemplateName=633D4C5B-854A-442C-A543-B915F5F4BEE6 Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=30 InMenu=True Flag=1 Popedom=50140043
+OK P93 模具模次报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=633D4C5B-854A-442C-A543-B915F5F4BEE6&Flag=1
+INFO P96 产能达成报表 htmlLen=8903 encLen=17075 cipherLen=22776
+INFO P96 产能达成报表 mode=INSERT reportId=-1 reportName=P96 产能达成报表
+OK P96 产能达成报表 TemplateId=2273 TemplateName=E383FB7A-31C6-493D-998C-7A4EE8992E8C Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=31 InMenu=True Flag=1 Popedom=50140044
+OK P96 产能达成报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=E383FB7A-31C6-493D-998C-7A4EE8992E8C&Flag=1
+INFO D01 生产驾驶舱 htmlLen=8254 encLen=15864 cipherLen=21164
+INFO D01 生产驾驶舱 mode=INSERT reportId=-1 reportName=D01 生产驾驶舱
+OK D01 生产驾驶舱 TemplateId=2274 TemplateName=1A04670C-59CD-4276-BC67-6C3AED24520A Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=32 InMenu=True Flag=1 Popedom=50140045
+OK D01 生产驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=1A04670C-59CD-4276-BC67-6C3AED24520A&Flag=1
+INFO D05 模具驾驶舱 htmlLen=7261 encLen=13521 cipherLen=18040
+INFO D05 模具驾驶舱 mode=INSERT reportId=-1 reportName=D05 模具驾驶舱
+OK D05 模具驾驶舱 TemplateId=2275 TemplateName=D0962E54-47FB-4FFF-8A59-D0F148A0E08A Category=2 Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E Seq=33 InMenu=True Flag=1 Popedom=50140046
+OK D05 模具驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=D0962E54-47FB-4FFF-8A59-D0F148A0E08A&Flag=1
+INFO P95 不良报废分析报表 htmlLen=9207 encLen=17545 cipherLen=23404
+INFO P95 不良报废分析报表 mode=INSERT reportId=-1 reportName=P95 不良报废分析报表
+OK P95 不良报废分析报表 TemplateId=2276 TemplateName=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45 Category=2 Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71 Seq=8 InMenu=True Flag=1 Popedom=50130014
+OK P95 不良报废分析报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45&Flag=1
+INFO D02 品质驾驶舱 htmlLen=8503 encLen=15971 cipherLen=21304
+INFO D02 品质驾驶舱 mode=INSERT reportId=-1 reportName=D02 品质驾驶舱
+OK D02 品质驾驶舱 TemplateId=2277 TemplateName=29BFA2B3-7DAB-4B83-AD07-40109E952E70 Category=2 Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71 Seq=9 InMenu=True Flag=1 Popedom=50130015
+OK D02 品质驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=29BFA2B3-7DAB-4B83-AD07-40109E952E70&Flag=1
+INFO Q91 粉碎料来源报表 htmlLen=8355 encLen=16017 cipherLen=21368
+INFO Q91 粉碎料来源报表 mode=INSERT reportId=-1 reportName=Q91 粉碎料来源报表
+OK Q91 粉碎料来源报表 TemplateId=2278 TemplateName=94CF3D59-C864-4929-807A-E7A484BC8A9C Category=2 Report=C7A32644-8771-458D-88F3-9DF6CFB7E49B Seq=17 InMenu=True Flag=1 Popedom=50140047
+OK Q91 粉碎料来源报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=94CF3D59-C864-4929-807A-E7A484BC8A9C&Flag=1
+INFO D03 仓库驾驶舱 htmlLen=8213 encLen=15457 cipherLen=20620
+INFO D03 仓库驾驶舱 mode=INSERT reportId=-1 reportName=D03 仓库驾驶舱
+OK D03 仓库驾驶舱 TemplateId=2279 TemplateName=692076CF-D3C4-475B-B3F6-F52ED6DB6565 Category=2 Report=C7A32644-8771-458D-88F3-9DF6CFB7E49B Seq=18 InMenu=True Flag=1 Popedom=50140048
+OK D03 仓库驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=692076CF-D3C4-475B-B3F6-F52ED6DB6565&Flag=1
+INFO P94 停机分析报表 htmlLen=8739 encLen=17135 cipherLen=22848
+INFO P94 停机分析报表 mode=INSERT reportId=-1 reportName=P94 停机分析报表
+OK P94 停机分析报表 TemplateId=2280 TemplateName=6EA8EF86-95C0-4391-8098-79817403DEA4 Category=2 Report=85F55665-3CA3-42B4-949B-F9496AFAD683 Seq=4 InMenu=True Flag=1 Popedom=50150006
+OK P94 停机分析报表 Url=http://172.16.5.144/Report/ReportPage.aspx?name=6EA8EF86-95C0-4391-8098-79817403DEA4&Flag=1
+INFO D04 设备驾驶舱 htmlLen=7366 encLen=13736 cipherLen=18328
+INFO D04 设备驾驶舱 mode=INSERT reportId=-1 reportName=D04 设备驾驶舱
+OK D04 设备驾驶舱 TemplateId=2281 TemplateName=6D5A140D-8CB1-4377-B72C-386805B18406 Category=2 Report=85F55665-3CA3-42B4-949B-F9496AFAD683 Seq=5 InMenu=True Flag=1 Popedom=50150007
+OK D04 设备驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=6D5A140D-8CB1-4377-B72C-386805B18406&Flag=1
+INFO D06 管理驾驶舱 htmlLen=9322 encLen=17828 cipherLen=23776
+INFO D06 管理驾驶舱 mode=INSERT reportId=-1 reportName=D06 管理驾驶舱
+OK D06 管理驾驶舱 TemplateId=2282 TemplateName=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57 Category=2 Report=F0257AA3-4A50-44E6-912E-06FC4ED29F8D Seq=5 InMenu=True Flag=1 Popedom=50160006
+OK D06 管理驾驶舱 Url=http://172.16.5.144/Report/ReportPage.aspx?name=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57&Flag=1
+register end failed=0 time=2026-09-25 13:37:40

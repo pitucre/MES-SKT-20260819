@@ -1,0 +1,22 @@
+SRV ERR 使用“0”个参数调用“ExecuteReader”时发生异常:“列名 'rpc' 无效。
+列名 'rpc_out' 无效。
+列名 'use_data_access' 无效。”
+HistCols: Hid,EquipmentCode,ParamterStr,ParamterVal,CreateDateTime
+EngelCols: DataId,EquipmentType,CollectionDate,CollectionTime,EquipmentCode,Status,ShotCounter,PerformanceTest,ProcessFormulaName,InjectionForce,MoldProtectionTime,ActualProtectionTime,CycleTimeSetValue,MaximumCycleTime,PreviousCycleTime,CoolingTime,ActualBasketballTimeValue,ActualValueOfMoldClosingTime,RotationPositionMoldRotationCycleTime,ConfirmCycleInsertTime,ConfirmTheRemovalOfPositionCycleTime,DryCycleTime,ClosingTime,ShutdownTimeBeforeRestartingProduction,UnlockTime,MoldOpeningTime,LockingForceAndUnloadingTime,ConstructionTimeOfLockingForce,MoldOpeningCycleTime,LockTime,NeutronMotionTime,MoldPauseTime,UntilTheCompletionTimeOfDemolding,TopOutTime,NozzleAdvanceCycleTime,ActualValueOfCleaningTime,PressureHoldingCycleTime,PressureHoldingCycleTimeSettingValue,MoldNumber,MachineNumber,AutomatedProductionOfFirstPiece,TotalProductionQuantity,ActualValueOfProductCounter,Temperature,InternalCavityPressureDuringPressureConversion,ReasonForShutdown,CreateDateTime,UpdateDateTime
+StatusCurCols: WorkDate,MachineCode,MachineIP,CurrentStatus,TotalRuntime,TotalWait,TotalStop,LastUpdateTime
+144 collection SP len=41413
+OPENQUERY_OK x=1
+SKIP_ACTUAL_EXEC
+RemoteProcExists=1
+144 Engel_5m=32
+144 EngelHist_5m=0
+144 StatusCur_5m=32
+144 RawHist_5m=100
+144 MaxEngelUpdate=09/23/2026 12:37:24
+144 MaxHid=42649387 Cnt=9989854
+179 Engel_5m=0
+179 EngelHist_5m=0
+179 StatusCur_5m=32
+179 RawHist_5m=100
+179 MaxEngelUpdate=09/23/2026 11:36:59
+179 max ERR

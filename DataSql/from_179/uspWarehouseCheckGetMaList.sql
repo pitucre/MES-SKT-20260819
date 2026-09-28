@@ -1,0 +1,37 @@
+IF OBJECT_ID('uspWarehouseCheckGetMaList','P') IS NOT NULL DROP PROCEDURE [uspWarehouseCheckGetMaList]
+GO
+
+CREATE PROC [dbo].[uspWarehouseCheckGetMaList]
+@GRN VARCHAR(50),
+@Status INT =-1
+AS
+BEGIN
+
+DECLARE @ParenGRN VARCHAR(50);
+SELECT  @ParenGRN=p.SerialNumber  FROM dbo.Prod_MaterialUnit t WITH(NOLOCK)
+    LEFT JOIN Prod_MaterialUnit p WITH(NOLOCK)
+        ON t.PID = p.MaterialUnitId
+WHERE t.SerialNumber = @GRN
+AND T.StatuS=CASE WHEN @Status>0 THEN @Status ELSE T.Status END
+
+SELECT t.SerialNumber AS GRN,
+       t.cBarCode AS BarCode,
+       t.BalanceQty AS StockQty,
+       t1.ItemCode,
+       ItemName,
+       t.Flag,
+       p.MaterialUnitId AS PID,
+       p.SerialNumber AS PSN,
+       p.Flag AS PFlag,
+	   t.BalanceQty UsekQty,t1.CPN
+FROM dbo.Prod_MaterialUnit t WITH(NOLOCK)
+    JOIN dbo.Basal_Item t1 WITH(NOLOCK)
+        ON t1.ItemID = t.PartId
+    LEFT JOIN Prod_MaterialUnit p WITH(NOLOCK)
+        ON t.PID = p.MaterialUnitId
+WHERE t.SerialNumber = @GRN
+  AND T.StatuS=CASE WHEN @Status>0 THEN @Status ELSE T.Status END
+END
+
+
+GO

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Xml;
-using System.Xml.Linq;
 using SKT.LeanMES.SDP.BLL;
 using SKT.LeanMES.Web.AppCode.Utility;
 namespace SKT.LeanMES.Web.SDPHandler

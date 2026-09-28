@@ -113,6 +113,25 @@ namespace SKT.LeanMES.Web.AjaxServices
                 throw;
             }
         }
+
+        ///// <summary>
+        ///// 获取销售出货单详情扫描记录
+        ///// </summary>
+        ///// <param name="code"></param>
+        ///// <returns></returns>
+        //[AjaxMethod]
+        //public List<WarehouseCpOutStockDtlMemberInfoOutputNew> GetSalOrderMemberListDetailsNew(int code)
+        //{
+        //    try
+        //    {
+        //        //return w.GetSalOrderMemberListDetailsNew(code);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
+
         /// <summary>
         /// 保存DN到mes
         /// </summary>

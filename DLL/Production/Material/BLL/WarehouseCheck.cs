@@ -62,19 +62,22 @@ namespace SKT.LeanMES.Material.BLL
         /// <param name="CheckNo"></param>
         /// <param name="GRN"></param>
         /// <param name="Type"></param>
+        /// <param name="ScannedSN">被扫描的SN，用于包装箱内只判断该SN</param>
         /// <returns></returns>
-        public int ScanCancelCheck(string CheckNo, string GRN, int Type)
+        public int ScanCancelCheck(string CheckNo, string GRN, int Type, string ScannedSN = null)
         {
             SqlParameter[] parms = new SqlParameter[] {
                 new SqlParameter("@CheckNo",SqlDbType.VarChar),
                 new SqlParameter("@GRN",SqlDbType.VarChar),
                 new SqlParameter("@Type",SqlDbType.Int),
-                new SqlParameter("@Status",SqlDbType.Int)
+                new SqlParameter("@Status",SqlDbType.Int),
+                new SqlParameter("@ScannedSN",SqlDbType.VarChar)
             };
             parms[0].Value = CheckNo;
             parms[1].Value = GRN;
             parms[2].Value = Type;
             parms[3].Direction = ParameterDirection.Output;
+            parms[4].Value = (object)ScannedSN ?? DBNull.Value;
 
             SQLHelper.ExecuteNonQueryStoredProcedure(SQLHelper.MESConnString, "uspWarehouseCheckCancelCheck", parms);
 
@@ -86,19 +89,22 @@ namespace SKT.LeanMES.Material.BLL
         /// <param name="CheckNo"></param>
         /// <param name="GRN"></param>
         /// <param name="Type"></param>
+        /// <param name="ScannedSN">被扫描的SN，用于包装箱内只撤销单个SN</param>
         /// <returns></returns>
-        public void ScanRollback(string CheckNo, string GRN, string UserName, int Type)
+        public void ScanRollback(string CheckNo, string GRN, string UserName, int Type, string ScannedSN = null)
         {
             SqlParameter[] param = new SqlParameter[] {
                 new SqlParameter("@CheckNo",SqlDbType.VarChar),
                 new SqlParameter("@GRN",SqlDbType.VarChar),
                 new SqlParameter("@Type",SqlDbType.Int),
-                new SqlParameter("@UserName",SqlDbType.VarChar)
+                new SqlParameter("@UserName",SqlDbType.VarChar),
+                new SqlParameter("@ScannedSN",SqlDbType.VarChar)
             };
             param[0].Value = CheckNo;
             param[1].Value = GRN;
             param[2].Value = Type;
             param[3].Value = UserName;
+            param[4].Value = (object)ScannedSN ?? DBNull.Value;
             ComMethod.Edit("uspWarehouseCheckCancel", param);
         }
 

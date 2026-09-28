@@ -365,7 +365,10 @@ namespace SKT.LeanMES.ERP
                 {
                     inventoryResultItem
                 };
-                erpReturnInfo.ReturnSingleItems[0].PromptText = $"{em} 回写ERP失败：{ex.Message}";
+                string errMsg = ex.Message;
+                if (ex.InnerException != null) errMsg += " | Inner: " + ex.InnerException.Message;
+                if (ex.InnerException?.InnerException != null) errMsg += " | Inner2: " + ex.InnerException.InnerException.Message;
+                erpReturnInfo.ReturnSingleItems[0].PromptText = $"{em} 回写ERP失败：{errMsg}";
                 return erpReturnInfo;
             }
             finally
@@ -1887,22 +1890,45 @@ namespace SKT.LeanMES.ERP
                 mainObj["配置_DefaultCultureName"] = "zh-CN";
                 mainObj["单据类型"] = "InvSheet001";
                 mainObj["其他备注"] = "接口创建";
-                mainObj["业务日期"] = dr["业务日期"].ToString();
+                mainObj["业务日期"] = Convert.ToDateTime(dr["业务日期"]).ToString("yyyy/M/d HH:mm:ss");
 
-                // 3. 动态构建盘点明细表JSON数组（从DataTable转换）
+                // 3. 动态构建盘点明细表JSON数组（从DataTable转换，相同库存维度合并数量）
                 JArray detailArray = new JArray();
                 if (dt != null && dt.Rows.Count > 0)
                 {
+                    // 按列索引读取（SP返回：0=业务日期,1=存储地点编码,2=库位编号,3=物料编码,4=批号,5=实盘数量,6=旧存储地点编码,7=旧库位编码）
+                    // 按存储地点+物料合并，避免U9重复行报错
+                    var merged = new Dictionary<string, JObject>();
                     foreach (DataRow row in dt.Rows)
                     {
-                        JObject detailItem = new JObject();
-                        detailItem["存储地点编号"] = row["存储地点编号"]?.ToString() ?? "";
-                        detailItem["库位编号"] = row["库位编号"]?.ToString() ?? "";
-                        detailItem["物料编码"] = row["物料编码"]?.ToString() ?? "";
-                        detailItem["批号"] = row["批号"]?.ToString() ?? "";
-                        detailItem["实盘数量"] = row["实盘数量"]?.ToString() ?? "";
+                        string whCode = row.ItemArray.Length > 1 ? (row[1]?.ToString() ?? "").Trim() : "";
+                        string itemCode = row.ItemArray.Length > 3 ? (row[3]?.ToString() ?? "").Trim() : "";
+                        string qtyStr = row.ItemArray.Length > 5 ? (row[5]?.ToString() ?? "").Trim() : "";
+                        string key = $"{whCode}|{itemCode}";
 
-                        detailArray.Add(detailItem);
+                        decimal qty = 0;
+                        decimal.TryParse(qtyStr, out qty);
+
+                        if (merged.ContainsKey(key))
+                        {
+                            decimal existingQty = 0;
+                            decimal.TryParse(merged[key]["实盘数量"]?.ToString(), out existingQty);
+                            merged[key]["实盘数量"] = (existingQty + qty).ToString();
+                        }
+                        else
+                        {
+                            JObject detailItem = new JObject();
+                            detailItem["存储地点编号"] = whCode;
+                            detailItem["库位编号"] = whCode + "_";
+                            detailItem["物料编码"] = itemCode;
+                            detailItem["批号"] = "";
+                            detailItem["实盘数量"] = qty.ToString();
+                            merged[key] = detailItem;
+                        }
+                    }
+                    foreach (var item in merged.Values)
+                    {
+                        detailArray.Add(item);
                     }
                 }
                 // 将动态生成的明细数组添加到主对象

@@ -1,0 +1,9 @@
+T0_144 MaxEngel=09/23/2026 12:52:54 MaxHid=42649709 Engel3m=26 Equip3m=26
+T0_179 MaxEngel=09/23/2026 12:52:04 MaxHid=36507683 Engel3m=1 Equip3m=1
+T1_144 MaxEngel=09/23/2026 12:53:54 MaxHid=42649738 Engel3m=26 Equip3m=26
+T1_179 MaxEngel=09/23/2026 12:52:04 MaxHid=36507683 Engel3m=1 Equip3m=1
+COLL_179_TMain=RowNumberId|日期|设备编码|外部编码|开合数|开合模数|良品数|不良数|状态|管理状态|正常生产总时长|在线未生产时长|停机总时长|设备生产稼动率|综合稼动率OEE
+COLL_179_SPpaged=日期|设备编码|外部编码|良品数|不良数|状态|正常生产总时长|在线未生产时长|停机总时长|管理状态|设备生产稼动率|综合稼动率OEE|开合模数|开合数
+COLL_179_missing=
+COLL_equal=True
+TMPL_144_eq_179=True

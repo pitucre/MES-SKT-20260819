@@ -1,0 +1,240 @@
+<style type="text/css">
+    #divReport
+    {
+        height: auto;
+    }
+    #divChart
+    {
+        height: auto;
+    }
+    #ChartContainer
+    {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+    #ChartA, #ChartB
+    {
+        float: left;
+        width: 49.6%;
+        height: 450px;
+    }
+    #ChartB
+    {
+        float: right;
+    }
+</style>
+<table class="EditeContentTable" style="width: 100%; margin-bottom: 2px;">
+    <tr class="ListTableHeader">
+        <th id="title" scope="col" colspan="6">Q90 每月质量情况</th>
+    </tr>
+    <tr>
+        <td class="Label4">开始日期</td>
+        <td class="Field4">
+            <input type="text" id="txtStartTime" class="DateTimeBox" /></td>
+        <td class="Label4">结束日期</td>
+        <td class="Field4">
+            <input type="text" id="txtEndTime" class="DateTimeBox" /></td>
+        <td class="Label4">报告类型</td>
+        <td class="Field4">
+            <select id="selReportType" style="width: 130px;">
+                <option value="1">生产不良</option>
+                <option value="2">销售退货</option>
+                <option value="3">全部</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <div id="bnView" style="text-align: center; font-size: 16px; width: 25%; cursor: pointer; float: left; text-decoration: underline;">
+                <img src="../Content/images/search.png" />查询</div>
+            <div id="bnImport" style="font-size: 16px; cursor: pointer; text-decoration: underline; float: left; margin-left: 10px; width: 150px;">
+                <img src="../Content/images/icon/Import.png" />导出到EXCEL</div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" value="" id="hdnPararms" name="hdnPararms" />
+<input type="hidden" value="" id="hdnPararmValue" name="hdnPararmValue" />
+<input type="hidden" value="" id="hdnOperation" name="hdnOperation" />
+<input type="hidden" value="" id="hdnFileName" name="hdnFileName" />
+<div id="ReportList">
+</div>
+<div id="ChartContainer">
+    <div id="ChartA">
+    </div>
+    <div id="ChartB">
+    </div>
+</div>
+<script type="text/javascript">
+    var biChart = { a: null, b: null, optA: null, optB: null };
+    var biSpName = 'uspBI_MonthlyQualityReport';
+
+    $(function () {
+        $(".DateTimeBox").datepicker({ showHms: true });
+        $("#txtStartTime").val(GetDateStr(-180));
+        $("#txtEndTime").val(GetDateStr(0));
+        $(window).resize(function () {
+            if (biChart.a) { biChart.a.resize(); }
+            if (biChart.b) { biChart.b.resize(); }
+        });
+        setTimeout(function () { runQuery(); }, 400);
+    });
+
+    $(".wrap_tb ul.tb li").live("click", function () {
+        var idx = $(this).index();
+        setTimeout(function () {
+            if (idx == 1) {
+                showChart();
+            } else {
+                var $g = $("#ReportList");
+                if ($g.length > 0) {
+                    var gm = $g.SktMesGetGridManager();
+                    if (gm && gm.onResize) { gm.onResize(); }
+                }
+            }
+        }, 80);
+    });
+
+    function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+
+    function biFetchRows() {
+        var tries = [true, false], k;
+        for (k = 0; k < tries.length; k++) {
+            var isProc = tries[k];
+            biFetchRows.ok = false;
+            biFetchRows.data = null;
+            biFetchRows.msg = "";
+            var req = {
+                type: "post",
+                url: "../Handler/ReportingServer.ashx?gridviewname=" + biSpName + "&rnd=" + Math.random(),
+                data: { dataAction: "PROC", paramters: getParamStr() },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    biFetchRows.ok = true;
+                    biFetchRows.data = data;
+                },
+                error: function (xhr) {
+                    biFetchRows.ok = false;
+                    biFetchRows.msg = (xhr && xhr.status ? xhr.status + " " : "")
+                        + (xhr && xhr.responseText ? xhr.responseText : "");
+                }
+            };
+            if (isProc) {
+                req.data.isProcPage = "true";
+                req.data.page = "1";
+                req.data.pagesize = "100000";
+                req.data.conditions = "1=1";
+            }
+            $.ajax(req);
+            if (biFetchRows.ok && biFetchRows.data && typeof biFetchRows.data === "object") {
+                return biFetchRows.data;
+            }
+        }
+        alert("Get Data Error: " + (biFetchRows.msg || "no response").substring(0, 400));
+        return { Rows: [] };
+    }
+    function getParamStr() {
+        return '[{"name":"@StartDate","type":"varchar","size":"100","value":"' + $("#txtStartTime").val() + '"}'
+             + ',{"name":"@EndDate","type":"varchar","size":"100","value":"' + $("#txtEndTime").val() + '"}'
+             + ',{"name":"@ReportType","type":"varchar","size":"10","value":"' + $("#selReportType").val() + '"}]';
+    }
+
+    function runQuery() {
+        $("#divLoading").hide().remove();
+        $("#ReportList").replaceWith("<div id='ReportList'></div>");
+        $("#ReportList").SktMesGrid({
+            columns: [
+                { display: '月份', name: '月份', align: 'center', width: 80, minWidth: 60 },
+                { display: '类别', name: '类别', align: 'center', width: 90, minWidth: 60 },
+                { display: '项目代码', name: '项目代码', align: 'center', width: 100, minWidth: 60 },
+                { display: '项目名称', name: '项目名称', align: 'left', width: 170, minWidth: 60 },
+                { display: '客户', name: '客户', align: 'left', width: 150, minWidth: 60 },
+                { display: '发生件数', name: '发生件数', align: 'right', width: 90, minWidth: 60 },
+                { display: '数量', name: '数量', align: 'right', width: 110, minWidth: 60 },
+                { display: '月内占比(%)', name: '月内占比%', align: 'right', width: 100, minWidth: 60 }
+            ],
+            width: '100%',
+            height: '99%',
+            dataAction: 'PROC',
+            dataSource: biSpName,
+            paramters: getParamStr(),
+            pageSize: 50,
+            isProcPage: true
+        });
+        var ds = biFetchRows();
+        buildChart(ds && ds.Rows ? ds.Rows : []);
+        showChart();
+    }
+
+    $("#bnView").click(function () { runQuery(); });
+
+    $("#bnImport").click(function () {
+        $("#hdnPararms").val("@StartDate,@EndDate,@ReportType");
+        $("#hdnPararmValue").val($("#txtStartTime").val() + "," + $("#txtEndTime").val() + "," + $("#selReportType").val());
+        $("#hdnOperation").val(biSpName);
+        $("#hdnFileName").val('Q90 每月质量情况');
+        document.forms[0].submit();
+    });
+
+    function buildChart(rows) {
+        var monthCat = {}, months = [], cats = [], codeMap = {}, codes = [];
+        var i;
+        for (i = 0; i < rows.length; i++) {
+            var r = rows[i];
+            var m = r['月份'];
+            var cat = r['类别'] || '';
+            var code = r['项目代码'];
+            if (!monthCat[m]) { monthCat[m] = {}; months.push(m); }
+            if (!monthCat[m][cat]) { monthCat[m][cat] = 0; }
+            if (cats.indexOf(cat) < 0) { cats.push(cat); }
+            monthCat[m][cat] += num(r['数量']);
+            if (!codeMap[code]) { codeMap[code] = { qty: 0, name: r['项目名称'] }; codes.push(code); }
+            codeMap[code].qty += num(r['数量']);
+        }
+        months.sort();
+        cats.sort();
+        codes.sort(function (x, y) { return codeMap[y].qty - codeMap[x].qty; });
+        var catSeries = [];
+        for (i = 0; i < cats.length; i++) {
+            var arr = [], j;
+            for (j = 0; j < months.length; j++) { arr.push(monthCat[months[j]][cats[i]] || 0); }
+            catSeries.push({ name: cats[i], type: 'bar', stack: 'q', data: arr });
+        }
+        var topC = codes.slice(0, 10), topV = [], topL = [];
+        for (i = 0; i < topC.length; i++) {
+            topV.push(codeMap[topC[i]].qty);
+            topL.push(topC[i] + ' ' + codeMap[topC[i]].name);
+        }
+        topV.reverse();
+        topL.reverse();
+        biChart.optA = {
+            title: { text: '每月数量趋势', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: cats, top: 28 },
+            grid: { left: 70, right: 60, top: 70, bottom: 40 },
+            xAxis: { type: 'category', data: months },
+            yAxis: [{ type: 'value', name: '数量' }],
+            series: catSeries
+        };
+        biChart.optB = {
+            title: { text: '项目数量 TOP10', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 10, right: 60, top: 50, bottom: 40 },
+            xAxis: { type: 'value' },
+            yAxis: { type: 'category', data: topL },
+            series: [{ name: '数量', type: 'bar', data: topV, label: { show: true, position: 'right' } }]
+        };
+    }
+
+    function showChart() {
+        if (!biChart.optA || !biChart.optB) { return; }
+        var el = document.getElementById('ChartA');
+        if (!el || el.offsetWidth === 0) { return; }
+        if (!biChart.a) {
+            biChart.a = echarts.init(el);
+            biChart.b = echarts.init(document.getElementById('ChartB'));
+        }
+        biChart.a.setOption(biChart.optA, true);
+        biChart.b.setOption(biChart.optB, true);
+    }
+</script>

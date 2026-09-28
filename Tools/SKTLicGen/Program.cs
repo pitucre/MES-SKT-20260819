@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -21,7 +22,7 @@ namespace SKTLicGen
 
         static void Main(string[] args)
         {
-            Console.WriteLine("=== LeanMES SKTLicense.cer 生成器 ===\n");
+            Console.WriteLine("=== LeanMES SKTLicense.cer 生成器 v2.0 ===\n");
 
             string engineDll = FindEngineDll(args);
             string outPath = GetArg(args, "--out", "SKTLicense.cer");
@@ -35,6 +36,7 @@ namespace SKTLicGen
             string argCpu = GetArg(args, "--cpu", null);
             string argMac = GetArg(args, "--mac", null);
             string argDisk = GetArg(args, "--disk", null);
+            string hwinfoFile = GetArg(args, "--hwinfo", null);
 
             if (engineDll == null)
             {
@@ -55,7 +57,6 @@ namespace SKTLicGen
             try
             {
                 _engine = Assembly.LoadFrom(engineDll);
-                // 让 BinaryFormatter 反序列化能解析 System.Web.Engine 程序集
                 AppDomain.CurrentDomain.AssemblyResolve += ResolveEngine;
 
                 _licenseType = _engine.GetType("Systems.Web.License");
@@ -67,32 +68,37 @@ namespace SKTLicGen
                 Console.WriteLine("引擎: " + _engine.FullName);
                 Console.WriteLine();
 
-                // 1. 硬件信息：默认读取本机；若指定 --cpu/--mac/--disk 则用指定值（给其他机器远程发授权）
+                // 1. 硬件信息：支持三种来源
                 string cpu, mac, disk;
-                bool remote = argCpu != null || argMac != null || argDisk != null;
-                if (remote)
+                if (hwinfoFile != null)
                 {
+                    // 从 SKTHwCollector 生成的 hwinfo.txt 读取
+                    ReadHwInfoFile(hwinfoFile, out cpu, out mac, out disk);
+                    Console.WriteLine("硬件来源: 文件 " + hwinfoFile);
+                }
+                else if (argCpu != null || argMac != null || argDisk != null)
+                {
+                    // 命令行指定
                     cpu = argCpu ?? "";
                     mac = argMac ?? "";
                     disk = argDisk ?? "";
-                    Console.WriteLine("远程授权模式：使用指定的硬件指纹（未指定项留空）。");
-                    Console.WriteLine("  CPU  : " + cpu);
-                    Console.WriteLine("  MAC  : " + mac);
-                    Console.WriteLine("  DISK : " + disk);
-                    Console.WriteLine();
-                    if (string.IsNullOrEmpty(cpu) || string.IsNullOrEmpty(mac) || string.IsNullOrEmpty(disk))
-                    {
-                        Console.WriteLine("[提示] 校验要求 Machine 包含目标机的 CPU+MAC+磁盘，缺项可能导致目标机校验失败。");
-                        Console.WriteLine();
-                    }
+                    Console.WriteLine("硬件来源: 命令行参数");
                 }
                 else
                 {
+                    // 读取本机
                     GetHardwareString(out cpu, out mac, out disk);
-                    Console.WriteLine("本机模式：");
-                    Console.WriteLine("  CPU  : " + cpu);
-                    Console.WriteLine("  MAC  : " + mac);
-                    Console.WriteLine("  DISK : " + disk);
+                    Console.WriteLine("硬件来源: 本机");
+                }
+
+                Console.WriteLine("  CPU  : " + cpu);
+                Console.WriteLine("  MAC  : " + mac);
+                Console.WriteLine("  DISK : " + disk);
+                Console.WriteLine();
+
+                if (string.IsNullOrEmpty(cpu) || string.IsNullOrEmpty(mac) || string.IsNullOrEmpty(disk))
+                {
+                    Console.WriteLine("[提示] 硬件信息不完整，缺项可能导致目标机校验失败。");
                     Console.WriteLine();
                 }
 
@@ -115,7 +121,7 @@ namespace SKTLicGen
                 Console.WriteLine();
                 Console.WriteLine("已生成: " + Path.GetFullPath(outPath) + " (" + new FileInfo(outPath).Length + " B)");
 
-                // 5. 自校验：用引擎的 GetLicense 读回，验证有效
+                // 5. 自校验
                 bool ok = VerifyLicense(Path.GetFullPath(outPath));
                 Console.WriteLine();
                 Console.WriteLine(ok ? "[成功] License 校验通过！" : "[失败] License 校验未通过！");
@@ -124,6 +130,28 @@ namespace SKTLicGen
             catch (Exception ex)
             {
                 Console.WriteLine("[错误] " + ex.ToString());
+            }
+        }
+
+        // ---------- 从 hwinfo.txt 读取 ----------
+        static void ReadHwInfoFile(string path, out string cpu, out string mac, out string disk)
+        {
+            cpu = ""; mac = ""; disk = "";
+            if (!File.Exists(path))
+            {
+                Console.WriteLine("[错误] 文件不存在: " + path);
+                return;
+            }
+            foreach (string line in File.ReadAllLines(path))
+            {
+                string trimmed = line.Trim();
+                if (trimmed.StartsWith("#") || string.IsNullOrEmpty(trimmed)) continue;
+                if (trimmed.StartsWith("CPU=", StringComparison.OrdinalIgnoreCase))
+                    cpu = trimmed.Substring(4).Trim();
+                else if (trimmed.StartsWith("MAC=", StringComparison.OrdinalIgnoreCase))
+                    mac = trimmed.Substring(4).Trim();
+                else if (trimmed.StartsWith("DISK=", StringComparison.OrdinalIgnoreCase))
+                    disk = trimmed.Substring(5).Trim();
             }
         }
 
@@ -161,9 +189,6 @@ namespace SKTLicGen
         // ---------- 校验 ----------
         static bool VerifyLicense(string path)
         {
-            // 说明：Security.GetLicense 内部会把路径中的 "License" 替换为 "Cer" 作为解密目标临时文件名，
-            // 与站点运行逻辑耦合，不易独立验证。这里直接复用引擎的 DeFormatLicense + 反序列化进行验证，
-            // 与 GetLicense 的实际解密路径完全一致。
             try
             {
                 string password = (string)_lockKeyType.GetMethod("GetLicLockKey").Invoke(null, null);
@@ -199,7 +224,6 @@ namespace SKTLicGen
             string dll = GetArg(args, "--dll", null);
             if (dll != null && File.Exists(dll)) return Path.GetFullPath(dll);
 
-            // 从当前目录向上/向下多级搜索，覆盖常见部署位置
             string cur = Environment.CurrentDirectory;
             string[] candidates = {
                 Path.Combine(cur, "System.Web.Engine.dll"),

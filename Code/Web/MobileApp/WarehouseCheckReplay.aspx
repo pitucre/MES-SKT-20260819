@@ -276,17 +276,18 @@
                 //    $("txtGRN").focus();
                 //    return false;
                 //}
+                var scannedSN = entity.GRN;  // 保存被扫描的SN
                 grn = entity.PSN == null ? entity.GRN : entity.PSN;  //如果包装箱PSN不为空则grn为包装箱号
 
                 balanceQty = ajax.value.StockQty;
 
-                //校验GRN是否已经盘点
-                var ajaxCheck = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanCancelCheck(CheckListNo, grn, 2);
+                //校验GRN是否已经盘点（使用具体SN判断，而非包装箱号）
+                var ajaxCheck = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanCancelCheck(CheckListNo, grn, 2, scannedSN);
                 if (ajaxCheck.value == 1) {
                     if (confirm("条码【" + grn + "】已经扫描，是否撤销扫描")) {
                         if (ajax.value.Flag != -1) {
                             //直接进行盘点撤销
-                            var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 2);
+                            var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 2, scannedSN);
                             if (ajaxRollBack.error != null) {
                                 alert(ajaxRollBack.error.Message);
                                 return false;
@@ -318,7 +319,7 @@
                         }
                         else {
                             //直接进行盘点撤销
-                            var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 2);
+                            var ajaxRollBack = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanRollback(CheckListNo, grn, userName, 2, scannedSN);
                             $('#infotab tr[grn="' + grn + '"]').css("background-color", "#F8F8F8");
                             $("#txtQty").val(balanceQty);
                             showMsg(grn + "撤销成功", 1);
@@ -565,7 +566,8 @@
                 if (list.length > 0) {
                     $("#msg").html("");
                     for (var i = 0; i < (list.length >= 100 ? 100 : list.length) ; i++) {
-                        var value = list[i].StockQty - list[i].BalanceQty;
+                        var repeatQtyVal = list[i].RepeatQty || list[i].StockQty;
+                        var value = repeatQtyVal - list[i].BalanceQty;
                         var RepeatBy = list[i].RepeatBy;
                         var FirstBy = list[i].FirstBy;
                         var repeatQty = "";
@@ -611,7 +613,8 @@
                 if (list.length > 0) {
                     $("#msg").html("");
                     for (var i = 0; i < (list.length >= 100 ? 100 : list.length); i++) {
-                        var value = list[i].StockQty - list[i].BalanceQty;
+                        var repeatQtyVal = list[i].RepeatQty || list[i].StockQty;
+                        var value = repeatQtyVal - list[i].BalanceQty;
                         var RepeatBy = list[i].RepeatBy;
                         var FirstBy = list[i].FirstBy;
                         var repeatQty = "";
@@ -711,17 +714,26 @@
                     $("#txtGRN").focus();
                 }
             });
-            //认可初盘结果：将初盘数量复制到复盘数量
+            //认可初盘结果：将初盘数量复制到复盘数量（同时更新数据库）
             function AcceptFirstResult() {
                 if ($("#infotab tr").length <= 1) {
                     confirmDialog("暂无盘点数据");
                     return false;
                 }
                 confirmDialog("确认认可初盘结果？将把所有初盘数量复制到复盘数量", function () {
+                    var postData = [];
                     $("#infotab tr:gt(0)").each(function () {
+                        var grn = $(this).attr("id");
                         var firstQty = $(this).find("td").eq(6).text(); //初盘数量列(StockQty)
                         $(this).find(".RepeatQty").text(firstQty);     //复盘数量列
+                        postData.push({ "GRN": grn, "UsekQty": parseFloat(firstQty) || 0 });
                     });
+                    // 调用ScanBatch更新数据库
+                    var ajax = SKT.LeanMES.Web.AjaxServices.AjaxWarehouseCheck.ScanBatch(CheckListNo, postData, 2);
+                    if (ajax.error != null) {
+                        confirmDialog(ajax.error.Message);
+                        return false;
+                    }
                     showMsg("已认可初盘结果，复盘数量已更新", 1);
                 });
             }

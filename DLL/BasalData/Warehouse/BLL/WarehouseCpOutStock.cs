@@ -155,6 +155,44 @@ ORDER BY CreateDateTime DESC;", code);
             list = ComMethod.GetListBySql<WarehouseCpOutStockDtlMemberInfoOutput>(sqlstr, null);
             return list;
         }
+
+        /// <summary>
+        /// 获取销售出货单详情扫描记录
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public List<WarehouseCpOutStockDtlMemberInfoOutputNew> GetSalOrderMemberListDetailsNew(int code)
+        {
+            string sqlstr = String.Format(@"select 
+	ps.DNCode,  
+	CAST(pn.Qty AS INT) AS Qty,
+	pn.SerialNumber,
+	d.itemname,
+    pn.Itemcode,
+	d.CPN,
+	mu.lotcode,
+	mu.storagedate,
+	pu.CustomerSN,--客户号码
+	pu.CartonNo,--包装箱号码
+	pu.PalletNo,--栈板号码
+	pu.QcLotNo,--批次号
+    ISNULL(m2.CName,'') AS CreateBy, 
+	pn.CreateDateTime
+	from dbo.Prod_SalOrder ps WITH (NOLOCK)
+	INNER JOIN dbo.Prod_SalOrderDtl pd WITH (NOLOCK) ON ps.SalOrderID = pd.SalOrderID
+	INNER JOIN dbo.Prod_SalOrderSN pn WITH (NOLOCK) ON pd.SalOrderDtlID = pn.SalOrderDtlId
+	LEFT JOIN dbo.Prod_Unit pu WITH (NOLOCK) ON pn.SerialNumber = pu.SN
+	LEFT join Basal_Item d on d.Itemcode = pn.Itemcode
+	LEFT JOIN Prod_MaterialUnit mu on pn.SerialNumber=mu.SerialNumber
+	LEFT JOIN SYS_Users m1 (NOLOCK) ON ps.CreateBy = m1.UserName
+	LEFT JOIN SYS_Users m2 (NOLOCK) ON ps.FinishBy = m2.UserName
+	where ps.SalOrderID='{0}'
+	order by pn.CreateDateTime desc", code);
+            List<WarehouseCpOutStockDtlMemberInfoOutputNew> list = new List<WarehouseCpOutStockDtlMemberInfoOutputNew>();
+            list = ComMethod.GetListBySql<WarehouseCpOutStockDtlMemberInfoOutputNew>(sqlstr, null);
+            return list;
+        }
+
         /// <summary>
         /// 获取出货明细导出
         /// </summary>

@@ -161,6 +161,70 @@ namespace SKT.LeanMES.Warehouse.Model
         public string SerialNumber { get; set; }
     }
 
+    public class WarehouseCpOutStockDtlMemberInfoOutputNew
+    {
+        /// <summary>
+        /// 备货单号
+        /// </summary>
+        public string DNCode { get; set; }
+        /// <summary>
+        /// 栈板号码
+        /// </summary>
+        public string PalletNo { get; set; }
+        /// <summary>
+        /// 客户条码
+        /// </summary>
+        public string CustomerSN { get; set; }
+        /// <summary>
+        /// 批次号
+        /// </summary>
+        public string QcLotNo { get; set; }
+
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int Qty { get; set; }
+        /// <summary>
+        /// 扫描人
+        /// </summary>
+        public string CreateBy { get; set; }
+        /// <summary>
+        /// 扫描时间
+        /// </summary>
+        public DateTime CreateDateTime { get; set; }
+        /// <summary>
+        /// 卡通箱号
+        /// </summary>
+        public string CartonNo { get; set; }
+        /// <summary>
+        /// SN、GRN
+        /// </summary>
+        public string SerialNumber { get; set; }
+
+        /// <summary>
+        /// 物料名称
+        /// </summary>
+        public string ItemName { get; set; }
+        /// <summary>
+        /// 物料编码
+        /// </summary>
+        public string ItemCode { get; set; }
+        /// <summary>
+        /// 客户料号
+        /// </summary>
+        public string CPN { get; set; }
+        /// <summary>
+        /// 批次号
+        /// </summary>
+        public string LotCode { get; set; }
+        /// <summary>
+        /// 入库日期
+        /// </summary>
+        public DateTime? StorageDate { get; set; }
+
+    }
+
     /// <summary>
     /// 可用GRN信息
     /// </summary>

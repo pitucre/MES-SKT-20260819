@@ -1,0 +1,296 @@
+{
+  "timestamp": "2026-09-17 11:23:50",
+  "total": 32,
+  "online": 6,
+  "offline": 26,
+  "data": [
+    {
+      "code": "001",
+      "name": "注塑机1#",
+      "ip": "172.16.215.101",
+      "port": "4842",
+      "status": "offline",
+      "mesStatus": 4,
+      "runStatus": 1
+    },
+    {
+      "code": "002",
+      "name": "注塑机2#",
+      "ip": "172.16.215.102",
+      "port": "4842",
+      "status": "offline",
+      "mesStatus": 4,
+      "runStatus": 1
+    },
+    {
+      "code": "003",
+      "name": "注塑机3#",
+      "ip": "172.16.215.103",
+      "port": "4842",
+      "status": "offline",
+      "mesStatus": 2,
+      "runStatus": 1
+    },
+    {
+      "code": "004",
+      "name": "注塑机4#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "005",
+      "name": "注塑机5#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "006",
+      "name": "注塑机6#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "007",
+      "name": "注塑机7#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "008",
+      "name": "注塑机8#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 2,
+      "runStatus": 1
+    },
+    {
+      "code": "009",
+      "name": "注塑机9#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "010",
+      "name": "注塑机10#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "011",
+      "name": "注塑机11#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 1,
+      "runStatus": 2
+    },
+    {
+      "code": "012",
+      "name": "注塑机12#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "013",
+      "name": "注塑机13#",
+      "ip": "172.16.5.150",
+      "port": "1883",
+      "status": "online",
+      "mesStatus": 2,
+      "runStatus": 6
+    },
+    {
+      "code": "014",
+      "name": "注塑机14#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "015",
+      "name": "注塑机15#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "016",
+      "name": "注塑机16#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "017",
+      "name": "注塑机17#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "018",
+      "name": "注塑机18#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "019",
+      "name": "注塑机19#",
+      "ip": "172.16.5.150",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 12
+    },
+    {
+      "code": "020",
+      "name": "注塑机20#",
+      "ip": "172.16.5.150",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "021",
+      "name": "注塑机21#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 13
+    },
+    {
+      "code": "022",
+      "name": "注塑机22#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 13
+    },
+    {
+      "code": "023",
+      "name": "注塑机23#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 2,
+      "runStatus": 1
+    },
+    {
+      "code": "024",
+      "name": "注塑机24#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "025",
+      "name": "注塑机25#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "026",
+      "name": "注塑机26#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "027",
+      "name": "注塑机27#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 6
+    },
+    {
+      "code": "028",
+      "name": "注塑机28#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 0,
+      "runStatus": 7
+    },
+    {
+      "code": "029",
+      "name": "注塑机29#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    },
+    {
+      "code": "030",
+      "name": "注塑机30#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 2,
+      "runStatus": 1
+    },
+    {
+      "code": "031",
+      "name": "注塑机31#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 2,
+      "runStatus": 1
+    },
+    {
+      "code": "032",
+      "name": "注塑机32#",
+      "ip": "",
+      "port": "",
+      "status": "no_config",
+      "mesStatus": 1,
+      "runStatus": 1
+    }
+  ]
+}

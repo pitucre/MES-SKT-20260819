@@ -1,0 +1,234 @@
+<style type="text/css">
+    #divReport
+    {
+        height: auto;
+    }
+    #divChart
+    {
+        height: auto;
+    }
+    #ChartContainer
+    {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+    #ChartA, #ChartB
+    {
+        float: left;
+        width: 49.6%;
+        height: 450px;
+    }
+    #ChartB
+    {
+        float: right;
+    }
+</style>
+<table class="EditeContentTable" style="width: 100%; margin-bottom: 2px;">
+    <tr class="ListTableHeader">
+        <th id="title" scope="col" colspan="6">P93 模具模次与使用分析</th>
+    </tr>
+    <tr>
+        <td class="Label4">开始日期</td>
+        <td class="Field4">
+            <input type="text" id="txtStartTime" class="DateTimeBox" /></td>
+        <td class="Label4">结束日期</td>
+        <td class="Field4">
+            <input type="text" id="txtEndTime" class="DateTimeBox" /></td>
+        <td class="Label4">机台</td>
+        <td class="Field4">
+            <input type="text" id="txtMachineCode" class="TextBox" /></td>
+    </tr>
+    <tr>
+        <td class="Label4">模具号</td>
+        <td class="Field4">
+            <input type="text" id="txtMouldCode" class="TextBox" /></td>
+        <td class="Label4" colspan="4"></td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <div id="bnView" style="text-align: center; font-size: 16px; width: 20%; cursor: pointer; float: left; text-decoration: underline;">
+                <img src="../Content/images/search.png" />查询</div>
+            <div id="bnImport" style="font-size: 16px; cursor: pointer; text-decoration: underline; float: left; margin-left: 10px; width: 150px;">
+                <img src="../Content/images/icon/Import.png" />导出到EXCEL</div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" value="" id="hdnPararms" name="hdnPararms" />
+<input type="hidden" value="" id="hdnPararmValue" name="hdnPararmValue" />
+<input type="hidden" value="" id="hdnOperation" name="hdnOperation" />
+<input type="hidden" value="" id="hdnFileName" name="hdnFileName" />
+<div id="ReportList">
+</div>
+<div id="ChartContainer">
+    <div id="ChartA">
+    </div>
+    <div id="ChartB">
+    </div>
+</div>
+<script type="text/javascript">
+    var biChart = { a: null, b: null, optA: null, optB: null };
+    var biSpName = 'uspBI_MouldShotsReport_Program';
+
+    $(function () {
+        $(".DateTimeBox").datepicker({ showHms: true });
+        $("#txtStartTime").val(GetDateStr(-30));
+        $("#txtEndTime").val(GetDateStr(0));
+        $(window).resize(function () {
+            if (biChart.a) { biChart.a.resize(); }
+            if (biChart.b) { biChart.b.resize(); }
+        });
+        setTimeout(function () { runQuery(); }, 400);
+    });
+
+    $(".wrap_tb ul.tb li").live("click", function () {
+        var idx = $(this).index();
+        setTimeout(function () {
+            if (idx == 1) {
+                showChart();
+            } else {
+                var $g = $("#ReportList");
+                if ($g.length > 0) {
+                    var gm = $g.SktMesGetGridManager();
+                    if (gm && gm.onResize) { gm.onResize(); }
+                }
+            }
+        }, 80);
+    });
+
+    function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+
+    function biFetchRows() {
+        var tries = [true, false], k;
+        for (k = 0; k < tries.length; k++) {
+            var isProc = tries[k];
+            biFetchRows.ok = false;
+            biFetchRows.data = null;
+            biFetchRows.msg = "";
+            var req = {
+                type: "post",
+                url: "../Handler/ReportingServer.ashx?gridviewname=" + biSpName + "&rnd=" + Math.random(),
+                data: { dataAction: "PROC", paramters: getParamStr() },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    biFetchRows.ok = true;
+                    biFetchRows.data = data;
+                },
+                error: function (xhr) {
+                    biFetchRows.ok = false;
+                    biFetchRows.msg = (xhr && xhr.status ? xhr.status + " " : "")
+                        + (xhr && xhr.responseText ? xhr.responseText : "");
+                }
+            };
+            if (isProc) {
+                req.data.isProcPage = "true";
+                req.data.page = "1";
+                req.data.pagesize = "100000";
+                req.data.conditions = "1=1";
+            }
+            $.ajax(req);
+            if (biFetchRows.ok && biFetchRows.data && typeof biFetchRows.data === "object") {
+                return biFetchRows.data;
+            }
+        }
+        alert("Get Data Error: " + (biFetchRows.msg || "no response").substring(0, 400));
+        return { Rows: [] };
+    }
+    function getParamStr() {
+        return '[{"name":"@StartDate","type":"varchar","size":"100","value":"' + $("#txtStartTime").val() + '"}'
+             + ',{"name":"@EndDate","type":"varchar","size":"100","value":"' + $("#txtEndTime").val() + '"}'
+             + ',{"name":"@MachineCode","type":"varchar","size":"50","value":"' + $("#txtMachineCode").val() + '"}'
+             + ',{"name":"@MouldCode","type":"varchar","size":"50","value":"' + $("#txtMouldCode").val() + '"}]';
+    }
+
+    function runQuery() {
+        $("#divLoading").hide().remove();
+        $("#ReportList").replaceWith("<div id='ReportList'></div>");
+        $("#ReportList").SktMesGrid({
+            columns: [
+                { display: '日期', name: '日期', align: 'center', width: 90, minWidth: 60 },
+                { display: '机台', name: '机台', align: 'center', width: 70, minWidth: 60 },
+                { display: '机台名称', name: '机台名称', align: 'left', width: 100, minWidth: 60 },
+                { display: '模具号', name: '模具号', align: 'center', width: 90, minWidth: 60 },
+                { display: '模次', name: '模次', align: 'right', width: 90, minWidth: 60 },
+                { display: '占机台当日(%)', name: '占机台当日%', align: 'right', width: 110, minWidth: 60 },
+                { display: '使用次数', name: '使用次数', align: 'right', width: 80, minWidth: 60 },
+                { display: '首次时间', name: '首次时间', align: 'center', width: 130, minWidth: 60 },
+                { display: '末次时间', name: '末次时间', align: 'center', width: 130, minWidth: 60 },
+                { display: '平均周期(秒)', name: '平均周期秒', align: 'right', width: 100, minWidth: 60 },
+                { display: '快照行数', name: '快照行数', align: 'right', width: 80, minWidth: 60 },
+                { display: '关联工单', name: '关联工单', align: 'left', width: 180, minWidth: 60 }
+            ],
+            width: '100%',
+            height: '99%',
+            dataAction: 'PROC',
+            dataSource: biSpName,
+            paramters: getParamStr(),
+            pageSize: 50,
+            isProcPage: true
+        });
+        var ds = biFetchRows();
+        buildChart(ds && ds.Rows ? ds.Rows : []);
+        showChart();
+    }
+
+    $("#bnView").click(function () { runQuery(); });
+
+    $("#bnImport").click(function () {
+        $("#hdnPararms").val("@StartDate,@EndDate,@MachineCode,@MouldCode");
+        $("#hdnPararmValue").val($("#txtStartTime").val() + "," + $("#txtEndTime").val() + "," + $("#txtMachineCode").val() + "," + $("#txtMouldCode").val());
+        $("#hdnOperation").val(biSpName);
+        $("#hdnFileName").val('P93 模具模次与使用分析');
+        document.forms[0].submit();
+    });
+
+    function buildChart(rows) {
+        var dayMap = {}, days = [], mouldMap = {}, moulds = [];
+        var i;
+        for (i = 0; i < rows.length; i++) {
+            var r = rows[i];
+            var d = r['日期'];
+            var m = r['模具号'] || '未识别';
+            if (!dayMap[d]) { dayMap[d] = 0; days.push(d); }
+            dayMap[d] += num(r['模次']);
+            mouldMap[m] = (mouldMap[m] || 0) + num(r['模次']);
+            if (moulds.indexOf(m) < 0) { moulds.push(m); }
+        }
+        days.sort();
+        moulds.sort(function (x, y) { return mouldMap[y] - mouldMap[x]; });
+        var dayArr = [];
+        for (i = 0; i < days.length; i++) { dayArr.push(dayMap[days[i]]); }
+        var topM = moulds.slice(0, 10), topV = [];
+        for (i = 0; i < topM.length; i++) { topV.push(mouldMap[topM[i]]); }
+        topM.reverse(); topV.reverse();
+        biChart.optA = {
+            title: { text: '每日模次趋势', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 70, right: 40, top: 50, bottom: 40 },
+            xAxis: { type: 'category', data: days },
+            yAxis: { type: 'value', name: '模次' },
+            series: [{ name: '模次', type: 'line', smooth: true, data: dayArr, label: { show: true } }]
+        };
+        biChart.optB = {
+            title: { text: '模具模次TOP10', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 10, right: 70, top: 50, bottom: 40 },
+            xAxis: { type: 'value', name: '模次' },
+            yAxis: { type: 'category', data: topM },
+            series: [{ name: '模次', type: 'bar', data: topV, label: { show: true, position: 'right' } }]
+        };
+    }
+
+    function showChart() {
+        if (!biChart.optA || !biChart.optB) { return; }
+        var el = document.getElementById('ChartA');
+        if (!el || el.offsetWidth === 0) { return; }
+        if (!biChart.a) {
+            biChart.a = echarts.init(el);
+            biChart.b = echarts.init(document.getElementById('ChartB'));
+        }
+        biChart.a.setOption(biChart.optA, true);
+        biChart.b.setOption(biChart.optB, true);
+    }
+</script>

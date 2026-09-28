@@ -1,0 +1,301 @@
+==== P90 每月产量情况
+  TemplateId=2268 TemplateName=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223
+  PASS content_decodeuri :: OK decLen=7777 storedLen=14669 html=7777
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=27
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140040
+  PASS popedom_link :: SYS_Popedom=50140040 Name=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=P90 每月产量情况
+  PASS en_name :: ReportENValues=P90 Monthly Production Report
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=EC3D889B-8B49-4D9B-9D93-D6C3A39BD223&Flag=1
+==== P91 每日报工数量
+  TemplateId=2269 TemplateName=341EA390-EDE1-4DEA-BB60-0394D8B395E9
+  PASS content_decodeuri :: OK decLen=7282 storedLen=13794 html=7282
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=341EA390-EDE1-4DEA-BB60-0394D8B395E9&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=28
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140041
+  PASS popedom_link :: SYS_Popedom=50140041 Name=341EA390-EDE1-4DEA-BB60-0394D8B395E9
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=P91 每日报工数量
+  PASS en_name :: ReportENValues=P91 Daily Work Report
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=341EA390-EDE1-4DEA-BB60-0394D8B395E9&Flag=1
+==== Q90 每月质量情况
+  TemplateId=2270 TemplateName=F3282883-D6D1-41ED-B9F5-0ED18C55C593
+  PASS content_decodeuri :: OK decLen=7876 storedLen=14792 html=7876
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_url :: Url=Report/ReportPage.aspx?name=F3282883-D6D1-41ED-B9F5-0ED18C55C593&Flag=1
+  PASS page_module :: Module=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_sequence :: Sequence=7
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50130013
+  PASS popedom_link :: SYS_Popedom=50130013 Name=F3282883-D6D1-41ED-B9F5-0ED18C55C593
+  PASS popedom_group :: PopedomGroup=50130000
+  PASS cn_name :: ReportCNValues=Q90 每月质量情况
+  PASS en_name :: ReportENValues=Q90 Monthly Quality Report
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=F3282883-D6D1-41ED-B9F5-0ED18C55C593&Flag=1
+==== P92 上料BOM分析报表
+  TemplateId=2271 TemplateName=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37
+  PASS content_decodeuri :: OK decLen=8587 storedLen=16389 html=8587
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=29
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140042
+  PASS popedom_link :: SYS_Popedom=50140042 Name=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=P92 上料BOM分析报表
+  PASS en_name :: ReportENValues=P92 Loading BOM Analysis
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=D4B53604-C8C5-4F0E-A838-BEBD5C27EC37&Flag=1
+==== P93 模具模次报表
+  TemplateId=2272 TemplateName=633D4C5B-854A-442C-A543-B915F5F4BEE6
+  PASS content_decodeuri :: OK decLen=7975 storedLen=15043 html=7975
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=633D4C5B-854A-442C-A543-B915F5F4BEE6&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=30
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140043
+  PASS popedom_link :: SYS_Popedom=50140043 Name=633D4C5B-854A-442C-A543-B915F5F4BEE6
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=P93 模具模次报表
+  PASS en_name :: ReportENValues=P93 Mould Shots Report
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=633D4C5B-854A-442C-A543-B915F5F4BEE6&Flag=1
+==== P96 产能达成报表
+  TemplateId=2273 TemplateName=E383FB7A-31C6-493D-998C-7A4EE8992E8C
+  PASS content_decodeuri :: OK decLen=8903 storedLen=17075 html=8903
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=E383FB7A-31C6-493D-998C-7A4EE8992E8C&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=31
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140044
+  PASS popedom_link :: SYS_Popedom=50140044 Name=E383FB7A-31C6-493D-998C-7A4EE8992E8C
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=P96 产能达成报表
+  PASS en_name :: ReportENValues=P96 Capacity Achievement
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=E383FB7A-31C6-493D-998C-7A4EE8992E8C&Flag=1
+==== D01 生产驾驶舱
+  TemplateId=2274 TemplateName=1A04670C-59CD-4276-BC67-6C3AED24520A
+  PASS content_decodeuri :: OK decLen=8254 storedLen=15864 html=8254
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=1A04670C-59CD-4276-BC67-6C3AED24520A&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=32
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140045
+  PASS popedom_link :: SYS_Popedom=50140045 Name=1A04670C-59CD-4276-BC67-6C3AED24520A
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=D01 生产驾驶舱
+  PASS en_name :: ReportENValues=D01 Production Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=1A04670C-59CD-4276-BC67-6C3AED24520A&Flag=1
+==== D05 模具驾驶舱
+  TemplateId=2275 TemplateName=D0962E54-47FB-4FFF-8A59-D0F148A0E08A
+  PASS content_decodeuri :: OK decLen=7261 storedLen=13521 html=7261
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_url :: Url=Report/ReportPage.aspx?name=D0962E54-47FB-4FFF-8A59-D0F148A0E08A&Flag=1
+  PASS page_module :: Module=16217B99-6CCC-456E-A0C3-8E5A3EF66F7E
+  PASS page_sequence :: Sequence=33
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140046
+  PASS popedom_link :: SYS_Popedom=50140046 Name=D0962E54-47FB-4FFF-8A59-D0F148A0E08A
+  PASS popedom_group :: PopedomGroup=50120000
+  PASS cn_name :: ReportCNValues=D05 模具驾驶舱
+  PASS en_name :: ReportENValues=D05 Mould Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=D0962E54-47FB-4FFF-8A59-D0F148A0E08A&Flag=1
+==== P95 不良报废分析报表
+  TemplateId=2276 TemplateName=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45
+  PASS content_decodeuri :: OK decLen=9207 storedLen=17545 html=9207
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_url :: Url=Report/ReportPage.aspx?name=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45&Flag=1
+  PASS page_module :: Module=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_sequence :: Sequence=8
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50130014
+  PASS popedom_link :: SYS_Popedom=50130014 Name=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45
+  PASS popedom_group :: PopedomGroup=50130000
+  PASS cn_name :: ReportCNValues=P95 不良报废分析报表
+  PASS en_name :: ReportENValues=P95 Scrap NC Analysis
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=7DED4D4C-A9BA-4140-89BE-95D2C35A1B45&Flag=1
+==== D02 品质驾驶舱
+  TemplateId=2277 TemplateName=29BFA2B3-7DAB-4B83-AD07-40109E952E70
+  PASS content_decodeuri :: OK decLen=8503 storedLen=15971 html=8503
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_url :: Url=Report/ReportPage.aspx?name=29BFA2B3-7DAB-4B83-AD07-40109E952E70&Flag=1
+  PASS page_module :: Module=BAF39F3A-9F5D-4AAA-9E9B-B2117AA08D71
+  PASS page_sequence :: Sequence=9
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50130015
+  PASS popedom_link :: SYS_Popedom=50130015 Name=29BFA2B3-7DAB-4B83-AD07-40109E952E70
+  PASS popedom_group :: PopedomGroup=50130000
+  PASS cn_name :: ReportCNValues=D02 品质驾驶舱
+  PASS en_name :: ReportENValues=D02 Quality Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=29BFA2B3-7DAB-4B83-AD07-40109E952E70&Flag=1
+==== Q91 粉碎料来源报表
+  TemplateId=2278 TemplateName=94CF3D59-C864-4929-807A-E7A484BC8A9C
+  PASS content_decodeuri :: OK decLen=8355 storedLen=16017 html=8355
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=C7A32644-8771-458D-88F3-9DF6CFB7E49B
+  PASS page_url :: Url=Report/ReportPage.aspx?name=94CF3D59-C864-4929-807A-E7A484BC8A9C&Flag=1
+  PASS page_module :: Module=C7A32644-8771-458D-88F3-9DF6CFB7E49B
+  PASS page_sequence :: Sequence=17
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140047
+  PASS popedom_link :: SYS_Popedom=50140047 Name=94CF3D59-C864-4929-807A-E7A484BC8A9C
+  PASS popedom_group :: PopedomGroup=50140000
+  PASS cn_name :: ReportCNValues=Q91 粉碎料来源报表
+  PASS en_name :: ReportENValues=Q91 Regrind Source Report
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=94CF3D59-C864-4929-807A-E7A484BC8A9C&Flag=1
+==== D03 仓库驾驶舱
+  TemplateId=2279 TemplateName=692076CF-D3C4-475B-B3F6-F52ED6DB6565
+  PASS content_decodeuri :: OK decLen=8213 storedLen=15457 html=8213
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=C7A32644-8771-458D-88F3-9DF6CFB7E49B
+  PASS page_url :: Url=Report/ReportPage.aspx?name=692076CF-D3C4-475B-B3F6-F52ED6DB6565&Flag=1
+  PASS page_module :: Module=C7A32644-8771-458D-88F3-9DF6CFB7E49B
+  PASS page_sequence :: Sequence=18
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50140048
+  PASS popedom_link :: SYS_Popedom=50140048 Name=692076CF-D3C4-475B-B3F6-F52ED6DB6565
+  PASS popedom_group :: PopedomGroup=50140000
+  PASS cn_name :: ReportCNValues=D03 仓库驾驶舱
+  PASS en_name :: ReportENValues=D03 Warehouse Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=692076CF-D3C4-475B-B3F6-F52ED6DB6565&Flag=1
+==== P94 停机分析报表
+  TemplateId=2280 TemplateName=6EA8EF86-95C0-4391-8098-79817403DEA4
+  PASS content_decodeuri :: OK decLen=8739 storedLen=17135 html=8739
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=85F55665-3CA3-42B4-949B-F9496AFAD683
+  PASS page_url :: Url=Report/ReportPage.aspx?name=6EA8EF86-95C0-4391-8098-79817403DEA4&Flag=1
+  PASS page_module :: Module=85F55665-3CA3-42B4-949B-F9496AFAD683
+  PASS page_sequence :: Sequence=4
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50150006
+  PASS popedom_link :: SYS_Popedom=50150006 Name=6EA8EF86-95C0-4391-8098-79817403DEA4
+  PASS popedom_group :: PopedomGroup=50150000
+  PASS cn_name :: ReportCNValues=P94 停机分析报表
+  PASS en_name :: ReportENValues=P94 Downtime Analysis
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=6EA8EF86-95C0-4391-8098-79817403DEA4&Flag=1
+==== D04 设备驾驶舱
+  TemplateId=2281 TemplateName=6D5A140D-8CB1-4377-B72C-386805B18406
+  PASS content_decodeuri :: OK decLen=7366 storedLen=13736 html=7366
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=85F55665-3CA3-42B4-949B-F9496AFAD683
+  PASS page_url :: Url=Report/ReportPage.aspx?name=6D5A140D-8CB1-4377-B72C-386805B18406&Flag=1
+  PASS page_module :: Module=85F55665-3CA3-42B4-949B-F9496AFAD683
+  PASS page_sequence :: Sequence=5
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50150007
+  PASS popedom_link :: SYS_Popedom=50150007 Name=6D5A140D-8CB1-4377-B72C-386805B18406
+  PASS popedom_group :: PopedomGroup=50150000
+  PASS cn_name :: ReportCNValues=D04 设备驾驶舱
+  PASS en_name :: ReportENValues=D04 Equipment Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=6D5A140D-8CB1-4377-B72C-386805B18406&Flag=1
+==== D06 管理驾驶舱
+  TemplateId=2282 TemplateName=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57
+  PASS content_decodeuri :: OK decLen=9322 storedLen=17828 html=9322
+  PASS category :: TemplateCategory=2
+  PASS report_type :: Report=F0257AA3-4A50-44E6-912E-06FC4ED29F8D
+  PASS page_url :: Url=Report/ReportPage.aspx?name=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57&Flag=1
+  PASS page_module :: Module=F0257AA3-4A50-44E6-912E-06FC4ED29F8D
+  PASS page_sequence :: Sequence=5
+  PASS page_inmenu :: InMenu=1
+  PASS page_flag :: Flag=1
+  PASS page_popedom :: Popedom=50160006
+  PASS popedom_link :: SYS_Popedom=50160006 Name=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57
+  PASS popedom_group :: PopedomGroup=50160000
+  PASS cn_name :: ReportCNValues=D06 管理驾驶舱
+  PASS en_name :: ReportENValues=D06 Management Dashboard
+  PASS is_kanban :: IsKanban=0
+  PASS res_flag :: Report_ResourcesMap.Flag=2
+  PASS page_unique :: FRAMEWORK_PAGES count=1
+  PASS popedom_unique :: SYS_Popedom value count=1
+  URL=http://172.16.5.144/Report/ReportPage.aspx?name=0595752F-BD0E-4DA5-9B2E-ECFDCA06EC57&Flag=1
+RESULT fail=0

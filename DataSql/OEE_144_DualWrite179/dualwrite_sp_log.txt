@@ -1,0 +1,8 @@
+BACKUP uspEquimentCollection len=41413
+APPLIED uspEquimentCollection
+BACKUP uspEquimentCollection_250908 len=33656
+APPLIED uspEquimentCollection_250908
+BACKUP uspEquimentCollectionHMG len=19411
+APPLIED uspEquimentCollectionHMG
+BACKUP uspEquimentCollectionHT len=3224
+APPLIED uspEquimentCollectionHT
