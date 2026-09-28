@@ -117,6 +117,15 @@
                     <span style="height: 14px; width: 14px; vertical-align: middle">
                         <img src="newImages/icon/分料截图.png" alt="形态转换" style="margin-bottom: -8px; margin-right: 21px;" /></span>形态转换MES</a>            </li>
 
+                <%-- 以下两项为 2026-09-27 三页面对比测试入口，测试期不走权限直接可见，测试结束后删除 --%>
+                <li style="display: block;" id="PDA_FormChangeLB"><a href="#" onclick="Check(167);" data-transition="none" class="ui-btn" data-ajax="false">
+                    <span style="height: 14px; width: 14px; vertical-align: middle">
+                        <img src="newImages/icon/分料截图.png" alt="不良和料把形态转换" style="margin-bottom: -8px; margin-right: 21px;" /></span>不良和料把形态转换页面</a>            </li>
+
+                <li style="display: block;" id="PDA_FormChangeAll"><a href="#" onclick="Check(168);" data-transition="none" class="ui-btn" data-ajax="false">
+                    <span style="height: 14px; width: 14px; vertical-align: middle">
+                        <img src="newImages/icon/分料截图.png" alt="形态转换综合" style="margin-bottom: -8px; margin-right: 21px;" /></span>形态转换综合页面</a>            </li>
+
                 <li class="noDisplay" style="display: none;" id="PDA_MesToErpChange"><a href="#" onclick="Check(118);" data-transition="none" class="ui-btn" data-ajax="false">
                     <span style="height: 14px; width: 14px; vertical-align: middle">
                         <img src="newImages/icon/分料截图.png" alt="ERP形态转换接口" style="margin-bottom: -8px; margin-right: 21px;" /></span>ERP形态转换接口</a>            </li>
@@ -924,6 +933,10 @@
                 window.location.href = "FormChangeByMES.aspx";//形态转换
             } else if (data == 166) {
                 window.location.href = "FormChangeByMES.aspx";//形态转换mes
+            } else if (data == 167) {
+                window.location.href = "FormChangeByMES_LB.aspx";//不良和料把形态转换页面（对比测试）
+            } else if (data == 168) {
+                window.location.href = "FormChangeByMES_All.aspx";//形态转换综合页面（对比测试）
             }
             else if (data == 107) {
                 window.location.href = "PDAMouldOperateRecord.aspx?name=PDA_MouldOperateRecord";//PDA模具保养

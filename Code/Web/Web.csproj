@@ -1604,11 +1604,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Popedom.en-us.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Framework\Popedom.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Popedom.resx</DependentUpon>
-    </Compile>
     <Compile Include="App_GlobalResources\Framework\SubSystems.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -13518,6 +13513,8 @@
     <Content Include="MobileApp\CPReturnStockEx.aspx" />
     <Content Include="MobileApp\FeedingHopperCrusher.aspx" />
     <Content Include="MobileApp\FormChangeByMES.aspx" />
+    <Content Include="MobileApp\FormChangeByMES_All.aspx" />
+    <Content Include="MobileApp\FormChangeByMES_LB.aspx" />
     <Content Include="MobileApp\InjectionLoadingMaterial.aspx" />
     <Content Include="MobileApp\js\layui\css\layui.css" />
     <Content Include="MobileApp\js\layui\css\modules\code.css" />
