@@ -63,6 +63,18 @@
     <div id="ChartB">
     </div>
 </div>
+<div id="drillMask" style="display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.35; z-index: 9998;">
+</div>
+<div id="drillPanel" style="display: none; position: fixed; left: 3%; top: 3%; width: 94%; height: 92%; background: #fff; border: 2px solid #4a7bb0; z-index: 9999; overflow: auto; padding: 8px;">
+    <div style="text-align: right;">
+        <span id="drillClose" style="cursor: pointer; color: #e02020; font-weight: bold; font-size: 16px; padding: 2px 10px;">关闭 X</span></div>
+    <div id="drillTitle" style="font-size: 15px; font-weight: bold; margin: 0 0 8px 0;">
+    </div>
+    <div id="drillSec1" style="margin-bottom: 14px;">
+    </div>
+    <div id="drillSec2">
+    </div>
+</div>
 <script type="text/javascript">
     var biChart = { a: null, b: null, optA: null, optB: null };
     var biSpName = 'uspBI_WorkOrderProductionReport_Program';
@@ -94,6 +106,22 @@
     });
 
     function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+    function biEmpty(v) {
+        return v === null || v === undefined || String(v).replace(/^\s+|\s+$/g, '') === '';
+    }
+    function biRedMiss(label) {
+        return '<span style="color:#e02020;font-weight:bold" title="' + label + '缺失">—</span>';
+    }
+    function biEsc(s) {
+        return String(s === null || s === undefined ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function biDrillCell(row, v) {
+        return '<a href="javascript:void(0)" class="biDrillLink" data-o="' + biEsc(row['工单号'])
+            + '" data-d="' + biEsc(row['生产日期']) + '" style="color:#1a5fb4; text-decoration: underline;" title="点击查看用料明细">'
+            + biEsc(v) + '</a>';
+    }
 
     function biFetchRows() {
         var tries = [true, false], k;
@@ -146,14 +174,26 @@
             columns: [
                 { display: '工单号', name: '工单号', align: 'center', width: 130, minWidth: 60 },
                 { display: '产品编码', name: '产品编码', align: 'center', width: 100, minWidth: 60 },
-                { display: '产品名称', name: '产品名称', align: 'left', width: 200, minWidth: 60 },
-                { display: '模穴数', name: '模穴数', align: 'right', width: 65, minWidth: 40 },
+                { display: '产品名称', name: '产品名称', align: 'left', width: 180, minWidth: 60 },
+                { display: '模具', name: '模具', align: 'center', width: 90, minWidth: 50,
+                  render: function (row, i, v) { return biEmpty(v) ? biRedMiss('模具') : v; } },
+                { display: '模穴数', name: '模穴数', align: 'right', width: 65, minWidth: 40,
+                  render: function (row, i, v) { return biEmpty(v) ? biRedMiss('模穴数') : v; } },
                 { display: '设备编码', name: '设备编码', align: 'center', width: 90, minWidth: 50 },
                 { display: '生产日期', name: '生产日期', align: 'center', width: 150, minWidth: 80 },
                 { display: '开关模次数', name: '开关模次数', align: 'right', width: 100, minWidth: 60 },
+                { display: '计划数', name: '计划数', align: 'right', width: 85, minWidth: 55 },
                 { display: '实际产品数', name: '实际产品数', align: 'right', width: 100, minWidth: 60 },
                 { display: '良品数', name: '良品数', align: 'right', width: 90, minWidth: 60 },
-                { display: '不良数', name: '不良数', align: 'right', width: 80, minWidth: 60 },
+                { display: '良品数', name: '良品数', align: 'right', width: 90, minWidth: 60,
+                  render: function (row, i, v) { return biDrillCell(row, v); } },
+                { display: '不良数', name: '不良数', align: 'right', width: 80, minWidth: 60,
+                  render: function (row, i, v) { return biDrillCell(row, v); } },
+                { display: '完工检验数量', name: '完工检验数量', align: 'right', width: 110, minWidth: 70 },
+                { display: '入库数量', name: '入库数量', align: 'right', width: 95, minWidth: 60 },
+                { display: '待入库数量', name: '待入库数量', align: 'right', width: 95, minWidth: 60 },
+                { display: '产出待入库数量', name: '产出待入库数量', align: 'right', width: 115, minWidth: 70 },
+                { display: '完工率%', name: '完工率%', align: 'right', width: 85, minWidth: 50 },
                 { display: '良品率%', name: '良品率%', align: 'right', width: 85, minWidth: 50 }
             ],
             width: '100%',
@@ -200,9 +240,9 @@
             title: { text: '实际产品数TOP10工单', left: 'center' },
             tooltip: { trigger: 'axis' },
             legend: { data: ['实际产品数', '良品数'], top: 28 },
-            grid: { left: 10, right: 70, top: 70, bottom: 40 },
+            grid: { left: 140, right: 70, top: 70, bottom: 40 },
             xAxis: { type: 'value', name: '数量' },
-            yAxis: { type: 'category', data: aLabels },
+            yAxis: { type: 'category', data: aLabels, axisLabel: { width: 128, overflow: 'truncate' } },
             series: [
                 { name: '实际产品数', type: 'bar', data: aAct },
                 { name: '良品数', type: 'bar', data: aOk }
@@ -217,9 +257,9 @@
         biChart.optB = {
             title: { text: '开关模次数TOP10工单', left: 'center' },
             tooltip: { trigger: 'axis' },
-            grid: { left: 10, right: 70, top: 50, bottom: 40 },
+            grid: { left: 140, right: 70, top: 50, bottom: 40 },
             xAxis: { type: 'value', name: '次数' },
-            yAxis: { type: 'category', data: sLabels },
+            yAxis: { type: 'category', data: sLabels, axisLabel: { width: 128, overflow: 'truncate' } },
             series: [{ name: '开关模次数', type: 'bar', data: sShots, label: { show: true, position: 'right' } }]
         };
     }
@@ -235,4 +275,73 @@
         biChart.a.setOption(biChart.optA, true);
         biChart.b.setOption(biChart.optB, true);
     }
+
+    var biDrillSp = 'uspBI_WorkOrderMaterialDrill_Program';
+    var biLoadCols = ['上料时间', '机台资源', '料桶', '原料编码', '原料名称', 'GRN', '上料数量', '操作类型', '操作人'];
+    var biBomCols = ['原料编码', '原料名称', '单位', '单用量', '良品数', '良品消耗量', '不良品数', '不良品消耗量', '期间上料量', '生产日期'];
+
+    function biDrillFetch(order, sd, ed, mode) {
+        var res = null;
+        $.ajax({
+            type: 'post',
+            url: '../Handler/ReportingServer.ashx?gridviewname=' + biDrillSp + '&rnd=' + Math.random(),
+            data: {
+                dataAction: 'PROC',
+                paramters: '[{"name":"@OrderNo","type":"varchar","size":"50","value":"' + biEsc(order) + '"}'
+                    + ',{"name":"@StartDate","type":"varchar","size":"20","value":"' + biEsc(sd) + '"}'
+                    + ',{"name":"@EndDate","type":"varchar","size":"20","value":"' + biEsc(ed) + '"}'
+                    + ',{"name":"@Mode","type":"varchar","size":"10","value":"' + biEsc(mode) + '"}]'
+            },
+            dataType: 'json',
+            async: false,
+            success: function (d) { res = d; },
+            error: function () { res = null; }
+        });
+        return res;
+    }
+
+    function biRenderTable(cols, rows) {
+        if (!rows || rows.length === 0) {
+            return '<div style="color: #999; margin: 4px 0 10px 0;">(无记录)</div>';
+        }
+        var h = '<table class="EditeContentTable" style="width: 100%;"><tr class="ListTableHeader">', c, r;
+        for (c = 0; c < cols.length; c++) { h += '<th>' + cols[c] + '</th>'; }
+        h += '</tr>';
+        for (r = 0; r < rows.length; r++) {
+            h += '<tr>';
+            for (c = 0; c < cols.length; c++) {
+                h += '<td style="border: 1px solid #ccc; padding: 2px 5px; text-align: center;">'
+                    + biEsc(rows[r][cols[c]]) + '</td>';
+            }
+            h += '</tr>';
+        }
+        return h + '</table><div style="height: 6px;"></div>';
+    }
+
+    $('.biDrillLink').live('click', function () {
+        var order = $(this).attr('data-o');
+        var pdate = $(this).attr('data-d');
+        var sd = pdate, ed = pdate;
+        if (pdate && pdate.indexOf('~') >= 0) {
+            var pp = pdate.split('~');
+            sd = $.trim(pp[0]);
+            ed = $.trim(pp[1]);
+        }
+        $('#drillTitle').text('工单 ' + order + '  用料明细  (生产日期 ' + pdate + ')');
+        $('#drillSec1').html('<b>上料记录</b> <span style="color:#888;">该工单机台 + 生产日期窗口内</span><br/><span style="color:#999;">加载中...</span>');
+        $('#drillSec2').html('<b>原料消耗 (基于工单BOM)</b><br/><span style="color:#999;">加载中...</span>');
+        $('#drillMask, #drillPanel').show();
+        var d1 = biDrillFetch(order, sd, ed, '1');
+        var d2 = biDrillFetch(order, sd, ed, '2');
+        var r1 = (d1 && d1.Rows) ? d1.Rows : null;
+        var r2 = (d2 && d2.Rows) ? d2.Rows : null;
+        $('#drillSec1').html('<b>上料记录</b> <span style="color:#888;">该工单机台 + 生产日期窗口内, 按时间倒序</span><br/>'
+            + (r1 === null ? '<span style="color:#e02020;">加载失败</span>' : biRenderTable(biLoadCols, r1)));
+        $('#drillSec2').html('<b>原料消耗 (基于工单BOM)</b> <span style="color:#888;">良品/不良品消耗量 = 单用量 × 对应数量; 期间上料量 = 同窗口同机台实际上料</span><br/>'
+            + (r2 === null ? '<span style="color:#e02020;">加载失败</span>' : biRenderTable(biBomCols, r2)));
+    });
+
+    $('#drillClose, #drillMask').live('click', function () {
+        $('#drillMask, #drillPanel').hide();
+    });
 </script>

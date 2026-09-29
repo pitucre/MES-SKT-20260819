@@ -246,5 +246,46 @@ namespace SKT.LeanMES.Web.AjaxServices
             return listSN;
         }
 
+        /// <summary>
+        /// 根据SN集合获取UID集合（GetListSNByIds 的反向换算）
+        /// 用途：补打标签列表页用的视图 udfvw_printSN_more 只有 SN，没有 UID，
+        ///       而补打窗口 ShopOrderDetailRePrint.aspx 按 UID 取数，故在页面里先做 SN→UID 换算。
+        /// </summary>
+        /// <param name="sns">SN 字符串，逗号分隔</param>
+        /// <returns>UID 字符串集合（主条码 SNTypeID=0）</returns>
+        [AjaxMethod]
+        public List<string> GetUIDListBySN(string sns)
+        {
+            List<string> listUID = new List<string>();
+            try
+            {
+                if (string.IsNullOrEmpty(sns))
+                {
+                    return listUID;
+                }
+                string sql = @"SELECT  a.[UID]
+                    FROM    Prod_SerialNumber AS a  WITH (NOLOCK)
+                            INNER JOIN fn_SplitStringToStrTable(@SNs,',') T ON T.Value = a.[Value]
+                    WHERE   a.SNTypeID = 0   ";
+                SqlParameter[] parms = new SqlParameter[]{
+                    new SqlParameter("@SNs", SqlDbType.NVarChar, 4000)
+                };
+                parms[0].Value = sns;
+                using (SqlDataReader dr = SQLHelper.ExecuteReaderSqlText(SQLHelper.MESConnString, sql, parms))
+                {
+                    while (dr.Read())
+                    {
+                        listUID.Add(dr[0].ToString());
+                    }
+                    dr.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                WebHelper.HandleException(ex);
+            }
+            return listUID;
+        }
+
     }
 }

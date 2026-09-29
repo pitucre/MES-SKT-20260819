@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/EditMaster.master" AutoEventWireup="true" CodeBehind="DefectiveProductLabel.aspx.cs" Inherits="SKT.LeanMES.Web.Client.DefectiveProductLabel" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/EditMaster.master" AutoEventWireup="true" CodeBehind="DefectiveProductLabel.aspx.cs" Inherits="SKT.LeanMES.Web.Client.DefectiveProductLabel" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="EditContent" runat="server">
     <table class="EditeContentTable" width="100%">
@@ -51,10 +51,11 @@
                 <input type="text" id="txtNumbers" class="TextBox" isrequired='1' />
             </td>
 
-            <td class="Label2">不良现象<em>*</em>
+            <td class="Label2">不良现象
             </td>
             <td class="Field2">
-                <asp:TextBox ID="txtNcCode" runat="server" IsRequired='1'></asp:TextBox>
+                <%--改造：取消「不良现象」必填（数量已由注塑报工界面的不良现象明细汇总）--%>
+                <asp:TextBox ID="txtNcCode" runat="server"></asp:TextBox>
                 <input type="button" id="btnSelectNcCode" class="ButtonBox" value="..." title="Select"
                     onclick="openChoosePage(113);" />
                 <asp:HiddenField ID="hdntxtNcCode" runat="server" Value="-1" ClientIDMode="Static" />
@@ -114,6 +115,10 @@
         var userName = '<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserName %>';
         var Sn = "";
         var Qty = getQueryString("Qty");
+        //改造：注塑报工界面传来的不良现象汇总数（NcSum）与明细（NcPayload：id|名称|数量;...）
+        var ncSumParam = getQueryString("NcSum");
+        var ncPayloadParam = getQueryString("NcPayload");
+        var ncDetailList = [];          //[{ id, code, qty }]
         $("#txtProductName").text(productName);
         $(document).ready(function () {
             /*  bindPrinters('selPrintersList');*/
@@ -123,6 +128,8 @@
             getStationInfo();
             getOrderInfo();
 
+            //改造：应用注塑报工界面传来的不良现象（自动填不良数量 + 写备注）
+            initNcDetail();
         });
 
         function openChoosePage(flags) {
@@ -281,7 +288,11 @@
             var listStr = ajax.value;
             var sn = listStr[0];
             updateCollectionList(sn, 'OK');
+            //改造：把不良现象明细写入 Prod_InjectionMoldingNcDetail（带不良条码 sn，SP 反查 Prod_Unit.UID）
+            var ncSaved = saveNcDetail('保存', sn);
             alert("保存成功");
+            //改造：保存成功后把主界面不良现象数量清零
+            if (ncSaved) { clearParentNcQty(); }
             var Qty = $("#txtNumbers").val();
             window.parent.UpdateListNG(sn, Qty);
             window.parent.closeDialog();
@@ -327,7 +338,11 @@
             var listStr = ajax.value;
             var sn = listStr[0];
             updateCollectionList(sn, 'OK');
+            //改造：把不良现象明细写入 Prod_InjectionMoldingNcDetail（带不良条码 sn，SP 反查 Prod_Unit.UID）
+            var ncSaved = saveNcDetail('保存并打印', sn);
             alert("保存成功");
+            //改造：保存成功后把主界面不良现象数量清零
+            if (ncSaved) { clearParentNcQty(); }
             var Qty = $("#txtNumbers").val();
             window.parent.UpdateList(sn, Qty);
             window.parent.closeDialog();
@@ -436,6 +451,107 @@
         }
         /********************************************标签打印 结束   （zhibin.Chen 2016-03-11 整理）************************************************/
 
+        /************************ 不良现象明细（改造新增） 开始 ************************/
+        //应用主界面传来的不良现象：自动填「不良数量」=各现象数量之和；不为 0 的现象写入「备注」
+        function initNcDetail() {
+            ncDetailList = [];
+            if (ncPayloadParam) {
+                var parts = ncPayloadParam.split(";");
+                for (var i = 0; i < parts.length; i++) {
+                    if (!parts[i]) { continue; }
+                    var f = parts[i].split("|");
+                    if (f.length < 3) { continue; }
+                    //新格式 id|代码|名称|数量（4 段）；旧格式 id|名称|数量（3 段）也兼容
+                    var item = null;
+                    if (f.length >= 4) {
+                        item = { id: parseInt(f[0], 10) || -1, code: f[1], name: f[2], qty: parseInt(f[3], 10) || 0 };
+                    } else {
+                        item = { id: parseInt(f[0], 10) || -1, code: f[1], name: f[1], qty: parseInt(f[2], 10) || 0 };
+                    }
+                    if (!item.name) { item.name = item.code; }
+                    ncDetailList.push(item);
+                }
+            }
+            if (ncDetailList.length == 0) { return; }
+
+            //不良数量 = 所有不良现象数量之和
+            var sum = parseInt(ncSumParam, 10);
+            if (isNaN(sum) || sum < 0) { sum = 0; }
+            $("#txtNumbers").val(sum);
+
+            //不为 0 的不良现象（显示名称）写入备注（备注列限长 50，超出部分截断）
+            var txt = "";
+            for (var j = 0; j < ncDetailList.length; j++) {
+                txt += (j > 0 ? ";" : "") + ncDetailList[j].name + ncDetailList[j].qty;
+            }
+            var maxLen = 50;
+            if (txt.length > maxLen) { txt = txt.substring(0, maxLen - 1) + "…"; }
+            $("#txtRemark").val(txt);
+        }
+
+        //把不良现象明细保存到 Prod_InjectionMoldingNcDetail（「保存」/「保存并打印」都会调用）
+        //sn = 本次不良登记生成的不良条码，SP 内部按它反查 Prod_Unit.UID 存 UnitUID 列
+        function saveNcDetail(saveType, sn) {
+            try {
+                var total = parseInt($.trim($("#txtNumbers").val()), 10);
+                if (isNaN(total) || total < 0) { total = 0; }
+                var rows = ncDetailList;
+                if (rows.length == 0) {
+                    if (total <= 0) { return true; }
+                    rows = [{ id: -1, code: "", qty: 0 }];      //没有选具体现象时也留一条记录
+                }
+                var machineNo = $.trim($("#<%=this.txtResName.ClientID %>").val());
+                for (var i = 0; i < rows.length; i++) {
+                    var entity = {
+                        OrderNo: $.trim($("#<%=this.txtOrderNo.ClientID %>").text()),
+                        ProductName: productName || "",
+                        MachineNo: machineNo,
+                        ResName: machineNo,
+                        ResourceId: parseInt(resourceId, 10) || 0,
+                        OpeId: parseInt($("#hdnStationId").val(), 10) || 0,
+                        ProdOrderId: parseInt($("#hdnOrderId").val(), 10) || 0,
+                        SN: sn || "",
+                        NcCodeId: parseInt(rows[i].id, 10) || -1,
+                        NcCode: rows[i].code || "",
+                        NcName: rows[i].name || rows[i].code || "",
+                        NcQty: parseInt(rows[i].qty, 10) || 0,
+                        NcTotal: total,
+                        SaveType: saveType,
+                        Remark: $.trim($("#txtRemark").val()),
+                        UserName: userName
+                    };
+                    var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspSaveInjectionMoldingNcDetail_Program", JSON.stringify(entity));
+                    if (ajax.error != null) {
+                        alert("不良现象明细保存失败：" + ajax.error.Message);
+                        return false;
+                    }
+                    //ExecuteSpc 出错时后端会静默返回 "{}"，这里校验返回值，避免"假成功"
+                    var ok = false;
+                    try {
+                        var res = JSON.parse(ajax.value);
+                        if (res && res.data && res.data.length > 0 && parseInt(res.data[0].Id, 10) > 0) { ok = true; }
+                    } catch (e) { ok = false; }
+                    if (!ok) {
+                        alert("不良现象明细保存失败：接口没有返回记录ID。\r\n请确认数据库已执行最新的脚本（存储过程 uspSaveInjectionMoldingNcDetail_Program 需含 @SN 参数）。");
+                        return false;
+                    }
+                }
+            } catch (e) {
+                alert("不良现象明细保存异常：" + e);
+                return false;
+            }
+            return true;
+        }
+
+        //保存成功后，通知主界面（注塑报工界面）把所有不良现象数量清零
+        function clearParentNcQty() {
+            try {
+                if (window.parent && typeof (window.parent.clearNcQty) === "function") {
+                    window.parent.clearNcQty();
+                }
+            } catch (e) { }
+        }
+        /************************ 不良现象明细（改造新增） 结束 ************************/
 
     </script>
 </asp:Content>

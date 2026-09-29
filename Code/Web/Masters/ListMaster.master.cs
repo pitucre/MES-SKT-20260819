@@ -101,6 +101,17 @@ namespace SKT.LeanMES.Web.Masters
             set { this.setSearchSettings = value; }
         }
 
+        /// <summary>
+        /// 搜索区「全字匹配」勾选框是否勾选（只读）。
+        /// 说明：走通用取数（ComMethod/Common_GetPageRecords）的列表，条件是否 LIKE 由页面自行决定
+        ///       —— 通用取数只认参数值里的 %（带 % 走 LIKE，不带走 =），并不读 IsMatchWholeWord，
+        ///       所以页面可用该属性在「勾选=精确、未勾选=模糊」之间切换。
+        /// </summary>
+        public bool IsMatchWholeWord
+        {
+            get { return this.chkMatchWholeWord.Checked; }
+        }
+
         #endregion
 
         /// <summary>

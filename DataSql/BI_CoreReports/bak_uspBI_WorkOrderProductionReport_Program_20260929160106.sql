@@ -1,3 +1,4 @@
+/* backup uspBI_WorkOrderProductionReport_Program @ 2026-09-29 16:01:06 */
 /*
   P97 工单产品生产报表 (BI中心 核心报表-新建)
   数据源 : dbo.Prod_EquimentOrderPord  按工单x机台x日累计 (Qty=开关模次数, ProdNum=实际产品数)
@@ -21,10 +22,6 @@
         待入库数量   = 完工检验数量 - 入库数量
         产出待入库数量 = 注塑数量 - 入库数量
         数量为工单全生命周期值(与 P25 一致, 不按窗口截断); 目标工单集仍由窗口 EOP 决定
-   v3 2026-09-29 追加:
-        计划数   = Prod_Order.Qty_to_Build (P25 工单数量同源)
-        完工率%  = 良品数 / 计划数 × 100 (计划数<=0 为 NULL; 良品归集错位可能 >100%)
-        修改前已备份 bak_uspBI_WorkOrderProductionReport_Program_20260929160106.sql
    约定   : @PageSize<=0 或 @PageIndex<=0 -> 全量(图表用); 否则 ROW_NUMBER 分页回写 @TotalCount
    创建   : 2026-09-27 全新对象(以 _Program 结尾, 无原有对象备份需求)
             2026-09-28 v2 修改前已备份 bak_uspBI_WorkOrderProductionReport_Program_20260928085940.sql
@@ -84,7 +81,6 @@ BEGIN
             ProdOrderID = MAX(oo.ProdOrderID),
             ItemCode    = MAX(it.ItemCode),
             ItemName    = MAX(it.ItemName),
-            PlanQty     = MAX(ISNULL(oo.Qty_to_Build, 0)),
             CurrCav     = MAX(ISNULL(oo.CurrMoldCavity, 0)),
             UpCav       = MAX(ISNULL(u.Cav, 0))
     INTO #ord0
@@ -105,7 +101,6 @@ BEGIN
             ProdOrderID,
             ItemCode,
             ItemName,
-            PlanQty,
             Cav = CAST(CASE WHEN CurrCav > 0 THEN CurrCav
                             WHEN UpCav > 0 THEN UpCav
                             ELSE 1 END AS INT),
@@ -177,10 +172,6 @@ BEGIN
             QtyIn    = ISNULL(z.QtyIn, 0),
             WaitIn   = ISNULL(z.Jwgy, 0) - ISNULL(z.QtyIn, 0),
             OutWait  = ISNULL(z.Zs, 0) - ISNULL(z.QtyIn, 0),
-            PlanQty  = g.PlanQty,
-            DonePct  = CAST(CASE WHEN g.PlanQty <= 0 THEN NULL
-                                 ELSE ROUND(100.0 * ISNULL(d.OkQty, 0) / g.PlanQty, 2)
-                            END AS DECIMAL(18, 2)),
             YieldPct = CAST(CASE WHEN g.ActProd <= 0 THEN NULL
                                  ELSE ROUND(100.0 * ISNULL(d.OkQty, 0) / g.ActProd, 2)
                             END AS DECIMAL(18, 2)),
@@ -198,7 +189,6 @@ BEGIN
                 o.ItemCode,
                 o.ItemName,
                 o.CavShow,
-                o.PlanQty,
                 o.ProdOrderID,
                 FirstD = MIN(e.D),
                 LastD  = MAX(e.D),
@@ -207,7 +197,7 @@ BEGIN
                                    ELSE e.Qty * ISNULL(o.Cav, 1) END)
         FROM #eop e
         JOIN #ord o ON o.OrderNO = e.OrderNo
-        GROUP BY e.OrderNo, o.ItemCode, o.ItemName, o.CavShow, o.PlanQty, o.ProdOrderID
+        GROUP BY e.OrderNo, o.ItemCode, o.ItemName, o.CavShow, o.ProdOrderID
     ) g
     LEFT JOIN #dtl d ON d.ProdOrderId = g.ProdOrderID
     LEFT JOIN #mould m ON m.OrderNo = g.OrderNo
@@ -219,8 +209,7 @@ BEGIN
     BEGIN
         ;WITH c AS (
             SELECT OrderNo, ItemCode, ItemName, CavShow, Mould, EquipList, ProdDate,
-                   Shots, PlanQty, ActProd, OkQty, NgQty, Jwgy, QtyIn, WaitIn, OutWait,
-                   DonePct, YieldPct,
+                   Shots, ActProd, OkQty, NgQty, Jwgy, QtyIn, WaitIn, OutWait, YieldPct,
                    ROW_NUMBER() OVER (ORDER BY OrderNo DESC) AS rn
             FROM #out
         )
@@ -232,7 +221,6 @@ BEGIN
                 [设备编码] = c.EquipList,
                 [生产日期] = c.ProdDate,
                 [开关模次数] = c.Shots,
-                [计划数]   = c.PlanQty,
                 [实际产品数] = c.ActProd,
                 [良品数]   = c.OkQty,
                 [不良数]   = c.NgQty,
@@ -240,7 +228,6 @@ BEGIN
                 [入库数量]     = c.QtyIn,
                 [待入库数量]   = c.WaitIn,
                 [产出待入库数量] = c.OutWait,
-                [完工率%]  = c.DonePct,
                 [良品率%]  = c.YieldPct
         FROM c
         WHERE c.rn > (@PageIndex - 1) * @PageSize
@@ -257,7 +244,6 @@ BEGIN
                 [设备编码] = o.EquipList,
                 [生产日期] = o.ProdDate,
                 [开关模次数] = o.Shots,
-                [计划数]   = o.PlanQty,
                 [实际产品数] = o.ActProd,
                 [良品数]   = o.OkQty,
                 [不良数]   = o.NgQty,
@@ -265,7 +251,6 @@ BEGIN
                 [入库数量]     = o.QtyIn,
                 [待入库数量]   = o.WaitIn,
                 [产出待入库数量] = o.OutWait,
-                [完工率%]  = o.DonePct,
                 [良品率%]  = o.YieldPct
         FROM #out o
         ORDER BY o.OrderNo DESC;

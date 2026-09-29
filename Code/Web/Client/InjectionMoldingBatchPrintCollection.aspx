@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/ProductionCollection.Master"
+<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/ProductionCollection.Master"
     AutoEventWireup="true" CodeBehind="InjectionMoldingBatchPrintCollection.aspx.cs" Inherits="SKT.LeanMES.Web.Client.InjectionMoldingBatchPrintCollection" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -131,6 +131,14 @@
                                 </tbody>
                             </table>
                         </div>
+                        <%--不良现象明细（改造新增）：每列 5 条，数量默认 0，可 -/+ 或直接输入 --%>
+                        <div class="dds-panel" id="ncPanel" style="margin-top: 5px;">
+                            <div class="leftmenu-new-header" style="font-size: 17px; font-weight: bold;">
+                                不良现象（数量）<span style="font-size: 12px; font-weight: normal; color: #888;"></span>
+                            </div>
+                            <div id="ncList" style="padding: 10px 12px; min-height: 42px;">
+                            </div>
+                        </div>
                     </td>
                     <%--<td valign="top" style="width:50%">
                         
@@ -184,6 +192,9 @@
             }
 
             isByPass = 1;
+
+            //加载不良现象明细（改造新增）
+            loadNcCodeList();
         });
 
         function SendEmail(errmessage) {
@@ -348,9 +359,17 @@
         }
 
         function getItemChoose(list) {
-            $("#txtOrderNo").val(list[0][1]);
+            var newOrderNo = list[0][1];
+            $("#txtOrderNo").val(newOrderNo);
             $("#<%=this.hdnOrderId.ClientID %>").val(list[0][0]);
-            LoadOrderInfo($("#txtOrderNo").val());
+            LoadOrderInfo(newOrderNo);
+            //改造：换了工单 → 旧的不良现象数量作废（清零并清缓存）；同一工单 → 恢复缓存数量
+            if (ncStorageOrderNo != "" && ncStorageOrderNo != newOrderNo) {
+                for (var i = 0; i < ncItems.length; i++) { ncItems[i].qty = 0; }
+                ncRenderQtyValues();
+                ncClearStorage();
+            }
+            ncApplyStorage(newOrderNo);
         }
 
         function LoadOrderInfo(myno) {
@@ -554,9 +573,18 @@
                 alert("请选择工单号！");
                 return false;
             }
+            //改造：所有不良现象数量都是 0 时，弹窗报错并阻止继续登记
+            if (ncItems.length == 0) {
+                alert("不良现象明细未加载成功，无法登记不良！\r\n请刷新页面重试；若仍不行，请联系管理员检查存储过程 uspGetInjectionMoldingNcCode_Program。");
+                return false;
+            }
+            if (ncSumQty() <= 0) {
+                alert("所有不良现象的数量都是 0，无法登记不良！\r\n请先填写不良现象的数量，再点「不良登记」。");
+                return false;
+            }
             //var idStr = getOneRecordId();
             //if (idStr === "") return false;
-            openWinUrl = "<%=SKT.LeanMES.Web.WebHelper.WebRoot %>" + "/Client/DefectiveProductLabel.aspx?name=DefectiveProductLabel&ID=1&OrderNo=" + escape(OrderNo) + "&OrderId=" + orderId + "&LineId=" + escape(prodline) + "&StationId=" + stationId + "&ProductName=" + escape(productName.replaceAll("#", "")) + "&ItemID=" + itemId + "&resourceId=" + resourceId + "&Qty=" + Qty;
+            openWinUrl = "<%=SKT.LeanMES.Web.WebHelper.WebRoot %>" + "/Client/DefectiveProductLabel.aspx?name=DefectiveProductLabel&ID=1&OrderNo=" + escape(OrderNo) + "&OrderId=" + orderId + "&LineId=" + escape(prodline) + "&StationId=" + stationId + "&ProductName=" + escape(productName.replaceAll("#", "")) + "&ItemID=" + itemId + "&resourceId=" + resourceId + "&Qty=" + Qty + "&NcSum=" + ncSumQty() + "&NcPayload=" + escape(ncPayloadStr());
             dialog({ title: "不良登记", src: openWinUrl, width: 750, height: 450 });
         }
 
@@ -636,5 +664,166 @@
 
             //MymesLabLabelPrint(SNInfo.SNList,0);
         }
+
+        /************************ 不良现象明细（改造新增） 开始 ************************/
+        var ncItems = [];           //[{ id: NCCodeId, code: 代码, name: 名称, qty: 数量 }]
+        var NC_ROWS_PER_COL = 5;    //每列 5 条
+
+        //加载不良现象（数据库 Basal_NCCode 中 Category='Failure' 失败品、Status='Enabled'）
+        //界面显示「名称」（Description，空则回退显示代码 NCCode）
+        function loadNcCodeList() {
+            ncItems = [];
+            var entity = { Category: "Failure" };
+            var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspGetInjectionMoldingNcCode_Program", JSON.stringify(entity));
+            if (ajax.error != null) {
+                $("#activeinfoarea").append('<div style="color:red;">加载不良现象失败：' + ajax.error.Message + '</div>');
+                return false;
+            }
+            var list = [];
+            try { list = JSON.parse(ajax.value).data || []; } catch (e) { list = []; }
+            for (var i = 0; i < list.length; i++) {
+                var code = list[i].NCCode || "";
+                var name = list[i].NcName || list[i].Description || "";
+                if (name == "") { name = code; }        //名称为空时回退显示代码
+                ncItems.push({ id: list[i].NCCodeId, code: code, name: name, qty: 0 });
+            }
+            renderNcList();
+            ncApplyStorage($("#txtOrderNo").val());   //改造：按工单恢复本机缓存的数量
+        }
+
+        //按每列 5 条渲染：不良现象名称 [-] [数量] [+]
+        function renderNcList() {
+            var colCount = Math.ceil(ncItems.length / NC_ROWS_PER_COL);
+            if (colCount < 1) { colCount = 1; }
+            var html = '<table cellpadding="0" cellspacing="0" border="0"><tr>';
+            for (var c = 0; c < colCount; c++) {
+                html += '<td valign="top" style="padding-right: 26px;">';
+                for (var r = 0; r < NC_ROWS_PER_COL; r++) {
+                    var idx = c * NC_ROWS_PER_COL + r;
+                    if (idx >= ncItems.length) { break; }
+                    html += '<div style="line-height: 40px; white-space: nowrap;">'
+                        + '<span style="display: inline-block; min-width: 140px; font-size: 18px; font-weight: bold;" title="' + ncItems[idx].code + '">' + ncItems[idx].name + '</span>'
+                        + '<input type="button" class="ButtonBox" style="width: 42px; height: 34px; font-size: 22px; font-weight: bold; line-height: 32px; cursor: pointer;" value="－" onclick="ncStep(' + idx + ',-1);" />'
+                        + '<input type="text" id="ncQty' + idx + '" value="0" style="width: 76px; height: 32px; font-size: 18px; font-weight: bold; text-align: center; vertical-align: middle;" onkeyup="ncTyping(' + idx + ',this);" onchange="ncTyping(' + idx + ',this);" />'
+                        + '<input type="button" class="ButtonBox" style="width: 42px; height: 34px; font-size: 22px; font-weight: bold; line-height: 32px; cursor: pointer;" value="＋" onclick="ncStep(' + idx + ',1);" />'
+                        + '</div>';
+                }
+                html += '</td>';
+            }
+            html += '</tr></table>';
+            $("#ncList").html(html);
+        }
+
+        //减号/加号：步进 1，不允许负数
+        function ncStep(idx, delta) {
+            var v = parseInt(ncItems[idx].qty, 10);
+            if (isNaN(v)) { v = 0; }
+            v = v + delta;
+            if (v < 0) { v = 0; }
+            ncItems[idx].qty = v;
+            $("#ncQty" + idx).val(v);
+            ncSaveStorage();                 //改造：暂存到本机缓存，刷新不丢
+        }
+
+        //文本框直接输入：只允许非负整数
+        function ncTyping(idx, el) {
+            var v = parseInt($(el).val(), 10);
+            if (isNaN(v) || v < 0) { v = 0; }
+            if (v > 999999) { v = 999999; }
+            ncItems[idx].qty = v;
+            $(el).val(v);
+            ncSaveStorage();                 //改造：暂存到本机缓存，刷新不丢
+        }
+
+        //把所有不良现象数量清零（不良登记保存成功后由弹窗回调，改造新增）
+        function clearNcQty() {
+            for (var i = 0; i < ncItems.length; i++) {
+                ncItems[i].qty = 0;
+                $("#ncQty" + i).val(0);
+            }
+            ncSaveStorage();                     //清零后的状态也写回缓存，刷新后仍是 0
+        }
+
+        /******************** 不良现象数量本机缓存（刷新不丢） 开始 ********************/
+        var NC_STORAGE_KEY = "InjectionMoldingNcQty";    //缓存键
+        var ncStorageOrderNo = "";                       //缓存对应的工单号
+
+        //把模型里的数量刷到界面输入框
+        function ncRenderQtyValues() {
+            for (var i = 0; i < ncItems.length; i++) {
+                $("#ncQty" + i).val(parseInt(ncItems[i].qty, 10) || 0);
+            }
+        }
+
+        //读取缓存内容
+        function ncReadStorage() {
+            try {
+                var s = localStorage.getItem(NC_STORAGE_KEY);
+                return s ? JSON.parse(s) : null;
+            } catch (e) { return null; }
+        }
+
+        //写入缓存：{ orderNo: 工单号, items: { 不良现象ID: 数量 } }
+        function ncSaveStorage() {
+            try {
+                var obj = { orderNo: ncStorageOrderNo || "", items: {} };
+                for (var i = 0; i < ncItems.length; i++) {
+                    obj.items[ncItems[i].id] = parseInt(ncItems[i].qty, 10) || 0;
+                }
+                localStorage.setItem(NC_STORAGE_KEY, JSON.stringify(obj));
+            } catch (e) { }
+        }
+
+        //清掉缓存（换工单时旧数量作废）
+        function ncClearStorage() {
+            try { localStorage.removeItem(NC_STORAGE_KEY); } catch (e) { }
+        }
+
+        //按工单号恢复数量：只恢复同一个工单的缓存，其它工单的缓存不套用
+        function ncApplyStorage(orderNo) {
+            ncStorageOrderNo = orderNo || "";
+            var data = ncReadStorage();
+            if (!data || !data.items) { return; }
+            if ((data.orderNo || "") != ncStorageOrderNo) { return; }
+            for (var i = 0; i < ncItems.length; i++) {
+                var q = parseInt(data.items[ncItems[i].id], 10);
+                if (isNaN(q) || q < 0) { q = 0; }
+                ncItems[i].qty = q;
+            }
+            ncRenderQtyValues();
+        }
+        /******************** 不良现象数量本机缓存（刷新不丢） 结束 ********************/
+
+        //所有不良现象数量之和
+        function ncSumQty() {
+            var s = 0;
+            for (var i = 0; i < ncItems.length; i++) {
+                s += parseInt(ncItems[i].qty, 10) || 0;
+            }
+            return s;
+        }
+
+        //数量不为 0 的不良现象
+        function ncNonZero() {
+            var arr = [];
+            for (var i = 0; i < ncItems.length; i++) {
+                var q = parseInt(ncItems[i].qty, 10) || 0;
+                if (q > 0) { arr.push({ id: ncItems[i].id, code: ncItems[i].code, name: ncItems[i].name, qty: q }); }
+            }
+            return arr;
+        }
+
+        //传给不良登记窗口的明细串：id|代码|名称|数量;id|代码|名称|数量
+        function ncPayloadStr() {
+            var arr = ncNonZero();
+            var parts = [];
+            for (var i = 0; i < arr.length; i++) {
+                var code = (arr[i].code || "").replace(/[|;]/g, " ");
+                var name = (arr[i].name || "").replace(/[|;]/g, " ");
+                parts.push(arr[i].id + "|" + code + "|" + name + "|" + arr[i].qty);
+            }
+            return parts.join(";");
+        }
+        /************************ 不良现象明细（改造新增） 结束 ************************/
     </script>
 </asp:Content>

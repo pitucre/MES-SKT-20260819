@@ -10,24 +10,9 @@
            良品数/不良数 = Prod_EquipmentDayProdDtl.OkQty/NgQty 按工单(ProdOrderId)窗口内合计
            良品率% = 良品数 / 实际产品数
   过滤   : @OrderNo 工单号模糊, @EquipmentCode 设备编码(旧码或真机号)模糊, 空=全部
-   粒度   : 工单汇总(一工单一行, 设备编码逗号列表, 生产日期=窗口内首~末)
-   v2 2026-09-28 追加:
-        模具列      = 窗口内 Prod_CollectionEngelDataHistory 每工单最近一条 MouldCode(空=页面红色警示)
-        模穴数显示  = 原始值(CurrMoldCavity → 模具机Cavity, 都无则空, 页面红色警示);
-                      实际产品数回补链不变(仍兜底 1, 见口径 7 行)
-        完工检验数量 = Prod_UnitHistory OpeID=2 Qty 按工单合计(同 P25/udfvw_zssc 口径)
-        注塑数量     = Prod_UnitHistory OpeID=4 Qty 按工单合计(仅中间量, 不输出)
-        入库数量     = Prod_StorageMember+Prod_Storage(status=2) StorageQty 按工单合计
-        待入库数量   = 完工检验数量 - 入库数量
-        产出待入库数量 = 注塑数量 - 入库数量
-        数量为工单全生命周期值(与 P25 一致, 不按窗口截断); 目标工单集仍由窗口 EOP 决定
-   v3 2026-09-29 追加:
-        计划数   = Prod_Order.Qty_to_Build (P25 工单数量同源)
-        完工率%  = 良品数 / 计划数 × 100 (计划数<=0 为 NULL; 良品归集错位可能 >100%)
-        修改前已备份 bak_uspBI_WorkOrderProductionReport_Program_20260929160106.sql
-   约定   : @PageSize<=0 或 @PageIndex<=0 -> 全量(图表用); 否则 ROW_NUMBER 分页回写 @TotalCount
-   创建   : 2026-09-27 全新对象(以 _Program 结尾, 无原有对象备份需求)
-            2026-09-28 v2 修改前已备份 bak_uspBI_WorkOrderProductionReport_Program_20260928085940.sql
+  粒度   : 工单汇总(一工单一行, 设备编码逗号列表, 生产日期=窗口内首~末)
+  约定   : @PageSize<=0 或 @PageIndex<=0 -> 全量(图表用); 否则 ROW_NUMBER 分页回写 @TotalCount
+  创建   : 2026-09-27 全新对象(以 _Program 结尾, 无原有对象备份需求)
 */
 CREATE PROCEDURE [dbo].[uspBI_WorkOrderProductionReport_Program]
 (
@@ -84,7 +69,6 @@ BEGIN
             ProdOrderID = MAX(oo.ProdOrderID),
             ItemCode    = MAX(it.ItemCode),
             ItemName    = MAX(it.ItemName),
-            PlanQty     = MAX(ISNULL(oo.Qty_to_Build, 0)),
             CurrCav     = MAX(ISNULL(oo.CurrMoldCavity, 0)),
             UpCav       = MAX(ISNULL(u.Cav, 0))
     INTO #ord0
@@ -105,13 +89,9 @@ BEGIN
             ProdOrderID,
             ItemCode,
             ItemName,
-            PlanQty,
             Cav = CAST(CASE WHEN CurrCav > 0 THEN CurrCav
                             WHEN UpCav > 0 THEN UpCav
-                            ELSE 1 END AS INT),
-            CavShow = CAST(CASE WHEN CurrCav > 0 THEN CurrCav
-                                WHEN UpCav > 0 THEN UpCav
-                                END AS INT)
+                            ELSE 1 END AS INT)
     INTO #ord
     FROM #ord0;
 
@@ -126,61 +106,18 @@ BEGIN
       AND h.WorkDate < @EDT
     GROUP BY d.ProdOrderId;
 
-    SELECT  OrderNo,
-            MouldCode
-    INTO #mould
-    FROM (
-        SELECT  OrderNo,
-                MouldCode,
-                rn = ROW_NUMBER() OVER (PARTITION BY OrderNo ORDER BY CreateDateTime DESC, HisDataId DESC)
-        FROM dbo.Prod_CollectionEngelDataHistory WITH (NOLOCK)
-        WHERE CreateDateTime >= @SDT
-          AND CreateDateTime < @EDT
-          AND ISNULL(OrderNo, '') <> ''
-    ) t
-    WHERE rn = 1;
-
-    SELECT  t.ProdOrderID,
-            Zs    = SUM(t.Zs),
-            Jwgy  = SUM(t.Jwgy),
-            QtyIn = SUM(CASE WHEN ps.[status] = 2 THEN psm.StorageQty ELSE 0 END)
-    INTO #zs
-    FROM (
-        SELECT  u.ProdOrderID,
-                SnValue = sn.Value,
-                Zs   = SUM(CASE WHEN uh.OpeID = 4 THEN uh.Qty ELSE 0 END),
-                Jwgy = SUM(CASE WHEN uh.OpeID = 2 THEN uh.Qty ELSE 0 END)
-        FROM #ord o
-        JOIN dbo.Prod_Unit u WITH (NOLOCK) ON u.ProdOrderID = o.ProdOrderID
-        JOIN dbo.Prod_SerialNumber sn WITH (NOLOCK) ON sn.UID = u.UID AND sn.SNTypeID = 0
-        LEFT JOIN dbo.Prod_UnitHistory uh WITH (NOLOCK) ON uh.UID = u.UID
-        GROUP BY u.ProdOrderID, sn.Value
-    ) t
-    LEFT JOIN dbo.Prod_StorageMember psm WITH (NOLOCK) ON psm.SerialNumber = t.SnValue
-    LEFT JOIN dbo.Prod_Storage ps WITH (NOLOCK) ON ps.StorageID = psm.StorageID
-    GROUP BY t.ProdOrderID;
-
     SELECT DISTINCT OrderNo, RealCode INTO #eq FROM #eop;
 
     SELECT  g.OrderNo,
             g.ItemCode,
             g.ItemName,
-            CavShow    = g.CavShow,
-            Mould      = ISNULL(m.MouldCode, ''),
+            g.Cav,
             g.FirstD,
             g.LastD,
             g.Shots,
             g.ActProd,
             OkQty    = ISNULL(d.OkQty, 0),
             NgQty    = ISNULL(d.NgQty, 0),
-            Jwgy     = ISNULL(z.Jwgy, 0),
-            QtyIn    = ISNULL(z.QtyIn, 0),
-            WaitIn   = ISNULL(z.Jwgy, 0) - ISNULL(z.QtyIn, 0),
-            OutWait  = ISNULL(z.Zs, 0) - ISNULL(z.QtyIn, 0),
-            PlanQty  = g.PlanQty,
-            DonePct  = CAST(CASE WHEN g.PlanQty <= 0 THEN NULL
-                                 ELSE ROUND(100.0 * ISNULL(d.OkQty, 0) / g.PlanQty, 2)
-                            END AS DECIMAL(18, 2)),
             YieldPct = CAST(CASE WHEN g.ActProd <= 0 THEN NULL
                                  ELSE ROUND(100.0 * ISNULL(d.OkQty, 0) / g.ActProd, 2)
                             END AS DECIMAL(18, 2)),
@@ -197,8 +134,7 @@ BEGIN
         SELECT  e.OrderNo,
                 o.ItemCode,
                 o.ItemName,
-                o.CavShow,
-                o.PlanQty,
+                o.Cav,
                 o.ProdOrderID,
                 FirstD = MIN(e.D),
                 LastD  = MAX(e.D),
@@ -207,40 +143,30 @@ BEGIN
                                    ELSE e.Qty * ISNULL(o.Cav, 1) END)
         FROM #eop e
         JOIN #ord o ON o.OrderNO = e.OrderNo
-        GROUP BY e.OrderNo, o.ItemCode, o.ItemName, o.CavShow, o.PlanQty, o.ProdOrderID
+        GROUP BY e.OrderNo, o.ItemCode, o.ItemName, o.Cav, o.ProdOrderID
     ) g
-    LEFT JOIN #dtl d ON d.ProdOrderId = g.ProdOrderID
-    LEFT JOIN #mould m ON m.OrderNo = g.OrderNo
-    LEFT JOIN #zs z ON z.ProdOrderID = g.ProdOrderID;
+    LEFT JOIN #dtl d ON d.ProdOrderId = g.ProdOrderID;
 
     SELECT @TotalCount = COUNT(1) FROM #out;
 
     IF ISNULL(@PageSize, -1) > 0 AND ISNULL(@PageIndex, -1) > 0
     BEGIN
         ;WITH c AS (
-            SELECT OrderNo, ItemCode, ItemName, CavShow, Mould, EquipList, ProdDate,
-                   Shots, PlanQty, ActProd, OkQty, NgQty, Jwgy, QtyIn, WaitIn, OutWait,
-                   DonePct, YieldPct,
+            SELECT OrderNo, ItemCode, ItemName, Cav, EquipList, ProdDate,
+                   Shots, ActProd, OkQty, NgQty, YieldPct,
                    ROW_NUMBER() OVER (ORDER BY OrderNo DESC) AS rn
             FROM #out
         )
         SELECT  [工单号]   = c.OrderNo,
                 [产品编码] = c.ItemCode,
                 [产品名称] = c.ItemName,
-                [模具]     = c.Mould,
-                [模穴数]   = c.CavShow,
+                [模穴数]   = c.Cav,
                 [设备编码] = c.EquipList,
                 [生产日期] = c.ProdDate,
                 [开关模次数] = c.Shots,
-                [计划数]   = c.PlanQty,
                 [实际产品数] = c.ActProd,
                 [良品数]   = c.OkQty,
                 [不良数]   = c.NgQty,
-                [完工检验数量] = c.Jwgy,
-                [入库数量]     = c.QtyIn,
-                [待入库数量]   = c.WaitIn,
-                [产出待入库数量] = c.OutWait,
-                [完工率%]  = c.DonePct,
                 [良品率%]  = c.YieldPct
         FROM c
         WHERE c.rn > (@PageIndex - 1) * @PageSize
@@ -252,20 +178,13 @@ BEGIN
         SELECT  [工单号]   = o.OrderNo,
                 [产品编码] = o.ItemCode,
                 [产品名称] = o.ItemName,
-                [模具]     = o.Mould,
-                [模穴数]   = o.CavShow,
+                [模穴数]   = o.Cav,
                 [设备编码] = o.EquipList,
                 [生产日期] = o.ProdDate,
                 [开关模次数] = o.Shots,
-                [计划数]   = o.PlanQty,
                 [实际产品数] = o.ActProd,
                 [良品数]   = o.OkQty,
                 [不良数]   = o.NgQty,
-                [完工检验数量] = o.Jwgy,
-                [入库数量]     = o.QtyIn,
-                [待入库数量]   = o.WaitIn,
-                [产出待入库数量] = o.OutWait,
-                [完工率%]  = o.DonePct,
                 [良品率%]  = o.YieldPct
         FROM #out o
         ORDER BY o.OrderNo DESC;

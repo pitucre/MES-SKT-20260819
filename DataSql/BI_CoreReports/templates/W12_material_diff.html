@@ -1,0 +1,263 @@
+<style type="text/css">
+    #divReport
+    {
+        height: auto;
+    }
+    #divChart
+    {
+        height: auto;
+    }
+    #ChartContainer
+    {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+    #ChartA, #ChartB
+    {
+        float: left;
+        width: 49.6%;
+        height: 450px;
+    }
+    #ChartB
+    {
+        float: right;
+    }
+</style>
+<table class="EditeContentTable" style="width: 100%; margin-bottom: 2px;">
+    <tr class="ListTableHeader">
+        <th id="title" scope="col" colspan="8">W12 线边料桶物料差异分析</th>
+    </tr>
+    <tr>
+        <td class="Label4">开始日期</td>
+        <td class="Field4">
+            <input type="text" id="txtStartTime" class="DateTimeBox" /></td>
+        <td class="Label4">结束日期</td>
+        <td class="Field4">
+            <input type="text" id="txtEndTime" class="DateTimeBox" /></td>
+        <td class="Label4">料桶</td>
+        <td class="Field4">
+            <input type="text" id="txtBucketCode" class="TextBox" /></td>
+        <td class="Label4">机台</td>
+        <td class="Field4">
+            <input type="text" id="txtMachineCode" class="TextBox" /></td>
+    </tr>
+    <tr>
+        <td class="Label4">物料</td>
+        <td class="Field4">
+            <input type="text" id="txtItemCode" class="TextBox" /></td>
+        <td class="Label4">差异类型</td>
+        <td class="Field4">
+            <select id="selDiffType" style="width: 130px;">
+                <option value="">全部</option>
+                <option value="Diff">有差异</option>
+                <option value="Dump">卸料未结转</option>
+                <option value="Zero">零/负余额</option>
+                <option value="Err">已触发报错</option>
+            </select></td>
+        <td class="Label4" colspan="4"></td>
+    </tr>
+    <tr>
+        <td colspan="8">
+            <div id="bnView" style="text-align: center; font-size: 16px; width: 20%; cursor: pointer; float: left; text-decoration: underline;">
+                <img src="../Content/images/search.png" />查询</div>
+            <div id="bnImport" style="font-size: 16px; cursor: pointer; text-decoration: underline; float: left; margin-left: 10px; width: 150px;">
+                <img src="../Content/images/icon/Import.png" />导出到EXCEL</div>
+        </td>
+    </tr>
+</table>
+<input type="hidden" value="" id="hdnPararms" name="hdnPararms" />
+<input type="hidden" value="" id="hdnPararmValue" name="hdnPararmValue" />
+<input type="hidden" value="" id="hdnOperation" name="hdnOperation" />
+<input type="hidden" value="" id="hdnFileName" name="hdnFileName" />
+<div id="ReportList">
+</div>
+<div id="ChartContainer">
+    <div id="ChartA">
+    </div>
+    <div id="ChartB">
+    </div>
+</div>
+<script type="text/javascript">
+    var biChart = { a: null, b: null, optA: null, optB: null };
+    var biSpName = 'uspBI_MaterialDiffAnalysis_Program';
+
+    $(function () {
+        $(".DateTimeBox").datepicker({ showHms: true });
+        $("#txtStartTime").val(GetDateStr(-30));
+        $("#txtEndTime").val(GetDateStr(0));
+        $(window).resize(function () {
+            if (biChart.a) { biChart.a.resize(); }
+            if (biChart.b) { biChart.b.resize(); }
+        });
+        setTimeout(function () { runQuery(); }, 400);
+    });
+
+    $(".wrap_tb ul.tb li").live("click", function () {
+        var idx = $(this).index();
+        setTimeout(function () {
+            if (idx == 1) {
+                showChart();
+            } else {
+                var $g = $("#ReportList");
+                if ($g.length > 0) {
+                    var gm = $g.SktMesGetGridManager();
+                    if (gm && gm.onResize) { gm.onResize(); }
+                }
+            }
+        }, 80);
+    });
+
+    function num(v) { var n = Number(v); return isNaN(n) ? 0 : n; }
+
+    function biFetchRows() {
+        var tries = [true, false], k;
+        for (k = 0; k < tries.length; k++) {
+            var isProc = tries[k];
+            biFetchRows.ok = false;
+            biFetchRows.data = null;
+            biFetchRows.msg = "";
+            var req = {
+                type: "post",
+                url: "../Handler/ReportingServer.ashx?gridviewname=" + biSpName + "&rnd=" + Math.random(),
+                data: { dataAction: "PROC", paramters: getParamStr() },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    biFetchRows.ok = true;
+                    biFetchRows.data = data;
+                },
+                error: function (xhr) {
+                    biFetchRows.ok = false;
+                    biFetchRows.msg = (xhr && xhr.status ? xhr.status + " " : "")
+                        + (xhr && xhr.responseText ? xhr.responseText : "");
+                }
+            };
+            if (isProc) {
+                req.data.isProcPage = "true";
+                req.data.page = "1";
+                req.data.pagesize = "100000";
+                req.data.conditions = "1=1";
+            }
+            $.ajax(req);
+            if (biFetchRows.ok && biFetchRows.data && typeof biFetchRows.data === "object") {
+                return biFetchRows.data;
+            }
+        }
+        alert("Get Data Error: " + (biFetchRows.msg || "no response").substring(0, 400));
+        return { Rows: [] };
+    }
+
+    function getParamStr() {
+        return '[{"name":"@StartDate","type":"varchar","size":"100","value":"' + $("#txtStartTime").val() + '"}'
+             + ',{"name":"@EndDate","type":"varchar","size":"100","value":"' + $("#txtEndTime").val() + '"}'
+             + ',{"name":"@BucketCode","type":"varchar","size":"50","value":"' + $("#txtBucketCode").val() + '"}'
+             + ',{"name":"@MachineCode","type":"varchar","size":"50","value":"' + $("#txtMachineCode").val() + '"}'
+             + ',{"name":"@ItemCode","type":"varchar","size":"50","value":"' + $("#txtItemCode").val() + '"}'
+             + ',{"name":"@DiffType","type":"varchar","size":"20","value":"' + $("#selDiffType").val() + '"}]';
+    }
+
+    function runQuery() {
+        $("#divLoading").hide().remove();
+        $("#ReportList").replaceWith("<div id='ReportList'></div>");
+        $("#ReportList").SktMesGrid({
+            columns: [
+                { display: '料桶', name: '料桶', align: 'center', width: 70, minWidth: 60 },
+                { display: '机台', name: '机台', align: 'center', width: 60, minWidth: 50 },
+                { display: '物料编码', name: '物料编码', align: 'center', width: 100, minWidth: 60 },
+                { display: '物料名称', name: '物料名称', align: 'left', width: 170, minWidth: 60 },
+                { display: 'GRN数', name: 'GRN数', align: 'right', width: 70, minWidth: 50 },
+                { display: '在桶GRN数', name: '在桶GRN数', align: 'right', width: 90, minWidth: 50 },
+                { display: '物料单元数', name: '物料单元数', align: 'right', width: 90, minWidth: 50 },
+                { display: '在桶零余额单元数', name: '在桶零余额单元数', align: 'right', width: 100, minWidth: 50 },
+                { display: '负余额单元数', name: '负余额单元数', align: 'right', width: 100, minWidth: 50 },
+                { display: '上料次数', name: '上料次数', align: 'right', width: 80, minWidth: 50 },
+                { display: '上料量kg', name: '上料量kg', align: 'right', width: 90, minWidth: 50 },
+                { display: '卸料次数', name: '卸料次数', align: 'right', width: 80, minWidth: 50 },
+                { display: '卸料剩余kg', name: '卸料剩余kg', align: 'right', width: 95, minWidth: 50 },
+                { display: '扣料次数', name: '扣料次数', align: 'right', width: 80, minWidth: 50 },
+                { display: '扣料量kg', name: '扣料量kg', align: 'right', width: 90, minWidth: 50 },
+                { display: '快照扣料次数', name: '快照扣料次数', align: 'right', width: 100, minWidth: 50 },
+                { display: '快照扣料量kg', name: '快照扣料量kg', align: 'right', width: 105, minWidth: 50 },
+                { display: '有效扣料量kg', name: '有效扣料量kg', align: 'right', width: 100, minWidth: 50 },
+                { display: '当前余额kg', name: '当前余额kg', align: 'right', width: 95, minWidth: 50 },
+                { display: '在桶差异kg', name: '在桶差异kg', align: 'right', width: 95, minWidth: 50 },
+                { display: '卸料丢弃kg', name: '卸料丢弃kg', align: 'right', width: 95, minWidth: 50 },
+                { display: '差异合计kg', name: '差异合计kg', align: 'right', width: 95, minWidth: 50 },
+                { display: '差异率%', name: '差异率%', align: 'right', width: 85, minWidth: 50 },
+                { display: '报错次数', name: '报错次数', align: 'right', width: 80, minWidth: 50 },
+                { display: '最后报错时间', name: '最后报错时间', align: 'center', width: 135, minWidth: 60 },
+                { display: '判定', name: '判定', align: 'center', width: 110, minWidth: 60 }
+            ],
+            width: '100%',
+            height: '99%',
+            dataAction: 'PROC',
+            dataSource: biSpName,
+            paramters: getParamStr(),
+            pageSize: 50,
+            isProcPage: true
+        });
+        var ds = biFetchRows();
+        buildChart(ds && ds.Rows ? ds.Rows : []);
+        showChart();
+    }
+
+    $("#bnView").click(function () { runQuery(); });
+
+    $("#bnImport").click(function () {
+        $("#hdnPararms").val("@StartDate,@EndDate,@BucketCode,@MachineCode,@ItemCode,@DiffType");
+        $("#hdnPararmValue").val($("#txtStartTime").val() + "," + $("#txtEndTime").val() + "," + $("#txtBucketCode").val()
+            + "," + $("#txtMachineCode").val() + "," + $("#txtItemCode").val() + "," + $("#selDiffType").val());
+        $("#hdnOperation").val(biSpName);
+        $("#hdnFileName").val('W12 线边料桶物料差异分析');
+        document.forms[0].submit();
+    });
+
+    function buildChart(rows) {
+        var verdictMap = {}, verdicts = [], diffMap = {}, diffs = [];
+        var i;
+        for (i = 0; i < rows.length; i++) {
+            var r = rows[i];
+            var v = r['判定'] || '未知';
+            var key = (r['料桶'] || '') + ' ' + (r['物料编码'] || '');
+            verdictMap[v] = (verdictMap[v] || 0) + num(r['差异合计kg']);
+            if (verdicts.indexOf(v) < 0) { verdicts.push(v); }
+            diffMap[key] = (diffMap[key] || 0) + num(r['差异合计kg']);
+            if (diffs.indexOf(key) < 0) { diffs.push(key); }
+        }
+        diffs.sort(function (x, y) { return diffMap[y] - diffMap[x]; });
+        var dLabels = [], dVals = [];
+        for (i = 0; i < diffs.length && i < 10; i++) { dLabels.push(diffs[i]); dVals.push(Math.round(diffMap[diffs[i]] * 100) / 100); }
+        dLabels.reverse(); dVals.reverse();
+        biChart.optA = {
+            title: { text: '判定分布(差异合计kg)', left: 'center' },
+            tooltip: { trigger: 'item', formatter: '{b}: {c} kg ({d}%)' },
+            legend: { bottom: 0, type: 'scroll' },
+            series: [{
+                type: 'pie', radius: ['35%', '62%'], center: ['50%', '50%'],
+                data: verdicts.map(function (v) { return { name: v, value: Math.round(verdictMap[v] * 100) / 100 }; }),
+                label: { formatter: '{b}\n{d}%' }
+            }]
+        };
+        biChart.optB = {
+            title: { text: '差异TOP10(料桶+物料)', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { left: 10, right: 70, top: 50, bottom: 40 },
+            xAxis: { type: 'value', name: 'kg' },
+            yAxis: { type: 'category', data: dLabels },
+            series: [{ name: '差异kg', type: 'bar', data: dVals, label: { show: true, position: 'right' } }]
+        };
+    }
+
+    function showChart() {
+        if (!biChart.optA || !biChart.optB) { return; }
+        var el = document.getElementById('ChartA');
+        if (!el || el.offsetWidth === 0) { return; }
+        if (!biChart.a) {
+            biChart.a = echarts.init(el);
+            biChart.b = echarts.init(document.getElementById('ChartB'));
+        }
+        biChart.a.setOption(biChart.optA, true);
+        biChart.b.setOption(biChart.optB, true);
+    }
+</script>

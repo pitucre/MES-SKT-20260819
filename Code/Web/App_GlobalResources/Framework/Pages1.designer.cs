@@ -12580,6 +12580,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   查找类似 补打标签 的本地化字符串。
+        /// </summary>
+        internal static string ShopOrderLabelReprintList {
+            get {
+                return ResourceManager.GetString("ShopOrderLabelReprintList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 工单列表 的本地化字符串。
         /// </summary>
         internal static string ShopOrderList {

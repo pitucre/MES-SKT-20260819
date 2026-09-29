@@ -1,0 +1,18 @@
+{
+  "server": "172.16.5.144",
+  "database": "LeanMes",
+  "createBy": "admin",
+  "modifyBy": "admin",
+  "items": [
+    {
+      "templateFile": "templates/W12_material_diff.html",
+      "cnName": "W12 线边料桶物料差异分析",
+      "enName": "W12 Line Material Diff Analysis",
+      "reportType": "C7A32644-8771-458D-88F3-9DF6CFB7E49B",
+      "sequence": 19,
+      "icon": "",
+      "description": "按料桶/物料核对上料、扣料、卸料与当前余额差异,含报错次数与差异TOP图表",
+      "spName": "uspBI_MaterialDiffAnalysis_Program"
+    }
+  ]
+}
