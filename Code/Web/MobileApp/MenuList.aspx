@@ -117,10 +117,12 @@
                     <span style="height: 14px; width: 14px; vertical-align: middle">
                         <img src="newImages/icon/分料截图.png" alt="形态转换" style="margin-bottom: -8px; margin-right: 21px;" /></span>形态转换MES</a>            </li>
 
-                <%-- 以下两项为 2026-09-27 三页面对比测试入口，测试期不走权限直接可见，测试结束后删除 --%>
+                <%-- 2026-09-27 对比测试入口（测试期不走权限直接可见）；按需求只显示「形态转换」「形态转换综合」，不良和料把(_LB)入口已隐藏，需要时取消下面的注释即可 --%>
+                <!--
                 <li style="display: block;" id="PDA_FormChangeLB"><a href="#" onclick="Check(167);" data-transition="none" class="ui-btn" data-ajax="false">
                     <span style="height: 14px; width: 14px; vertical-align: middle">
                         <img src="newImages/icon/分料截图.png" alt="不良和料把形态转换" style="margin-bottom: -8px; margin-right: 21px;" /></span>不良和料把形态转换页面</a>            </li>
+                -->
 
                 <li style="display: block;" id="PDA_FormChangeAll"><a href="#" onclick="Check(168);" data-transition="none" class="ui-btn" data-ajax="false">
                     <span style="height: 14px; width: 14px; vertical-align: middle">

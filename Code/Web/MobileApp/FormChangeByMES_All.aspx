@@ -103,7 +103,6 @@
                             </span>
                         </td>
                         <td>
-                            <a data-role="button" data-mini="true" data-ajax="false" id="enterGrn" data-theme="c">入明细</a>
                             <span id="ChooseScrapWrap" style="display: none;"><a data-role="button" data-mini="true" data-ajax="false" id="chooseScrap" data-theme="c">选择物料</a></span>
                         </td>
                     </tr>
@@ -121,6 +120,7 @@
                         </td>
                         <td colspan="2">
                             <input id="Qty" inputmode="decimal" placeholder="扫条码后默认=转换前数量，可改为重量" />
+                            <a data-role="button" data-mini="true" data-ajax="false" id="enterGrn" data-theme="c">入明细</a>
                         </td>
                     </tr>
                     <tr>
@@ -214,7 +214,7 @@
                 <a href="#" id="btnFilterItem" data-rel="popup" data-position-to="window" data-mini="true"
                     data-role="button">筛选物料</a>
                 <div data-role="main" data-theme="a" class="ui-content">
-                    <ul data-role="listview" id="listviewsItem" data-theme="c" data-filter="true" data-filter-placeholder="输入料号。。。" data-inset="false">
+                    <ul data-role="listview" id="listviewsItem" data-theme="c" data-filter="true" data-filter-placeholder="输入料号或物料名称。。。" data-inset="false">
                     </ul>
                 </div>
             </div>
@@ -290,7 +290,7 @@
                 }
             });
 
-            //多候选：选料即入明细并回焦GRN（change + selectmenuchange + 关闭菜单后兜底）
+            //多候选：选料只回填不入明细，需人点【入明细】（change + selectmenuchange + 关闭菜单后兜底）
             $(document).on("change", "#ConvertedScrap", function () {
                 onScrapChanged();
             });
@@ -301,12 +301,15 @@
                 setTimeout(function () { onScrapChanged(); }, 50);
             });
 
-            //无候选手动输入：回车即入明细
+            //无候选手动输入：回车只跳到【入明细】，不自动提交（必须人点【入明细】）
             $(document).on("keydown", "#ConvertedScrapManual", function (e) {
                 var key = e.keyCode || e.which || e.charCode;
                 if (key == 13) {
                     e.preventDefault();
-                    ScanQty();
+                    if (getScrapValue()) {
+                        showMsg("已输入粉碎料，请点【入明细】", 1);
+                        $("#enterGrn").focus();
+                    }
                 }
             });
 
@@ -355,7 +358,11 @@
                 var ulhtml = "";
                 entity = JSON.parse(ajax.value).data;
                 for (var i = 0; i < entity.length; i++) {
-                    ulhtml += "<li><a id='" + entity[i].ItemCode + "' onclick='CheckItemlist(this)'>" + entity[i].ItemCode + "</a></li>";
+                    var itemName = entity[i].ItemName || "";
+                    var itemTip = (entity[i].ItemCode + (itemName ? (" " + itemName) : "")).replace(/'/g, "&#39;").replace(/"/g, "&quot;");
+                    //换行显示：第一行料号、第二行名称；title 悬浮提示完整「料号 名称」
+                    ulhtml += "<li><a id='" + entity[i].ItemCode + "' onclick='CheckItemlist(this)' title='" + itemTip + "' style='white-space: normal; word-break: break-all;'>"
+                        + entity[i].ItemCode + (itemName ? ("<br/> " + itemName) : "") + "</a></li>";
                 }
                 $("#listviewsItem").append(ulhtml);
                 $("#listviewsItem").listview("refresh");
@@ -392,7 +399,10 @@
             var ulhtml = "";
             for (var i = 0; i < entity.length; i++) {
                 var name = entity[i].ItemName || "";
-                ulhtml += "<li><a id='" + entity[i].ItemCode + "' onclick='CheckItemlist(this)'>" + entity[i].ItemCode + (name ? (" " + name) : "") + "</a></li>";
+                var tip = (entity[i].ItemCode + (name ? (" " + name) : "")).replace(/'/g, "&#39;").replace(/"/g, "&quot;");
+                //换行显示：第一行料号、第二行名称；title 悬浮提示完整「料号 名称」
+                ulhtml += "<li><a id='" + entity[i].ItemCode + "' onclick='CheckItemlist(this)' title='" + tip + "' style='white-space: normal; word-break: break-all;'>"
+                    + entity[i].ItemCode + (name ? ("<br/> " + name) : "") + "</a></li>";
             }
             if (entity.length == 0) {
                 ulhtml = "<li>无06候选粉碎料，请返回主界面在【转换后碎料】手动输入粉碎料(06开头)</li>";
@@ -448,7 +458,10 @@
             if (!material) {
                 return;
             }
-            confirmLine(pendingSn, material, pendingBalance);
+            //已选料：不自动入明细，等操作者点【入明细】
+            pendingMaterial = material;
+            showMsg("已选择 " + material + "，请点【入明细】", 1);
+            $("#enterGrn").focus();
         }
 
         //06 候选为空：切换为手动输入粉碎料（0候选时允许操作者手工录入）
@@ -557,7 +570,7 @@
             pendingSn = barCode;
             pendingBalance = balanceQty || 0;
             pendingMaterial = preferred || "";
-            var tip = "共" + entity.length + "个候选，请选择转换后碎料";
+            var tip = "共" + entity.length + "个候选，请选择转换后碎料后点【入明细】";
             if (preferred) {
                 tip += "（本单已选 " + preferred + "）";
             }
@@ -694,13 +707,15 @@
 
             if (pendingSn) {
                 var selectedMaterial = getScrapValue();
-                if (selectedMaterial) {
-                    //已选但 change 未触发：扫下一条前先入明细
-                    confirmLine(pendingSn, selectedMaterial, pendingBalance);
+                if (!selectedMaterial) {
+                    showMsg(!isCrusherMode() ? "请先选择转换后碎料！" : (isScrapManualMode() ? "请先输入转换后粉碎料" : "请先选择转换后碎料"), 0);
+                    focusScrapInput();
                     return false;
                 }
-                showMsg(!isCrusherMode() ? "请先选择转换后碎料！" : (isScrapManualMode() ? "请先输入转换后粉碎料" : "请先选择转换后碎料"), 0);
-                focusScrapInput();
+                //已有待入明细条码：不自动提交，也不覆盖，提示先点【入明细】
+                showMsg("请先点【入明细】提交 " + pendingSn + " 的明细", 0);
+                $("#Number").val(pendingSn);
+                $("#enterGrn").focus();
                 return false;
             }
 
@@ -775,10 +790,21 @@
             $("#Qty").val(balanceQty);
 
             if (ConvertedMaterial != null && ConvertedMaterial != "") {
-                confirmLine(sn, ConvertedMaterial, balanceQty);
+                //带出转换后碎料但不自动入明细：回填后等操作者点【入明细】
+                pendingSn = sn;
+                pendingBalance = balanceQty;
+                pendingMaterial = ConvertedMaterial;
+                resetScrapSelect(ConvertedMaterial);
+                showMsg("扫描成功，转换后碎料=" + ConvertedMaterial + "，请点【入明细】", 1);
+                setTimeout(function () {
+                    if ($("#msg").html().indexOf("请点【入明细】") >= 0) {
+                        $("#msg").html("");
+                    }
+                }, 1500);
+                $("#enterGrn").focus();
                 return;
             }
-            //多候选：等人工选择（选择即入明细并回焦GRN）；优先本单已选06
+            //多候选：等人工选择（选择后需人点【入明细】）；优先本单已选06
             var orderMaterial = "";
             var firstRow = $("#DNInfotab tbody tr").first().find("td").eq(3).text();
             if (firstRow) {
@@ -856,14 +882,16 @@
             if (pendingSn) {
                 var selMaterial = getScrapValue();
                 if (!selMaterial) {
-                    confirmDialogFocus(!isCrusherMode() ? "请选择转换后碎料后点【入明细】" : (isScrapManualMode() ? "请输入转换后粉碎料(06开头)后点【入明细】" : "请选择转换后碎料后自动入明细"), function () {
+                    confirmDialogFocus(!isCrusherMode() ? "请选择转换后碎料后点【入明细】" : (isScrapManualMode() ? "请输入转换后粉碎料(06开头)后点【入明细】" : "请选择转换后碎料后点【入明细】"), function () {
                         focusScrapInput();
                     });
                     return false;
                 }
-                if (!confirmLine(pendingSn, selMaterial, pendingBalance)) {
-                    return false;
-                }
+                //需人点【入明细】提交明细，确认转换不代提交
+                confirmDialogFocus("已选 " + selMaterial + "，请先点【入明细】再确认转换", function () {
+                    $("#enterGrn").focus();
+                });
+                return false;
             }
 
             var grnLength = $("#DNInfotab tbody").find("tr").length;
@@ -968,7 +996,10 @@
             }
             resetScrapSelect(material);
             if (pendingSn) {
-                confirmLine(pendingSn, material, pendingBalance);
+                //选料只回填：必须人点【入明细】才提交
+                pendingMaterial = material;
+                showMsg("已选择 " + material + "，请点【入明细】", 1);
+                $("#enterGrn").focus();
             } else {
                 showMsg("已选择转换后碎料", 1);
                 $("#Number").focus();

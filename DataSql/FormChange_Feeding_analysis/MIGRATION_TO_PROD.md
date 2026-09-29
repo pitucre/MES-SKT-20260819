@@ -195,6 +195,7 @@ EXEC dbo.uspFromChangeMesScan '', '<0候选条码>', '0699-99999', 1, 1, '<操�
 - `Web.csproj` 登记两个新 aspx（`<Content Include>`）；`MenuList.aspx` 新增 `Check(167)`/`Check(168)` 两个入口（**测试期不走权限直接可见，测完删除**）。
 - 三模式 SQL 回归（显式事务回滚，残留 0）：粉碎机 `SL2609270008` → UiMode0 `0/0`、UiMode1 `2/1`、UiMode2 `2/1`（CandidateCount/IsCrusherGRN）；非粉碎机 03 条码 `GRN260825000012` → UiMode0 `0/0`、UiMode1 **1 个候选并回填 `0601-00012`**、UiMode2 `0/0`。省略 `@UiMode` 的 6 参调用已验证可用（默认 0）。
 - 校验：三个 aspx 内联脚本 `node --check` 通过；td/tr/div/span/select/script 标签配平。
+- **入明细改为人工点击（2026-09-27 需求）**：`FormChangeByMES_LB.aspx` / `FormChangeByMES_All.aspx` 扫描 GRN 后**不再自动入明细**，只回填条码/候选/转换后数量并提示「请点【入明细】」。原自动提交的 5 处全部改为提示：单候选带出料号（`Scan`）、多候选选料（`onScrapChanged`）、候选面板选料（`CheckItemlist`）、0 候选手动输入回车（`#ConvertedScrapManual`）、`Save()` 确认转换；仍在待入明细时再扫条码只提示「请先点【入明细】提交 xxx」，不覆盖。唯一提交入口 = `#enterGrn`（`ScanQty()` → `confirmLine()`），按钮已从「转换后碎料」行**移到「转换后数量」输入框后面**。原版 `FormChangeByMES.aspx` 保持生产原行为（选料面板回填后人工点【入明细】）。
 - 备注：`XT2609270022`（admin，15:03，挂 `GRN260927000015/16`，转 `010303-00002`）是测试者本人的草稿单，复测这两张条码前需先删单；`uspGetMaterialCandidates` 本身未改。
 
 > 三页面待测条码：粉碎机 `SL2609270008`(0302-00020, 余额11, **2** 个06候选)、`SL2609270007`(0301-00018, 9, 1个)、`SL2609270001`(0301-00017, 32, 2个)；不良/料把非粉碎机 03：`GRN260825000012`(0301-00012, 2200, 1候选 `0601-00012`)；06 对照：`GRN260927000003`、`GRN260927000005`。

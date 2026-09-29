@@ -256,6 +256,7 @@ DELETE FROM dbo.Prod_SrapFeeding WHERE SrapFeedingId = 10;
 - SP `uspFromChangeMesScan` 增末位参数 `@UiMode TINYINT = 0`，`@IsCrusher`：`0→0、1→1、2→按 Remark`。备份 `bak_uspFromChangeMesScan_20260927153513.sql`（12070 字节），应用 `modify_date=2026-09-27 15:36:08`，库定义与 `uspFromChangeMesScan.sql` 逐行一致。
 - Web 层新增 `AjaxFromChangeByMES.FromChangeMesScanGenerateEx(..., int UiMode)`（`ComMethod.GetList` 直传 7 个参数）；`Web.csproj` 已登记两个新 aspx；`MenuList.aspx` 加 `Check(167)`/`Check(168)` 入口（测试期免权限可见，测完删）。
 - **重新生成 Web 工程后才生效**；`SKT.LeanMES.ProductionCollection.dll`（Lib 预编译）本次未改。
+- **入明细改为人工点击（2026-09-27 需求）**：`_LB` / `_All` 两页扫 GRN 后**不自动入明细**，只回填并提示「请点【入明细】」；原先自动提交的 5 处（单候选带出料号、多候选选料、面板选料、0 候选回车、`Save()` 确认转换）全部改为提示，唯一提交入口 `#enterGrn`（`ScanQty()`）。按钮从「转换后碎料」行**移到「转换后数量」输入框后面**；仍在待提交时再扫条码只提示「请先点【入明细】提交 xxx」。原版页未改。
 - 三模式回归（事务回滚，残留 0）：粉碎机 `SL2609270008` → 0:`0/0`、1:`2/1`、2:`2/1`；非粉碎机 03 `GRN260825000012` → 0:`0/0`、1:**1候选回填 `0601-00012`**、2:`0/0`。6 参省略 `@UiMode` 的调用已验证可用。
 - **正式库决策待定**：三页面 + `@UiMode` 是对比测试用，正式上线只保留其中一个时，需回退 `@UiMode`、删除另外两个 aspx 与菜单项（回滚见 §3）。
 - `XT2609270022`（admin 15:03，挂 `GRN260927000015/16`）为测试者本人草稿单，复测前需先删单。
