@@ -19,6 +19,7 @@ namespace SKT.LeanMES.Web.Client
             AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxPrint));
             AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxSerialNumber));
             AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxSDP));
+            AjaxPro.Utility.RegisterTypeForAjax(typeof(AjaxDingTalk));
             if (!IsPostBack)
             {
                 //如果是投入过站，则初次进入页面时首先需要用户选择工单号。

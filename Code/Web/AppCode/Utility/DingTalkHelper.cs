@@ -1,10 +1,15 @@
 ﻿using DingTalk.Api;
 using DingTalk.Api.Request;
 using DingTalk.Api.Response;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
 
 namespace SKT.LeanMES.Web.AppCode.Utility
@@ -167,6 +172,123 @@ namespace SKT.LeanMES.Web.AppCode.Utility
             }
             //Console.WriteLine(rsp.Body);
             return rsp;
+        }
+
+        #endregion
+
+        #region 发送钉钉群消息
+
+        /// <summary>
+        /// 发送钉钉群会话消息（topapi/message/send_to_conversation，按群chatId发送，要求应用机器人已在该群内）
+        /// </summary>
+        /// <param name="chatId">钉钉群chatId（cid开头）</param>
+        /// <param name="msg">消息内容</param>
+        /// <param name="msgType">消息类型（text、markdown）</param>
+        /// <param name="title">标题（仅markdown类型使用）</param>
+        public bool SendDingTalkGroupMsg(string chatId, string msg, DingTalkMsgType msgType = DingTalkMsgType.text, string title = "MES通知")
+        {
+            //每个应用都拥有唯一的AgentId。
+            var agentId = ConfigurationManager.AppSettings["DingTalkAgentId"];
+            if (string.IsNullOrWhiteSpace(agentId))
+            {
+                throw new Exception("请先配置[DingTalkAgentId]节点信息");
+            }
+            if (string.IsNullOrWhiteSpace(chatId))
+            {
+                throw new Exception("钉钉群chatId不能为空");
+            }
+            if (string.IsNullOrWhiteSpace(msg))
+            {
+                throw new Exception("钉钉消息不能为空");
+            }
+
+            //获取Token
+            var dingTalkToken = GetDingTalkToken();
+
+            //注意：该接口的msg参数必须是JSON对象，传JSON字符串会报 Invalid arguments:msg
+            var payload = BuildGroupMsgPayload(msg, msgType, title);
+            var body = JsonConvert.SerializeObject(new { agentid = agentId, cid = chatId.Trim(), msg = payload });
+            var url = $"https://oapi.dingtalk.com/topapi/message/send_to_conversation?access_token={dingTalkToken}";
+
+            return CheckDingTalkResult(PostJson(url, body), "发送钉钉群消息失败");
+        }
+
+        /// <summary>
+        /// 发送钉钉群机器人消息（自定义机器人Webhook，token为Webhook地址中的access_token）
+        /// </summary>
+        /// <param name="robotToken">群自定义机器人Webhook的access_token</param>
+        /// <param name="msg">消息内容</param>
+        /// <param name="msgType">消息类型（text、markdown）</param>
+        /// <param name="title">标题（仅markdown类型使用）</param>
+        public bool SendDingTalkRobotMsg(string robotToken, string msg, DingTalkMsgType msgType = DingTalkMsgType.text, string title = "MES通知")
+        {
+            if (string.IsNullOrWhiteSpace(robotToken))
+            {
+                throw new Exception("钉钉群机器人Token不能为空");
+            }
+            if (string.IsNullOrWhiteSpace(msg))
+            {
+                throw new Exception("钉钉消息不能为空");
+            }
+
+            var payload = BuildGroupMsgPayload(msg, msgType, title);
+            var body = JsonConvert.SerializeObject(payload);
+            var url = $"https://oapi.dingtalk.com/robot/send?access_token={robotToken.Trim()}";
+
+            return CheckDingTalkResult(PostJson(url, body), "发送钉钉群机器人消息失败");
+        }
+
+        /// <summary>
+        /// 组装群消息体（text / markdown）
+        /// </summary>
+        private static object BuildGroupMsgPayload(string msg, DingTalkMsgType msgType, string title)
+        {
+            if (msgType == DingTalkMsgType.markdown)
+            {
+                msg = msg.Replace("\\n", "\n");
+                return new { msgtype = "markdown", markdown = new { title = string.IsNullOrWhiteSpace(title) ? "MES通知" : title, text = msg } };
+            }
+            return new { msgtype = "text", text = new { content = msg } };
+        }
+
+        /// <summary>
+        /// POST JSON数据到钉钉接口
+        /// </summary>
+        private static string PostJson(string url, string body)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = "application/json; charset=utf-8";
+            request.Timeout = 10000;
+            request.ReadWriteTimeout = 10000;
+
+            var data = Encoding.UTF8.GetBytes(body);
+            request.ContentLength = data.Length;
+            using (var requestStream = request.GetRequestStream())
+            {
+                requestStream.Write(data, 0, data.Length);
+            }
+
+            using (var response = request.GetResponse())
+            using (var reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
+        /// <summary>
+        /// 校验钉钉返回结果（errcode=0表示成功）
+        /// </summary>
+        private static bool CheckDingTalkResult(string result, string failTip)
+        {
+            var jObject = JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(result);
+            var errcode = jObject["errcode"] == null ? -1L : jObject["errcode"].Value<long>();
+            var errmsg = jObject["errmsg"] == null ? string.Empty : jObject["errmsg"].Value<string>();
+            if (errcode != 0)
+            {
+                throw new Exception($"{failTip}：{errmsg}；Body：{result}");
+            }
+            return true;
         }
 
         #endregion

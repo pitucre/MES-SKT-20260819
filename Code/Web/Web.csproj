@@ -1320,6 +1320,7 @@
     <Compile Include="AjaxServices\AjaxWarehouseCpInList.cs" />
     <Compile Include="AjaxServices\AjaxWorkShop.cs" />
     <Compile Include="AjaxServices\Client\AjaxAssemble.cs" />
+    <Compile Include="AjaxServices\Client\AjaxDingTalk.cs" />
     <Compile Include="AjaxServices\Client\AjaxFeedingHoppeCrusher.cs" />
     <Compile Include="AjaxServices\Client\AjaxFromChangeByMES.cs" />
     <Compile Include="AjaxServices\Client\AjaxInput.cs" />

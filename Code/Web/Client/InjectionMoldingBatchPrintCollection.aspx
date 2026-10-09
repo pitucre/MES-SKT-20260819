@@ -16,22 +16,39 @@
                                     <input type="text" id="txtOrderNo" style="height: 26px; width: 200px;" disabled="disabled" /><input type="button" id="btnSelectOrder" class="ButtonBox" value="..." title="Select" onclick="openChoosePage(44);" />
                                     <asp:HiddenField ID="hdnOrderId" runat="server" Value="-1" ClientIDMode="Static" />
                                 </td>
-                                <td style="width: 480px;">打印机列表：
+                                <td style="width: 40%;">打印机列表：
                                     <select id="selPrintersList" style="width: 250px; height: 26px;">
                                     </select>
                                     <a href="#" onclick="bindPrinters('selPrintersList');">重新加载打印机</a>
-                                </td>
-                                <td style="width: 150px;">可打印数量：
-                                    <label id="labQty"></label>
-                                </td>
-                                <td style="width: 150px;">每批次数量：
-                                    <label id="labBatchQty"></label>
                                 </td>
                                 <td>产品名称：
                                     <label id="labItemName"></label>
                                 </td>
                             </tr>
                         </table>
+                        <table width="100%" style="margin-top: 6px; line-height: 26px;">
+                            <tr>
+                                <td style="width: 20%; white-space: nowrap;">工单数量：
+                                    <label id="labOrderQty"></label>
+                                </td>
+                                <td style="width: 20%; white-space: nowrap;">已打印数量：
+                                    <label id="labPrintedQty"></label>
+                                </td>
+                                <td style="width: 20%; white-space: nowrap;">可打印数量：
+                                    <label id="labQty"></label>
+                                </td>
+                                <td style="white-space: nowrap;">每批次数量：
+                                    <label id="labBatchQty"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <%--批次预警提示条：黑底红字（快到工单数量时由JS显示）--%>
+                <tr>
+                    <td colspan="2">
+                        <div id="batchWarnBar" style="display: none; padding: 8px 12px; margin: 2px 0 6px 0; background-color: #000; color: #ff3b30; font-size: 16px; font-weight: bold; line-height: 24px;">
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +63,7 @@
                 </tr>
                 <tr>
                     <td align="left" colspan="2">
-                        <input type="text" id="txtBatchQty" class="scan-center-sn" />
+                        <input type="text" id="txtBatchQty" class="scan-center-sn" onchange="checkBatchWarning();" />
                     </td>
                 </tr>
                 <tr>
@@ -160,6 +177,83 @@
     <script language="javascript" type="text/javascript">
 
         var myItemID = -1;
+        var myItemName = "";       //纯产品名称（不带规格），供不良登记/料把打印等接口使用
+
+        /******************** 批次预警（快到工单数量：界面黑底红字提醒 + 钉钉群推送） 开始 ********************/
+        var WARN_LEVEL_NONE = 0;   //正常
+        var WARN_LEVEL_TWO = 1;    //再打 2 个批次即达工单数量
+        var WARN_LEVEL_ONE = 2;    //再打 1 个批次即达工单数量（或已达到）
+
+        //取当前每批次数量（优先取输入框，其次工单批次量）
+        function getBatchQtyValue() {
+            var v = parseInt($("#txtBatchQty").val(), 10);
+            if (isNaN(v) || v <= 0) { v = parseInt($("#labBatchQty").text(), 10); }
+            return (isNaN(v) || v <= 0) ? 0 : v;
+        }
+
+        //隐藏预警条
+        function hideBatchWarning() {
+            $("#batchWarnBar").hide().text("");
+        }
+
+        //批次预警检测：已打印数量再打 2 个 / 1 个批次即达工单数量时提醒
+        function checkBatchWarning() {
+            var orderNo = $("#txtOrderNo").val();
+            var orderQty = parseInt($("#labOrderQty").text(), 10);
+            var printedQty = parseInt($("#labPrintedQty").text(), 10);
+            var batchQty = getBatchQtyValue();
+
+            if (orderNo == "" || isNaN(orderQty) || orderQty <= 0 || isNaN(printedQty) || batchQty <= 0) {
+                hideBatchWarning();
+                return;
+            }
+
+            var remainQty = orderQty - printedQty;
+            var leftBatches = Math.floor(remainQty / batchQty);   //还能打印的整批次数
+            var level = WARN_LEVEL_NONE;
+            var text = "";
+            if (remainQty <= 0) {
+                level = WARN_LEVEL_ONE;
+                text = "【注塑批次打印报工预警】超量：工单" + orderNo + "已打印数量已达工单数量（已打印 " + printedQty + " / 工单 " + orderQty + "，每批次 " + batchQty + "），请停止打印并确认工单是否需要补单！";
+            } else if (leftBatches <= 1) {
+                level = WARN_LEVEL_ONE;
+                text = "【注塑批次打印报工预警】工单" + orderNo + "已打印 " + printedQty + " / 工单数量 " + orderQty + "，每批次 " + batchQty + "，再打印 1 个批次即达工单数量，请注意！";
+            } else if (leftBatches <= 2) {
+                level = WARN_LEVEL_TWO;
+                text = "【注塑批次打印报工预警】工单" + orderNo + "已打印 " + printedQty + " / 工单数量 " + orderQty + "，每批次 " + batchQty + "，再打印 2 个批次即达工单数量，请注意！";
+            }
+
+            if (level == WARN_LEVEL_NONE) {
+                hideBatchWarning();
+                return;
+            }
+
+            //黑底红字提醒
+            $("#batchWarnBar").text(text).show();
+            //钉钉群推送：同一工单、同一预警级别只推一次，避免重复刷屏
+            pushDingTalkWarning(orderNo, level, text);
+        }
+
+        //钉钉群预警推送
+        function pushDingTalkWarning(orderNo, level, text) {
+            var storageKey = "InjectionMoldingBatchWarn_" + orderNo + "_" + level;
+            try {
+                if (localStorage.getItem(storageKey) == "1") { return; }   //该工单该级别已推送过
+                localStorage.setItem(storageKey, "1");
+            } catch (e) { }
+
+            try {
+                SKT.LeanMES.Web.AjaxServices.AjaxDingTalk.SendGroupMsg(text, function (res) {
+                    var result = res.value;
+                    if (result != "OK") {
+                        $("#activeinfoarea").append('<div style="color:red;">钉钉预警推送失败：' + result + '</div>');
+                    }
+                });
+            } catch (e) {
+                $("#activeinfoarea").append('<div style="color:red;">钉钉预警推送失败：' + e.message + '</div>');
+            }
+        }
+        /******************** 批次预警 结束 ********************/
 
         var OrderNo = '<%=Request.QueryString["OrderNo"]%>';
         var ProdOrderId = '<%=Request.QueryString["ProdOrderId"]%>';
@@ -382,9 +476,13 @@
                 $("#<%=this.hdnOrderId.ClientID %>").val(-1);
                 $("#labQty").text("");
                 myItemID = -1;
+                myItemName = "";
+                $("#labOrderQty").text("");
+                $("#labPrintedQty").text("");
                 $("#labBatchQty").text("");
                 $("#labItemName").text("");
                 $("#txtBatchQty").val("");
+                checkBatchWarning();
                 return false;
             }
             var list = JSON.parse(ajax.value);
@@ -392,11 +490,23 @@
             $("#labQty").text(listOrder[0].NotReleasedQty);
             myItemID = listOrder[0].ItemID;
             $("#labBatchQty").text(listOrder[0].LotSize);
-            $("#labItemName").text("(" + listOrder[0].ItemCode + ")" + listOrder[0].ItemName);
+            //工单数量、已打印数量（可打印数量 = 工单数量 - 已打印数量）
+            $("#labOrderQty").text(listOrder[0].OrderQty);
+            $("#labPrintedQty").text(listOrder[0].PrintedQty);
+            //产品名称后面附上产品规格
+            myItemName = "(" + listOrder[0].ItemCode + ")" + listOrder[0].ItemName;
+            var itemNameText = myItemName;
+            var itemSpec = listOrder[0].ItemSpec;
+            if (itemSpec != null && $.trim(String(itemSpec)) != "") {
+                itemNameText += " [规格：" + $.trim(String(itemSpec)) + "]";
+            }
+            $("#labItemName").text(itemNameText);
             if ($("#txtBatchQty").val() == "") {
                 $("#txtBatchQty").val(listOrder[0].LotSize);
             }
 
+            //批次预警检测（工单数量/已打印数量更新后）
+            checkBatchWarning();
 
         }
 
@@ -562,7 +672,7 @@
             //}
             var stationId = $("#hdnCurrStationId").val(); //工位Id
             var prodline = $("#hdCurProLine").val();
-            var productName = $("#labItemName").text();
+            var productName = myItemName != "" ? myItemName : $("#labItemName").text();
             var orderId = $("#hdnOrderId").val();
             var OrderNo = $("#txtOrderNo").val();
             var itemId = '<%=Request.QueryString["ItemID"] %>';
@@ -592,7 +702,7 @@
 
             var stationId = $("#hdnCurrStationId").val(); //工位Id
             var prodline = $("#hdCurProLine").val();
-            var productName = $("#labItemName").text();
+            var productName = myItemName != "" ? myItemName : $("#labItemName").text();
             var orderId = $("#hdnOrderId").val();
             var OrderNo = $("#txtOrderNo").val();
             var itemId = myItemID;
@@ -607,10 +717,20 @@
             dialog({ title: "料把打印", src: openWinUrl, width: 750, height: 450 });
         }
 
+        //本地扣减可打印数量时，同步累加已打印数量，保持 工单数量 - 已打印数量 = 可打印数量
+        function syncPrintedQty(qty) {
+            var printed = parseInt($("#labPrintedQty").text(), 10);
+            if (isNaN(printed)) { printed = 0; }
+            var addQty = parseInt(qty, 10);
+            if (isNaN(addQty) || addQty < 0) { addQty = 0; }
+            $("#labPrintedQty").text(printed + addQty);
+        }
+
         function UpdateList(Sn, Qty) {
             var lagQty = parseInt($("#labQty").text());
             var newQyt = lagQty - parseInt(Qty);
             $("#labQty").text(newQyt);
+            syncPrintedQty(Qty);
             updateCollectionList(Sn, 'NG');
 
             labelType = -39;
@@ -641,6 +761,7 @@
             var lagQty = parseInt($("#labQty").text());
             var newQyt = lagQty - parseInt(Qty);
             $("#labQty").text(newQyt);
+            syncPrintedQty(Qty);
             updateCollectionList(Sn, 'NG');
         }
 
