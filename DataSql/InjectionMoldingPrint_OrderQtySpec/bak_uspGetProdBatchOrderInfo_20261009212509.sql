@@ -1,13 +1,11 @@
--- ============================================================================
+﻿-- ============================================================================
 -- 需求：注塑批次打印页面 InjectionMoldingBatchPrintCollection.aspx
 --       1）可打印数量前增加显示：工单数量、已打印数量
 --       2）产品名称后附上产品规格
 -- 变更：uspGetProdBatchOrderInfo 结果集追加 OrderQty / PrintedQty / ItemSpec 三列
---       20261009 追加 MachineNumber（机台号），供页面预警前缀显示“xx号机台”
 -- 备份：bak_uspGetProdBatchOrderInfo_20261008161013.sql（同目录）
---       bak_uspGetProdBatchOrderInfo_20261009212509.sql / ..._20261009212509_179PRODTEST.sql
 -- ============================================================================
-ALTER PROCEDURE [dbo].[uspGetProdBatchOrderInfo]
+CREATE PROCEDURE [dbo].[uspGetProdBatchOrderInfo]
 (
 	@OrderNo VARCHAR(50),
 	@StationID INT
@@ -47,7 +45,6 @@ BEGIN
 	END 
 
 	SELECT a.ProdOrderID,a.OrderNO,b.ItemCode,b.ItemID,b.ItemName,b.ItemSpec,b.LotSize,
-	       a.MachineNumber,
 	       a.Qty_to_Build OrderQty,
 	       a.Qty_Released PrintedQty,
 	       a.Qty_to_Build-a.Qty_Released NotReleasedQty
