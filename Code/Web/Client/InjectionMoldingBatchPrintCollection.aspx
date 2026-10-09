@@ -2,6 +2,33 @@
     AutoEventWireup="true" CodeBehind="InjectionMoldingBatchPrintCollection.aspx.cs" Inherits="SKT.LeanMES.Web.Client.InjectionMoldingBatchPrintCollection" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%-- 本页专用紧凑排版：压缩顶部信息区/提示条的行距，使一屏能显示更多内容 --%>
+    <style type="text/css">
+        .scan-center
+        {
+            margin: 6px 25px 2px 5px;
+        }
+
+        #scancenter td
+        {
+            padding-bottom: 2px;
+            padding-top: 1px;
+        }
+
+        #scancenter .scan-center-title
+        {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        #batchWarnBar
+        {
+            padding: 3px 10px;
+            margin: 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="client-center">
@@ -12,12 +39,12 @@
                     <td colspan="2">
                         <table width="100%">
                             <tr>
-                                <td style="width: 18%;">工单号<em style="color: red;">*</em>
-                                    <input type="text" id="txtOrderNo" style="height: 26px; width: 200px;" disabled="disabled" /><input type="button" id="btnSelectOrder" class="ButtonBox" value="..." title="Select" onclick="openChoosePage(44);" />
+                                <td style="width: 22%; white-space: nowrap;">工单号<em style="color: red;">*</em>
+                                    <input type="text" id="txtOrderNo" style="height: 24px; width: 170px;" disabled="disabled" /><input type="button" id="btnSelectOrder" class="ButtonBox" value="..." title="Select" onclick="openChoosePage(44);" />
                                     <asp:HiddenField ID="hdnOrderId" runat="server" Value="-1" ClientIDMode="Static" />
                                 </td>
-                                <td style="width: 40%;">打印机列表：
-                                    <select id="selPrintersList" style="width: 250px; height: 26px;">
+                                <td style="width: 36%; white-space: nowrap;">打印机列表：
+                                    <select id="selPrintersList" style="width: 230px; height: 24px;">
                                     </select>
                                     <a href="#" onclick="bindPrinters('selPrintersList');">重新加载打印机</a>
                                 </td>
@@ -26,7 +53,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <table width="100%" style="margin-top: 6px; line-height: 26px;">
+                        <table width="100%" style="margin-top: 2px; line-height: 24px;">
                             <tr>
                                 <td style="width: 20%; white-space: nowrap;">工单数量：
                                     <label id="labOrderQty"></label>
@@ -47,7 +74,7 @@
                 <%--批次预警提示条：黑底红字（快到工单数量时由JS显示）--%>
                 <tr>
                     <td colspan="2">
-                        <div id="batchWarnBar" style="display: none; padding: 8px 12px; margin: 2px 0 6px 0; background-color: #000; color: #ff3b30; font-size: 16px; font-weight: bold; line-height: 24px;">
+                        <div id="batchWarnBar" style="display: none; background-color: #000; color: #ff3b30; font-weight: bold;">
                         </div>
                     </td>
                 </tr>
@@ -67,8 +94,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="Label3 " style="text-align: left;" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打印张数:&nbsp;&nbsp;
-                        <input type="text" id="txtPrintNumber" style="height: 30px;" readonly="readonly" disabled="disabled"/>
+                    <td class="Label3 " style="text-align: left;" colspan="2">&nbsp;&nbsp;打印张数:&nbsp;&nbsp;
+                        <input type="text" id="txtPrintNumber" style="height: 26px;" readonly="readonly" disabled="disabled"/>
                     </td>
 
                 </tr>
