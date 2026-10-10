@@ -62,7 +62,7 @@
                                     <label id="labPrintedQty"></label>
                                 </td>
                                 <td style="width: 20%; white-space: nowrap;">可打印数量：
-                                    <label id="labQty" title="可打印数量 = 工单数量 × 1.2（工单允许超打20%） - 已打印数量"></label>
+                                    <label id="labQty"></label>
                                 </td>
                                 <td style="white-space: nowrap;">每批次数量：
                                     <label id="labBatchQty"></label>
@@ -212,12 +212,11 @@
         var WARN_LEVEL_NONE = 0;   //正常
         var WARN_LEVEL_TWO = 1;    //再打 2 个批次即达工单数量
         var WARN_LEVEL_ONE = 2;    //再打 1 个批次即达工单数量（或已达到）
-        var OVER_PRINT_RATE = 0.2; //工单允许超打比例：可打印数量上限 = 工单数量 × 1.2
 
-        //取当前每批次数量（优先取输入框，其次工单批次量）
+        //每批次数量：取第二行工单对应的每批次数量（为空时才回退“请输入打印数量”输入框）
         function getBatchQtyValue() {
-            var v = parseInt($("#txtBatchQty").val(), 10);
-            if (isNaN(v) || v <= 0) { v = parseInt($("#labBatchQty").text(), 10); }
+            var v = parseInt($("#labBatchQty").text(), 10);
+            if (isNaN(v) || v <= 0) { v = parseInt($("#txtBatchQty").val(), 10); }
             return (isNaN(v) || v <= 0) ? 0 : v;
         }
 
@@ -239,7 +238,8 @@
             }
 
             var remainQty = orderQty - printedQty;
-            var leftBatches = Math.floor(remainQty / batchQty);   //还能打印的整批次数
+            //还能打印的整批次数：向上取整（如 工单607 已打588 每批14 → 剩19 → 需2批才达工单数量）
+            var leftBatches = Math.ceil(remainQty / batchQty);
             //预警前缀：有工单机台号时显示“xx号机台”，否则用默认前缀
             var warnTitle = (myMachineNo != "") ? ("【" + myMachineNo + "号机台注塑批次打印报工预警】") : "【注塑批次打印报工预警】";
             var level = WARN_LEVEL_NONE;
@@ -527,18 +527,10 @@
             //工单机台号（预警前缀“xx号机台”）
             myMachineNo = $.trim(String(listOrder[0].MachineNumber == null ? "" : listOrder[0].MachineNumber));
             $("#labBatchQty").text(listOrder[0].LotSize);
-            //工单数量、已打印数量
-            var orderQty = parseInt(listOrder[0].OrderQty, 10);
-            var printedQty = parseInt(listOrder[0].PrintedQty, 10);
+            //工单数量、已打印数量（可打印数量 = 工单数量 - 已打印数量）
             $("#labOrderQty").text(listOrder[0].OrderQty);
             $("#labPrintedQty").text(listOrder[0].PrintedQty);
-            //可打印数量 = 工单数量 × 1.2（工单允许超打20%） - 已打印数量
-            if (isNaN(orderQty) || orderQty <= 0 || isNaN(printedQty)) {
-                $("#labQty").text(listOrder[0].NotReleasedQty);
-            } else {
-                var canPrintQty = Math.floor(orderQty * (1 + OVER_PRINT_RATE)) - printedQty;
-                $("#labQty").text(canPrintQty > 0 ? canPrintQty : 0);
-            }
+            $("#labQty").text(listOrder[0].NotReleasedQty);
             //产品名称后面附上产品规格
             myItemName = "(" + listOrder[0].ItemCode + ")" + listOrder[0].ItemName;
             var itemNameText = myItemName;
@@ -764,7 +756,7 @@
             dialog({ title: "料把打印", src: openWinUrl, width: 750, height: 450 });
         }
 
-        //本地扣减可打印数量时，同步累加已打印数量，保持 工单数量×1.2 - 已打印数量 = 可打印数量
+        //本地扣减可打印数量时，同步累加已打印数量，保持 工单数量 - 已打印数量 = 可打印数量
         function syncPrintedQty(qty) {
             var printed = parseInt($("#labPrintedQty").text(), 10);
             if (isNaN(printed)) { printed = 0; }
