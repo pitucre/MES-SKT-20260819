@@ -781,6 +781,7 @@ namespace SKT.LeanMES.CommonHelper.BLL
             })) : 100);
             bool flag = false;
             System.Collections.Generic.List<string> list = new System.Collections.Generic.List<string>();
+            System.Collections.Generic.List<string> listGroup = new System.Collections.Generic.List<string>();
             for (int i = num; i <= num2; i++)
             {
                 System.Collections.Generic.Dictionary<string, string> dictionary = columnInfo[strNode_Path + "/column_" + i.ToString()];
@@ -794,6 +795,8 @@ namespace SKT.LeanMES.CommonHelper.BLL
                     if (text2 != null)
                     {
                         list.Add(text2);
+                        //分組欄位：僅在同一分組欄位值相同時才合併，避免相鄰不同分組但值相同被誤合併
+                        listGroup.Add(dictionary.ContainsKey("atuo_rowspan_group") ? dictionary["atuo_rowspan_group"].Trim() : "");
                         dataTable.Columns.Add(text2 + "_autoSpan");
                     }
                 }
@@ -801,6 +804,7 @@ namespace SKT.LeanMES.CommonHelper.BLL
             if (list.Count > 0)
             {
                 string[] array2 = new string[list.Count];
+                string[] array2Group = new string[list.Count];
                 int[] array3 = new int[list.Count];
                 int num4 = 0;
                 int num5 = dataTable.Rows.Count - 1;
@@ -809,7 +813,11 @@ namespace SKT.LeanMES.CommonHelper.BLL
                     dataRow.BeginEdit();
                     for (int j = 0; j < list.Count; j++)
                     {
-                        if (array2[j] != dataRow[list[j]].ToString() && num4 != 0 && num4 < num5)
+                        string strCurValue = dataRow[list[j]].ToString();
+                        bool blnHasGroup = listGroup[j].Length > 0 && dataTable.Columns.Contains(listGroup[j]);
+                        string strCurGroup = blnHasGroup ? dataRow[listGroup[j]].ToString() : "";
+                        bool blnChanged = (array2[j] != strCurValue) || (blnHasGroup && array2Group[j] != strCurGroup);
+                        if (blnChanged && num4 != 0 && num4 < num5)
                         {
                             dataTable.Rows[num4 - array3[j]][list[j] + "_autoSpan"] = array3[j];
                             array3[j] = 1;
@@ -818,8 +826,8 @@ namespace SKT.LeanMES.CommonHelper.BLL
                         {
                             if (num4 == num5)
                             {
-                                dataRow[list[j] + "_autoSpan"] = ((array2[j] != dataRow[list[j]].ToString()) ? 1 : -100);
-                                dataTable.Rows[num4 - array3[j]][list[j] + "_autoSpan"] = ((array2[j] != dataRow[list[j]].ToString()) ? array3[j] : (array3[j] + 1));
+                                dataRow[list[j] + "_autoSpan"] = (blnChanged ? 1 : -100);
+                                dataTable.Rows[num4 - array3[j]][list[j] + "_autoSpan"] = (blnChanged ? array3[j] : (array3[j] + 1));
                                 array3[j] = 1;
                             }
                             else
@@ -828,7 +836,8 @@ namespace SKT.LeanMES.CommonHelper.BLL
                                 array3[j]++;
                             }
                         }
-                        array2[j] = dataRow[list[j]].ToString();
+                        array2[j] = strCurValue;
+                        array2Group[j] = strCurGroup;
                     }
                     dataRow.EndEdit();
                     num4++;

@@ -37,7 +37,7 @@
 			<column header="单位" width="5%" align="center">#[Units]#</column>
 
 			<column header="存储地点" width="11%" align="center" >#[CWhName]#</column>
-			<column header="计划数量" width="8%" align="center" >#[CurrentQty]#</column>
+			<column header="计划数量" width="8%" align="center" atuo_rowspan="1" atuo_rowspan_group="ItemCode" >#[CurrentQty]#</column>
 			
 		</data>
 		
