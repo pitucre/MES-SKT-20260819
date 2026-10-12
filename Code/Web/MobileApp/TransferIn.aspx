@@ -593,17 +593,16 @@
                 if (checkAjax.error == null) {
                     var loadResult = $.parseJSON(checkAjax.value).data;
                     if (loadResult && loadResult.length > 0) {
-                        var loadMsg = "以下GRN存在上料记录：\n";
+                        var loadMsg = "该GRN存在上料记录，禁止调拨入库！\n";
                         $.each(loadResult, function (i, o) {
                             loadMsg += "GRN:" + o.GRN + "  类型:" + o.LoadType + "  余量:" + o.BalanceQty + "\n";
                         });
-                        loadMsg += "\n调拨入库将自动删除这些上料记录，是否继续？";
-                        if (!confirm(loadMsg)) {
-                            $("#msg").html("该物料条码【" + grn + "】存在上料记录，已取消扫描！").css("color", "red");
-                            $("#txtGRN").val("");
-                            $("#txtGRN").focus();
-                            return false;
-                        }
+                        loadMsg += "\n请先清理上料记录后再操作！";
+                        confirmDialog(loadMsg);
+                        $("#msg").html("该物料条码【" + grn + "】存在上料记录，禁止调拨！").css("color", "red");
+                        $("#txtGRN").val("");
+                        $("#txtGRN").focus();
+                        return false;
                     }
                 }
                 return true;
@@ -861,7 +860,7 @@
                         $("#txtGRN").focus();
                         return false;
                     } else {
-                        if (!confirm(grnResult[0].Msg + "。是否确认操作？")) {
+                        if (!confirm(grnResult[0].Msg + "不符合先入先出原则。是否确认操作？")) {
                             $("#txtGRN").val("");
                             $("#txtGRN").focus();
                             return false;
