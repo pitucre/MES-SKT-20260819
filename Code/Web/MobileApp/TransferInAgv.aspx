@@ -33,7 +33,9 @@
             background: #99FF33;
         }
     </style>
-</head>
+
+    <style type="text/css">.ui-table-columntoggle-btn { display: none !important; }</style>
+    </head>
 <body <%--onscroll="alert(1);"--%>>
     <form id="form1" runat="server" onsubmit="return false;">
         <div data-role="page" class="receivepage" id="receivepage" style="overflow-x: hidden; overflow-y: auto;">
@@ -207,7 +209,7 @@
             $(function () {
                 //隐藏columntoggle列表按钮
                 $(".ui-body-c").css("background", "#fff");
-                $(".ui-table-columntoggle-btn").css("display", "none");
+                $(document).on("pagecreate", function () { $(".ui-table-columntoggle-btn").hide(); });
                 $("#txtTransferNo").blur(function () { $(this).css("background-color", "white") }).focus(function () { $(this).css("background-color", "#FFFFCC") }).focus();
                 //处理事件
                 $("#txtPosCode").blur(function () {
@@ -636,6 +638,29 @@
             });
 
             //确认调拨
+            //检查单个GRN是否存在上料记录（扫描时校验）
+            function checkLoadingRecords(grn) {
+                var checkEntity = {};
+                checkEntity.GRNList = JSON.stringify([{ GRN: grn }]);
+                var checkAjax = SKT.AjaxCommon.DBService.ExecuteSpc("uspCheckTransferInLoadingRecords_Program", JSON.stringify(checkEntity));
+                if (checkAjax.error == null) {
+                    var loadResult = $.parseJSON(checkAjax.value).data;
+                    if (loadResult && loadResult.length > 0) {
+                        var loadMsg = "以下GRN存在上料记录：\n";
+                        $.each(loadResult, function (i, o) {
+                            loadMsg += "GRN:" + o.GRN + "  类型:" + o.LoadType + "  余量:" + o.BalanceQty + "\n";
+                        });
+                        loadMsg += "\n调拨入库将自动删除这些上料记录，是否继续？";
+                        if (!confirm(loadMsg)) {
+                            $("#msg").html("该物料条码【" + grn + "】存在上料记录，已取消扫描！").css("color", "red");
+                            $("#txtGRN").val("");
+                            $("#txtGRN").focus();
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
             function Save() {
                 if (viewModel.transfer.TransfersId == -1) {
                     confirmDialog("请先选择调拨单号!");
@@ -856,6 +881,7 @@
                     }
                     //校验库位的产品唯一
                     if (!verifyProductOnly(posCode, transferDtlMaterial.ItemCode)) return false;
+                    if (!checkLoadingRecords(grn)) return false;
                     //更新实体
                     $.each(grnResult, function (i, o) {
                         var entity = getTransferDtlMaterial(o.SerialNumber);
@@ -922,6 +948,7 @@
                 }
                 //校验库位的产品唯一
                 if (!verifyProductOnly(posCode, grnResult[0].ItemCode)) return false;
+                if (!checkLoadingRecords(grn)) return false;
                 //自动解除包装
                 if (grnResult && grnResult.length > 0) {
                     if (grnResult[0].IsGrnInBox) {
