@@ -4,25 +4,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%-- 本页专用紧凑排版：压缩顶部信息区/提示条的行距，使一屏能显示更多内容 --%>
     <style type="text/css">
-        .scan-center
-        {
+        .scan-center {
             margin: 6px 25px 2px 5px;
         }
 
-        #scancenter td
-        {
+        #scancenter td {
             padding-bottom: 2px;
             padding-top: 1px;
         }
 
-        #scancenter .scan-center-title
-        {
+        #scancenter .scan-center-title {
             padding-top: 6px;
             padding-bottom: 6px;
         }
 
-        #batchWarnBar
-        {
+        #batchWarnBar {
             padding: 3px 10px;
             margin: 0;
             font-size: 14px;
@@ -44,11 +40,13 @@
                                     <asp:HiddenField ID="hdnOrderId" runat="server" Value="-1" ClientIDMode="Static" />
                                 </td>
                                 <td style="width: 36%; white-space: nowrap;">打印机列表：
+                                   
                                     <select id="selPrintersList" style="width: 230px; height: 24px;">
                                     </select>
                                     <a href="#" onclick="bindPrinters('selPrintersList');">重新加载打印机</a>
                                 </td>
                                 <td>产品名称：
+                                   
                                     <label id="labItemName"></label>
                                 </td>
                             </tr>
@@ -56,15 +54,19 @@
                         <table width="100%" style="margin-top: 2px; line-height: 24px;">
                             <tr>
                                 <td style="width: 20%; white-space: nowrap;">工单数量：
+                                   
                                     <label id="labOrderQty"></label>
                                 </td>
                                 <td style="width: 20%; white-space: nowrap;">已打印数量：
+                                   
                                     <label id="labPrintedQty"></label>
                                 </td>
                                 <td style="width: 20%; white-space: nowrap;">可打印数量：
+                                   
                                     <label id="labQty"></label>
                                 </td>
                                 <td style="white-space: nowrap;">每批次数量：
+                                   
                                     <label id="labBatchQty"></label>
                                 </td>
                             </tr>
@@ -95,7 +97,8 @@
                 </tr>
                 <tr>
                     <td class="Label3 " style="text-align: left;" colspan="2">&nbsp;&nbsp;打印张数:&nbsp;&nbsp;
-                        <input type="text" id="txtPrintNumber" style="height: 26px;" readonly="readonly" disabled="disabled"/>
+                       
+                        <input type="text" id="txtPrintNumber" style="height: 26px;" readonly="readonly" disabled="disabled" />
                     </td>
 
                 </tr>
@@ -104,10 +107,10 @@
                         <table width="100%">
                             <tr>
                                 <td align="center">
-                                    <input type="button" value=" 良品标签打印 " id="btnGoodLabel" onclick="SavePrint()" />&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="button" value=" 不良登记 " id="DefectiveLabel" onclick="NcDataPrint()"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input type="button" value=" 料把打印 " id="btnMaterialHandelLabel" onclick="MaterialHandelPrint()" />&nbsp;&nbsp;&nbsp;&nbsp;
-                              <%--      <input type="button" value=" 打印批次号 " id="btnPersonPass" onclick="SavePrint()" />--%>
+                                    <input type="button" value=" 良品标签打印 " id="btnGoodLabel" style="width: 120px; height: 25px; font-size: 16px;" onclick="SavePrint()" />  &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="button" value=" 不良登记 " id="DefectiveLabel" style="width: 120px; height: 25px; font-size: 16px;" onclick="NcDataPrint()" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="button" value=" 料把打印 " id="btnMaterialHandelLabel" style="width: 120px; height: 25px; font-size: 16px;" onclick="MaterialHandelPrint()" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <%--      <input type="button" value=" 打印批次号 " id="btnPersonPass" onclick="SavePrint()" />--%>
                                 </td>
                             </tr>
                         </table>
@@ -271,13 +274,15 @@
             var storageKey = "InjectionMoldingBatchWarn_" + orderNo + "_" + level;
             try {
                 if (localStorage.getItem(storageKey) == "1") { return; }   //该工单该级别已推送过
-                localStorage.setItem(storageKey, "1");
             } catch (e) { }
 
             try {
                 SKT.LeanMES.Web.AjaxServices.AjaxDingTalk.SendGroupMsg(text, function (res) {
                     var result = res.value;
-                    if (result != "OK") {
+                    if (result == "OK") {
+                        //推送成功才标记，失败时下次进入页面可重试
+                        try { localStorage.setItem(storageKey, "1"); } catch (e) { }
+                    } else {
                         $("#activeinfoarea").append('<div style="color:red;">钉钉预警推送失败：' + result + '</div>');
                     }
                 });
@@ -290,12 +295,15 @@
         var OrderNo = '<%=Request.QueryString["OrderNo"]%>';
         var ProdOrderId = '<%=Request.QueryString["ProdOrderId"]%>';
         var prodline = '<%=Request.QueryString["prodline"]%>';
+        var currentUserUserName = "<%=SKT.LeanMES.Web.AccountController.GetCurrentUser().UserName %>";
+        var isAdminAccount = (currentUserUserName || "").toLowerCase() === "admin";
         $(document).ready(function () {
             $('#txtPrintNumber').val('1');
-            // 注塑班长可编辑打印张数
+            // 注塑班长/超级管理员/admin账号可编辑打印张数
             try {
                 var isTL = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('注塑班长').value;
-                if (isTL) {
+                var isSuperAdmin = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('超级管理员').value;
+                if (isTL || isSuperAdmin || isAdminAccount) {
                     $('#txtPrintNumber').prop('disabled', false).prop('readonly', false);
                 }
             } catch(e) {}
@@ -359,9 +367,10 @@
         }
 
         function SavePrint() {
-            // ========== 注塑班长角色跳过100秒限制 ==========
+            // ========== 注塑班长/超级管理员/admin账号跳过100秒限制 ==========
             var isTeamLeader = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('注塑班长').value;
-            if (!isTeamLeader) {
+            var isSuperAdmin = SKT.LeanMES.Web.AjaxServices.AjaxAccount.CheckUserRole('超级管理员').value;
+            if (!isTeamLeader && !isSuperAdmin && !isAdminAccount) {
             // ========== 持久化100秒防重复（刷新页面不失效）Start ==========
             const limitSecond = 100; // 限制间隔100秒
             const storageKey = "LastGoodPrintClickTime";
@@ -396,7 +405,7 @@
                 $("#printMessage").text("");
             }, limitSecond * 1000);
             // ========== 持久化防重复 End ==========
-            } // end if (!isTeamLeader)
+            } // end if (!isTeamLeader && !isSuperAdmin && !isAdminAccount)
 
             //1.获取当前基本信息                 
             var resourceId = $("#hdnCurrResourceId").val(); //资源Id
@@ -454,13 +463,6 @@
                 labelProdOrderId = orderId;
 
                 getDocumentInfo();
-                // 注塑班长：用手工输入的打印张数覆盖模板默认值
-                if (isTeamLeader) {
-                    var manualCount = parseInt($('#txtPrintNumber').val());
-                    if (!isNaN(manualCount) && manualCount > 0) {
-                        printCount = manualCount;
-                    }
-                }
                 //获取标签信息
                 SNInfo = myajax.value;
                 LoadOrderInfo($("#txtOrderNo").val());
