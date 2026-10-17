@@ -6677,7 +6677,7 @@
 
 			<!--不良登记-->
 			<page inMenu="0" url="Client/CommonDefectiveProductLabel.aspx?name=CommonDefectiveProductLabel" icon=""  sequence="19" popedom="CommonDefectiveProductLabel">
-				<button inToolbar="1" text="COM_Save" tooltip="COM_Save" icon="save" handler="Save()" sequence="1" popedom="0" />
+				<button inToolbar="1" text="COM_SavePrint" tooltip="COM_SavePrint" icon="save" handler="SavePrint()" sequence="1" popedom="0" />
 			</page>
 		</module>
 

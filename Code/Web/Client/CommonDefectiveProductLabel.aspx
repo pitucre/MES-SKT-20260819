@@ -309,8 +309,18 @@
 
         }
 
-        //保存并打印
+        //保存（兼容 Ctrl+S / SavePlus，实际执行保存并打印）
         function Save() {
+            return SavePrint();
+        }
+
+        //保存并打印：保存不良登记（CommonNcPrintCollection，不扣料）后，
+        //回调父页面 UpdateList 打印与「不良登记(DefectiveProductLabel)」保存并打印相同的不良标签（labelType=-39）
+        function SavePrint() {
+            //原「保存」按钮经 InitHander 走 SavePlus() 会先做带*必填校验，这里保留同等校验
+            if (typeof (SubmitValidation) === "function" && !SubmitValidation()) {
+                return false;
+            }
             var sn = $.trim($("#txtNGSN").val());
             if (sn == "") {
                 alert("请扫描条码!");
@@ -352,18 +362,23 @@
                 return false;
             }
             var listStr = ajax.value;
-            //var sn = listStr[0];
-            //updateCollectionList(sn, 'OK');
+            //listStr[0] = 本次不良登记的条码（SP 返回的 billCode）
+            var ngSn = (listStr && listStr[0]) ? listStr[0] : sn;
             alert("保存成功");
-            //var Qty = $("#txtNumbers").val();
-            //window.parent.UpdateList(sn, Qty);
+            //打印不良标签：复用父页面（注塑批次打印报工页）的 UpdateList，与第二个页面保存并打印同一张 -39 标签，不扣料
+            try {
+                if (window.parent && typeof (window.parent.UpdateList) === "function") {
+                    window.parent.UpdateList(ngSn, ngQty);
+                }
+            } catch (e) { }
             window.parent.closeDialog();
 
 
 
         }
 
-        function SavePrint(ReleaseQty, myBatchQty, orderId, itemids) {
+        //(旧版批次释放逻辑，无调用点，改名避免覆盖上面的 SavePrint)
+        function SavePrintRelease(ReleaseQty, myBatchQty, orderId, itemids) {
         //1.获取当前基本信息
         //var resourceId = $("#hdnCurrResourceId").val(); //资源Id
         //var stationId = $("#hdnCurrStationId").val(); //工位Id
