@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Data.SqlClient;
 using SKT.LeanMES.Web.AppCode.Utility;
 using Newtonsoft.Json;
@@ -12,7 +13,10 @@ namespace SKT.LeanMES.Web.Handler
     /// <summary>
     /// Summary description for ReportHandler
     /// </summary>
-    public class ReportHandler : IHttpHandler
+    //Bug62: 必须实现只读会话接口。否则 HttpContext.Current.Session 为 null，
+    //       AccountController.GetCurrentUser() 内部 AccountManager.GetCurrentUser 访问 Session 抛 NullReferenceException，
+    //       导致本 Handler 全部请求崩溃、智能查询页签永远不出现。只读接口同时允许并发读，避免请求串行。
+    public class ReportHandler : IHttpHandler, IReadOnlySessionState
     {
 
         public void ProcessRequest(HttpContext context)

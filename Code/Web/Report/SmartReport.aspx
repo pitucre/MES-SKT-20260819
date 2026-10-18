@@ -118,7 +118,8 @@
                 alert(ajax.error.Message);
                 return;
             }
-            maxLenObj = $.parseJSON(ajax.value).data;
+            maxLenObj = [];
+            try { maxLenObj = $.parseJSON(ajax.value).data || []; } catch (e) { maxLenObj = []; }
             var tdDesc = "提示：可以输入";
             for (var i = 0; i < maxLenObj.length; i++) {
                 var DataTypeName = maxLenObj[i].DataTypeName;
@@ -152,9 +153,13 @@
         {
             $("#content").html("<div  id='noData'>尚未查询出数据......</div><ul id='titleUL' class='tb'></ul>");
             var searchValue = $("#Value").val();
+            if (!maxLenObj || !maxLenObj.length) { return; }
             for (var i = 0; i < maxLenObj.length; i++) {
                 var DataTypeId = maxLenObj[i].DataType;
-                ExistsData(DataTypeId, searchValue, -1);
+                try {
+                    ExistsData(DataTypeId, searchValue, -1);
+                } catch (e) {
+                }
             }
             if (searchValue == "") {
                 $("#content").html(contentUI)
@@ -174,8 +179,9 @@
                 return;
             }
             if (ajax.value != null) {
-                var en = $.parseJSON(ajax.value);
-                if (en.data.length > 0) {
+                var en = null;
+                try { en = $.parseJSON(ajax.value); } catch (e) { return; }
+                if (en && en.data && en.data.length > 0) {
                     var dataType = en.data[0].dataType;
                     var desc = en.data[0].desc;
                     $("#content").append("<div id='dataType-" + dataType + "'><div></div></div>");
@@ -195,7 +201,9 @@
                 return;
             }
             if (ajax.value != null) {
-                var en = $.parseJSON(ajax.value);
+                var en = null;
+                try { en = $.parseJSON(ajax.value); } catch (e) { return; }
+                if (!en || !en.data) { return; }
                 for (var i = 0; i < en.data.length; i++) {
                     var divID = "dataType-" + dataType + "-" + i;
 

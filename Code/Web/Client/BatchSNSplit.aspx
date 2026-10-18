@@ -80,7 +80,8 @@
 
         function LoadSN() {
             var scanSN = $("#txtBatchSN").val();
-            var info = { ScanSN: scanSN };
+            //Bug24 v2: 框架 setParaValue 要求 JSON 覆盖 SP 全部参数（@Mode=0 拆分校验），缺键会报“列Mode不属于表”
+            var info = { ScanSN: scanSN, Mode: 0 };
             var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspBatchSNSplitCheckSN", JSON.stringify(info));
             if (ajax.error != null) {
                 alert(ajax.error.Message);
@@ -100,7 +101,8 @@
                 return false;
             }
             var scanSN = $("#txtBatchSN").val();
-            var info = { ScanSN: scanSN };
+            //Bug24 v2: 框架 setParaValue 要求 JSON 覆盖 SP 全部参数（@Mode=0 拆分校验），缺键会报“列Mode不属于表”
+            var info = { ScanSN: scanSN, Mode: 0 };
             var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspBatchSNSplitCheckSN", JSON.stringify(info));
             if (ajax.error != null) {
                 alert(ajax.error.Message);
@@ -151,7 +153,8 @@
         //补打
         function RepeatPrint() {
             var scanSN = $("#txtBatchSN").val();
-            var info = { ScanSN: scanSN };
+            //Bug24 v2: 补打传 Mode=1，跳过校验SP里的包装拦截（已包装也允许补打）
+            var info = { ScanSN: scanSN, Mode: 1 };
             var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspBatchSNSplitCheckSN", JSON.stringify(info));
             if (ajax.error != null) {
                 alert(ajax.error.Message);
