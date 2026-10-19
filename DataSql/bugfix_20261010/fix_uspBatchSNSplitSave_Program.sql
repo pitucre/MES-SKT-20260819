@@ -1,5 +1,5 @@
 /**
- * Author: program fix 20261010
+ * Author: program fix 20261010 / v3 20261019
  * Fix Bug35: History for new split SN wrote parent SN (@ScanSN) into SN column; should be @NewBatchSN
  * Fix Bug27: New split SN should not inherit parent's packing fields (CartonNo/PalletNo/QcLotNo)
  *            which cause pass-station / packing logic to mis-attribute to parent container
@@ -9,7 +9,14 @@
  *               Judged by live relation Prod_PackingData (uspRemovePackData deletes it
  *               without clearing Prod_Unit packing columns, so CartonNo etc. are not used).
  *               Container StatusId=2 -> 已包装(箱已关闭); otherwise 包装途中.
- * Backup: bak_179_uspBatchSNSplitSave_20261010200515.sql, bak_179_uspBatchSNSplitSave_20261016161857.sql
+ * Fix Bug24 v3 (20261019): NG batches registered by 不良登记 (IsPass=0) must not be split;
+ *               v2's StatusID<>2 guard wrongly blocked in-production StatusID=1 batches and
+ *               allowed NG ones. IsPass=0 is the authoritative NG mark.
+ * Fix Bug24 v4 (20261019): stored batches must not be split; judged by storage order
+ *               Prod_Storage/Detail (IsStorage column is not set by in-storage flow,
+ *               e.g. SNPC260723000004 with IsStorage=NULL on RKD26072300004).
+ * Backup: bak_179_uspBatchSNSplitSave_20261016161857.sql, bak_179_uspBatchSNSplitSave_20261019085519.sql,
+ *         bak_179_uspBatchSNSplitSave_20261019090120.sql
  */
 ALTER PROCEDURE [dbo].[uspBatchSNSplitSave]
 (
@@ -67,10 +74,19 @@ BEGIN
 		RETURN
 	END
 
-	--Bug24: only finished products (StatusID=2) may be split; unfinished split SN fails storage with 未完成生产
-	IF EXISTS(SELECT 1 FROM dbo.Prod_Unit WHERE SN=@ScanSN AND ISNULL(StatusID,0)<>2)
+	--Bug24 v4: 已入库批次不能拆分；以入库单 Prod_Storage/Detail 为准（IsStorage 并非所有入库流程都会写）
+	IF EXISTS(SELECT 1 FROM dbo.Prod_StorageDetail d
+		INNER JOIN dbo.Prod_Storage s ON s.StorageID=d.StorageId
+		WHERE d.SerialNumber=@ScanSN AND ISNULL(s.[Status],0)<>0)
 	BEGIN
-		RAISERROR('该条码未完成生产，不能进行批次拆分！',12,1)
+		RAISERROR('该条码已入库或进入入库单，不能进行批次拆分！',12,1)
+		RETURN
+	END
+
+	--Bug24 v3: 已登记不良的批次(IsPass=0)不能拆分；v2 的 StatusID<>2 拦截误拦生产中批次(StatusID=1)而放行不良批次，已废除
+	IF EXISTS(SELECT 1 FROM dbo.Prod_Unit WHERE SN=@ScanSN AND ISNULL(IsPass,1)=0)
+	BEGIN
+		RAISERROR('该条码已登记不良，不能进行批次拆分！',12,1)
 		RETURN
 	END
 
