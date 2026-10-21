@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -73,6 +73,12 @@ namespace SKT.LeanMES.Web.Equipment
             {
                 txtPosition.Text = value.cBarCode;
                 HiddenPosition.Value = value.WarehouseLocationId.ToString();
+                //保留模具原有状态/位置相关字段，避免编辑保存时被重置
+                hdnStatus.Value = value.Status.ToString();
+                hdnInOrOut.Value = value.InOrOut.ToString();
+                hdnIsClear.Value = value.IsClear.ToString();
+                hdnPosition.Value = value.Position ?? "";
+                hdnCurPosition.Value = value.CurPosition ?? "";
 
                 this.txtEquipmentCode.Text = value.EquipmentCode;
                 this.txtEquipmentName.Text = value.EquipmentName;

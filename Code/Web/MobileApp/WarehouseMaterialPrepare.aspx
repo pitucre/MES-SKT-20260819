@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WarehouseMaterialPrepare.aspx.cs"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WarehouseMaterialPrepare.aspx.cs"
     Inherits="SKT.LeanMES.Web.MobileApp.WarehouseMaterialPrepare" %>
 
     <!DOCTYPE html
@@ -376,6 +376,70 @@
                 return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m)
             }
 
+            /* 【改造】按数量把已扫描的GRN分配到同物料的领料明细行
+               口径与保存时的 uspSaveMaterialPrepareGrn 一致：
+                 每个物料按明细行顺序，逐行补足到「申请数量(ApplyQty)」，
+                 剩余数量顺延到下一行，最后一行承接超发。
+               明细行基准值取渲染时写入的 stockqty 属性（已备数量），
+               扫描部分由 GrnArr 按扫描顺序累加，所以删除/清除后能重算。
+               例：同一物料两行明细 20 / 10，先扫 15 → 15 / 0，再扫 10 → 20 / 5。 */
+            function recalcPrepareQty() {
+                //1) 收集明细行（页面顺序即明细 ApplyDtlId 顺序，与存储过程分配顺序一致）
+                var rows = [];
+                $("#preparetab span[applyqty]").each(function () {
+                    var $apply = $(this);
+                    var $stock = $apply.prevAll("span[stockqty]").first();
+                    if ($stock.length == 0) return;
+                    var cls = $apply.attr("class") || "";
+                    rows.push({
+                        itemId: cls.replace(/^qty/, ""),
+                        $stock: $stock,
+                        base: parseFloat($stock.attr("stockqty")) || 0,     //已备数量（基准）
+                        app: parseFloat($apply.attr("applyqty")) || 0,      //申请数量
+                        alloc: 0                                            //本次扫描分配到的数量
+                    });
+                });
+                if (rows.length == 0) return;
+
+                //2) 按扫描顺序，把每条GRN的数量分配给同一物料的明细行
+                for (var g = 0; g < GrnArr.length; g++) {
+                    var left = parseFloat(GrnArr[g].BalanceQty) || 0;
+                    for (var r = 0; r < rows.length && left > 0; r++) {
+                        if (rows[r].itemId != GrnArr[g].partid) continue;
+                        var remain = dcmSub(rows[r].app, dcmAdd(rows[r].base, rows[r].alloc));
+                        if (remain <= 0) continue;
+                        var use = remain < left ? remain : left;
+                        rows[r].alloc = dcmAdd(rows[r].alloc, use);
+                        left = dcmSub(left, use);
+                    }
+                    if (left > 0) {
+                        //超出申请数量：末行承接（与存储过程一致），便于发现超发
+                        var last = null;
+                        for (var m = 0; m < rows.length; m++) {
+                            if (rows[m].itemId == GrnArr[g].partid) last = rows[m];
+                        }
+                        if (last) last.alloc = dcmAdd(last.alloc, left);
+                    }
+                }
+
+                //3) 回写显示：备料数量 = 基准 + 本次分配；有分配的整行高亮，超发的标红
+                for (var i = 0; i < rows.length; i++) {
+                    var val = dcmAdd(rows[i].base, rows[i].alloc);
+                    rows[i].$stock.text(val);
+                    var $tr = rows[i].$stock.closest("tr");
+                    if (rows[i].alloc > 0) {
+                        $tr.css("background-color", "#7FFF00");      //高亮：本行有本次扫描
+                    } else {
+                        $tr.css("background-color", "");
+                    }
+                    if (rows[i].app > 0 && val > rows[i].app) {
+                        rows[i].$stock.css("color", "red");          //超发
+                    } else {
+                        rows[i].$stock.css("color", "");
+                    }
+                }
+            }
+
 
             //扫描GRN
             function SendMaterial() {
@@ -480,37 +544,11 @@
                             }
                         }
                     }
-                    //同一物料可能有多行明细，用 class 取该物料第一行（等价于原 $("#td"+PartId)，避免重复 id 的歧义）
-                    var ctrl = $(".td" + list.PartId).first();
-                    /*判断扫描数量总和不能大于申请数量*/
-                    var appCount = $.trim($(".qty" + list.PartId).first().text().replace("领料申请数量", "")); //申请数量
-                    var requestCount = $.trim($(".td" + list.PartId).first().text().replace("备料数量", "")); //已备料数量
-
-                    var IssueWay = list.IssueWay; //发料方式： 1.正常发料 2.最小包装发料
-                    if (IssueWay == "2") { //最小批次发货
-                        //如果已备料数量>申请数量，不可以继续扫描发料
-                        if (parseFloat(requestCount) >= parseFloat(appCount)) {
-                            $("#msg").html("备料数量已经大于领料申请数量!").css("color", "red");
-                            $("#GRN").focus();
-                            $("#GRN").select();
-                            return false;
-                        }
-                    }
-
-                    //产线不允许超发，超发后还继续扫描物料，则报错
-                    if ($('#perparelist option:selected').val() == "2" && IssueWay == "1") {
-                        if (parseFloat(parseFloat(requestCount)) >= parseFloat(appCount)) {
-                            $("#msg").html("备料数量不能大于领料申请数量!").css("color", "red");
-                            //$("#GRN").val("");
-                            $("#GRN").focus();
-                            $("#GRN").select();
-                            return false;
-                        }
-                    }
-                    //当前扫描条码加已备数量，超过申请数量，则启用分料截料，记录当前GRN
-                    //明细行同种物料存在多行时，按该物料所有明细行合计的申请数量与已备料数量判断
+                    /* 【改造】同一物料可能有多行明细：按数量依次分配到各行
+                       （每行先补足到申请数量，剩余顺延到下一行，末行承接超发），
+                       与保存时 uspSaveMaterialPrepareGrn 的分配口径保持一致 */
                     var totalAppCount = 0;      //该物料申请总数量（同ItemId所有明细行合计）
-                    var totalRequestCount = 0;  //该物料已备料总数量（明细行已有备料量 + 本次已扫描GRN数量）
+                    var totalRequestCount = 0;  //该物料已备料总数量（明细行基准已备 + 本次已扫描GRN数量）
                     $(".qty" + list.PartId).each(function () {
                         totalAppCount = dcmAdd(totalAppCount, parseFloat($(this).attr("applyqty")));
                     });
@@ -522,6 +560,29 @@
                             totalRequestCount = dcmAdd(totalRequestCount, o.BalanceQty);
                         }
                     });
+
+                    var IssueWay = list.IssueWay; //发料方式： 1.正常发料 2.最小包装发料
+                    if (IssueWay == "2") { //最小批次发货
+                        //如果已备料数量>=申请数量，不可以继续扫描发料（按该物料合计判断）
+                        if (totalRequestCount >= totalAppCount) {
+                            $("#msg").html("备料数量已经大于领料申请数量!").css("color", "red");
+                            $("#GRN").focus();
+                            $("#GRN").select();
+                            return false;
+                        }
+                    }
+
+                    //产线不允许超发，超发后还继续扫描物料，则报错
+                    if ($('#perparelist option:selected').val() == "2" && IssueWay == "1") {
+                        if (totalRequestCount >= totalAppCount) {
+                            $("#msg").html("备料数量不能大于领料申请数量!").css("color", "red");
+                            //$("#GRN").val("");
+                            $("#GRN").focus();
+                            $("#GRN").select();
+                            return false;
+                        }
+                    }
+                    //当前扫描条码加已备数量，超过申请数量，则启用分料截料，记录当前GRN
                     if (IssueWay != "2") { //非最小批次发货
                         if (dcmAdd(totalRequestCount, list.BalanceQty) > totalAppCount) {
                             var FLQty = dcmSub(list.BalanceQty, dcmSub(totalAppCount, totalRequestCount));
@@ -529,16 +590,8 @@
                         }
                     }
 
-                    //                var ht = "<b class='ui-table-cell-label'>  备料数量  </b>" + (parseInt($.trim(ctrl.text().replace("备料数量", ""))) + list.BalanceQty);
-                    var ht = dcmAdd(parseFloat($.trim(ctrl.text().replace("备料数量", ""))), parseFloat(list.BalanceQty)); //(parseFloat($.trim(ctrl.text().replace("备料数量", ""))) + list.BalanceQty);
-                    ctrl.html(ht);
-
-                    ctrl.parent().parent().css("background-color", "#7FFF00");//高亮
-                    $("#preparetab").prepend(ctrl.parent().parent());
-
-                    $("#preparetab").table("refresh");
-                    requtestQty += list.BalanceQty;
-                    //添加到集合
+                    //先把本次扫描的GRN登记进集合，再按数量重新分配到各明细行
+                    requtestQty = dcmAdd(parseFloat(requtestQty), parseFloat(list.BalanceQty));
                     grnStr += grn + ',';
                     var isExist = false;
                     $.each(GrnArr, function (i, o) {
@@ -552,6 +605,10 @@
                         BalanceQty: list.BalanceQty,
                         partid: list.PartId
                     });
+
+                    recalcPrepareQty();     //按数量分配到同物料的各明细行（含高亮/超发标红）
+                    $("#preparetab").table("refresh");
+
                     $("#msg").html("扫描完成!").css("color", "green");
                     $("#GRN").val("");
                     $("#GRN").focus();
@@ -636,7 +693,7 @@
                     return false;
                 }
                 itemId = $obj.next().val();
-<% --$("#iframeGrnList").attr("src", "<%=SKT.LeanMES.Web.WebHelper.WebRoot %>" + "/Material/MaterialPrepareView.aspx?ID=" + itemId + ""); --%>
+<%-- $("#iframeGrnList").attr("src", "<%=SKT.LeanMES.Web.WebHelper.WebRoot %>" + "/Material/MaterialPrepareView.aspx?ID=" + itemId + ""); --%>
             var entity = {};
                 entity.ItemId = itemId;
                 //var ajax = SKT.AjaxCommon.DBService.ExecuteSpc("uspGetMaterialPrepareGRN", JSON.stringify(entity));
@@ -858,16 +915,8 @@
 
             //清除单个GRN
             function ClearGrn(GRN, qty, partid) {
-                //更新UI（同一物料可能有多行明细，class 取该物料第一行）
-                var ctrl = $(".td" + partid).first();
-                var grnCount = ctrl.text();
-                var newNumber = dcmSub(parseFloat(grnCount), parseFloat(qty));
+                //【改造】只维护集合，界面数量由 recalcPrepareQty 按数量重新分配
                 requtestQty = dcmSub(parseFloat(requtestQty), parseFloat(qty));
-                ctrl.text(newNumber);
-                //取消高亮
-                if (newNumber == 0) {
-                    ctrl.parent().parent().css("background-color", "white");
-                }
                 //更新全局变量
                 var grnStrArr = grnStr.split(',');
                 grnStrArr = $.grep(grnStrArr, function (item, index) {
@@ -883,35 +932,37 @@
                     }
                 });
                 if (index > -1) GrnArr.splice(index, 1);
+
+                recalcPrepareQty();     //重新按数量分配（同物料多行明细）
+                $("#preparetab").table("refresh");
             }
             //清除指定产品的下的GRN
             function ClearItemGrn(ItemId, StockQty) {
-
-                //同一物料可能有多行明细，class 取该物料第一行
-                var ctrl = $(".td" + ItemId).first();
-                var grnCount = ctrl.text();
-                if (grnCount == 0) {
-                    return false;
+                //【改造】同一物料可能有多行明细：判断是否有扫描记录，然后整体重算
+                var hasScan = false;
+                for (var i = 0; i < GrnArr.length; i++) {
+                    if (GrnArr[i].partid == ItemId) {
+                        hasScan = true;
+                        break;
+                    }
                 }
-                if (grnCount == StockQty) {
+                if (!hasScan) {
                     confirmDialog("当前数据没有扫描GRN!");
                     return false;
                 }
                 if (confirm("确认清除?")) {
-                    //更新UI
-                    ctrl.parent().parent().css("background-color", "white");
-                    ctrl.text(StockQty);
-                    //更新全局变量
-                    grnStr = '';
                     for (var i = GrnArr.length - 1; i >= 0; i--) {
                         if (GrnArr[i].partid == ItemId) {
+                            requtestQty = dcmSub(parseFloat(requtestQty), parseFloat(GrnArr[i].BalanceQty));
                             GrnArr.splice(i, 1);
                         }
                     }
+                    grnStr = '';
                     for (var i = 0; i < GrnArr.length; i++) {
                         grnStr += GrnArr[i].GRN + ',';
                     }
-                    requtestQty = 0;
+                    recalcPrepareQty();     //重新按数量分配
+                    $("#preparetab").table("refresh");
                     confirmDialog("清除完成!");
                 }
             }

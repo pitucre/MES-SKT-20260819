@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MouldEdit.aspx.cs"
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MouldEdit.aspx.cs"
     Inherits="SKT.LeanMES.Web.Equipment.MouldEdit" MasterPageFile="~/Masters/EditHeadMaster.master" %>
 
 <%@ MasterType VirtualPath="~/Masters/EditHeadMaster.master" %>
@@ -183,6 +183,12 @@
     </div>
     <asp:HiddenField ID="filepaths" runat="server" Value="-1" ClientIDMode="Static" />
     <asp:HiddenField ID="hdnItemId" runat="server" ClientIDMode="Static" Value="-1" />
+    <%-- 保留模具原有状态/位置相关字段，避免编辑时被重置 --%>
+    <asp:HiddenField ID="hdnStatus" runat="server" Value="0" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnInOrOut" runat="server" Value="1" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnIsClear" runat="server" Value="1" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnPosition" runat="server" Value="" ClientIDMode="Static" />
+    <asp:HiddenField ID="hdnCurPosition" runat="server" Value="" ClientIDMode="Static" />
     <script type="text/javascript" src="../Content/js/jquery-3.1.0.min.js"></script>
 
     <link href="../Content/plugin/layui/css/layui.css" rel="stylesheet" />
@@ -252,7 +258,7 @@
             var equipmentName = $("#txtEquipmentName").val();  //模具名称
             var supplierCode = $("#<%=this.hdnSupplierCode.ClientID %>").val();  //供应商
 
-            var status = 0;//$("#ddlStatus").val();
+            var status = $("#<%=this.hdnStatus.ClientID %>").val();//保留原有模具状态，避免编辑后变成暂存
             var txtFactoryTime = $("#txtFactortTime").val();
             var txtRemark = $("#txtRemark").val();
 
@@ -275,7 +281,7 @@
             entity.LineId = -1;
             entity.SequenceNo = -1;
             entity.StationId = -1;
-            entity.Position = "";
+            entity.Position = $("#<%=this.hdnPosition.ClientID %>").val();
             entity.Remark = txtRemark;
             entity.VenCode = "";  //生产厂商
             entity.SupplierCode = supplierCode;
@@ -287,9 +293,9 @@
             entity.StandarLive = $("#txtStandardLife").val() == "" ? 0 : $("#txtStandardLife").val();
             entity.UseCount = $("#txtServiceLife").val() == "" ? 0 : $("#txtServiceLife").val();
             entity.WarningCount = 0;
-            entity.CurPosition = "";
-            entity.InOrOut = 1;
-            entity.IsClear = 1;
+            entity.CurPosition = $("#<%=this.hdnCurPosition.ClientID %>").val();
+            entity.InOrOut = $("#<%=this.hdnInOrOut.ClientID %>").val();
+            entity.IsClear = $("#<%=this.hdnIsClear.ClientID %>").val();
             entity.ItemId = $("#<%=this.hdnItemId.ClientID %>").val();
             entity.Purchase = -1; $("#ddPurchase").val();
             entity.FactoryDate = new Date(Date.parse(txtFactoryTime.replace(/-/g, "/")));
