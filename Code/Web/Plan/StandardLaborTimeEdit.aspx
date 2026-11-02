@@ -65,11 +65,11 @@
             <td class="Field2">
                 <asp:TextBox ID="txtStandardLaborTime" IsRequired="1" runat="server" ClientIDMode="Static" CssClass="TextBox"></asp:TextBox>
             </td>
-            <td class="Label2">标准产能<em>*</em>
+            <td class="Label2">标准产能
             </td>
 
             <td class="Field2">
-                <asp:TextBox ID="txtStandardCapacity" IsRequired="1" ClientIDMode="Static" runat="server" Text="0" CssClass="TextBox"></asp:TextBox>
+                <asp:TextBox ID="txtStandardCapacity" IsRequired="0" ClientIDMode="Static" runat="server" Text="0" CssClass="TextBox"></asp:TextBox>
             </td>
         </tr>
         <tr style="display:none">
@@ -126,7 +126,7 @@
             var txtItemId = $("#<%=this.hdnItemId.ClientID%>").val();
             var txtTableName = $.trim($("#<%=this.ddlTableName.ClientID%>").val());
             var txtStandardLaborTime = $("#<%=this.txtStandardLaborTime.ClientID%>").val();
-            var txtStandardCapacity = $("#<%=this.txtStandardCapacity.ClientID%>").val();
+            var txtStandardCapacity = $.trim($("#<%=this.txtStandardCapacity.ClientID%>").val());
             var txtRemark = $.trim($("#<%=this.txtRemark.ClientID%>").val());
             var laborTimeType = 1;
             var txtBottleneckHours = $("#<%=this.txtBottleneckHours.ClientID%>").val();
@@ -148,9 +148,16 @@
             entity.ItemId = txtItemId;
             entity.TableName = txtTableName;
             entity.StandardLaborTime = parseFloat(txtStandardLaborTime);
-            entity.StandardCapacity = parseFloat(txtStandardCapacity);
+            /*标准产能非必填，未填时按0处理*/
+            entity.StandardCapacity = txtStandardCapacity == "" ? 0 : parseFloat(txtStandardCapacity);
             entity.Remark = txtRemark;
-            entity.BottleneckHours = parseFloat(txtBottleneckHours);
+            entity.BottleneckHours = txtBottleneckHours == "" ? 0 : parseFloat(txtBottleneckHours);
+
+            /*以下为钉钉群推送消息用到的显示信息（不参与保存）*/
+            entity.EquipmentLineName = $.trim($("#txtEquipmentLineName").val());
+            entity.ItemCode = $.trim($("#txtItemName").val());
+            entity.TableDesc = txtTableName == "" ? "" : $.trim($("#<%=this.ddlTableName.ClientID%> option:selected").text());
+            entity.LaborTimeTypeName = laborTimeType == 1 ? "SMT" : "非SMT";
 
             var ajax = SKT.LeanMES.Web.AjaxServices.AjaxStandardLaborTime.StandardLaborTimeEdit(entity);
             if (ajax.error != null) {
@@ -159,6 +166,13 @@
             }
 
             alert('<%=Resources.Messages.SaveInSuccess%>')
+
+            /*保存成功但钉钉群推送失败时给出提示（不影响保存结果）*/
+            var pushResult = ajax.value == null ? "" : ajax.value.toString();
+            if (pushResult.indexOf("FAIL:") == 0) {
+                alert("钉钉群消息推送失败：\n" + pushResult.substring(5));
+            }
+
             parent.window.Refresh();
 
         }
